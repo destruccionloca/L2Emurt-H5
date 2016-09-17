@@ -42,7 +42,9 @@ public class DarionFaithfulServant extends Fighter {
 
         @Override
         public void runImpl() {
-            GameObjectsStorage.getAllByNpcId(MysteriousAgent, true).forEach(NpcInstance::deleteMe);
+            for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(MysteriousAgent, true)) {
+                npc.deleteMe();
+            }
         }
     }
 }

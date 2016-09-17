@@ -4434,7 +4434,7 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="CrystalCavernController"/>
+        <set name="type" value="SteamCorridorController"/>
         <skills>
             <skill id="4416" level="2"/>
             <skill id="4390" level="1"/>
@@ -4492,7 +4492,7 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="CrystalCavernController"/>
+        <set name="type" value="SteamCorridorController"/>
         <skills>
             <skill id="4416" level="2"/>
             <skill id="4390" level="1"/>
@@ -4550,7 +4550,7 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="CrystalCavernController"/>
+        <set name="type" value="SteamCorridorController"/>
         <skills>
             <skill id="4416" level="2"/>
             <skill id="4390" level="1"/>
@@ -4608,7 +4608,7 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="CrystalCavernController"/>
+        <set name="type" value="SteamCorridorController"/>
         <skills>
             <skill id="4416" level="2"/>
             <skill id="4390" level="1"/>

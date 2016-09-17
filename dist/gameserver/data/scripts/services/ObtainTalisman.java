@@ -38,7 +38,7 @@ public class ObtainTalisman extends Functions {
             return;
         }
 
-        final List<Integer> talismans = new ArrayList<>();
+        final List<Integer> talismans = new ArrayList<Integer>();
 
         //9914-9965
         for (int i = 9914; i <= 9965; i++) {

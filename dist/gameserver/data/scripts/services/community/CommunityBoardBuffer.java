@@ -653,7 +653,7 @@ public class CommunityBoardBuffer extends Functions implements ScriptFile, IComm
                     ThreadPoolManager.getInstance().schedule(new BuffTask(skill, pet, time_dance_song), t * 25L);
                 } else {
                     //skill.getEffects(pet, pet, false, false, time, 1.0, 0);
-                    ThreadPoolManager.getInstance().schedule(new BuffTask(skill, pet, time), t * 500L);
+                    ThreadPoolManager.getInstance().schedule(new BuffTask(skill, pet, time), t * 25);
                 }
 
             } else {

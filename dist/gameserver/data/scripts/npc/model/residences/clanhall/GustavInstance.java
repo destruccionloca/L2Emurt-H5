@@ -107,7 +107,7 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard 
 
         Player temp = null;
 
-        Map<Player, Integer> damageMap = new HashMap<>();
+        Map<Player, Integer> damageMap = new HashMap<Player, Integer>();
 
         for (AggroList.HateInfo info : getAggroList().getPlayableMap().values()) {
             Playable killer = (Playable) info.attacker;

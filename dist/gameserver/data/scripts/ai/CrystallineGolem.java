@@ -29,7 +29,7 @@ public class CrystallineGolem extends Fighter {
         "Жадные вы, уйду я от вас...",
         "Куда оно подевалось?",
         "Наверное показалось..."};
-    private static TIntObjectHashMap<Info> instanceInfo = new TIntObjectHashMap<>();
+    private static TIntObjectHashMap<Info> instanceInfo = new TIntObjectHashMap<Info>();
 
     private static class Info {
 

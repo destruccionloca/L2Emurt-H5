@@ -75,7 +75,7 @@ public class GroupAI extends Fighter {
 
         if (_castReuseTimer + _castReuse < System.currentTimeMillis()) {
             List<Player> players = World.getAroundPlayers(actor, TAR_BEETLE_SEARCH_RADIUS, 200);
-            if (players != null && !players.isEmpty()) {
+            if (players != null && players.size() > 0) {
                 Player player = players.get(Rnd.get(players.size()));
                 if (player.isInvisible()) {
                     return true;

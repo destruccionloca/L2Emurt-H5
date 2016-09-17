@@ -39,33 +39,29 @@ public class _027_ChestCaughtWithABaitOfWind extends Quest implements ScriptFile
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "fisher_lanosco_q0027_0104.htm":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "fisher_lanosco_q0027_0201.htm":
-                if (st.getQuestItemsCount(BigBlueTreasureChest) > 0) {
-                    st.takeItems(BigBlueTreasureChest, 1);
-                    st.giveItems(StrangeGolemBlueprint, 1);
-                    st.setCond(2);
-                    st.playSound(SOUND_MIDDLE);
-                } else {
-                    htmltext = "fisher_lanosco_q0027_0202.htm";
-                }
-                break;
-            case "blueprint_seller_shaling_q0027_0301.htm":
-                if (st.getQuestItemsCount(StrangeGolemBlueprint) == 1) {
-                    st.takeItems(StrangeGolemBlueprint, -1);
-                    st.giveItems(BlackPearlRing, 1);
-                    st.playSound(SOUND_FINISH);
-                    st.exitCurrentQuest(false);
-                } else {
-                    htmltext = "blueprint_seller_shaling_q0027_0302.htm";
-                    st.exitCurrentQuest(true);
-                }
-                break;
+        if (event.equals("fisher_lanosco_q0027_0104.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("fisher_lanosco_q0027_0201.htm")) {
+            if (st.getQuestItemsCount(BigBlueTreasureChest) > 0) {
+                st.takeItems(BigBlueTreasureChest, 1);
+                st.giveItems(StrangeGolemBlueprint, 1);
+                st.setCond(2);
+                st.playSound(SOUND_MIDDLE);
+            } else {
+                htmltext = "fisher_lanosco_q0027_0202.htm";
+            }
+        } else if (event.equals("blueprint_seller_shaling_q0027_0301.htm")) {
+            if (st.getQuestItemsCount(StrangeGolemBlueprint) == 1) {
+                st.takeItems(StrangeGolemBlueprint, -1);
+                st.giveItems(BlackPearlRing, 1);
+                st.playSound(SOUND_FINISH);
+                st.exitCurrentQuest(false);
+            } else {
+                htmltext = "blueprint_seller_shaling_q0027_0302.htm";
+                st.exitCurrentQuest(true);
+            }
         }
         return htmltext;
     }

@@ -81,8 +81,8 @@ public class TreasuresOfTheHeraldInstance extends Reflection {
 
         Location[] boxes = {new Location(142696, 139704, -15264, 0), new Location(142696, 145944, -15264, 0), new Location(145784, 142824, -15264, 0), new Location(145768, 139704, -15264, 0), new Location(145768, 145944, -15264, 0), new Location(141752, 142760, -15624, 0), new Location(145720, 142008, -15880, 0), new Location(145720, 143640, -15880, 0), new Location(139592, 142824, -15264, 0)};
 
-        for (Location boxe : boxes) {
-            addSpawnWithoutRespawn(18822, boxe, 0);
+        for (int i = 0; i < boxes.length; i++) {
+            addSpawnWithoutRespawn(18822, boxes[i], 0);
         }
         addSpawnWithoutRespawn(35423, new Location(139640, 139736, -15264), 0);
         addSpawnWithoutRespawn(35426, new Location(139672, 145896, -15264), 0);

@@ -38,25 +38,27 @@ public class KrateisCubeWatcherBlue extends DefaultAI {
             return;
         }
 
-        around.stream().filter(cha -> cha.isPlayer() && !cha.isDead() && Rnd.chance(RESTORE_CHANCE)).forEach(cha -> {
-            double valCP = cha.getMaxCp() - cha.getCurrentCp();
-            if (valCP > 0) {
-                cha.setCurrentCp(valCP + cha.getCurrentCp());
-                cha.sendPacket(new SystemMessage2(SystemMsg.S1_CP_HAS_BEEN_RESTORED).addInteger(Math.round(valCP)));
-            }
+        for (Creature cha : around) {
+            if (cha.isPlayer() && !cha.isDead() && Rnd.chance(RESTORE_CHANCE)) {
+                double valCP = cha.getMaxCp() - cha.getCurrentCp();
+                if (valCP > 0) {
+                    cha.setCurrentCp(valCP + cha.getCurrentCp());
+                    cha.sendPacket(new SystemMessage2(SystemMsg.S1_CP_HAS_BEEN_RESTORED).addInteger(Math.round(valCP)));
+                }
 
-            double valHP = cha.getMaxHp() - cha.getCurrentHp();
-            if (valHP > 0) {
-                cha.setCurrentHp(valHP + cha.getCurrentHp(), false);
-                cha.sendPacket(new SystemMessage2(SystemMsg.S1_HP_HAS_BEEN_RESTORED).addInteger(Math.round(valHP)));
-            }
+                double valHP = cha.getMaxHp() - cha.getCurrentHp();
+                if (valHP > 0) {
+                    cha.setCurrentHp(valHP + cha.getCurrentHp(), false);
+                    cha.sendPacket(new SystemMessage2(SystemMsg.S1_HP_HAS_BEEN_RESTORED).addInteger(Math.round(valHP)));
+                }
 
-            double valMP = cha.getMaxMp() - cha.getCurrentMp();
-            if (valMP > 0) {
-                cha.setCurrentMp(valMP + cha.getCurrentMp());
-                cha.sendPacket(new SystemMessage2(SystemMsg.S1_MP_HAS_BEEN_RESTORED).addInteger(Math.round(valMP)));
+                double valMP = cha.getMaxMp() - cha.getCurrentMp();
+                if (valMP > 0) {
+                    cha.setCurrentMp(valMP + cha.getCurrentMp());
+                    cha.sendPacket(new SystemMessage2(SystemMsg.S1_MP_HAS_BEEN_RESTORED).addInteger(Math.round(valMP)));
+                }
             }
-        });
+        }
     }
 
     @Override

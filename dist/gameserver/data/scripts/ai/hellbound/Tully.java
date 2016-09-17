@@ -35,10 +35,10 @@ public class Tully extends Fighter {
 
     @Override
     protected void onEvtDead(Creature killer) {
-        for (Location aLocSD : locSD) {
+        for (int i = 0; i < locSD.length; i++) {
             try {
                 SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(32371));
-                sp.setLoc(aLocSD);
+                sp.setLoc(locSD[i]);
                 sp.doSpawn(true);
                 if (!s) {
                     Functions.npcShout(sp.getLastSpawn(), "Self Destruction mechanism launched: 10 minutes to explosion");
@@ -48,10 +48,10 @@ public class Tully extends Fighter {
                 e.printStackTrace();
             }
         }
-        for (Location aLocFTT : locFTT) {
+        for (int i = 0; i < locFTT.length; i++) {
             try {
                 SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(22392));
-                sp.setLoc(aLocFTT);
+                sp.setLoc(locFTT[i]);
                 sp.doSpawn(true);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -77,9 +77,13 @@ public class Tully extends Fighter {
 
         @Override
         public void runImpl() {
-            GameObjectsStorage.getAllByNpcId(32371, true).forEach(NpcInstance::deleteMe);
+            for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(32371, true)) {
+                npc.deleteMe();
+            }
 
-            GameObjectsStorage.getAllByNpcId(22392, true).forEach(NpcInstance::deleteMe);
+            for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(22392, true)) {
+                npc.deleteMe();
+            }
 
             if (removable_ghost != null) {
                 removable_ghost.deleteMe();

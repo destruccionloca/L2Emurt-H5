@@ -919,7 +919,7 @@
     </equip>
   </armor>
   <etcitem id="5591" name="CP Potion">
-    <set name="reuse_delay" value="500"/>
+    <set name="reuse_delay" value="1000"/>
     <set name="class" value="CONSUMABLE"/>
     <set name="crystal_type" value="NONE"/>
     <set name="icon" value="icon.etc_cp_potion_i00"/>
@@ -937,7 +937,7 @@
     </cond>
   </etcitem>
   <etcitem id="5592" name="Greater CP Potion">
-    <set name="reuse_delay" value="500"/>
+    <set name="reuse_delay" value="1000"/>
     <set name="class" value="CONSUMABLE"/>
     <set name="crystal_type" value="NONE"/>
     <set name="icon" value="icon.etc_cp_potion_i01"/>

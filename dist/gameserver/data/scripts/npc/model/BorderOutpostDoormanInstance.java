@@ -22,20 +22,14 @@ public class BorderOutpostDoormanInstance extends GuardInstance {
             return;
         }
 
-        switch (command) {
-            case "openDoor": {
-                DoorInstance door = ReflectionUtils.getDoor(24170001);
-                door.openMe();
-                break;
-            }
-            case "closeDoor": {
-                DoorInstance door = ReflectionUtils.getDoor(24170001);
-                door.closeMe();
-                break;
-            }
-            default:
-                super.onBypassFeedback(player, command);
-                break;
+        if (command.equals("openDoor")) {
+            DoorInstance door = ReflectionUtils.getDoor(24170001);
+            door.openMe();
+        } else if (command.equals("closeDoor")) {
+            DoorInstance door = ReflectionUtils.getDoor(24170001);
+            door.closeMe();
+        } else {
+            super.onBypassFeedback(player, command);
         }
     }
 }

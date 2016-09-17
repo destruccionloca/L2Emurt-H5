@@ -39,39 +39,35 @@ public class ColiseumManagerInstance extends ColiseumHelperInstance {
 
         UndergroundColiseumEvent coliseumEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, _coliseumId);
 
-        switch (command) {
-            case "register":
-                Party party = player.getParty();
-                if (party == null) {
-                    showChatWindow(player, "events/kerthang_manager008.htm");
-                } else if (party.getPartyLeader() != player) {
-                    showChatWindow(player, "events/kerthang_manager004.htm");
-                } else {
-                    for (Player $player : party) {
-                        if ($player.getLevel() < coliseumEvent.getMinLevel() || $player.getLevel() > coliseumEvent.getMaxLevel()) {
-                            showChatWindow(player, "events/kerthang_manager011.htm", "%name%", $player.getName());
-                            return;
-                        }
+        if (command.equals("register")) {
+            Party party = player.getParty();
+            if (party == null) {
+                showChatWindow(player, "events/kerthang_manager008.htm");
+            } else if (party.getPartyLeader() != player) {
+                showChatWindow(player, "events/kerthang_manager004.htm");
+            } else {
+                for (Player $player : party) {
+                    if ($player.getLevel() < coliseumEvent.getMinLevel() || $player.getLevel() > coliseumEvent.getMaxLevel()) {
+                        showChatWindow(player, "events/kerthang_manager011.htm", "%name%", $player.getName());
+                        return;
                     }
                 }
-                break;
-            case "viewTeams":
+            }
+        } else if (command.equals("viewTeams")) {
 
-                List<Player> reg = coliseumEvent.getRegisteredPlayers();
+            List<Player> reg = coliseumEvent.getRegisteredPlayers();
 
-                HtmlMessage msg = new HtmlMessage(player, this);
-                msg.setFile("events/kerthang_manager003.htm");
-                for (int i = 0; i < 5; i++) {
-                    Player $player = CollectionUtils.safeGet(reg, i);
+            HtmlMessage msg = new HtmlMessage(player, this);
+            msg.setFile("events/kerthang_manager003.htm");
+            for (int i = 0; i < 5; i++) {
+                Player $player = CollectionUtils.safeGet(reg, i);
 
-                    msg.replace("%team" + i + "%", $player == null ? StringUtils.EMPTY : $player.getName());
-                }
+                msg.replace("%team" + i + "%", $player == null ? StringUtils.EMPTY : $player.getName());
+            }
 
-                player.sendPacket(msg);
-                break;
-            default:
-                super.onBypassFeedback(player, command);
-                break;
+            player.sendPacket(msg);
+        } else {
+            super.onBypassFeedback(player, command);
         }
     }
 

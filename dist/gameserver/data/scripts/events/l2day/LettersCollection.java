@@ -52,9 +52,9 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
     protected static int _5 = 13418;
     protected static int EVENT_MANAGER_ID = 31230;
     // Контейнеры, не трогать
-    protected static Map<String, Integer[][]> _words = new HashMap<>();
-    protected static Map<String, RewardData[]> _rewards = new HashMap<>();
-    protected static List<SimpleSpawner> _spawns = new ArrayList<>();
+    protected static Map<String, Integer[][]> _words = new HashMap<String, Integer[][]>();
+    protected static Map<String, RewardData[]> _rewards = new HashMap<String, RewardData[]>();
+    protected static List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
 
     @Override
     public void onLoad() {

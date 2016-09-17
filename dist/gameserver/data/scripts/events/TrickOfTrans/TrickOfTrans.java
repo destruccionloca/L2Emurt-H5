@@ -43,8 +43,8 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
     // Ключ
     private static int A_CHEST_KEY = 9205; // Alchemist''s Chest Key
     private static boolean _active = false;
-    private static final ArrayList<SimpleSpawner> _em_spawns = new ArrayList<>();
-    private static final ArrayList<SimpleSpawner> _ch_spawns = new ArrayList<>();
+    private static final ArrayList<SimpleSpawner> _em_spawns = new ArrayList<SimpleSpawner>();
+    private static final ArrayList<SimpleSpawner> _ch_spawns = new ArrayList<SimpleSpawner>();
     // Ингридиенты
     private static int PhilosophersStoneOre = 9168; // Philosopher''s Stone Ore
     private static int PhilosophersStoneOreMax = 17; // Максимальное Кол-во

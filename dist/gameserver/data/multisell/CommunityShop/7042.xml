@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--new accesory-->
+
+
+<list>
+<!--купон на пвп оружие-->
+  <item id="60">
+    <ingredient id="4356" count="100" />
+    <production id="24177" count="1" />
+  </item>
+<!--купон на пвп броню-->
+  <item id="60">
+    <ingredient id="4356" count="100" />
+    <production id="24176" count="1" />
+  </item>
+<!--купон на заточку-->
+  <item id="60">
+    <ingredient id="4356" count="100" />
+    <production id="24178" count="1" />
+  </item>
+  <item id="60">
+    <ingredient id="4356" count="50" />
+    <production id="24008" count="1" />
+  </item>
+  <item id="61">
+    <ingredient id="4356" count="50" />
+    <production id="24009" count="1" />
+  </item>
+  <item id="62">
+    <ingredient id="4356" count="50" />
+    <production id="24010" count="1" />
+  </item>
+  <item id="63">
+    <ingredient id="4356" count="50" />
+    <production id="24011" count="1" />
+  </item>
+  <item id="60">
+    <ingredient id="4356" count="50" />
+    <production id="15451" count="1" />
+  </item>
+  <item id="61">
+    <ingredient id="4356" count="50" />
+    <production id="15452" count="1" />
+  </item>
+  <item id="62">
+    <ingredient id="4356" count="50" />
+    <production id="15453" count="1" />
+  </item>
+  <item id="63">
+    <ingredient id="4356" count="50" />
+    <production id="15450" count="1" />
+  </item>
+  <item id="64">
+    <ingredient id="4356" count="50" />
+    <production id="15449" count="1" />
+  </item>
+  <item id="65">
+    <ingredient id="4356" count="50" />
+    <production id="15448" count="1" />
+  </item>
+
+<item><ingredient id="4356" count="50"/><production id="24135" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24137" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25072" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25073" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25074" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25075" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25053" count="1"/></item>
+
+<item><ingredient id="4356" count="50"/><production id="25078" count="1"/></item>
+
+<item><ingredient id="4356" count="50"/><production id="25069" count="1"/></item>
+
+
+<item><ingredient id="4356" count="50"/><production id="24152" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24153" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24154" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24155" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24156" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24157" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24161" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24162" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24170" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24163" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24164" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24165" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24166" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24167" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24168" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24169" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24158" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24159" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="24160" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25062" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25063" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25070" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25055" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25080" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25083" count="1"/></item>
+<item><ingredient id="4356" count="50"/><production id="25085" count="1"/></item>
+</list>

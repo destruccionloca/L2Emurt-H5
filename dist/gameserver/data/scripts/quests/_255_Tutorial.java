@@ -238,15 +238,15 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
         }
     };
     // table for Question Mark Clicked (24) newbie lvl [raceId, html]
-    public final Map<Integer, String> QMCb = new HashMap<>();
+    public final Map<Integer, String> QMCb = new HashMap<Integer, String>();
     // table for Question Mark Clicked (35) 1st class transfer [raceId, html]
-    public final Map<Integer, String> QMCc = new HashMap<>();
+    public final Map<Integer, String> QMCc = new HashMap<Integer, String>();
     // table for Tutorial Close Link (26) 2nd class transfer [raceId, html]
-    public final Map<Integer, String> TCLa = new HashMap<>();
+    public final Map<Integer, String> TCLa = new HashMap<Integer, String>();
     // table for Tutorial Close Link (23) 2nd class transfer [raceId, html]
-    public final Map<Integer, String> TCLb = new HashMap<>();
+    public final Map<Integer, String> TCLb = new HashMap<Integer, String>();
     // table for Tutorial Close Link (24) 2nd class transfer [raceId, html]
-    public final Map<Integer, String> TCLc = new HashMap<>();
+    public final Map<Integer, String> TCLc = new HashMap<Integer, String>();
     private static TutorialShowListener _tutorialShowListener;
 
     @Override

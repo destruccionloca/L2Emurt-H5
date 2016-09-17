@@ -44,7 +44,7 @@ public class _653_WildMaiden extends Quest implements ScriptFile {
 
     private NpcInstance findNpc(int npcId, Player player) {
         NpcInstance instance = null;
-        List<NpcInstance> npclist = new ArrayList<>();
+        List<NpcInstance> npclist = new ArrayList<NpcInstance>();
         for (Spawner spawn : SpawnManager.getInstance().getSpawners(PeriodOfDay.NONE.name())) {
             if (spawn.getCurrentNpcId() == npcId) {
                 instance = spawn.getLastSpawn();

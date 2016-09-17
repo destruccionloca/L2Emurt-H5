@@ -55,7 +55,9 @@ public class DarionChallenger extends Fighter {
 
         @Override
         public void runImpl() {
-            GameObjectsStorage.getAllByNpcId(TeleportCube, true).forEach(NpcInstance::deleteMe);
+            for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(TeleportCube, true)) {
+                npc.deleteMe();
+            }
         }
     }
 }

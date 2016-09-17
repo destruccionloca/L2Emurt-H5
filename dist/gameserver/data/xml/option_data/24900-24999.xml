@@ -525,6 +525,7 @@
 	<option_data id="24981">
 		<for>
 			<add order="0x60" stat="runSpd" value="7" />
+			<add order="0x60" stat="mDef" value="13" />
 		</for>
 	</option_data>
 	<option_data id="24982">
@@ -557,4 +558,58 @@
 			<add order="0x60" stat="MEN" value="3" />
 		</for>
 	</option_data>
+		<option_data id="24986">
+		<for>
+			<add order="0x60" stat="mDef" value="15" />
+			<add order="0x60" stat="runSpd" value="7" />
+			<mul order="0x30" stat="mpConsum" value="0.97"/>
+			<mul order="0x30" stat="mpConsumePhysical" value="0.97"/>		
+		</for>
+	</option_data>
+		<option_data id="24965">
+		<for>
+			<add order="0x60" stat="mDef" value="17" />
+			<add order="0x60" stat="runSpd" value="7" />
+			<mul order="0x30" stat="mpConsum" value="0.97"/>
+			<mul order="0x30" stat="mpConsumePhysical" value="0.97"/>
+			<add order="0x60" stat="cAtkStatic" value="41.3" />
+			<add order="0x60" stat="mCritRate" value="2" />
+		</for>
+	</option_data>
+			<option_data id="24966">
+		<for>
+			<add order="0x60" stat="mDef" value="16" />
+			<add order="0x60" stat="runSpd" value="7" />
+			<mul order="0x30" stat="mpConsum" value="0.97"/>
+			<mul order="0x30" stat="mpConsumePhysical" value="0.97"/>
+			<add order="0x60" stat="cAtkStatic" value="41.3" />
+			<add order="0x60" stat="mCritRate" value="2" />
+		</for>
+	</option_data>
+				<option_data id="24967">
+		<for>
+			<add order="0x60" stat="mDef" value="14" />
+			<add order="0x60" stat="runSpd" value="7" />
+		</for>
+	</option_data>
+	<option_data id="24968">
+		<for>
+			<add order="0x60" stat="mDef" value="12" />					
+		</for>
+	</option_data>
+	<option_data id="24969">
+		<for>
+			<add order="0x60" stat="mDef" value="11" />					
+		</for>
+	</option_data>
+	<option_data id="24970">
+		<for>
+			<add order="0x60" stat="mDef" value="10" />					
+		</for>
+	</option_data>
+	<option_data id="24971">
+		<for>
+			<add order="0x60" stat="mDef" value="9" />					
+		</for>
+	</option_data>	
 </list>

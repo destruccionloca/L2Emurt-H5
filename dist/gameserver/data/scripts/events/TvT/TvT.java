@@ -10,8 +10,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-import java.util.stream.Collectors;
-
 import l2p.commons.threading.RunnableImpl;
 import l2p.commons.util.Rnd;
 import l2p.gameserver.Announcements;
@@ -78,11 +76,11 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 
     private static final int[] doors = new int[]{24190001, 24190002, 24190003, 24190004};
 
-    private static Map<Player, Integer> _redTeamPoints = new ConcurrentHashMap<>();
-    private static Map<Player, Integer> _blueTeamPoints = new ConcurrentHashMap<>();
+    private static Map<Player, Integer> _redTeamPoints = new ConcurrentHashMap<Player, Integer>();
+    private static Map<Player, Integer> _blueTeamPoints = new ConcurrentHashMap<Player, Integer>();
 
-    private static List<Player> live_list1 = new CopyOnWriteArrayList<>();
-    private static List<Player> live_list2 = new CopyOnWriteArrayList<>();
+    private static List<Player> live_list1 = new CopyOnWriteArrayList<Player>();
+    private static List<Player> live_list2 = new CopyOnWriteArrayList<Player>();
 
     private static int[][] mage_buffs = new int[Config.EVENT_TvTMageBuffs.length][2];
     private static int[][] fighter_buffs = new int[Config.EVENT_TvTFighterBuffs.length][2];
@@ -90,9 +88,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 
     private static int[][] rewards = new int[Config.EVENT_TvTRewards.length][2];
 
-    private static Map<Player, Location> playerRestoreCoord = new LinkedHashMap<>();
+    private static Map<Player, Location> playerRestoreCoord = new LinkedHashMap<Player, Location>();
 
-    private static Map<Player, String> boxes = new LinkedHashMap<>();
+    private static Map<Player, String> boxes = new LinkedHashMap<Player, String>();
 
     private static boolean _isRegistrationActive = false;
     private static int _status = 0;
@@ -122,33 +120,33 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     private static Zone _zone10;
     private static Zone _myZone = null;
     private static Territory territory = null;
-    private static Map<Integer, Integer> _pScore = new HashMap<>();
-    private static Map<String, ZoneTemplate> _zones = new HashMap<>();
-    private static IntObjectMap<DoorTemplate> _doors = new HashIntObjectMap<>();
+    private static Map<Integer, Integer> _pScore = new HashMap<Integer, Integer>();
+    private static Map<String, ZoneTemplate> _zones = new HashMap<String, ZoneTemplate>();
+    private static IntObjectMap<DoorTemplate> _doors = new HashIntObjectMap<DoorTemplate>();
     private static ZoneListener _zoneListener = new ZoneListener();
 
     private static int bluePoints = 0;
     private static int redPoints = 0;
 
-    private static TIntObjectHashMap<MutableInt> score = new TIntObjectHashMap<>();
+    private static TIntObjectHashMap<MutableInt> score = new TIntObjectHashMap<MutableInt>();
 
     @Override
     public void onLoad() {
         CharListenerList.addGlobal(this);
-
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
+		String[] zones = {"[giran_town_tvt]", "[cleft_tvt]", "[hellbound_quarry_tvt]"};        
+        _zones.put(zones[0], ReflectionUtils.getZone(zones[0]).getTemplate());
+        _zones.put(zones[1], ReflectionUtils.getZone(zones[1]).getTemplate());
+        _zones.put(zones[2], ReflectionUtils.getZone(zones[2]).getTemplate());
+        _zones.put(zones[0], ReflectionUtils.getZone(zones[0]).getTemplate());
+        _zones.put(zones[1], ReflectionUtils.getZone(zones[1]).getTemplate());
+        _zones.put(zones[2], ReflectionUtils.getZone(zones[2]).getTemplate());
         //new 
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
+        _zones.put(zones[0], ReflectionUtils.getZone(zones[0]).getTemplate());
+        _zones.put(zones[1], ReflectionUtils.getZone(zones[1]).getTemplate());
+        _zones.put(zones[2], ReflectionUtils.getZone(zones[2]).getTemplate());
         //new
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
-        _zones.put("[hellbound_quarry_tvt]", ReflectionUtils.getZone("[hellbound_quarry_tvt]").getTemplate());
+        _zones.put(zones[0], ReflectionUtils.getZone(zones[0]).getTemplate());
+        _zones.put(zones[1], ReflectionUtils.getZone(zones[1]).getTemplate());
         for (final int doorId : doors) {
             _doors.put(doorId, ReflectionUtils.getDoor(doorId).getTemplate());
         }
@@ -157,19 +155,19 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
         //   reflection.setGeoIndex(geoIndex);
         reflection.init(_doors, _zones);
 
-        _zone = reflection.getZone("[hellbound_quarry_tvt]");
-        _zone1 = reflection.getZone("[hellbound_quarry_tvt]");
-        _zone2 = reflection.getZone("[hellbound_quarry_tvt]");
-        _zone3 = reflection.getZone("[hellbound_quarry_tvt]");
-        _zone4 = reflection.getZone("[hellbound_quarry_tvt]");
-        _zone5 = reflection.getZone("[hellbound_quarry_tvt]");
+        _zone = reflection.getZone(zones[0]);
+        _zone1 = reflection.getZone(zones[1]);
+        _zone2 = reflection.getZone(zones[2]);
+        _zone3 = reflection.getZone(zones[0]);
+        _zone4 = reflection.getZone(zones[1]);
+        _zone5 = reflection.getZone(zones[2]);
         //new
-        _zone6 = reflection.getZone("[hellbound_quarry_tvt]");
-        _zone7 = reflection.getZone("[hellbound_quarry_tvt]");
-        _zone8 = reflection.getZone("[hellbound_quarry_tvt]");
+        _zone6 = reflection.getZone(zones[0]);
+        _zone7 = reflection.getZone(zones[1]);
+        _zone8 = reflection.getZone(zones[2]);
         //new
-        _zone9 = reflection.getZone("[hellbound_quarry_tvt]");
-        _zone10 = reflection.getZone("[hellbound_quarry_tvt]");
+        _zone9 = reflection.getZone(zones[0]);
+        _zone10 = reflection.getZone(zones[1]);
         _active = ServerVariables.getString("TvT", "off").equalsIgnoreCase("on");
         if (isActive()) {
             scheduleEventStart();
@@ -382,10 +380,10 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
         _isRegistrationActive = true;
         _time_to_start = Config.EVENT_TvTTime;
 
-        live_list1 = new CopyOnWriteArrayList<>();
-        live_list2 = new CopyOnWriteArrayList<>();
+        live_list1 = new CopyOnWriteArrayList<Player>();
+        live_list2 = new CopyOnWriteArrayList<Player>();
 
-        playerRestoreCoord = new LinkedHashMap<>();
+        playerRestoreCoord = new LinkedHashMap<Player, Location>();
 
         String[] param = {
             String.valueOf(_time_to_start),
@@ -565,7 +563,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     }
 
     public static void prepare() {
-        reflection.getDoors().forEach(DoorInstance::openMe);
+        for (DoorInstance door : reflection.getDoors()) {
+            door.openMe();
+        }
 
         for (Zone z : reflection.getZones()) {
             z.setType(ZoneType.peace_zone);
@@ -596,15 +596,15 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
         for (Zone z : reflection.getZones()) {
             z.setType(ZoneType.battle_zone);
         }
-        _endTask = executeTask("events.TvT.TvT", "endBattle", new Object[0], 360000); //test
-        _startedTime = System.currentTimeMillis() + 360000;
+        _endTask = executeTask("events.TvT.TvT", "endBattle", new Object[0], (Config.EVENT_TvTEventRunningTime * 1000)); //test
+        _startedTime = System.currentTimeMillis() + (Config.EVENT_TvTEventRunningTime * 1000);
 
-        final ExCubeGameChangePoints initialPoints = new ExCubeGameChangePoints(360, bluePoints, redPoints);
+        final ExCubeGameChangePoints initialPoints = new ExCubeGameChangePoints(Config.EVENT_TvTEventRunningTime, bluePoints, redPoints);
         ExCubeGameExtendedChangePoints clientSetUp;
 
         for (Player player : getPlayers(_redTeamPoints)) {
             _redTeamPoints.put(player, 0);
-            clientSetUp = new ExCubeGameExtendedChangePoints(360, bluePoints, redPoints, true, player, 0);
+            clientSetUp = new ExCubeGameExtendedChangePoints(Config.EVENT_TvTEventRunningTime, bluePoints, redPoints, true, player, 0);
             player.sendPacket(initialPoints);
             player.sendPacket(clientSetUp);
             player.sendPacket(new ExCubeGameAddPlayer(player, true));
@@ -612,7 +612,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 
         for (Player player : getPlayers(_blueTeamPoints)) {
             _blueTeamPoints.put(player, 0);
-            clientSetUp = new ExCubeGameExtendedChangePoints(360, bluePoints, redPoints, false, player, 0);
+            clientSetUp = new ExCubeGameExtendedChangePoints(Config.EVENT_TvTEventRunningTime, bluePoints, redPoints, false, player, 0);
             player.sendPacket(clientSetUp);
             player.sendPacket(initialPoints);
             player.sendPacket(new ExCubeGameAddPlayer(player, false));
@@ -625,11 +625,13 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     }
 
     public static void addParty(Map<Player, Integer> Team) {
-        List<Player> list = new ArrayList<>();
-        getPlayers(Team).stream().filter(player -> player != null).forEach(player -> {
-            list.add(player);
-            player.leaveParty();
-        });
+        List<Player> list = new ArrayList<Player>();
+        for (Player player : getPlayers(Team)) {
+            if (player != null) {
+                list.add(player);
+                player.leaveParty();
+            }
+        }
 
         if (list.size() <= 1) {
             return;
@@ -643,9 +645,11 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
         Party party = new Party(leader, 0);
         leader.setParty(party);
 
-        list.stream().filter(player -> player != leader).forEach(player -> {
-            player.joinParty(party);
-        });
+        for (Player player : list) {
+            if (player != leader) {
+                player.joinParty(party);
+            }
+        }
     }
 
     public static void endBattle() {
@@ -891,20 +895,24 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     }
 
     public static void ressurectPlayers() {
-        getPlayers(_redTeamPoints).stream().filter(player -> player.isDead()).forEach(player -> {
-            player.restoreExp();
-            player.setCurrentCp(player.getMaxCp());
-            player.setCurrentHp(player.getMaxHp(), true);
-            player.setCurrentMp(player.getMaxMp());
-            player.broadcastPacket(new Revive(player));
-        });
-        getPlayers(_blueTeamPoints).stream().filter(player -> player.isDead()).forEach(player -> {
-            player.restoreExp();
-            player.setCurrentCp(player.getMaxCp());
-            player.setCurrentHp(player.getMaxHp(), true);
-            player.setCurrentMp(player.getMaxMp());
-            player.broadcastPacket(new Revive(player));
-        });
+        for (Player player : getPlayers(_redTeamPoints)) {
+            if (player.isDead()) {
+                player.restoreExp();
+                player.setCurrentCp(player.getMaxCp());
+                player.setCurrentHp(player.getMaxHp(), true);
+                player.setCurrentMp(player.getMaxMp());
+                player.broadcastPacket(new Revive(player));
+            }
+        }
+        for (Player player : getPlayers(_blueTeamPoints)) {
+            if (player.isDead()) {
+                player.restoreExp();
+                player.setCurrentCp(player.getMaxCp());
+                player.setCurrentHp(player.getMaxHp(), true);
+                player.setCurrentMp(player.getMaxMp());
+                player.broadcastPacket(new Revive(player));
+            }
+        }
     }
 
     public static void healPlayers() {
@@ -919,17 +927,33 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     }
 
     public static void cleanPlayers() {
-        getPlayers(_redTeamPoints).stream().filter(player -> !checkPlayer(player, false)).forEach(TvT::removePlayer);
-        getPlayers(_blueTeamPoints).stream().filter(player -> !checkPlayer(player, false)).forEach(TvT::removePlayer);
+        for (Player player : getPlayers(_redTeamPoints)) {
+            if (!checkPlayer(player, false)) {
+                removePlayer(player);
+            }
+        }
+        for (Player player : getPlayers(_blueTeamPoints)) {
+            if (!checkPlayer(player, false)) {
+                removePlayer(player);
+            }
+        }
     }
 
     public static void checkLive() {
-        List<Player> new_live_list1 = new CopyOnWriteArrayList<>();
-        List<Player> new_live_list2 = new CopyOnWriteArrayList<>();
+        List<Player> new_live_list1 = new CopyOnWriteArrayList<Player>();
+        List<Player> new_live_list2 = new CopyOnWriteArrayList<Player>();
 
-        new_live_list1.addAll(live_list1.stream().filter(player -> player != null).collect(Collectors.toList()));
+        for (Player player : live_list1) {
+            if (player != null) {
+                new_live_list1.add(player);
+            }
+        }
 
-        new_live_list2.addAll(live_list2.stream().filter(player -> player != null).collect(Collectors.toList()));
+        for (Player player : live_list2) {
+            if (player != null) {
+                new_live_list2.add(player);
+            }
+        }
 
         live_list1 = new_live_list1;
         live_list2 = new_live_list2;
@@ -1199,12 +1223,22 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     }
 
     private static List<Player> getPlayers(Map<Player, Integer> list) {
-        List<Player> result = list.keySet().stream().filter(player -> player != null).collect(Collectors.toList());
+        List<Player> result = new ArrayList<Player>();
+        for (Player player : list.keySet()) {
+            if (player != null) {
+                result.add(player);
+            }
+        }
         return result;
     }
 
     private static List<Player> getPlayersA(List<Player> list) {
-        List<Player> result = list.stream().filter(player -> player != null).collect(Collectors.toList());
+        List<Player> result = new ArrayList<Player>();
+        for (Player player : list) {
+            if (player != null) {
+                result.add(player);
+            }
+        }
         return result;
     }
 
@@ -1270,8 +1304,8 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     }
 
     public static void mageBuff(Player player) {
-        for (int[] mage_buff : mage_buffs) {
-            buff = SkillTable.getInstance().getInfo(mage_buff[0], mage_buff[1]);
+        for (int i = 0; i < mage_buffs.length; i++) {
+            buff = SkillTable.getInstance().getInfo(mage_buffs[i][0], mage_buffs[i][1]);
             if (buff == null) {
                 continue;
             }
@@ -1283,8 +1317,8 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     }
 
     public static void fighterBuff(Player player) {
-        for (int[] fighter_buff : fighter_buffs) {
-            buff = SkillTable.getInstance().getInfo(fighter_buff[0], fighter_buff[1]);
+        for (int i = 0; i < fighter_buffs.length; i++) {
+            buff = SkillTable.getInstance().getInfo(fighter_buffs[i][0], fighter_buffs[i][1]);
             if (buff == null) {
                 continue;
             }
@@ -1341,7 +1375,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     }
 
     public static void broadCastPacketToTeam(L2GameServerPacket packet) {
-        ArrayList<Player> team = new ArrayList<>(12);
+        ArrayList<Player> team = new ArrayList<Player>(12);
         team.addAll(getPlayers(_redTeamPoints));
         team.addAll(getPlayers(_blueTeamPoints));
 

@@ -79,7 +79,7 @@ public class CommunityBoard implements ScriptFile, ICommunityBoardHandler {
                 html = html.replaceFirst("%lvl%", String.valueOf(player.getLevel()));
                 html = html.replaceFirst("%clan%", player.getClan() != null ? String.valueOf(player.getClan().getName()) : player.isLangRus() ? "<font color=\"FF0000\">нет</font>" : "<font color=\"FF0000\">none</font>");
                 html = html.replaceFirst("%noobl%", player.isNoble() ? String.valueOf(player.isLangRus() ? "да" : "no") : player.isLangRus() ? "<font color=\"FF0000\">требуется саб. 75 ур.</font>" : "<font color=\"FF0000\">required sub 75 lvl</font>");
-                html = html.replaceFirst("%time%", String.valueOf(player.getHoursInGames()).concat(player.isLangRus() ? " час" : " hour"));
+                html = html.replaceFirst("%time%", String.valueOf(player.getHoursInGames()).concat(player.isLangRus() ? " час" : " час"));
                 html = html.replaceFirst("%premium%", player.hasBonus() ? DATE_FORMAT.format(new Date(player.getBonus().getBonusExpireX())) : player.isLangRus() ? "<font color=\"LEVEL\"><a action=\"bypass _bbsscripts:services.RateBonus:list\">Купить премиум</a></font>" : "<font color=\"LEVEL\"><a action=\"bypass _bbsscripts:services.RateBonus:list\">Byu premium</a></font>");
                 html = html.replaceFirst("%servhwid%", player.isLangRus() ? "<a action=\"bypass -h user_lock\">Привязать</a>" : "<a action=\"bypass -h user_lock\">Install</a>");
                 html = html.replaceFirst("%servip%", player.isLangRus() ? "<a action=\"bypass -h user_lock\">Привязать</a>" : "<a action=\"bypass -h user_lock\">Install</a>");

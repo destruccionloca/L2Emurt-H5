@@ -77,9 +77,11 @@ public class Tiat extends Fighter {
         }
         if (System.currentTimeMillis() - _lastFactionNotifyTime > _minFactionNotifyInterval) {
             _lastFactionNotifyTime = System.currentTimeMillis();
-            World.getAroundNpc(actor).stream().filter(npc -> ArrayUtils.contains(TIAT_MINION_IDS, npc.getNpcId())).forEach(npc -> {
-                npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 30000);
-            });
+            for (NpcInstance npc : World.getAroundNpc(actor)) {
+                if (ArrayUtils.contains(TIAT_MINION_IDS, npc.getNpcId())) {
+                    npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 30000);
+                }
+            }
             if (Rnd.chance(15) && !_notUsedTransform) {
                 actor.broadcastPacket(new ExShowScreenMessage(TIAT_TEXT[Rnd.get(TIAT_TEXT.length)], 4000, ScreenMessageAlign.MIDDLE_CENTER, false));
             }
@@ -124,14 +126,18 @@ public class Tiat extends Fighter {
         SoDManager.addTiatKill();
         final Reflection r = actor.getReflection();
         r.setReenterTime(System.currentTimeMillis());
-        r.getNpcs().forEach(NpcInstance::deleteMe);
+        for (NpcInstance n : r.getNpcs()) {
+            n.deleteMe();
+        }
         // Показываем финальный ролик серез секунду после очистки инстанса
         ThreadPoolManager.getInstance().schedule(new RunnableImpl() {
             @Override
             public void runImpl() throws Exception {
-                r.getPlayers().stream().filter(pl -> pl != null).forEach(pl -> {
-                    pl.showQuestMovie(ExStartScenePlayer.SCENE_TIAT_SUCCESS);
-                });
+                for (Player pl : r.getPlayers()) {
+                    if (pl != null) {
+                        pl.showQuestMovie(ExStartScenePlayer.SCENE_TIAT_SUCCESS);
+                    }
+                }
             }
         }, 1000);
     }

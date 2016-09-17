@@ -17,8 +17,8 @@ public class _384_WarehouseKeepersPastime extends Quest implements ScriptFile {
     private final static int Baxt = 30685;
     // Items
     private final static int Warehouse_Keepers_Medal = 5964;
-    private final static Map<Integer, Integer> Medal_Chances = new HashMap<>();
-    private final static Map<Integer, Bingo> bingos = new HashMap<>();
+    private final static Map<Integer, Integer> Medal_Chances = new HashMap<Integer, Integer>();
+    private final static Map<Integer, Bingo> bingos = new HashMap<Integer, Bingo>();
     private final static int[][] Rewards_Win = {
         {
             16,
@@ -174,7 +174,9 @@ public class _384_WarehouseKeepersPastime extends Quest implements ScriptFile {
         Medal_Chances.put(20677, 34); //Tulben
         Medal_Chances.put(20605, 15); //Weird Drake
 
-        Medal_Chances.keySet().forEach(this::addKillId);
+        for (int id : Medal_Chances.keySet()) {
+            addKillId(id);
+        }
     }
 
     @Override

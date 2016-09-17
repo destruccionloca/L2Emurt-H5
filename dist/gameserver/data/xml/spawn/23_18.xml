@@ -2954,6 +2954,10 @@
 		<npc id="31862"/><!--Angelic Vortex-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="118644" y="16680" z="6000" h="42000"/>
+		<npc id="30951"/><!--Researcher Pithgon-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="110831" y="15973" z="-4368" h="412"/>
 		<npc id="30949"/><!--Researcher Keplon-->
 	</spawn>

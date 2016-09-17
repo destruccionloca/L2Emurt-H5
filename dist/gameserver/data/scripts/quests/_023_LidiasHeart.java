@@ -49,63 +49,48 @@ public class _023_LidiasHeart extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "31328-02.htm":
-                st.giveItems(MapForestofDeadman, 1);
-                st.giveItems(SilverKey, 1);
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "31328-03.htm":
-                st.setCond(2);
-                break;
-            case "31526-01.htm":
-                st.setCond(3);
-                break;
-            case "31526-05.htm":
-                st.giveItems(LidiaHairPin, 1);
-                if (st.getQuestItemsCount(LidiaDiary) != 0) {
-                    st.setCond(4);
-                }
-                break;
-            case "31526-11.htm":
-                st.giveItems(LidiaDiary, 1);
-                if (st.getQuestItemsCount(LidiaHairPin) != 0) {
-                    st.setCond(4);
-                }
-                break;
-            case "31328-19.htm":
-                st.setCond(6);
-                break;
-            case "31524-04.htm":
-                st.setCond(7);
-                st.takeItems(LidiaDiary, -1);
-                break;
-            case "31523-02.htm":
-                st.addSpawn(GhostofvonHellmann, 120000);
-                break;
-            case "31523-05.htm":
-                st.startQuestTimer("viwer_timer", 10000);
-                break;
-            case "viwer_timer":
-                st.setCond(8);
-                htmltext = "31523-06.htm";
-                break;
-            case "31530-02.htm":
-                st.setCond(10);
-                st.takeItems(SilverKey, -1);
-                st.giveItems(SilverSpear, 1);
-                break;
-            case "i7064-02.htm":
-                htmltext = "i7064-02.htm";
-                break;
-            case "31526-13.htm":
-                st.startQuestTimer("read_book", 120000);
-                break;
-            case "read_book":
-                htmltext = "i7064.htm";
-                break;
+        if (event.equals("31328-02.htm")) {
+            st.giveItems(MapForestofDeadman, 1);
+            st.giveItems(SilverKey, 1);
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("31328-03.htm")) {
+            st.setCond(2);
+        } else if (event.equals("31526-01.htm")) {
+            st.setCond(3);
+        } else if (event.equals("31526-05.htm")) {
+            st.giveItems(LidiaHairPin, 1);
+            if (st.getQuestItemsCount(LidiaDiary) != 0) {
+                st.setCond(4);
+            }
+        } else if (event.equals("31526-11.htm")) {
+            st.giveItems(LidiaDiary, 1);
+            if (st.getQuestItemsCount(LidiaHairPin) != 0) {
+                st.setCond(4);
+            }
+        } else if (event.equals("31328-19.htm")) {
+            st.setCond(6);
+        } else if (event.equals("31524-04.htm")) {
+            st.setCond(7);
+            st.takeItems(LidiaDiary, -1);
+        } else if (event.equals("31523-02.htm")) {
+            st.addSpawn(GhostofvonHellmann, 120000);
+        } else if (event.equals("31523-05.htm")) {
+            st.startQuestTimer("viwer_timer", 10000);
+        } else if (event.equals("viwer_timer")) {
+            st.setCond(8);
+            htmltext = "31523-06.htm";
+        } else if (event.equals("31530-02.htm")) {
+            st.setCond(10);
+            st.takeItems(SilverKey, -1);
+            st.giveItems(SilverSpear, 1);
+        } else if (event.equals("i7064-02.htm")) {
+            htmltext = "i7064-02.htm";
+        } else if (event.equals("31526-13.htm")) {
+            st.startQuestTimer("read_book", 120000);
+        } else if (event.equals("read_book")) {
+            htmltext = "i7064.htm";
         }
         return htmltext;
     }

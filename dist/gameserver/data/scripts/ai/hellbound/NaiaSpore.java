@@ -10,7 +10,7 @@ import l2p.gameserver.model.instances.NpcInstance;
 
 public class NaiaSpore extends Fighter {
 
-    private static Map<Integer, Integer> epidosIndex = new HashMap<>();
+    private static Map<Integer, Integer> epidosIndex = new HashMap<Integer, Integer>();
 
     static {
         epidosIndex.put(1, 0);

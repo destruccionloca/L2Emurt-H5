@@ -19,7 +19,7 @@ import l2p.gameserver.utils.Location;
 public class QueenAntInstance extends BossInstance {
 
     private static final int Queen_Ant_Larva = 29002;
-    private final List<SimpleSpawner> _spawns = new ArrayList<>();
+    private final List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
     private NpcInstance Larva = null;
 
     public QueenAntInstance(int objectId, NpcTemplate template) {
@@ -32,7 +32,7 @@ public class QueenAntInstance extends BossInstance {
     }
     
     public List<NpcInstance> getAllSpawned() {
-        List<NpcInstance> npcs = new ArrayList<>();
+        List<NpcInstance> npcs = new ArrayList<NpcInstance>();
         for (Spawner spawn : _spawns) {
             npcs.addAll(spawn.getAllSpawned());
         }
@@ -41,7 +41,7 @@ public class QueenAntInstance extends BossInstance {
     
     public NpcInstance getFirstSpawned() {
         List<NpcInstance> npcs = getAllSpawned();
-        return !npcs.isEmpty() ? npcs.get(0) : null;
+        return npcs.size() > 0 ? npcs.get(0) : null;
     }
     
    public NpcInstance getLarva() {

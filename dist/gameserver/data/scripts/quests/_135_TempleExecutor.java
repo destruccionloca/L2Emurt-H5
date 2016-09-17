@@ -165,7 +165,7 @@ public class _135_TempleExecutor extends Quest implements ScriptFile {
     @Override
     public String onKill(NpcInstance npc, QuestState qs) {
         if (qs.getState() == STARTED && qs.getCond() == 3) {
-            List<Integer> drops = new ArrayList<>();
+            List<Integer> drops = new ArrayList<Integer>();
             if (qs.getQuestItemsCount(Stolen_Cargo) < 10) {
                 drops.add(Stolen_Cargo);
             }

@@ -11,7 +11,7 @@ import l2p.gameserver.serverpackets.ExStartScenePlayer;
 
 public class TiatCamera extends DefaultAI {
 
-    private List<Player> _players = new ArrayList<>();
+    private List<Player> _players = new ArrayList<Player>();
 
     public TiatCamera(NpcInstance actor) {
         super(actor);
@@ -22,10 +22,12 @@ public class TiatCamera extends DefaultAI {
     @Override
     protected boolean thinkActive() {
         NpcInstance actor = getActor();
-        World.getAroundPlayers(actor, 300, 300).stream().filter(p -> !_players.contains(p)).forEach(p -> {
-            p.showQuestMovie(ExStartScenePlayer.SCENE_TIAT_OPENING);
-            _players.add(p);
-        });
+        for (Player p : World.getAroundPlayers(actor, 300, 300)) {
+            if (!_players.contains(p)) {
+                p.showQuestMovie(ExStartScenePlayer.SCENE_TIAT_OPENING);
+                _players.add(p);
+            }
+        }
         return true;
     }
 }

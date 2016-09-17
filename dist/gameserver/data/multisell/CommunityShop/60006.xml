@@ -1,0 +1,125 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<list maintainEnchantment="true">
+
+  <!-- Graduation Cap -->
+  <item id="1">
+    <ingredient id="4356" count="100"/>
+    <production id="13492" count="1"/>
+  </item>
+
+  <!-- Refined Pirate Hat -->
+  <item id="1">
+    <ingredient id="4356" count="100"/>
+    <production id="13496" count="1"/>
+  </item>
+
+  <!-- Refined Wizard Hat -->
+  <item id="3">
+    <ingredient id="4356" count="100"/>
+    <production id="13498" count="1"/>
+  </item>
+
+  <!-- Refined Jester Hat -->
+  <item id="4">
+    <ingredient id="4356" count="100"/>
+    <production id="13499" count="1"/>
+  </item>
+
+  <!-- Refined Dapper Cap -->
+  <item id="5">
+    <ingredient id="4356" count="100"/>
+    <production id="13504" count="1"/>
+  </item>
+
+  <!-- Mining Hat -->
+  <item id="6">
+    <ingredient id="4356" count="100"/>
+    <production id="13513" count="1"/>
+  </item>
+
+  <!-- Improved Mining Hat -->
+  <item id="7">
+    <ingredient id="4356" count="100"/>
+    <production id="13514" count="1"/>
+  </item>
+
+  <!-- Search Hat -->
+  <item id="8">
+    <ingredient id="4356" count="100"/>
+    <production id="13515" count="1"/>
+  </item>
+
+  <!-- Improved Search Hat -->
+  <item id="9">
+    <ingredient id="4356" count="100"/>
+    <production id="13516" count="1"/>
+  </item>
+
+  <!-- Artisan's Goggles -->
+  <item id="10">
+    <ingredient id="4356" count="100"/>
+    <production id="8186" count="1"/>
+  </item>
+
+  <!-- Feathered Hat -->
+  <item id="11">
+    <ingredient id="4356" count="100"/>
+    <production id="8185" count="1"/>
+  </item>
+
+  <!-- Party Hat -->
+  <item id="12">
+    <ingredient id="4356" count="100"/>
+    <production id="8184" count="1"/>
+  </item>
+
+  <!-- Leather Cap -->
+  <item id="13">
+    <ingredient id="4356" count="100"/>
+    <production id="8918" count="1"/>
+  </item>
+
+  <!-- First Mate's Hat -->
+  <item id="14">
+    <ingredient id="4356" count="100"/>
+    <production id="8919" count="1"/>
+  </item>
+
+  <!-- Pirate Hat -->
+  <item id="15">
+    <ingredient id="4356" count="100"/>
+    <production id="8922" count="1"/>
+  </item>
+
+  <!-- Jester Hat -->
+  <item id="16">
+    <ingredient id="4356" count="100"/>
+    <production id="8562" count="1"/>
+  </item>
+
+  <!-- Wizard Hat -->
+  <item id="17">
+    <ingredient id="4356" count="100"/>
+    <production id="8563" count="1"/>
+  </item>
+
+  <!-- Dapper Cap -->
+  <item id="18">
+    <ingredient id="4356" count="100"/>
+    <production id="8564" count="1"/>
+  </item>
+
+  <!-- Romantic Chapeau -->
+  <item id="19">
+    <ingredient id="4356" count="100"/>
+    <production id="8565" count="1"/>
+  </item>
+
+  <!-- Straw Hat -->
+  <item id="20">
+    <ingredient id="4356" count="100"/>
+    <production id="10248" count="1"/>
+  </item>
+
+</list>

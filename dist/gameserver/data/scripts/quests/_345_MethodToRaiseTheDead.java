@@ -57,38 +57,33 @@ public class _345_MethodToRaiseTheDead extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "1":
-                st.setCond(1);
-                st.setState(STARTED);
-                htmltext = "dorothy_the_locksmith_q0345_03.htm";
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "2":
-                st.setCond(2);
-                htmltext = "dorothy_the_locksmith_q0345_07.htm";
-                break;
-            case "3":
-                if (st.getQuestItemsCount(ADENA_ID) >= 1000) {
-                    st.takeItems(ADENA_ID, 1000);
-                    st.giveItems(POWDER_TO_SUMMON_DEAD_SOULS, 1);
-                    st.setCond(3);
-                    htmltext = "magister_xenovia_q0345_03.htm";
-                    st.playSound(SOUND_ITEMGET);
-                } else {
-                    htmltext = "<html><head><body>You dont have enough adena!</body></html>";
-                }
-                break;
-            case "4":
-                htmltext = "medium_jar_q0345_07.htm";
-                st.takeItems(POWDER_TO_SUMMON_DEAD_SOULS, -1);
-                st.takeItems(VICTIMS_ARM_BONE, -1);
-                st.takeItems(VICTIMS_THIGH_BONE, -1);
-                st.takeItems(VICTIMS_SKULL, -1);
-                st.takeItems(VICTIMS_RIB_BONE, -1);
-                st.takeItems(VICTIMS_SPINE, -1);
-                st.setCond(6);
-                break;
+        if (event.equals("1")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            htmltext = "dorothy_the_locksmith_q0345_03.htm";
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("2")) {
+            st.setCond(2);
+            htmltext = "dorothy_the_locksmith_q0345_07.htm";
+        } else if (event.equals("3")) {
+            if (st.getQuestItemsCount(ADENA_ID) >= 1000) {
+                st.takeItems(ADENA_ID, 1000);
+                st.giveItems(POWDER_TO_SUMMON_DEAD_SOULS, 1);
+                st.setCond(3);
+                htmltext = "magister_xenovia_q0345_03.htm";
+                st.playSound(SOUND_ITEMGET);
+            } else {
+                htmltext = "<html><head><body>You dont have enough adena!</body></html>";
+            }
+        } else if (event.equals("4")) {
+            htmltext = "medium_jar_q0345_07.htm";
+            st.takeItems(POWDER_TO_SUMMON_DEAD_SOULS, -1);
+            st.takeItems(VICTIMS_ARM_BONE, -1);
+            st.takeItems(VICTIMS_THIGH_BONE, -1);
+            st.takeItems(VICTIMS_SKULL, -1);
+            st.takeItems(VICTIMS_RIB_BONE, -1);
+            st.takeItems(VICTIMS_SPINE, -1);
+            st.setCond(6);
         }
         return htmltext;
     }

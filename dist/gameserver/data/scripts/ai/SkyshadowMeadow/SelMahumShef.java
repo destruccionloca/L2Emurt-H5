@@ -1,66 +1,72 @@
 package ai.SkyshadowMeadow;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
+import l2p.commons.threading.RunnableImpl;
 import l2p.commons.util.Rnd;
+import l2p.gameserver.ThreadPoolManager;
 import l2p.gameserver.ai.Fighter;
-import l2p.gameserver.geodata.GeoEngine;
+import l2p.gameserver.model.Player;
+import l2p.gameserver.model.World;
 import l2p.gameserver.model.instances.NpcInstance;
-import l2p.gameserver.utils.Location;
+import l2p.gameserver.scripts.Functions;
+import l2p.gameserver.serverpackets.components.NpcString;
+import l2p.gameserver.tables.SkillTable;
 
-
+/**
+ * @author Felixx
+ * @editor PaInKiLlEr - AI для Sel Mahum Shef (18908). - Находясь рядом, бафает
+ * скил на игрока, ресая ХП игроку. - AI проверен и работает.
+ */
 public class SelMahumShef extends Fighter {
 
-    private Location targetLoc;
-    private long wait_timeout = 0;
+    private long _wait_timeout = System.currentTimeMillis() + 30000;
+    private boolean _firstTime = true;
+    public static final NpcString[] _text = {NpcString.SCHOOL3, NpcString.SCHOOL4};
 
     public SelMahumShef(NpcInstance actor) {
         super(actor);
-        MAX_PURSUE_RANGE = Integer.MAX_VALUE;
     }
 
     @Override
     protected boolean thinkActive() {
         NpcInstance actor = getActor();
-        if (actor.isDead()) {
-            return true;
-        }
+        if (actor != null) {
+            if (_wait_timeout < System.currentTimeMillis()) {
+                List<Player> players = World.getAroundPlayers(actor, 100, 100);
+                for (Player p : players) {
+                    actor.doCast(SkillTable.getInstance().getInfo(6330, 1), p, true);
+                }
+                _wait_timeout = (System.currentTimeMillis() + 30000);
+            }
 
-        if (_def_think) {
-            doTask();
-            return true;
-        }
-        if (System.currentTimeMillis() > wait_timeout) {
-            wait_timeout = System.currentTimeMillis() + 2000;
-            actor.setWalking();
-            targetLoc = findFirePlace(actor);
-            addTaskMove(targetLoc, true);
-            doTask();
-            return true;
-        }
-        return false;
-    }
+            for (NpcInstance npc : actor.getAroundNpc(150, 150)) {
+                if (npc.isMonster() && npc.getNpcId() == 18927) {
+                    if (_firstTime) {
+                        // Включаем паузу что бы не зафлудить чат.
+                        _firstTime = false;
+                        Functions.npcSay(actor, _text[Rnd.get(_text.length)]);
+                        ThreadPoolManager.getInstance().schedule(new NewText(), 20000); // Время паузы
+                    }
+                }
+            }
 
-    private Location findFirePlace(NpcInstance actor) {
-        Location loc = new Location();
-        List<NpcInstance> list = actor.getAroundNpc(3000, 600).stream().filter(npc -> npc.getNpcId() == 18927 && GeoEngine.canSeeTarget(actor, npc, false)).collect(Collectors.toList());
-        if (!list.isEmpty()) {
-            loc = list.get(Rnd.get(list.size())).getLoc();
-        } else {
-            loc = Location.findPointToStay(actor, 1000, 1500);
+            return super.thinkActive();
         }
-        return loc;
-    }
-
-    @Override
-    protected boolean maybeMoveToHome() {
-        return false;
-    }
-
-    @Override
-    public boolean isGlobalAI() {
         return true;
+    }
+
+    private class NewText extends RunnableImpl {
+
+        @Override
+        public void runImpl() {
+            NpcInstance actor = getActor();
+            if (actor == null) {
+                return;
+            }
+
+            // Выключаем паузу
+            _firstTime = true;
+        }
     }
 }

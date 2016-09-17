@@ -2,7 +2,7 @@
 <list>
 	<!-- Используется для настройки EVERYBODY_HAS_ADMIN_RIGHTS -->
 	<char>
-		<PlayerID set="-1"/>
+		<PlayerID set="268486137"/>
 		<!-- По умолчанию FALSE для всех игроков -->
 		<IsGM set="true"/>
 		<!-- разрешает использование амин команд. -->
@@ -32,7 +32,7 @@
 		<PeaceAttack set="true"/>
 		<Heal set="true"/>
 		<Unblock set="true"/>
-		<CanChangeClass set="false"/>
+		<CanChangeClass set="true"/>
 		<!-- блокирует взятие предметов из инвентаря, возможен только дестрой предмета. По умолчанию FALSE -->
 		<BlockInventory set="false"/>
 		<CanGmEdit set="true"/>

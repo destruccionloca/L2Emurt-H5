@@ -40,9 +40,11 @@ public class Keys extends ScriptItemHandler implements ScriptFile {
 
     public Keys() {
         TIntHashSet keys = new TIntHashSet();
-        DoorHolder.getInstance().getDoors().values().stream().filter(door -> door != null && door.getKey() > 0).forEach(door -> {
-            keys.add(door.getKey());
-        });
+        for (DoorTemplate door : DoorHolder.getInstance().getDoors().values()) {
+            if (door != null && door.getKey() > 0) {
+                keys.add(door.getKey());
+            }
+        }
         _itemIds = keys.toArray();
     }
 

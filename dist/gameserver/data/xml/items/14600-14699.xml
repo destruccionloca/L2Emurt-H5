@@ -204,7 +204,7 @@
     <set name="dropable" value="false"/>
     <set name="icon" value="icon.xmas_present_i00"/>
     <set name="stackable" value="true"/>
-    <set name="tradeable" value="false"/>
+    <set name="tradeable" value="true"/>
     <set name="type" value="OTHER"/>
     <set name="weight" value="20"/>
   </etcitem>

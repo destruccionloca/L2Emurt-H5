@@ -47,8 +47,8 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="36601" name="Sir Gyles de Murforte" title="Head of Assassins">
-        <set name="displayId" value="30832"/>
+    <npc id="36601" name="Каратель" title="Заказ убийств">
+        <set name="displayId" value="18948"/>
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -75,8 +75,8 @@
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="50"/>
         <set name="castle_id" value="3"/>
-        <set name="collision_height" value="22.5"/>
-        <set name="collision_radius" value="8.0"/>
+        <set name="collision_height" value="26.5"/>
+        <set name="collision_radius" value="15.0"/>
         <set name="level" value="70"/>
         <set name="isAgro" value="0"/>
         <set name="rewardExp" value="0"/>

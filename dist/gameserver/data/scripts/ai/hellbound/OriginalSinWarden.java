@@ -25,10 +25,10 @@ public class OriginalSinWarden extends Fighter {
         NpcInstance actor = getActor();
         switch (actor.getNpcId()) {
             case 22423: {
-                for (int aServants1 : servants1) {
+                for (int i = 0; i < servants1.length; i++) {
                     try {
                         Location loc = actor.getLoc();
-                        SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(aServants1));
+                        SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(servants1[i]));
                         sp.setLoc(Location.findPointToStay(actor, 150, 350));
                         sp.doSpawn(true);
                         sp.stopRespawn();
@@ -39,10 +39,10 @@ public class OriginalSinWarden extends Fighter {
                 break;
             }
             case 22431: {
-                for (int aServants2 : servants2) {
+                for (int i = 0; i < servants2.length; i++) {
                     try {
                         Location loc = actor.getLoc();
-                        SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(aServants2));
+                        SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(servants2[i]));
                         sp.setLoc(Location.findPointToStay(actor, 150, 350));
                         sp.doSpawn(true);
                         sp.stopRespawn();

@@ -326,7 +326,7 @@
   <armor id="10518" name="Red Talisman - Life Force">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="70"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i00"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -342,7 +342,7 @@
   <armor id="10519" name="White Talisman -  Earth">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="80"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i06"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -598,7 +598,7 @@
   <armor id="10533" name="Blue Talisman - Attack Power">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i01"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -614,7 +614,7 @@
   <armor id="10534" name="Blue Talisman - Shield Defense">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i01"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -630,7 +630,7 @@
   <armor id="10535" name="Yellow Talisman - Defense Power">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="60"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i02"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -646,7 +646,7 @@
   <armor id="10536" name="Yellow Talisman - Magic Power">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="60"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i02"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -662,7 +662,7 @@
   <armor id="10537" name="Yellow Talisman - Evasion">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="60"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i02"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -678,7 +678,7 @@
   <armor id="10538" name="Yellow Talisman - Healing Power">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="60"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i02"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -694,7 +694,7 @@
   <armor id="10539" name="Yellow Talisman - CP Recovery Rate">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="60"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i02"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -710,7 +710,7 @@
   <armor id="10540" name="Yellow Talisman - HP Recovery Rate">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="60"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i02"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -726,7 +726,7 @@
   <armor id="10541" name="Yellow Talisman - Low Grade MP regeneration rate">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="60"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i02"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -742,7 +742,7 @@
   <armor id="10542" name="Red Talisman - HP/CP Recovery">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="64"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i00"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -758,7 +758,7 @@
   <armor id="10543" name="Yellow Talisman - Speed">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="60"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i02"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>

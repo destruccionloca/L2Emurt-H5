@@ -35,7 +35,7 @@ public class _371_ShriekOfGhosts extends Quest implements ScriptFile {
     private static int Ancient_Porcelain__Low_Quality_Chance = 46; //    32% 4000a  (50%)
     private static int Ancient_Porcelain__Lowest_Quality_Chance = 84; // 38% 2640a  (33%)
     //                                                                   16% chance of nothing
-    private Map<Integer, Integer> common_chances = new HashMap<>();
+    private Map<Integer, Integer> common_chances = new HashMap<Integer, Integer>();
 
     public _371_ShriekOfGhosts() {
         super(true);

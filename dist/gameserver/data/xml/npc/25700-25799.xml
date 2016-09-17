@@ -692,17 +692,17 @@
         <set name="baseCON" value="57"/>
         <set name="baseCritRate" value="4"/>
         <set name="baseDEX" value="73"/>
-        <set name="baseHpMax" value="280911.661939328"/>
+        <set name="baseHpMax" value="1280911.661939328"/>
         <set name="baseHpRate" value="3"/>
-        <set name="baseHpReg" value="36.8918887774779"/>
+        <set name="baseHpReg" value="38.8918887774779"/>
         <set name="baseINT" value="76"/>
-        <set name="baseMAtk" value="1682"/>
+        <set name="baseMAtk" value="3682"/>
         <set name="baseMAtkSpd" value="333"/>
         <set name="baseMDef" value="1554"/>
         <set name="baseMEN" value="80"/>
         <set name="baseMpMax" value="17774"/>
         <set name="baseMpReg" value="400"/>
-        <set name="basePAtk" value="10229"/>
+        <set name="basePAtk" value="19229"/>
         <set name="basePAtkSpd" value="253"/>
         <set name="basePDef" value="3185"/>
         <set name="baseRunSpd" value="180"/>
@@ -713,7 +713,7 @@
         <set name="baseWalkSpd" value="73"/>
         <set name="collision_height" value="62.4"/>
         <set name="collision_radius" value="34.32"/>
-        <set name="level" value="83"/>
+        <set name="level" value="85"/>
         <set name="isAgro" value="1"/>
         <set name="rewardExp" value="16653943"/>
         <set name="rewardRp" value="1462"/>
@@ -743,23 +743,11 @@
             <skill id="4414" level="2"/>
             <skill id="4415" level="3"/>
         </skills>
-        <rewardlist type="RATED_GROUPED">
-            <group chance="20.0027">
-                <reward item_id="15766" min="1" max="1" chance="15.6800" />	<!--Sealed Moirai Ring-->
-                <reward item_id="15767" min="1" max="1" chance="11.2400" />	<!--Sealed Moirai Earring-->
-                <reward item_id="15768" min="1" max="1" chance="8.5200" />	<!--Sealed Moirai Necklace-->
-            </group>
-            <group chance="100.0">
-                <reward item_id="10219" min="1" max="1" chance="1.4700" />	<!--Icarus Trident-->
-                <reward item_id="10215" min="1" max="1" chance="1.2700" />	<!--Icarus Sawsword-->
-                <reward item_id="10216" min="1" max="1" chance="0.9500" />	<!--Icarus Disperser-->
-                <reward item_id="10217" min="1" max="1" chance="0.5400" />	<!--Icarus Spirit-->
-            </group>
-            <group chance="88.5397">
-                <reward item_id="959" min="1" max="1" chance="16.6667" />	<!--Scroll: Enchant Weapon (S-Grade)-->
-                <reward item_id="960" min="1" max="3" chance="83.3333" />	<!--Scroll: Enchant Armor (S-Grade)-->
-            </group>
-        </rewardlist>
+        <rewardlist type="NOT_RATED_NOT_GROUPED">	
+			<reward item_id="4357" min="12" max="20" chance="40.0000" />	<!--silver -->
+			<reward item_id="24020" min="3" max="5" chance="40.0000" />	<!--сумка лоу -->	
+			<reward item_id="25079" min="2" max="4" chance="40.0000" />	<!--сертификат -->			
+        </rewardlist>		
         <attributes>
             <attack attribute="unholy" value="250"/>
             <defence attribute="fire" value="200"/>

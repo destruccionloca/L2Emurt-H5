@@ -2,7 +2,6 @@ package ai.SkyshadowMeadow;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import l2p.commons.threading.RunnableImpl;
 import l2p.commons.util.Rnd;
@@ -25,7 +24,7 @@ import l2p.gameserver.serverpackets.components.NpcString;
 public class SelMahumTrainer extends Fighter {
 
     private long _wait_timeout = System.currentTimeMillis() + 20000;
-    private List<NpcInstance> _arm = new ArrayList<>();
+    private List<NpcInstance> _arm = new ArrayList<NpcInstance>();
     private boolean _firstTimeAttacked = true;
     public static final NpcString[] _text = {NpcString.SCHOOL7, NpcString.SCHOOL8};
 
@@ -43,7 +42,9 @@ public class SelMahumTrainer extends Fighter {
 
         if (_wait_timeout < System.currentTimeMillis()) {
             if (_arm == null || _arm.isEmpty()) {
-                _arm.addAll(getActor().getAroundNpc(750, 750).stream().collect(Collectors.toList()));
+                for (NpcInstance npc : getActor().getAroundNpc(750, 750)) {
+                    _arm.add(npc);
+                }
             }
 
             _wait_timeout = (System.currentTimeMillis() + Rnd.get(20, 30) * 1000);

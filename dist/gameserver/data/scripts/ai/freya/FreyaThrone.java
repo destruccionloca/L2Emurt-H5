@@ -119,9 +119,11 @@ public class FreyaThrone extends Fighter {
         // Оповещение минионов
         if (System.currentTimeMillis() - _lastFactionNotifyTime > _minFactionNotifyInterval) {
             _lastFactionNotifyTime = System.currentTimeMillis();
-            actor.getReflection().getNpcs().stream().filter(npc -> npc.isMonster() && npc != actor).forEach(npc -> {
-                npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, actor.getAggroList().getMostHated(), 5);
-            });
+            for (NpcInstance npc : actor.getReflection().getNpcs()) {
+                if (npc.isMonster() && npc != actor) {
+                    npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, actor.getAggroList().getMostHated(), 5);
+                }
+            }
         }
         super.thinkAttack();
     }

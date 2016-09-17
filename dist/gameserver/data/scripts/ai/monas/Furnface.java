@@ -24,9 +24,11 @@ public class Furnface extends DefaultAI {
             actor.setNpcState(1);
             actor.setTargetable(false, false);
             actor.doCast(SkillTable.getInstance().getInfo(5144, 1), caster, true);
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 32758 && actor.getDistance(npc) <= 1000).forEach(npc -> {
-                ((SumielInstance) npc).setSCE_POT_ON(actor.getAISpawnParam());
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 32758 && actor.getDistance(npc) <= 1000) {
+                    ((SumielInstance) npc).setSCE_POT_ON(actor.getAISpawnParam());
+                }
+            }
 
             ThreadPoolManager.getInstance().schedule(new OFF_TIMER(), 2 * 1000);
             actor.setTargetable(true, false);

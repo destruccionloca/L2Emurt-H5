@@ -1015,7 +1015,7 @@
       <slot id="LEFT_FINGER"/>
     </equip>
     <skills>
-      <skill id="3561" level="1"/>
+      <skill id="3561" level="2"/>
     </skills>
     <for>
       <add stat="mDef" order="0x10" value="48"/>
@@ -1037,7 +1037,7 @@
       <slot id="LEFT_FINGER"/>
     </equip>
     <skills>
-      <skill id="3562" level="1"/>
+      <skill id="3562" level="2"/>
     </skills>
     <for>
       <add stat="mDef" order="0x10" value="48"/>

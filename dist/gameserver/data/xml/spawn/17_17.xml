@@ -138,16 +138,8 @@
 		<npc id="30047"/><!--Firon-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-84436" y="242793" z="-3729" h="42000"/>
-		<npc id="30048"/><!--Darin-->
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-83163" y="243560" z="-3728" h="20490"/>
 		<npc id="30049"/><!--Bonnie-->
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-84057" y="242832" z="-3729" h="59000"/>
-		<npc id="30050"/><!--Elias-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-82041" y="242718" z="-3720" h="20493"/>
@@ -659,10 +651,7 @@
 		<point x="-84282" y="155597" z="-3160" h="48512"/>
 		<npc id="35396"/><!--Winker-->
 	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="class_master">
-		<point x="-84522" y="243213" z="-3731" h="21481"/>
-		<npc id="31860"/><!--Buzz the Cat-->
-	</spawn>
+
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="class_master">
 		<point x="-81637" y="150251" z="-3130" h="16277"/>
 		<npc id="31860"/><!--Buzz the Cat-->
@@ -744,7 +733,7 @@
 		<npc id="32194"/><!--Shubain-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-84734" y="153122" z="-3160" h="17559"/>
+		<point x="-84664" y="153176" z="-3160" h="17559"/>
 		<npc id="32193"/><!--Yeniche-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">

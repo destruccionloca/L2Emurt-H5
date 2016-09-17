@@ -30,9 +30,11 @@ public class BaiumNpc extends DefaultAI {
             _wait_timeout = System.currentTimeMillis() + BAIUM_EARTHQUAKE_TIMEOUT;
             L2GameServerPacket eq = new Earthquake(actor.getLoc(), 40, 10);
             List<Creature> chars = actor.getAroundCharacters(5000, 10000);
-            chars.stream().filter(character -> character.isPlayer()).forEach(character -> {
-                character.sendPacket(eq);
-            });
+            for (Creature character : chars) {
+                if (character.isPlayer()) {
+                    character.sendPacket(eq);
+                }
+            }
         }
         return false;
     }

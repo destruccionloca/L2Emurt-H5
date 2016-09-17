@@ -77,14 +77,14 @@ public class Roulette extends Functions {
      * type 14:
      * Low or High, 0=1-18,1=19-36, выплата 1:1, zero автоматический проигрыш
      */
-    private enum GameType {
+    private static enum GameType {
 
         StraightUp,
         ColumnBet,
         DozenBet,
         RedOrBlack,
         EvenOrOdd,
-        LowOrHigh
+        LowOrHigh;
     }
 
     public void dialog() {
@@ -164,7 +164,7 @@ public class Roulette extends Functions {
     /**
      * Возвращает множитель ставки или 0 при проигрыше
      */
-    private static int check(String betID, String[] roll, GameType type) {
+    private static final int check(String betID, String[] roll, GameType type) {
         switch (type) {
             case StraightUp:
                 if (betID.equals(roll[0])) {

@@ -138,9 +138,9 @@ public class _227_TestOfTheReformer extends Quest implements ScriptFile {
         addKillId(OlMahumBetrayer);
         addKillId(CrimsonWerewolf);
         addKillId(KrudelLizardman);
-        for (int[] aDROPLIST_COND : DROPLIST_COND) {
-            addKillId(aDROPLIST_COND[2]);
-            addQuestItem(aDROPLIST_COND[4]);
+        for (int i = 0; i < DROPLIST_COND.length; i++) {
+            addKillId(DROPLIST_COND[i][2]);
+            addQuestItem(DROPLIST_COND[i][4]);
         }
         addQuestItem(new int[]{
             BookOfReform,
@@ -407,14 +407,14 @@ public class _227_TestOfTheReformer extends Quest implements ScriptFile {
     public String onKill(NpcInstance npc, QuestState st) {
         int npcId = npc.getNpcId();
         int cond = st.getCond();
-        for (int[] aDROPLIST_COND : DROPLIST_COND) {
-            if (cond == aDROPLIST_COND[0] && npcId == aDROPLIST_COND[2]) {
-                if (aDROPLIST_COND[3] == 0 || st.getQuestItemsCount(aDROPLIST_COND[3]) > 0) {
-                    if (aDROPLIST_COND[5] == 0) {
-                        st.rollAndGive(aDROPLIST_COND[4], aDROPLIST_COND[7], aDROPLIST_COND[6]);
-                    } else if (st.rollAndGive(aDROPLIST_COND[4], aDROPLIST_COND[7], aDROPLIST_COND[7], aDROPLIST_COND[5], aDROPLIST_COND[6])) {
-                        if (aDROPLIST_COND[1] != cond && aDROPLIST_COND[1] != 0) {
-                            st.setCond(aDROPLIST_COND[1]);
+        for (int i = 0; i < DROPLIST_COND.length; i++) {
+            if (cond == DROPLIST_COND[i][0] && npcId == DROPLIST_COND[i][2]) {
+                if (DROPLIST_COND[i][3] == 0 || st.getQuestItemsCount(DROPLIST_COND[i][3]) > 0) {
+                    if (DROPLIST_COND[i][5] == 0) {
+                        st.rollAndGive(DROPLIST_COND[i][4], DROPLIST_COND[i][7], DROPLIST_COND[i][6]);
+                    } else if (st.rollAndGive(DROPLIST_COND[i][4], DROPLIST_COND[i][7], DROPLIST_COND[i][7], DROPLIST_COND[i][5], DROPLIST_COND[i][6])) {
+                        if (DROPLIST_COND[i][1] != cond && DROPLIST_COND[i][1] != 0) {
+                            st.setCond(Integer.valueOf(DROPLIST_COND[i][1]));
                             st.setState(STARTED);
                         }
                     }

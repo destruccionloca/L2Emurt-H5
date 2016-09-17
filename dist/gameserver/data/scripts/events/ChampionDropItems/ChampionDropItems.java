@@ -87,6 +87,8 @@ public class ChampionDropItems extends Functions implements ScriptFile, OnDeathL
             for (int i = 0; i < ChampionCDItemsId.length; i++) {
                 if (Rnd.chance(ChampionCustomDropItemsChance[i] * killer.getPlayer().getRateItems() * ((MonsterInstance) cha).getTemplate().rateHp)) {
                     ((MonsterInstance) cha).dropItem(killer.getPlayer(), ChampionCDItemsId[i], Rnd.get(ChampionCDItemsCountDropMin[i], ChampionCDItemsCountDropMax[i]));
+                } else {
+                    return;
                 }
             }
         }

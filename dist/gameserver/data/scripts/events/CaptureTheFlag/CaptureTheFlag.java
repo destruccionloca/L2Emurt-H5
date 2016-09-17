@@ -72,11 +72,11 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
     /**
      * <font color=blue>Blue</font>
      */
-    private static List<Long> players_list1 = new CopyOnWriteArrayList<>();
+    private static List<Long> players_list1 = new CopyOnWriteArrayList<Long>();
     /**
      * <font color=red>Red</font>
      */
-    private static List<Long> players_list2 = new CopyOnWriteArrayList<>();
+    private static List<Long> players_list2 = new CopyOnWriteArrayList<Long>();
 
     private static NpcInstance redFlag = null;
     private static NpcInstance blueFlag = null;
@@ -100,8 +100,8 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 
     private static Reflection _reflection = ReflectionManager.CTF_EVENT;
 
-    private static Map<String, ZoneTemplate> _zones = new HashMap<>();
-    private static IntObjectMap<DoorTemplate> _doors = new HashIntObjectMap<>();
+    private static Map<String, ZoneTemplate> _zones = new HashMap<String, ZoneTemplate>();
+    private static IntObjectMap<DoorTemplate> _doors = new HashIntObjectMap<DoorTemplate>();
     private static Zone _zone;
     private static Zone _blueBaseZone;
     private static Zone _redBaseZone;
@@ -111,9 +111,9 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 
     private static ZoneListener _zoneListener = new ZoneListener();
 
-    private static Map<Long, Location> _savedCoord = new LinkedHashMap<>();
+    private static Map<Long, Location> _savedCoord = new LinkedHashMap<Long, Location>();
 
-    private static Map<Long, String> boxes = new LinkedHashMap<>();
+    private static Map<Long, String> boxes = new LinkedHashMap<Long, String>();
 
     private static Territory team1spawn = new Territory().add(new Polygon().add(149878, 47505).add(150262, 47513).add(150502, 47233).add(150507, 46300).add(150256, 46002).add(149903, 46005).setZmin(-3408).setZmax(-3308));
 
@@ -442,8 +442,8 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
         _isRegistrationActive = true;
         _time_to_start = Config.EVENT_CtfTime;
 
-        players_list1 = new CopyOnWriteArrayList<>();
-        players_list2 = new CopyOnWriteArrayList<>();
+        players_list1 = new CopyOnWriteArrayList<Long>();
+        players_list2 = new CopyOnWriteArrayList<Long>();
 
         if (redFlag != null) {
             redFlag.deleteMe();
@@ -779,15 +779,15 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
     public static void giveItemsToWinner(boolean team1, boolean team2, double rate) {
         if (team1) {
             for (Player player : getPlayers(players_list1)) {
-                for (int[] reward : rewards) {
-                    addItem(player, reward[0], Math.round((Config.EVENT_CtFrate ? player.getLevel() : 1) * reward[1] * rate));
+                for (int i = 0; i < rewards.length; i++) {
+                    addItem(player, rewards[i][0], Math.round((Config.EVENT_CtFrate ? player.getLevel() : 1) * rewards[i][1] * rate));
                 }
             }
         }
         if (team2) {
             for (Player player : getPlayers(players_list2)) {
-                for (int[] reward : rewards) {
-                    addItem(player, reward[0], Math.round((Config.EVENT_CtFrate ? player.getLevel() : 1) * reward[1] * rate));
+                for (int i = 0; i < rewards.length; i++) {
+                    addItem(player, rewards[i][0], Math.round((Config.EVENT_CtFrate ? player.getLevel() : 1) * rewards[i][1] * rate));
                 }
             }
         }
@@ -895,20 +895,24 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
     }
 
     public static void ressurectPlayers() {
-        getPlayers(players_list1).stream().filter(player -> player.isDead()).forEach(player -> {
-            player.restoreExp();
-            player.setCurrentCp(player.getMaxCp());
-            player.setCurrentHp(player.getMaxHp(), true);
-            player.setCurrentMp(player.getMaxMp());
-            player.broadcastPacket(new Revive(player));
-        });
-        getPlayers(players_list2).stream().filter(player -> player.isDead()).forEach(player -> {
-            player.restoreExp();
-            player.setCurrentCp(player.getMaxCp());
-            player.setCurrentHp(player.getMaxHp(), true);
-            player.setCurrentMp(player.getMaxMp());
-            player.broadcastPacket(new Revive(player));
-        });
+        for (Player player : getPlayers(players_list1)) {
+            if (player.isDead()) {
+                player.restoreExp();
+                player.setCurrentCp(player.getMaxCp());
+                player.setCurrentHp(player.getMaxHp(), true);
+                player.setCurrentMp(player.getMaxMp());
+                player.broadcastPacket(new Revive(player));
+            }
+        }
+        for (Player player : getPlayers(players_list2)) {
+            if (player.isDead()) {
+                player.restoreExp();
+                player.setCurrentCp(player.getMaxCp());
+                player.setCurrentHp(player.getMaxHp(), true);
+                player.setCurrentMp(player.getMaxMp());
+                player.broadcastPacket(new Revive(player));
+            }
+        }
     }
 
     public static void healPlayers() {
@@ -1077,42 +1081,31 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
     private static void addFlag(Player player, int flagId) {
         ItemInstance item = ItemFunctions.createItem(flagId);
         item.setCustomType1(77);
-        item.setCustomFlags(ItemInstance.FLAG_EQUIP_ON_PICKUP | ItemInstance.FLAG_NO_UNEQUIP | ItemInstance.FLAG_NO_DESTROY | ItemInstance.FLAG_NO_TRADE | ItemInstance.FLAG_NO_DROP | ItemInstance.FLAG_NO_TRANSFER);
+        item.setCustomFlags(ItemInstance.FLAG_NO_DESTROY | ItemInstance.FLAG_NO_TRADE | ItemInstance.FLAG_NO_DROP | ItemInstance.FLAG_NO_TRANSFER);
         player.getInventory().addItem(item);
         player.getInventory().equipItem(item);
+        player.isWeaponEquipBlocked();
         player.sendChanges();
         player.sendPacket(Msg.YOU_VE_ACQUIRED_THE_WARD_MOVE_QUICKLY_TO_YOUR_FORCES__OUTPOST);
         player.setCTFflag(true);
     }
 
     private static void removeFlags() {
-        getPlayers(players_list1).forEach(CaptureTheFlag::removeFlag);
-        getPlayers(players_list2).forEach(CaptureTheFlag::removeFlag);
+        for (Player player : getPlayers(players_list1)) {
+            removeFlag(player);
+        }
+        for (Player player : getPlayers(players_list2)) {
+            removeFlag(player);
+        }
     }
 
     private static void removeFlag(Player player) {
         if (player != null && player.isTerritoryFlagEquipped()) {
-            ItemInstance flag1 = ItemFunctions.createItem(13560);
-            ItemInstance flag2 = ItemFunctions.createItem(13561);
             ItemInstance flag = player.getActiveWeaponInstance();
             if (flag != null && flag.getCustomType1() == 77) // 77 это эвентовый флаг
             {
                 flag.setCustomFlags(0);
                 player.getInventory().destroyItem(flag, 1);
-                player.setCTFflag(false);
-                player.broadcastUserInfo(true);
-            }
-            if (flag1 != null && flag.getCustomType1() == 77) // 77 это эвентовый флаг
-            {
-                flag.setCustomFlags(0);
-                player.getInventory().destroyItem(flag1, 1);
-                player.setCTFflag(false);
-                player.broadcastUserInfo(true);
-            }
-            if (flag2 != null && flag.getCustomType1() == 77) // 77 это эвентовый флаг
-            {
-                flag.setCustomFlags(0);
-                player.getInventory().destroyItem(flag2, 1);
                 player.setCTFflag(false);
                 player.broadcastUserInfo(true);
             }
@@ -1142,7 +1135,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
     }
 
     private static List<Player> getPlayers(List<Long> list) {
-        List<Player> result = new ArrayList<>();
+        List<Player> result = new ArrayList<Player>();
         for (Long storeId : list) {
             Player player = GameObjectsStorage.getAsPlayer(storeId);
             if (player != null) {
@@ -1153,11 +1146,15 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
     }
 
     private static void openColiseumDoors() {
-        _reflection.getDoors().forEach(DoorInstance::openMe);
+        for (DoorInstance door : _reflection.getDoors()) {
+            door.openMe();
+        }
     }
 
     private static void closeColiseumDoors() {
-        _reflection.getDoors().forEach(DoorInstance::closeMe);
+        for (DoorInstance door : _reflection.getDoors()) {
+            door.closeMe();
+        }
     }
 
     @Override
@@ -1199,8 +1196,8 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
             return;
         }
 
-        for (int[] mage_buff : mage_buffs) {
-            buff = SkillTable.getInstance().getInfo(mage_buff[0], mage_buff[1]);
+        for (int i = 0; i < mage_buffs.length; i++) {
+            buff = SkillTable.getInstance().getInfo(mage_buffs[i][0], mage_buffs[i][1]);
             buff.getEffects(player, player, false, false);
         }
     }
@@ -1210,8 +1207,8 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
             return;
         }
 
-        for (int[] fighter_buff : fighter_buffs) {
-            buff = SkillTable.getInstance().getInfo(fighter_buff[0], fighter_buff[1]);
+        for (int i = 0; i < fighter_buffs.length; i++) {
+            buff = SkillTable.getInstance().getInfo(fighter_buffs[i][0], fighter_buffs[i][1]);
             buff.getEffects(player, player, false, false);
         }
     }

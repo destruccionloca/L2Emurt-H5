@@ -93,7 +93,11 @@ public class SchuttgartCataclizm extends Cataclizm {
         @Override
         public void runImpl() {
             // Мы не успели убить мирную статую
-            GameObjectsStorage.getAllNpcs().stream().filter(n -> n != null && !n.isDead() && (n.getNpcId() == getStatuya1() || n.getNpcId() == getStatuya2() || n.getNpcId() == getStatuya3())).forEach(NpcInstance::deleteMe);
+            for (NpcInstance n : GameObjectsStorage.getAllNpcs()) {
+                if (n != null && !n.isDead() && (n.getNpcId() == getStatuya1() || n.getNpcId() == getStatuya2() || n.getNpcId() == getStatuya3())) {
+                    n.deleteMe();
+                }
+            }
 
             sayToAll("scripts.events.Cataclizm.AnnounceCataclysmSiegeFinishSchuttgart", null);
             deleteTown();

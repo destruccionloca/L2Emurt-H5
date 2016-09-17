@@ -1543,15 +1543,19 @@
 		</for>
 	</skill>
 	<skill id="5988" levels="1" name="Armor Maintenance" >
-		<!-- Confirmed CT2.5 -->
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Maintains the armor in optimal condition to increase defense ability.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
 		<set name="icon" val="icon.skill0828" />
 		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="6000" />
-		<set name="magicLevel" val="85" />
+		<set name="reuseDelay" val="2000" />
+		<set name="magicLevel" val="46" />
 		<set name="hitTime" val="100" />
 		<set name="hitCancelTime" val="500" />
 		<set name="mpConsume2" val="41" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
@@ -1561,18 +1565,6 @@
 				<mul order="0x30" stat="pDef" val="1.1">
 					<using armor="Heavy" />
 				</mul>
-				<mul order="0x30" stat="pDef" val="1.05">
-					<using kind="Light" />
-				</mul>
-				<add order="0x40" stat="rEvas" val="2">
-					<using kind="Light" />
-				</add>
-				<mul order="0x30" stat="pDef" val="1.05">
-					<using kind="Magic" />
-				</mul>
-				<add order="0x40" stat="regMp" val="2.0">
-					<using kind="Magic" />
-				</add>
 			</effect>
 		</for>
 	</skill>

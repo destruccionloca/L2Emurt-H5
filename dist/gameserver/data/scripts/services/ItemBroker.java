@@ -38,7 +38,7 @@ public class ItemBroker extends Functions {
     private static final int MAX_ITEMS_PER_PAGE = 10;
     private static final int MAX_PAGES_PER_LIST = 9;
     private static final Logger _log = LoggerFactory.getLogger(ItemBroker.class);
-    private static Map<Integer, NpcInfo> _npcInfos = new ConcurrentHashMap<>();
+    private static Map<Integer, NpcInfo> _npcInfos = new ConcurrentHashMap<Integer, NpcInfo>();
     public int[] RARE_ITEMS = {
         16255,
         16256,
@@ -1600,9 +1600,9 @@ public class ItemBroker extends Functions {
             return;
         }
 
-        List<Item> items = new ArrayList<>(allItems.size() * 10);
+        List<Item> items = new ArrayList<Item>(allItems.size() * 10);
         for (TreeMap<Long, Item> tempItems : allItems.values()) {
-            TreeMap<Long, Item> tempItems2 = new TreeMap<>();
+            TreeMap<Long, Item> tempItems2 = new TreeMap<Long, Item>();
             for (Entry<Long, Item> entry : tempItems.entrySet()) {
                 Item tempItem = entry.getValue();
                 if (tempItem == null) {
@@ -1683,7 +1683,7 @@ public class ItemBroker extends Functions {
 
         out.append("<table width=100%>");
 
-        if (!items.isEmpty()) {
+        if (items.size() > 0) {
             int count = 0;
             ListIterator<Item> iter = items.listIterator((currentPage - 1) * MAX_ITEMS_PER_PAGE);
             while (iter.hasNext() && count < MAX_ITEMS_PER_PAGE) {
@@ -1820,7 +1820,7 @@ public class ItemBroker extends Functions {
             return;
         }
 
-        List<Item> items = new ArrayList<>(sortedItems.size());
+        List<Item> items = new ArrayList<Item>(sortedItems.size());
         for (Item item : sortedItems.values()) {
             if (item == null || item.enchant < minEnchant || (rare > 0 && !item.rare)) {
                 continue;
@@ -1874,7 +1874,7 @@ public class ItemBroker extends Functions {
 
         out.append("<table width=100%>");
 
-        if (!items.isEmpty()) {
+        if (items.size() > 0) {
             int count = 0;
             ListIterator<Item> iter = items.listIterator((currentPage - 1) * MAX_ITEMS_PER_PAGE);
             while (iter.hasNext() && count < MAX_ITEMS_PER_PAGE) {
@@ -2065,9 +2065,9 @@ public class ItemBroker extends Functions {
         if (info == null || info.lastUpdate < System.currentTimeMillis() - 300000) {
             info = new NpcInfo();
             info.lastUpdate = System.currentTimeMillis();
-            info.bestBuyItems = new TreeMap<>();
-            info.bestSellItems = new TreeMap<>();
-            info.bestCraftItems = new TreeMap<>();
+            info.bestBuyItems = new TreeMap<String, TreeMap<Long, Item>>();
+            info.bestSellItems = new TreeMap<String, TreeMap<Long, Item>>();
+            info.bestCraftItems = new TreeMap<String, TreeMap<Long, Item>>();
 
             int itemObjId = 0; // Обычный objId не подходит для покупаемых предметов
 
@@ -2091,7 +2091,7 @@ public class ItemBroker extends Functions {
                                 }
                                 TreeMap<Long, Item> oldItems = items.get(temp.getName());
                                 if (oldItems == null) {
-                                    oldItems = new TreeMap<>();
+                                    oldItems = new TreeMap<Long, Item>();
                                     items.put(temp.getName(), oldItems);
                                 }
                                 Item newItem = new Item(item.getItemId(), type, item.getOwnersPrice(), item.getCount(), item.getEnchantLevel(), temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), item.getObjectId(), item);
@@ -2115,7 +2115,7 @@ public class ItemBroker extends Functions {
                                 }
                                 TreeMap<Long, Item> oldItems = items.get(temp.getName());
                                 if (oldItems == null) {
-                                    oldItems = new TreeMap<>();
+                                    oldItems = new TreeMap<Long, Item>();
                                     items.put(temp.getName(), oldItems);
                                 }
                                 Item newItem = new Item(item.getItemId(), type, item.getOwnersPrice(), item.getCount(), item.getEnchantLevel(), temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), itemObjId++, item);
@@ -2148,7 +2148,7 @@ public class ItemBroker extends Functions {
                                 }
                                 TreeMap<Long, Item> oldItems = items.get(temp.getName());
                                 if (oldItems == null) {
-                                    oldItems = new TreeMap<>();
+                                    oldItems = new TreeMap<Long, Item>();
                                     items.put(temp.getName(), oldItems);
                                 }
                                 Item newItem = new Item(recipe.getItemId(), type, mitem.getCost(), recipe.getCount(), 0, temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), itemObjId++, null);
@@ -2214,18 +2214,18 @@ public class ItemBroker extends Functions {
             return;
         }
 
-        List<Item> items = new ArrayList<>();
+        List<Item> items = new ArrayList<Item>();
         String line;
         TreeMap<Long, Item> itemMap;
         Item item;
         mainLoop:
         for (Entry<String, TreeMap<Long, Item>> entry : allItems.entrySet()) {
-            for (String aSearch : search) {
-                line = aSearch;
+            for (int i = 0; i < search.length; i++) {
+                line = search[i];
                 if (line.startsWith("+")) {
                     continue;
                 }
-                if (!entry.getKey().toLowerCase().contains(line)) {
+                if (entry.getKey().toLowerCase().indexOf(line) == -1) {
                     continue mainLoop;
                 }
             }
@@ -2295,7 +2295,7 @@ public class ItemBroker extends Functions {
 
         out.append("<table width=100%>");
 
-        if (!items.isEmpty()) {
+        if (items.size() > 0) {
             int count = 0;
             ListIterator<Item> iter = items.listIterator((currentPage - 1) * MAX_ITEMS_PER_PAGE);
             while (iter.hasNext() && count < MAX_ITEMS_PER_PAGE) {
@@ -2316,9 +2316,9 @@ public class ItemBroker extends Functions {
                 out.append(" 0 0 1 ");
                 out.append(currentPage);
                 if (search != null) {
-                    for (String aSearch : search) {
+                    for (int i = 0; i < search.length; i++) {
                         out.append(" ");
-                        out.append(aSearch);
+                        out.append(search[i]);
                     }
                 }
                 out.append("|");
@@ -2345,9 +2345,9 @@ public class ItemBroker extends Functions {
         out.append(" ");
         out.append(page);
         if (search != null) {
-            for (String aSearch : search) {
+            for (int i = 0; i < search.length; i++) {
                 out.append(" ");
-                out.append(aSearch);
+                out.append(search[i]);
             }
         }
         out.append("|");

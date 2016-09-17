@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
-
 import l2p.commons.dbutils.DbUtils;
 import l2p.commons.threading.RunnableImpl;
 import l2p.gameserver.Announcements;
@@ -396,8 +394,16 @@ public abstract class TVTArenaTemplate extends Functions {
             return;
         }
         _status = 2;
-        _team1live.addAll(getPlayers(_team1list).stream().filter(player -> !player.isDead()).map(Player::getStoredId).collect(Collectors.toList()));
-        _team2live.addAll(getPlayers(_team2list).stream().filter(player -> !player.isDead()).map(Player::getStoredId).collect(Collectors.toList()));
+        for (Player player : getPlayers(_team1list)) {
+            if (!player.isDead()) {
+                _team1live.add(player.getStoredId());
+            }
+        }
+        for (Player player : getPlayers(_team2list)) {
+            if (!player.isDead()) {
+                _team2live.add(player.getStoredId());
+            }
+        }
         if (!checkTeams()) {
             return;
         }
@@ -511,89 +517,97 @@ public abstract class TVTArenaTemplate extends Functions {
     }
 
     public void ressurectPlayers() {
-        getPlayers(_team1list).stream().filter(player -> player.isDead()).forEach(player -> {
-            player.restoreExp();
-            player.setCurrentCp(player.getMaxCp());
-            player.setCurrentHp(player.getMaxHp(), true);
-            player.setCurrentMp(player.getMaxMp());
-            player.broadcastPacket(new L2GameServerPacket[]{new Revive(player)});
-        });
-        getPlayers(_team2list).stream().filter(player -> player.isDead()).forEach(player -> {
-            player.restoreExp();
-            player.setCurrentCp(player.getMaxCp());
-            player.setCurrentHp(player.getMaxHp(), true);
-            player.setCurrentMp(player.getMaxMp());
-            player.broadcastPacket(new L2GameServerPacket[]{new Revive(player)});
-        });
+        for (Player player : getPlayers(_team1list)) {
+            if (player.isDead()) {
+                player.restoreExp();
+                player.setCurrentCp(player.getMaxCp());
+                player.setCurrentHp(player.getMaxHp(), true);
+                player.setCurrentMp(player.getMaxMp());
+                player.broadcastPacket(new L2GameServerPacket[]{new Revive(player)});
+            }
+        }
+        for (Player player : getPlayers(_team2list)) {
+            if (player.isDead()) {
+                player.restoreExp();
+                player.setCurrentCp(player.getMaxCp());
+                player.setCurrentHp(player.getMaxHp(), true);
+                player.setCurrentMp(player.getMaxMp());
+                player.broadcastPacket(new L2GameServerPacket[]{new Revive(player)});
+            }
+        }
     }
 
     public void removeBuff() {
-        getPlayers(_team1list).stream().filter(player -> player != null).forEach(player -> {
-            try {
-                if (player.isCastingNow()) {
-                    player.abortCast(true, true);
-                }
-                if ((!Config.EVENT_TVT_ARENA_ALLOW_CLAN_SKILL)
-                        && (player.getClan() != null)) {
-                    for (Skill skill : player.getClan().getAllSkills()) {
-                        player.removeSkill(skill, false);
+        for (Player player : getPlayers(_team1list)) {
+            if (player != null) {
+                try {
+                    if (player.isCastingNow()) {
+                        player.abortCast(true, true);
                     }
-                }
-                if ((!Config.EVENT_TVT_ARENA_ALLOW_HERO_SKILL)
-                        && (player.isHero())) {
-                    Hero.removeSkills(player);
-                }
-                if (!Config.EVENT_TVT_ARENA_ALLOW_BUFFS) {
-                    player.getEffectList().stopAllEffects();
-
-                    if (player.getPet() != null) {
-                        Summon summon = player.getPet();
-                        summon.getEffectList().stopAllEffects();
-                        if (summon.isPet()) {
-                            summon.unSummon();
+                    if ((!Config.EVENT_TVT_ARENA_ALLOW_CLAN_SKILL)
+                            && (player.getClan() != null)) {
+                        for (Skill skill : player.getClan().getAllSkills()) {
+                            player.removeSkill(skill, false);
                         }
                     }
-                    if (player.getAgathionId() > 0) {
-                        player.setAgathion(0);
+                    if ((!Config.EVENT_TVT_ARENA_ALLOW_HERO_SKILL)
+                            && (player.isHero())) {
+                        Hero.removeSkills(player);
                     }
-                }
-                player.sendPacket(new SkillList(player));
-            } catch (Exception e) {
-            }
-        });
-        getPlayers(_team2list).stream().filter(player -> player != null).forEach(player -> {
-            try {
-                if (player.isCastingNow()) {
-                    player.abortCast(true, true);
-                }
-                if ((!Config.EVENT_TVT_ARENA_ALLOW_CLAN_SKILL)
-                        && (player.getClan() != null)) {
-                    for (Skill skill : player.getClan().getAllSkills()) {
-                        player.removeSkill(skill, false);
-                    }
-                }
-                if ((!Config.EVENT_TVT_ARENA_ALLOW_HERO_SKILL)
-                        && (player.isHero())) {
-                    Hero.removeSkills(player);
-                }
-                if (!Config.EVENT_TVT_ARENA_ALLOW_BUFFS) {
-                    player.getEffectList().stopAllEffects();
+                    if (!Config.EVENT_TVT_ARENA_ALLOW_BUFFS) {
+                        player.getEffectList().stopAllEffects();
 
-                    if (player.getPet() != null) {
-                        Summon summon = player.getPet();
-                        summon.getEffectList().stopAllEffects();
-                        if (summon.isPet()) {
-                            summon.unSummon();
+                        if (player.getPet() != null) {
+                            Summon summon = player.getPet();
+                            summon.getEffectList().stopAllEffects();
+                            if (summon.isPet()) {
+                                summon.unSummon();
+                            }
+                        }
+                        if (player.getAgathionId() > 0) {
+                            player.setAgathion(0);
                         }
                     }
-                    if (player.getAgathionId() > 0) {
-                        player.setAgathion(0);
-                    }
+                    player.sendPacket(new SkillList(player));
+                } catch (Exception e) {
                 }
-                player.sendPacket(new SkillList(player));
-            } catch (Exception e) {
             }
-        });
+        }
+        for (Player player : getPlayers(_team2list)) {
+            if (player != null) {
+                try {
+                    if (player.isCastingNow()) {
+                        player.abortCast(true, true);
+                    }
+                    if ((!Config.EVENT_TVT_ARENA_ALLOW_CLAN_SKILL)
+                            && (player.getClan() != null)) {
+                        for (Skill skill : player.getClan().getAllSkills()) {
+                            player.removeSkill(skill, false);
+                        }
+                    }
+                    if ((!Config.EVENT_TVT_ARENA_ALLOW_HERO_SKILL)
+                            && (player.isHero())) {
+                        Hero.removeSkills(player);
+                    }
+                    if (!Config.EVENT_TVT_ARENA_ALLOW_BUFFS) {
+                        player.getEffectList().stopAllEffects();
+
+                        if (player.getPet() != null) {
+                            Summon summon = player.getPet();
+                            summon.getEffectList().stopAllEffects();
+                            if (summon.isPet()) {
+                                summon.unSummon();
+                            }
+                        }
+                        if (player.getAgathionId() > 0) {
+                            player.setAgathion(0);
+                        }
+                    }
+                    player.sendPacket(new SkillList(player));
+                } catch (Exception e) {
+                }
+            }
+        }
     }
 
     public void paralyzeTeams() {

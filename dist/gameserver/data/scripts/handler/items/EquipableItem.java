@@ -101,6 +101,14 @@ public class EquipableItem extends ScriptItemHandler implements ScriptFile {
             }
         }
 
+        ItemInstance wpn = player.getActiveWeaponInstance();
+        if (wpn != null && (wpn.getItemId() == 13560 || wpn.getItemId() == 13561)) {
+            if (player.isInCtF() && item.isWeapon()) {
+                player.sendActionFailed();
+                return false;
+            }
+        }
+
         if (item.isEquipped()) {
             ItemInstance weapon = player.getActiveWeaponInstance();
             if (item == weapon) {

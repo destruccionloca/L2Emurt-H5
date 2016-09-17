@@ -40,7 +40,8 @@ public class CourtInstance extends NpcInstance {
                 int val = 0;
                 try {
                     val = Integer.parseInt(command.substring(5));
-                } catch (IndexOutOfBoundsException | NumberFormatException ioobe) {
+                } catch (IndexOutOfBoundsException ioobe) {
+                } catch (NumberFormatException nfe) {
                 }
                 showChatWindow(player, val);
                 return;

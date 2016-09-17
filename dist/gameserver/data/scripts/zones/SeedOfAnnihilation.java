@@ -29,7 +29,7 @@ public class SeedOfAnnihilation extends Functions implements ScriptFile {
 
     private static final int ANNIHILATION_FURNACE = 18928;
     private static final int[][] ZONE_BUFFS_LIST = {{1, 2, 3}, {1, 3, 2}, {2, 1, 3}, {2, 3, 1}, {3, 2, 1}, {3, 1, 2}};
-    private static final Map<String, Location> _teleportZones = new HashMap<>();
+    private static final Map<String, Location> _teleportZones = new HashMap<String, Location>();
 
     static {
         _teleportZones.put("[14_23_telzone_to_cocracon]", new Location(-213175, 182648, -10992)); // In Kokracon location teleport zone.
@@ -174,10 +174,14 @@ public class SeedOfAnnihilation extends Functions implements ScriptFile {
                 //Заглушка для 454 квеста.
                 List<NpcInstance> around = cha.getAroundNpc(500, 300);
                 if (around != null && !around.isEmpty()) {
-                    around.stream().filter(npc -> npc.getNpcId() == 32738 && npc.getFollowTarget() != null).filter(npc -> npc.getFollowTarget().getObjectId() == cha.getObjectId()).forEach(npc -> {
-                        npc.teleToLocation(_teleportZones.get(zone.getName()));
-                        npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, cha, Config.FOLLOW_RANGE);
-                    });
+                    for (NpcInstance npc : around) {
+                        if (npc.getNpcId() == 32738 && npc.getFollowTarget() != null) {
+                            if (npc.getFollowTarget().getObjectId() == cha.getObjectId()) {
+                                npc.teleToLocation(_teleportZones.get(zone.getName()));
+                                npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, cha, Config.FOLLOW_RANGE);
+                            }
+                        }
+                    }
                 }
 
                 cha.teleToLocation(_teleportZones.get(zone.getName()));

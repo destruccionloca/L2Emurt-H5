@@ -22,29 +22,25 @@ public class BlackJudeInstance extends NpcInstance {
             return;
         }
 
-        switch (command) {
-            case "tryRemovePenalty":
-                if (player.getDeathPenalty().getLevel() > 0) {
-                    showChatWindow(player, 2, "%price%", getPrice(player));
+        if (command.equals("tryRemovePenalty")) {
+            if (player.getDeathPenalty().getLevel() > 0) {
+                showChatWindow(player, 2, "%price%", getPrice(player));
+            } else {
+                showChatWindow(player, 1);
+            }
+        } else if (command.equals("removePenalty")) {
+            if (player.getDeathPenalty().getLevel() > 0) {
+                if (player.getAdena() >= getPrice(player)) {
+                    player.reduceAdena(getPrice(player), true);
+                    doCast(SkillTable.getInstance().getInfo(5077, 1), player, false);
                 } else {
-                    showChatWindow(player, 1);
+                    player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
                 }
-                break;
-            case "removePenalty":
-                if (player.getDeathPenalty().getLevel() > 0) {
-                    if (player.getAdena() >= getPrice(player)) {
-                        player.reduceAdena(getPrice(player), true);
-                        doCast(SkillTable.getInstance().getInfo(5077, 1), player, false);
-                    } else {
-                        player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-                    }
-                } else {
-                    showChatWindow(player, 1);
-                }
-                break;
-            default:
-                super.onBypassFeedback(player, command);
-                break;
+            } else {
+                showChatWindow(player, 1);
+            }
+        } else {
+            super.onBypassFeedback(player, command);
         }
     }
 

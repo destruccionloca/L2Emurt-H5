@@ -3,8 +3,6 @@ package quests;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
-
 import l2p.commons.util.Rnd;
 import l2p.gameserver.Config;
 import l2p.gameserver.data.xml.holder.NpcHolder;
@@ -138,21 +136,27 @@ public class _350_EnhanceYourWeapon extends Quest implements ScriptFile {
         List<PlayerResult> list;
         Party party = player.getParty();
         if (party == null) {
-            list = new ArrayList<>(1);
+            list = new ArrayList<PlayerResult>(1);
             list.add(new PlayerResult(player));
         } else {
-            list = new ArrayList<>(party.getMemberCount() + 1);
+            list = new ArrayList<PlayerResult>(party.getMemberCount() + 1);
             final PlayerResult pr = new PlayerResult(player);
             list.add(pr); // index 0
             list.add(pr); // DS: у убившего двойной шанс, из ai
-            list.addAll(party.getPartyMembers().stream().filter(m -> m != player && m.isInRange(npc.getLoc(), Config.ALT_PARTY_DISTRIBUTION_RANGE)).map(PlayerResult::new).collect(Collectors.toList()));
+            for (Player m : party.getPartyMembers()) {
+                if (m != player && m.isInRange(npc.getLoc(), Config.ALT_PARTY_DISTRIBUTION_RANGE)) {
+                    list.add(new PlayerResult(m));
+                }
+            }
         }
 
         for (AbsorbInfo info : npc.getTemplate().getAbsorbInfo()) {
             calcAbsorb(list, (MonsterInstance) npc, info);
         }
 
-        list.forEach(PlayerResult::send);
+        for (PlayerResult r : list) {
+            r.send();
+        }
 
         return null;
     }
@@ -173,8 +177,8 @@ public class _350_EnhanceYourWeapon extends Quest implements ScriptFile {
                     targets = Collections.singletonList(players.get(0));
                 } else {
                     int size = Rnd.get(memberSize);
-                    targets = new ArrayList<>(size);
-                    List<PlayerResult> temp = new ArrayList<>(players);
+                    targets = new ArrayList<PlayerResult>(size);
+                    List<PlayerResult> temp = new ArrayList<PlayerResult>(players);
                     Collections.shuffle(temp);
                     for (int i = 0; i < size; i++) {
                         targets.add(temp.get(i));

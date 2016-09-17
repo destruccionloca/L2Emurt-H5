@@ -104,7 +104,7 @@ public class SupportMagic extends Functions {
             }
         }
 
-        List<Creature> target = new ArrayList<>();
+        List<Creature> target = new ArrayList<Creature>();
 
         if (servitor) {
             target.add(player.getPet());

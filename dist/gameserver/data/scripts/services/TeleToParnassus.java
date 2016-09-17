@@ -20,7 +20,7 @@ import l2p.gameserver.utils.ReflectionUtils;
 
 public class TeleToParnassus extends Functions implements ScriptFile {
 
-    private static List<SimpleSpawner> _spawns = new ArrayList<>();
+    private static List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
     private static Zone _zone = ReflectionUtils.getZone("[parnassus_offshore]");
     private static ZoneListener _zoneListener;
 
@@ -121,7 +121,9 @@ public class TeleToParnassus extends Functions implements ScriptFile {
     @Override
     public void onReload() {
         _zone.removeListener(_zoneListener);
-        _spawns.forEach(SimpleSpawner::deleteAll);
+        for (SimpleSpawner spawn : _spawns) {
+            spawn.deleteAll();
+        }
         _spawns.clear();
     }
 

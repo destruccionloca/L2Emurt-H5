@@ -123,7 +123,7 @@ public class Kechi extends DefaultAI {
             return chooseTaskAndTargets(null, target, distance);
         }
 
-        Map<Skill, Integer> d_skill = new HashMap<>();
+        Map<Skill, Integer> d_skill = new HashMap<Skill, Integer>();
 
         addDesiredSkill(d_skill, target, distance, KechiDoubleCutter);
         addDesiredSkill(d_skill, target, distance, KechiAirBlade);

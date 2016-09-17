@@ -28,7 +28,7 @@ public class FafurionKindred extends Fighter {
     private static final int Water_Dragon_Claw = 9700;
     ScheduledFuture<?> poisonTask;
     ScheduledFuture<?> despawnTask;
-    List<SimpleSpawner> spawns = new ArrayList<>();
+    List<SimpleSpawner> spawns = new ArrayList<SimpleSpawner>();
     private static final FuncTemplate ft = new FuncTemplate(null, "Mul", Stats.HEAL_EFFECTIVNESS, 0x90, 0);
 
     public FafurionKindred(NpcInstance actor) {
@@ -88,8 +88,10 @@ public class FafurionKindred extends Fighter {
 
         if (spawns == null)
             return;
-
-        spawns.forEach(SimpleSpawner::deleteAll);
+        
+        for (SimpleSpawner spawn : spawns) {
+            spawn.deleteAll();
+        }
         spawns.clear();
     }
 

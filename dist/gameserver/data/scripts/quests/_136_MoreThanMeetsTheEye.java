@@ -103,8 +103,8 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile {
             GlassJaguarCrystal
         });
 
-        for (int[] aDROPLIST_COND : DROPLIST_COND) {
-            addKillId(aDROPLIST_COND[2]);
+        for (int i = 0; i < DROPLIST_COND.length; i++) {
+            addKillId(DROPLIST_COND[i][2]);
         }
     }
 
@@ -209,16 +209,16 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile {
     public String onKill(NpcInstance npc, QuestState st) {
         int npcId = npc.getNpcId();
         int cond = st.getCond();
-        for (int[] aDROPLIST_COND : DROPLIST_COND) {
-            if (cond == aDROPLIST_COND[0] && npcId == aDROPLIST_COND[2]) {
-                if (aDROPLIST_COND[3] == 0 || st.getQuestItemsCount(aDROPLIST_COND[3]) > 0) {
-                    long count = st.getQuestItemsCount(aDROPLIST_COND[4]);
-                    if (aDROPLIST_COND[5] > count && Rnd.chance(aDROPLIST_COND[6])) {
+        for (int i = 0; i < DROPLIST_COND.length; i++) {
+            if (cond == DROPLIST_COND[i][0] && npcId == DROPLIST_COND[i][2]) {
+                if (DROPLIST_COND[i][3] == 0 || st.getQuestItemsCount(DROPLIST_COND[i][3]) > 0) {
+                    long count = st.getQuestItemsCount(DROPLIST_COND[i][4]);
+                    if (DROPLIST_COND[i][5] > count && Rnd.chance(DROPLIST_COND[i][6])) {
                         long random = 0;
-                        if (aDROPLIST_COND[7] > 1) {
-                            random = Rnd.get(aDROPLIST_COND[7]) + 1;
-                            if (count + random > aDROPLIST_COND[5]) {
-                                random = aDROPLIST_COND[5] - count;
+                        if (DROPLIST_COND[i][7] > 1) {
+                            random = Rnd.get(DROPLIST_COND[i][7]) + 1;
+                            if (count + random > DROPLIST_COND[i][5]) {
+                                random = DROPLIST_COND[i][5] - count;
                             }
                         } else {
                             random = 1;
@@ -232,16 +232,16 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile {
                             } else if (Rnd.chance(15)) {
                                 random = 3;
                             }
-                            if (count + random > aDROPLIST_COND[5]) {
-                                random = aDROPLIST_COND[5] - count;
+                            if (count + random > DROPLIST_COND[i][5]) {
+                                random = DROPLIST_COND[i][5] - count;
                             }
                         }
                         //Конец Аддона
-                        st.giveItems(aDROPLIST_COND[4], random);
-                        if (count + random == aDROPLIST_COND[5]) {
+                        st.giveItems(DROPLIST_COND[i][4], random);
+                        if (count + random == DROPLIST_COND[i][5]) {
                             st.playSound(SOUND_MIDDLE);
-                            if (aDROPLIST_COND[1] != 0) {
-                                st.setCond(aDROPLIST_COND[1]);
+                            if (DROPLIST_COND[i][1] != 0) {
+                                st.setCond(Integer.valueOf(DROPLIST_COND[i][1]));
                                 st.setState(STARTED);
                             }
                         } else {

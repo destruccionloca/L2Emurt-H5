@@ -1,0 +1,107 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<list maintainEnchantment="true">
+
+  <!-- 15 СА -->
+  <item id="1">
+    <ingredient id="4357" count="250"/>
+    <production id="10481" count="1"/>
+  </item>
+
+  <!-- 15 СА -->
+  <item id="2">
+    <ingredient id="4357" count="250"/>
+    <production id="10482" count="1"/>
+  </item>
+
+  <!-- 15 СА -->
+  <item id="3">
+    <ingredient id="4357" count="250"/>
+    <production id="10480" count="1"/>
+  </item>
+
+  <!-- 16 СА -->
+  <item id="4">
+    <ingredient id="4357" count="400"/>
+    <production id="13072" count="1"/>
+  </item>
+
+  <!-- 16 СА -->
+  <item id="5">
+    <ingredient id="4357" count="400"/>
+    <production id="13073" count="1"/>
+  </item>
+
+  <!-- 16 СА -->
+  <item id="6">
+    <ingredient id="4357" count="400"/>
+    <production id="13071" count="1"/>
+  </item>
+
+  <!-- 17 СА -->
+  <item id="7">
+    <ingredient id="4357" count="600"/>
+    <production id="15542" count="1"/>
+  </item>
+  
+    <!-- 17 СА -->
+  <item id="8">
+    <ingredient id="4357" count="600"/>
+    <production id="15543" count="1"/>
+  </item>
+  
+    <!-- 17 СА -->
+  <item id="9">
+    <ingredient id="4357" count="600"/>
+    <production id="15541" count="1"/>
+  </item>
+  
+    <!-- Olf's T-Shirt Enchant Scroll  -->
+  <item id="10">
+    <ingredient id="4357" count="150"/>
+    <production id="21581" count="1"/>
+  </item>
+  
+     <!-- Blessed Olf's T-Shirt Enchant Scroll  -->
+  <item id="11">
+    <ingredient id="4357" count="250"/>
+    <production id="21582" count="1"/>
+  </item>
+  
+     <!-- Greater Queen Ant's ring  -->
+  <item id="12">
+    <ingredient id="-300" count="100000"/>
+    <ingredient id="4357" count="800"/>
+    <ingredient id="6660" count="1"/>
+    <production id="22174" count="1"/>
+  </item>
+  
+     <!-- Greater Zaken's Earring -->
+  <item id="12">
+    <ingredient id="-300" count="100000"/>
+    <ingredient id="4357" count="800"/>
+    <ingredient id="6659" count="1"/>
+    <production id="22175" count="1"/>
+  </item>
+  
+     <!-- Greater Baium's Ring -->
+  <item id="12">
+    <ingredient id="-300" count="100000"/> 
+    <ingredient id="4357" count="800"/>
+    <ingredient id="6658" count="1"/>
+    <production id="22173" count="1"/>
+  </item>
+  
+       <!-- Color Title  -->
+  <item id="16">
+    <ingredient id="4357" count="350"/>
+    <production id="13021" count="1"/>
+  </item>
+  
+         <!-- Mastery  -->
+  <item id="16">
+    <ingredient id="4357" count="150"/>
+    <production id="9627" count="1"/>
+  </item>
+
+</list>

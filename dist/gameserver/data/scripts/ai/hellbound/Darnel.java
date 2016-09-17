@@ -82,7 +82,7 @@ public class Darnel extends DefaultAI {
             return chooseTaskAndTargets(null, target, distance);
         }
 
-        Map<Skill, Integer> d_skill = new HashMap<>();
+        Map<Skill, Integer> d_skill = new HashMap<Skill, Integer>();
 
         addDesiredSkill(d_skill, target, distance, Poison);
         addDesiredSkill(d_skill, target, distance, Paralysis);

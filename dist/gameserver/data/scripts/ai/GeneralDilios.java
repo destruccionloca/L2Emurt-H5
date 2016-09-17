@@ -47,9 +47,11 @@ public class GeneralDilios extends DefaultAI {
                     Functions.npcSay(actor, diliosText[2]);
                     List<NpcInstance> around = actor.getAroundNpc(1500, 100);
                     if (around != null && !around.isEmpty()) {
-                        around.stream().filter(guard -> !guard.isMonster() && guard.getNpcId() == GUARD_ID).forEach(guard -> {
-                            guard.broadcastPacket(new SocialAction(guard.getObjectId(), 4));
-                        });
+                        for (NpcInstance guard : around) {
+                            if (!guard.isMonster() && guard.getNpcId() == GUARD_ID) {
+                                guard.broadcastPacket(new SocialAction(guard.getObjectId(), 4));
+                            }
+                        }
                     }
             }
         }

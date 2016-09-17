@@ -22,9 +22,11 @@ public class JiniaKnight extends Fighter {
 
         List<NpcInstance> around = actor.getAroundNpc(4000, 300);
         if (around != null && !around.isEmpty()) {
-            around.stream().filter(npc -> npc.getNpcId() == 22767).forEach(npc -> {
-                actor.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, npc, 300);
-            });
+            for (NpcInstance npc : around) {
+                if (npc.getNpcId() == 22767) {
+                    actor.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, npc, 300);
+                }
+            }
         }
         return true;
     }

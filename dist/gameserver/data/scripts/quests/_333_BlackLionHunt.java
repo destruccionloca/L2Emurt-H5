@@ -297,8 +297,8 @@ public class _333_BlackLionHunt extends Quest implements ScriptFile {
         addTalkId(Lockirin);
         addTalkId(Morgan);
 
-        for (int[] aDROPLIST : DROPLIST) {
-            addKillId(aDROPLIST[0]);
+        for (int i = 0; i < DROPLIST.length; i++) {
+            addKillId(DROPLIST[i][0]);
         }
 
         addQuestItem(LIONS_CLAW, LIONS_EYE, GUILD_COIN, UNDEAD_ASH, BLOODY_AXE_INSIGNIAS, DELU_FANG, STAKATO_TALONS, SOPHIAS_LETTER1, SOPHIAS_LETTER2, SOPHIAS_LETTER3, SOPHIAS_LETTER4);
@@ -705,13 +705,13 @@ public class _333_BlackLionHunt extends Quest implements ScriptFile {
         int chancePartItem = 0;
         int chanceBox = 0;
         int partItem = 0;
-        for (int[] aDROPLIST : DROPLIST) {
-            if (aDROPLIST[0] == npcId) {
-                part = aDROPLIST[1];
-                allowDrop = aDROPLIST[2];
-                chancePartItem = aDROPLIST[3];
-                chanceBox = aDROPLIST[4];
-                partItem = aDROPLIST[5];
+        for (int i = 0; i < DROPLIST.length; i++) {
+            if (DROPLIST[i][0] == npcId) {
+                part = DROPLIST[i][1];
+                allowDrop = DROPLIST[i][2];
+                chancePartItem = DROPLIST[i][3];
+                chanceBox = DROPLIST[i][4];
+                partItem = DROPLIST[i][5];
                 on_npc = true;
             }
         }

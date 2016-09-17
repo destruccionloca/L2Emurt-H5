@@ -74,7 +74,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile {
     }
 
     private void makeBuff(NpcInstance npc, Player player, int skillId, int level) {
-        List<Creature> target = new ArrayList<>();
+        List<Creature> target = new ArrayList<Creature>();
         target.add(player);
         npc.broadcastPacket(new MagicSkillUse(npc, player, skillId, level, 0, 0));
         npc.callSkill(SkillTable.getInstance().getInfo(skillId, level), target, true);

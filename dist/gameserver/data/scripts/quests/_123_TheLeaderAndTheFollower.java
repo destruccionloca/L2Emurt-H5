@@ -53,37 +53,31 @@ public class _123_TheLeaderAndTheFollower extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "31961-03.htm":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "31961-05.htm":
-                st.set("choose", "1");
-                st.setCond(3);
-                break;
-            case "31961-06.htm":
-                st.set("choose", "2");
-                st.setCond(4);
-                break;
-            case "31961-07.htm":
-                st.set("choose", "3");
-                st.setCond(5);
-                break;
-            case "31961-08.htm":
-                int choose = st.getInt("choose");
-                int D_CRY_COUNT = D_CRY_COUNT_LIGHT_MAGIC;
-                if (choose == 1) {
-                    D_CRY_COUNT = D_CRY_COUNT_HEAVY;
-                }
-                if (st.getQuestItemsCount(D_CRY) >= D_CRY_COUNT) {
-                    st.setCond(7);
-                    st.takeItems(D_CRY, D_CRY_COUNT);
-                } else {
-                    htmltext = "<html><body>771 D Cry!</body></html>";
-                }
-                break;
+        if (event.equals("31961-03.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("31961-05.htm")) {
+            st.set("choose", "1");
+            st.setCond(3);
+        } else if (event.equals("31961-06.htm")) {
+            st.set("choose", "2");
+            st.setCond(4);
+        } else if (event.equals("31961-07.htm")) {
+            st.set("choose", "3");
+            st.setCond(5);
+        } else if (event.equals("31961-08.htm")) {
+            int choose = st.getInt("choose");
+            int D_CRY_COUNT = D_CRY_COUNT_LIGHT_MAGIC;
+            if (choose == 1) {
+                D_CRY_COUNT = D_CRY_COUNT_HEAVY;
+            }
+            if (st.getQuestItemsCount(D_CRY) >= D_CRY_COUNT) {
+                st.setCond(7);
+                st.takeItems(D_CRY, D_CRY_COUNT);
+            } else {
+                htmltext = "<html><body>771 D Cry!</body></html>";
+            }
         }
         return htmltext;
     }

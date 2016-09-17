@@ -608,7 +608,7 @@
 			</effect>
 			<effect count="1" name="HealPercent" time="0" val="#heal">   
 				<def name="StackOrder" val="#abnormal_lv" />
-				<def name="StackTypes" val="hp_up" />
+				<def name="StackTypes" val="#heal" />
 			</effect>
 		</for>
 	</skill>
@@ -703,7 +703,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="2500" />
 		<set name="hitCancelTime" val="500" />
 		<set name="mpConsume1" val="#mpConsume1" />
 		<set name="mpConsume2" val="#mpConsume2" />
@@ -713,6 +713,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="saveVs" val="MEN" />
+		<set name="UDSafe" val="true" />
 		<enchant1 levels="30" name="Chance">
 			<table name="#activateRate">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 86 86 86 87 87 87 88 88 88 89 89 89 90 90 90</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>

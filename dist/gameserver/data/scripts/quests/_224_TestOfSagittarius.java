@@ -95,46 +95,38 @@ public class _224_TestOfSagittarius extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "1":
-                htmltext = "30702-04.htm";
-                st.setCond(1);
-                st.setState(STARTED);
-                if (!st.getPlayer().getVarB("dd3")) {
-                    st.giveItems(7562, 96);
-                    st.getPlayer().setVar("dd3", "1", -1);
-                }
-                st.playSound(SOUND_ACCEPT);
-                st.giveItems(BERNARDS_INTRODUCTION_ID, 1);
-                break;
-            case "30626_1":
-                htmltext = "30626-02.htm";
-                break;
-            case "30626_2":
-                htmltext = "30626-03.htm";
-                st.takeItems(BERNARDS_INTRODUCTION_ID, st.getQuestItemsCount(BERNARDS_INTRODUCTION_ID));
-                st.giveItems(LETTER_OF_HAMIL1_ID, 1);
-                st.setCond(2);
-                break;
-            case "30626_3":
-                htmltext = "30626-06.htm";
-                break;
-            case "30626_4":
-                htmltext = "30626-07.htm";
-                st.takeItems(HUNTERS_RUNE1_ID, st.getQuestItemsCount(HUNTERS_RUNE1_ID));
-                st.giveItems(LETTER_OF_HAMIL2_ID, 1);
-                st.setCond(5);
-                break;
-            case "30653_1":
-                htmltext = "30653-02.htm";
-                st.takeItems(LETTER_OF_HAMIL1_ID, st.getQuestItemsCount(LETTER_OF_HAMIL1_ID));
-                st.setCond(3);
-                break;
-            case "30514_1":
-                htmltext = "30514-02.htm";
-                st.takeItems(LETTER_OF_HAMIL2_ID, st.getQuestItemsCount(LETTER_OF_HAMIL2_ID));
-                st.setCond(6);
-                break;
+        if (event.equals("1")) {
+            htmltext = "30702-04.htm";
+            st.setCond(1);
+            st.setState(STARTED);
+            if (!st.getPlayer().getVarB("dd3")) {
+                st.giveItems(7562, 96);
+                st.getPlayer().setVar("dd3", "1", -1);
+            }
+            st.playSound(SOUND_ACCEPT);
+            st.giveItems(BERNARDS_INTRODUCTION_ID, 1);
+        } else if (event.equals("30626_1")) {
+            htmltext = "30626-02.htm";
+        } else if (event.equals("30626_2")) {
+            htmltext = "30626-03.htm";
+            st.takeItems(BERNARDS_INTRODUCTION_ID, st.getQuestItemsCount(BERNARDS_INTRODUCTION_ID));
+            st.giveItems(LETTER_OF_HAMIL1_ID, 1);
+            st.setCond(2);
+        } else if (event.equals("30626_3")) {
+            htmltext = "30626-06.htm";
+        } else if (event.equals("30626_4")) {
+            htmltext = "30626-07.htm";
+            st.takeItems(HUNTERS_RUNE1_ID, st.getQuestItemsCount(HUNTERS_RUNE1_ID));
+            st.giveItems(LETTER_OF_HAMIL2_ID, 1);
+            st.setCond(5);
+        } else if (event.equals("30653_1")) {
+            htmltext = "30653-02.htm";
+            st.takeItems(LETTER_OF_HAMIL1_ID, st.getQuestItemsCount(LETTER_OF_HAMIL1_ID));
+            st.setCond(3);
+        } else if (event.equals("30514_1")) {
+            htmltext = "30514-02.htm";
+            st.takeItems(LETTER_OF_HAMIL2_ID, st.getQuestItemsCount(LETTER_OF_HAMIL2_ID));
+            st.setCond(6);
         }
         return htmltext;
     }

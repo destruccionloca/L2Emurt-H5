@@ -51,7 +51,7 @@ public class CatapultInstance extends SiegeToggleNpcInstance {
             List<Player> players = null; // массив с игроками, которые могут быть заинтересованы в квестах
             if (isRaid() && Config.ALT_NO_LASTHIT) // Для альта на ластхит берем всех игроков вокруг
             {
-                players = new ArrayList<>();
+                players = new ArrayList<Player>();
                 for (Playable pl : aggroMap.keySet()) {
                     if (!pl.isDead() && (isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE) || killer.isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE))) {
                         players.add(pl.getPlayer());
@@ -59,7 +59,7 @@ public class CatapultInstance extends SiegeToggleNpcInstance {
                 }
             } else if (killer.getParty() != null) // если пати то собираем всех кто подходит
             {
-                players = new ArrayList<>(killer.getParty().getMemberCount());
+                players = new ArrayList<Player>(killer.getParty().getMemberCount());
                 for (Player pl : killer.getParty().getPartyMembers()) {
                     if (!pl.isDead() && (isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE) || killer.isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE))) {
                         players.add(pl);
@@ -80,7 +80,7 @@ public class CatapultInstance extends SiegeToggleNpcInstance {
                         }
                         toReward = null;
                     } else { // иначе выбираем одного
-                        List<Player> interested = new ArrayList<>(players.size());
+                        List<Player> interested = new ArrayList<Player>(players.size());
                         for (Player pl : players) {
                             QuestState qs = pl.getQuestState(quest.getName());
                             if (qs != null && !qs.isCompleted()) // из тех, у кого взят квест

@@ -1,0 +1,29 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<list maintainEnchantment="true">
+
+  <!-- Pirate's Eye Patch -->
+  <item id="1">
+    <ingredient id="4356" count="100"/>
+    <production id="6845" count="1"/>
+  </item>
+
+  <!-- Monocle -->
+  <item id="2">
+    <ingredient id="4356" count="100"/>
+    <production id="6846" count="1"/>
+  </item>
+
+  <!-- Outlaw's Eyepatch -->
+  <item id="3">
+    <ingredient id="4356" count="100"/>
+    <production id="7681" count="1"/>
+  </item>
+
+  <!-- Eye Patch -->
+  <item id="4">
+    <ingredient id="4356" count="100"/>
+    <production id="8916" count="1"/>
+  </item>
+
+</list>

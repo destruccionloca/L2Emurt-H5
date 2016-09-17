@@ -12,13 +12,18 @@ import l2p.gameserver.ai.CtrlEvent;
 import l2p.gameserver.ai.DefaultAI;
 import l2p.gameserver.data.xml.holder.NpcHolder;
 import l2p.gameserver.model.*;
+import l2p.gameserver.model.Player;
+import l2p.gameserver.model.World;
 import l2p.gameserver.model.instances.NpcInstance;
 import l2p.gameserver.scripts.Functions;
 import l2p.gameserver.tables.SkillTable;
 import l2p.gameserver.utils.Location;
 import bosses.AntharasManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Antharas extends DefaultAI {
+    private static final Logger _log = LoggerFactory.getLogger(AntharasManager.class);
     // debuffs
 
     final Skill s_fear = getSkill(4108, 1), s_fear2 = getSkill(5092, 1), s_curse = getSkill(4109, 1), s_paralyze = getSkill(4111, 1);
@@ -29,10 +34,11 @@ public class Antharas extends DefaultAI {
     // Vars
     private int _hpStage = 0;
     private static long _minionsSpawnDelay = 0;
-    private List<NpcInstance> minions = new ArrayList<>();
+    private List<NpcInstance> minions = new ArrayList<NpcInstance>();
     //Вестника Невитта и длительность его спавна
     private static int INVOKER_NEVIT_HERALD = 4326;
     private static final int DESPAWN_TIME = 180 * 60 * 1000; // 3 часа = 180 минут
+    private Player agroTarget = null;
 
     public Antharas(NpcInstance actor) {
         super(actor);
@@ -41,15 +47,14 @@ public class Antharas extends DefaultAI {
     @Override
     protected void onEvtAttacked(Creature attacker, int damage) {
         AntharasManager.setLastAttackTime();
-        for (Playable p : AntharasManager.getZone().getInsidePlayables()) {
-            notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 1);
-        }
+
         super.onEvtAttacked(attacker, damage);
     }
 
     @Override
     protected void onEvtSpawn() {
         super.onEvtSpawn();
+
         _minionsSpawnDelay = System.currentTimeMillis() + 120000L;
     }
 
@@ -85,7 +90,7 @@ public class Antharas extends DefaultAI {
         }
 
         // Minions spawn
-        if (_minionsSpawnDelay < System.currentTimeMillis() && getAliveMinionsCount() < 30 && Rnd.chance(5)) {
+        if (_minionsSpawnDelay < System.currentTimeMillis() && getAliveMinionsCount() < 8 && Rnd.chance(5)) {
             NpcInstance minion = Functions.spawn(Location.findPointToStay(actor.getLoc(), 400, 700, actor.getGeoIndex()), Rnd.chance(50) ? 29190 : 29069);  // Antharas Minions
             minions.add(minion);
             AntharasManager.addSpawnedMinion(minion);
@@ -97,7 +102,7 @@ public class Antharas extends DefaultAI {
         }
 
         // Stage based skill attacks
-        Map<Skill, Integer> d_skill = new HashMap<>();
+        Map<Skill, Integer> d_skill = new HashMap<Skill, Integer>();
         switch (_hpStage) {
             case 1:
                 addDesiredSkill(d_skill, target, distance, s_curse);
@@ -137,6 +142,7 @@ public class Antharas extends DefaultAI {
             target = actor;
         }
 
+
         return chooseTaskAndTargets(r_skill, target, distance);
     }
 
@@ -157,7 +163,9 @@ public class Antharas extends DefaultAI {
     @Override
     protected void onEvtDead(Creature killer) {
         if (minions != null && !minions.isEmpty()) {
-            minions.forEach(NpcInstance::deleteMe);
+            for (NpcInstance n : minions) {
+                n.deleteMe();
+            }
         }
         //Спавним Вестника Невитта
         try {

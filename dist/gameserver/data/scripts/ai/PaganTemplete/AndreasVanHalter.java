@@ -238,7 +238,9 @@ public class AndreasVanHalter extends Fighter {
                     break;
                 case 6:
                     // Сбрасываем режим мувиков
-                    World.getAroundPlayers(actor).forEach(Player::leaveMovieMode);
+                    for (Player player : World.getAroundPlayers(actor)) {
+                        player.leaveMovieMode();
+                    }
 
                     // Спавним монстров возле Алтаря
                     SpawnNpc2();

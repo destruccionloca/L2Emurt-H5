@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--S MW ARmor-->
+
+
+<list>
+     <item><ingredient id="4357" count="50"/><production id="11483" count="1"/></item>
+     <item><ingredient id="4357" count="50"/><production id="11484" count="1"/></item>
+     <item><ingredient id="4357" count="50"/><production id="11486" count="1"/></item>
+     <item><ingredient id="4357" count="50"/><production id="11505" count="1"/></item>
+     <item><ingredient id="4357" count="50"/><production id="11506" count="1"/></item>
+     <item><ingredient id="4357" count="50"/><production id="11507" count="1"/></item>
+     <item><ingredient id="4357" count="50"/><production id="11509" count="1"/></item>
+     <item><ingredient id="4357" count="50"/><production id="11508" count="1"/></item>
+     <item><ingredient id="4357" count="50"/><production id="11487" count="1"/></item>
+     <item><ingredient id="4357" count="50"/><production id="11489" count="1"/></item>
+     <item><ingredient id="4357" count="50"/><production id="11490" count="1"/></item>
+	 <item><ingredient id="4357" count="50"/><production id="13078" count="1"/></item>
+</list>

@@ -26,45 +26,39 @@ public class AsamahInstance extends NpcInstance {
             return;
         }
 
-        switch (command) {
-            case "buyTrap": {
-                String htmltext = null;
-                QuestState ElrokianHuntersProof = player.getQuestState(_111_ElrokianHuntersProof.class);
+        if (command.equals("buyTrap")) {
+            String htmltext = null;
+            QuestState ElrokianHuntersProof = player.getQuestState(_111_ElrokianHuntersProof.class);
 
-                if (player.getLevel() >= 75 && ElrokianHuntersProof != null && ElrokianHuntersProof.isCompleted() && Functions.getItemCount(player, 57) > 1000000) {
-                    if (Functions.getItemCount(player, ElrokianTrap) > 0) {
-                        htmltext = getNpcId() + "-alreadyhave.htm";
-                    } else {
-                        Functions.removeItem(player, 57, 1000000);
-                        Functions.addItem(player, ElrokianTrap, 1);
-                        htmltext = getNpcId() + "-given.htm";
-                    }
-
+            if (player.getLevel() >= 75 && ElrokianHuntersProof != null && ElrokianHuntersProof.isCompleted() && Functions.getItemCount(player, 57) > 1000000) {
+                if (Functions.getItemCount(player, ElrokianTrap) > 0) {
+                    htmltext = getNpcId() + "-alreadyhave.htm";
                 } else {
-                    htmltext = getNpcId() + "-cant.htm";
-                }
-
-                showChatWindow(player, "default/" + htmltext);
-                break;
-            }
-            case "buyStones": {
-                String htmltext = null;
-                QuestState ElrokianHuntersProof = player.getQuestState(_111_ElrokianHuntersProof.class);
-
-                if (player.getLevel() >= 75 && ElrokianHuntersProof != null && ElrokianHuntersProof.isCompleted() && Functions.getItemCount(player, 57) > 1000000) {
                     Functions.removeItem(player, 57, 1000000);
-                    Functions.addItem(player, TrapStone, 100);
+                    Functions.addItem(player, ElrokianTrap, 1);
                     htmltext = getNpcId() + "-given.htm";
-                } else {
-                    htmltext = getNpcId() + "-cant.htm";
                 }
 
-                showChatWindow(player, "default/" + htmltext);
-                break;
+            } else {
+                htmltext = getNpcId() + "-cant.htm";
             }
-            default:
-                super.onBypassFeedback(player, command);
-                break;
+
+            showChatWindow(player, "default/" + htmltext);
+        } else if (command.equals("buyStones")) {
+            String htmltext = null;
+            QuestState ElrokianHuntersProof = player.getQuestState(_111_ElrokianHuntersProof.class);
+
+            if (player.getLevel() >= 75 && ElrokianHuntersProof != null && ElrokianHuntersProof.isCompleted() && Functions.getItemCount(player, 57) > 1000000) {
+                Functions.removeItem(player, 57, 1000000);
+                Functions.addItem(player, TrapStone, 100);
+                htmltext = getNpcId() + "-given.htm";
+            } else {
+                htmltext = getNpcId() + "-cant.htm";
+            }
+
+            showChatWindow(player, "default/" + htmltext);
+        } else {
+            super.onBypassFeedback(player, command);
         }
     }
 }

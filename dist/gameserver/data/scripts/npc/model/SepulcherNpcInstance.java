@@ -23,7 +23,7 @@ import l2p.gameserver.utils.PositionUtils;
 
 public class SepulcherNpcInstance extends NpcInstance {
 
-    protected static Map<Integer, Integer> _hallGateKeepers = new HashMap<>();
+    protected static Map<Integer, Integer> _hallGateKeepers = new HashMap<Integer, Integer>();
     protected Future<?> _closeTask = null, _spawnMonsterTask = null;
     private final static String HTML_FILE_PATH = "SepulcherNpc/";
     private final static int HALLS_KEY = 7260;

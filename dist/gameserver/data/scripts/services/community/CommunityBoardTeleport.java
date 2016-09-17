@@ -81,7 +81,7 @@ public class CommunityBoardTeleport extends Functions implements ScriptFile, ICo
             int cY = Integer.parseInt(mBypass[3]);
             int cZ = Integer.parseInt(mBypass[4]);
 
-            List<Zone> zones = new ArrayList<>();
+            List<Zone> zones = new ArrayList<Zone>();
             World.getZones(zones, new Location(cX, cY, cZ), Reflection.createReflection(0));
 
             int pice = 0;
@@ -154,7 +154,7 @@ public class CommunityBoardTeleport extends Functions implements ScriptFile, ICo
                     if (cX == TELE_PPRISE[0] && cY == TELE_PPRISE[1] && cZ == TELE_PPRISE[2]) {
                         ItemFunctions.removeItem(player, TELE_PPRISE[3], TELE_PPRISE[4], true);
                         player.teleToLocation(cX, cY, cZ, 0);
-                        player.sendPacket(new ShowBoard());
+                        ShowHtml(page, player);
                         return;
                     }
                 }
@@ -162,7 +162,7 @@ public class CommunityBoardTeleport extends Functions implements ScriptFile, ICo
 
             player.reduceAdena(pice, true);
             player.teleToLocation(cX, cY, cZ, 0);
-            player.sendPacket(new ShowBoard());
+            ShowHtml(page, player);
         } else if (bypass.startsWith("_bbstsave")) {
             StringTokenizer st2 = new StringTokenizer(bypass, ";");
             String[] mBypass = st2.nextToken().split(":");
@@ -224,7 +224,7 @@ public class CommunityBoardTeleport extends Functions implements ScriptFile, ICo
                     name = name.substring(0, 15);
                 }
 
-                if (!name.isEmpty()) {
+                if (name.length() > 0) {
                     Connection con = null;
                     PreparedStatement stmt = null;
                     try {
@@ -414,6 +414,7 @@ public class CommunityBoardTeleport extends Functions implements ScriptFile, ICo
         if (!Config.ALLOW_TELEPORT_IN_COMBAT && (player.getPvpFlag() != 0 || player.isInDuel() || player.isInCombat() || player.isAttackingNow())) {
             if (player.isLangRus()) {
                 player.sendMessage("Во время боя нельзя использовать данную функцию.");
+				player.sendPacket(new ShowBoard());
             } else {
                 player.sendMessage("During combat, you can not use this feature.");
             }

@@ -29,7 +29,7 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
     public final int JewelOfAdventurerRed = 7145;
     public final int JewelOfAdventurerGreen = 7144;
     // ~~~~ Monster list: ~~~~
-    private static final List<Integer> Mobs = new ArrayList<>();
+    private static final List<Integer> Mobs = new ArrayList<Integer>();
 
     static {
         for (int i : new int[]{

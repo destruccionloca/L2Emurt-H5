@@ -39,7 +39,7 @@ public class Valakas extends DefaultAI {
     // Vars
     private double _rangedAttacksIndex, _counterAttackIndex, _attacksIndex;
     private int _hpStage = 0;
-    private List<NpcInstance> minions = new ArrayList<>();
+    private List<NpcInstance> minions = new ArrayList<NpcInstance>();
 
     public Valakas(NpcInstance actor) {
         super(actor);
@@ -99,7 +99,7 @@ public class Valakas extends DefaultAI {
         }
 
         // Minions spawn
-        if (getAliveMinionsCount() < 100 && Rnd.chance(5)) {
+        if (getAliveMinionsCount() < 8 && Rnd.chance(5)) {
             NpcInstance minion = Functions.spawn(Location.findPointToStay(actor.getLoc(), 400, 700, actor.getGeoIndex()), 29029);  // Valakas Minions
             minions.add(minion);
             ValakasManager.addValakasMinion(minion);
@@ -150,7 +150,7 @@ public class Valakas extends DefaultAI {
         }
 
         // Stage based skill attacks
-        Map<Skill, Integer> d_skill = new HashMap<>();
+        Map<Skill, Integer> d_skill = new HashMap<Skill, Integer>();
         switch (_hpStage) {
             case 1:
                 addDesiredSkill(d_skill, target, distance, s_breath_low);
@@ -220,7 +220,9 @@ public class Valakas extends DefaultAI {
     @Override
     protected void onEvtDead(Creature killer) {
         if (minions != null && !minions.isEmpty()) {
-            minions.forEach(NpcInstance::deleteMe);
+            for (NpcInstance n : minions) {
+                n.deleteMe();
+            }
         }
 
         super.onEvtDead(killer);

@@ -42,7 +42,7 @@ public final class ElcardiaAssistantInstance extends NpcInstance {
 
         if (command.equalsIgnoreCase("request_blessing")) {
             // temporary implementation
-            List<Creature> target = new ArrayList<>();
+            List<Creature> target = new ArrayList<Creature>();
             target.add(player);
             for (int[] buff : _elcardiaBuff) {
                 callSkill(SkillTable.getInstance().getInfo(buff[0], 1), target, true);

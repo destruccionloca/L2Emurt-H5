@@ -75,37 +75,32 @@ public class _632_NecromancersRequest extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "632_4":
-                st.playSound(SOUND_FINISH);
-                htmltext = "shadow_hardin_q0632_0204.htm";
-                st.exitCurrentQuest(true);
-                break;
-            case "632_1":
-                htmltext = "shadow_hardin_q0632_0104.htm";
-                break;
-            case "632_3":
-                if (st.getCond() == 2) {
-                    if (st.getQuestItemsCount(V_HEART) > 199) {
-                        st.takeItems(V_HEART, 200);
-                        st.giveItems(ADENA_ID, ADENA_AMOUNT, true);
-                        st.playSound(SOUND_FINISH);
-                        st.setCond(1);
-                        htmltext = "shadow_hardin_q0632_0202.htm";
-                    }
-                }
-                break;
-            case "quest_accept":
-                if (st.getPlayer().getLevel() > 62) {
-                    htmltext = "shadow_hardin_q0632_0104.htm";
+        if (event.equals("632_4")) {
+            st.playSound(SOUND_FINISH);
+            htmltext = "shadow_hardin_q0632_0204.htm";
+            st.exitCurrentQuest(true);
+        } else if (event.equals("632_1")) {
+            htmltext = "shadow_hardin_q0632_0104.htm";
+        } else if (event.equals("632_3")) {
+            if (st.getCond() == 2) {
+                if (st.getQuestItemsCount(V_HEART) > 199) {
+                    st.takeItems(V_HEART, 200);
+                    st.giveItems(ADENA_ID, ADENA_AMOUNT, true);
+                    st.playSound(SOUND_FINISH);
                     st.setCond(1);
-                    st.setState(STARTED);
-                    st.playSound(SOUND_ACCEPT);
-                } else {
-                    htmltext = "shadow_hardin_q0632_0103.htm";
-                    st.exitCurrentQuest(true);
+                    htmltext = "shadow_hardin_q0632_0202.htm";
                 }
-                break;
+            }
+        } else if (event.equals("quest_accept")) {
+            if (st.getPlayer().getLevel() > 62) {
+                htmltext = "shadow_hardin_q0632_0104.htm";
+                st.setCond(1);
+                st.setState(STARTED);
+                st.playSound(SOUND_ACCEPT);
+            } else {
+                htmltext = "shadow_hardin_q0632_0103.htm";
+                st.exitCurrentQuest(true);
+            }
         }
         return htmltext;
     }

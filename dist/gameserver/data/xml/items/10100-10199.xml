@@ -603,7 +603,7 @@
   <armor id="10141" name="Grey Talisman - Yeti Transform">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="70"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i07"/>
     <set name="price" value="50000"/>
     <set name="sellable" value="false"/>
@@ -620,7 +620,7 @@
   <armor id="10142" name="Grey Talisman - Buffalo Transform">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="70"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i07"/>
     <set name="price" value="50000"/>
     <set name="sellable" value="false"/>
@@ -877,7 +877,7 @@
   <armor id="10158" name="Grey Talisman of Upper Grade Fishing">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="60"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i07"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>

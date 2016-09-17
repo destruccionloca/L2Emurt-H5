@@ -29,8 +29,8 @@ public class _327_ReclaimTheLand extends Quest implements ScriptFile {
     private static int ANCIENT_JADE_NECKLACE = 1855;
     // Chances
     private static int Exchange_Chance = 80;
-    private static Map<Integer, Drop> DROPLIST = new HashMap<>();
-    private static Map<Integer, Integer> EXP = new HashMap<>();
+    private static Map<Integer, Drop> DROPLIST = new HashMap<Integer, Drop>();
+    private static Map<Integer, Integer> EXP = new HashMap<Integer, Integer>();
 
     public _327_ReclaimTheLand() {
         super(false);
@@ -50,7 +50,9 @@ public class _327_ReclaimTheLand extends Quest implements ScriptFile {
         EXP.put(ANCIENT_BRONZE_MIRROR, 1065);
         EXP.put(ANCIENT_JADE_NECKLACE, 1294);
 
-        DROPLIST.keySet().forEach(this::addKillId);
+        for (int kill_id : DROPLIST.keySet()) {
+            addKillId(kill_id);
+        }
 
         addQuestItem(TUREK_MEDALLION);
         addQuestItem(TUREK_DOGTAG);

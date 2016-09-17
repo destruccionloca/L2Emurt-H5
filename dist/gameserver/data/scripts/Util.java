@@ -112,13 +112,8 @@ public class Util extends Functions {
             return;
         }
 
-        int player_cabal = SevenSigns.getInstance().getPlayerCabal(player);
-        if (player_cabal == SevenSigns.CABAL_NULL && Config.ALT_SEVEN_SIGNS_NO_REG) {
-            player.sendMessage(player.isLangRus() ? "Нужно выбрать печать за которую вы будете сражаться в Семи печатях" : "You have to choose to print for which you will fight in the Seven Signs");
-            return;
-        }
-
-        if (type > 0 && !Config.ALLOW_SS_TP_NO_REG) {
+        if (type > 0) {
+            int player_cabal = SevenSigns.getInstance().getPlayerCabal(player);
             int period = SevenSigns.getInstance().getCurrentPeriod();
             if (period == SevenSigns.PERIOD_COMPETITION && player_cabal == SevenSigns.CABAL_NULL) {
                 player.sendPacket(Msg.USED_ONLY_DURING_A_QUEST_EVENT_PERIOD);
@@ -186,24 +181,9 @@ public class Util extends Functions {
             return;
         }
 
+        player.setReflection(Integer.parseInt(param[4]));
+
         Gatekeeper(param);
-    }
-
-    public void ReflectionGatekeeperInstance(String[] param) {
-        if (param.length < 5) {
-            throw new IllegalArgumentException();
-        }
-
-        Player player = getSelf();
-        if (player == null) {
-            return;
-        }
-
-        int x = Integer.parseInt(param[0]);
-        int y = Integer.parseInt(param[1]);
-        int z = Integer.parseInt(param[2]);
-
-        player.teleToLocation(x, y, z, Integer.parseInt(param[4]));
     }
 
     /**

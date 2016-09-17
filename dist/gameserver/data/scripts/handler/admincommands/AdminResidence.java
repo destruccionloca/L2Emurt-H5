@@ -36,7 +36,7 @@ import npc.model.residences.fortress.siege.PowerControlUnitInstance;
 
 public class AdminResidence implements IAdminCommandHandler, ScriptFile {
 
-    private enum Commands {
+    private static enum Commands {
 
         admin_residence_list,
         admin_residence,
@@ -73,20 +73,22 @@ public class AdminResidence implements IAdminCommandHandler, ScriptFile {
                 msg.setFile("admin/residence/residence_list.htm");
 
                 StringBuilder replyMSG = new StringBuilder(200);
-                ResidenceHolder.getInstance().getResidences().stream().filter(residence -> residence != null).forEach(residence -> {
-                    replyMSG.append("<tr><td>");
-                    replyMSG.append("<a action=\"bypass -h admin_residence ").append(residence.getId()).append("\">").append(HtmlUtils.htmlResidenceName(residence.getId())).append("</a>");
-                    replyMSG.append("</td><td>");
+                for (Residence residence : ResidenceHolder.getInstance().getResidences()) {
+                    if (residence != null) {
+                        replyMSG.append("<tr><td>");
+                        replyMSG.append("<a action=\"bypass -h admin_residence ").append(residence.getId()).append("\">").append(HtmlUtils.htmlResidenceName(residence.getId())).append("</a>");
+                        replyMSG.append("</td><td>");
 
-                    Clan owner = residence.getOwner();
-                    if (owner == null) {
-                        replyMSG.append("NPC");
-                    } else {
-                        replyMSG.append(owner.getName());
+                        Clan owner = residence.getOwner();
+                        if (owner == null) {
+                            replyMSG.append("NPC");
+                        } else {
+                            replyMSG.append(owner.getName());
+                        }
+
+                        replyMSG.append("</td></tr>");
                     }
-
-                    replyMSG.append("</td></tr>");
-                });
+                }
                 msg.replace("%residence_list%", replyMSG.toString());
                 activeChar.sendPacket(msg);
                 break;
@@ -144,10 +146,12 @@ public class AdminResidence implements IAdminCommandHandler, ScriptFile {
 
                     StringBuilder clans = new StringBuilder(100);
                     for (Map.Entry<String, List<Serializable>> entry : event.getObjects().entrySet()) {
-                        entry.getValue().stream().filter(o -> o instanceof SiegeClanObject).forEach(o -> {
-                            SiegeClanObject siegeClanObject = (SiegeClanObject) o;
-                            clans.append("<tr>").append("<td>").append(siegeClanObject.getClan().getName()).append("</td>").append("<td>").append(siegeClanObject.getClan().getLeaderName()).append("</td>").append("<td>").append(siegeClanObject.getType()).append("</td>").append("</tr>");
-                        });
+                        for (Serializable o : entry.getValue()) {
+                            if (o instanceof SiegeClanObject) {
+                                SiegeClanObject siegeClanObject = (SiegeClanObject) o;
+                                clans.append("<tr>").append("<td>").append(siegeClanObject.getClan().getName()).append("</td>").append("<td>").append(siegeClanObject.getClan().getLeaderName()).append("</td>").append("<td>").append(siegeClanObject.getType()).append("</td>").append("</tr>");
+                            }
+                        }
                     }
                     msg.replace("%clans%", clans.toString());
                 }
@@ -304,9 +308,11 @@ public class AdminResidence implements IAdminCommandHandler, ScriptFile {
                 ThreadPoolManager.getInstance().execute(new RunnableImpl() {
                     @Override
                     public void runImpl() throws Exception {
-                        ResidenceHolder.getInstance().getResidenceList(Fortress.class).stream().filter(f -> f.getSiegeEvent().isInProgress()).forEach(f -> {
-                            f.getSiegeEvent().stopEvent();
-                        });
+                        for (Fortress f : ResidenceHolder.getInstance().getResidenceList(Fortress.class)) {
+                            if (f.getSiegeEvent().isInProgress()) {
+                                f.getSiegeEvent().stopEvent();
+                            }
+                        }
 
                         for (Dominion d : runnerEvent.getRegisteredDominions()) {
                             d.getSiegeEvent().clearActions();
@@ -322,7 +328,7 @@ public class AdminResidence implements IAdminCommandHandler, ScriptFile {
                     return false;
                 }
 
-                List<String> t = new ArrayList<>(3);
+                List<String> t = new ArrayList<String>(3);
                 if (target instanceof PowerControlUnitInstance) {
                     for (int i : ((PowerControlUnitInstance) target).getGenerated()) {
                         t.add(String.valueOf(i));

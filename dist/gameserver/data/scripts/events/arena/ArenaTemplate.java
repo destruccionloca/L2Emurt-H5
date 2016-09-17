@@ -3,8 +3,6 @@ package events.arena;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 import l2p.commons.threading.RunnableImpl;
 import l2p.gameserver.Config;
@@ -331,7 +329,7 @@ public abstract class ArenaTemplate extends Functions {
             _timeToStart--;
             say(creator.getName() + " создал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, ставка " + (_battleType == 1 ? _price + "а" : "опыт") + ", начало через " + _timeToStart + " мин");
             executeTask("events.arena." + _className, "announce", new Object[0], 60000);
-        } else if (!_team2list.isEmpty()) {
+        } else if (_team2list.size() > 0) {
             say("Подготовка к бою");
             executeTask("events.arena." + _className, "prepare", new Object[0], 5000);
         } else {
@@ -352,8 +350,16 @@ public abstract class ArenaTemplate extends Functions {
         }
 
         _status = 2;
-        _team1live.addAll(getPlayers(_team1list).stream().filter(player -> !player.isDead()).map(Player::getStoredId).collect(Collectors.toList()));
-        _team2live.addAll(getPlayers(_team2list).stream().filter(player -> !player.isDead()).map(Player::getStoredId).collect(Collectors.toList()));
+        for (Player player : getPlayers(_team1list)) {
+            if (!player.isDead()) {
+                _team1live.add(player.getStoredId());
+            }
+        }
+        for (Player player : getPlayers(_team2list)) {
+            if (!player.isDead()) {
+                _team2live.add(player.getStoredId());
+            }
+        }
         if (!checkTeams()) {
             return;
         }
@@ -534,8 +540,12 @@ public abstract class ArenaTemplate extends Functions {
     }
 
     public void returnExpToTeams() {
-        getPlayers(_team1list).forEach(this::returnExp);
-        getPlayers(_team2list).forEach(this::returnExp);
+        for (Player player : getPlayers(_team1list)) {
+            returnExp(player);
+        }
+        for (Player player : getPlayers(_team2list)) {
+            returnExp(player);
+        }
     }
 
     public void clearTeams() {
@@ -603,7 +613,7 @@ public abstract class ArenaTemplate extends Functions {
                 case 1:
                     removePlayer(player);
                     say(player.getName() + " дисквалифицирован");
-                    if (Objects.equals(player.getStoredId(), _creatorId)) {
+                    if (player.getStoredId() == _creatorId) {
                         say("Бой прерван, ставки возвращены");
                         if (_battleType == 1) {
                             returnAdenaToTeams();
@@ -689,7 +699,7 @@ public abstract class ArenaTemplate extends Functions {
     }
 
     private List<Player> getPlayers(List<Long> list) {
-        List<Player> result = new ArrayList<>();
+        List<Player> result = new ArrayList<Player>();
         for (Long storeId : list) {
             Player player = GameObjectsStorage.getAsPlayer(storeId);
             if (player != null) {

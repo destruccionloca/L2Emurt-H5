@@ -427,7 +427,7 @@
     </cond>
   </etcitem>
   <etcitem id="1540" name="Quick Healing Potion">
-    <set name="reuse_delay" value="500"/>
+    <set name="reuse_delay" value="1000"/>
     <set name="class" value="CONSUMABLE"/>
     <set name="crystal_type" value="NONE"/>
     <set name="icon" value="icon.etc_potion_gold_i00"/>

@@ -71,7 +71,7 @@ public class _372_LegacyOfInsolence extends Quest implements ScriptFile {
     private static int Three_Recipes_Reward_Chance = 1;
     private static int Two_Recipes_Reward_Chance = 2;
     private static int Adena4k_Reward_Chance = 2;
-    private final Map<Integer, int[]> DROPLIST = new HashMap<>();
+    private final Map<Integer, int[]> DROPLIST = new HashMap<Integer, int[]>();
 
     public _372_LegacyOfInsolence() {
         super(true);

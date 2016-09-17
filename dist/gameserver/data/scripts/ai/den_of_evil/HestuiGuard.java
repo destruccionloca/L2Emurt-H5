@@ -35,9 +35,11 @@ public class HestuiGuard extends DefaultAI {
     protected boolean thinkActive() {
         NpcInstance actor = getActor();
 
-        World.getAroundPlayers(actor).stream().filter(player -> player.getLevel() <= 37).forEach(player -> {
-            Functions.npcSay(actor, NpcString.THIS_PLACE_IS_DANGEROUS_S1, player.getName());
-        });
+        for (Player player : World.getAroundPlayers(actor)) {
+            if (player.getLevel() <= 37) {
+                Functions.npcSay(actor, NpcString.THIS_PLACE_IS_DANGEROUS_S1, player.getName());
+            }
+        }
 
         return false;
     }

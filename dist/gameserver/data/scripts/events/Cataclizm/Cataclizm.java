@@ -96,7 +96,11 @@ public class Cataclizm extends Functions implements ScriptFile, OnShowChatListen
                 for (String str3 : str2) {
                     String[] str4 = str3.split(",");
                     int id = Integer.parseInt(str4[0]);
-                    GameObjectsStorage.getAllNpcs().stream().filter(n -> n != null && n.getNpcId() == id).forEach(NpcInstance::deleteMe);
+                    for (NpcInstance n : GameObjectsStorage.getAllNpcs()) {
+                        if (n != null && n.getNpcId() == id) {
+                            n.deleteMe();
+                        }
+                    }
                 }
             }
         }

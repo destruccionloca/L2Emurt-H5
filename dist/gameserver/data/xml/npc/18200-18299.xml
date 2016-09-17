@@ -6148,7 +6148,7 @@
             <!--Transformation Scroll: Venom-->
             <reward item_id="21188" min="1" max="1" chance="20.9300" />
             <!--Transformation Scroll: Gordon-->
-            <reward item_id="21186" min="1" max="1" chance="18.6000" />
+            <reward item_id="21186" min="1" max="1" chance="6.6000" />
             <!--Transformation Scroll: Anakim-->
             <reward item_id="21191" min="1" max="1" chance="18.6000" />
             <!--Transformation Scroll: Duke Devil-->
@@ -6283,7 +6283,7 @@
             <!--Transformation Scroll: Venom-->
             <reward item_id="21188" min="1" max="1" chance="20.9300" />
             <!--Transformation Scroll: Gordon-->
-            <reward item_id="21186" min="1" max="1" chance="18.6000" />
+            <reward item_id="21186" min="1" max="1" chance="6.6000" />
             <!--Transformation Scroll: Anakim-->
             <reward item_id="21191" min="1" max="1" chance="18.6000" />
             <!--Transformation Scroll: Duke Devil-->
@@ -6541,7 +6541,7 @@
         <set name="texture" value=""/>
         <set name="type" value="TreasureChest"/>
         <ai_params>
-            <set name="noRandomWalk" value="true"/>
+            <set name="noRandomWalk" value="false"/>
         </ai_params>
         <skills>
             <skill id="4416" level="2"/>
@@ -6557,68 +6557,13 @@
             <skill id="4415" level="3"/>
         </skills>
         <rewardlist type="NOT_RATED_NOT_GROUPED">
-            <reward item_id="8639" min="4" max="4" chance="97.6700" />	<!--Elixir of CP (S-Grade)-->
-            <reward item_id="8627" min="2" max="2" chance="70.9300" />	<!--Elixir of Life (S-Grade)-->
-            <reward item_id="8633" min="2" max="2" chance="67.4400" />	<!--Elixir of Mental Strength (S-Grade)-->
-            <reward item_id="1538" min="2" max="2" chance="59.3000" />	<!--Blessed Scroll of Escape-->
-            <reward item_id="9574" min="1" max="1" chance="50.0000" />	<!--Mid-Grade Life Stone -  Level 80-->
-            <reward item_id="10262" min="3" max="3" chance="44.1900" />	<!--Critical Hit Juice-->
-            <reward item_id="10265" min="3" max="3" chance="43.0200" />	<!--Evasion Juice-->
-            <reward item_id="14167" min="1" max="1" chance="38.3700" />	<!--Mid-Grade Life Stone -  Level 84-->
-            <reward item_id="10260" min="3" max="3" chance="38.3700" />	<!--Alacrity Juice-->
-            <reward item_id="3936" min="1" max="1" chance="37.2100" />	<!--Blessed Scroll of Resurrection-->
-            <reward item_id="10264" min="3" max="3" chance="32.8800" />	<!--Casting Spd. Juice-->
-            <reward item_id="6622" min="1" max="1" chance="33.7200" />	<!--Giant's Codex-->
-            <reward item_id="10269" min="3" max="3" chance="33.7200" />	<!--Defense Juice-->
-            <reward item_id="10268" min="3" max="3" chance="33.7200" />	<!--Speed Juice-->
-            <reward item_id="10484" min="1" max="1" chance="32.5600" />	<!--Mid-Grade Life Stone -  Level 82-->
-            <reward item_id="10263" min="3" max="3" chance="31.4000" />	<!--Critical Rate Juice-->
-            <reward item_id="21185" min="1" max="1" chance="31.4000" />	<!--Transformation Scroll: Zaken-->
-            <reward item_id="10261" min="3" max="3" chance="30.2300" />	<!--Accuracy Juice-->
-            <reward item_id="10267" min="3" max="3" chance="30.2300" />	<!--Power Juice-->
-            <reward item_id="10266" min="3" max="3" chance="29.0700" />	<!--M. Atk. Juice-->
-            <reward item_id="21189" min="1" max="1" chance="24.4200" />	<!--Transformation Scroll: Ranku-->
-            <reward item_id="21187" min="1" max="1" chance="22.0900" />	<!--Transformation Scroll: Venom-->
-            <reward item_id="21188" min="1" max="1" chance="20.9300" />	<!--Transformation Scroll: Gordon-->
-            <reward item_id="21186" min="1" max="1" chance="1.6000" />	<!--Transformation Scroll: Anakim-->
-            <reward item_id="21191" min="1" max="1" chance="18.6000" />	<!--Transformation Scroll: Duke Devil-->
-            <reward item_id="21190" min="1" max="1" chance="17.4400" />	<!--Transformation Scroll: Kietch-->
-            <reward item_id="14701" min="3" max="3" chance="16.2800" />	<!--Greater Quick Healing Potion-->
-            <reward item_id="9551" min="1" max="1" chance="13.9500" />	<!--Divine Stone-->
-            <reward item_id="9549" min="1" max="1" chance="10.4700" />	<!--Wind Stone-->
-            <reward item_id="9547" min="1" max="1" chance="10.4700" />	<!--Water Stone-->
-            <reward item_id="9548" min="1" max="1" chance="10.4700" />	<!--Earth Stone-->
-            <reward item_id="9546" min="1" max="1" chance="8.1400" />	<!--Fire Stone-->
-            <reward item_id="9550" min="1" max="1" chance="8.1400" />	<!--Dark Stone-->
-            <reward item_id="5595" min="2" max="2" chance="4.6500" />	<!--SP Scroll (High Grade)-->
-            <reward item_id="9556" min="1" max="1" chance="2.3300" />	<!--Dark Crystal-->
-            <reward item_id="9555" min="1" max="1" chance="1.1600" />	<!--Wind Crystal-->
-            <reward item_id="9553" min="1" max="1" chance="1.1600" />	<!--Water Crystal-->
-            <reward item_id="21749" min="1" max="1" chance="1.1600" />	<!--Great Adventurer's Treasure Sack-->
-            <reward item_id="17185" min="1" max="1" chance="1.1600" />	<!--1,000,000 SP scroll-->
-            <reward item_id="960" min="1" max="1" chance="0.3700" />	<!--Scroll: Enchant Armor (S-Grade)-->
-            <reward item_id="5577" min="1" max="1" chance="12.5100" />	<!--Red Soul Crystal 11)-->
-            <reward item_id="5579" min="1" max="1" chance="12.5100" />	<!--Blue Soul Crystal 11)-->
-            <reward item_id="5578" min="1" max="1" chance="12.5100" />	<!--Green Soul Crystal 11)-->
-            <reward item_id="5580" min="1" max="1" chance="7.1500" />	<!--Red Soul Crystal 12)-->
-            <reward item_id="5581" min="1" max="1" chance="7.1500" />	<!--Green Soul Crystal 12)-->
-            <reward item_id="5582" min="1" max="1" chance="7.1500" />	<!--Blue Soul Crystal 12)-->
-            <reward item_id="5908" min="1" max="1" chance="3.0500" />	<!--Red Soul Crystal 13)-->
-            <reward item_id="5911" min="1" max="1" chance="3.0500" />	<!--Green Soul Crystal 13)-->
-            <reward item_id="5914" min="1" max="1" chance="3.0500" />	<!--Blue Soul Crystal 13)-->
-            <reward item_id="9570" min="1" max="1" chance="1.1500" />	<!--Red Soul Crystal 14)-->
-            <reward item_id="9572" min="1" max="1" chance="1.1500" />	<!--Green Soul Crystal 14)-->
-            <reward item_id="9571" min="1" max="1" chance="1.1500" />	<!--Blue Soul Crystal 14)-->
-            <reward item_id="10480" min="1" max="1" chance="0.7500" />	<!--Red Soul Crystal 15)-->
-            <reward item_id="10482" min="1" max="1" chance="0.7500" />	<!--Green Soul Crystal 15)-->
-            <reward item_id="10481" min="1" max="1" chance="0.7500" />	<!--Blue Soul Crystal 15)-->
-            <reward item_id="13071" min="1" max="1" chance="0.4500" />	<!--Red Soul Crystal 16)-->
-            <reward item_id="13073" min="1" max="1" chance="0.4500" />	<!--Green Soul Crystal 16)-->
-            <reward item_id="13072" min="1" max="1" chance="0.4500" />	<!--Blue Soul Crystal 16)-->
-            <reward item_id="6364" min="1" max="1" chance="0.5000" />	   <!--Forgotten Blade   S-->
-            <reward item_id="9442" min="1" max="1" chance="0.5000" />	   <!--Dynasty Sword   S-->
-            <reward item_id="10215" min="1" max="1" chance="0.3000" />	   <!--Dynasty Sword   S80-->
-            <reward item_id="13457" min="1" max="1" chance="0.1000" />	   <!--Vesper Cutter   S84-->
+            <reward item_id="21185" min="1" max="1" chance="17.0000" />	<!--Transformation Scroll: Zaken-->
+            <reward item_id="21189" min="1" max="1" chance="16.0000" />	<!--Transformation Scroll: Ranku-->
+            <reward item_id="21187" min="1" max="1" chance="18.0000" />	<!--Transformation Scroll: Venom-->
+            <reward item_id="21188" min="1" max="1" chance="20.0000" />	<!--Transformation Scroll: Gordon-->
+            <reward item_id="21186" min="1" max="1" chance="15.0000" />	<!--Transformation Scroll: Anakim-->
+            <reward item_id="21191" min="1" max="1" chance="19.0000" />	<!--Transformation Scroll: Duke Devil-->
+            <reward item_id="21190" min="1" max="1" chance="21.0000" />	<!--Transformation Scroll: Kietch-->
         </rewardlist>
         <attributes>
             <defence attribute="fire" value="20"/>

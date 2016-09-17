@@ -252,7 +252,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
                 DbUtils.closeQuietly(con, statement, rset);
             }
 
-            List<String> args = new ArrayList<>();
+            List<String> args = new ArrayList<String>();
             args.add("0");
             args.add("0");
             args.add("0");
@@ -328,7 +328,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 
             html = html.replace("%flag%", String.valueOf(type));
 
-            List<String> args = new ArrayList<>();
+            List<String> args = new ArrayList<String>();
             args.add("0");
             args.add("0");
             args.add("0");
@@ -596,10 +596,10 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
     }
 
     private static List<Clan> getClanList(String search, boolean byCL) {
-        ArrayList<Clan> clanList = new ArrayList<>();
+        ArrayList<Clan> clanList = new ArrayList<Clan>();
 
         Clan[] clans = ClanTable.getInstance().getClans();
-        Arrays.sort(clans, new ClansComparator<>());
+        Arrays.sort(clans, new ClansComparator<Clan>());
         for (Clan clan : clans) {
             if (clan.getLevel() > 1) {
                 clanList.add(clan);
@@ -607,7 +607,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
         }
 
         if (!search.isEmpty()) {
-            ArrayList<Clan> searchList = new ArrayList<>();
+            ArrayList<Clan> searchList = new ArrayList<Clan>();
             for (Clan clan : clanList) {
                 if (byCL && clan.getLeaderName().toLowerCase().contains(search.toLowerCase())) {
                     searchList.add(clan);

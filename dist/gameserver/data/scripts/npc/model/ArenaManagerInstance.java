@@ -56,7 +56,7 @@ public class ArenaManagerInstance extends WarehouseInstance {
                 return;
             }
             player.reduceAdena(neededmoney, true);
-            List<Creature> target = new ArrayList<>();
+            List<Creature> target = new ArrayList<Creature>();
             target.add(player);
             for (int[] buff : _arenaBuff) {
                 if (player.isMageClass() && player.getTemplate().race != Race.orc) {

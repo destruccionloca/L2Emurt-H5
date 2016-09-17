@@ -163,7 +163,7 @@ public class ChamberlainInstance extends ResidenceManager {
                 }
             }
 
-            if (!filename.isEmpty()) {
+            if (filename.length() > 0) {
                 HtmlMessage html = new HtmlMessage(player, this);
                 html.setFile(filename);
                 player.sendPacket(html);

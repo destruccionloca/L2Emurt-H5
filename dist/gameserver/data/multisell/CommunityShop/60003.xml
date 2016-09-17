@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<list maintainEnchantment="true">
+
+  <!-- Knight's Cloak - Heavy Armor exclusive -->
+  <item id="1">
+    <ingredient id="4357" count="150"/>
+    <production id="14602" count="1"/>
+  </item>
+
+  <!-- Knight's Cloak - Light Armor exclusive -->
+  <item id="2">
+    <ingredient id="4357" count="200"/>
+    <production id="13890" count="1"/>
+  </item>
+
+  <!-- Knight's Cloak - Robe exclusive -->
+  <item id="3">
+    <ingredient id="4357" count="400"/>
+    <production id="21583" count="1"/>
+  </item>
+
+  <!-- Knight's Cloak - Kamael exclusive -->
+  <item id="4">
+    <ingredient id="4357" count="400"/>
+    <production id="21587" count="1"/>
+  </item>
+
+  <!-- Holy Spirit's Cloak - Kamael exclusive -->
+  <item id="5">
+    <ingredient id="4357" count="400"/>
+    <production id="21588" count="1"/>
+  </item>
+  
+    <!-- Soul Zaken -->
+  <item id="6">
+    <ingredient id="4357" count="500"/>
+    <production id="21719" count="1"/>
+  </item>
+
+  <!-- Soul Frintezza -->
+  <item id="7">
+    <ingredient id="4357" count="550"/>
+    <production id="21721" count="1"/>
+  </item>
+  
+    <!-- Soul Freya -->
+  <item id="8">
+    <ingredient id="4357" count="600"/>
+    <production id="21720" count="1"/>
+  </item>
+
+  <!-- Zaken -->
+  <item id="9">
+    <ingredient id="4357" count="600"/>
+    <production id="21716" count="1"/>
+  </item>
+
+  <!-- Frintezza -->
+  <item id="10">
+    <ingredient id="4357" count="700"/>
+    <production id="21718" count="1"/>
+  </item>
+  
+    <!-- Freya -->
+  <item id="11">
+    <ingredient id="4357" count="800"/>
+    <production id="21717" count="1"/>
+  </item>
+
+</list>

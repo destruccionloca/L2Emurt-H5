@@ -52,41 +52,36 @@ public class _039_RedEyedInvaders extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "guard_babenco_q0039_0104.htm":
-                st.setCond(1);
-                st.setState(STARTED);
+        if (event.equals("guard_babenco_q0039_0104.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("captain_bathia_q0039_0201.htm")) {
+            st.setCond(2);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("captain_bathia_q0039_0301.htm")) {
+            if (st.getQuestItemsCount(BBN) == 100 && st.getQuestItemsCount(RBN) == 100) {
+                st.setCond(4);
+                st.takeItems(BBN, -1);
+                st.takeItems(RBN, -1);
                 st.playSound(SOUND_ACCEPT);
-                break;
-            case "captain_bathia_q0039_0201.htm":
-                st.setCond(2);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "captain_bathia_q0039_0301.htm":
-                if (st.getQuestItemsCount(BBN) == 100 && st.getQuestItemsCount(RBN) == 100) {
-                    st.setCond(4);
-                    st.takeItems(BBN, -1);
-                    st.takeItems(RBN, -1);
-                    st.playSound(SOUND_ACCEPT);
-                } else {
-                    htmltext = "captain_bathia_q0039_0203.htm";
-                }
-                break;
-            case "captain_bathia_q0039_0401.htm":
-                if (st.getQuestItemsCount(IP) == 30 && st.getQuestItemsCount(GML) == 30) {
-                    st.takeItems(IP, -1);
-                    st.takeItems(GML, -1);
-                    st.giveItems(REW[0], 60);
-                    st.giveItems(REW[1], 1);
-                    st.giveItems(REW[2], 500);
-                    st.addExpAndSp(62366, 2783);
-                    st.setCond(0);
-                    st.playSound(SOUND_FINISH);
-                    st.exitCurrentQuest(false);
-                } else {
-                    htmltext = "captain_bathia_q0039_0304.htm";
-                }
-                break;
+            } else {
+                htmltext = "captain_bathia_q0039_0203.htm";
+            }
+        } else if (event.equals("captain_bathia_q0039_0401.htm")) {
+            if (st.getQuestItemsCount(IP) == 30 && st.getQuestItemsCount(GML) == 30) {
+                st.takeItems(IP, -1);
+                st.takeItems(GML, -1);
+                st.giveItems(REW[0], 60);
+                st.giveItems(REW[1], 1);
+                st.giveItems(REW[2], 500);
+                st.addExpAndSp(62366, 2783);
+                st.setCond(0);
+                st.playSound(SOUND_FINISH);
+                st.exitCurrentQuest(false);
+            } else {
+                htmltext = "captain_bathia_q0039_0304.htm";
+            }
         }
         return htmltext;
     }

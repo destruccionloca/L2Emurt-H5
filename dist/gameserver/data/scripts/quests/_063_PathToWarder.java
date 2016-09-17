@@ -72,34 +72,27 @@ public class _063_PathToWarder extends Quest implements ScriptFile {
             st.setCond(1);
             st.playSound(SOUND_ACCEPT);
         }
-        switch (event) {
-            case "master_sione_q0063_08.htm":
-                st.setCond(2);
-                break;
-            case "captain_bathia_q0063_04.htm":
-                st.takeItems(LettertotheHumans, 1);
-                st.giveItems(HumansReply, 1);
-                st.setCond(6);
-                break;
-            case "master_gobie_q0063_08.htm":
-                st.takeItems(HumansReply, 1);
-                st.giveItems(LettertotheDarkElves, 1);
-                st.setCond(7);
-                break;
-            case "master_tobias_q0063_05.htm":
-                st.takeItems(LettertotheDarkElves, 1);
-                st.giveItems(DarkElvesReply, 1);
-                st.setCond(8);
-                break;
-            case "master_gobie_q0063_11.htm":
-                st.takeItems(DarkElvesReply, 1);
-                st.giveItems(ReporttoSione, 1);
-                st.setCond(9);
-                break;
-            case "master_gobie_q0063_16.htm":
-                st.takeItems(EmptySoulCrystal, 1);
-                st.setCond(11);
-                break;
+        if (event.equals("master_sione_q0063_08.htm")) {
+            st.setCond(2);
+        } else if (event.equals("captain_bathia_q0063_04.htm")) {
+            st.takeItems(LettertotheHumans, 1);
+            st.giveItems(HumansReply, 1);
+            st.setCond(6);
+        } else if (event.equals("master_gobie_q0063_08.htm")) {
+            st.takeItems(HumansReply, 1);
+            st.giveItems(LettertotheDarkElves, 1);
+            st.setCond(7);
+        } else if (event.equals("master_tobias_q0063_05.htm")) {
+            st.takeItems(LettertotheDarkElves, 1);
+            st.giveItems(DarkElvesReply, 1);
+            st.setCond(8);
+        } else if (event.equals("master_gobie_q0063_11.htm")) {
+            st.takeItems(DarkElvesReply, 1);
+            st.giveItems(ReporttoSione, 1);
+            st.setCond(9);
+        } else if (event.equals("master_gobie_q0063_16.htm")) {
+            st.takeItems(EmptySoulCrystal, 1);
+            st.setCond(11);
         }
         return htmltext;
     }

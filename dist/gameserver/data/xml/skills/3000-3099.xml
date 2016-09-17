@@ -1080,7 +1080,7 @@
 		</for>
 	</skill>
 	<skill id="3070" levels="4" name="Special Ability: Critical Stun">
-		<table name="#activateRate">25 25 25 48</table>
+		<table name="#activateRate">25 27 43 48</table>
 		<table name="#magicLevel">64 67 70 80</table>
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0100" />

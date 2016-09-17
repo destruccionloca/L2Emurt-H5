@@ -22,8 +22,8 @@ public class MasterZelos extends Fighter {
         setZoneInactive();
         super.onEvtSpawn();
         //Doors
-        for (int door1 : doors) {
-            DoorInstance door = ReflectionUtils.getDoor(door1);
+        for (int i = 0; i < doors.length; i++) {
+            DoorInstance door = ReflectionUtils.getDoor(doors[i]);
             door.closeMe();
         }
     }
@@ -31,8 +31,8 @@ public class MasterZelos extends Fighter {
     @Override
     protected void onEvtDead(Creature killer) {
         //Doors
-        for (int door1 : doors) {
-            DoorInstance door = ReflectionUtils.getDoor(door1);
+        for (int i = 0; i < doors.length; i++) {
+            DoorInstance door = ReflectionUtils.getDoor(doors[i]);
             door.openMe();
         }
         super.onEvtDead(killer);

@@ -63,9 +63,11 @@ public final class DeadTumorInstance extends NpcInstance {
                         for (Player p : getReflection().getPlayers()) {
                             p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
                         }
-                        player.getParty().getPartyMembers().stream().filter(p -> p.isInRange(this, 500)).forEach(p -> {
-                            p.teleToLocation(loc);
-                        });
+                        for (Player p : player.getParty().getPartyMembers()) {
+                            if (p.isInRange(this, 500)) {
+                                p.teleToLocation(loc);
+                            }
+                        }
                     }
                 }
             } else {
@@ -90,9 +92,11 @@ public final class DeadTumorInstance extends NpcInstance {
                 for (Player p : getReflection().getPlayers()) {
                     p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
                 }
-                player.getParty().getPartyMembers().stream().filter(p -> p.isInRange(this, 800)).forEach(p -> {
-                    p.teleToLocation(new Location(-179548, 209584, -15504));
-                });
+                for (Player p : player.getParty().getPartyMembers()) {
+                    if (p.isInRange(this, 800)) {
+                        p.teleToLocation(new Location(-179548, 209584, -15504));
+                    }
+                }
                 ((HeartInfinityAttack) getReflection()).notifyEchmusEntrance(player.getParty().getPartyLeader());
             } else if (command.equalsIgnoreCase("showcheckpage")) {
                 if (!player.isInParty()) {
@@ -119,9 +123,11 @@ public final class DeadTumorInstance extends NpcInstance {
                         for (Player p : getReflection().getPlayers()) {
                             p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
                         }
-                        player.getParty().getPartyMembers().stream().filter(p -> p.isInRange(this, 500)).forEach(p -> {
-                            p.teleToLocation(loc);
-                        });
+                        for (Player p : player.getParty().getPartyMembers()) {
+                            if (p.isInRange(this, 500)) {
+                                p.teleToLocation(loc);
+                            }
+                        }
                     }
                 }
             } else if (command.equalsIgnoreCase("reenterechmus")) {
@@ -134,9 +140,11 @@ public final class DeadTumorInstance extends NpcInstance {
                         p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_ENTERED_THE_CHAMBER_OF_EKIMUS_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
                     }
                     ((HeartInfinityAttack) getReflection()).notifyEkimusRoomEntrance();
-                    player.getParty().getPartyMembers().stream().filter(p -> p.isInRange(this, 400)).forEach(p -> {
-                        p.teleToLocation(new Location(-179548, 209584, -15504));
-                    });
+                    for (Player p : player.getParty().getPartyMembers()) {
+                        if (p.isInRange(this, 400)) {
+                            p.teleToLocation(new Location(-179548, 209584, -15504));
+                        }
+                    }
                 }
             } else {
                 super.onBypassFeedback(player, command);

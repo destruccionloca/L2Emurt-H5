@@ -1342,11 +1342,12 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="22271" levels="1" name="Maestro's Key">
+		<table name="#unlockPower">30 50 75 105 130 175 205 230 275 300 300 300 300 300</table>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
 		<set name="hitTime" val="500"/>
 		<set name="hitCancelTime" val="500"/>
-		<set name="activateRate" val="25"/>
+		<set name="activateRate" val="100"/>
 		<set name="itemConsumeId" val="21746"/>
 		<set name="itemConsumeCount" val="1"/>
 		<set name="isHandler" val="true"/>

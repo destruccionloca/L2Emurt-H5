@@ -27,20 +27,20 @@ public class GiranArena extends Functions implements ScriptFile, OnDeathListener
             _className = "GiranArena";
             _status = 0;
 
-            _team1list = new CopyOnWriteArrayList<>();
-            _team2list = new CopyOnWriteArrayList<>();
-            _team1live = new CopyOnWriteArrayList<>();
-            _team2live = new CopyOnWriteArrayList<>();
+            _team1list = new CopyOnWriteArrayList<Long>();
+            _team2list = new CopyOnWriteArrayList<Long>();
+            _team1live = new CopyOnWriteArrayList<Long>();
+            _team2live = new CopyOnWriteArrayList<Long>();
 
-            _expToReturn = new HashMap<>();
-            _classToReturn = new HashMap<>();
+            _expToReturn = new HashMap<Integer, Integer>();
+            _classToReturn = new HashMap<Integer, Integer>();
 
             _zoneListener = new ZoneListener();
             _zone = ReflectionUtils.getZone("[giran_pvp_battle]");
             _zone.addListener(_zoneListener);
 
-            _team1points = new ArrayList<>();
-            _team2points = new ArrayList<>();
+            _team1points = new ArrayList<Location>();
+            _team2points = new ArrayList<Location>();
 
             _team1points.add(new Location(72609, 142346, -3798));
             _team1points.add(new Location(72809, 142346, -3798));

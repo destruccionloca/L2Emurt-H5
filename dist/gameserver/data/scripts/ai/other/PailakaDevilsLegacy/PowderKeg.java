@@ -21,9 +21,11 @@ public class PowderKeg extends DefaultAI {
         if (!_exploded) {
             _exploded = true;
             _actor.broadcastPacket(new MagicSkillUse(_actor, skill.getId(), skill.getLevel(), skill.getHitTime(), 0));
-            _actor.getAroundCharacters(600, 200).stream().filter(c -> !c.isPlayable()).forEach(c -> {
-                c.reduceCurrentHp(1700, _actor, skill, true, true, false, false, false, false, true);
-            });
+            for (Creature c : _actor.getAroundCharacters(600, 200)) {
+                if (!c.isPlayable()) {
+                    c.reduceCurrentHp(1700, _actor, skill, true, true, false, false, false, false, true);
+                }
+            }
             _actor.doDie(attacker);
         }
     }

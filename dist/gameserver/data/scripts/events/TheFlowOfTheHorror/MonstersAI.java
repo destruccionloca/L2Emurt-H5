@@ -13,7 +13,7 @@ import l2p.gameserver.utils.Location;
 
 public class MonstersAI extends Fighter {
 
-    private List<Location> _points = new ArrayList<>();
+    private List<Location> _points = new ArrayList<Location>();
     private int current_point = -1;
 
     public void setPoints(List<Location> points) {

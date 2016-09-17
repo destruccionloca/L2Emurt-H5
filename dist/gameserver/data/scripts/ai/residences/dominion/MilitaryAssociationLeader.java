@@ -24,7 +24,7 @@ import quests._731_ProtectTheMilitaryAssociationLeader;
  */
 public class MilitaryAssociationLeader extends SiegeGuardFighter {
 
-    private static final IntObjectMap<NpcString[]> MESSAGES = new HashIntObjectMap<>(9);
+    private static final IntObjectMap<NpcString[]> MESSAGES = new HashIntObjectMap<NpcString[]>(9);
 
     static {
         MESSAGES.put(81, new NpcString[]{NpcString.PROTECT_THE_MILITARY_ASSOCIATION_LEADER_OF_GLUDIO, NpcString.THE_MILITARY_ASSOCIATION_LEADER_OF_GLUDIO_IS_DEAD});

@@ -23,7 +23,7 @@ import org.napile.primitive.sets.impl.HashIntSet;
 public class WorkshopGatekeeperInstance extends NpcInstance {
 
     private static long doorRecharge = 0;
-    private static final IntObjectMap<IntSet> doors = new HashIntObjectMap<>();
+    private static final IntObjectMap<IntSet> doors = new HashIntObjectMap<IntSet>();
 
     static {
         IntSet list;

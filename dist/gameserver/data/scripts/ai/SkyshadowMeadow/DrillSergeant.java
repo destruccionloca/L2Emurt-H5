@@ -30,21 +30,27 @@ public class DrillSergeant extends Fighter {
                 switch (Rnd.get(1, 3)) {
                     case 1:
                         actor.broadcastPacket(new SocialAction(actor.getObjectId(), 7));
-                        around.stream().filter(mob -> ArrayUtils.contains(recruits, mob.getNpcId())).forEach(mob -> {
-                            mob.broadcastPacket(new SocialAction(mob.getObjectId(), 7));
-                        });
+                        for (NpcInstance mob : around) {
+                            if (ArrayUtils.contains(recruits, mob.getNpcId())) {
+                                mob.broadcastPacket(new SocialAction(mob.getObjectId(), 7));
+                            }
+                        }
                         break;
                     case 2:
                         actor.broadcastPacket(new SocialAction(actor.getObjectId(), 7));
-                        around.stream().filter(mob -> ArrayUtils.contains(recruits, mob.getNpcId())).forEach(mob -> {
-                            mob.broadcastPacket(new SocialAction(mob.getObjectId(), 4));
-                        });
+                        for (NpcInstance mob : around) {
+                            if (ArrayUtils.contains(recruits, mob.getNpcId())) {
+                                mob.broadcastPacket(new SocialAction(mob.getObjectId(), 4));
+                            }
+                        }
                         break;
                     case 3:
                         actor.broadcastPacket(new SocialAction(actor.getObjectId(), 7));
-                        around.stream().filter(mob -> ArrayUtils.contains(recruits, mob.getNpcId())).forEach(mob -> {
-                            mob.broadcastPacket(new SocialAction(mob.getObjectId(), 5));
-                        });
+                        for (NpcInstance mob : around) {
+                            if (ArrayUtils.contains(recruits, mob.getNpcId())) {
+                                mob.broadcastPacket(new SocialAction(mob.getObjectId(), 5));
+                            }
+                        }
                         break;
                 }
             }

@@ -33,8 +33,8 @@ import org.slf4j.LoggerFactory;
  */
 public class DefenseTowns extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener {
 
-    private static ArrayList<NpcInstance> mobs = new ArrayList<>();
-    private static ArrayList<NpcInstance> allMobs = new ArrayList<>();
+    private static ArrayList<NpcInstance> mobs = new ArrayList<NpcInstance>();
+    private static ArrayList<NpcInstance> allMobs = new ArrayList<NpcInstance>();
     private static boolean playerWin = false;
     private static Zone _zoneShutPiece = ReflectionUtils.getZone("[schuttgart_town_peace]");
     private static final Logger _log = LoggerFactory.getLogger(DefenseTowns.class);
@@ -307,7 +307,11 @@ public class DefenseTowns extends Functions implements ScriptFile, OnDeathListen
                     ThreadPoolManager.getInstance().schedule(new EventTask(EventTaskState.DESPAWN, mobs.clone()), Config.BossLifeTime);
                     break;
                 case DESPAWN:
-                    mb.stream().filter(npc -> npc != null).forEach(NpcInstance::deleteMe);
+                    for (NpcInstance npc : mb) {
+                        if (npc != null) {
+                            npc.deleteMe();
+                        }
+                    }
                     break;
                 case END:
                     if (!playerWin) {
@@ -315,7 +319,11 @@ public class DefenseTowns extends Functions implements ScriptFile, OnDeathListen
                     }
                     activeEvent = false;
                     _zoneShutPiece.setActive(true);
-                    allMobs.stream().filter(_npc -> _npc != null).forEach(NpcInstance::deleteMe);
+                    for (NpcInstance _npc : allMobs) {
+                        if (_npc != null) {
+                            _npc.deleteMe();
+                        }
+                    }
                     if (Config.TMEventInterval > 0) {
                         ThreadPoolManager.getInstance().schedule(new EventTask(EventTaskState.START), Config.TMEventInterval);
                     }
@@ -331,7 +339,11 @@ public class DefenseTowns extends Functions implements ScriptFile, OnDeathListen
         if (self.getNpcId() == Config.TMBoss) {
             Announcements.getInstance().announceToAll("Главарь монстров повержен, игрок " + killer.getName() + " нанес последний удар!");
             Announcements.getInstance().announceToAll("Монстры отступают!");
-            allMobs.stream().filter(_npc -> _npc != null).forEach(NpcInstance::deleteMe);
+            for (NpcInstance _npc : allMobs) {
+                if (_npc != null) {
+                    _npc.deleteMe();
+                }
+            }
             if (killer.isPlayer()) {
                 for (int i = 0; i < Config.TMItem.length; i++) {
                     if (Rnd.get(100) < Config.TMItemChanceBoss[i] && Config.TMItemColBoss[i] > 0) {

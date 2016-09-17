@@ -35,34 +35,30 @@ public class _029_ChestCaughtWithABaitOfEarth extends Quest implements ScriptFil
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "fisher_willeri_q0029_0104.htm":
-                st.setState(STARTED);
-                st.setCond(1);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "fisher_willeri_q0029_0201.htm":
-                if (st.getQuestItemsCount(SmallPurpleTreasureChest) > 0) {
-                    st.setCond(2);
-                    st.playSound(SOUND_MIDDLE);
-                    st.takeItems(SmallPurpleTreasureChest, 1);
-                    st.giveItems(SmallGlassBox, 1);
-                } else {
-                    htmltext = "fisher_willeri_q0029_0202.htm";
-                }
-                break;
-            case "29_GiveGlassBox":
-                if (st.getQuestItemsCount(SmallGlassBox) == 1) {
-                    htmltext = "magister_anabel_q0029_0301.htm";
-                    st.takeItems(SmallGlassBox, -1);
-                    st.giveItems(PlatedLeatherGloves, 1);
-                    st.playSound(SOUND_FINISH);
-                    st.exitCurrentQuest(false);
-                } else {
-                    htmltext = "magister_anabel_q0029_0302.htm";
-                    st.exitCurrentQuest(true);
-                }
-                break;
+        if (event.equals("fisher_willeri_q0029_0104.htm")) {
+            st.setState(STARTED);
+            st.setCond(1);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("fisher_willeri_q0029_0201.htm")) {
+            if (st.getQuestItemsCount(SmallPurpleTreasureChest) > 0) {
+                st.setCond(2);
+                st.playSound(SOUND_MIDDLE);
+                st.takeItems(SmallPurpleTreasureChest, 1);
+                st.giveItems(SmallGlassBox, 1);
+            } else {
+                htmltext = "fisher_willeri_q0029_0202.htm";
+            }
+        } else if (event.equals("29_GiveGlassBox")) {
+            if (st.getQuestItemsCount(SmallGlassBox) == 1) {
+                htmltext = "magister_anabel_q0029_0301.htm";
+                st.takeItems(SmallGlassBox, -1);
+                st.giveItems(PlatedLeatherGloves, 1);
+                st.playSound(SOUND_FINISH);
+                st.exitCurrentQuest(false);
+            } else {
+                htmltext = "magister_anabel_q0029_0302.htm";
+                st.exitCurrentQuest(true);
+            }
         }
         return htmltext;
     }

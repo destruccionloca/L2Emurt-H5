@@ -66,10 +66,12 @@ public class MushroomInstance extends MonsterInstance {
         {
             List<NpcInstance> around = getAroundNpc(700, 300);
             if (around != null && !around.isEmpty()) {
-                around.stream().filter(npc -> npc.isMonster() && npc.getNpcId() >= 22768 && npc.getNpcId() <= 22774).forEach(npc -> {
-                    npc.setRunning();
-                    npc.moveToLocation(Location.findPointToStay(this, 20, 50), 0, true);
-                });
+                for (NpcInstance npc : around) {
+                    if (npc.isMonster() && npc.getNpcId() >= 22768 && npc.getNpcId() <= 22774) {
+                        npc.setRunning();
+                        npc.moveToLocation(Location.findPointToStay(this, 20, 50), 0, true);
+                    }
+                }
             }
             ThreadPoolManager.getInstance().schedule(new TaskAfterDead(this, killer, FANTASY_MUSHROOM_SKILL), 4000);
         }
@@ -97,16 +99,18 @@ public class MushroomInstance extends MonsterInstance {
                 _actor.broadcastPacket(new MagicSkillUse(_actor, _skill.getId(), _skill.getLevel(), 0, 0));
                 List<NpcInstance> around = _actor.getAroundNpc(200, 300);
                 if (around != null && !around.isEmpty()) {
-                    around.stream().filter(npc -> npc.isMonster() && npc.getNpcId() >= 22768 && npc.getNpcId() <= 22774).forEach(npc -> {
-                        _skill.getEffects(npc, npc, false, false);
-                    });
+                    for (NpcInstance npc : around) {
+                        if (npc.isMonster() && npc.getNpcId() >= 22768 && npc.getNpcId() <= 22774) {
+                            _skill.getEffects(npc, npc, false, false);
+                        }
+                    }
                 }
                 _actor.doDie(_killer);
                 return;
             }
 
             if (_killer != null && _killer.isPlayer() && !_killer.isDead()) {
-                List<Creature> targets = new ArrayList<>();
+                List<Creature> targets = new ArrayList<Creature>();
                 targets.add(_killer);
                 _killer.broadcastPacket(new MagicSkillUse(_killer, _killer, _skill.getId(), _skill.getLevel(), 0, 0));
                 _skill.useSkill(_killer, targets);

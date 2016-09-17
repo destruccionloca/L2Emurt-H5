@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+  <config showall="true" notax="false" ignoreprice="false" keepenchanted="false" />
+  <!-- Редкое оружие -->
+  <!-- Магическое Оружие 61-80 -->
+  <item id="1">
+    <ingredient id="4356" count="100" />
+    <production id="11042" count="1" />
+  </item>
+  <item id="2">
+    <ingredient id="4356" count="100" />
+    <production id="11043" count="1" />
+  </item>
+  <item id="3">
+    <ingredient id="4356" count="100" />
+    <production id="11044" count="1" />
+  </item>
+  <item id="4">
+    <ingredient id="4356" count="100" />
+    <production id="11109" count="1" />
+  </item>
+  <item id="5">
+    <ingredient id="4356" count="100" />
+    <production id="11110" count="1" />
+  </item>
+  <item id="6">
+    <ingredient id="4356" count="100" />
+    <production id="11111" count="1" />
+  </item>
+  <item id="7">
+    <ingredient id="4356" count="100" />
+    <production id="11105" count="1" />
+  </item>
+  <item id="8">
+    <ingredient id="4356" count="100" />
+    <production id="11106" count="1" />
+  </item>
+  <item id="9">
+    <ingredient id="4356" count="100" />
+    <production id="11107" count="1" />
+  </item>
+  <item id="10">
+    <ingredient id="4356" count="150" />
+    <production id="11183" count="1" />
+  </item>
+  <item id="11">
+    <ingredient id="4356" count="150" />
+    <production id="11184" count="1" />
+  </item>
+  <item id="12">
+    <ingredient id="4356" count="150" />
+    <production id="11185" count="1" />
+  </item>
+  <item id="13">
+    <ingredient id="4356" count="150" />
+    <production id="11187" count="1" />
+  </item>
+  <item id="14">
+    <ingredient id="4356" count="150" />
+    <production id="11188" count="1" />
+  </item>
+  <item id="15">
+    <ingredient id="4356" count="150" />
+    <production id="11189" count="1" />
+  </item>
+  <item id="16">
+    <ingredient id="4356" count="150" />
+    <production id="11138" count="1" />
+  </item>
+  <item id="17">
+    <ingredient id="4356" count="150" />
+    <production id="11139" count="1" />
+  </item>
+  <item id="18">
+    <ingredient id="4356" count="150" />
+    <production id="11140" count="1" />
+  </item>
+  <item id="19">
+    <ingredient id="4356" count="250" />
+    <production id="11223" count="1" />
+  </item>
+  <item id="20">
+    <ingredient id="4356" count="250" />
+    <production id="11224" count="1" />
+  </item>
+  <item id="21">
+    <ingredient id="4356" count="250" />
+    <production id="11225" count="1" />
+  </item>
+  <item id="22">
+    <ingredient id="4356" count="250" />
+    <production id="11231" count="1" />
+  </item>
+  <item id="23">
+    <ingredient id="4356" count="250" />
+    <production id="11232" count="1" />
+  </item>
+  <item id="24">
+    <ingredient id="4356" count="250" />
+    <production id="11233" count="1" />
+  </item>
+  <item id="25">
+    <ingredient id="4356" count="350" />
+    <production id="11257" count="1" />
+  </item>
+  <item id="26">
+    <ingredient id="4356" count="350" />
+    <production id="11258" count="1" />
+  </item>
+  <item id="27">
+    <ingredient id="4356" count="350" />
+    <production id="11259" count="1" />
+  </item>
+  <item id="28">
+    <ingredient id="4356" count="350" />
+    <production id="11293" count="1" />
+  </item>
+  <item id="29">
+    <ingredient id="4356" count="350" />
+    <production id="11294" count="1" />
+  </item>
+  <item id="30">
+    <ingredient id="4356" count="350" />
+    <production id="11295" count="1" />
+  </item>
+  <item id="31">
+    <ingredient id="4356" count="350" />
+    <production id="11277" count="1" />
+  </item>
+  <item id="32">
+    <ingredient id="4356" count="350" />
+    <production id="11278" count="1" />
+  </item>
+  <item id="33">
+    <ingredient id="4356" count="350" />
+    <production id="11279" count="1" />
+  </item>
+  <item id="34">
+    <ingredient id="4356" count="450" />
+    <production id="11318" count="1" />
+  </item>
+  <item id="35">
+    <ingredient id="4356" count="450" />
+    <production id="11319" count="1" />
+  </item>
+  <item id="36">
+    <ingredient id="4356" count="450" />
+    <production id="11320" count="1" />
+  </item>
+  <item id="37">
+    <ingredient id="4356" count="450" />
+    <production id="11346" count="1" />
+  </item>
+  <item id="38">
+    <ingredient id="4356" count="450" />
+    <production id="11347" count="1" />
+  </item>
+  <item id="39">
+    <ingredient id="4356" count="450" />
+    <production id="11348" count="1" />
+  </item>
+</list>

@@ -23,7 +23,43 @@ public class CastlePrison extends Reflection {
     private Future<?> bossSpawnTask = null;
     private DeathListener _deathListener = new DeathListener();
     private static final int[][] dungeonCastleArray = new int[][]{
-        {1, 13}, {2, 14}, {3, 15}, {4, 16}, {5, 17}, {6, 18}, {7, 19}, {8, 20}, {9, 21}};
+        {
+            1,
+            13
+        },
+        {
+            2,
+            14
+        },
+        {
+            3,
+            15
+        },
+        {
+            4,
+            16
+        },
+        {
+            5,
+            17
+        },
+        {
+            6,
+            18
+        },
+        {
+            7,
+            19
+        },
+        {
+            8,
+            20
+        },
+        {
+            9,
+            21
+        }
+    };
 
     private static final int RhiannaTheTraitor = 25546;
     private static final int TeslaTheDeceiver = 25549;

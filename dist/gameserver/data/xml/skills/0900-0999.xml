@@ -555,7 +555,7 @@
 	<skill id="928" levels="1" name="Duel Blow">
 		<set name="icon" val="icon.skill0928_1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="power" val="11234" />
+		<set name="power" val="11256" />
 		<set name="magicLevel" val="83" />
 		<set name="hitTime" val="1800" />
 		<set name="hitCancelTime" val="500" />
@@ -568,7 +568,7 @@
 		<set name="blow" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="lethal1" val="10" />      
-		<set name="lethal2" val="5" />
+		<set name="lethal2" val="1" />
 		<set name="criticalRate" val="20" />
 		<set name="nextAction" val="attack" />
 		<set name="trait" val="DEATH" />

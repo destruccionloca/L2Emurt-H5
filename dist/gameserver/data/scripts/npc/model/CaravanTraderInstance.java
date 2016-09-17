@@ -55,7 +55,8 @@ public final class CaravanTraderInstance extends NpcInstance {
             int val = 0;
             try {
                 val = Integer.parseInt(command.substring(5));
-            } catch (IndexOutOfBoundsException | NumberFormatException ioobe) {
+            } catch (IndexOutOfBoundsException ioobe) {
+            } catch (NumberFormatException nfe) {
             }
             showDialog(player, getHtmlPath(getNpcId(), val, player));
             return;
@@ -332,7 +333,7 @@ public final class CaravanTraderInstance extends NpcInstance {
         {
             Reflection r = ReflectionUtils.simpleEnterInstancedZone(player, 2);
             if (r != null) {
-                r.setCoreLoc(new Location(16262, 283651, -9700)); // Иммитация бага оффа - выкенет в цитадель
+                //r.setCoreLoc(new Location(16262, 283651, -9700)); // Иммитация бага оффа - выкенет в цитадель
             }
         } else {
             super.onBypassFeedback(player, command);

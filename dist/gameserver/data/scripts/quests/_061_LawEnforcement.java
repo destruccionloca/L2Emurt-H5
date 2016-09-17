@@ -45,36 +45,30 @@ public class _061_LawEnforcement extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "ask":
-                if (st.getPlayer().getRace() != Race.kamael) {
-                    htmltext = "grandmaste_piane_q0061_03.htm";
-                    st.exitCurrentQuest(true);
-                } else if (st.getPlayer().getClassId() != ClassId.inspector || st.getPlayer().getLevel() < 76) {
-                    htmltext = "grandmaste_piane_q0061_02.htm";
-                    st.exitCurrentQuest(true);
-                } else {
-                    htmltext = "grandmaste_piane_q0061_04.htm";
-                }
-                break;
-            case "accept":
-                st.setState(STARTED);
-                st.setCond(COND1);
-                st.playSound(SOUND_ACCEPT);
-                htmltext = "grandmaste_piane_q0061_05.htm";
-                break;
-            case "kekrops_q0061_09.htm":
-                st.setCond(COND2);
-                break;
-            case "subelder_aientburg_q0061_08.htm":
-            case "subelder_aientburg_q0061_09.htm":
-                st.giveItems(ADENA_ID, 26000);
-                st.getPlayer().setClassId(ClassId.judicator.ordinal(), false, true);
-                st.getPlayer().broadcastCharInfo();
-                st.getPlayer().broadcastPacket(new MagicSkillUse(st.getPlayer(), 4339, 1, 6000, 1));
-                st.getPlayer().broadcastPacket(new MagicSkillUse(npc, 4339, 1, 6000, 1));
+        if (event.equals("ask")) {
+            if (st.getPlayer().getRace() != Race.kamael) {
+                htmltext = "grandmaste_piane_q0061_03.htm";
                 st.exitCurrentQuest(true);
-                break;
+            } else if (st.getPlayer().getClassId() != ClassId.inspector || st.getPlayer().getLevel() < 76) {
+                htmltext = "grandmaste_piane_q0061_02.htm";
+                st.exitCurrentQuest(true);
+            } else {
+                htmltext = "grandmaste_piane_q0061_04.htm";
+            }
+        } else if (event.equals("accept")) {
+            st.setState(STARTED);
+            st.setCond(COND1);
+            st.playSound(SOUND_ACCEPT);
+            htmltext = "grandmaste_piane_q0061_05.htm";
+        } else if (event.equals("kekrops_q0061_09.htm")) {
+            st.setCond(COND2);
+        } else if (event.equals("subelder_aientburg_q0061_08.htm") || event.equals("subelder_aientburg_q0061_09.htm")) {
+            st.giveItems(ADENA_ID, 26000);
+            st.getPlayer().setClassId(ClassId.judicator.ordinal(), false, true);
+            st.getPlayer().broadcastCharInfo();
+            st.getPlayer().broadcastPacket(new MagicSkillUse(st.getPlayer(), 4339, 1, 6000, 1));
+            st.getPlayer().broadcastPacket(new MagicSkillUse(npc, 4339, 1, 6000, 1));
+            st.exitCurrentQuest(true);
         }
         return htmltext;
     }

@@ -35,7 +35,7 @@ public class Rooney extends DefaultAI {
             return false;
         }
 
-        for (Location point : points) {
+        for (int i = 0; i < points.length; i++) {
             Location loc = points[Rnd.get(points.length)];
             if (actor.getLoc().equals(loc)) {
                 continue;

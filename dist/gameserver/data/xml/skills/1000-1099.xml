@@ -1156,7 +1156,7 @@
 				<def name="cancelRate" val="25" />
 				<def name="minChance" val="25" />
 				<def name="maxChance" val="75" />
-				<def name="negateCount" val="5" />
+				<def name="negateCount" val="3" />
 			</effect>
 		</for>
 	</skill>

@@ -89,135 +89,123 @@ public class _417_PathToScavenger extends Quest implements ScriptFile {
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
         int cond = st.getCond();
-        switch (event) {
-            case "1":
-                st.set("id", "0");
-                if (st.getPlayer().getLevel() >= 18 && st.getPlayer().getClassId().getId() == 0x35 && st.getQuestItemsCount(RING_OF_RAVEN) == 0) {
-                    st.setCond(1);
-                    st.setState(STARTED);
-                    st.playSound(SOUND_ACCEPT);
-                    st.giveItems(PIPIS_LETTER, 1);
-                    htmltext = "collector_pipi_q0417_05.htm";
-                } else if (st.getPlayer().getClassId().getId() != 0x35) {
-                    if (st.getPlayer().getClassId().getId() == 0x36) {
-                        htmltext = "collector_pipi_q0417_02a.htm";
-                    } else {
-                        htmltext = "collector_pipi_q0417_08.htm";
-                    }
-                } else if (st.getPlayer().getLevel() < 18 && st.getPlayer().getClassId().getId() == 0x35) {
-                    htmltext = "collector_pipi_q0417_02.htm";
-                } else if (st.getPlayer().getLevel() >= 18 && st.getPlayer().getClassId().getId() == 0x35 && st.getQuestItemsCount(RING_OF_RAVEN) == 1) {
-                    htmltext = "collector_pipi_q0417_04.htm";
-                }
-                break;
-            case "30519_1":
-                if (st.getQuestItemsCount(PIPIS_LETTER) > 0) {
-                    st.takeItems(PIPIS_LETTER, 1);
-                    st.setCond(2);
-                    int n = Rnd.get(3);
-                    if (n == 0) {
-                        htmltext = "trader_mion_q0417_02.htm";
-                        st.giveItems(ZIMENFS_POTION, 1);
-                    } else if (n == 1) {
-                        htmltext = "trader_mion_q0417_03.htm";
-                        st.giveItems(CHARIS_AXE, 1);
-                    } else if (n == 2) {
-                        htmltext = "trader_mion_q0417_04.htm";
-                        st.giveItems(BRONKS_INGOT, 1);
-                    }
+        if (event.equals("1")) {
+            st.set("id", "0");
+            if (st.getPlayer().getLevel() >= 18 && st.getPlayer().getClassId().getId() == 0x35 && st.getQuestItemsCount(RING_OF_RAVEN) == 0) {
+                st.setCond(1);
+                st.setState(STARTED);
+                st.playSound(SOUND_ACCEPT);
+                st.giveItems(PIPIS_LETTER, 1);
+                htmltext = "collector_pipi_q0417_05.htm";
+            } else if (st.getPlayer().getClassId().getId() != 0x35) {
+                if (st.getPlayer().getClassId().getId() == 0x36) {
+                    htmltext = "collector_pipi_q0417_02a.htm";
                 } else {
-                    htmltext = "noquest";
+                    htmltext = "collector_pipi_q0417_08.htm";
                 }
-                break;
-            case "30519_2":
-                htmltext = "trader_mion_q0417_06.htm";
-                break;
-            case "30519_3":
-                htmltext = "trader_mion_q0417_07.htm";
-                st.set("id", String.valueOf(st.getInt("id") + 1));
-                break;
-            case "30519_4":
-                int n = Rnd.get(2);
+            } else if (st.getPlayer().getLevel() < 18 && st.getPlayer().getClassId().getId() == 0x35) {
+                htmltext = "collector_pipi_q0417_02.htm";
+            } else if (st.getPlayer().getLevel() >= 18 && st.getPlayer().getClassId().getId() == 0x35 && st.getQuestItemsCount(RING_OF_RAVEN) == 1) {
+                htmltext = "collector_pipi_q0417_04.htm";
+            }
+        } else if (event.equals("30519_1")) {
+            if (st.getQuestItemsCount(PIPIS_LETTER) > 0) {
+                st.takeItems(PIPIS_LETTER, 1);
+                st.setCond(2);
+                int n = Rnd.get(3);
                 if (n == 0) {
-                    htmltext = "trader_mion_q0417_06.htm";
+                    htmltext = "trader_mion_q0417_02.htm";
+                    st.giveItems(ZIMENFS_POTION, 1);
                 } else if (n == 1) {
-                    htmltext = "trader_mion_q0417_11.htm";
+                    htmltext = "trader_mion_q0417_03.htm";
+                    st.giveItems(CHARIS_AXE, 1);
+                } else if (n == 2) {
+                    htmltext = "trader_mion_q0417_04.htm";
+                    st.giveItems(BRONKS_INGOT, 1);
                 }
-                break;
-            case "30519_5":
-                if (st.getQuestItemsCount(ZIMENFS_POTION, CHARIS_AXE, BRONKS_INGOT) > 0) {
-                    if (st.getInt("id") / 10 < 2) {
-                        htmltext = "trader_mion_q0417_07.htm";
+            } else {
+                htmltext = "noquest";
+            }
+        } else if (event.equals("30519_2")) {
+            htmltext = "trader_mion_q0417_06.htm";
+        } else if (event.equals("30519_3")) {
+            htmltext = "trader_mion_q0417_07.htm";
+            st.set("id", String.valueOf(st.getInt("id") + 1));
+        } else if (event.equals("30519_4")) {
+            int n = Rnd.get(2);
+            if (n == 0) {
+                htmltext = "trader_mion_q0417_06.htm";
+            } else if (n == 1) {
+                htmltext = "trader_mion_q0417_11.htm";
+            }
+        } else if (event.equals("30519_5")) {
+            if (st.getQuestItemsCount(ZIMENFS_POTION, CHARIS_AXE, BRONKS_INGOT) > 0) {
+                if (st.getInt("id") / 10 < 2) {
+                    htmltext = "trader_mion_q0417_07.htm";
+                    st.set("id", String.valueOf(st.getInt("id") + 1));
+                } else if (st.getInt("id") / 10 >= 2 && cond == 0) {
+                    htmltext = "trader_mion_q0417_09.htm";
+                    if (st.getInt("id") / 10 < 3) {
                         st.set("id", String.valueOf(st.getInt("id") + 1));
-                    } else if (st.getInt("id") / 10 >= 2 && cond == 0) {
-                        htmltext = "trader_mion_q0417_09.htm";
-                        if (st.getInt("id") / 10 < 3) {
-                            st.set("id", String.valueOf(st.getInt("id") + 1));
-                        }
-                    } else if (st.getInt("id") / 10 >= 3 && cond > 0) {
-                        htmltext = "trader_mion_q0417_10.htm";
-                        st.giveItems(MIONS_LETTER, 1);
-                        st.takeItems(CHARIS_AXE, 1);
-                        st.takeItems(ZIMENFS_POTION, 1);
-                        st.takeItems(BRONKS_INGOT, 1);
                     }
-                } else {
-                    htmltext = "noquest";
+                } else if (st.getInt("id") / 10 >= 3 && cond > 0) {
+                    htmltext = "trader_mion_q0417_10.htm";
+                    st.giveItems(MIONS_LETTER, 1);
+                    st.takeItems(CHARIS_AXE, 1);
+                    st.takeItems(ZIMENFS_POTION, 1);
+                    st.takeItems(BRONKS_INGOT, 1);
                 }
-                break;
-            case "30519_6":
-                if (st.getQuestItemsCount(ZIMENFS_PAY) > 0 || st.getQuestItemsCount(CHALIS_PAY) > 0 || st.getQuestItemsCount(BRONKS_PAY) > 0) {
-                    n = Rnd.get(3);
-                    st.takeItems(ZIMENFS_PAY, 1);
-                    st.takeItems(CHALIS_PAY, 1);
-                    st.takeItems(BRONKS_PAY, 1);
-                    if (n == 0) {
-                        htmltext = "trader_mion_q0417_02.htm";
-                        st.giveItems(ZIMENFS_POTION, 1);
-                    } else if (n == 1) {
-                        htmltext = "trader_mion_q0417_03.htm";
-                        st.giveItems(CHARIS_AXE, 1);
-                    } else if (n == 2) {
-                        htmltext = "trader_mion_q0417_04.htm";
-                        st.giveItems(BRONKS_INGOT, 1);
-                    }
-                } else {
-                    htmltext = "noquest";
+            } else {
+                htmltext = "noquest";
+            }
+        } else if (event.equals("30519_6")) {
+            if (st.getQuestItemsCount(ZIMENFS_PAY) > 0 || st.getQuestItemsCount(CHALIS_PAY) > 0 || st.getQuestItemsCount(BRONKS_PAY) > 0) {
+                int n = Rnd.get(3);
+                st.takeItems(ZIMENFS_PAY, 1);
+                st.takeItems(CHALIS_PAY, 1);
+                st.takeItems(BRONKS_PAY, 1);
+                if (n == 0) {
+                    htmltext = "trader_mion_q0417_02.htm";
+                    st.giveItems(ZIMENFS_POTION, 1);
+                } else if (n == 1) {
+                    htmltext = "trader_mion_q0417_03.htm";
+                    st.giveItems(CHARIS_AXE, 1);
+                } else if (n == 2) {
+                    htmltext = "trader_mion_q0417_04.htm";
+                    st.giveItems(BRONKS_INGOT, 1);
                 }
-                break;
-            case "30316_1":
-                if (st.getQuestItemsCount(BEAD_PARCEL) > 0) {
-                    htmltext = "raut_q0417_02.htm";
-                    st.takeItems(BEAD_PARCEL, 1);
-                    st.giveItems(ROUTS_TP_SCROLL, 1);
-                    st.setCond(10);
-                } else {
-                    htmltext = "noquest";
-                }
-                break;
-            case "30316_2":
-                if (st.getQuestItemsCount(BEAD_PARCEL) > 0) {
-                    htmltext = "raut_q0417_03.htm";
-                    st.takeItems(BEAD_PARCEL, 1);
-                    st.giveItems(ROUTS_TP_SCROLL, 1);
-                    st.setCond(10);
-                } else {
-                    htmltext = "noquest";
-                }
-                break;
-            case "30557_1":
-                htmltext = "torai_q0417_02.htm";
-                break;
-            case "30557_2":
-                if (st.getQuestItemsCount(ROUTS_TP_SCROLL) > 0) {
-                    htmltext = "torai_q0417_03.htm";
-                    st.takeItems(ROUTS_TP_SCROLL, 1);
-                    st.giveItems(SUCCUBUS_UNDIES, 1);
-                    st.setCond(11);
-                } else {
-                    htmltext = "noquest";
-                }
-                break;
+            } else {
+                htmltext = "noquest";
+            }
+        } else if (event.equals("30316_1")) {
+            if (st.getQuestItemsCount(BEAD_PARCEL) > 0) {
+                htmltext = "raut_q0417_02.htm";
+                st.takeItems(BEAD_PARCEL, 1);
+                st.giveItems(ROUTS_TP_SCROLL, 1);
+                st.setCond(10);
+            } else {
+                htmltext = "noquest";
+            }
+        } else if (event.equals("30316_2")) {
+            if (st.getQuestItemsCount(BEAD_PARCEL) > 0) {
+                htmltext = "raut_q0417_03.htm";
+                st.takeItems(BEAD_PARCEL, 1);
+                st.giveItems(ROUTS_TP_SCROLL, 1);
+                st.setCond(10);
+            } else {
+                htmltext = "noquest";
+            }
+        } else if (event.equals("30557_1")) {
+            htmltext = "torai_q0417_02.htm";
+        } else if (event.equals("30557_2")) {
+            if (st.getQuestItemsCount(ROUTS_TP_SCROLL) > 0) {
+                htmltext = "torai_q0417_03.htm";
+                st.takeItems(ROUTS_TP_SCROLL, 1);
+                st.giveItems(SUCCUBUS_UNDIES, 1);
+                st.setCond(11);
+            } else {
+                htmltext = "noquest";
+            }
         }
         return htmltext;
     }

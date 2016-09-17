@@ -231,7 +231,7 @@ public class _241_PossessorOfaPreciousSoul1 extends Quest implements ScriptFile 
                 st.playSound(SOUND_ITEMGET);
             }
         } else if (cond == 6) {
-            if ((npcId == 20244 || npcId == 20245) && Rnd.chance(10)) {
+            if ((npcId == 20244 || npcId == 20245) && Rnd.chance(60)) {
                 if (st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) <= 9) {
                     st.giveItems(MALRUK_SUCCUBUS_CLAW, 1);
                 }

@@ -15,6 +15,7 @@ import l2p.gameserver.model.Player;
 import l2p.gameserver.scripts.Functions;
 import l2p.gameserver.scripts.ScriptFile;
 import l2p.gameserver.serverpackets.ShopPreviewList;
+import l2p.gameserver.serverpackets.ShowBoard;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,10 +44,11 @@ public class CommunityBoardPreviewItem extends Functions implements ScriptFile, 
         }
     }
 
-    @Override
+	@Override
     public void onShutdown() {
     }
 
+	
     @Override
     public String[] getBypassCommands() {
         return new String[]{"_bbsshowitem"};
@@ -56,7 +58,7 @@ public class CommunityBoardPreviewItem extends Functions implements ScriptFile, 
     public void onBypassCommand(Player player, String bypass) {
 
         if (bypass.startsWith("_bbsshowitem")) {
-
+			
             StringTokenizer st2 = new StringTokenizer(bypass, ";");
             String[] mBypass = st2.nextToken().split(":");
             int id = Integer.parseInt(mBypass[1]);
@@ -65,6 +67,7 @@ public class CommunityBoardPreviewItem extends Functions implements ScriptFile, 
             if (list != null) {
                 ShopPreviewList bl = new ShopPreviewList(list, player);
                 player.sendPacket(bl);
+				player.sendPacket(new ShowBoard());
             } else {
                 _log.warn("no buylist with id:" + id);
                 player.sendActionFailed();

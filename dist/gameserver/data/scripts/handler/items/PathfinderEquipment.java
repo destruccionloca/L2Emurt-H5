@@ -13,7 +13,7 @@ import l2p.gameserver.scripts.ScriptFile;
 
 public class PathfinderEquipment extends SimpleItemHandler implements ScriptFile {
 
-    private static TIntObjectHashMap<int[][]> rewards = new TIntObjectHashMap<>();
+    private static TIntObjectHashMap<int[][]> rewards = new TIntObjectHashMap<int[][]>();
 
     static {
         rewards.put(12824, new int[][]{{1539, 4}, {1463, 50}, {2510, 50}});

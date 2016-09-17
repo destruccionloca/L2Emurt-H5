@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- За токены -->
+
+<list>
+	<config showall="true" notax="true" />
+	<!-- Zaken -->
+		<item>
+		<production id="6659" count="1" />
+		<ingredient id="13722" count="150000"/>		
+	</item>
+	<item>
+	<!-- Orfen -->
+		<production id="6661" count="1" />
+		<ingredient id="13722" count="70000"/>		
+	</item>
+	<!-- Freya -->
+		<item>
+		<production id="16025" count="1" />
+		<ingredient id="13722" count="180000"/>		
+	</item>
+	<!-- Frintezza -->
+	<item>
+		<production id="8191" count="1" />
+		<ingredient id="13722" count="150000"/>		
+	</item>
+	<!-- Baium -->
+	<item>
+		<production id="6658" count="1" />
+		<ingredient id="13722" count="350000"/>		
+	</item>
+	<!-- Aka -->
+	<item>
+		<production id="6660" count="1" />
+		<ingredient id="13722" count="150000"/>		
+	</item>
+		<!-- Beleth -->
+	<item>
+		<production id="10314" count="1" />
+		<ingredient id="13722" count="250000"/>		
+	</item>
+</list>

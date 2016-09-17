@@ -431,7 +431,7 @@ public abstract class ResidenceManager extends MerchantInstance {
             html.replace("%" + replace1 + "Price%", "0");
             html.replace("%" + replace1 + "Date%", "0");
         }
-        if (getResidence().getFunction(type) != null && !getResidence().getFunction(type).getLevels().isEmpty()) {
+        if (getResidence().getFunction(type) != null && getResidence().getFunction(type).getLevels().size() > 0) {
             String out = "[<a action=\"bypass -h npc_%objectId%_manage " + replace2 + " " + replace1 + " 0\">Stop</a>]";
             for (int level : getResidence().getFunction(type).getLevels()) {
                 out += "[<a action=\"bypass -h npc_%objectId%_manage " + replace2 + " " + replace1 + " " + level + "\">" + level + (proc ? "%" : "") + "</a>]";

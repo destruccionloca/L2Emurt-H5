@@ -213,13 +213,17 @@ public class Rename extends Functions {
         append += "<font color=\"LEVEL\">" + new CustomMessage("scripts.services.BaseChange.Price", player).addString(Util.formatAdena(Config.SERVICES_CHANGE_BASE_PRICE)).addItemName(Config.SERVICES_CHANGE_BASE_ITEM) + "</font>";
         append += "<table>";
 
-        List<SubClass> possible = new ArrayList<>();
+        List<SubClass> possible = new ArrayList<SubClass>();
         if (player.getActiveClass().isBase()) {
             possible.addAll(player.getSubClasses().values());
             possible.remove(player.getSubClasses().get(player.getBaseClassId()));
 
             for (SubClass s : player.getSubClasses().values()) {
-                player.getSubClasses().values().stream().filter(s2 -> s != s2 && !PlayerClass.areClassesComportable(PlayerClass.values()[s.getClassId()], PlayerClass.values()[s2.getClassId()]) || s2.getLevel() < 75).forEach(possible::remove);
+                for (SubClass s2 : player.getSubClasses().values()) {
+                    if (s != s2 && !PlayerClass.areClassesComportable(PlayerClass.values()[s.getClassId()], PlayerClass.values()[s2.getClassId()]) || s2.getLevel() < 75) {
+                        possible.remove(s2);
+                    }
+                }
             }
         }
 

@@ -29,22 +29,22 @@ import npc.model.SepulcherRaidInstance;
 public class FourSepulchersSpawn extends Functions implements ScriptFile {
 
     private static final Logger _log = LoggerFactory.getLogger(FourSepulchersSpawn.class);
-    public static Map<Integer, NpcLocation> _shadowSpawns = new HashMap<>();
-    public static Map<Integer, NpcLocation> _mysteriousBoxSpawns = new HashMap<>();
-    public static Map<Integer, List<NpcLocation>> _dukeFinalMobs = new HashMap<>();
-    public static Map<Integer, List<NpcLocation>> _emperorsGraveNpcs = new HashMap<>();
-    public static Map<Integer, List<NpcLocation>> _magicalMonsters = new HashMap<>();
-    public static Map<Integer, List<NpcLocation>> _physicalMonsters = new HashMap<>();
-    public static Map<Integer, Location> _startHallSpawns = new HashMap<>();
-    public static Map<Integer, Boolean> _hallInUse = new HashMap<>();
-    public static List<GateKeeper> _GateKeepers = new ArrayList<>();
-    public static Map<Integer, Integer> _keyBoxNpc = new HashMap<>();
-    public static Map<Integer, Integer> _victim = new HashMap<>();
-    public static Map<Integer, Boolean> _archonSpawned = new HashMap<>();
-    public static Map<Integer, List<SepulcherMonsterInstance>> _dukeMobs = new HashMap<>();
-    public static Map<Integer, List<SepulcherMonsterInstance>> _viscountMobs = new HashMap<>();
+    public static Map<Integer, NpcLocation> _shadowSpawns = new HashMap<Integer, NpcLocation>();
+    public static Map<Integer, NpcLocation> _mysteriousBoxSpawns = new HashMap<Integer, NpcLocation>();
+    public static Map<Integer, List<NpcLocation>> _dukeFinalMobs = new HashMap<Integer, List<NpcLocation>>();
+    public static Map<Integer, List<NpcLocation>> _emperorsGraveNpcs = new HashMap<Integer, List<NpcLocation>>();
+    public static Map<Integer, List<NpcLocation>> _magicalMonsters = new HashMap<Integer, List<NpcLocation>>();
+    public static Map<Integer, List<NpcLocation>> _physicalMonsters = new HashMap<Integer, List<NpcLocation>>();
+    public static Map<Integer, Location> _startHallSpawns = new HashMap<Integer, Location>();
+    public static Map<Integer, Boolean> _hallInUse = new HashMap<Integer, Boolean>();
+    public static List<GateKeeper> _GateKeepers = new ArrayList<GateKeeper>();
+    public static Map<Integer, Integer> _keyBoxNpc = new HashMap<Integer, Integer>();
+    public static Map<Integer, Integer> _victim = new HashMap<Integer, Integer>();
+    public static Map<Integer, Boolean> _archonSpawned = new HashMap<Integer, Boolean>();
+    public static Map<Integer, List<SepulcherMonsterInstance>> _dukeMobs = new HashMap<Integer, List<SepulcherMonsterInstance>>();
+    public static Map<Integer, List<SepulcherMonsterInstance>> _viscountMobs = new HashMap<Integer, List<SepulcherMonsterInstance>>();
     public static List<SepulcherNpcInstance> _managers;
-    public static List<NpcInstance> _allMobs = new ArrayList<>();
+    public static List<NpcInstance> _allMobs = new ArrayList<NpcInstance>();
 
     public static class NpcLocation extends Location {
 
@@ -242,7 +242,7 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile {
                 statement2.setInt(2, type);
                 rset2 = statement2.executeQuery();
 
-                List<NpcLocation> locations = new ArrayList<>();
+                List<NpcLocation> locations = new ArrayList<NpcLocation>();
                 while (rset2.next()) {
                     locations.add(new NpcLocation(rset2.getInt("locx"), rset2.getInt("locy"), rset2.getInt("locz"), rset2.getInt("heading"), rset2.getInt("npc_templateid")));
                     count++;
@@ -285,7 +285,7 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile {
     }
 
     private static void spawnManagers() {
-        _managers = new ArrayList<>();
+        _managers = new ArrayList<SepulcherNpcInstance>();
         for (int i = 31921; i <= 31924; i++) {
             try {
                 NpcTemplate template = NpcHolder.getInstance().getTemplate(i);
@@ -326,7 +326,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile {
     }
 
     public static void deleteAllMobs() {
-        _allMobs.forEach(NpcInstance::deleteMe);
+        for (NpcInstance mob : _allMobs) {
+            mob.deleteMe();
+        }
         _allMobs.clear();
     }
 
@@ -430,7 +432,7 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile {
         }
 
         List<NpcLocation> monsterList;
-        List<SepulcherMonsterInstance> mobs = new ArrayList<>();
+        List<SepulcherMonsterInstance> mobs = new ArrayList<SepulcherMonsterInstance>();
 
         if (Rnd.get(2) == 0) {
             monsterList = _physicalMonsters.get(npcId);

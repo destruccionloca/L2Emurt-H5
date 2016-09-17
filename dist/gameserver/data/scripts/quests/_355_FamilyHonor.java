@@ -51,50 +51,45 @@ public class _355_FamilyHonor extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "galicbredo_q0355_03.htm":
-                return htmltext;
-            case "galicbredo_q0355_04.htm":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "galicbredo_q0355_07.htm":
-                long count = st.getQuestItemsCount(BUST_OF_ANCIENT_GODDESS);
-                st.takeItems(BUST_OF_ANCIENT_GODDESS, count);
-                st.giveItems(WORK_OF_BERONA, count);
-                break;
-            case "patrin_q0355_01.htm":
-                return htmltext;
-            case "patrin_q0355_01a.htm":
-                return htmltext;
-            case "appraise":
-                int appraising = Rnd.get(100);
-                if (appraising < 20) {
-                    htmltext = "patrin_q0355_07.htm";
-                    st.takeItems(WORK_OF_BERONA, 1);
-                } else if (appraising < 40) {
-                    htmltext = "patrin_q0355_05.htm";
-                    st.takeItems(WORK_OF_BERONA, 1);
-                    st.giveItems(STATUE_REPLICA, 1);
-                } else if (appraising < 60) {
-                    htmltext = "patrin_q0355_04.htm";
-                    st.takeItems(WORK_OF_BERONA, 1);
-                    st.giveItems(STATUE_ORIGINAL, 1);
-                } else if (appraising < 80) {
-                    htmltext = "galicbredo_q0355_10.htm";
-                    st.takeItems(WORK_OF_BERONA, 1);
-                    st.giveItems(STATUE_FORGERY, 1);
-                } else if (appraising < 100) {
-                    htmltext = "galicbredo_q0355_11.htm";
-                    st.takeItems(WORK_OF_BERONA, 1);
-                    st.giveItems(STATUE_PROTOTYPE, 1);
-                }
-                break;
-            case "galicbredo_q0355_09.htm":
-                st.playSound(SOUND_FINISH);
-                st.exitCurrentQuest(true);
-                break;
+        if (event.equals("galicbredo_q0355_03.htm")) {
+            return htmltext;
+        } else if (event.equals("galicbredo_q0355_04.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("galicbredo_q0355_07.htm")) {
+            long count = st.getQuestItemsCount(BUST_OF_ANCIENT_GODDESS);
+            st.takeItems(BUST_OF_ANCIENT_GODDESS, count);
+            st.giveItems(WORK_OF_BERONA, count);
+        } else if (event.equals("patrin_q0355_01.htm")) {
+            return htmltext;
+        } else if (event.equals("patrin_q0355_01a.htm")) {
+            return htmltext;
+        } else if (event.equals("appraise")) {
+            int appraising = Rnd.get(100);
+            if (appraising < 20) {
+                htmltext = "patrin_q0355_07.htm";
+                st.takeItems(WORK_OF_BERONA, 1);
+            } else if (appraising < 40) {
+                htmltext = "patrin_q0355_05.htm";
+                st.takeItems(WORK_OF_BERONA, 1);
+                st.giveItems(STATUE_REPLICA, 1);
+            } else if (appraising < 60) {
+                htmltext = "patrin_q0355_04.htm";
+                st.takeItems(WORK_OF_BERONA, 1);
+                st.giveItems(STATUE_ORIGINAL, 1);
+            } else if (appraising < 80) {
+                htmltext = "galicbredo_q0355_10.htm";
+                st.takeItems(WORK_OF_BERONA, 1);
+                st.giveItems(STATUE_FORGERY, 1);
+            } else if (appraising < 100) {
+                htmltext = "galicbredo_q0355_11.htm";
+                st.takeItems(WORK_OF_BERONA, 1);
+                st.giveItems(STATUE_PROTOTYPE, 1);
+            }
+        } else if (event.equals("galicbredo_q0355_09.htm")) {
+            st.playSound(SOUND_FINISH);
+            st.exitCurrentQuest(true);
         }
         return htmltext;
     }

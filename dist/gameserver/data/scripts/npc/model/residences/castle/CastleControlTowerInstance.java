@@ -10,7 +10,7 @@ import l2p.gameserver.templates.npc.NpcTemplate;
 
 public class CastleControlTowerInstance extends SiegeToggleNpcInstance {
 
-    private Set<Spawner> _spawnList = new HashSet<>();
+    private Set<Spawner> _spawnList = new HashSet<Spawner>();
 
     public CastleControlTowerInstance(int objectId, NpcTemplate template) {
         super(objectId, template);
@@ -18,7 +18,9 @@ public class CastleControlTowerInstance extends SiegeToggleNpcInstance {
 
     @Override
     public void onDeathImpl(Creature killer) {
-        _spawnList.forEach(Spawner::stopRespawn);
+        for (Spawner spawn : _spawnList) {
+            spawn.stopRespawn();
+        }
         _spawnList.clear();
     }
 

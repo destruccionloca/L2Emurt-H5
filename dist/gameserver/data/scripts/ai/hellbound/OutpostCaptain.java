@@ -21,9 +21,11 @@ public class OutpostCaptain extends Fighter {
             return;
         }
 
-        World.getAroundNpc(getActor(), 3000, 2000).stream().filter(minion -> minion.getNpcId() == 22358 || minion.getNpcId() == 22357).forEach(minion -> {
-            minion.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
-        });
+        for (NpcInstance minion : World.getAroundNpc(getActor(), 3000, 2000)) {
+            if (minion.getNpcId() == 22358 || minion.getNpcId() == 22357) {
+                minion.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
+            }
+        }
 
         if (!_attacked) {
             Functions.npcSay(getActor(), "Fool, you and your friends will die! Attack!");

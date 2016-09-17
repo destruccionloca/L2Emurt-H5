@@ -46,8 +46,8 @@ public class CrystalCaverns extends Reflection {
     private DeathListener deathListener = new DeathListener();
     private ZoneListener zoneListener = new ZoneListener();
     private ScheduledFuture<?> failureTimer = null;
-    private Map<NpcInstance, Integer> protectorsIndex = new HashMap<>();
-    private Map<Integer, List<Location>> protectorsLoc = new HashMap<>();
+    private Map<NpcInstance, Integer> protectorsIndex = new HashMap<NpcInstance, Integer>();
+    private Map<Integer, List<Location>> protectorsLoc = new HashMap<Integer, List<Location>>();
     private boolean golemSpawned = false;
     private int golemsTrapped = 0;
     private boolean timerActivated = false;
@@ -66,25 +66,25 @@ public class CrystalCaverns extends Reflection {
         super.onCreate();
         spawnByGroup("cry_cav_npc_main");
 
-        List<Location> npc1 = new ArrayList<>();
+        List<Location> npc1 = new ArrayList<Location>();
         npc1.add(new Location(147088, 152480, -12155, 32768));
         npc1.add(new Location(149776, 152496, -12155, 32768));
         npc1.add(new Location(152448, 152480, -12155, 32768));
         protectorsLoc.put(32284, npc1);
 
-        List<Location> npc2 = new ArrayList<>();
+        List<Location> npc2 = new ArrayList<Location>();
         npc2.add(new Location(147088, 152560, -12155, 32768));
         npc2.add(new Location(149776, 152576, -12155, 32768));
         npc2.add(new Location(152448, 152560, -12155, 32768));
         protectorsLoc.put(32285, npc2);
 
-        List<Location> npc3 = new ArrayList<>();
+        List<Location> npc3 = new ArrayList<Location>();
         npc3.add(new Location(147088, 152640, -12155, 32768));
         npc3.add(new Location(149776, 152656, -12155, 32768));
         npc3.add(new Location(152448, 152640, -12155, 32768));
         protectorsLoc.put(32286, npc3);
 
-        List<Location> npc4 = new ArrayList<>();
+        List<Location> npc4 = new ArrayList<Location>();
         npc4.add(new Location(147088, 152720, -12155, 32768));
         npc4.add(new Location(149776, 152736, -12155, 32768));
         npc4.add(new Location(152448, 152720, -12155, 32768));
@@ -133,10 +133,11 @@ public class CrystalCaverns extends Reflection {
     public void notifyTearsDead(NpcInstance npc) {
         setReenterTime(System.currentTimeMillis());
         addSpawnWithoutRespawn(32276, npc.getLoc(), 0);
-        //Clear Crystal
-        npc.getAroundCharacters(600, 300).stream().filter(c -> c.isPlayer()).forEach(c -> {
-            ItemFunctions.addItem(c.getPlayer(), 9697, 1, true); //Clear Crystal
-        });
+        for (Creature c : npc.getAroundCharacters(600, 300)) {
+            if (c.isPlayer()) {
+                ItemFunctions.addItem(c.getPlayer(), 9697, 1, true); //Clear Crystal
+            }
+        }
     }
 
     private void notifySteamStarted() {
@@ -210,7 +211,11 @@ public class CrystalCaverns extends Reflection {
     }
 
     private void removeProtectors() {
-        getNpcs().stream().filter(npc -> ArrayUtils.contains(evas_protectors, npc.getNpcId())).forEach(NpcInstance::deleteMe);
+        for (NpcInstance npc : getNpcs()) {
+            if (ArrayUtils.contains(evas_protectors, npc.getNpcId())) {
+                npc.deleteMe();
+            }
+        }
     }
 
     public void notifyKechiAttacked() {
@@ -224,10 +229,11 @@ public class CrystalCaverns extends Reflection {
     public void notifyKechiDead(NpcInstance npc) {
         setReenterTime(System.currentTimeMillis());
         addSpawnWithoutRespawn(32277, npc.getLoc(), 0);
-        //Red Crystal
-        npc.getAroundCharacters(600, 300).stream().filter(c -> c.isPlayer()).forEach(c -> {
-            ItemFunctions.addItem(c.getPlayer(), 9696, 1, true); //Red Crystal
-        });
+        for (Creature c : npc.getAroundCharacters(600, 300)) {
+            if (c.isPlayer()) {
+                ItemFunctions.addItem(c.getPlayer(), 9696, 1, true); //Red Crystal
+            }
+        }
         if (failureTimer != null) {
             failureTimer.cancel(false);
             failureTimer = null;
@@ -250,10 +256,11 @@ public class CrystalCaverns extends Reflection {
     public void notifyDarnelDead(NpcInstance npc) {
         setReenterTime(System.currentTimeMillis());
         addSpawnWithoutRespawn(32276, npc.getLoc(), 0);
-        // Blue Crystal
-        npc.getAroundCharacters(600, 300).stream().filter(c -> c.isPlayer()).forEach(c -> {
-            ItemFunctions.addItem(c.getPlayer(), 9695, 1, true); // Blue Crystal
-        });
+        for (Creature c : npc.getAroundCharacters(600, 300)) {
+            if (c.isPlayer()) {
+                ItemFunctions.addItem(c.getPlayer(), 9695, 1, true); // Blue Crystal
+            }
+        }
     }
 
     public boolean areDoorsActivated() {
@@ -285,11 +292,11 @@ public class CrystalCaverns extends Reflection {
                     spawnByGroup("cry_cav_corgar_golem");
                 }
             } else if (self.getNpcId() == gatekeeper_provo) {
-                if (!getAllByNpcId(gatekeeper_lohan, true).isEmpty()) {
+                if (getAllByNpcId(gatekeeper_lohan, true).size() > 0) {
                     ((NpcInstance) self).dropItem(killer.getPlayer(), 9699, 1); //Red Coral Key
                 }
             } else if (self.getNpcId() == gatekeeper_lohan) {
-                if (!getAllByNpcId(gatekeeper_provo, true).isEmpty()) {
+                if (getAllByNpcId(gatekeeper_provo, true).size() > 0) {
                     ((NpcInstance) self).dropItem(killer.getPlayer(), 9698, 1); //Blue Coral Key
                 }
             } else if (ArrayUtils.contains(cor_gar_st_room_monsters, self.getNpcId())) {

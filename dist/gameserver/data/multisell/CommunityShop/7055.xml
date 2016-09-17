@@ -1,0 +1,85 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Cloacks -->
+<!-- © 2010 by mathuza -->
+
+<list maintainEnchantment="true">
+
+  <!-- Cloak of 12 -->
+  <item id="16">
+    <ingredient id="4357" count="170"/>
+    <production id="24012" count="1"/>
+  </item>
+  
+    <!-- Cloak of 13 -->
+  <item id="16">
+    <ingredient id="4357" count="170"/>
+    <production id="24013" count="1"/>
+  </item>
+  
+    <!-- Cloak of 14 -->
+  <item id="16">
+    <ingredient id="4357" count="170"/>
+    <production id="24014" count="1"/>
+  </item>
+    <!-- Cloak of 15 -->
+  <item id="16">
+    <ingredient id="4357" count="170"/>
+    <production id="24015" count="1"/>
+  </item>
+  
+    <!-- Cloak of 16 -->
+  <item id="16">
+    <ingredient id="4357" count="170"/>
+    <production id="24016" count="1"/>
+  </item>
+  
+    <!-- Cloak of 17 -->
+  <item id="16">
+    <ingredient id="4357" count="170"/>
+    <production id="24017" count="1"/>
+  </item>
+  
+    <!-- Cloak of 18 -->
+  <item id="16">
+    <ingredient id="4357" count="170"/>
+    <production id="24018" count="1"/>
+  </item>
+  
+    <!-- Cloak of 19 -->
+  <item id="16">
+    <ingredient id="4357" count="170"/>
+    <production id="24019" count="1"/>
+  </item>
+
+  <!-- Cloak of Draconic -->
+  <item id="16">
+    <ingredient id="4357" count="140"/>
+    <production id="24007" count="1"/>
+  </item>
+
+  <!-- Cloak of Vesper -->
+  <item id="16">
+    <ingredient id="4357" count="140"/>
+    <production id="24006" count="1"/>
+  </item>
+
+  <!-- Cloak of Elegia -->
+  <item id="16">
+    <ingredient id="4357" count="140"/>
+    <production id="24005" count="1"/>
+  </item>
+
+  <!-- Cloak of Vorpal -->
+  <item id="16">
+    <ingredient id="4357" count="140"/>
+    <production id="24004" count="1"/>
+  </item>
+
+  <!-- Cloak of Morai -->
+  <item id="16">
+    <ingredient id="4357" count="140"/>
+    <production id="24003" count="1"/>
+  </item>
+
+</list>

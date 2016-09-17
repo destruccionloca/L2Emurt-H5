@@ -1,0 +1,53 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+  <!-- by 4ipolino -->
+<list maintainEnchantment="true">
+<item id="1">
+    <ingredient id="57" count="15192000"/>
+    <production id="14164" count="1"/>
+  </item> 
+<item id="1">
+    <ingredient id="57" count="11394000"/>
+    <production id="14163" count="1"/>
+  </item>
+<item id="1">
+    <ingredient id="57" count="7596000"/>
+    <production id="14165" count="1"/>
+  </item>   
+  <item id="1">
+    <ingredient id="57" count="10284000"/>
+    <production id="14161" count="1"/>
+  </item>  
+<item id="1">
+    <ingredient id="57" count="7713000"/>
+    <production id="14160" count="1"/>
+  </item>
+<item id="1">
+    <ingredient id="57" count="5142000"/>
+    <production id="14162" count="1"/>
+  </item> 
+<item id="1">
+    <ingredient id="57" count="12305000"/>
+    <production id="15765" count="1"/>
+  </item> 
+  <item id="1">
+    <ingredient id="57" count="9229000"/>
+    <production id="15764" count="1"/>
+  </item> 
+  <item id="1">
+    <ingredient id="57" count="6152000"/>
+    <production id="15763" count="1"/>
+  </item> 
+  <item id="1">
+    <ingredient id="57" count="18177000"/>
+    <production id="15722" count="1"/>
+  </item> 
+    <item id="1">
+    <ingredient id="57" count="13633000"/>
+    <production id="15721" count="1"/>
+  </item> 
+    <item id="1">
+    <ingredient id="57" count="9088000"/>
+    <production id="15720" count="1"/>
+  </item> 
+  
+</list>

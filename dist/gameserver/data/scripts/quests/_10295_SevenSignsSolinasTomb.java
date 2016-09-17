@@ -267,19 +267,23 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile {
     }
 
     private void teleportElcardia(Player player) {
-        player.getReflection().getNpcs().stream().filter(n -> n.getNpcId() == ElcardiaInzone1).forEach(n -> {
-            n.teleToLocation(Location.findPointToStay(player, 100));
-        });
+        for (NpcInstance n : player.getReflection().getNpcs()) {
+            if (n.getNpcId() == ElcardiaInzone1) {
+                n.teleToLocation(Location.findPointToStay(player, 100));
+            }
+        }
     }
 
     private void removeInvincibility(Player player, int mobId) {
-        player.getReflection().getNpcs().stream().filter(n -> n.getNpcId() == mobId).forEach(n -> {
-            for (Effect e : n.getEffectList().getAllEffects()) {
-                if (e.getSkill().getId() == 6371) {
-                    e.exit();
+        for (NpcInstance n : player.getReflection().getNpcs()) {
+            if (n.getNpcId() == mobId) {
+                for (Effect e : n.getEffectList().getAllEffects()) {
+                    if (e.getSkill().getId() == 6371) {
+                        e.exit();
+                    }
                 }
             }
-        });
+        }
     }
 
     private boolean checkGuardians(Player player, int[] npcIds) {

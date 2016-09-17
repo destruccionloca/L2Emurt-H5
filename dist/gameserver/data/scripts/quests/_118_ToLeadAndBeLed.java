@@ -52,34 +52,28 @@ public class _118_ToLeadAndBeLed extends Quest implements ScriptFile {
 
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
-        switch (event) {
-            case "30298-02.htm":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "30298-05a.htm":
-                st.set("choose", "1");
-                st.setCond(3);
-                break;
-            case "30298-05b.htm":
-                st.set("choose", "2");
-                st.setCond(4);
-                break;
-            case "30298-05c.htm":
-                st.set("choose", "3");
-                st.setCond(5);
-                break;
-            case "30298-08.htm":
-                int choose = st.getInt("choose");
-                int need_dcry = choose == 1 ? D_CRY_COUNT_HEAVY : D_CRY_COUNT_LIGHT_MAGIC;
-                if (st.getQuestItemsCount(D_CRY) < need_dcry) {
-                    return "30298-07.htm";
-                }
-                st.setCond(7);
-                st.takeItems(D_CRY, need_dcry);
-                st.playSound(SOUND_MIDDLE);
-                break;
+        if (event.equals("30298-02.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("30298-05a.htm")) {
+            st.set("choose", "1");
+            st.setCond(3);
+        } else if (event.equals("30298-05b.htm")) {
+            st.set("choose", "2");
+            st.setCond(4);
+        } else if (event.equals("30298-05c.htm")) {
+            st.set("choose", "3");
+            st.setCond(5);
+        } else if (event.equals("30298-08.htm")) {
+            int choose = st.getInt("choose");
+            int need_dcry = choose == 1 ? D_CRY_COUNT_HEAVY : D_CRY_COUNT_LIGHT_MAGIC;
+            if (st.getQuestItemsCount(D_CRY) < need_dcry) {
+                return "30298-07.htm";
+            }
+            st.setCond(7);
+            st.takeItems(D_CRY, need_dcry);
+            st.playSound(SOUND_MIDDLE);
         }
         return event;
     }

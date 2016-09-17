@@ -33,7 +33,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
     private static final int RECIPE_PRICE = 50000; // 50.000 adena at x1 servers
     private static final int RECIPE_ID = 20191;
     private static final int EVENT_MANAGER_ID = 4301;
-    private static List<SimpleSpawner> _spawns = new ArrayList<>();
+    private static List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
     private static final int[] DROP = {20192, 20193, 20194};
     private static boolean _active = false;
 

@@ -67,11 +67,13 @@ public class TarBeetle extends DefaultAI {
 
     private void CancelTarget(NpcInstance actor) {
         if (TAR_BEETLE != actor.getDisplayId()) {
-            World.getAroundPlayers(actor).stream().filter(player -> player.getTarget() == actor).forEach(player -> {
-                player.setTarget(null);
-                player.abortAttack(true, false);
-                player.abortCast(true, true);
-            });
+            for (Player player : World.getAroundPlayers(actor)) {
+                if (player.getTarget() == actor) {
+                    player.setTarget(null);
+                    player.abortAttack(true, false);
+                    player.abortCast(true, true);
+                }
+            }
         }
     }
 
@@ -103,7 +105,7 @@ public class TarBeetle extends DefaultAI {
             return false;
         }
 
-        for (Location POSITION : POSITIONS) {
+        for (int i = 0; i < POSITIONS.length; i++) {
             Location loc = POSITIONS[Rnd.get(POSITIONS.length)];
             if (actor.getLoc().equals(loc)) {
                 continue;

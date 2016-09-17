@@ -24,7 +24,7 @@ import quests._729_ProtectTheTerritoryCatapult;
  */
 public class Catapult extends DefaultAI {
 
-    private static final IntObjectMap<NpcString[]> MESSAGES = new HashIntObjectMap<>(9);
+    private static final IntObjectMap<NpcString[]> MESSAGES = new HashIntObjectMap<NpcString[]>(9);
 
     static {
         MESSAGES.put(81, new NpcString[]{NpcString.PROTECT_THE_CATAPULT_OF_GLUDIO, NpcString.THE_CATAPULT_OF_GLUDIO_HAS_BEEN_DESTROYED});

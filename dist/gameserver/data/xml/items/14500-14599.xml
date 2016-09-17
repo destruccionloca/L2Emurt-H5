@@ -3,8 +3,7 @@
 
 <list>
   <weapon id="14500" name="Vesper Retributer {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -37,8 +36,7 @@
     </for>
   </weapon>
   <weapon id="14501" name="Vesper Retributer {PvP}" add_name="HP Drain">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -71,9 +69,7 @@
     </for>
   </weapon>
   <weapon id="14502" name="Vesper Caster {PvP}" add_name="Acumen">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -106,9 +102,7 @@
     </for>
   </weapon>
   <weapon id="14503" name="Vesper Caster {PvP}" add_name="MP Regeneration">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -141,9 +135,7 @@
     </for>
   </weapon>
   <weapon id="14504" name="Vesper Caster {PvP}" add_name="Mana Up">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -176,9 +168,7 @@
     </for>
   </weapon>
   <weapon id="14505" name="Vesper Singer {PvP}" add_name="Empower">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -211,9 +201,7 @@
     </for>
   </weapon>
   <weapon id="14506" name="Vesper Singer {PvP}" add_name="MP Regeneration">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -246,9 +234,7 @@
     </for>
   </weapon>
   <weapon id="14507" name="Vesper Singer {PvP}" add_name="Magic Hold">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -283,9 +269,7 @@
     </for>
   </weapon>
   <weapon id="14508" name="Vesper Thrower {PvP}" add_name="Cheap Shot">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -326,9 +310,7 @@
     </for>
   </weapon>
   <weapon id="14509" name="Vesper Thrower {PvP}" add_name="Focus">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -362,9 +344,7 @@
     </for>
   </weapon>
   <weapon id="14510" name="Vesper Thrower {PvP}" add_name="Crt. Slow">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -400,8 +380,7 @@
     </for>
   </weapon>
   <weapon id="14511" name="Vesper Pincer {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -436,8 +415,7 @@
     </for>
   </weapon>
   <weapon id="14512" name="Vesper Pincer {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -472,8 +450,7 @@
     </for>
   </weapon>
   <weapon id="14513" name="Vesper Pincer {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -508,9 +485,7 @@
     </for>
   </weapon>
   <weapon id="14514" name="Vesper Sheutjeh {PvP}" add_name="Cheap Shot">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -550,9 +525,7 @@
     </for>
   </weapon>
   <weapon id="14515" name="Vesper Sheutjeh {PvP}" add_name="Focus">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -585,9 +558,7 @@
     </for>
   </weapon>
   <weapon id="14516" name="Vesper Sheutjeh {PvP}" add_name="Crt. Slow">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -622,8 +593,7 @@
     </for>
   </weapon>
   <weapon id="14517" name="Vesper Nagan {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -656,8 +626,7 @@
     </for>
   </weapon>
   <weapon id="14518" name="Vesper Nagan {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -690,8 +659,7 @@
     </for>
   </weapon>
   <weapon id="14519" name="Vesper Nagan {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -724,8 +692,7 @@
     </for>
   </weapon>
   <armor id="14520" name="Vesper Breastplate {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2240"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -746,8 +713,7 @@
     </for>
   </armor>
   <armor id="14521" name="Vesper Leather Breastplate {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="1680"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -768,8 +734,7 @@
     </for>
   </armor>
   <armor id="14522" name="Vesper Tunic {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="1680"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -791,8 +756,7 @@
     </for>
   </armor>
   <armor id="14523" name="Vesper Noble Breastplate {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2680"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -813,8 +777,7 @@
     </for>
   </armor>
   <armor id="14524" name="Vesper Noble Leather Breastplate {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2010"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -835,8 +798,7 @@
     </for>
   </armor>
   <armor id="14525" name="Vesper Noble Tunic {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2010"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -918,8 +880,7 @@
     </for>
   </weapon>
   <weapon id="14528" name="Dynasty Dual Daggers - Great Gale {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4219"/>
     <set name="crystal_type" value="S"/>
     <set name="crystallizable" value="true"/>
@@ -955,8 +916,7 @@
     </for>
   </weapon>
   <weapon id="14529" name="Icarus Dual Daggers - Confusion {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="5845"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1273,8 +1233,7 @@
     <set name="weight" value="100"/>
   </etcitem>
   <weapon id="14558" name="Dynasty Dual Daggers {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4219"/>
     <set name="crystal_type" value="S"/>
     <set name="crystallizable" value="true"/>

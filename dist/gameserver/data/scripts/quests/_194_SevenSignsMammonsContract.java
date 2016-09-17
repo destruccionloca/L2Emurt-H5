@@ -227,7 +227,11 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile 
     }
 
     private void negateSpeedBuffs(Player p) {
-        p.getEffectList().getAllEffects().stream().filter(e -> e.getStackType().equalsIgnoreCase("SpeedUp") && !e.isOffensive()).forEach(Effect::exit);
+        for (Effect e : p.getEffectList().getAllEffects()) {
+            if (e.getStackType().equalsIgnoreCase("SpeedUp") && !e.isOffensive()) {
+                e.exit();
+            }
+        }
     }
 
     private void negateTransformations(Player p) {

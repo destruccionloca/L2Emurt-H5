@@ -4774,6 +4774,7 @@
                 <reward chance="32.1651" item_id="5545" max="1" min="1"/>
             </group>
             <group chance="45.4765">
+				<reward chance="1.9283" item_id="8275" max="1" min="1"/>
                 <reward chance="52.6283" item_id="1868" max="9" min="3"/>
                 <reward chance="15.7885" item_id="1873" max="6" min="2"/>
                 <reward chance="15.7885" item_id="5549" max="1" min="1"/>

@@ -158,6 +158,9 @@
 			<coords loc="-124577 261607 -4916 -1916"/>
 			<coords loc="-128220 215665 -4916 -1916"/>
 		</polygon>
+		<restart_point>
+			<coords loc="-113400 235448 -3640 24575"/>
+		</restart_point>
 	</zone>
 	<zone name="fishing_zone_14" type="FISHING">
 		<set name="distribution_id" val="2"/>
@@ -525,5 +528,61 @@
 	<zone name="[hot_springs_10]" type="FISHING">	
 		<set name="distribution_id" val="3" />	
 		<circle loc="147504 -113296 650 2112 -1812" />
+	</zone>
+	<zone name="[hard_pvp]" type="FISHING">
+		<set name="distribution_id" val="3"/>
+		<polygon>
+			<coords loc="-55224 190312 -3800 -3000"/>
+			<coords loc="-53128 191000 -3800 -3000"/>
+			<coords loc="-53992 193960 -3800 -3000"/>
+			<coords loc="-56744 192136 -3800 -3000"/>
+		</polygon>
+	</zone>	
+	<zone name="[baium_pvp]" type="FISHING">
+		<set name="distribution_id" val="3"/>
+		<polygon>
+			<coords loc="114136 15176 9500 10100"/>
+			<coords loc="115080 13752 9500 10100"/>
+			<coords loc="114904 13176 9500 10100"/>
+			<coords loc="114024 13192 9500 10100"/>
+			<coords loc="113080 13560 9500 10100"/>
+			<coords loc="112936 13656 9500 10100"/>
+			<coords loc="112584 14008 9500 10100"/>
+			<coords loc="112232 14360 9500 10100"/>
+			<coords loc="112136 14504 9500 10100"/>
+			<coords loc="111752 15432 9500 10100"/>
+			<coords loc="111720 16344 9500 10100"/>
+			<coords loc="112376 16600 9500 10100"/>
+			<coords loc="113768 15544 9500 10100"/>			
+		</polygon>
+	</zone>	
+	<zone name="[valakas_pvp]" type="FISHING">
+		<set name="distribution_id" val="3"/>
+		<polygon>
+			<coords loc="182504 -117832 -3380 -3300"/>
+			<coords loc="184736 -132000 -3380 -3300"/>
+			<coords loc="194920 -117736 -3380 -3300"/>
+			<coords loc="185224 -117144 -3380 -3300"/>
+			<coords loc="185200 -115790 -3380 -3300"/>
+			<coords loc="184800 -115000 -3380 -3300"/>
+			<coords loc="184000 -114550 -3380 -3300"/>
+			<coords loc="182800 -114544 -3380 -3300"/>
+			<coords loc="181800 -114700 -3380 -3300"/>
+			<coords loc="181300 -115912 -3380 -3300"/>
+			<coords loc="181448 -116800 -3380 -3300"/>	
+			<coords loc="181928 -117448 -3380 -3300"/>			
+		</polygon>
+	</zone>	
+	<zone name="[antharas_pvp]" type="FISHING">
+		<set name="distribution_id" val="3"/>
+		<polygon>
+			<coords loc="154920 115352 -3820 -3780"/>
+			<coords loc="149656 120488 -3820 -3780"/>
+			<coords loc="151840 122321 -3820 -3780"/>
+			<coords loc="154660 122450 -3820 -3780"/>
+			<coords loc="155517 119689 -3820 -3780"/>
+			<coords loc="153725 120095 -3820 -3780"/>
+			<coords loc="154783 118168 -3820 -3780"/>
+		</polygon>
 	</zone>
 </list>

@@ -16,7 +16,7 @@ public class _619_RelicsOfTheOldEmpire extends Quest implements ScriptFile {
     private static final int Broken_Relic_Part = 7254;
     // NPCs
     private static final int GHOST = 31538;
-    private static final Map<Integer, Integer> drops = new HashMap<>();
+    private static final Map<Integer, Integer> drops = new HashMap<Integer, Integer>();
 
     static {
         drops.put(18120, 138);
@@ -166,27 +166,24 @@ public class _619_RelicsOfTheOldEmpire extends Quest implements ScriptFile {
 
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
-        switch (event) {
-            case "explorer_ghost_a_q0619_03.htm":
-                if (st.getPlayer().getLevel() < 74) {
-                    st.exitCurrentQuest(true);
-                    return "explorer_ghost_a_q0619_02.htm";
-                }
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "explorer_ghost_a_q0619_09.htm":
-                if (st.getQuestItemsCount(Broken_Relic_Part) < 1000) {
-                    return st.getQuestItemsCount(Entrance_Pass_to_the_Sepulcher) > 0 ? "explorer_ghost_a_q0619_06.htm" : "explorer_ghost_a_q0619_07.htm";
-                }
-                st.takeItems(Broken_Relic_Part, 1000);
-                st.giveItems(Recipes[Rnd.get(Recipes.length)], 1);
-                return "explorer_ghost_a_q0619_09.htm";
-            case "explorer_ghost_a_q0619_10.htm":
-                st.playSound(SOUND_FINISH);
+        if (event.equals("explorer_ghost_a_q0619_03.htm")) {
+            if (st.getPlayer().getLevel() < 74) {
                 st.exitCurrentQuest(true);
-                break;
+                return "explorer_ghost_a_q0619_02.htm";
+            }
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("explorer_ghost_a_q0619_09.htm")) {
+            if (st.getQuestItemsCount(Broken_Relic_Part) < 1000) {
+                return st.getQuestItemsCount(Entrance_Pass_to_the_Sepulcher) > 0 ? "explorer_ghost_a_q0619_06.htm" : "explorer_ghost_a_q0619_07.htm";
+            }
+            st.takeItems(Broken_Relic_Part, 1000);
+            st.giveItems(Recipes[Rnd.get(Recipes.length)], 1);
+            return "explorer_ghost_a_q0619_09.htm";
+        } else if (event.equals("explorer_ghost_a_q0619_10.htm")) {
+            st.playSound(SOUND_FINISH);
+            st.exitCurrentQuest(true);
         }
         return event;
     }

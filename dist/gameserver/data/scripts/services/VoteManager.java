@@ -35,10 +35,10 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
         public String name;
         public int id;
         public int maxPerAccount;
-        public TreeMap<Integer, String> variants = new TreeMap<>();
-        public Map<String, Integer[]> results = new HashMap<>();
+        public TreeMap<Integer, String> variants = new TreeMap<Integer, String>();
+        public Map<String, Integer[]> results = new HashMap<String, Integer[]>();
     }
-    private static Map<Integer, Vote> VoteList = new HashMap<>();
+    private static Map<Integer, Vote> VoteList = new HashMap<Integer, Vote>();
 
     @SuppressWarnings("unchecked")
     private boolean vote(String command, Player activeChar, String args) {

@@ -32,7 +32,11 @@ public class NihilInvaderChest extends DefaultAI {
                 actor.doDie(null);
             }
         }
-        actor.getReflection().getNpcs().stream().filter(npc -> npc.getNpcId() == actor.getNpcId()).forEach(NpcInstance::deleteMe);
+        for (NpcInstance npc : actor.getReflection().getNpcs()) {
+            if (npc.getNpcId() == actor.getNpcId()) {
+                npc.deleteMe();
+            }
+        }
 
         super.onEvtAttacked(attacker, damage);
     }

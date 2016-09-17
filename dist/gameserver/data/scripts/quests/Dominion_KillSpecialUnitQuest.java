@@ -28,18 +28,6 @@ public abstract class Dominion_KillSpecialUnitQuest extends Quest implements Scr
             runnerEvent.addClassQuest(c, this);
         }
     }
-	
-    @Override
-    public void onLoad() {
-    }
-
-    @Override
-    public void onReload() {
-    }
-
-    @Override
-    public void onShutdown() {
-    }
 
     protected abstract NpcString startNpcString();
 

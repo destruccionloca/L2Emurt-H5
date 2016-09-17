@@ -36,21 +36,17 @@ public class _713_PathToBecomingALordAden extends Quest implements ScriptFile {
         }
         Player castleOwner = castle.getOwner().getLeader().getPlayer();
 
-        switch (event) {
-            case "logan_q713_02.htm":
-                st.setState(STARTED);
-                st.setCond(1);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "orven_q713_03.htm":
-                st.setCond(2);
-                break;
-            case "logan_q713_05.htm":
-                Functions.npcSay(npc, NpcString.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_ADEN, st.getPlayer().getName());
-                castle.getDominion().changeOwner(castleOwner.getClan());
-                st.playSound(SOUND_FINISH);
-                st.exitCurrentQuest(true);
-                break;
+        if (event.equals("logan_q713_02.htm")) {
+            st.setState(STARTED);
+            st.setCond(1);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("orven_q713_03.htm")) {
+            st.setCond(2);
+        } else if (event.equals("logan_q713_05.htm")) {
+            Functions.npcSay(npc, NpcString.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_ADEN, st.getPlayer().getName());
+            castle.getDominion().changeOwner(castleOwner.getClan());
+            st.playSound(SOUND_FINISH);
+            st.exitCurrentQuest(true);
         }
         return htmltext;
     }

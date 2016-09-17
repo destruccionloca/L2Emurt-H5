@@ -43,10 +43,10 @@ public class Viktorina extends Functions implements ScriptFile, IVoicedCommandHa
 
     private static final Logger _log = LoggerFactory.getLogger(Viktorina.class);
     private String[] _commandList = new String[]{"o", "voff", "von", "vhelp", "vtop", "v", "vo"};
-    private ArrayList<String> questions = new ArrayList<>();
-    private static ArrayList<Player> playerList = new ArrayList<>();
+    private ArrayList<String> questions = new ArrayList<String>();
+    private static ArrayList<Player> playerList = new ArrayList<Player>();
     static ScheduledFuture<?> _taskViktorinaStart;
-    private static ArrayList<RewardList> _items = new ArrayList<>();
+    private static ArrayList<RewardList> _items = new ArrayList<RewardList>();
     static ScheduledFuture<?> _taskStartQuestion;
     static ScheduledFuture<?> _taskStopQuestion;
     long _timeStopViktorina = 0;
@@ -57,7 +57,8 @@ public class Viktorina extends Functions implements ScriptFile, IVoicedCommandHa
     private static String answer;
     private final static String GET_LIST_FASTERS = "SELECT `obj_id`,`value` FROM `character_variables` WHERE `name`='viktorinafirst' ORDER BY `value` DESC LIMIT 0,10";
     private final static String GET_LIST_TOP = "SELECT `obj_id`,`value` FROM `character_variables` WHERE `name`='viktorinaschet' ORDER BY `value` DESC LIMIT 0,10";
-    private static Viktorina instance;
+    ;
+	private static Viktorina instance;
     private static boolean DEBUG_VIKROINA = true;
     //Перменные ниже, перенес в конфиг.
     private static boolean VIKTORINA_ENABLED = false;// false;
@@ -191,7 +192,7 @@ public class Viktorina extends Functions implements ScriptFile, IVoicedCommandHa
         if (ServerVariables.getString("viktorinaa") == null) {
             ServerVariables.set("viktorinaa", 0);
         }
-        if (!playerList.isEmpty()) {
+        if (playerList.size() > 0) {
             announseViktorina(" правильных ответов: " + playerList.size() + ", первый ответил: " + playerList.get(0).getName() + ", правильны ответ: " + answer + "");
             ServerVariables.set("viktorinaq", ServerVariables.getInt("viktorinaq") + 1);
             ServerVariables.set("viktorinaa", ServerVariables.getInt("viktorinaa") + 1);
@@ -823,7 +824,7 @@ public class Viktorina extends Functions implements ScriptFile, IVoicedCommandHa
      * @return
      */
     private List<Scores> getList(final boolean first) {
-        final List<Scores> names = new ArrayList<>();
+        final List<Scores> names = new ArrayList<Scores>();
 
         Connection con = null;
         PreparedStatement statement = null;

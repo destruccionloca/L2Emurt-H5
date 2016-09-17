@@ -37,55 +37,46 @@ public class _708_PathToBecomingALordGludio extends Quest implements ScriptFile 
             return "Castle has no lord";
         }
         Player castleOwner = castle.getOwner().getLeader().getPlayer();
-        switch (event) {
-            case "sayres_q708_03.htm":
+        if (event.equals("sayres_q708_03.htm")) {
+            st.setState(STARTED);
+            st.setCond(1);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("sayres_q708_05.htm")) {
+            st.setCond(2);
+        } else if (event.equals("sayres_q708_08.htm")) {
+            if (isLordAvailable(2, st)) {
+                castleOwner.getQuestState(getClass()).set("confidant", String.valueOf(st.getPlayer().getObjectId()), true);
+                castleOwner.getQuestState(getClass()).setCond(3);
                 st.setState(STARTED);
-                st.setCond(1);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "sayres_q708_05.htm":
-                st.setCond(2);
-                break;
-            case "sayres_q708_08.htm":
-                if (isLordAvailable(2, st)) {
-                    castleOwner.getQuestState(getClass()).set("confidant", String.valueOf(st.getPlayer().getObjectId()), true);
-                    castleOwner.getQuestState(getClass()).setCond(3);
-                    st.setState(STARTED);
-                } else {
-                    htmltext = "sayres_q708_05a.htm";
-                }
-                break;
-            case "pinter_q708_03.htm":
-                if (isLordAvailable(3, st)) {
-                    castleOwner.getQuestState(getClass()).setCond(4);
-                } else {
-                    htmltext = "pinter_q708_03a.htm";
-                }
-                break;
-            case "bathis_q708_02.htm":
-                st.setCond(6);
-                break;
-            case "bathis_q708_05.htm":
-                st.setCond(8);
-                Functions.npcSay(npc, NpcString.LISTEN_YOU_VILLAGERS_OUR_LIEGE_WHO_WILL_SOON_BECAME_A_LORD_HAS_DEFEATED_THE_HEADLESS_KNIGHT);
-                break;
-            case "pinter_q708_05.htm":
-                if (isLordAvailable(8, st)) {
-                    st.takeItems(1867, 100);
-                    st.takeItems(1865, 100);
-                    st.takeItems(1869, 100);
-                    st.takeItems(1879, 50);
-                    castleOwner.getQuestState(getClass()).setCond(9);
-                } else {
-                    htmltext = "pinter_q708_03a.htm";
-                }
-                break;
-            case "sayres_q708_12.htm":
-                Functions.npcSay(npc, NpcString.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_GLUDIO, st.getPlayer().getName());
-                castle.getDominion().changeOwner(castleOwner.getClan());
-                st.playSound(SOUND_FINISH);
-                st.exitCurrentQuest(true);
-                break;
+            } else {
+                htmltext = "sayres_q708_05a.htm";
+            }
+        } else if (event.equals("pinter_q708_03.htm")) {
+            if (isLordAvailable(3, st)) {
+                castleOwner.getQuestState(getClass()).setCond(4);
+            } else {
+                htmltext = "pinter_q708_03a.htm";
+            }
+        } else if (event.equals("bathis_q708_02.htm")) {
+            st.setCond(6);
+        } else if (event.equals("bathis_q708_05.htm")) {
+            st.setCond(8);
+            Functions.npcSay(npc, NpcString.LISTEN_YOU_VILLAGERS_OUR_LIEGE_WHO_WILL_SOON_BECAME_A_LORD_HAS_DEFEATED_THE_HEADLESS_KNIGHT);
+        } else if (event.equals("pinter_q708_05.htm")) {
+            if (isLordAvailable(8, st)) {
+                st.takeItems(1867, 100);
+                st.takeItems(1865, 100);
+                st.takeItems(1869, 100);
+                st.takeItems(1879, 50);
+                castleOwner.getQuestState(getClass()).setCond(9);
+            } else {
+                htmltext = "pinter_q708_03a.htm";
+            }
+        } else if (event.equals("sayres_q708_12.htm")) {
+            Functions.npcSay(npc, NpcString.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_GLUDIO, st.getPlayer().getName());
+            castle.getDominion().changeOwner(castleOwner.getClan());
+            st.playSound(SOUND_FINISH);
+            st.exitCurrentQuest(true);
         }
         return htmltext;
     }

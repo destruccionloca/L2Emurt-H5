@@ -726,7 +726,7 @@
 		</territory>
 		<npc id="22855"/><!--Bloody Berserker-->
 	</spawn>
-	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
+	<spawn count="1" respawn="28800" respawn_random="1800" period_of_day="none">
 		<territory>
 			<add x="145675" y="119232" zmin="-3953" zmax="-3753"/>
 			<add x="146073" y="118961" zmin="-3953" zmax="-3753"/>
@@ -1211,7 +1211,7 @@
 		</territory>
 		<npc id="20761"/><!--Pytan-->
 	</spawn>
-	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
+	<spawn count="1" respawn="28800" respawn_random="1800" period_of_day="none">
 		<territory>
 			<add x="148602" y="118647" zmin="-3753" zmax="-3553"/>
 			<add x="148042" y="118609" zmin="-3753" zmax="-3553"/>

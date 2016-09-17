@@ -12,7 +12,7 @@ public class OpenSealedBox {
     private final QuestState st;
     private String result = "";
     private int takecount = 0;
-    private Map<Integer, Long> rewards = new HashMap<>();
+    private Map<Integer, Long> rewards = new HashMap<Integer, Long>();
     private static final RewardGroup[] rewardgroups = {
         new RewardAdena(),
         new RewardRes1(),
@@ -53,7 +53,7 @@ public class OpenSealedBox {
             rewardgroups[Rnd.get(rewardgroups.length)].apply(rewards);
         }
 
-        if (rewards.isEmpty()) {
+        if (rewards.size() == 0) {
             result = count == 1 ? "Hmm. The box is empty." : "Hmm. All boxes is empty.";
             return;
         }
@@ -63,7 +63,7 @@ public class OpenSealedBox {
 
     public String apply() {
         if (takecount > 0) {
-            if (!rewards.isEmpty() && !canGiveReward()) {
+            if (rewards.size() > 0 && !canGiveReward()) {
                 return "You haven't enougth free slots in your inventory.";
             }
             st.takeItems(_620_FourGoblets.Sealed_Box, takecount);

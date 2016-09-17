@@ -21,7 +21,7 @@ public class _179_IntoTheLargeCavern extends Quest implements ScriptFile, OnDeat
         public int instanceId;
         public int status;
     }
-    private static TIntObjectHashMap<World> worlds = new TIntObjectHashMap<>();
+    private static TIntObjectHashMap<World> worlds = new TIntObjectHashMap<World>();
     private final static int KEKROPUS = 32138;
     private final static int GardenGuard = 25529;
     private final static int GardenGuard1 = 18347;

@@ -32,9 +32,11 @@ public class Maguen extends Fighter {
         List<Creature> around = getActor().getAroundCharacters(800, 300);
         if (!getActor().isInZone(ZoneType.dummy) && around != null && !around.isEmpty()) {
             ExShowScreenMessage sm = new ExShowScreenMessage(NpcString.MAGUEN_APPEARANCE, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true);
-            around.stream().filter(character -> character.isPlayer()).forEach(character -> {
-                character.sendPacket(sm);
-            });
+            for (Creature character : around) {
+                if (character.isPlayer()) {
+                    character.sendPacket(sm);
+                }
+            }
         }
     }
 

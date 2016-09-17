@@ -88,8 +88,8 @@ public class _326_VanquishRemnants extends Quest implements ScriptFile {
         addStartNpc(Leopold);
         addTalkId(Leopold);
         //Mob Drop
-        for (int[] aDROPLIST_COND : DROPLIST_COND) {
-            addKillId(aDROPLIST_COND[0]);
+        for (int i = 0; i < DROPLIST_COND.length; i++) {
+            addKillId(DROPLIST_COND[i][0]);
         }
         addQuestItem(RedCrossBadge);
         addQuestItem(BlueCrossBadge);
@@ -146,9 +146,9 @@ public class _326_VanquishRemnants extends Quest implements ScriptFile {
     @Override
     public String onKill(NpcInstance npc, QuestState st) {
         if (st.getState() == STARTED) {
-            for (int[] aDROPLIST_COND : DROPLIST_COND) {
-                if (npc.getNpcId() == aDROPLIST_COND[0]) {
-                    st.giveItems(aDROPLIST_COND[1], 1);
+            for (int i = 0; i < DROPLIST_COND.length; i++) {
+                if (npc.getNpcId() == DROPLIST_COND[i][0]) {
+                    st.giveItems(DROPLIST_COND[i][1], 1);
                 }
             }
         }

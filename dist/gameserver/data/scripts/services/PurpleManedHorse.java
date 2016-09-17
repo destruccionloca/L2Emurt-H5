@@ -39,7 +39,7 @@ public class PurpleManedHorse extends Functions implements ScriptFile {
                 list.addEntry(e);
             }
         }
-        if (list.getEntries().isEmpty()) {
+        if (list.getEntries().size() == 0) {
             return;
         }
 

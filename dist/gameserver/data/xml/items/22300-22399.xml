@@ -242,4 +242,20 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
+  	<etcitem id="22341" name="Star Box - Mid">
+    		<set name="freightable" value="true"/>
+    		<set name="class" value="OTHER"/>
+    		<set name="crystal_type" value="NONE"/>
+    		<set name="icon" value="icon.etc_box_of_adventure_1_i00"/>
+    		<set name="stackable" value="true"/>
+    		<set name="type" value="OTHER"/>
+  	</etcitem>
+  	<etcitem id="22342" name="Star Box - High">
+    		<set name="freightable" value="true"/>
+    		<set name="class" value="OTHER"/>
+    		<set name="crystal_type" value="NONE"/>
+    		<set name="icon" value="icon.etc_box_of_adventure_1_i00"/>
+    		<set name="stackable" value="true"/>
+    		<set name="type" value="OTHER"/>
+  	</etcitem>
 </list>

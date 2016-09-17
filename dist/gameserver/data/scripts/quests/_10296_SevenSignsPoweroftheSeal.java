@@ -147,9 +147,11 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
         int npcId = npc.getNpcId();
         if (npcId == EtisEtina) {
             st.set("EtisKilled", 1);
-            st.getPlayer().getReflection().getNpcs().stream().filter(n -> n.getNpcId() == ElcardiaInzone1).forEach(n -> {
-                n.teleToLocation(new Location(120664, -86968, -3392));
-            });
+            for (NpcInstance n : st.getPlayer().getReflection().getNpcs()) {
+                if (n.getNpcId() == ElcardiaInzone1) {
+                    n.teleToLocation(new Location(120664, -86968, -3392));
+                }
+            }
             ThreadPoolManager.getInstance().schedule(new ElcardiaTeleport(st.getPlayer()), 60500L);
             st.getPlayer().showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_BOSS_CLOSING);
 
@@ -158,19 +160,23 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
     }
 
     private void teleportElcardia(Player player) {
-        player.getReflection().getNpcs().stream().filter(n -> n.getNpcId() == ElcardiaInzone1).forEach(n -> {
-            n.teleToLocation(Location.findPointToStay(player, 60));
-            if (n.isBlocked()) {
-                n.unblock();
+        for (NpcInstance n : player.getReflection().getNpcs()) {
+            if (n.getNpcId() == ElcardiaInzone1) {
+                n.teleToLocation(Location.findPointToStay(player, 60));
+                if (n.isBlocked()) {
+                    n.unblock();
+                }
             }
-        });
+        }
     }
 
     private void teleportElcardia(Player player, Location loc) {
-        player.getReflection().getNpcs().stream().filter(n -> n.getNpcId() == ElcardiaInzone1).forEach(n -> {
-            n.teleToLocation(loc);
-            n.block();
-        });
+        for (NpcInstance n : player.getReflection().getNpcs()) {
+            if (n.getNpcId() == ElcardiaInzone1) {
+                n.teleToLocation(loc);
+                n.block();
+            }
+        }
     }
 
     private class Teleport extends RunnableImpl {

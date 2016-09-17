@@ -382,7 +382,7 @@
   <armor id="12815" name="Red Talisman - Max CP">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i00"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -398,7 +398,7 @@
   <armor id="12816" name="Red Talisman - CP Regeneration">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i00"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -414,7 +414,7 @@
   <armor id="12817" name="Yellow Talisman - Increase Force">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i02"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -430,7 +430,7 @@
   <armor id="12818" name="Yellow Talisman - Damage Transition">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i02"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -773,8 +773,7 @@
     <set name="weight" value="2"/>
   </etcitem>
   <weapon id="12852" name="Naga Storm - Molar {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -808,8 +807,7 @@
     </for>
   </weapon>
   <weapon id="12853" name="Naga Storm - Molar {PvP}" add_name="Crt. Damage">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -843,8 +841,7 @@
     </for>
   </weapon>
   <weapon id="12854" name="Naga Storm - Molar {PvP}" add_name="Backblow">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -878,9 +875,7 @@
     </for>
   </weapon>
   <weapon id="12855" name="Daimon Crystal - Wisdom {PvP}" add_name="Mana Up">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -914,9 +909,7 @@
     </for>
   </weapon>
   <weapon id="12856" name="Daimon Crystal - Wisdom {PvP}" add_name="Acumen">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -950,9 +943,7 @@
     </for>
   </weapon>
   <weapon id="12857" name="Daimon Crystal - Wisdom {PvP}" add_name="Magic Mental Shield">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -988,8 +979,7 @@
     </for>
   </weapon>
   <weapon id="12858" name="Barakiel's Axe - On Fire {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1023,8 +1013,7 @@
     </for>
   </weapon>
   <weapon id="12859" name="Barakiel's Axe - On Fire {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1058,8 +1047,7 @@
     </for>
   </weapon>
   <weapon id="12860" name="Barakiel's Axe - On Fire {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1093,9 +1081,7 @@
     </for>
   </weapon>
   <weapon id="12861" name="Screaming Vengeance - Concentration {PvP}" add_name="Cheap Shot">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1136,9 +1122,7 @@
     </for>
   </weapon>
   <weapon id="12862" name="Screaming Vengeance - Concentration {PvP}" add_name="Focus">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1172,9 +1156,7 @@
     </for>
   </weapon>
   <weapon id="12863" name="Screaming Vengeance - Concentration {PvP}" add_name="Quick Recovery">
-    <set name="atk_reuse" value="332"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1214,8 +1196,7 @@
     </for>
   </weapon>
   <weapon id="12864" name="Behemoth's Tuning Fork - Destruction {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1249,8 +1230,7 @@
     </for>
   </weapon>
   <weapon id="12865" name="Behemoth's Tuning Fork - Destruction {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1284,8 +1264,7 @@
     </for>
   </weapon>
   <weapon id="12866" name="Behemoth's Tuning Fork - Destruction {PvP}" add_name="Anger">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1319,8 +1298,7 @@
     </for>
   </weapon>
   <weapon id="12867" name="Durendal - Earth {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1354,8 +1332,7 @@
     </for>
   </weapon>
   <weapon id="12868" name="Durendal - Earth {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1389,8 +1366,7 @@
     </for>
   </weapon>
   <weapon id="12869" name="Durendal - Earth {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1424,9 +1400,7 @@
     </for>
   </weapon>
   <weapon id="12870" name="Shyeed's Bow - Concentration {PvP}" add_name="Cheap Shot">
-    <set name="atk_reuse" value="820"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1468,9 +1442,7 @@
     </for>
   </weapon>
   <weapon id="12871" name="Shyeed's Bow - Concentration {PvP}" add_name="Focus">
-    <set name="atk_reuse" value="820"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1505,9 +1477,7 @@
     </for>
   </weapon>
   <weapon id="12872" name="Shyeed's Bow - Concentration {PvP}" add_name="Quick Recovery">
-    <set name="atk_reuse" value="639"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1548,8 +1518,7 @@
     </for>
   </weapon>
   <weapon id="12873" name="Sword of Ipos - Earth {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1582,8 +1551,7 @@
     </for>
   </weapon>
   <weapon id="12874" name="Sword of Ipos - Earth {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1616,8 +1584,7 @@
     </for>
   </weapon>
   <weapon id="12875" name="Sword of Ipos - Earth {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1650,8 +1617,7 @@
     </for>
   </weapon>
   <weapon id="12876" name="Sobekk's Hurricane - Landslide {PvP}" add_name="Rsk. Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1685,8 +1651,7 @@
     </for>
   </weapon>
   <weapon id="12877" name="Sobekk's Hurricane - Landslide {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1720,8 +1685,7 @@
     </for>
   </weapon>
   <weapon id="12878" name="Sobekk's Hurricane - Landslide {PvP}" add_name="Crt. Drain">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1758,8 +1722,7 @@
     </for>
   </weapon>
   <weapon id="12879" name="Sirra's Blade - Landslide {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1792,8 +1755,7 @@
     </for>
   </weapon>
   <weapon id="12880" name="Sirra's Blade - Landslide {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1826,8 +1788,7 @@
     </for>
   </weapon>
   <weapon id="12881" name="Sirra's Blade - Landslide {PvP}" add_name="Critical Poison">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1862,8 +1823,7 @@
     </for>
   </weapon>
   <weapon id="12882" name="Éclair Bijou - Landslide {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1899,8 +1859,7 @@
     </for>
   </weapon>
   <weapon id="12883" name="Éclair Bijou - Landslide {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1936,8 +1895,7 @@
     </for>
   </weapon>
   <weapon id="12884" name="Éclair Bijou - Landslide {PvP}" add_name="Critical Poison">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1975,8 +1933,7 @@
     </for>
   </weapon>
   <weapon id="12885" name="Tiphon's Spear - Landslide {PvP}" add_name="Critical Stun">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2013,8 +1970,7 @@
     </for>
   </weapon>
   <weapon id="12886" name="Tiphon's Spear - Landslide {PvP}" add_name="Longblow">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2055,8 +2011,7 @@
     </for>
   </weapon>
   <weapon id="12887" name="Tiphon's Spear - Landslide {PvP}" add_name="Wild Blow">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2097,8 +2052,7 @@
     </for>
   </weapon>
   <weapon id="12888" name="Tallum Blade*Damascus - Landslide {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2132,9 +2086,7 @@
     </for>
   </weapon>
   <weapon id="12889" name="Themis' Tongue - Cleverness {PvP}" add_name="Mana Up">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2167,9 +2119,7 @@
     </for>
   </weapon>
   <weapon id="12890" name="Themis' Tongue - Cleverness {PvP}" add_name="Magic Mental Shield">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2204,9 +2154,7 @@
     </for>
   </weapon>
   <weapon id="12891" name="Themis' Tongue - Cleverness {PvP}" add_name="Magic Focus">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2242,9 +2190,7 @@
     </for>
   </weapon>
   <weapon id="12892" name="Cabrio's Hand - Cleverness {PvP}" add_name="Conversion">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2279,9 +2225,7 @@
     </for>
   </weapon>
   <weapon id="12893" name="Cabrio's Hand - Cleverness {PvP}" add_name="Mana Up">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2315,9 +2259,7 @@
     </for>
   </weapon>
   <weapon id="12894" name="Cabrio's Hand - Cleverness {PvP}" add_name="Magic Silence">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2157"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2353,8 +2295,7 @@
     </for>
   </weapon>
   <weapon id="12895" name="Gram - Thunder {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2052"/>
     <set name="crystal_type" value="S"/>
     <set name="crystallizable" value="true"/>
@@ -2388,8 +2329,7 @@
     </for>
   </weapon>
   <weapon id="12896" name="Gram - Thunder {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2052"/>
     <set name="crystal_type" value="S"/>
     <set name="crystallizable" value="true"/>
@@ -2423,8 +2363,7 @@
     </for>
   </weapon>
   <weapon id="12897" name="Gram - Thunder {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2052"/>
     <set name="crystal_type" value="S"/>
     <set name="crystallizable" value="true"/>
@@ -2458,8 +2397,7 @@
     </for>
   </weapon>
   <weapon id="12898" name="Demon Splinter - Thunder {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2052"/>
     <set name="crystal_type" value="S"/>
     <set name="crystallizable" value="true"/>
@@ -2493,8 +2431,7 @@
     </for>
   </weapon>
   <weapon id="12899" name="Demon Splinter - Thunder {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="2052"/>
     <set name="crystal_type" value="S"/>
     <set name="crystallizable" value="true"/>

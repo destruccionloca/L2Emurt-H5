@@ -1,0 +1,67 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Quest -->
+<!-- © 2010 by mathuza -->
+
+<list maintainEnchantment="true">
+
+  <!-- Hellfire Oil
+   -->
+  <item id="2">
+    <ingredient id="24171" count="1000"/>
+    <production id="6033" count="1"/>
+  </item>
+  
+  <!-- Lunargent -->
+  <item id="3">
+    <ingredient id="24171" count="500"/>
+    <production id="6029" count="5"/>
+  </item>
+  
+   <!-- Baium-->
+  <item id="4">
+    <ingredient id="57" count="1000000000"/>
+    <production id="4295" count="1"/>
+  </item>
+
+   <!-- Antharas -->
+  <item id="5">
+    <ingredient id="57" count="1000000000"/>
+    <production id="3865" count="1"/>
+  </item>
+  
+  <!-- Valakas -->
+  <item id="6">
+    <ingredient id="57" count="1000000000"/>
+    <production id="7267" count="1"/>
+  </item>
+  
+  <!-- Frintezza -->
+  <item id="7">
+    <ingredient id="57" count="1000000000"/>
+    <production id="7256" count="1"/>
+	<production id="7257" count="1"/>
+	<production id="7258" count="1"/>
+	<production id="7259" count="1"/>
+	<production id="7262" count="1"/>
+	<production id="8073" count="1"/>
+  </item>  
+  
+  <!-- Beleth -->
+  <item id="7">
+    <ingredient id="57" count="1000000000"/>
+    <production id="9714" count="25"/>
+	<production id="9685" count="25"/>
+	<production id="9686" count="25"/>
+	<production id="9687" count="25"/>
+	<production id="9849" count="25"/>
+  </item>
+  
+   <!-- Caradine's Letter -->
+  <item id="8">
+    <ingredient id="24172" count="3000"/>
+    <production id="7679" count="1"/>
+  </item> 
+
+  
+</list>

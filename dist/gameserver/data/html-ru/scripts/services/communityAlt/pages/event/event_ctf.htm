@@ -1,39 +1,127 @@
 <html noscrollbar>
-<title>Community ServerName</title>
-<body>
-<center>
-<table width=600>
-<tr><td height=10>
-</td><td>
-<center><table>
-<tr><td valign="top" align="center">
-<table border=0 cellpadding=0 cellspacing=0>
-<tr><td width=233 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
+	<!--Заголовок окна-->
+	<title>Community Board</title>
+	<body>
+		<br>
+		<table width=800>
+			<tr>
+	<center>
+	<td>
+		<table border=0 cellpadding=0 cellspacing=0 width=790 height=123 background="l2ui_ct1.windows_df_small_vertical_bg">
+		<tr>
+		<td>
+		<table cellpadding=-2 cellspacing=4>
+		<tr>
+		<td width=110></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbshome" back="star_g.main_down" fore="star_g.main" width="140" height="31"/>
+		</td>
+		<td width=3></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbspage:shop" back="star_g.shop_down" fore="star_g.shop" width="140" height="31"/>
+		</td>
+		<td width=3></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbsbuff:index" back="star_g.buff_down" fore="star_g.buff" width="140" height="31"/>
+		</td>
+		<td width=3></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbsteleport" back="star_g.tp_down" fore="star_g.tp" width="140" height="31"/>
+		</td>
+		<td width=100></td>
+		</tr>
+		</table>
+		<table cellpadding=-8 cellspacing=4>
+		<tr>
+		<td width=180></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbscareer;" back="star_g.proff_down" fore="star_g.proff" width="140" height="31"/>
+		</td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbspage:service" back="star_g.service_down" fore="star_g.service" width="140" height="31"/>
+		</td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbspage:events" back="star_g.event_down" fore="star_g.event" width="140" height="31"/>
+		</td>
+		<td width=100></td>
+		</tr>
+		</table>
+		<table cellpadding=-4 cellspacing=4>
+		<tr>
+		<td width=250></td>
+<td width=20 valign="top" align="center">
+       <br><button value="" action="bypass _bbsshowitem:10050" back="star_g.pr_down" fore="star_g.pr" width="140" height="31"/>        
+		</td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbspage:help" back="star_g.helpserver_down" fore="star_g.helpserver" width="140" height="31"/>
+		</td>
+		<td width=100></td>
+		</tr>
+		</table>
+		</td>
+		</tr>
+		</table>
+<table border=0 cellpadding=0 cellspacing=4 width=800 height=484 background="l2ui_ct1.windows_df_small_vertical_bg">
+<tr>
+<td width=285 valign="top" align="center" background="L2UI_CH3.refinewnd_back_Pattern">
+<br><font name="hs9">Список Ивентов</font>
+<button value="" action="bypass _bbspage:events" back="star_g.tp_hero_down" fore="star_g.tp_hero" width="215" height="31"/>
+<button value="" action="bypass _bbspage:event/event_tvt" back="star_g.tp_tvt_down" fore="star_g.tp_tvt" width="215" height="31"/>
+<button value="" action="bypass _bbspage:event/event_ctf" back="star_g.tp_ctf_down" fore="star_g.tp_ctf" width="215" height="31"/>
+
+</td>
+
+<td width=500 valign="top" align="center">
+<table width=520 bgcolor=333333>
+<tr>
+<td height=27 valign="top" align="center">
+<font name="hs15" color="fff">Capture the Flag</font>
+</td>
+</tr>
+</table><br>
+<table width=490>
+<tr>
+<td valign="top" align="center">
+<button value="" action="bypass -h scripts_events.CaptureTheFlag.CaptureTheFlag:addPlayer" back="star_g.tp_reg_down" fore="star_g.tp_reg" width="215" height="27"/>
+</td>
+
+</tr>
 </table>
-<center>
-<table width=550>
-<tr><td width=500>
-<center><font color=LEVEL>CtF (Capture the Flag)</font></center>%%
-
-Игроки случайным образом разделяются на 2 команды - красные и синие.%%
-Награду получают игроки победившей команды. Цель - захватить флаг соперников, и принести его на свою базу.%%
-В случае смерти, игроки автоматически воскрешаются на своей базе, через 10 секунд.%%
-Эвент проводится в колизее. Разрешается использовать любые предметы. Бафы перед боем не снимаются.%%
-Дается 3 минуты на регистрацию, 1 минута на телепортацию, 5 минут на бой.%%
-Если победитель определится раньше, бой автоматически заканчивается.%%
-В конце эвента, все участники воскрешаются, вылечиваются, и телепортируются обратно.%%
-В случае смерти, опыт не теряется.
-
-Для регистрации в эвенте, можно воспользоваться ссылкой (эвент должен быть активен):
-
-<a action="bypass -h scripts_events.CaptureTheFlag.CaptureTheFlag:addPlayer"><font color="aadd77">Регистрация в эвенте</font></a>%%
-<a action="bypass _bbspage:event/event_info"><font color="LEVEL">Правила для участия.</font></a>%%
-
-</td></tr>
+<br>
+<table width=520 bgcolor=333333>
+<tr>
+<td height=25 valign="top" align="center">
+<font name="hs12" color="LEVEL">Описание Capture the Flag</font>
+</td>
+</tr>
 </table>
-</center>
-</td></tr>
+<br>
+<table width=520>
+<tr>
+<td valign="top" align="left">
+<font name="hs9" color="LEVEL">*</font> Ивент проводится в колизее.<br1>
+<font name="hs9" color="LEVEL">*</font> Цель - захватить флаг соперников, и принести его на свою базу.<br1>
+<font name="hs9" color="LEVEL">*</font> Награду получают игроки победившей команды, оставшиеся в живых.<br1>
+<font name="hs9" color="ff9922">*</font> Игроки случайным образом разделяются на 2 команды - красные и синие.<br1>
+<font name="hs9" color="ff9922">*</font> Разрешается использовать любые предметы.<br1>
+<font name="hs9" color="ff9922">*</font> Бафы перед боем не снимаются.<br1>
+<font name="hs9" color="ff9922">*</font> 3 минуты на регистрацию, 1 минута на телепортацию, 5 минут на бой.<br1>
+<font name="hs9" color="ff9922">*</font> Победитель определяется раньше, бой автоматически заканчивается.<br1>
+<font name="hs9" color="ff9922">*</font> В случае смерти опыт не теряется.<br1>
+<font name="hs9" color="aadd77">*</font> Для участия в ивенте Ваш уровень должен соответствовать указанной<br1> в аннонсе категории.
+</td>
+</tr>
 </table>
-</td></tr></table></center>
-</center>
-</body></html>
+
+
+
+</td>
+</tr>
+</table>
+
+	</td>
+	</center>
+			</tr>
+		</table>
+	</body>
+</html>

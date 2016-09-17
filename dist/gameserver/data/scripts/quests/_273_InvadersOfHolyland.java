@@ -44,22 +44,18 @@ public class _273_InvadersOfHolyland extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "atuba_chief_varkees_q0273_03.htm":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "atuba_chief_varkees_q0273_07.htm":
-                st.setCond(0);
-                st.playSound(SOUND_FINISH);
-                st.exitCurrentQuest(true);
-                break;
-            case "atuba_chief_varkees_q0273_08.htm":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
+        if (event.equals("atuba_chief_varkees_q0273_03.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("atuba_chief_varkees_q0273_07.htm")) {
+            st.setCond(0);
+            st.playSound(SOUND_FINISH);
+            st.exitCurrentQuest(true);
+        } else if (event.equals("atuba_chief_varkees_q0273_08.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
         }
         return htmltext;
     }

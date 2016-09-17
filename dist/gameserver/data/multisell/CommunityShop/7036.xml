@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- точи-->
+
+
+<list>
+
+<item><ingredient id="4357" count="250"/><production id="22221" count="1"/></item>
+<item><ingredient id="4357" count="150"/><production id="22223" count="1"/></item>
+<item><ingredient id="4357" count="65"/><production id="22225" count="1"/></item>
+<item><ingredient id="4357" count="55"/><production id="22227" count="1"/></item>
+<item><ingredient id="4357" count="35"/><production id="22229" count="1"/></item>
+</list>

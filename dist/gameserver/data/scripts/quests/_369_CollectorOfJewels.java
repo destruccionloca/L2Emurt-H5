@@ -22,7 +22,7 @@ public class _369_CollectorOfJewels extends Quest implements ScriptFile {
     // Quest Items
     private static int FLARE_SHARD = 5882;
     private static int FREEZING_SHARD = 5883;
-    private final Map<Integer, int[]> DROPLIST = new HashMap<>();
+    private final Map<Integer, int[]> DROPLIST = new HashMap<Integer, int[]>();
 
     public _369_CollectorOfJewels() {
         super(false);
@@ -105,7 +105,7 @@ public class _369_CollectorOfJewels extends Quest implements ScriptFile {
             long FLARE_SHARD_COUNT = st.getQuestItemsCount(FLARE_SHARD);
             long FREEZING_SHARD_COUNT = st.getQuestItemsCount(FREEZING_SHARD);
             if (FLARE_SHARD_COUNT != max_count || FREEZING_SHARD_COUNT != max_count) {
-                st.setCond(cond - 1);
+                st.setCond(Integer.valueOf(cond - 1));
                 return onTalk(npc, st);
             }
 

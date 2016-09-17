@@ -2,7 +2,6 @@ package quests;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import l2p.commons.dao.JdbcEntityState;
 import l2p.commons.threading.RunnableImpl;
@@ -69,7 +68,7 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile {
     }
 
     private static ItemInstance GetDragonflute(QuestState st) {
-        List<ItemInstance> Dragonflutes = new ArrayList<>();
+        List<ItemInstance> Dragonflutes = new ArrayList<ItemInstance>();
         for (ItemInstance item : st.getPlayer().getInventory().getItems()) {
             if (item != null && (item.getItemId() == Dragonflute_of_Wind || item.getItemId() == Dragonflute_of_Star || item.getItemId() == Dragonflute_of_Twilight)) {
                 Dragonflutes.add(item);
@@ -339,8 +338,12 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile {
                     agressors_pet = st.getPlayer().getPet().getName();
                 }
                 if (st.getPlayer().getParty() != null) {
-                    agressors_party = new ArrayList<>();
-                    agressors_party.addAll(st.getPlayer().getParty().getPartyMembers().stream().filter(_member -> !_member.equals(st.getPlayer())).map(Player::getName).collect(Collectors.toList()));
+                    agressors_party = new ArrayList<String>();
+                    for (Player _member : st.getPlayer().getParty().getPartyMembers()) {
+                        if (!_member.equals(st.getPlayer())) {
+                            agressors_party.add(_member.getName());
+                        }
+                    }
                 }
             }
             _spawn.stopRespawn();

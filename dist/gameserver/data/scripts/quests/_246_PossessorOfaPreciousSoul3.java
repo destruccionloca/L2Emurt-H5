@@ -57,42 +57,35 @@ public class _246_PossessorOfaPreciousSoul3 extends Quest implements ScriptFile 
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "caradine_q0246_0104.htm":
-                st.setCond(1);
-                st.takeItems(CARADINES_LETTER_2_PART, 1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "ossian_q0246_0201.htm":
-                st.setCond(2);
-                st.playSound(SOUND_MIDDLE);
-                break;
-            case "ossian_q0246_0401.htm":
-                st.takeItems(RING_OF_GODDESS_WATERBINDER, 1);
-                st.takeItems(NECKLACE_OF_GODDESS_EVERGREEN, 1);
-                st.takeItems(STAFF_OF_GODDESS_RAIN_SONG, 1);
-                st.setCond(6);
-                st.giveItems(RELIC_BOX, 1);
-                st.playSound(SOUND_MIDDLE);
-                break;
-            case "magister_ladd_q0246_0501.htm":
-                st.takeItems(RELIC_BOX, 1);
-                st.giveItems(CARADINES_LETTER, 1);
-                st.addExpAndSp(719843, 0);
-                st.unset("cond");
-                st.exitCurrentQuest(false);
-                break;
-            case "ossian_q0246_0301rb.htm":
-                st.setCond(4);
-                st.playSound(SOUND_MIDDLE);
-                st.set("staff_select", 0);
-                break;
-            case "ossian_q0246_0301mb.htm":
-                st.setCond(4);
-                st.playSound(SOUND_MIDDLE);
-                st.set("staff_select", 1);
-                break;
+        if (event.equals("caradine_q0246_0104.htm")) {
+            st.setCond(1);
+            st.takeItems(CARADINES_LETTER_2_PART, 1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("ossian_q0246_0201.htm")) {
+            st.setCond(2);
+            st.playSound(SOUND_MIDDLE);
+        } else if (event.equals("ossian_q0246_0401.htm")) {
+            st.takeItems(RING_OF_GODDESS_WATERBINDER, 1);
+            st.takeItems(NECKLACE_OF_GODDESS_EVERGREEN, 1);
+            st.takeItems(STAFF_OF_GODDESS_RAIN_SONG, 1);
+            st.setCond(6);
+            st.giveItems(RELIC_BOX, 1);
+            st.playSound(SOUND_MIDDLE);
+        } else if (event.equals("magister_ladd_q0246_0501.htm")) {
+            st.takeItems(RELIC_BOX, 1);
+            st.giveItems(CARADINES_LETTER, 1);
+            st.addExpAndSp(719843, 0);
+            st.unset("cond");
+            st.exitCurrentQuest(false);
+        } else if (event.equals("ossian_q0246_0301rb.htm")) {
+            st.setCond(4);
+            st.playSound(SOUND_MIDDLE);
+            st.set("staff_select", 0);
+        } else if (event.equals("ossian_q0246_0301mb.htm")) {
+            st.setCond(4);
+            st.playSound(SOUND_MIDDLE);
+            st.set("staff_select", 1);
         }
         return htmltext;
     }

@@ -3,6 +3,9 @@ package quests;
 import l2p.gameserver.cache.Msg;
 import l2p.gameserver.model.Player;
 import l2p.gameserver.model.instances.NpcInstance;
+import l2p.gameserver.instancemanager.ReflectionManager;
+import l2p.gameserver.model.Skill;
+import l2p.gameserver.model.base.Race;
 import l2p.gameserver.model.quest.Quest;
 import l2p.gameserver.model.quest.QuestState;
 import l2p.gameserver.scripts.ScriptFile;
@@ -46,6 +49,11 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile {
             st.setState(STARTED);
             st.playSound(SOUND_ACCEPT);
         } else if (event.equalsIgnoreCase("32557-09.htm")) {
+					if (player.getRace() == Race.kamael) {
+            // Для всех скилов кроме Transform Dispel
+            player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+            return null;
+        }
             if (player.getTransformation() != 0) {
                 player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
                 return null;
@@ -53,12 +61,22 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile {
             st.set("transform", "1");
             SkillTable.getInstance().getInfo(5982, 1).getEffects(player, player, false, false);
         } else if (event.equalsIgnoreCase("32557-10.htm")) {
+			if (player.getRace() == Race.kamael) {
+            // Для всех скилов кроме Transform Dispel
+            player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+            return null;
+        }
             if (player.getTransformation() != 0) {
                 player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
                 return null;
             }
             SkillTable.getInstance().getInfo(5983, 1).getEffects(player, player, false, false);
         } else if (event.equalsIgnoreCase("32557-13.htm")) {
+			if (player.getRace() == Race.kamael) {
+            // Для всех скилов кроме Transform Dispel
+            player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+            return null;
+        }
             if (player.getTransformation() != 0) {
                 player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
                 return null;

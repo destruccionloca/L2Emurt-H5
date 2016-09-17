@@ -148,7 +148,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
 
         public Map<NpcInstance, Boolean> npclist;
     }
-    private static TIntObjectHashMap<World> worlds = new TIntObjectHashMap<>();
+    private static TIntObjectHashMap<World> worlds = new TIntObjectHashMap<World>();
 
     @Override
     public void onLoad() {
@@ -380,7 +380,11 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
                     world.killedCaptains += 1;
                 }
                 if (world.killedCaptains == 3) {
-                    world.steamRoom1.npclist.keySet().stream().filter(mob -> mob != null).forEach(NpcInstance::decayMe);
+                    for (NpcInstance mob : world.steamRoom1.npclist.keySet()) {
+                        if (mob != null) {
+                            mob.decayMe();
+                        }
+                    }
                     runSteamRoom1Oracle(world);
                 } else if (checkKillProgress(npc, world.steamRoom1)) {
                     runSteamRoom1Oracle(world);
@@ -391,7 +395,11 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
                     world.killedCaptains += 1;
                 }
                 if (world.killedCaptains == 3) {
-                    world.steamRoom2.npclist.keySet().stream().filter(mob -> mob != null).forEach(NpcInstance::decayMe);
+                    for (NpcInstance mob : world.steamRoom2.npclist.keySet()) {
+                        if (mob != null) {
+                            mob.decayMe();
+                        }
+                    }
                     runSteamRoom2Oracle(world);
                 } else if (checkKillProgress(npc, world.steamRoom2)) {
                     runSteamRoom2Oracle(world);
@@ -402,7 +410,11 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
                     world.killedCaptains += 1;
                 }
                 if (world.killedCaptains == 3) {
-                    world.steamRoom3.npclist.keySet().stream().filter(mob -> mob != null).forEach(NpcInstance::decayMe);
+                    for (NpcInstance mob : world.steamRoom3.npclist.keySet()) {
+                        if (mob != null) {
+                            mob.decayMe();
+                        }
+                    }
                     runSteamRoom3Oracle(world);
                 } else if (checkKillProgress(npc, world.steamRoom3)) {
                     runSteamRoom3Oracle(world);
@@ -413,7 +425,11 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
                     world.killedCaptains += 1;
                 }
                 if (world.killedCaptains == 3) {
-                    world.steamRoom4.npclist.keySet().stream().filter(mob -> mob != null).forEach(NpcInstance::decayMe);
+                    for (NpcInstance mob : world.steamRoom4.npclist.keySet()) {
+                        if (mob != null) {
+                            mob.decayMe();
+                        }
+                    }
                     addSpawnToInstance(ORACLE_GUIDE2, new Location(152243, 150152, -12141, 0), 0, world.instanceId);
                     runKechi(world);
                 } else if (checkKillProgress(npc, world.steamRoom4)) {
@@ -458,13 +474,15 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
         } else if (player.canEnterInstance(INCSTANCED_ZONE_ID)) {
             Reflection ref = ReflectionUtils.simpleEnterInstancedZone(player, INCSTANCED_ZONE_ID);
             World world = new World();
-            world.rewarded = new ArrayList<>();
+            world.rewarded = new ArrayList<Integer>();
             world.instanceId = ref.getId();
             world.bosses = 5;
             worlds.put(ref.getId(), world);
-            player.getParty().getPartyMembers().stream().filter(member -> member != player).forEach(member -> {
-                newQuestState(member, STARTED);
-            });
+            for (Player member : player.getParty().getPartyMembers()) {
+                if (member != player) {
+                    newQuestState(member, STARTED);
+                }
+            }
 
             if (type == 1) {
                 runEmeraldAndSteamFirstRoom(world);
@@ -524,7 +542,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
         runSecretRoom3(world);
         runSecretRoom4(world);
         world.emeraldRoom = new Room();
-        world.emeraldRoom.npclist = new HashMap<>();
+        world.emeraldRoom.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(Spinel, new Location(144158, 143424, -11957, 29058), 0, world.instanceId);
         world.emeraldRoom.npclist.put(newNpc, false);
@@ -642,7 +660,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
 
     private void runSecretRoom1(World world) {
         world.SecretRoom1 = new Room();
-        world.SecretRoom1.npclist = new HashMap<>();
+        world.SecretRoom1.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(EmeraldBoar, new Location(143114, 140027, -11888, 15025), 0, world.instanceId);
         world.SecretRoom1.npclist.put(newNpc, false);
@@ -662,7 +680,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
 
     private void runSecretRoom2(World world) {
         world.SecretRoom2 = new Room();
-        world.SecretRoom2.npclist = new HashMap<>();
+        world.SecretRoom2.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(GUARDIAN, new Location(146272, 141484, -11888, 15025), 0, world.instanceId);
         world.SecretRoom2.npclist.put(newNpc, false);
@@ -682,7 +700,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
 
     private void runSecretRoom3(World world) {
         world.SecretRoom3 = new Room();
-        world.SecretRoom3.npclist = new HashMap<>();
+        world.SecretRoom3.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(Spinel, new Location(144868, 143439, -12816, 5588), 0, world.instanceId);
         world.SecretRoom3.npclist.put(newNpc, false);
@@ -700,7 +718,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
 
     private void runSecretRoom4(World world) {
         world.SecretRoom4 = new Room();
-        world.SecretRoom4.npclist = new HashMap<>();
+        world.SecretRoom4.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(ChromaticDetainee1, new Location(150930, 141920, -12116, 21592), 0, world.instanceId);
         world.SecretRoom4.npclist.put(newNpc, false);
@@ -721,7 +739,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
     private void runDarnel(World world) {
         world.status = 7;
         world.DarnelRoom = new Room();
-        world.DarnelRoom.npclist = new HashMap<>();
+        world.DarnelRoom.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(DARNEL, new Location(152759, 145949, -12588, 21592), 0, world.instanceId);
         world.DarnelRoom.npclist.put(newNpc, false);
@@ -734,7 +752,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
         world.status = 20;
         world.killedCaptains = 0;
         world.steamRoom1 = new Room();
-        world.steamRoom1.npclist = new HashMap<>();
+        world.steamRoom1.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(KechisCaptain1, new Location(148755, 152573, -12170, 65497), 0, world.instanceId);
         world.steamRoom1.npclist.put(newNpc, false);
@@ -773,7 +791,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
         world.status = 21;
         world.killedCaptains = 0;
         world.steamRoom2 = new Room();
-        world.steamRoom2.npclist = new HashMap<>();
+        world.steamRoom2.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(BrimstoneIris, new Location(148815, 152804, -12172, 44197), 0, world.instanceId);
         world.steamRoom2.npclist.put(newNpc, false);
@@ -812,7 +830,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
         world.status = 22;
         world.killedCaptains = 0;
         world.steamRoom3 = new Room();
-        world.steamRoom3.npclist = new HashMap<>();
+        world.steamRoom3.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(FlameIris, new Location(150751, 152430, -12172, 29190), 0, world.instanceId);
         world.steamRoom3.npclist.put(newNpc, false);
@@ -857,7 +875,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
         world.status = 23;
         world.killedCaptains = 0;
         world.steamRoom4 = new Room();
-        world.steamRoom4.npclist = new HashMap<>();
+        world.steamRoom4.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(KechisCaptain2, new Location(150454, 149976, -12173, 28435), 0, world.instanceId);
         world.steamRoom4.npclist.put(newNpc, false);
@@ -884,7 +902,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
     private void runKechi(World world) {
         world.status = 24;
         world.kechiRoom = new Room();
-        world.kechiRoom.npclist = new HashMap<>();
+        world.kechiRoom.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(KechisGuard1, new Location(154409, 149680, -12151, 8790), 0, world.instanceId);
         world.kechiRoom.npclist.put(newNpc, false);
@@ -899,7 +917,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile {
     private void runCoralGardenHall(World world) {
         world.status = 30;
         world.CoralGardenHall = new Room();
-        world.CoralGardenHall.npclist = new HashMap<>();
+        world.CoralGardenHall.npclist = new HashMap<NpcInstance, Boolean>();
         NpcInstance newNpc;
         newNpc = addSpawnToInstance(Garden_Poison_Moth, new Location(141740, 150330, -11817, 6633), 0, world.instanceId);
         world.CoralGardenHall.npclist.put(newNpc, false);

@@ -1338,7 +1338,7 @@
 		<set name="reflectable" val="false" />
 		<for>
 			<effect count="1" name="Cancel" time="0" val="0">
-				<def name="cancelRate" val="30" />
+				<def name="cancelRate" val="20" />
 				<def name="minChance" val="25" />
 				<def name="maxChance" val="75" />
 				<def name="negateCount" val="2" />

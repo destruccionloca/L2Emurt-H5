@@ -169,22 +169,20 @@ public class EnchantingReward extends Functions implements ScriptFile {
                     addItem(player, 13990, 1); // Grade S Weapon Chest (Event)
                     break;
                 case 20:
-                    addItem(player, SOUL_CRYSTALL[Rnd.get(SOUL_CRYSTALL.length)], 1); // Red/Blue/Green Soul Crystal - Stage 14
+                    addItem(player, 20520, 1); // Ancient Armor Enchant Scroll (S Grade)(Event)
                     break;
                 case 21:
-                    addItem(player, 8762, 1); // Top-Grade Life Stone: level 76
-                    addItem(player, 8752, 1); // High-Grade Life Stone: level 76
-                    addItem(player, SOUL_CRYSTALL[Rnd.get(SOUL_CRYSTALL.length)], 1); // Red/Blue/Green Soul Crystal - Stage 14
+                    addItem(player, 20519, 1); // Ancient Weapon Enchant Scroll (S Grade)(Event)
                     break;
                 case 22:
-                    addItem(player, 13989, 1); // S80 Grade Armor Chest (Event)
+                    addItem(player, 20522, 1); // Divine Armor Enchant Scroll (S Grade)(Event)
                     break;
                 case 23:
-                    addItem(player, 13988, 1); // S80 Grade Weapon Chest (Event)
+                    addItem(player, 20521, 1); // Divine Weapon Enchant Scroll (S Grade)(Event)
                     break;
                 default:
                     if (Ench_Lvl > 23) {
-                        addItem(player, 13988, 1); // S80 Grade Weapon Chest (Event)
+                        addItem(player, 20521, 1); // Divine Weapon Enchant Scroll (S Grade)(Event)
                     }
                     break;
             }

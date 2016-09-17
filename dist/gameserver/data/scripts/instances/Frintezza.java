@@ -3,7 +3,6 @@ package instances;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.ArrayUtils;
 import l2p.commons.threading.RunnableImpl;
@@ -226,7 +225,9 @@ public class Frintezza extends Reflection {
                         ThreadPoolManager.getInstance().schedule(new Spawn(22), 3000);
                         break;
                     case 22:
-                        getPlayers().forEach(Player::leaveMovieMode);
+                        for (Player pc : getPlayers()) {
+                            pc.leaveMovieMode();
+                        }
                         ThreadPoolManager.getInstance().schedule(new Spawn(23), 2000);
                         break;
                     case 23:
@@ -282,7 +283,7 @@ public class Frintezza extends Reflection {
          * players)
          */
         private List<Creature> getSongTargets(int songId) {
-            List<Creature> targets = new ArrayList<>();
+            List<Creature> targets = new ArrayList<Creature>();
             if (songId < 4) // Target is the minions
             {
                 if (weakScarlet != null && !weakScarlet.isDead()) {
@@ -301,7 +302,11 @@ public class Frintezza extends Reflection {
                 }
             } else // Target is the players
             {
-                targets.addAll(getPlayers().stream().filter(pc -> !pc.isDead()).collect(Collectors.toList()));
+                for (Player pc : getPlayers()) {
+                    if (!pc.isDead()) {
+                        targets.add(pc);
+                    }
+                }
             }
             return targets;
         }
@@ -455,7 +460,9 @@ public class Frintezza extends Reflection {
                 switch (_taskId) {
                     case 1:
                         int angle = Math.abs((weakScarlet.getHeading() < 32768 ? 180 : 540) - (int) (weakScarlet.getHeading() / 182.044444444));
-                        getPlayers().forEach(Player::enterMovieMode);
+                        for (Player pc : getPlayers()) {
+                            pc.enterMovieMode();
+                        }
                         blockAll(true);
                         showSocialActionMovie(weakScarlet, 500, angle, 5, 500, 15000, 0);
                         ThreadPoolManager.getInstance().schedule(new SecondMorph(2), 2000);
@@ -472,7 +479,9 @@ public class Frintezza extends Reflection {
                         blockAll(false);
                         Skill skill = SkillTable.getInstance().getInfo(5017, 1);
                         skill.getEffects(weakScarlet, weakScarlet, false, false);
-                        getPlayers().forEach(Player::leaveMovieMode);
+                        for (Player pc : getPlayers()) {
+                            pc.leaveMovieMode();
+                        }
                         break;
                 }
             } catch (Exception e) {
@@ -496,7 +505,9 @@ public class Frintezza extends Reflection {
                 switch (_taskId) {
                     case 1:
                         _angle = Math.abs((weakScarlet.getHeading() < 32768 ? 180 : 540) - (int) (weakScarlet.getHeading() / 182.044444444));
-                        getPlayers().forEach(Player::enterMovieMode);
+                        for (Player pc : getPlayers()) {
+                            pc.enterMovieMode();
+                        }
                         blockAll(true);
                         frintezza.broadcastPacket(new MagicSkillCanceled(frintezza));
                         frintezza.broadcastPacket(new SocialAction(frintezza.getObjectId(), 4));
@@ -540,7 +551,9 @@ public class Frintezza extends Reflection {
                         break;
                     case 9:
                         blockAll(false);
-                        getPlayers().forEach(Player::leaveMovieMode);
+                        for (Player pc : getPlayers()) {
+                            pc.leaveMovieMode();
+                        }
                         Skill skill = SkillTable.getInstance().getInfo(5017, 1);
                         skill.getEffects(strongScarlet, strongScarlet, false, false);
                         break;
@@ -582,7 +595,9 @@ public class Frintezza extends Reflection {
                         ThreadPoolManager.getInstance().schedule(new Die(4), 7000);
                         break;
                     case 4:
-                        getPlayers().forEach(Player::leaveMovieMode);
+                        for (Player pc : getPlayers()) {
+                            pc.leaveMovieMode();
+                        }
                         cleanUp();
                         break;
                 }
@@ -597,20 +612,24 @@ public class Frintezza extends Reflection {
         for (Player p : getPlayers()) {
             p.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(15));
         }
-        getNpcs().forEach(NpcInstance::deleteMe);
+        for (NpcInstance n : getNpcs()) {
+            n.deleteMe();
+        }
     }
 
     // Hack: ToRemove when doors will operate normally in reflections
     private void blockUnblockNpcs(boolean block, int[] npcArray) {
-        getNpcs().stream().filter(n -> ArrayUtils.contains(npcArray, n.getNpcId())).forEach(n -> {
-            if (block) {
-                n.block();
-                n.setIsInvul(true);
-            } else {
-                n.unblock();
-                n.setIsInvul(false);
+        for (NpcInstance n : getNpcs()) {
+            if (ArrayUtils.contains(npcArray, n.getNpcId())) {
+                if (block) {
+                    n.block();
+                    n.setIsInvul(true);
+                } else {
+                    n.unblock();
+                    n.setIsInvul(false);
+                }
             }
-        });
+        }
     }
 
     public class CurrentHpListener implements OnCurrentHpDamageListener {
@@ -645,13 +664,15 @@ public class Frintezza extends Reflection {
         public void onDeath(Creature self, Creature killer) {
             if (self.isNpc()) {
                 if (self.getNpcId() == HallAlarmDevice) {
-                    for (int hallADoor : hallADoors) {
-                        openDoor(hallADoor);
+                    for (int i = 0; i < hallADoors.length; i++) {
+                        openDoor(hallADoors[i]);
                     }
                     blockUnblockNpcs(false, blockANpcs);
-                    getNpcs().stream().filter(n -> ArrayUtils.contains(blockANpcs, n.getNpcId())).forEach(n -> {
-                        n.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, getPlayers().get(Rnd.get(getPlayers().size())), 200);
-                    });
+                    for (NpcInstance n : getNpcs()) {
+                        if (ArrayUtils.contains(blockANpcs, n.getNpcId())) {
+                            n.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, getPlayers().get(Rnd.get(getPlayers().size())), 200);
+                        }
+                    }
                 } else if (ArrayUtils.contains(blockANpcs, self.getNpcId())) {
                     //ToCheck: find easier way
                     for (NpcInstance n : getNpcs()) {
@@ -659,8 +680,8 @@ public class Frintezza extends Reflection {
                             return;
                         }
                     }
-                    for (int corridorADoor : corridorADoors) {
-                        openDoor(corridorADoor);
+                    for (int i = 0; i < corridorADoors.length; i++) {
+                        openDoor(corridorADoors[i]);
                     }
                     blockUnblockNpcs(true, blockBNpcs);
                 } else if (self.getNpcId() == DarkChoirPlayer) {
@@ -669,8 +690,8 @@ public class Frintezza extends Reflection {
                             return;
                         }
                     }
-                    for (int hallBDoor : hallBDoors) {
-                        openDoor(hallBDoor);
+                    for (int i = 0; i < hallBDoors.length; i++) {
+                        openDoor(hallBDoors[i]);
                     }
                     blockUnblockNpcs(false, blockBNpcs);
                 } else if (ArrayUtils.contains(blockBNpcs, self.getNpcId())) {
@@ -683,8 +704,8 @@ public class Frintezza extends Reflection {
                             return;
                         }
                     }
-                    for (int corridorBDoor : corridorBDoors) {
-                        openDoor(corridorBDoor);
+                    for (int i = 0; i < corridorBDoors.length; i++) {
+                        openDoor(corridorBDoors[i]);
                     }
                     ThreadPoolManager.getInstance().schedule(new FrintezzaStart(), battleStartDelay);
                 } else if (self.getNpcId() == _weakScarletId) {

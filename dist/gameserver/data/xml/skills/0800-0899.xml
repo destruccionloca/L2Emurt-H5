@@ -466,7 +466,7 @@
 		<set name="isOffensive" val="true" />
 		<set name="nextAction" val="none" />
 		<for>
-			<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" chance="100" isReflectable="false">
+			<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" isReflectable="false">
 				<def name="doStopTarget" val="true" />
 			</effect>
 		</for>

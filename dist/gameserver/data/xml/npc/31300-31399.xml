@@ -2558,7 +2558,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="31340" name="Mathias" title="Captain">
+    <npc id="31340" name="Джесика" title="Вход в Бездну">
         <set name="aggroRange" value="1000"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2585,8 +2585,8 @@
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="50"/>
         <set name="castle_id" value="8"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8"/>
+        <set name="collision_height" value="17.5"/>
+        <set name="collision_radius" value="14.5"/>
         <set name="level" value="80"/>
         <set name="isAgro" value="1"/>
         <set name="rewardExp" value="0"/>
@@ -2595,10 +2595,8 @@
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
         <set name="type" value="KamalokaGuard"/>
-        <equip>
-            <rhand item_id="133"/>
-            <lhand item_id="632"/>
-        </equip>
+		<set name="displayId" value="1565"/>
+
         <skills>
             <skill id="4416" level="14"/>
             <skill id="4408" level="1"/>

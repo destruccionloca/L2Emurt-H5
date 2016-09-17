@@ -228,50 +228,52 @@ public class OnActionShift extends Functions {
         Collection<Skill> list = npc.getAllSkills();
         if (list != null && !list.isEmpty()) {
             dialog.append("<br>Active:<br>");
-            //   dialog.append(s.getName()).append("<br1>");
-            list.stream().filter(s -> s.isActive()).forEach(s -> {
-                //   dialog.append(s.getName()).append("<br1>");
-
-                dialog.append("<table border=0 cellspacing=0 cellpadding=0>");
-                dialog.append("<tr>");
-                dialog.append("<td width=345>");
-                dialog.append("<img src=l2ui.squaregray width=345 height=1>");
-                dialog.append("</td>");
-                dialog.append("</tr>");
-                dialog.append("</table>");
-                dialog.append("<table border=0 cellspacing=4 cellpadding=3>");
-                dialog.append("<tr>");
-                dialog.append("<td FIXWIDTH=50 align=right valign=top>");
-                dialog.append("<img src=").append(s.getIcon()).append(" width=32 height=32>");
-                dialog.append("</td>");
-                dialog.append("<td FIXWIDTH=200 align=left valign=top>");
-                dialog.append("<font color=0099FF>").append(s.getName()).append("</font>&nbsp;<br1>›&nbsp;").append("Скил Id - ").append(s.getId()).append("   Уровень скила - ").append(s.getLevel());
-                dialog.append("</td>");
-                dialog.append("</tr>");
-                dialog.append("</table>");
-            });
+            for (Skill s : list) {
+                if (s.isActive()) {
+                 //   dialog.append(s.getName()).append("<br1>");
+                    
+                    dialog.append("<table border=0 cellspacing=0 cellpadding=0>");
+                    dialog.append("<tr>");
+                    dialog.append("<td width=345>");
+                    dialog.append("<img src=l2ui.squaregray width=345 height=1>");
+                    dialog.append("</td>");
+                    dialog.append("</tr>");
+                    dialog.append("</table>");
+                    dialog.append("<table border=0 cellspacing=4 cellpadding=3>");
+                    dialog.append("<tr>");
+                    dialog.append("<td FIXWIDTH=50 align=right valign=top>");
+                    dialog.append("<img src=").append(s.getIcon()).append(" width=32 height=32>");
+                    dialog.append("</td>");
+                    dialog.append("<td FIXWIDTH=200 align=left valign=top>");
+                    dialog.append("<font color=0099FF>").append(s.getName()).append("</font>&nbsp;<br1>›&nbsp;").append("Скил Id - ").append(s.getId()).append("   Уровень скила - ").append(s.getLevel());
+                    dialog.append("</td>");
+                    dialog.append("</tr>");
+                    dialog.append("</table>");
+                }
+            }
             dialog.append("<br>Passive:<br>");
-            //   dialog.append(s.getName()).append("<br1>");
-            list.stream().filter(s -> !s.isActive()).forEach(s -> {
-                //   dialog.append(s.getName()).append("<br1>");
-                dialog.append("<table border=0 cellspacing=0 cellpadding=0>");
-                dialog.append("<tr>");
-                dialog.append("<td width=345>");
-                dialog.append("<img src=l2ui.squaregray width=345 height=1>");
-                dialog.append("</td>");
-                dialog.append("</tr>");
-                dialog.append("</table>");
-                dialog.append("<table border=0 cellspacing=4 cellpadding=3>");
-                dialog.append("<tr>");
-                dialog.append("<td FIXWIDTH=50 align=right valign=top>");
-                dialog.append("<img src=").append(s.getIcon()).append(" width=32 height=32>");
-                dialog.append("</td>");
-                dialog.append("<td FIXWIDTH=200 align=left valign=top>");
-                dialog.append("<font color=0099FF>").append(s.getName()).append("</font>&nbsp;<br1>›&nbsp;").append("Скил Id - ").append(s.getId()).append("   Уровень скила - ").append(s.getLevel());
-                dialog.append("</td>");
-                dialog.append("</tr>");
-                dialog.append("</table>");
-            });
+            for (Skill s : list) {
+                if (!s.isActive()) {
+                 //   dialog.append(s.getName()).append("<br1>");
+                    dialog.append("<table border=0 cellspacing=0 cellpadding=0>");
+                    dialog.append("<tr>");
+                    dialog.append("<td width=345>");
+                    dialog.append("<img src=l2ui.squaregray width=345 height=1>");
+                    dialog.append("</td>");
+                    dialog.append("</tr>");
+                    dialog.append("</table>");
+                    dialog.append("<table border=0 cellspacing=4 cellpadding=3>");
+                    dialog.append("<tr>");
+                    dialog.append("<td FIXWIDTH=50 align=right valign=top>");
+                    dialog.append("<img src=").append(s.getIcon()).append(" width=32 height=32>");
+                    dialog.append("</td>");
+                    dialog.append("<td FIXWIDTH=200 align=left valign=top>");
+                    dialog.append("<font color=0099FF>").append(s.getName()).append("</font>&nbsp;<br1>›&nbsp;").append("Скил Id - ").append(s.getId()).append("   Уровень скила - ").append(s.getLevel());
+                    dialog.append("</td>");
+                    dialog.append("</tr>");
+                    dialog.append("</table>");
+                }
+            }
         }
 
         dialog.append("</body></html>");
@@ -319,50 +321,52 @@ public class OnActionShift extends Functions {
         
         if (list != null && !list.isEmpty()) {
             dialog.append("<br>Active:<br>");
-            //   dialog.append(s.getName()).append("<br1>");
-            list.stream().filter(s -> s.isActive()).forEach(s -> {
-                //   dialog.append(s.getName()).append("<br1>");
-
-                dialog.append("<table border=0 cellspacing=0 cellpadding=0>");
-                dialog.append("<tr>");
-                dialog.append("<td width=345>");
-                dialog.append("<img src=l2ui.squaregray width=345 height=1>");
-                dialog.append("</td>");
-                dialog.append("</tr>");
-                dialog.append("</table>");
-                dialog.append("<table border=0 cellspacing=4 cellpadding=3>");
-                dialog.append("<tr>");
-                dialog.append("<td FIXWIDTH=50 align=right valign=top>");
-                dialog.append("<img src=").append(s.getIcon()).append(" width=32 height=32>");
-                dialog.append("</td>");
-                dialog.append("<td FIXWIDTH=200 align=left valign=top>");
-                dialog.append("<font color=0099FF>").append(s.getName()).append("</font>&nbsp;<br1>›&nbsp;").append("Скил Id - ").append(s.getId()).append("   Уровень скила - ").append(s.getLevel());
-                dialog.append("</td>");
-                dialog.append("</tr>");
-                dialog.append("</table>");
-            });
+            for (Skill s : list) {
+                if (s.isActive()) {
+                 //   dialog.append(s.getName()).append("<br1>");
+                    
+                    dialog.append("<table border=0 cellspacing=0 cellpadding=0>");
+                    dialog.append("<tr>");
+                    dialog.append("<td width=345>");
+                    dialog.append("<img src=l2ui.squaregray width=345 height=1>");
+                    dialog.append("</td>");
+                    dialog.append("</tr>");
+                    dialog.append("</table>");
+                    dialog.append("<table border=0 cellspacing=4 cellpadding=3>");
+                    dialog.append("<tr>");
+                    dialog.append("<td FIXWIDTH=50 align=right valign=top>");
+                    dialog.append("<img src=").append(s.getIcon()).append(" width=32 height=32>");
+                    dialog.append("</td>");
+                    dialog.append("<td FIXWIDTH=200 align=left valign=top>");
+                    dialog.append("<font color=0099FF>").append(s.getName()).append("</font>&nbsp;<br1>›&nbsp;").append("Скил Id - ").append(s.getId()).append("   Уровень скила - ").append(s.getLevel());
+                    dialog.append("</td>");
+                    dialog.append("</tr>");
+                    dialog.append("</table>");
+                }
+            }
             dialog.append("<br>Passive:<br>");
-            //   dialog.append(s.getName()).append("<br1>");
-            list.stream().filter(s -> !s.isActive()).forEach(s -> {
-                //   dialog.append(s.getName()).append("<br1>");
-                dialog.append("<table border=0 cellspacing=0 cellpadding=0>");
-                dialog.append("<tr>");
-                dialog.append("<td width=345>");
-                dialog.append("<img src=l2ui.squaregray width=345 height=1>");
-                dialog.append("</td>");
-                dialog.append("</tr>");
-                dialog.append("</table>");
-                dialog.append("<table border=0 cellspacing=4 cellpadding=3>");
-                dialog.append("<tr>");
-                dialog.append("<td FIXWIDTH=50 align=right valign=top>");
-                dialog.append("<img src=").append(s.getIcon()).append(" width=32 height=32>");
-                dialog.append("</td>");
-                dialog.append("<td FIXWIDTH=200 align=left valign=top>");
-                dialog.append("<font color=0099FF>").append(s.getName()).append("</font>&nbsp;<br1>›&nbsp;").append("Скил Id - ").append(s.getId()).append("   Уровень скила - ").append(s.getLevel());
-                dialog.append("</td>");
-                dialog.append("</tr>");
-                dialog.append("</table>");
-            });
+            for (Skill s : list) {
+                if (!s.isActive()) {
+                 //   dialog.append(s.getName()).append("<br1>");
+                    dialog.append("<table border=0 cellspacing=0 cellpadding=0>");
+                    dialog.append("<tr>");
+                    dialog.append("<td width=345>");
+                    dialog.append("<img src=l2ui.squaregray width=345 height=1>");
+                    dialog.append("</td>");
+                    dialog.append("</tr>");
+                    dialog.append("</table>");
+                    dialog.append("<table border=0 cellspacing=4 cellpadding=3>");
+                    dialog.append("<tr>");
+                    dialog.append("<td FIXWIDTH=50 align=right valign=top>");
+                    dialog.append("<img src=").append(s.getIcon()).append(" width=32 height=32>");
+                    dialog.append("</td>");
+                    dialog.append("<td FIXWIDTH=200 align=left valign=top>");
+                    dialog.append("<font color=0099FF>").append(s.getName()).append("</font>&nbsp;<br1>›&nbsp;").append("Скил Id - ").append(s.getId()).append("   Уровень скила - ").append(s.getLevel());
+                    dialog.append("</td>");
+                    dialog.append("</tr>");
+                    dialog.append("</table>");
+                }
+            }
         }
 
         dialog.append("</body></html>");
@@ -471,7 +475,7 @@ public class OnActionShift extends Functions {
 
         StringBuilder dialog = new StringBuilder("<html><body><table width=\"80%\"><tr><td>Attacker</td><td>Damage</td><td>Hate</td></tr>");
 
-        Set<HateInfo> set = new TreeSet<>(HateComparator.getInstance());
+        Set<HateInfo> set = new TreeSet<HateInfo>(HateComparator.getInstance());
         set.addAll(npc.getAggroList().getCharMap().values());
         for (HateInfo aggroInfo : set) {
             dialog.append("<tr><td>").append(aggroInfo.attacker.getName()).append("</td><td>").append(aggroInfo.damage).append("</td><td>").append(aggroInfo.hate).append("</td></tr>");

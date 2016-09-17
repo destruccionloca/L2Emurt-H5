@@ -2577,13 +2577,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="563"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="237"/>
+        <set name="baseMDef" value="1237"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1540.8"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="824"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="324"/>
+        <set name="basePDef" value="1324"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -2622,13 +2622,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="585"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="240"/>
+        <set name="baseMDef" value="1240"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1574"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="856"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="328"/>
+        <set name="basePDef" value="1328"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -2667,13 +2667,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="608"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="243"/>
+        <set name="baseMDef" value="1243"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1607.4"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="891"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="333"/>
+        <set name="basePDef" value="1333"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -2712,13 +2712,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="635"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="247"/>
+        <set name="baseMDef" value="1247"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1641"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="930"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="337"/>
+        <set name="basePDef" value="1337"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -2757,13 +2757,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="663"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="250"/>
+        <set name="baseMDef" value="1250"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1674.8"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="971"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="341"/>
+        <set name="basePDef" value="1341"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -2802,13 +2802,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="691"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="253"/>
+        <set name="baseMDef" value="1253"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1708.8"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="1012"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="346"/>
+        <set name="basePDef" value="1346"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -2847,13 +2847,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="721"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="256"/>
+        <set name="baseMDef" value="1256"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1743"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="1055"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="350"/>
+        <set name="basePDef" value="1350"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -2892,13 +2892,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="751"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="259"/>
+        <set name="baseMDef" value="1259"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1777.4"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="1099"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="354"/>
+        <set name="basePDef" value="1354"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -2937,13 +2937,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="782"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="262"/>
+        <set name="baseMDef" value="1262"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1812"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="1145"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="358"/>
+        <set name="basePDef" value="1358"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -2982,13 +2982,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="812"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="265"/>
+        <set name="baseMDef" value="1265"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1846.8"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="1189"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="362"/>
+        <set name="basePDef" value="1362"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -3015,7 +3015,7 @@
         </attributes>
     </npc>
     <npc id="13267" name="Virtual Image" title="">
-        <set name="aggroRange" value="0"/>
+        <set name="aggroRange" value="100"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
@@ -3027,13 +3027,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="843"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="268"/>
+        <set name="baseMDef" value="1268"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1881.8"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="1234"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="366"/>
+        <set name="basePDef" value="1366"/>
         <set name="baseRunSpd" value="1"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>

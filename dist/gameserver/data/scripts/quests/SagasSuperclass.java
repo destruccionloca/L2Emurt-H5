@@ -82,7 +82,7 @@ public abstract class SagasSuperclass extends Quest {
         2
     };
     public String[] Text = new String[18];
-    protected List<Spawn> Spawn_List = new ArrayList<>();
+    protected List<Spawn> Spawn_List = new ArrayList<Spawn>();
 
     private class Spawn {
 
@@ -124,7 +124,7 @@ public abstract class SagasSuperclass extends Quest {
         18218,
         18219
     };
-    protected static Map<Integer, Class<?>> Quests = new HashMap<>();
+    protected static Map<Integer, Class<?>> Quests = new HashMap<Integer, Class<?>>();
 
     static {
         Quests.put(67, _067_SagaOfTheDoombringer.class);
@@ -932,12 +932,14 @@ public abstract class SagasSuperclass extends Quest {
         if (isArchonMinions(npcId)) {
             Party party = player.getParty();
             if (party != null) {
-                party.getPartyMembers().stream().filter(player1 -> player1.getDistance(player) <= Config.ALT_PARTY_DISTRIBUTION_RANGE).forEach(player1 -> {
-                    QuestState st1 = findQuest(player1);
-                    if (st1 != null && st1.getCond() == 15) {
-                        ((SagasSuperclass) st1.getQuest()).giveHallishaMark(st1);
+                for (Player player1 : party.getPartyMembers()) {
+                    if (player1.getDistance(player) <= Config.ALT_PARTY_DISTRIBUTION_RANGE) {
+                        QuestState st1 = findQuest(player1);
+                        if (st1 != null && st1.getCond() == 15) {
+                            ((SagasSuperclass) st1.getQuest()).giveHallishaMark(st1);
+                        }
                     }
-                });
+                }
             } else {
                 QuestState st1 = findQuest(player);
                 if (st1 != null && st1.getCond() == 15) {

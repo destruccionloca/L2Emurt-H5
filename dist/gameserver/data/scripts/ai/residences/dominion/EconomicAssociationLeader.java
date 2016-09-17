@@ -24,7 +24,7 @@ import quests._733_ProtectTheEconomicAssociationLeader;
  */
 public class EconomicAssociationLeader extends SiegeGuardFighter {
 
-    private static final IntObjectMap<NpcString[]> MESSAGES = new HashIntObjectMap<>(9);
+    private static final IntObjectMap<NpcString[]> MESSAGES = new HashIntObjectMap<NpcString[]>(9);
 
     static {
         MESSAGES.put(81, new NpcString[]{NpcString.PROTECT_THE_ECONOMIC_ASSOCIATION_LEADER_OF_GLUDIO, NpcString.THE_ECONOMIC_ASSOCIATION_LEADER_OF_GLUDIO_IS_DEAD});

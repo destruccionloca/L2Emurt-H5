@@ -1,5 +1,7 @@
 package events.FightClub;
 
+import java.util.concurrent.ScheduledFuture;
+
 import l2p.commons.threading.RunnableImpl;
 import l2p.commons.util.Rnd;
 import l2p.gameserver.Config;
@@ -15,9 +17,6 @@ import l2p.gameserver.model.entity.Reflection;
 import l2p.gameserver.model.instances.DoorInstance;
 import l2p.gameserver.templates.InstantZone;
 import l2p.gameserver.utils.ItemFunctions;
-
-import java.util.Objects;
-import java.util.concurrent.ScheduledFuture;
 
 public class FightClubArena extends FightClub implements OnDeathListener, OnPlayerExitListener {
 
@@ -48,7 +47,7 @@ public class FightClubArena extends FightClub implements OnDeathListener, OnPlay
      */
     @Override
     public void onPlayerExit(Player player) {
-        if ((Objects.equals(player.getStoredId(), _player1.getStoredId()) || Objects.equals(player.getStoredId(), _player2.getStoredId())) && !_isEnded) {
+        if ((player.getStoredId() == _player1.getStoredId() || player.getStoredId() == _player2.getStoredId()) && !_isEnded) {
             stopEndTask();
             //    setLoose((Player) player);
         }
@@ -58,10 +57,10 @@ public class FightClubArena extends FightClub implements OnDeathListener, OnPlay
      * Вызывается при смерти игрока
      */
     @Override
-    public void onDeath(Creature creature, Creature creature1) {
-        if ((Objects.equals(creature.getStoredId(), _player1.getStoredId()) || Objects.equals(creature.getStoredId(), _player2.getStoredId())) && !_isEnded) {
+    public void onDeath(Creature actor, Creature killer) {
+        if ((actor.getStoredId() == _player1.getStoredId() || actor.getStoredId() == _player2.getStoredId()) && !_isEnded) {
             stopEndTask();
-            setLoose((Player) creature);
+            setLoose((Player) actor);
         }
     }
 
@@ -94,18 +93,15 @@ public class FightClubArena extends FightClub implements OnDeathListener, OnPlay
     /**
      * Выдаёт награду
      */
-    private void giveReward(Player player, int winnerMod) {
+    private void giveReward(Player player) {
         final String name = ItemFunctions.createItem(_itemId).getTemplate().getName();
-        sayToPlayer(player, "scripts.events.fightclub.YouWin", false, _itemCount * winnerMod, name);
-        addItem(player, _itemId, _itemCount * winnerMod);
+        sayToPlayer(player, "scripts.events.fightclub.YouWin", false, _itemCount * 2, name);
+        addItem(player, _itemId, _itemCount * 2);
     }
 
-	private void giveReward(Player player) {
-		giveReward(player, 2);
-	}
-
     private static String getItemName() {
-        return ItemFunctions.createItem(_itemId).getTemplate().getName();
+        final String name = ItemFunctions.createItem(_itemId).getTemplate().getName();
+        return name;
     }
 
     private static int getItemCount() {
@@ -118,15 +114,15 @@ public class FightClubArena extends FightClub implements OnDeathListener, OnPlay
      * @param player
      */
     private void setLoose(Player player) {
-        if (Objects.equals(player.getStoredId(), _player1.getStoredId())) {
+        if (player.getStoredId() == _player1.getStoredId()) {
             giveReward(_player2);
-        } else if (Objects.equals(player.getStoredId(), _player2.getStoredId())) {
+        } else if (player.getStoredId() == _player2.getStoredId()) {
             giveReward(_player1);
         }
         _player1.unsetVar("FightClubRate");
         _player2.unsetVar("FightClubRate");
         _isEnded = true;
-        sayToPlayer(player, "scripts.events.fightclub.YouLoose", false);
+        sayToPlayer(player, "scripts.events.fightclub.YouLoose", false, new Object[0]);
     }
 
     /**
@@ -136,21 +132,21 @@ public class FightClubArena extends FightClub implements OnDeathListener, OnPlay
         if (!Config.ALLOW_DRAW && _player1.getCurrentCp() != _player1.getMaxCp() || _player2.getCurrentCp() != _player2.getMaxCp() || _player1.getCurrentHp() != _player1.getMaxHp() || _player2.getCurrentHp() != _player2.getMaxHp()) {
             if (_player1.getCurrentHp() != _player1.getMaxHp() || _player2.getCurrentHp() != _player2.getMaxHp()) {
                 if (_player1.getMaxHp() / _player1.getCurrentHp() > _player2.getMaxHp() / _player2.getCurrentHp()) {
-                    giveReward(_player1, 1);
+                    giveReward(_player1);
                     setLoose(_player2);
                     return;
                 } else {
-                    giveReward(_player2, 1);
+                    giveReward(_player2);
                     setLoose(_player1);
                     return;
                 }
             } else {
                 if (_player1.getMaxCp() / _player1.getCurrentCp() > _player2.getMaxCp() / _player2.getCurrentCp()) {
-                    giveReward(_player1, 1);
+                    giveReward(_player1);
                     setLoose(_player2);
                     return;
                 } else {
-                    giveReward(_player2, 1);
+                    giveReward(_player2);
                     setLoose(_player1);
                     return;
                 }
@@ -306,7 +302,9 @@ public class FightClubArena extends FightClub implements OnDeathListener, OnPlay
     }
 
     public static void openDoors() {
-        _reflection.getDoors().forEach(DoorInstance::openMe);
+        for (DoorInstance door : _reflection.getDoors()) {
+            door.openMe();
+        }
     }
 
     public FightClubArena() {

@@ -23,7 +23,7 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
     private static final Logger _log = LoggerFactory.getLogger(MasterOfEnchanting.class);
     private static final String EVENT_NAME = "MasterOfEnchanting";
     private static int EVENT_MANAGER_ID = 32599;
-    private static List<SimpleSpawner> _spawns = new ArrayList<>();
+    private static List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
     private static boolean _active = false;
     private static final int[][] _herbdrop = {{20000, 100}, //Spicy Kimchee
         {20001, 100}, //Spicy Kimchee

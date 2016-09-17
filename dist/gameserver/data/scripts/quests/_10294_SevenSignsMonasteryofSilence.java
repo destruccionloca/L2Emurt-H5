@@ -265,9 +265,11 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
     }
 
     private void teleportElcardia(Player player) {
-        player.getReflection().getNpcs().stream().filter(n -> n.getNpcId() == ElcardiaInzone1).forEach(n -> {
-            n.teleToLocation(Location.findPointToStay(player, 100));
-        });
+        for (NpcInstance n : player.getReflection().getNpcs()) {
+            if (n.getNpcId() == ElcardiaInzone1) {
+                n.teleToLocation(Location.findPointToStay(player, 100));
+            }
+        }
     }
 
     private boolean checkComplete(QuestState st) {

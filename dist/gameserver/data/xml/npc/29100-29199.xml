@@ -994,7 +994,7 @@
         <set name="baseWalkSpd" value="60"/>
         <set name="collision_height" value="30"/>
         <set name="collision_radius" value="15"/>
-        <set name="level" value="83"/>
+        <set name="level" value="85"/>
         <set name="isAgro" value="1"/>
         <set name="rewardExp" value="16447437"/>
         <set name="rewardRp" value="3997"/>
@@ -1028,48 +1028,11 @@
         <absorblist>
             <absorb chance="50" max_level="17" min_level="13" type="PARTY_RANDOM"/>
         </absorblist>
-        <rewardlist type="RATED_GROUPED">
-            <group chance="100.0">
-                <reward item_id="13457" min="1" max="1" chance="3.7700" />	<!--Vesper Cutter-->
-                <reward item_id="13458" min="1" max="1" chance="3.7600" />	<!--Vesper Slasher-->
-                <reward item_id="13459" min="1" max="1" chance="3.7600" />	<!--Vesper Buster-->
-                <reward item_id="13460" min="1" max="1" chance="3.7700" />	<!--Vesper Shaper-->
-                <reward item_id="13461" min="1" max="1" chance="3.7700" />	<!--Vesper Fighter-->
-                <reward item_id="13462" min="1" max="1" chance="3.7600" />	<!--Vesper Stormer-->
-                <reward item_id="13463" min="1" max="1" chance="3.7700" />	<!--Vesper Avenger-->
-                <reward item_id="13464" min="1" max="1" chance="3.7600" />	<!--Vesper Retributer-->
-                <reward item_id="13465" min="1" max="1" chance="3.7600" />	<!--Vesper Caster-->
-                <reward item_id="13467" min="1" max="1" chance="3.7600" />	<!--Vesper Thrower-->
-                <reward item_id="13466" min="1" max="1" chance="3.7600" />	<!--Vesper Singer-->
-                <reward item_id="10215" min="1" max="1" chance="6.5200" />	<!--Icarus Sawsword-->
-                <reward item_id="10216" min="1" max="1" chance="6.5100" />	<!--Icarus Disperser-->
-                <reward item_id="10217" min="1" max="1" chance="6.5100" />	<!--Icarus Spirit-->
-                <reward item_id="10218" min="1" max="1" chance="6.5100" />	<!--Icarus Heavy Arms-->
-                <reward item_id="10219" min="1" max="1" chance="6.5100" />	<!--Icarus Trident-->
-                <reward item_id="10220" min="1" max="1" chance="6.5100" />	<!--Icarus Hammer-->
-                <reward item_id="10221" min="1" max="1" chance="6.5100" />	<!--Icarus Hand-->
-                <reward item_id="10222" min="1" max="1" chance="6.5100" />	<!--Icarus Hall-->
-                <reward item_id="10223" min="1" max="1" chance="6.5100" />	<!--Icarus Spitter-->
-            </group>
-        </rewardlist>
-        <rewardlist type="NOT_RATED_GROUPED">
-            <group chance="50.0">
-                <reward item_id="10215" min="1" max="1" chance="11.2000" />	<!--Icarus Sawsword-->
-                <reward item_id="10216" min="1" max="1" chance="11.1000" />	<!--Icarus Disperser-->
-                <reward item_id="10217" min="1" max="1" chance="11.1000" />	<!--Icarus Spirit-->
-                <reward item_id="10218" min="1" max="1" chance="11.1000" />	<!--Icarus Heavy Arms-->
-                <reward item_id="10219" min="1" max="1" chance="11.1000" />	<!--Icarus Trident-->
-                <reward item_id="10220" min="1" max="1" chance="11.1000" />	<!--Icarus Hammer-->
-                <reward item_id="10221" min="1" max="1" chance="11.1000" />	<!--Icarus Hand-->
-                <reward item_id="10222" min="1" max="1" chance="11.1000" />	<!--Icarus Hall-->
-                <reward item_id="10223" min="1" max="1" chance="11.1000" />	<!--Icarus Spitter-->
-            </group>
-        </rewardlist>
         <rewardlist type="NOT_RATED_NOT_GROUPED">
+            <reward item_id="57" min="150000000" max="300000000" chance="100.0000" />	<!--Adena-->		
+			<reward item_id="40029" min="1" max="1" chance="10.0000" />	<!--Душа белефа-->
+			<reward item_id="40028" min="50" max="100" chance="40.0000" />	<!--Фрагмент Душы Белефа-->
             <reward item_id="13893" min="1" max="1" chance="40.0000" />	<!--Sealed Holy Spirit's Cloak-->
-            <reward item_id="10552" min="1" max="1" chance="20.0000" />	<!--Forgotten Scroll - Fighter's Will-->
-            <reward item_id="10553" min="1" max="1" chance="20.0000" />	<!--Forgotten Scroll - Archer's Will-->
-            <reward item_id="14219" min="1" max="1" chance="20.0000" />	<!--Forgotten Scroll - Magician's Will-->
         </rewardlist>
         <attributes>
             <attack attribute="unholy" value="300"/>
@@ -3723,7 +3686,7 @@
         </ai_params>
         <faction name="des_dragon" range="1000"/>
         <skills>
-            <skill id="4408" level="1" />	<!--HP Increase (1x)-->
+			<skill id="4408" level="1" />	<!--HP Increase (1x)-->
 			<skill id="4409" level="1" />	<!--MP Increase (1x)-->
 			<skill id="4410" level="11" />	<!--Average P. Atk.-->
 			<skill id="4411" level="11" />	<!--Average M. Atk.-->
@@ -3784,7 +3747,7 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="SOUL_BSPIRIT"/>
         <set name="texture" value=""/>
-        <set name="type" value="ReflectionBoss"/>
+        <set name="type" value="RaidBoss"/>
         <ai_params>
             <set name="MaxPursueRange" value="3000"/>
         </ai_params>
@@ -3793,33 +3756,32 @@
             <rhand item_id="13842"/>
         </equip>
         <skills>
-            <skill id="4045" level="1" />	<!--Resist Full Magic Attack-->
-			<skill id="4071" level="3" />	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4116" level="5" />	<!--Resist M. Atk.-->
-			<skill id="4408" level="1" />	<!--HP Increase (1x)-->
-			<skill id="4409" level="1" />	<!--MP Increase (1x)-->
-			<skill id="4410" level="11" />	<!--Average P. Atk.-->
-			<skill id="4411" level="11" />	<!--Average M. Atk.-->
-			<skill id="4412" level="11" />	<!--Average P. Def.-->
-			<skill id="4413" level="11" />	<!--Average M. Def.-->
-			<skill id="4414" level="2" />	<!--Standard Type-->
-			<skill id="4415" level="4" />	<!--One-handed Sword-->
-			<skill id="4416" level="10" />	<!--Dragons-->
-			<skill id="5462" level="1" />	<!--Fire Attacks-->
-			<skill id="5839" level="1" />	<!--Breath-->
-			<skill id="5840" level="1" />	<!--Fire Breath-->
-			<skill id="5841" level="1" />	<!--Multi Defense-->
-			<skill id="5842" level="1" />	<!--Spinning Slasher-->
-			<skill id="5843" level="1" />	<!--Terror-->
-			<skill id="5844" level="1" />	<!--Thunder Storm-->
-			<skill id="6127" level="1" />	<!--Anti-limit-->
+            <skill id="4416" level="10"/>
+            <skill id="4071" level="3"/>
+            <skill id="4045" level="1"/>
+            <skill id="5839" level="1"/>
+            <skill id="6127" level="1"/>
+            <skill id="5840" level="1"/>
+            <skill id="5841" level="1"/>
+            <skill id="5842" level="1"/>
+            <skill id="5843" level="1"/>
+            <skill id="4116" level="5"/>
+            <skill id="5462" level="1"/>
+            <skill id="4408" level="1"/>
+            <skill id="4409" level="1"/>
+            <skill id="4410" level="11"/>
+            <skill id="4411" level="11"/>
+            <skill id="4412" level="11"/>
+            <skill id="4413" level="11"/>
+            <skill id="4414" level="2"/>
+            <skill id="4415" level="4"/>
         </skills>
         <absorblist>
             <absorb chance="10" max_level="16" min_level="13" type="PARTY_RANDOM"/>
             <absorb chance="30" max_level="17" min_level="16" type="PARTY_RANDOM"/>
         </absorblist>
         <rewardlist type="RATED_GROUPED">
-            <group chance="100.0">
+            <group chance="30.0000">
                 <reward item_id="13457" min="1" max="1" chance="3.7700" />	<!--Vesper Cutter-->
                 <reward item_id="13458" min="1" max="1" chance="3.7600" />	<!--Vesper Slasher-->
                 <reward item_id="13459" min="1" max="1" chance="3.7600" />	<!--Vesper Buster-->
@@ -3841,9 +3803,6 @@
                 <reward item_id="10222" min="1" max="1" chance="6.5100" />	<!--Icarus Hall-->
                 <reward item_id="10223" min="1" max="1" chance="6.5100" />	<!--Icarus Spitter-->
             </group>
-            <group chance="100.0">
-                <reward item_id="21939" min="1" max="1" chance="10.2600" />	<!--Tiatenon-->
-            </group>
         </rewardlist>
         <rewardlist type="NOT_RATED_GROUPED">
             <group chance="100.0">
@@ -3852,9 +3811,10 @@
             </group>
         </rewardlist>
         <rewardlist type="NOT_RATED_NOT_GROUPED">
-            <reward item_id="13893" min="1" max="1" chance="20.0000" />	<!--Sealed Holy Spirit's Cloak-->
-            <reward item_id="10550" min="1" max="1" chance="40.0000" />	<!--Forgotten Scroll - Protection of Elemental-->
-            <reward item_id="10552" min="1" max="1" chance="40.0000" />	<!--Forgotten Scroll - Fighter's Will-->
+            <reward item_id="13893" min="1" max="2" chance="70.0000" />	<!--Sealed Holy Spirit's Cloak-->
+            <reward item_id="10550" min="1" max="1" chance="20.0000" />	<!--Forgotten Scroll - Protection of Elemental-->
+            <reward item_id="10552" min="1" max="1" chance="20.0000" />	<!--Forgotten Scroll - Fighter's Will-->
+			<reward item_id="21939" min="1" max="1" chance="3.2600" />	<!--Tiatenon-->
         </rewardlist>
         <attributes>
             <attack attribute="fire" value="250"/>
@@ -4456,7 +4416,7 @@
         <set name="baseCON" value="57"/>
         <set name="baseCritRate" value="4"/>
         <set name="baseDEX" value="73"/>
-        <set name="baseHpMax" value="90456.5"/>
+        <set name="baseHpMax" value="1390456.5"/>
         <set name="baseHpRate" value="1"/>
         <set name="baseHpReg" value="337"/>
         <set name="baseINT" value="76"/>
@@ -4477,14 +4437,14 @@
         <set name="baseWalkSpd" value="42"/>
         <set name="collision_height" value="32"/>
         <set name="collision_radius" value="16"/>
-        <set name="level" value="60"/>
+        <set name="level" value="85"/>
         <set name="isAgro" value="1"/>
         <set name="rewardExp" value="4154684"/>
         <set name="rewardRp" value="572"/>
         <set name="rewardSp" value="587467"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="ReflectionBoss"/>
+        <set name="type" value="Boss"/>
         <ai_params>
             <set name="SelfAggressive" value="100"/>
             <set name="isMadness" value="15"/>
@@ -4507,27 +4467,16 @@
             <absorb chance="50" max_level="12" min_level="11" type="PARTY_ONE"/>
         </absorblist>
         <rewardlist type="RATED_GROUPED">
-            <group chance="48.8044">
-                <reward item_id="80" min="1" max="1" chance="4.3508" />	<!--Tallum Blade-->
-                <reward item_id="150" min="1" max="1" chance="4.3508" />	<!--Elemental Sword-->
-                <reward item_id="5548" min="24" max="72" chance="21.7377" />	<!--Tallum Blade Edge-->
-                <reward item_id="5547" min="8" max="22" chance="69.5607" />	<!--Elemental Sword Edge-->
-            </group>
-            <group chance="74.3337">
-                <reward item_id="729" min="1" max="1" chance="11.6009" />	<!--Scroll: Enchant Weapon (A-Grade)-->
-                <reward item_id="730" min="1" max="1" chance="87.0070" />	<!--Scroll: Enchant Armor (A-Grade)-->
-                <reward item_id="6569" min="1" max="1" chance="1.3921" />	<!--Blessed Scroll: Enchant Weapon (A-Grade)-->
-            </group>
-            <group chance="0.09">
+            <group chance="5.0">
                 <reward item_id="6659" min="1" max="1" chance="100.0000" />	<!--Zaken's Earring-->
             </group>
             <group chance="0.09">
                 <reward item_id="8922" min="1" max="1" chance="100.0000" />	<!--Pirate Hat-->
             </group>
-            <group chance="0.18">
-                <reward item_id="8619" min="1" max="1" chance="100.0000" />	<!--Ancient Book: Divine Inspiration (Original Language Version)-->
-            </group>
         </rewardlist>
+        <rewardlist type="NOT_RATED_NOT_GROUPED">
+			<reward item_id="4357" min="50" max="100" chance="15.0000" />	<!--silver -->			
+        </rewardlist>		
         <attributes>
             <defence attribute="fire" value="20"/>
             <defence attribute="water" value="20"/>
@@ -4700,7 +4649,7 @@
             <absorb chance="50" max_level="16" min_level="15" type="PARTY_RANDOM"/>
             <absorb chance="50" max_level="17" min_level="16" type="PARTY_ONE"/>
         </absorblist>
-        <rewardlist type="RATED_GROUPED">
+   <rewardlist type="RATED_GROUPED">
             <group chance="15.0">
                 <reward item_id="15560" min="1" max="1" chance="9.1000" />	<!--Vigwik Axe-->
                 <reward item_id="15561" min="1" max="1" chance="9.0900" />	<!--Devilish Maul-->
@@ -4769,17 +4718,22 @@
                 <reward item_id="16164" min="2" max="4" chance="60.0000" />	<!--Life Stone -  Level 86-->
                 <reward item_id="16165" min="2" max="4" chance="40.0000" />	<!--Mid-Grade Life Stone -  Level 86-->
             </group>
-            <group chance="25.0">
+            <group chance="80.0">
                 <reward item_id="16025" min="1" max="1" chance="100.0000" />	<!--Freya Necklace-->
             </group>
             <group chance="82.0">
                 <reward item_id="21894" min="1" max="1" chance="3.3540" />	<!--Ice Queen's Tiara-->
-            </group>
-            <group chance="82.0">
-                <reward item_id="21714" min="1" max="1" chance="3.3600" />	<!--Sealed Cloak of Freya-->
-            </group>
-        </rewardlist>
-        <attributes>
+				</group>
+		</rewardlist>
+		<rewardlist type="NOT_RATED_NOT_GROUPED">
+				<reward item_id="21714" min="1" max="1" chance="60.3600" />	<!--Sealed Cloak of Freya-->
+                <reward item_id="24178" min="1" max="1" chance="20.0000" />	<!--на заточку-->
+                <reward item_id="24179" min="1" max="1" chance="24.0000" />	<!--на аугумент-->
+                <reward item_id="24176" min="1" max="1" chance="5.0000" />	<!--на пвп броню-->
+				<reward item_id="24177" min="1" max="1" chance="5.0000" />	<!--на пвп пухи-->
+				<reward item_id="4357" min="150" max="400" chance="55.0000" />	<!--silver -->
+        </rewardlist>		
+       <attributes>
             <attack attribute="water" value="370"/>
             <defence attribute="fire" value="250"/>
             <defence attribute="water" value="370"/>
@@ -4858,7 +4812,7 @@
                 <reward item_id="15558" min="1" max="1" chance="9.0900" />	<!--Periel Sword-->
                 <reward item_id="15559" min="1" max="1" chance="9.0900" />	<!--Skull Edge-->
             </group>
-            <group chance="50.0">
+            <group chance="40.0">
                 <reward item_id="15726" min="1" max="1" chance="9.1000" />	<!--Sealed Elegia Helmet-->
                 <reward item_id="15727" min="1" max="1" chance="9.0900" />	<!--Sealed Elegia Leather Helmet-->
                 <reward item_id="15728" min="1" max="1" chance="9.0900" />	<!--Sealed Elegia Circlet-->
@@ -4871,7 +4825,7 @@
                 <reward item_id="15741" min="1" max="1" chance="9.0900" />	<!--Sealed Elegia Shield-->
                 <reward item_id="15742" min="1" max="1" chance="9.0900" />	<!--Sealed Elegia Sigil-->
             </group>
-            <group chance="50.0">
+            <group chance="40.0">
                 <reward item_id="15729" min="1" max="1" chance="16.7000" />	<!--Sealed Elegia Breastplate-->
                 <reward item_id="15730" min="1" max="1" chance="16.6600" />	<!--Sealed Elegia Leather Breastplate-->
                 <reward item_id="15731" min="1" max="1" chance="16.6600" />	<!--Sealed Elegia Tunic-->
@@ -4891,7 +4845,7 @@
             <group chance="30.0">
                 <reward item_id="16026" min="1" max="1" chance="100.0000" />	<!--Blessed Freya Necklace-->
             </group>
-            <group chance="50.0">
+            <group chance="15.0">
                 <reward item_id="16027" min="1" max="1" chance="100.0000" />	<!--Bottle of Freya's Soul-->
             </group>
             <group chance="82.0">
@@ -4900,6 +4854,13 @@
             <group chance="82.0">
                 <reward item_id="21714" min="1" max="1" chance="3.2440" />	<!--Sealed Cloak of Freya-->
             </group>
+        </rewardlist>
+		<rewardlist type="NOT_RATED_NOT_GROUPED">
+                <reward item_id="24178" min="1" max="1" chance="24.0000" />	<!--на заточку-->
+                <reward item_id="24179" min="1" max="1" chance="32.0000" />	<!--на аугумент-->
+                <reward item_id="24176" min="1" max="1" chance="15.0000" />	<!--на пвп броню-->
+				<reward item_id="24177" min="1" max="1" chance="15.0000" />	<!--на пвп пухи-->
+				<reward item_id="4357" min="250" max="500" chance="65.0000" />	<!--silver -->
         </rewardlist>
         <attributes>
             <attack attribute="water" value="370"/>
@@ -4918,7 +4879,7 @@
         <set name="baseCON" value="57"/>
         <set name="baseCritRate" value="4"/>
         <set name="baseDEX" value="73"/>
-        <set name="baseHpMax" value="3155900.34672804"/>
+        <set name="baseHpMax" value="4155900"/>
         <set name="baseHpRate" value="1"/>
         <set name="baseHpReg" value="818.275841116973"/>
         <set name="baseINT" value="76"/>
@@ -4939,14 +4900,14 @@
         <set name="baseWalkSpd" value="42"/>
         <set name="collision_height" value="32"/>
         <set name="collision_radius" value="16"/>
-        <set name="level" value="83"/>
+        <set name="level" value="85"/>
         <set name="isAgro" value="1"/>
         <set name="rewardExp" value="15282889"/>
         <set name="rewardRp" value="1795"/>
         <set name="rewardSp" value="2051807"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value="LineageMonster.zaken"/>
-        <set name="type" value="ReflectionBoss"/>
+        <set name="type" value="Boss"/>
         <ai_params>
             <set name="SelfAggressive" value="100"/>
             <set name="isMadness" value="15"/>
@@ -4969,74 +4930,11 @@
             <absorb chance="50" max_level="17" min_level="13" type="PARTY_ONE"/>
         </absorblist>
         <rewardlist type="RATED_GROUPED">
-            <group chance="30.0">
-                <reward item_id="13143" min="1" max="1" chance="5.9200" />	<!--Sealed Vesper Helmet-->
-                <reward item_id="13144" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Leather Helmet-->
-                <reward item_id="13145" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Circlet-->
-                <reward item_id="14109" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Gauntlet-->
-                <reward item_id="14113" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Leather Gloves-->
-                <reward item_id="14116" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Gloves-->
-                <reward item_id="14110" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Boots-->
-                <reward item_id="14114" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Leather Boots-->
-                <reward item_id="14117" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Shoes-->
-                <reward item_id="14111" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Shield-->
-                <reward item_id="13887" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Sigil-->
-                <reward item_id="14105" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Breastplate-->
-                <reward item_id="14106" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Leather Breastplate-->
-                <reward item_id="14107" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Tunic-->
-                <reward item_id="14108" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Gaiters-->
-                <reward item_id="14112" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Leather Leggings-->
-                <reward item_id="14115" min="1" max="1" chance="5.8800" />	<!--Sealed Vesper Stockings-->
-            </group>
-            <group chance="70.0">
-                <reward item_id="15694" min="1" max="1" chance="5.9200" />	<!--Sealed Moirai Helmet -->
-                <reward item_id="15695" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Leather Helmet -->
-                <reward item_id="15696" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Circlet -->
-                <reward item_id="15703" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Gauntlet -->
-                <reward item_id="15704" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Leather Gloves -->
-                <reward item_id="15705" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Gloves -->
-                <reward item_id="15706" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Boots -->
-                <reward item_id="15707" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Leather Boots -->
-                <reward item_id="15708" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Shoes -->
-                <reward item_id="15710" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Shield -->
-                <reward item_id="15709" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Sigil -->
-                <reward item_id="15697" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Breastplate -->
-                <reward item_id="15698" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Leather Breastplate -->
-                <reward item_id="15699" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Tunic -->
-                <reward item_id="15700" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Gaiter -->
-                <reward item_id="15701" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Leather Legging -->
-                <reward item_id="15702" min="1" max="1" chance="5.8800" />	<!--Sealed Moirai Stockings -->
-            </group>
-            <group chance="50.0">
-                <reward item_id="14162" min="1" max="1" chance="33.4000" />	<!--Sealed Vesper Ring-->
-                <reward item_id="14160" min="1" max="1" chance="33.3000" />	<!--Sealed Vesper Earring-->
-                <reward item_id="14161" min="1" max="1" chance="33.3000" />	<!--Sealed Vesper Necklace-->
-            </group>
             <group chance="100.0">
                 <reward item_id="1538" min="1" max="30" chance="100.0000" />	<!--Blessed Scroll of Escape-->
             </group>
             <group chance="100.0">
                 <reward item_id="3936" min="1" max="10" chance="100.0000" />	<!--Blessed Scroll of Resurrection-->
-            </group>
-            <group chance="100.0">
-                <reward item_id="14170" min="1" max="1" chance="3.0190" />	<!--Forgotten Scroll - Seed of Revenge-->
-                <reward item_id="14177" min="1" max="1" chance="2.9470" />	<!--Forgotten Scroll - Ghost Walking-->
-                <reward item_id="14181" min="1" max="1" chance="2.9370" />	<!--Forgotten Scroll - Dread Pool-->
-                <reward item_id="14179" min="1" max="1" chance="2.9310" />	<!--Forgotten Scroll - Arrow Rain-->
-                <reward item_id="14175" min="1" max="1" chance="2.9310" />	<!--Forgotten Scroll - Exciting Adventure-->
-                <reward item_id="14176" min="1" max="1" chance="2.9290" />	<!--Forgotten Scroll - Wind Riding-->
-                <reward item_id="14182" min="1" max="1" chance="2.9290" />	<!--Forgotten Scroll - Force of Destruction-->
-                <reward item_id="14178" min="1" max="1" chance="2.9200" />	<!--Forgotten Scroll - Flame Hawk-->
-                <reward item_id="14173" min="1" max="1" chance="2.9190" />	<!--Forgotten Scroll - Eva's Will / Touch of Eva-->
-                <reward item_id="14174" min="1" max="1" chance="2.9170" />	<!--Forgotten Scroll - Pain of Shillien-->
-                <reward item_id="14172" min="1" max="1" chance="2.9080" />	<!--Forgotten Scroll - Spirit of Phoenix-->
-                <reward item_id="14184" min="1" max="1" chance="2.8930" />	<!--Forgotten Scroll - Golem Armor-->
-                <reward item_id="14183" min="1" max="1" chance="2.8820" />	<!--Forgotten Scroll - Demolition Impact-->
-                <reward item_id="14186" min="1" max="1" chance="2.8610" />	<!--Forgotten Scroll - Lightning Shock-->
-                <reward item_id="14187" min="1" max="1" chance="2.8410" />	<!--Forgotten Scroll - Flame Armor-->
-                <reward item_id="14188" min="1" max="1" chance="2.8360" />	<!--Forgotten Scroll - Frost Armor-->
-                <reward item_id="14185" min="1" max="1" chance="2.8350" />	<!--Forgotten Scroll - Wild Shot-->
-                <reward item_id="14171" min="1" max="1" chance="2.8290" />	<!--Forgotten Scroll - Hell Scream-->
             </group>
             <group chance="100.0">
                 <reward item_id="57" min="9000000" max="1100000" chance="100.0000" />	<!--Adena-->
@@ -5045,8 +4943,8 @@
                 <reward item_id="16162" min="2" max="4" chance="60.0000" />	<!--High-Grade Life Stone -  Level 85-->
                 <reward item_id="16166" min="2" max="4" chance="40.0000" />	<!--High-Grade Life Stone -  Level 86-->
             </group>
-            <group chance="50.0">
-                <reward item_id="21712" min="1" max="1" chance="0.1000" />	<!--Zaken's Earring of Immortality-->
+            <group chance="3.0">
+                <reward item_id="21712" min="1" max="1" chance="100.0000" />	<!--Zaken's Earring of Immortality-->
             </group>
             <group chance="50.0">
                 <reward item_id="21935" min="1" max="1" chance="0.1000" />	<!--Habu Knife-->
@@ -5057,6 +4955,9 @@
             <group chance="82.0">
                 <reward item_id="21892" min="1" max="1" chance="3.3030" />	<!--Pirate King Hat-->
             </group>
+        </rewardlist>
+		 <rewardlist type="NOT_RATED_NOT_GROUPED">
+			<reward item_id="4357" min="350" max="550" chance="50.0000" />	<!--silver -->			
         </rewardlist>
         <attributes>
             <attack attribute="unholy" value="370"/>
@@ -5521,7 +5422,7 @@
         </attributes>
     </npc>
     <npc id="29190" name="Tarask Dragon" title="">
-        <set name="aggroRange" value="300"/>
+        <set name="aggroRange" value="1300"/>
         <set name="ai_type" value="freya.AntharasMinion"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="57"/>

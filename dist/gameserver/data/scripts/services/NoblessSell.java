@@ -11,7 +11,6 @@ import l2p.gameserver.model.quest.QuestState;
 import l2p.gameserver.serverpackets.components.SystemMsg;
 import l2p.gameserver.serverpackets.SkillList;
 import l2p.gameserver.scripts.Functions;
-import l2p.gameserver.utils.ItemFunctions;
 import quests._234_FatesWhisper;
 
 public class NoblessSell extends Functions {
@@ -75,7 +74,6 @@ public class NoblessSell extends Functions {
 
         Olympiad.addNoble(player);
         player.setNoble(true);
-        ItemFunctions.addItem(player, 7694, 1, true);
         player.updatePledgeClass();
         player.updateNobleSkills();
         player.sendPacket(new SkillList(player));

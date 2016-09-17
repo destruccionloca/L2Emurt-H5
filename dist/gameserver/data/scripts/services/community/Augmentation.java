@@ -2,13 +2,21 @@ package services.community;
 
 import java.util.StringTokenizer;
 import l2p.commons.dao.JdbcEntityState;
+import l2p.gameserver.Config;
+import l2p.gameserver.cache.Msg;
 import l2p.gameserver.handler.bbs.CommunityBoardManager;
 import l2p.gameserver.handler.bbs.ICommunityBoardHandler;
 import l2p.gameserver.model.Player;
+import l2p.gameserver.model.Skill;
+import l2p.gameserver.model.Zone;
 import l2p.gameserver.model.actor.instances.player.ShortCut;
+import l2p.gameserver.model.base.TeamType;
+import l2p.gameserver.model.entity.olympiad.Olympiad;
 import l2p.gameserver.model.items.ItemInstance;
 import l2p.gameserver.scripts.Functions;
 import l2p.gameserver.scripts.ScriptFile;
+import l2p.gameserver.serverpackets.ExShowVariationCancelWindow;
+import l2p.gameserver.serverpackets.ExShowVariationMakeWindow;
 import l2p.gameserver.serverpackets.InventoryUpdate;
 import l2p.gameserver.serverpackets.ShortCutRegister;
 import l2p.gameserver.serverpackets.components.SystemMsg;
@@ -23,8 +31,8 @@ public class Augmentation extends Functions implements ScriptFile, ICommunityBoa
 
     private static final Logger _log = LoggerFactory.getLogger(Augmentation.class);
 
-    private int PRICE_ID = 57; // id уплаты
-    private int PRICE_COUNT = 1; // кол-во предметов
+    private int PRICE_ID = 24179; // id уплаты
+    private int PRICE_COUNT = 3; // кол-во предметов
 
     @Override
     public void onLoad() {
@@ -56,12 +64,22 @@ public class Augmentation extends Functions implements ScriptFile, ICommunityBoa
 
             ItemInstance item = player.getActiveWeaponInstance();
             int id = Integer.parseInt(mBypass[1]);
+			
+			if (id == 1) {
+                player.sendPacket(Msg.SELECT_THE_ITEM_TO_BE_AUGMENTED, ExShowVariationMakeWindow.STATIC);
+                return;
+            }
+
+            if (id == 0) {
+                player.sendPacket(Msg.SELECT_THE_ITEM_FROM_WHICH_YOU_WISH_TO_REMOVE_AUGMENTATION, ExShowVariationCancelWindow.STATIC);
+                return;
+            }
 
             if (item == null || item.isAugmented() || !item.canBeAugmented(player, false)) {
                 return;
             }
             if (!player.getInventory().destroyItemByItemId(PRICE_ID, PRICE_COUNT)) {
-                if (PRICE_ID == 57) {
+                if (PRICE_ID == 4356) {
                     player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
                 } else {
                     player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
@@ -81,9 +99,11 @@ public class Augmentation extends Functions implements ScriptFile, ICommunityBoa
             }
             player.sendPacket(new InventoryUpdate().addModifiedItem(item));
 
-            player.getAllShortCuts().stream().filter(sc -> sc.getId() == item.getObjectId() && sc.getType() == ShortCut.TYPE_ITEM).forEach(sc -> {
-                player.sendPacket(new ShortCutRegister(player, sc));
-            });
+            for (ShortCut sc : player.getAllShortCuts()) {
+                if (sc.getId() == item.getObjectId() && sc.getType() == ShortCut.TYPE_ITEM) {
+                    player.sendPacket(new ShortCutRegister(player, sc));
+                }
+            }
             player.sendChanges();
 
         }

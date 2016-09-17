@@ -714,50 +714,116 @@
 			<mul order="0x30" stat="stunResist" val="1.5" />
 		</for>
 	</skill>
-	<skill id="3557" levels="1" name="Necklace of Valakas">
+	<skill id="3557" levels="2" name="Necklace of Valakas">
 		<!--
+		
+			<add order="0x60" stat="maxHp" val="625" />			
+			<mul order="0x30" stat="sleepResist" val="1.50" />
+			<mul order="0x30" stat="sleepPower" val="1.50" />
+			<mul order="0x30" stat="mReuse" val="0.90" />
+			<mul order="0x30" stat="pReuse" val="0.90" />
+			<add order="0x40" stat="mCritRate" val="3" />
+			<add order="0x40" stat="reflectDam" val="5" />
+			<add order="0x60" stat="STR" value="3.0" />
+			<add order="0x60" stat="INT" value="3.0" />			
+			<mul order="0x30" stat="pAtk" val="1.1" />
+			<mul order="0x30" stat="mAtk" val="1.2" />
+            <add order="0x40" stat="defenceFire" val="30"/>
+            <add order="0x40" stat="defenceUnholy" val="30"/>	
+
+			
+		
+		
 		    Description: increase resistance to sleep by 40%, HP +445, increase sleep attack chance by 40%, decrease in re-use delay, increase in P. Atk. and M. Atk. wild magic effect, damage shield effect and increase in resistance to flaming attack.
 		-->
+		<table name="#maxHp">445 625</table>
+		<table name="#pAtk">1.04 1.1</table>
+		<table name="#mAtk">1.08 1.2</table>
+		<table name="#mCritRate">2 4</table>
+		<table name="#defenceFire">15 30</table>
+		<table name="#sleepResist">1.4 1.5</table>
+		<table name="#sleepPower">1.4 1.5</table>
+		<table name="#STR">0 3</table>
+		<table name="#INT">0 3</table>
+		<table name="#defenceUnholy">0 30</table>		
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x60" stat="maxHp" val="445" />
-			<mul order="0x30" stat="pAtk" val="1.04" />
-			<mul order="0x30" stat="mAtk" val="1.08" />
-			<add order="0x40" stat="mCritRate" val="2" />
-			<add order="0x40" stat="defenceFire" val="15" />
-			<mul order="0x30" stat="sleepResist" val="1.4" />
-			<mul order="0x30" stat="sleepPower" val="1.4" />
+			<add order="0x60" stat="maxHp" val="#maxHp" />
+			<mul order="0x30" stat="pAtk" val="#pAtk" />
+			<mul order="0x30" stat="mAtk" val="#mAtk" />
+			<add order="0x40" stat="mCritRate" val="#mCritRate" />
+			<add order="0x40" stat="defenceFire" val="#defenceFire" />
+			<mul order="0x30" stat="sleepResist" val="#sleepResist" />
+			<mul order="0x30" stat="sleepPower" val="#sleepPower" />
+			<add order="0x40" stat="STR" val="#STR" />
+			<add order="0x40" stat="INT" val="#INT" />
+			<add order="0x40" stat="defenceUnholy" val="#defenceUnholy"/>
 			<mul order="0x30" stat="mReuse" val="0.90" />
 			<mul order="0x30" stat="pReuse" val="0.90" />
 			<add order="0x40" stat="reflectDam" val="5" />
 		</for>
 	</skill>
-	<skill id="3558" levels="1" name="Earring of Antharas">
+	<skill id="3558" levels="2" name="Earring of Antharas">
 		<!--
+		  
+		  <mul order="0x30" stat="bleedResist" val="1.50" />
+			<mul order="0x30" stat="bleedPower" val="1.50" />
+			<mul order="0x30" stat="hpEff" val="1.1" />
+			<add order="0x40" stat="absorbDam" val="4" />
+			<mul order="0x30" stat="stunResist" val="1.4" />
+			<mul order="0x30" stat="mentalResist" val="1.4" />
+			<mul order="0x30" stat="mentalPower" val="1.4" />
+			<mul order="0x30" stat="stunPower" val="1.4" />
+			<mul order="0x30" stat="mpConsum" val="0.95" />
+			<mul order="0x30" stat="mpConsumePhysical" val="0.95" />			
+			<add order="0x60" stat="CON" value="3.0" />
+			<add order="0x60" stat="MEN" value="3.0" />
+			<mul order="0x30" stat="mDef" val="1.1" />
+			<mul order="0x30" stat="pDef" val="1.1" />
+			<add order="0x40" stat="defenceEarth" val="30"/>
+            <add order="0x40" stat="defenceHoly" val="30"/>
 		  
 		    Description: increase resist bleed by 50%, increase bleed attack chance by 40%, increase healing effects, vampiric rage, 30% increase in stun/abnormal mental state resistance, increase stun/abnormal mental state attack chance by 30%, decrease MP consumption, and increase resistance to earth attacks.
 		-->
+		<table name="#bleedResist">1.4 1.5</table>
+		<table name="#bleedPower">1.4 1.5</table>
+		<table name="#stunResist">1.3 1.4</table>
+		<table name="#stunPower">1.3 1.4</table>
+		<table name="#mentalResist">1.3 1.4</table>
+		<table name="#mentalPower">1.3 1.4</table>
+		<table name="#defenceEarth">15 30</table>		
+		<table name="#CON">0 3</table>
+		<table name="#MEN">0 3</table>
+		<table name="#defenceHoly">0 30</table>
+		<table name="#mDef">1 1.1</table>
+		<table name="#pDef">1 1.05</table>
+		
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedResist" val="1.4" />
+			<mul order="0x30" stat="bleedResist" val="#bleedResist" />
 			<mul order="0x30" stat="hpEff" val="1.1" />
 			<add order="0x40" stat="absorbDam" val="4" />
-			<mul order="0x30" stat="stunResist" val="1.3" />
-			<mul order="0x30" stat="bleedPower" val="1.4" />
-			<mul order="0x30" stat="stunPower" val="1.3" />
-			<add order="0x40" stat="defenceEarth" val="15" />
-			<mul order="0x30" stat="mentalResist" val="1.3" />
-			<mul order="0x30" stat="mentalPower" val="1.3" />
+			<mul order="0x30" stat="stunResist" val="#stunResist" />
+			<mul order="0x30" stat="bleedPower" val="#bleedPower" />
+			<mul order="0x30" stat="stunPower" val="#stunPower" />
+			<add order="0x40" stat="defenceEarth" val="#defenceEarth" />
+			<mul order="0x30" stat="mentalResist" val="#mentalResist" />
+			<mul order="0x30" stat="mentalPower" val="#mentalPower" />
 			<mul order="0x30" stat="mpConsum" val="0.95" />
 			<mul order="0x30" stat="mpConsumePhysical" val="0.95" />
+			<mul order="0x30" stat="mDef" val="#mDef" />
+			<mul order="0x30" stat="pDef" val="#pDef" />
+			<add order="0x40" stat="CON" val="#CON" />
+			<add order="0x40" stat="MEN" val="#MEN" />
+			<add order="0x40" stat="defenceHoly" val="#defenceHoly"/>
 		</for>
 	</skill>
 	<skill id="3559" levels="2" name="Earring of Zaken">
@@ -785,66 +851,149 @@
 			<add order="0x40" stat="defenceUnholy" val="#element" />
 		</for>
 	</skill>
-	<skill id="3560" levels="1" name="Earring of Orfen">
+	<skill id="3560" levels="2" name="Earring of Orfen">
 		<!--
+		   Серьга с душой Орфен. MP +46, сопротивление усыплению / параличу / ментальным атакам +25%, 
+		   шанс усыпления / паралича / ментальных атак +25%. Эффективность получаемого лечения +10%. Расход MP для умений -5%. Эффект Гнева Вампира 4%. При надевании двух таких серег эффект не суммируется. 
 		   
-		    Description: increase resistance to bleed by 20%, increase bleed attack chance by 20%, and increase healing effects.
+		   Description: increase resistance to bleed by 20%, increase bleed attack chance by 20%, and increase healing effects.
 		-->
+		<table name="#absorbDam">0 4</table>
+		<table name="#bleedResist">1.2 1</table>
+		<table name="#bleedPower">1.2 1</table>		
+		<table name="#hpEff">1.06 1.1</table>		
+		<table name="#Consum">1 0.95</table>
+		<table name="#Resist">1 1.25</table>
+		<table name="#Power">1 1.25</table>		
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedResist" val="1.2" />
-			<mul order="0x30" stat="bleedPower" val="1.2" />
-			<mul order="0x30" stat="hpEff" val="1.06" />
+			<add order="0x40" stat="absorbDam" val="#absorbDam" />
+			<mul order="0x30" stat="bleedResist" val="#bleedResist" />
+			<mul order="0x30" stat="bleedPower" val="#bleedPower" />
+			<mul order="0x30" stat="hpEff" val="#hpEff" />			
+			<mul order="0x30" stat="mpConsum" val="#Consum" />
+			<mul order="0x30" stat="mpConsumePhysical" val="#Consum" />			
+			<mul order="0x30" stat="paralyzeResist" val="#Resist" />
+			<mul order="0x30" stat="sleepResist" val="#Resist" />
+			<mul order="0x30" stat="paralyzePower" val="#Power" />
+			<mul order="0x30" stat="sleepPower" val="#Power" />
+			<mul order="0x30" stat="mentalResist" val="#Resist" />
+			<mul order="0x30" stat="mentalPower" val="#Power" />
+			
 		</for>
 	</skill>
-	<skill id="3561" levels="1" name="Ring of Baium">
+	<skill id="3561" levels="3" name="Ring of Baium">
 		<!--
-		  
 		    Description: increase resistance to poison by 40%, increase poison attack chance by 40%, increase accuracy, increase critical damage, increase resistance to hold by 30%, increase hold attack chance by 30%, increase Atk., and casting spd.
 		-->
+		<table name="#poisonResist">1.4 1.4 1</table>
+		<table name="#cAtk">1.15 1.20 1.30</table>
+		<table name="#poisonPower">1.4 1.4 1</table>
+		<table name="#rootResist">1.3 1.3 1.3</table>
+		<table name="#rootPower">1.3 1.3 1.3</table>
+		<table name="#pAtkSpd">1.04 1.04 1.07</table>
+		<table name="#mAtkSpd">1.04 1.04 1.07</table>
+		<table name="#mentalResist">1 1 1.25</table>
+		<table name="#mentalPower">1 1 1.25</table>
+		<table name="#stunResist">1 1 1.25</table>
+		<table name="#stunPower">1 1 1.25</table>
+		<table name="#mCritDamage">1 1 1.40</table>
+		<table name="#accCombat">2 2 4</table>
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonResist" val="1.4" />
-			<add order="0x40" stat="accCombat" val="2" />
-			<mul order="0x30" stat="cAtk" val="1.15" />
-			<mul order="0x30" stat="rootResist" val="1.3" />
-			<mul order="0x30" stat="rootPower" val="1.3" />
-			<mul order="0x30" stat="poisonPower" val="1.4" />
-			<mul order="0x30" stat="pAtkSpd" val="1.04" />
-			<mul order="0x30" stat="mAtkSpd" val="1.04" />
+			<mul order="0x30" stat="mentalResist" val="#mentalResist" />
+			<mul order="0x30" stat="mentalPower" val="#mentalPower" />
+			<mul order="0x30" stat="stunResist" val="#stunResist" />
+			<mul order="0x30" stat="stunPower" val="#stunPower" />			
+			<mul order="0x30" stat="mCritDamage" val="#mCritDamage" />
+			<mul order="0x30" stat="poisonResist" val="#poisonResist" />
+			<add order="0x40" stat="accCombat" val="#accCombat" />
+			<mul order="0x30" stat="cAtk" val="#cAtk" />
+			<mul order="0x30" stat="rootResist" val="#rootResist" />
+			<mul order="0x30" stat="rootPower" val="#rootPower" />
+			<mul order="0x30" stat="poisonPower" val="#poisonPower" />
+			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 		</for>
 	</skill>
-	<skill id="3562" levels="1" name="Ring of Ant Queen">
+	<skill id="3562" levels="3" name="Ring of Ant Queen">
 		<!--
+		   <for>
+			<mul order="0x30" stat="poisonResist" val="1.30" />
+			<add order="0x40" stat="accCombat" val="2" />
+			<mul order="0x30" stat="cAtk" val="1.25" />
+			<mul order="0x30" stat="rootResist" val="1.20" />
+			<mul order="0x30" stat="rootPower" val="1.20" />
+			<mul order="0x30" stat="poisonPower" val="1.30" />
+		</for>
 		   
+		   <for>
+			<mul order="0x30" stat="bleedResist" val="1.25" />
+			<mul order="0x30" stat="bleedPower" val="1.25" />
+			<mul order="0x30" stat="poisonResist" val="1.25" />
+			<mul order="0x30" stat="poisonPower" val="1.25" />
+			<mul order="0x30" stat="stunResist" val="1.25" />
+			<mul order="0x30" stat="stunPower" val="1.25" />			
+			<mul order="0x30" stat="mCritDamage" val="1.25" />
+			<mul order="0x30" stat="cAtk" val="1.25" />
+			<add order="0x40" stat="rCrit" val="20" />
+			<add order="0x40" stat="mCritRate" val="20" />
+			<add order="0x40" stat="accCombat" val="4" />			
+		</for>
+		
 		    Description: increase resistance to poison by 30%, increase poison attack chance by 30%, increase accuracy, increase critical damage, increase resistance to hold by 20%, and increase hold attack chance by 20%.
 		-->
+		<table name="#poisonResist">1.3 1.3 1.3</table>
+		<table name="#poisonPower">1.3 1.3 1.3</table>
+		<table name="#cAtk">1.15 1.20 1.30</table>
+		<table name="#rootResist">1.2 1.2 1</table>
+		<table name="#rootPower">1.2 1.2 1</table>
+		<table name="#rCrit">0 0 1.7</table>
+		<table name="#mCritRate">0 0 10</table>
+		<table name="#stunResist">1 1 1.25</table>
+		<table name="#stunPower">1 1 1.25</table>
+		<table name="#mCritDamage">1 1 1.40</table>
+		<table name="#bleedResist">1 1 1.25</table>
+		<table name="#bleedPower">1 1 1.25</table>
+		<table name="#bleedPower">1 1 1.25</table>
+		<table name="#accCombat">2 2 4</table>
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonResist" val="1.3" />
-			<add order="0x40" stat="accCombat" val="2" />
-			<mul order="0x30" stat="cAtk" val="1.15" />
-			<mul order="0x30" stat="rootResist" val="1.2" />
-			<mul order="0x30" stat="poisonPower" val="1.3" />
-			<mul order="0x30" stat="rootPower" val="1.2" />
+			<add order="0x40" stat="rCrit" val="#rCrit" />
+			<add order="0x40" stat="mCritRate" val="#mCritRate" />
+			<mul order="0x30" stat="stunResist" val="#stunResist" />
+			<mul order="0x30" stat="stunPower" val="#stunPower" />			
+			<mul order="0x30" stat="mCritDamage" val="#mCritDamage" />
+		    <mul order="0x30" stat="bleedResist" val="#bleedResist" />
+			<mul order="0x30" stat="bleedPower" val="#bleedPower" />
+			<mul order="0x30" stat="poisonResist" val="#poisonResist" />
+			<add order="0x40" stat="accCombat" val="#accCombat" />
+			<mul order="0x30" stat="cAtk" val="#cAtk" />
+			<mul order="0x30" stat="rootResist" val="#rootResist" />
+			<mul order="0x30" stat="poisonPower" val="#poisonPower" />
+			<mul order="0x30" stat="rootPower" val="#rootPower" />
 		</for>
 	</skill>
-	<skill id="3563" levels="1" name="Ring of Core">
+	<skill id="3563" levels="2" name="Ring of Core">
 		<!--
 		    Description: increase resistance to poison by 20%, increase poison attack chance by 20%, and increase accuracy.
-		-->
+		-->	
+		<table name="#rootResist">1 1.15</table>
+		<table name="#rootPower">1 1.15</table>
+		<table name="#cAtk">1 1.10</table>		
+		<table name="#rCrit">0 10</table>
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -854,6 +1003,10 @@
 			<mul order="0x30" stat="poisonResist" val="1.2" />
 			<mul order="0x30" stat="poisonPower" val="1.2" />
 			<add order="0x40" stat="accCombat" val="1" />
+			<mul order="0x30" stat="rootResist" val="#rootResist" />
+			<mul order="0x30" stat="rootPower" val="#rootPower" />
+			<mul order="0x30" stat="cAtk" val="#cAtk" />
+			<add order="0x40" stat="rCrit" val="#rCrit" />
 		</for>
 	</skill>
 	<skill id="3564" levels="3" name="Special Ability: Haste">

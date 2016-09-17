@@ -43,27 +43,23 @@ public class _156_MillenniumLove extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "30368-06.htm":
-                st.giveItems(LILITHS_LETTER, 1);
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "156_1":
-                st.takeItems(LILITHS_LETTER, -1);
-                if (st.getQuestItemsCount(THEONS_DIARY) == 0) {
-                    st.giveItems(THEONS_DIARY, 1);
-                    st.setCond(2);
-                }
-                htmltext = "30369-03.htm";
-                break;
-            case "156_2":
-                st.takeItems(LILITHS_LETTER, -1);
-                st.playSound(SOUND_FINISH);
-                htmltext = "30369-04.htm";
-                st.exitCurrentQuest(false);
-                break;
+        if (event.equals("30368-06.htm")) {
+            st.giveItems(LILITHS_LETTER, 1);
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("156_1")) {
+            st.takeItems(LILITHS_LETTER, -1);
+            if (st.getQuestItemsCount(THEONS_DIARY) == 0) {
+                st.giveItems(THEONS_DIARY, 1);
+                st.setCond(2);
+            }
+            htmltext = "30369-03.htm";
+        } else if (event.equals("156_2")) {
+            st.takeItems(LILITHS_LETTER, -1);
+            st.playSound(SOUND_FINISH);
+            htmltext = "30369-04.htm";
+            st.exitCurrentQuest(false);
         }
         return htmltext;
     }

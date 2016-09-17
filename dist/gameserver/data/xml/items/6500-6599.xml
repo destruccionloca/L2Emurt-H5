@@ -1427,7 +1427,7 @@
     </for>
   </weapon>
   <weapon id="6594" name="Shining Bow" add_name="Focus">
-    <set name="atk_reuse" value="820"/>
+    <set name="atk_reuse" value="1500"/>
     <set name="crystal_count" value="2440"/>
     <set name="crystal_type" value="S"/>
     <set name="crystallizable" value="true"/>

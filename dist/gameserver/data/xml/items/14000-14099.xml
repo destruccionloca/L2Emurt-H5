@@ -713,7 +713,7 @@
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
     <set name="icon" value="icon.pet_controler_i01"/>
-    <set name="tradeable" value="false"/>
+    <set name="tradeable" value="true"/>
     <set name="type" value="OTHER"/>
     <set name="weight" value="10"/>
     <cond msgId="1508">
@@ -727,7 +727,7 @@
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
     <set name="icon" value="icon.pet_controler_i01"/>
-    <set name="tradeable" value="false"/>
+    <set name="tradeable" value="true"/>
     <set name="type" value="OTHER"/>
     <set name="weight" value="10"/>
     <cond msgId="1508">

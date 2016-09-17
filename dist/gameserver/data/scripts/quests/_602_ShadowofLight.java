@@ -86,12 +86,12 @@ public class _602_ShadowofLight extends Quest implements ScriptFile {
         } else if (event.equalsIgnoreCase("eye_of_argos_q0602_0201.htm")) {
             st.takeItems(EYE_OF_DARKNESS, -1);
             int random = Rnd.get(100) + 1;
-            for (int[] REWARD : REWARDS) {
-                if (REWARD[4] <= random && random <= REWARD[5]) {
-                    st.giveItems(ADENA_ID, REWARD[1], true);
-                    st.addExpAndSp(REWARD[2], REWARD[3]);
-                    if (REWARD[0] != 0) {
-                        st.giveItems(REWARD[0], 3, true);
+            for (int i = 0; i < REWARDS.length; i++) {
+                if (REWARDS[i][4] <= random && random <= REWARDS[i][5]) {
+                    st.giveItems(ADENA_ID, REWARDS[i][1], true);
+                    st.addExpAndSp(REWARDS[i][2], REWARDS[i][3]);
+                    if (REWARDS[i][0] != 0) {
+                        st.giveItems(REWARDS[i][0], 3, true);
                     }
                 }
             }

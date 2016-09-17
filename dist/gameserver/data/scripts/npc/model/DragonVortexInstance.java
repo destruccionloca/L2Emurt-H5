@@ -16,7 +16,7 @@ public final class DragonVortexInstance extends NpcInstance {
     private long _timer = 0L;
     private NpcInstance _boss;
     private Boolean _proverka = false;
-
+	
     public DragonVortexInstance(int objectId, NpcTemplate template) {
         super(objectId, template);
     }
@@ -33,7 +33,7 @@ public final class DragonVortexInstance extends NpcInstance {
                 return;
             }
 
-            if (_boss != null && _proverka) {
+			if (_boss != null && _proverka) {
                 showChatWindow(player, "default/32871-4.htm");
                 return;
             }
@@ -49,11 +49,11 @@ public final class DragonVortexInstance extends NpcInstance {
                 int dust_rider = 25719;
                 int emerald_horn = 25718;
 
-                if (chance < 3) {
+                if (chance < 15) {
                     bossToSpawn = muscle_bomber;
-                } else if (chance < 8) {
+                } else if (chance < 17) {
                     bossToSpawn = shadow_summoner;
-                } else if (chance < 15) {
+                } else if (chance < 20) {
                     bossToSpawn = spike_slasher;
                 } else if (chance < 25) {
                     bossToSpawn = blackdagger_wing;
@@ -65,7 +65,7 @@ public final class DragonVortexInstance extends NpcInstance {
                     bossToSpawn = emerald_horn;
                 }
 
-                _boss = NpcUtils.spawnSingle(bossToSpawn, Location.coordsRandomize(getLoc(), 300, 600), getReflection());
+				_boss = NpcUtils.spawnSingle(bossToSpawn, Location.coordsRandomize(getLoc(), 300, 600), getReflection());
                 _timer = System.currentTimeMillis();
             } else {
                 showChatWindow(player, "default/32871-2.htm");

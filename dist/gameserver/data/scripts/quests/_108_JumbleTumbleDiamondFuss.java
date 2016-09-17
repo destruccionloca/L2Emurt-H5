@@ -60,23 +60,19 @@ public class _108_JumbleTumbleDiamondFuss extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "collector_gouph_q0108_03.htm":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.giveItems(GOUPHS_CONTRACT, 1);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "carrier_torocco_q0108_02.htm":
-                st.takeItems(REEPS_CONTRACT, 1);
-                st.giveItems(ELVEN_WINE, 1);
-                st.setCond(3);
-                break;
-            case "blacksmith_bronp_q0108_02.htm":
-                st.takeItems(BRONPS_DICE, 1);
-                st.giveItems(BRONPS_CONTRACT, 1);
-                st.setCond(5);
-                break;
+        if (event.equals("collector_gouph_q0108_03.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.giveItems(GOUPHS_CONTRACT, 1);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("carrier_torocco_q0108_02.htm")) {
+            st.takeItems(REEPS_CONTRACT, 1);
+            st.giveItems(ELVEN_WINE, 1);
+            st.setCond(3);
+        } else if (event.equals("blacksmith_bronp_q0108_02.htm")) {
+            st.takeItems(BRONPS_DICE, 1);
+            st.giveItems(BRONPS_CONTRACT, 1);
+            st.setCond(5);
         }
         return htmltext;
     }

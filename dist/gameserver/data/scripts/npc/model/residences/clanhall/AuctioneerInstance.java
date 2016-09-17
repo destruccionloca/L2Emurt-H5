@@ -75,10 +75,12 @@ public class AuctioneerInstance extends NpcInstance {
         else if (actualCommand.equalsIgnoreCase("list_all")) {
             int page = Integer.parseInt(tokenizer.nextToken());
 
-            List<ClanHallAuctionEvent> events = new ArrayList<>();
-            ResidenceHolder.getInstance().getResidenceList(ClanHall.class).stream().filter(ch -> ch.getSiegeEvent().getClass() == ClanHallAuctionEvent.class && ch.getSiegeEvent().isInProgress()).forEach(ch -> {
-                events.add(ch.<ClanHallAuctionEvent>getSiegeEvent());
-            });
+            List<ClanHallAuctionEvent> events = new ArrayList<ClanHallAuctionEvent>();
+            for (ClanHall ch : ResidenceHolder.getInstance().getResidenceList(ClanHall.class)) {
+                if (ch.getSiegeEvent().getClass() == ClanHallAuctionEvent.class && ch.getSiegeEvent().isInProgress()) {
+                    events.add(ch.<ClanHallAuctionEvent>getSiegeEvent());
+                }
+            }
 
             if (events.isEmpty()) {
                 player.sendPacket(SystemMsg.THERE_ARE_NO_CLAN_HALLS_UP_FOR_AUCTION);

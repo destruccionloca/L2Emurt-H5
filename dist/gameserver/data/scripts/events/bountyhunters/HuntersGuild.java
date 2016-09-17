@@ -2,7 +2,6 @@ package events.bountyhunters;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import l2p.commons.util.Rnd;
 import l2p.gameserver.Config;
@@ -105,7 +104,12 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
                 show(new CustomMessage("scripts.events.bountyhunters.NoTargets", player), player);
                 return;
             }
-            List<NpcTemplate> targets = monsters.stream().filter(npc -> checkTarget(npc)).collect(Collectors.toList());
+            List<NpcTemplate> targets = new ArrayList<NpcTemplate>();
+            for (NpcTemplate npc : monsters) {
+                if (checkTarget(npc)) {
+                    targets.add(npc);
+                }
+            }
             if (targets.isEmpty()) {
                 show(new CustomMessage("scripts.events.bountyhunters.NoTargets", player), player);
                 return;

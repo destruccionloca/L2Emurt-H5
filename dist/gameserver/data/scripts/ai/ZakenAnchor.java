@@ -17,9 +17,11 @@ public class ZakenAnchor extends DefaultAI {
     @Override
     protected boolean thinkActive() {
         NpcInstance actor = getActor();
-        actor.getAroundNpc(1000, 100).stream().filter(npc -> npc.getNpcId() == Candle && npc.getRightHandItem() == 15302).forEach(npc -> {
-            i++;
-        });
+        for (NpcInstance npc : actor.getAroundNpc(1000, 100)) {
+            if (npc.getNpcId() == Candle && npc.getRightHandItem() == 15302) {
+                i++;
+            }
+        }
 
         if (i >= 4) {
             if (actor.getReflection().getInstancedZoneId() == 133) {

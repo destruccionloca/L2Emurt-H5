@@ -1564,7 +1564,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="30427" name="Siff" title="Gatekeeper">
+    <npc id="30427" name="Кармэн" title="Вход в Харнака">
         <set name="aggroRange" value="1000"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1600,7 +1600,8 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="Merchant"/>
+        <set name="type" value="SiffGatekeeper"/>
+		<set name="displayId" value="32798"/>
         <skills>
             <skill id="4416" level="14"/>
             <skill id="4408" level="1"/>

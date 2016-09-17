@@ -28,7 +28,7 @@ public class _511_AwlUnderFoot extends Quest implements ScriptFile {
     private final static int DungeonLeaderMark = 9797;
     private final static int RewardMarksCount = 1000; // цифра с потолка
     private final static int KnightsEpaulette = 9912;
-    private static final Map<Integer, Prison> _prisons = new ConcurrentHashMap<>();
+    private static final Map<Integer, Prison> _prisons = new ConcurrentHashMap<Integer, Prison>();
     private static final int HagerTheOutlaw = 25572;
     private static final int AllSeeingRango = 25575;
     private static final int Jakard = 25578;

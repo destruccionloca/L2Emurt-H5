@@ -73,20 +73,15 @@ public class BeastShot extends ScriptItemHandler implements ScriptFile {
                 }
                 consumption = pet.getSoulshotConsumeCount();
 
-                count = item.getCount();
+                if (Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET || player.hasBonus() ? PremiumConfig.getPremConfigId(player.getBonus().getBonusId()).ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET : false) {
 
-                if ((Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET || player.hasBonus() ? PremiumConfig.getPremConfigId(player.getBonus().getBonusId()).ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET : false) && count >= 1) {
-                    pet.chargeSoulShot();
-                    skillid = 2033;
-                } else if (!Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET) {
-
-                    if (!player.getInventory().destroyItem(item, consumption)) {
-                        player.sendPacket(Msg.YOU_DONT_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
-                        return false;
-                    }
-                    pet.chargeSoulShot();
-                    skillid = 2033;
+                } else if (!Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET && !player.getInventory().destroyItem(item, consumption)) {
+                    player.sendPacket(Msg.YOU_DONT_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+                    return false;
                 }
+                pet.chargeSoulShot();
+                skillid = 2033;
+
                 break;
             case 6646:
             case 20333:
@@ -97,18 +92,15 @@ public class BeastShot extends ScriptItemHandler implements ScriptFile {
 
                 count = item.getCount();
 
-                if ((Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET || player.hasBonus() ? PremiumConfig.getPremConfigId(player.getBonus().getBonusId()).ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET : false) && count >= 1) {
-                    pet.chargeSpiritShot(ItemInstance.CHARGED_SPIRITSHOT);
-                    skillid = 2008;
-                } else if (!Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET) {
+                if (Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET || player.hasBonus() ? PremiumConfig.getPremConfigId(player.getBonus().getBonusId()).ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET : false) {
 
-                    if (!player.getInventory().destroyItem(item, consumption)) {
-                        player.sendPacket(Msg.YOU_DONT_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR);
-                        return false;
-                    }
-                    pet.chargeSpiritShot(ItemInstance.CHARGED_SPIRITSHOT);
-                    skillid = 2008;
+                } else if (!Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET && !player.getInventory().destroyItem(item, consumption)) {
+                    player.sendPacket(Msg.YOU_DONT_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+                    return false;
                 }
+                pet.chargeSpiritShot(ItemInstance.CHARGED_SPIRITSHOT);
+                skillid = 2008;
+
                 break;
             case 6647:
             case 20334:
@@ -119,18 +111,15 @@ public class BeastShot extends ScriptItemHandler implements ScriptFile {
 
                 count = item.getCount();
 
-                if ((Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET || player.hasBonus() ? PremiumConfig.getPremConfigId(player.getBonus().getBonusId()).ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET : false) && count >= 1) {
-                    pet.chargeSpiritShot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
-                    skillid = 2009;
-                } else if (!Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET) {
+                if (Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET || player.hasBonus() ? PremiumConfig.getPremConfigId(player.getBonus().getBonusId()).ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET : false) {
 
-                    if (!player.getInventory().destroyItem(item, consumption)) {
-                        player.sendPacket(Msg.YOU_DONT_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR);
-                        return false;
-                    }
-                    pet.chargeSpiritShot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
-                    skillid = 2009;
+                } else if (!Config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET && !player.getInventory().destroyItem(item, consumption)) {
+                    player.sendPacket(Msg.YOU_DONT_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+                    return false;
                 }
+                pet.chargeSpiritShot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
+                skillid = 2009;
+
                 break;
         }
 

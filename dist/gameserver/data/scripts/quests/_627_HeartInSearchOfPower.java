@@ -50,49 +50,43 @@ public class _627_HeartInSearchOfPower extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "dark_necromancer_q0627_0104.htm":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "dark_necromancer_q0627_0201.htm":
-                st.takeItems(GEM_OF_SUBMISSION, 300);
-                st.giveItems(SEAL_OF_LIGHT, 1, false);
-                st.setCond(3);
-                break;
-            case "enfeux_q0627_0301.htm":
-                st.takeItems(SEAL_OF_LIGHT, 1);
-                st.giveItems(GEM_OF_SAINTS, 1, false);
-                st.setCond(4);
-                break;
-            case "dark_necromancer_q0627_0401.htm":
-                st.takeItems(GEM_OF_SAINTS, 1);
-                break;
-            default:
-                if (event.equals("627_11")) {
-                    htmltext = "dark_necromancer_q0627_0402.htm";
-                    st.giveItems(ADENA_ID, 100000, true);
-                } else if (event.equals("627_12")) {
-                    htmltext = "dark_necromancer_q0627_0402.htm";
-                    st.giveItems(ASOFE, 13, true);
-                    st.giveItems(ADENA_ID, 6400, true);
-                } else if (event.equals("627_13")) {
-                    htmltext = "dark_necromancer_q0627_0402.htm";
-                    st.giveItems(THONS, 13, true);
-                    st.giveItems(ADENA_ID, 6400, true);
-                } else if (event.equals("627_14")) {
-                    htmltext = "dark_necromancer_q0627_0402.htm";
-                    st.giveItems(ENRIA, 6, true);
-                    st.giveItems(ADENA_ID, 13600, true);
-                } else if (event.equals("627_15")) {
-                    htmltext = "dark_necromancer_q0627_0402.htm";
-                    st.giveItems(MOLD_HARDENER, 3, true);
-                    st.giveItems(ADENA_ID, 17200, true);
-                }
-                st.playSound(SOUND_FINISH);
-                st.exitCurrentQuest(true);
-                break;
+        if (event.equals("dark_necromancer_q0627_0104.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("dark_necromancer_q0627_0201.htm")) {
+            st.takeItems(GEM_OF_SUBMISSION, 300);
+            st.giveItems(SEAL_OF_LIGHT, 1, false);
+            st.setCond(3);
+        } else if (event.equals("enfeux_q0627_0301.htm")) {
+            st.takeItems(SEAL_OF_LIGHT, 1);
+            st.giveItems(GEM_OF_SAINTS, 1, false);
+            st.setCond(4);
+        } else if (event.equals("dark_necromancer_q0627_0401.htm")) {
+            st.takeItems(GEM_OF_SAINTS, 1);
+        } else {
+            if (event.equals("627_11")) {
+                htmltext = "dark_necromancer_q0627_0402.htm";
+                st.giveItems(ADENA_ID, 100000, true);
+            } else if (event.equals("627_12")) {
+                htmltext = "dark_necromancer_q0627_0402.htm";
+                st.giveItems(ASOFE, 13, true);
+                st.giveItems(ADENA_ID, 6400, true);
+            } else if (event.equals("627_13")) {
+                htmltext = "dark_necromancer_q0627_0402.htm";
+                st.giveItems(THONS, 13, true);
+                st.giveItems(ADENA_ID, 6400, true);
+            } else if (event.equals("627_14")) {
+                htmltext = "dark_necromancer_q0627_0402.htm";
+                st.giveItems(ENRIA, 6, true);
+                st.giveItems(ADENA_ID, 13600, true);
+            } else if (event.equals("627_15")) {
+                htmltext = "dark_necromancer_q0627_0402.htm";
+                st.giveItems(MOLD_HARDENER, 3, true);
+                st.giveItems(ADENA_ID, 17200, true);
+            }
+            st.playSound(SOUND_FINISH);
+            st.exitCurrentQuest(true);
         }
         return htmltext;
     }

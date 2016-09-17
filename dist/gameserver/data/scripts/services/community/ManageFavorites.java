@@ -1,5 +1,8 @@
 package services.community;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.StringTokenizer;
 
 import l2p.gameserver.Config;
@@ -21,6 +24,7 @@ import org.slf4j.LoggerFactory;
 public class ManageFavorites implements ScriptFile, ICommunityBoardHandler {
 
     private static final Logger _log = LoggerFactory.getLogger(ManageFavorites.class);
+	private static final DateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy HH:mm");
 
     @Override
     public void onLoad() {
@@ -93,7 +97,7 @@ public class ManageFavorites implements ScriptFile, ICommunityBoardHandler {
                 dialog = dialog.replaceFirst("%noe%", player.getVarB("NoExp") ? "on" : "off");
                 dialog = dialog.replaceFirst("%notraders%", player.getVarB("notraders") ? "on" : "off");
                 dialog = dialog.replaceFirst("%notShowBuffAnim%", player.getVarB("notShowBuffAnim") ? "on" : "off");
-                dialog = dialog.replaceFirst("%noShift%", player.getVarB("noShift") ? "on" : "off");
+                dialog = dialog.replaceFirst("%noShift%", player.getVarB("noShift") ? "off" : "on");
                 dialog = dialog.replaceFirst("%sch%", player.getVarB("SkillsHideChance") ? "on" : "off");
 
                 dialog = dialog.replaceFirst("%vautoloot%", player.getVarB("autoloot") ? "Switch off" : "Switch on");
@@ -101,7 +105,7 @@ public class ManageFavorites implements ScriptFile, ICommunityBoardHandler {
                 dialog = dialog.replaceFirst("%vnoe%", player.getVarB("NoExp") ? "Switch off" : "Switch on");
                 dialog = dialog.replaceFirst("%vnotraders%", player.getVarB("notraders") ? "Switch off" : "Switch on");
                 dialog = dialog.replaceFirst("%vnotShowBuffAnim%", player.getVarB("notShowBuffAnim") ? "Switch off" : "Switch on");
-                dialog = dialog.replaceFirst("%vnoShift%", player.getVarB("noShift") ? "Switch on" : "Switch off");
+                dialog = dialog.replaceFirst("%vnoShift%", player.getVarB("noShift") ? "Switch off" : "Switch on");
                 dialog = dialog.replaceFirst("%vsch%", player.getVarB("SkillsHideChance") ? "Switch off" : "Switch on");
             }
             dialog = dialog.replaceFirst("%regcp%", String.format("%8.2f", Formulas.calcCpRegen(player)).replace(',', '.'));
@@ -112,14 +116,23 @@ public class ManageFavorites implements ScriptFile, ICommunityBoardHandler {
             dialog = dialog.replaceFirst("%vapm%", String.valueOf(player.calcStat(Stats.ABSORB_DAMAGE_PERCENT, 0., target, null)));
             dialog = dialog.replaceFirst("%mcrit%", String.valueOf(player.calcStat(Stats.MCRITICAL_RATE, target, null)));
             dialog = dialog.replaceFirst("%dps%", String.valueOf(0));
-            dialog = dialog.replaceFirst("%bleed%", String.valueOf(player.calcStat(Stats.BLEED_RESIST, target, null) - 100.));
-            dialog = dialog.replaceFirst("%poison%", String.valueOf(player.calcStat(Stats.POISON_RESIST, target, null) - 100.));
-            dialog = dialog.replaceFirst("%stun%", String.valueOf(player.calcStat(Stats.STUN_RESIST, target, null) - 100.));
-            dialog = dialog.replaceFirst("%deten%", String.valueOf(player.calcStat(Stats.ROOT_RESIST, target, null) - 100.));
-            dialog = dialog.replaceFirst("%paralys%", String.valueOf(player.calcStat(Stats.PARALYZE_RESIST, target, null) - 100.));
-            dialog = dialog.replaceFirst("%dream%", String.valueOf(player.calcStat(Stats.SLEEP_RESIST, target, null) - 100.));
-            dialog = dialog.replaceFirst("%mental%", String.valueOf(player.calcStat(Stats.MENTAL_RESIST, target, null) - 100.));
-            dialog = dialog.replaceFirst("%debaf%", String.valueOf(player.calcStat(Stats.DEBUFF_RESIST, target, null) - 100.));
+            dialog = dialog.replaceFirst("%bleed%", String.valueOf(player.calcStat(Stats.BLEED_RESIST, target, null)));
+            dialog = dialog.replaceFirst("%poison%", String.valueOf(player.calcStat(Stats.POISON_RESIST, target, null)));
+            dialog = dialog.replaceFirst("%stun%", String.valueOf(player.calcStat(Stats.STUN_RESIST, target, null)));
+            dialog = dialog.replaceFirst("%deten%", String.valueOf(player.calcStat(Stats.ROOT_RESIST, target, null)));
+            dialog = dialog.replaceFirst("%paralys%", String.valueOf(player.calcStat(Stats.PARALYZE_RESIST, target, null)));
+            dialog = dialog.replaceFirst("%dream%", String.valueOf(player.calcStat(Stats.SLEEP_RESIST, target, null)));
+            dialog = dialog.replaceFirst("%mental%", String.valueOf(player.calcStat(Stats.MENTAL_RESIST, target, null)));
+            dialog = dialog.replaceFirst("%debaf%", String.valueOf(player.calcStat(Stats.DEBUFF_RESIST, target, null)));
+			dialog = dialog.replaceFirst("%prof%", String.valueOf(player.isLangRus() ? player.getActiveClass().toStringRuCB() : player.getActiveClass().toStringCB()));
+            dialog = dialog.replaceFirst("%lvl%", String.valueOf(player.getLevel()));
+            dialog = dialog.replaceFirst("%clan%", player.getClan() != null ? String.valueOf(player.getClan().getName()) : player.isLangRus() ? "<font color=\"FF0000\">нет</font>" : "<font color=\"FF0000\">none</font>");
+            dialog = dialog.replaceFirst("%noobl%", player.isNoble() ? String.valueOf(player.isLangRus() ? "да" : "no") : player.isLangRus() ? "<font color=\"FF0000\">требуется саб. 75 ур.</font>" : "<font color=\"FF0000\">required sub 75 lvl</font>");
+            dialog = dialog.replaceFirst("%time%", String.valueOf(player.getHoursInGames()).concat(player.isLangRus() ? " час" : " час"));
+            dialog = dialog.replaceFirst("%premium%", player.hasBonus() ? DATE_FORMAT.format(new Date(player.getBonus().getBonusExpireX())) : player.isLangRus() ? "<font color=\"LEVEL\"><a action=\"bypass _bbsscripts:services.RateBonus:list\">Купить премиум</a></font>" : "<font color=\"LEVEL\"><a action=\"bypass _bbsscripts:services.RateBonus:list\">Byu premium</a></font>");
+            dialog = dialog.replaceFirst("%servhwid%", player.isLangRus() ? "<a action=\"bypass -h user_lock\">Привязать</a>" : "<a action=\"bypass -h user_lock\">Install</a>");
+            dialog = dialog.replaceFirst("%servip%", player.isLangRus() ? "<a action=\"bypass -h user_lock\">Привязать</a>" : "<a action=\"bypass -h user_lock\">Install</a>");
+            dialog = dialog.replaceFirst("%ip%", player.getIP());
 
             ShowBoard.separateAndSend(dialog, player);
         } else if ("bbssetfav".equals(cmd)) {

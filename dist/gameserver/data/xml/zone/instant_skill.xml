@@ -176,4 +176,15 @@
 			<coords loc="147258 -113048 -2152 -1952"/>
 		</polygon>
 	</zone>
+	<zone name="[Inst kama]" type="instant_skill">
+		<polygon>
+			<coords loc="10936 -175704"/>
+			<coords loc="10920 -173368"/>
+			<coords loc="23688 -173816"/>
+			<coords loc="23672 -176808"/>
+		</polygon>
+		<restart_point>
+			<coords loc="-84440 242776 -3728 4836"/>
+		</restart_point>
+	</zone>
 </list>

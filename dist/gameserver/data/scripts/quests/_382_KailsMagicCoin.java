@@ -17,7 +17,7 @@ public class _382_KailsMagicCoin extends Quest implements ScriptFile {
     //NPCs
     private static int VERGARA = 30687;
     //MOBs and CHANCES
-    private static final Map<Integer, int[]> MOBS = new HashMap<>();
+    private static final Map<Integer, int[]> MOBS = new HashMap<Integer, int[]>();
 
     static {
         MOBS.put(21017, new int[]{5961}); // Fallen Orc
@@ -49,7 +49,9 @@ public class _382_KailsMagicCoin extends Quest implements ScriptFile {
 
         addStartNpc(VERGARA);
 
-        MOBS.keySet().forEach(this::addKillId);
+        for (int mobId : MOBS.keySet()) {
+            addKillId(mobId);
+        }
     }
 
     @Override

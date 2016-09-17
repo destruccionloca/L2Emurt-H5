@@ -34,9 +34,9 @@
 			<set name="lvlCpMod" value="0.05"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-71338"/>
-			<set name="spawnY" value="258271"/>
-			<set name="spawnZ" value="-3104"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="9.0"/>
 			<set name="male_collision_height" value="23.0"/>
 			<set name="female_collision_radius" value="8.0"/>
@@ -504,9 +504,9 @@
 			<set name="lvlCpMod" value="0.09"/>
 			<set name="lvlMpAdd" value="7.2"/>
 			<set name="lvlMpMod" value="0.08"/>
-			<set name="spawnX" value="-90890"/>
-			<set name="spawnY" value="248027"/>
-			<set name="spawnZ" value="-3570"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="22.8"/>
 			<set name="female_collision_radius" value="6.5"/>
@@ -919,9 +919,9 @@
 			<set name="lvlCpMod" value="0.06"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="45978"/>
-			<set name="spawnY" value="41196"/>
-			<set name="spawnZ" value="-3440"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.5"/>
@@ -1154,9 +1154,9 @@
 			<set name="lvlCpMod" value="0.09"/>
 			<set name="lvlMpAdd" value="7.2"/>
 			<set name="lvlMpMod" value="0.08"/>
-			<set name="spawnX" value="46182"/>
-			<set name="spawnY" value="41198"/>
-			<set name="spawnZ" value="-3440"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.5"/>
@@ -1431,9 +1431,9 @@
 			<set name="lvlCpMod" value="0.06"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="28377"/>
-			<set name="spawnY" value="10916"/>
-			<set name="spawnZ" value="-4224"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.0"/>
@@ -1712,9 +1712,9 @@
 			<set name="lvlCpMod" value="0.09"/>
 			<set name="lvlMpAdd" value="7.2"/>
 			<set name="lvlMpMod" value="0.08"/>
-			<set name="spawnX" value="28295"/>
-			<set name="spawnY" value="11063"/>
-			<set name="spawnZ" value="-4224"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.0"/>
@@ -2176,9 +2176,9 @@
 			<set name="lvlCpMod" value="0.07"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-56693"/>
-			<set name="spawnY" value="-113610"/>
-			<set name="spawnZ" value="-690"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="11.0"/>
 			<set name="male_collision_height" value="28.0"/>
 			<set name="female_collision_radius" value="7.0"/>
@@ -2362,9 +2362,9 @@
 			<set name="lvlCpMod" value="0.09"/>
 			<set name="lvlMpAdd" value="7.2"/>
 			<set name="lvlMpMod" value="0.08"/>
-			<set name="spawnX" value="-56682"/>
-			<set name="spawnY" value="-113730"/>
-			<set name="spawnZ" value="-690"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="7.0"/>
 			<set name="male_collision_height" value="27.5"/>
 			<set name="female_collision_radius" value="8.0"/>
@@ -2547,9 +2547,9 @@
 			<set name="lvlCpMod" value="0.1"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="108512"/>
-			<set name="spawnY" value="-174026"/>
-			<set name="spawnZ" value="-400"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="9.0"/>
 			<set name="male_collision_height" value="18.0"/>
 			<set name="female_collision_radius" value="5.0"/>
@@ -4316,9 +4316,9 @@
 			<set name="lvlCpMod" value="0.06"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-125533"/>
-			<set name="spawnY" value="38114"/>
-			<set name="spawnZ" value="1142"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="23.0"/>
 			<set name="female_collision_radius" value="7.0"/>
@@ -4363,9 +4363,9 @@
 			<set name="lvlCpMod" value="0.06"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-125533"/>
-			<set name="spawnY" value="38114"/>
-			<set name="spawnZ" value="1142"/>
+			<set name="spawnX" value="-83976"/>
+			<set name="spawnY" value="242760"/>
+			<set name="spawnZ" value="-3728"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.0"/>
@@ -4645,9 +4645,9 @@
 			<set name="lvlCpMod" value="0.25"/>
 			<set name="lvlMpAdd" value="24.75"/>
 			<set name="lvlMpMod" value="0.15"/>
-			<set name="spawnX" value="-125533"/>
-			<set name="spawnY" value="38114"/>
-			<set name="spawnZ" value="1142"/>
+			<set name="spawnX" value="-59160"/>
+			<set name="spawnY" value="-56968"/>
+			<set name="spawnZ" value="-2032"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.0"/>

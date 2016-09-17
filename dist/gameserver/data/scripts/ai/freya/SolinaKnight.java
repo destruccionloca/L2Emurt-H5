@@ -24,9 +24,13 @@ public class SolinaKnight extends Fighter {
         if (scarecrow == null) {
             List<NpcInstance> around = getActor().getAroundNpc(300, 100);
             if (around != null && !around.isEmpty()) {
-                around.stream().filter(npc -> npc.getNpcId() == 18912).filter(npc -> scarecrow == null || getActor().getDistance3D(npc) < getActor().getDistance3D(scarecrow)).forEach(npc -> {
-                    scarecrow = npc;
-                });
+                for (NpcInstance npc : around) {
+                    if (npc.getNpcId() == 18912) {
+                        if (scarecrow == null || getActor().getDistance3D(npc) < getActor().getDistance3D(scarecrow)) {
+                            scarecrow = npc;
+                        }
+                    }
+                }
             }
         }
 

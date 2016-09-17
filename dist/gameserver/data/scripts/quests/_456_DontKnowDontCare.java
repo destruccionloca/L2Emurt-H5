@@ -31,61 +31,61 @@ public class _456_DontKnowDontCare extends Quest implements ScriptFile {
 
     // Rewards: chance/id
     private static final int[][] REWARDS = {
-        // armor, chance 0.1% each
-        {100, 15743, 1},
-        {100, 15744, 1},
-        {100, 15745, 1},
-        {100, 15746, 1},
-        {100, 15747, 1},
-        {100, 15748, 1},
-        {100, 15749, 1},
-        {100, 15750, 1},
-        {100, 15751, 1},
-        {100, 15752, 1},
-        {100, 15753, 1},
-        {100, 15754, 1},
-        {100, 15755, 1},
-        {100, 15756, 1},
-        {100, 15757, 1},
-        {100, 15758, 1},
-        {100, 15759, 1},
-        // accessory, chance 0.1% each
-        {100, 15763, 1},
-        {100, 15764, 1},
-        {100, 15765, 1},
-        // weapons, chance 0.05% each
-        {50, 15558, 1},
-        {50, 15559, 1},
-        {50, 15560, 1},
-        {50, 15561, 1},
-        {50, 15562, 1},
-        {50, 15563, 1},
-        {50, 15564, 1},
-        {50, 15565, 1},
-        {50, 15566, 1},
-        {50, 15567, 1},
-        {50, 15568, 1},
-        {50, 15569, 1},
-        {50, 15570, 1},
-        {50, 15571, 1},
-        // BEWS, chance 0.55%
-        {550, 6577, 1},
-        // BEAS, chance 1%
-        {1000, 6578, 1},
-        // attributes, chance 5%
-        {5000, 9552, 1},
-        {5000, 9553, 1},
-        {5000, 9554, 1},
-        {5000, 9555, 1},
-        {5000, 9556, 1},
-        {5000, 9557, 1},
-        // EWS, chance 1.75%
-        {1750, 959, 1},
+        // weapons, chance 3.05% each
+        {1000, 15558, 1},
+        {1000, 15559, 1},
+        {1000, 15560, 1},
+        {1000, 15561, 1},
+        {1000, 15562, 1},
+        {1000, 15563, 1},
+        {1000, 15564, 1},
+        {1000, 15565, 1},
+        {1000, 15566, 1},
+        {1000, 15567, 1},
+        {1000, 15568, 1},
+        {1000, 15569, 1},
+        {1000, 15570, 1},
+        {1000, 15571, 1},
+		// armor
+        {3000, 15743, 1},
+        {3000, 15744, 1},
+        {3000, 15745, 1},
+        {3000, 15746, 1},
+        {3000, 15747, 1},
+        {3000, 15748, 1},
+        {3000, 15749, 1},
+        {3000, 15750, 1},
+        {3000, 15751, 1},
+        {3000, 15752, 1},
+        {3000, 15753, 1},
+        {3000, 15754, 1},
+        {3000, 15755, 1},
+        {3000, 15756, 1},
+        {3000, 15757, 1},
+        {3000, 15758, 1},
+        {3000, 15759, 1},
+        // accessory, chance 8.1% each
+        {5000, 15763, 1},
+        {5000, 15764, 1},
+        {5000, 15765, 1},
+        // BEWS, chance 1.55%
+        {5500, 6577, 1},
+        // BEAS, chance 2%
+        {10000, 6578, 1},
+        // attributes, chance 4%
+        {6000, 9552, 1},
+        {6000, 9553, 1},
+        {6000, 9554, 1},
+        {6000, 9555, 1},
+        {6000, 9556, 1},
+        {6000, 9557, 1},
+        // EWS, chance 4.75%
+        {17500, 959, 1},
         // gemstone s
-        {100000, 2134, 3}
+        {10000, 2134, 3}
     };
 
-    private static final int CHANCE = 5;
+    private static final int CHANCE = 10;
 
     public _456_DontKnowDontCare() {
         super(PARTY_ALL);
@@ -231,19 +231,19 @@ public class _456_DontKnowDontCare extends Quest implements ScriptFile {
                     break;
             }
         } else if (npcId == DrakeLordCorpse) {
-            if (st.getCond() == 1) {
+            if (st.getInt("cond") == 1) {
                 htmltext = "drake.htm";
             } else {
                 htmltext = "drake_no.htm";
             }
         } else if (npcId == BehemothLeaderCorpse) {
-            if (st.getCond() == 1) {
+            if (st.getInt("cond") == 1) {
                 htmltext = "behemoth.htm";
             } else {
                 htmltext = "behemoth_no.htm";
             }
         } else if (npcId == DragonBeastCorpse) {
-            if (st.getCond() == 1) {
+            if (st.getInt("cond") == 1) {
                 htmltext = "dragon.htm";
             } else {
                 htmltext = "dragon_no.htm";
@@ -256,7 +256,7 @@ public class _456_DontKnowDontCare extends Quest implements ScriptFile {
     @Override
     public String onKill(NpcInstance npc, QuestState st) {
         int npcId = npc.getNpcId();
-        if (st.getCond() == 1) {
+        if (st.getInt("cond") == 1) {
             if (npcId == DrakeLord) {
                 NpcInstance isQuest = GameObjectsStorage.getByNpcId(DrakeLordCorpse);
                 if (isQuest == null) {

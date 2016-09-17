@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--Crystall Enchant-->
+
+
+<list>  
+	 <item><ingredient id="4356" count="150"/><production id="20521" count="1"/></item>
+	 <item><ingredient id="4357" count="1500"/><production id="20521" count="1"/></item>
+	 <item><ingredient id="4356" count="75"/><production id="20522" count="1"/></item>
+	 <item><ingredient id="4357" count="750"/><production id="20522" count="1"/></item>
+	 </list>

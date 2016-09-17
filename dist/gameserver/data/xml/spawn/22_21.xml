@@ -75,7 +75,7 @@
 		</territory>
 		<npc id="22858"/><!--Necromancer of the Valley*-->
 	</spawn>
-	<spawn count="5" respawn="36" respawn_random="0" period_of_day="none">
+	<spawn count="1" respawn="36" respawn_random="0" period_of_day="none">
 		<territory>
 			<add x="86820" y="112368" zmin="-3408" zmax="-3208"/>
 			<add x="87068" y="111828" zmin="-3408" zmax="-3208"/>
@@ -667,14 +667,60 @@
 		</territory>
 		<npc id="22815"/><!--Drakos*-->
 	</spawn>
-	<spawn count="4" respawn="36" respawn_random="0" period_of_day="none">
+	<spawn count="1" respawn="36" respawn_random="0" period_of_day="none">
 		<territory>
 			<add x="82500" y="112732" zmin="-3168" zmax="-2768"/>
 			<add x="83100" y="113536" zmin="-3168" zmax="-2768"/>
 			<add x="84984" y="112408" zmin="-3168" zmax="-2768"/>
 			<add x="84224" y="111716" zmin="-3168" zmax="-2768"/>
 		</territory>
-		<npc id="22815"/><!--Drakos*-->
+		<npc id="22815"><!--Drakos*-->
+		<set name="superpoint" value="drakos_dv1"/>
+	</npc>
+	</spawn>
+	<spawn count="1" respawn="36" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="82500" y="112732" zmin="-3168" zmax="-2768"/>
+			<add x="83100" y="113536" zmin="-3168" zmax="-2768"/>
+			<add x="84984" y="112408" zmin="-3168" zmax="-2768"/>
+			<add x="84224" y="111716" zmin="-3168" zmax="-2768"/>
+		</territory>
+		<npc id="22815"><!--Drakos*-->
+		<set name="superpoint" value="drakos_dv1"/>
+	</npc>
+	</spawn>
+	<spawn count="1" respawn="36" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="82500" y="112732" zmin="-3168" zmax="-2768"/>
+			<add x="83100" y="113536" zmin="-3168" zmax="-2768"/>
+			<add x="84984" y="112408" zmin="-3168" zmax="-2768"/>
+			<add x="84224" y="111716" zmin="-3168" zmax="-2768"/>
+		</territory>
+		<npc id="22815"><!--Drakos*-->
+		<set name="superpoint" value="drakos_dv1"/>
+	</npc>
+	</spawn>
+	<spawn count="1" respawn="36" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="82500" y="112732" zmin="-3168" zmax="-2768"/>
+			<add x="83100" y="113536" zmin="-3168" zmax="-2768"/>
+			<add x="84984" y="112408" zmin="-3168" zmax="-2768"/>
+			<add x="84224" y="111716" zmin="-3168" zmax="-2768"/>
+		</territory>
+		<npc id="22815"><!--Drakos*-->
+		<set name="superpoint" value="drakos_dv1"/>
+	</npc>
+	</spawn>
+	<spawn count="1" respawn="36" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="82500" y="112732" zmin="-3168" zmax="-2768"/>
+			<add x="83100" y="113536" zmin="-3168" zmax="-2768"/>
+			<add x="84984" y="112408" zmin="-3168" zmax="-2768"/>
+			<add x="84224" y="111716" zmin="-3168" zmax="-2768"/>
+		</territory>
+		<npc id="22815"><!--Drakos*-->
+		<set name="superpoint" value="drakos_dv1"/>
+	</npc>
 	</spawn>
 	<spawn count="3" respawn="36" respawn_random="0" period_of_day="none">
 		<territory>
@@ -686,7 +732,7 @@
 		</territory>
 		<npc id="22815"/><!--Drakos*-->
 	</spawn>
-	<spawn count="2" respawn="36" respawn_random="0" period_of_day="none">
+	<spawn count="1" respawn="36" respawn_random="0" period_of_day="none">
 		<territory>
 			<add x="81572" y="110688" zmin="-3848" zmax="-3448"/>
 			<add x="81432" y="111480" zmin="-3848" zmax="-3448"/>

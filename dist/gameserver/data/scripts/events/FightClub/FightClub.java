@@ -48,7 +48,7 @@ public class FightClub extends Functions implements ScriptFile, OnPlayerExitList
     private static Location _player1loc;
     private static Location _player2loc;
     private static boolean _isCreateBattle = false;
-    private static final ArrayList<SimpleSpawner> _spawns_fight_club_manager = new ArrayList<>();
+    private static final ArrayList<SimpleSpawner> _spawns_fight_club_manager = new ArrayList<SimpleSpawner>();
     private static int FIGHT_CLUB_MANAGER = 112;
 
     private void spawnFightClub()
@@ -85,13 +85,13 @@ public class FightClub extends Functions implements ScriptFile, OnPlayerExitList
         spawnFightClub();
         CharListenerList.addGlobal(this);
 
-        _ratesMap = new HashMap<>();
-        _fights = new ArrayList<>();
-        _restoreCoord = new HashMap<>();
-        _inBattle = new ArrayList<>();
-        _inList = new ArrayList<>();
+        _ratesMap = new HashMap<Long, Rate>();
+        _fights = new ArrayList<FightClubArena>();
+        _restoreCoord = new HashMap<Long, Location>();
+        _inBattle = new ArrayList<Long>();
+        _inList = new ArrayList<Long>();
         _itemsList = new StringBuilder();
-        _allowedItems = new HashMap<>();
+        _allowedItems = new HashMap<String, Integer>();
 
         for (int i = 0; i < Config.ALLOWED_RATE_ITEMS.length; i++) {
             String itemName = ItemFunctions.createItem(Integer.parseInt(Config.ALLOWED_RATE_ITEMS[i])).getTemplate().getName();
@@ -180,7 +180,7 @@ public class FightClub extends Functions implements ScriptFile, OnPlayerExitList
             show(new CustomMessage("scripts.events.fightclub.CancelledItems", player), player);
             return "NoItems";
         }
-        //removeItem(player, _allowedItems.get(item), count);
+        removeItem(player, _allowedItems.get(item), count);
         final Rate rate = new Rate(player, _allowedItems.get(item), count);
         final StringBuilder stRate = new StringBuilder();
         stRate.append(_allowedItems.get(item)).append(";").append(count).append(";");
@@ -711,7 +711,7 @@ public class FightClub extends Functions implements ScriptFile, OnPlayerExitList
     }
 
     private static List<Player> getPlayers(List<Long> list) {
-        List<Player> result = new ArrayList<>();
+        List<Player> result = new ArrayList<Player>();
         for (Long storeId : list) {
             Player player = GameObjectsStorage.getAsPlayer(storeId);
             if (player != null) {

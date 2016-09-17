@@ -32,7 +32,11 @@ public class GreatPowerfulDevice extends DefaultAI {
                 }
             }
             actor.getReflection().openDoor(12240027);
-            actor.getReflection().getNpcs().stream().filter(n -> n.getNpcId() == 18778).forEach(NpcInstance::stopDamageBlocked);
+            for (NpcInstance n : actor.getReflection().getNpcs()) {
+                if (n.getNpcId() == 18778) {
+                    n.stopDamageBlocked();
+                }
+            }
         }
         super.onEvtDead(killer);
     }

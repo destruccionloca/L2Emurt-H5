@@ -19,9 +19,11 @@ public class Leogul extends Fighter {
         if (super.checkAggression(killer)) {
             Functions.npcSayCustomMessage(getActor(), "scripts.ai.Leogul");
 
-            getActor().getAroundNpc(800, 128).stream().filter(npc -> npc.isMonster() && npc.getNpcId() >= 22660 && npc.getNpcId() <= 22677).forEach(npc -> {
-                npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 5000);
-            });
+            for (NpcInstance npc : getActor().getAroundNpc(800, 128)) {
+                if (npc.isMonster() && npc.getNpcId() >= 22660 && npc.getNpcId() <= 22677) {
+                    npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 5000);
+                }
+            }
             return true;
         }
         return false;

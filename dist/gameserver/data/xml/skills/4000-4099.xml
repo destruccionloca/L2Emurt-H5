@@ -89,7 +89,7 @@
 		<for>
 			<sub order="0x40" stat="defenceFire" val="25" />
 			<add order="0x40" stat="defenceWater" val="25" />
-			<mul order="0x30" stat="poisonResist" val="1.5" />
+			<add order="0x40" stat="poisonResist" val="50" />
 		</for>
 	</skill>
 	<skill id="4007" levels="1" name="Immortal Life">
@@ -99,8 +99,8 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<sub order="0x40" stat="defenceHoly" val="20" />
-			<add order="0x40" stat="defenceUnholy" val="20" />
+			<sub order="0x40" stat="defenceHoly" val="50" />
+			<add order="0x40" stat="defenceUnholy" val="50" />
 		</for>
 	</skill>
 	<skill id="4008" levels="1" name="Insect Skin">
@@ -255,7 +255,7 @@
 		<set name="saveVs" val="MEN" />
 		<for>
 			<effect count="1" name="Debuff" stackOrder="3" stackType="RunSpeedDown" time="30" val="0">
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul order="0x50" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
 	</skill>
@@ -276,7 +276,7 @@
 		<set name="saveVs" val="MEN" />
 		<for>
 			<effect count="1" name="Debuff" stackOrder="3" stackType="RunSpeedDown" time="120" val="0">
-				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul order="0x50" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
 	</skill>
@@ -529,7 +529,7 @@
 		<set name="saveVs" val="MEN" />
 		<for>
 			<effect count="1" name="Debuff" stackOrder="2" stackType="RunSpeedDown" time="30" val="0">
-				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul order="0x50" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
@@ -746,12 +746,12 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootResist" val="MAX" />
-			<mul order="0x30" stat="sleepResist" val="MAX" />
-			<mul order="0x30" stat="stunResist" val="MAX" />
-			<mul order="0x30" stat="paralyzeResist" val="MAX" />
+			<add order="0x40" stat="rootResist" val="100" />
+			<add order="0x40" stat="sleepResist" val="100" />
+			<add order="0x40" stat="stunResist" val="100" />
+			<add order="0x40" stat="paralyzeResist" val="100" />
 			<sub order="0x40" stat="deathVuln" val="100" />
-			<mul order="0x30" stat="mentalResist" val="MAX" />
+			<add order="0x40" stat="mentalResist" val="100" />
 			<add order="0x40" stat="concentration" val="100" />
 		</for>
 	</skill>
@@ -813,7 +813,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect count="1" name="Buff" stackOrder="1" stackType="speed_up_special" time="20" val="0">
+			<effect count="1" name="Buff" time="20" val="0">
 				<mul order="0x30" stat="runSpd" val="#Tab-runSpd" />
 			</effect>
 		</for>
@@ -834,7 +834,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isHideUseMessage" val="true" />
 		<set name="castRange" val="1000" />
-		<set name="hitTime" val="500" />
+		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="4050" levels="16" name="Cubic Drain">
 		<!--Last edit: 23.12.2010-->
@@ -849,13 +849,14 @@
 		<set name="mAtk" val="#mAtk" />
 		<set name="effectPoint" val="#effectPoint" />
 		<set name="useSS" val="false" />
+		<set name="element" val="unholy" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="absorbPart" val="0.4" />  <!-- absorbs 40% of damage -->
 		<set name="isHideUseMessage" val="true" />
 		<set name="castRange" val="1000" />
-		<set name="hitTime" val="500" />
+		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="4051" levels="20" name="Cubic Heal">
 		<!--Last edit: 24.12.2010. 1-16 is normal 20 - newbie-->
@@ -875,7 +876,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isHideUseMessage" val="true" />
 		<set name="castRange" val="1000" />
-		<set name="hitTime" val="500" />
+		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="4052" levels="15" name="Poison">
 		<table name="#abnormal_lv">5 6 7 7 7 8</table>
@@ -887,14 +888,15 @@
 		<set name="icon" val="icon.skill1168" />
 		<set name="mAtk" val="#mAtk" />
 		<set name="magicLevel" val="#magicLevel" />
+		<set name="mAtk" val="1" />
 		<set name="useSS" val="false" />
-		<set name="activateRate" val="70" />
+		<set name="isIgnoreResists" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="POISON" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isHideUseMessage" val="true" />
 		<set name="castRange" val="1000" />
-		<set name="hitTime" val="500" />
+		<set name="hitTime" val="3000" />
 		<set name="saveVs" val="CON" />
 		<for>
 			<effect abnormal="poison" count="10" name="Poison" stackOrder="#abnormal_lv" time="3" val="#dot" />
@@ -911,7 +913,6 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="effectPoint" val="#effectPoint" />
 		<set name="useSS" val="false" />
-		<set name="activateRate" val="80" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -920,7 +921,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect count="1" name="Buff" stackOrder="3" stackType="pAtkDown" time="120" val="0">
+			<effect count="1" name="Buff" stackOrder="3" stackType="pAtkDown" time="30" val="0">
 				<mul order="0x30" stat="pAtk" val="0.77" />
 			</effect>
 		</for>
@@ -936,7 +937,6 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="effectPoint" val="#effectPoint" />
 		<set name="useSS" val="false" />
-		<set name="activateRate" val="80" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -945,7 +945,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect count="1" name="Buff" stackOrder="3" stackType="pd_down" time="120" val="0">
+			<effect count="1" name="Buff" stackOrder="3" stackType="pDefDown" time="30" val="0">
 				<mul order="0x30" stat="pDef" val="0.77" />
 			</effect>
 		</for>
@@ -961,7 +961,6 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="effectPoint" val="#effectPoint" />
 		<set name="useSS" val="false" />
-		<set name="activateRate" val="80" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -970,7 +969,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect count="1" name="Buff" stackOrder="3" stackType="pAtkSpdDown" time="120" val="0">
+			<effect count="1" name="Buff" time="30" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
@@ -1061,7 +1060,7 @@
 		<set name="castRange" val="50" />
 		<set name="hitTime" val="3600" />
 		<set name="hitCancelTime" val="500" />
-		<set name="activateRate" val="90" />
+		<set name="activateRate" val="50" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1077,7 +1076,7 @@
 		<set name="castRange" val="800" />
 		<set name="hitTime" val="4000" />
 		<set name="hitCancelTime" val="500" />
-		<set name="activateRate" val="30" />
+		<set name="activateRate" val="10" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="PARALYZE" />
@@ -1219,7 +1218,7 @@
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="coolTime" val="800" />
-		<set name="reuseDelay" val="6000" />
+		<set name="reuseDelay" val="12000" />
 		<set name="power" val="#power" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="hitTime" val="1000" />
@@ -1243,7 +1242,7 @@
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="coolTime" val="800" />
-		<set name="reuseDelay" val="6000" />
+		<set name="reuseDelay" val="12000" />
 		<set name="power" val="#power" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="hitTime" val="1000" />
@@ -1288,12 +1287,12 @@
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill0092" />
 		<set name="coolTime" val="800" />
-		<set name="reuseDelay" val="6000" />
+		<set name="reuseDelay" val="12000" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="hitTime" val="1000" />
 		<set name="hitCancelTime" val="500" />
 		<set name="mpConsume2" val="#mpConsume2" />
-		<set name="activateRate" val="80" />
+		<set name="activateRate" val="50" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1304,7 +1303,7 @@
 		</for>
 	</skill>
 	<skill id="4076" levels="3" name="Decrease Speed">
-		<table name="#Tab-runSpd">0.9 0.8 0.7</table>
+		<table name="#Tab-runSpd">0.85 0.7 0.5</table>
 		<table name="#stack">1 2 3</table>
 		<table name="#mpConsume2">16 28 52</table>
 		<table name="#mpConsume1">4 7 13</table>
@@ -1326,7 +1325,7 @@
 		<set name="saveVs" val="MEN" />
 		<for>
 			<effect count="1" name="Buff" stackOrder="#stack" stackType="RunSpeedDown" time="30" val="0">
-				<mul order="0x30" stat="runSpd" val="#Tab-runSpd" />
+				<mul order="0x50" stat="runSpd" val="#Tab-runSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -1421,9 +1420,7 @@
 		<set name="altUse" val="true" />
 		<set name="isSaveable" val="false" />
 		<for>
-			<effect abnormal="poison" count="4200" name="PoisonLethal" time="5" val="100">
-				<set order="0x60" stat="runSpd" val="0" />
-			</effect>
+			<effect abnormal="poison" count="4200" name="PoisonLethal" time="5" val="100" />
 		</for>
 	</skill>
 	<skill id="4083" levels="1" name="Die! You fool!">
@@ -1515,6 +1512,8 @@
 		</for>
 	</skill>
 	<skill id="4089" levels="1" name="NPC Bear Spirit Totem">
+		<table name="#Tab-runSpd">0.85</table>
+		<table name="#Tab-pAtk">1.15</table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="8000" />
 		<set name="magicLevel" val="40" />
@@ -1526,13 +1525,14 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="displayId" val="1068" />
 		<for>
-			<effect count="1" name="Buff" time="300" val="0">
-				<mul order="0x30" stat="runSpd" val="0.85" />
-				<mul order="0x30" stat="pAtk" val="0.85" />
+			<effect count="1" name="Buff" time="600" val="0">
+				<mul order="0x30" stat="runSpd" val="#Tab-runSpd" />
+				<mul order="0x30" stat="pAtk" val="#Tab-pAtk" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4090" levels="1" name="NPC Wolf Spirit Totem">
+		<table name="#Tab-runSpd">1.4</table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="8000" />
 		<set name="magicLevel" val="40" />
@@ -1544,24 +1544,17 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="displayId" val="1068" />
 		<for>
-			<effect count="1" name="Buff" time="300" val="0">
-				<mul order="0x30" stat="runSpd" val="1.4" />
+			<effect count="1" name="Buff" time="600" val="0">
+				<mul order="0x30" stat="runSpd" val="#Tab-runSpd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4091" levels="3" name="NPC Ogre Spirit Totem">
 		<table name="#mpConsume2">18 18 19</table>
 		<table name="#magicLevel">40 60 75</table>
-		<table name="#power">14 21 21</table>
-		<table name="#maxHp">1.14 1.21 1.21</table>
-		<table name="#runSpd">0.85 0.85 0.9</table>
-		<table name="#pAtk">1.05 1.15 1.15</table>
-		<table name="#pDef">1.1 1.3 1.3</table>
-		<table name="#accCombat">3 7 7</table>
-		<table name="#rEvas">10 10 5</table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="8000" />
-		<set name="power" val="#power" />
+		<set name="power" val="14" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="hitTime" val="1500" />
 		<set name="hitCancelTime" val="500" />
@@ -1571,13 +1564,13 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="displayId" val="1068" />
 		<for>
-			<effect count="1" name="Buff" time="300" val="0">
-				<mul order="0x30" stat="runSpd" val="#runSpd" />
-				<mul order="0x30" stat="pAtk" val="#pAtk" />
-				<mul order="0x30" stat="pDef" val="#pDef" />
-				<add order="0x40" stat="accCombat" val="#accCombat" />
-				<sub order="0x40" stat="rEvas" val="#rEvas" />
-				<mul order="0x30" stat="maxHp" val="#maxHp" />
+			<effect count="1" name="Buff" time="600" val="0">
+				<mul order="0x30" stat="runSpd" val="0.85" />
+				<mul order="0x30" stat="pAtk" val="1.05" />
+				<mul order="0x30" stat="pDef" val="0.9" />
+				<add order="0x40" stat="accCombat" val="3" />
+				<sub order="0x40" stat="rEvas" val="10" />
+				<mul order="0x30" stat="maxHp" val="1.14" />
 			</effect>
 		</for>
 	</skill>
@@ -1631,10 +1624,10 @@
 		<set name="reflectable" val="false" />
 		<for>
 			<effect count="1" name="Cancel" time="0" val="0">
-				<def name="cancelRate" val="5" />
-				<def name="minChance" val="25" />
-				<def name="maxChance" val="75" />
-				<def name="negateCount" val="5" />
+				<def name="cancelRate" val="3" />
+				<def name="minChance" val="3" />
+				<def name="maxChance" val="5" />
+				<def name="negateCount" val="3" />
 			</effect>
 		</for>
 	</skill>
@@ -1722,7 +1715,6 @@
 		<table name="#Tab-mAtk">1.1 1.16</table>
 		<table name="#Tab-pDef">0.88 0.85</table>
 		<table name="#Tab-pAtkSpd">1.05 1.08</table>
-		<table name="#Tab-runSpd">5 8</table>
 		<table name="#mpConsume2">14 26</table>
 		<table name="#mpConsume1">4 7</table>
 		<table name="#magicLevel">40 70</table>
@@ -1739,13 +1731,12 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect count="1" name="Buff" time="300" val="0">
+			<effect count="1" name="Buff" time="1200" val="0">
 				<mul order="0x30" stat="pAtk" val="#Tab-pAtk" />
 				<mul order="0x30" stat="mAtk" val="#Tab-mAtk" />
 				<mul order="0x30" stat="pDef" val="#Tab-pDef" />
 				<mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd" />
 				<mul order="0x30" stat="mAtkSpd" val="#Tab-pAtkSpd" />
-				<add order="0x40" stat="runSpd" val="#Tab-runSpd" />
 			</effect>
 		</for>
 	</skill>

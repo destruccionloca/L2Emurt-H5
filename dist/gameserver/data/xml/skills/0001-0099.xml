@@ -2377,7 +2377,7 @@
 	</skill>
 	<skill id="99" levels="2" name="Rapid Shot">
 		<table name="#effectPoint">303 549</table>
-		<table name="#rate">1.08 1.12</table>
+		<table name="#rate">1.08 1.25</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">14 25</table>
 		<table name="#magicLevel">32 55</table>

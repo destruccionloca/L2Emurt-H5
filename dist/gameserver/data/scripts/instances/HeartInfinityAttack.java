@@ -37,7 +37,7 @@ public class HeartInfinityAttack extends Reflection {
     private static final int RegenerationCoffin = 18710;
     private long tumorRespawnTime;
     private NpcInstance ekimus;
-    private List<NpcInstance> hounds = new ArrayList<>(2);
+    private List<NpcInstance> hounds = new ArrayList<NpcInstance>(2);
     private boolean houndBlocked = false;
     private boolean conquestBegun = false;
     private boolean conquestEnded = false;
@@ -214,7 +214,9 @@ public class HeartInfinityAttack extends Reflection {
     private void notifyTumorDeath() {
         if (getAliveTumorCount() < 1) {
             houndBlocked = true;
-            hounds.forEach(NpcInstance::block);
+            for (NpcInstance npc : hounds) {
+                npc.block();
+            }
             for (Player p : getPlayers()) {
                 p.sendPacket(new ExShowScreenMessage(NpcString.WITH_ALL_CONNECTIONS_TO_THE_TUMOR_SEVERED_EKIMUS_HAS_LOST_ITS_POWER_TO_CONTROL_THE_FERAL_HOUND, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false));
             }
@@ -229,7 +231,9 @@ public class HeartInfinityAttack extends Reflection {
     private void notifyTumorRevival() {
         if (getAliveTumorCount() == 1 && houndBlocked) {
             houndBlocked = false;
-            hounds.forEach(NpcInstance::unblock);
+            for (NpcInstance npc : hounds) {
+                npc.unblock();
+            }
             for (Player p : getPlayers()) {
                 p.sendPacket(new ExShowScreenMessage(NpcString.WITH_THE_CONNECTION_TO_THE_TUMOR_RESTORED_EKIMUS_HAS_REGAINED_CONTROL_OVER_THE_FERAL_HOUND, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false));
             }
@@ -315,7 +319,9 @@ public class HeartInfinityAttack extends Reflection {
         despawnByGroup("soi_hoi_attack_mob_6");
         despawnByGroup("soi_hoi_attack_bosses");
         if (ekimus != null && !ekimus.isDead()) {
-            hounds.forEach(NpcInstance::deleteMe);
+            for (NpcInstance npc : hounds) {
+                npc.deleteMe();
+            }
             ekimus.deleteMe();
         }
         startCollapseTimer(15 * 60 * 1000L);
@@ -327,7 +333,11 @@ public class HeartInfinityAttack extends Reflection {
             p.sendPacket(new ExShowScreenMessage(win ? NpcString.CONGRATULATIONS_YOU_HAVE_SUCCEEDED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE : NpcString.YOU_HAVE_FAILED_AT_S1_S2, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId(), "#" + NpcString.ATTACK.getId()));
             p.showQuestMovie(win ? ExStartScenePlayer.SCENE_ECHMUS_SUCCESS : ExStartScenePlayer.SCENE_ECHMUS_FAIL);
         }
-        getNpcs().stream().filter(npc -> npc.getNpcId() == AliveTumor || npc.getNpcId() == DeadTumor || npc.getNpcId() == RegenerationCoffin).forEach(NpcInstance::deleteMe);
+        for (NpcInstance npc : getNpcs()) {
+            if (npc.getNpcId() == AliveTumor || npc.getNpcId() == DeadTumor || npc.getNpcId() == RegenerationCoffin) {
+                npc.deleteMe();
+            }
+        }
     }
 
     public void notifyEkimusAttack() {

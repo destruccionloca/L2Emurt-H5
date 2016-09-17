@@ -3644,7 +3644,7 @@ public class Extractable extends SimpleItemHandler implements ScriptFile {
 
     // Rune Jewelry Box - Talisman
     private void use21752(Player player, boolean ctrl) {
-        final List<Integer> talismans = new ArrayList<>();
+        final List<Integer> talismans = new ArrayList<Integer>();
 
         //9914-9965
         for (int i = 9914; i <= 9965; i++) {
@@ -4050,7 +4050,7 @@ public class Extractable extends SimpleItemHandler implements ScriptFile {
     }
 
     private static List<int[]> mass_extract_item(long source_count, int[] list, int[] counts, Player player) {
-        List<int[]> result = new ArrayList<>((int) Math.min(list.length, source_count));
+        List<int[]> result = new ArrayList<int[]>((int) Math.min(list.length, source_count));
 
         for (int n = 1; n <= source_count; n++) {
             int index = Rnd.get(list.length);
@@ -4115,7 +4115,7 @@ public class Extractable extends SimpleItemHandler implements ScriptFile {
     }
 
     private static List<int[]> mass_extract_item_r(long source_count, int[] list, int[] counts, int[] chances, Player player) {
-        List<int[]> result = new ArrayList<>((int) Math.min(list.length, source_count));
+        List<int[]> result = new ArrayList<int[]>((int) Math.min(list.length, source_count));
 
         int sum = 0;
         for (int i = 0; i < list.length; i++) {

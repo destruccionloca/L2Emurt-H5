@@ -48,8 +48,8 @@ public class WorkshopServantInstance extends NpcInstance {
         }
 
         if (command.startsWith("getmedals")) {
-            for (int medal : medals) {
-                if (player.getInventory().getItemByItemId(medal) != null) {
+            for (int i = 0; i < medals.length; i++) {
+                if (player.getInventory().getItemByItemId(medals[i]) != null) {
                     player.sendPacket(new HtmlMessage(player, this).setHtml("Ingenious Contraption:<br><br>You already have one of the medals. Cannot proceed."));
                     return;
                 }
@@ -103,8 +103,8 @@ public class WorkshopServantInstance extends NpcInstance {
                     return;
                 }
             }
-            for (int medal : medals) {
-                if (!hasItem(party, medal)) {
+            for (int i = 0; i < medals.length; i++) {
+                if (!hasItem(party, medals[i])) {
                     player.sendMessage("In order to enter the Anomic Foundry your party should be carrying all 5 medals of Tully");
                     return;
                 }

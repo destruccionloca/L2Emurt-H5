@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+  <config showall="true" notax="false" ignoreprice="false" keepenchanted="false" />
+  <!-- Редкая броня -->
+  <!-- Маг шмот -->
+  <item id="1">
+    <ingredient id="4356" count="120" />
+    <production id="12989" count="1" />
+  </item>
+  <item id="2">
+    <ingredient id="4356" count="120" />
+    <production id="11447" count="1" />
+  </item>
+  <item id="3">
+    <ingredient id="4356" count="100" />
+    <production id="11439" count="1" />
+  </item>
+  <item id="4">
+    <ingredient id="4356" count="100" />
+    <production id="11443" count="1" />
+  </item>
+  <item id="5">
+    <ingredient id="4356" count="120" />
+    <production id="12987" count="1" />
+  </item>
+  <item id="6">
+    <ingredient id="4356" count="100" />
+    <production id="11410" count="1" />
+  </item>
+  <item id="7">
+    <ingredient id="4356" count="100" />
+    <production id="11415" count="1" />
+  </item>
+  <item id="8">
+    <ingredient id="4356" count="120" />
+    <production id="12993" count="1" />
+  </item>
+  <item id="9">
+    <ingredient id="4356" count="100" />
+    <production id="11474" count="1" />
+  </item>
+  <item id="10">
+    <ingredient id="4356" count="100" />
+    <production id="11479" count="1" />
+  </item>
+  <item id="11">
+    <ingredient id="4356" count="120" />
+    <production id="12991" count="1" />
+  </item>
+  <item id="12">
+    <ingredient id="4356" count="100" />
+    <production id="11450" count="1" />
+  </item>
+  <item id="13">
+    <ingredient id="4356" count="100" />
+    <production id="11455" count="1" />
+  </item>
+  <item id="14">
+    <ingredient id="4356" count="200" />
+    <production id="11490" count="1" />
+  </item>
+  <item id="15">
+    <ingredient id="4356" count="150" />
+    <production id="11487" count="1" />
+  </item>
+  <item id="16">
+    <ingredient id="4356" count="150" />
+    <production id="11489" count="1" />
+  </item>
+  <item id="17">
+    <ingredient id="4356" count="75" />
+    <production id="13078" count="1" />
+  </item>
+  <item id="18">
+    <ingredient id="4356" count="230" />
+    <production id="11539" count="1" />
+  </item>
+  <item id="19">
+    <ingredient id="4356" count="230" />
+    <production id="11558" count="1" />
+  </item>
+  <item id="20">
+    <ingredient id="4356" count="200" />
+    <production id="11514" count="1" />
+  </item>
+  <item id="21">
+    <ingredient id="4356" count="200" />
+    <production id="11533" count="1" />
+  </item>
+  <item id="22">
+    <ingredient id="4356" count="100" />
+    <production id="10119" count="1" />
+  </item>
+  <item id="23">
+    <ingredient id="4356" count="250" />
+    <production id="16291" count="1" />
+  </item>
+  <item id="24">
+    <ingredient id="4356" count="250" />
+    <production id="16297" count="1" />
+  </item>
+  <item id="25">
+    <ingredient id="4356" count="220" />
+    <production id="16300" count="1" />
+  </item>
+  <item id="26">
+    <ingredient id="4356" count="220" />
+    <production id="16303" count="1" />
+  </item>
+  <item id="27">
+    <ingredient id="4356" count="110" />
+    <production id="16305" count="1" />
+  </item>
+</list>

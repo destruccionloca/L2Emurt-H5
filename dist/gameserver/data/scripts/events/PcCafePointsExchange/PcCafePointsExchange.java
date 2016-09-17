@@ -15,7 +15,7 @@ public class PcCafePointsExchange extends Functions implements ScriptFile {
     private static final Logger _log = LoggerFactory.getLogger(PcCafePointsExchange.class);
     private static final String EVENT_NAME = "PcCafePointsExchange";
     private static final int EVENT_MANAGER_ID = 32130; // npc id
-    private static List<SimpleSpawner> _spawns = new ArrayList<>();
+    private static List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
 
     /**
      * Спавнит эвент менеджеров

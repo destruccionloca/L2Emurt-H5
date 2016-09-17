@@ -33,8 +33,8 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 
     private static final Logger _log = LoggerFactory.getLogger(heart.class);
     private static boolean _active = false;
-    private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-    private static final Map<Integer, Integer> Guesses = new HashMap<>();
+    private static final List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
+    private static final Map<Integer, Integer> Guesses = new HashMap<Integer, Integer>();
     private static String links_en = "", links_ru = "";
     private static final String[][] variants = {{"Rock", "Камень"}, {"Scissors", "Ножницы"}, {"Paper", "Бумага"}};
 
@@ -45,12 +45,12 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
             links_ru += fmt.sprintf(new Object[]{i, variants[i][1]});
         }
     }
-    private static final int EVENT_MANAGER_ID = 31227; //Buzz the Cat
+    private static final int EVENT_MANAGER_ID = 31227; //Rozalia
     private static final int[] hearts = {4209, 4210, 4211, 4212, 4213, 4214, 4215, 4216, 4217};
     private static final int[] potions = {1374, // Greater Haste Potion
         1375, // Greater Swift Attack Potion
         6036, // Greater Magic Haste Potion
-        1539 // Greater Healing Potion
+        1539 //  Greater Healing Potion
     };
     private static final int[] scrolls = {3926, //	L2Day - Scroll of Guidance
         3927, //	L2Day - Scroll of Death Whisper
@@ -61,7 +61,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
         3932, //	L2Day - Scroll of Mystic Empower
         3933, //	L2Day - Scroll of Might
         3934, //	L2Day - Scroll of Windwalk
-        3935 //	L2Day - Scroll of Shield
+        3935 //		L2Day - Scroll of Shield
     };
 
     public void startEvent() {
@@ -182,31 +182,10 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
                 addItem(player, potions[Rnd.get(potions.length)], 10);
                 break;
             case 2:
-                addItem(player, 1538, 1); // 1  Blessed Scroll of Escape
+                addItem(player, 6578, 3); // 3  Scroll: Blessed Enchant Armor (S)
                 break;
             case 3:
-                addItem(player, 3936, 1); // 1  Blessed Scroll of Resurrection
-                break;
-            case 4:
-                addItem(player, 951, 2); // 2  Scroll: Enchant Weapon (C)
-                break;
-            case 5:
-                addItem(player, 948, 4); // 4  Scroll: Enchant Armor (B)
-                break;
-            case 6:
-                addItem(player, 947, 1); // 1  Scroll: Enchant Weapon (B)
-                break;
-            case 7:
-                addItem(player, 730, 3); // 3  Scroll: Enchant Armor (A)
-                break;
-            case 8:
-                addItem(player, 729, 1); // 1  Scroll: Enchant Weapon (A)
-                break;
-            case 9:
-                addItem(player, 960, 2); // 2  Scroll: Enchant Armor (S)
-                break;
-            case 10:
-                addItem(player, 959, 1); // 1  Scroll: Enchant Weapon (S)
+                addItem(player, 6577, 2); // 2  Scroll: Blessed Enchant Weapon (S)
                 break;
         }
     }

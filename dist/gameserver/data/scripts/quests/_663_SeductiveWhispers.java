@@ -230,7 +230,7 @@ public class _663_SeductiveWhispers extends Quest implements ScriptFile {
 
     private static class LevelRewards {
 
-        private final Map<int[], Integer> rewards = new HashMap<>();
+        private final Map<int[], Integer> rewards = new HashMap<int[], Integer>();
         private String txt;
 
         public LevelRewards(String _txt) {

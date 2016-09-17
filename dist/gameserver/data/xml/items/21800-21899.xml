@@ -1040,7 +1040,7 @@
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="type" value="QUEST"/>
+		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="21875" name="Campfire Flint">
 		<set name="icon" value="BranchSys2.icon.g_campfire_flint"/>

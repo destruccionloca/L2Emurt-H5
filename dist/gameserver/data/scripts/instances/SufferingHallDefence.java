@@ -191,10 +191,12 @@ public class SufferingHallDefence extends Reflection {
         if (group != null) {
             spawnByGroup(group);
         }
-        getNpcs().stream().filter(n -> n.isMonster() && ArrayUtils.contains(monsters, n.getNpcId())).forEach(n -> {
-            n.setRunning();
-            n.moveToLocation(roomCenter, 200, false);
-        });
+        for (NpcInstance n : getNpcs()) {
+            if (n.isMonster() && ArrayUtils.contains(monsters, n.getNpcId())) {
+                n.setRunning();
+                n.moveToLocation(roomCenter, 200, false);
+            }
+        }
         invokeDeathListener();
     }
 

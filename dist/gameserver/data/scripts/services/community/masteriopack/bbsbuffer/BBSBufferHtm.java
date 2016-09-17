@@ -264,7 +264,7 @@ public class BBSBufferHtm {
             if (BB.getMode() == BufferMode.SHOW_SCHEME_MANAGER_VIEW) {
                 file = file.replace("%button_left%", "<button value=\"Назад\" action=\"bypass BBSB.SetMode:0\" width=128 height=26 back=" + BBSBufferStyle.PAGE_CHANGE_BUTTON_BACK + " fore=" + BBSBufferStyle.PAGE_CHANGE_BUTTON_FORE + ">");
 
-                if (BB.getCharacter().getSchemeList().isEmpty()) {
+                if (BB.getCharacter().getSchemeList().size() == 0) {
                     file = file.replace("%button_right%", "<button value=\"Новая схема\" action=\"bypass BBSB.Scheme.Init\" width=128 height=26 back=" + BBSBufferStyle.PAGE_CHANGE_BUTTON_BACK + " fore=" + BBSBufferStyle.PAGE_CHANGE_BUTTON_FORE + ">");
                 } else {
                     file = file.replace("%button_right%", "<button value=\"Редактор\" action=\"bypass BBSB.SetMode:3\" width=128 height=26 back=" + BBSBufferStyle.PAGE_CHANGE_BUTTON_BACK + " fore=" + BBSBufferStyle.PAGE_CHANGE_BUTTON_FORE + ">");

@@ -3,8 +3,7 @@
 
 <list>
   <weapon id="14400" name="Icarus Hand {PvP}" add_name="Rsk. Evasion">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -38,8 +37,7 @@
     </for>
   </weapon>
   <weapon id="14401" name="Icarus Hand {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -73,8 +71,7 @@
     </for>
   </weapon>
   <weapon id="14402" name="Icarus Hand {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -108,8 +105,7 @@
     </for>
   </weapon>
   <weapon id="14403" name="Icarus Stinger {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -144,8 +140,7 @@
     </for>
   </weapon>
   <weapon id="14404" name="Icarus Stinger {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -180,8 +175,7 @@
     </for>
   </weapon>
   <weapon id="14405" name="Icarus Stinger {PvP}" add_name="Light">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -216,8 +210,7 @@
     </for>
   </weapon>
   <weapon id="14406" name="Icarus Wingblade {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -250,8 +243,7 @@
     </for>
   </weapon>
   <weapon id="14407" name="Icarus Wingblade {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -284,8 +276,7 @@
     </for>
   </weapon>
   <weapon id="14408" name="Icarus Wingblade {PvP}" add_name="Light">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -317,9 +308,7 @@
     </for>
   </weapon>
   <weapon id="14409" name="Icarus Shooter {PvP}" add_name="Cheap Shot">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -359,9 +348,7 @@
     </for>
   </weapon>
   <weapon id="14410" name="Icarus Shooter {PvP}" add_name="Guidance">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -394,9 +381,7 @@
     </for>
   </weapon>
   <weapon id="14411" name="Icarus Shooter {PvP}" add_name="Focus">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -429,8 +414,7 @@
     </for>
   </weapon>
   <weapon id="14412" name="Icarus Dual Sword - Destruction {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -464,8 +448,7 @@
     </for>
   </weapon>
   <weapon id="14413" name="Icarus Disperser - Confusion {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -499,8 +482,7 @@
     </for>
   </weapon>
   <weapon id="14414" name="Icarus Disperser - Confusion {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -535,8 +517,7 @@
     </for>
   </weapon>
   <weapon id="14415" name="Icarus Disperser - Confusion {PvP}" add_name="Evasion">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -571,8 +552,7 @@
     </for>
   </weapon>
   <weapon id="14416" name="Icarus Disperser - Confusion {PvP}" add_name="Critical Damage">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -607,8 +587,7 @@
     </for>
   </weapon>
   <weapon id="14417" name="Icarus Sawsword - Destruction {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -640,8 +619,7 @@
     </for>
   </weapon>
   <weapon id="14418" name="Icarus Sawsword - Destruction {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -674,8 +652,7 @@
     </for>
   </weapon>
   <weapon id="14419" name="Icarus Sawsword - Destruction {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -708,8 +685,7 @@
     </for>
   </weapon>
   <weapon id="14420" name="Icarus Sawsword - Destruction {PvP}" add_name="Light">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -742,9 +718,7 @@
     </for>
   </weapon>
   <weapon id="14421" name="Icarus Shooter - Concentration {PvP}">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -777,9 +751,7 @@
     </for>
   </weapon>
   <weapon id="14422" name="Icarus Shooter - Concentration {PvP}" add_name="Cheap Shot">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -820,9 +792,7 @@
     </for>
   </weapon>
   <weapon id="14423" name="Icarus Shooter - Concentration {PvP}" add_name="Guidance">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -856,9 +826,7 @@
     </for>
   </weapon>
   <weapon id="14424" name="Icarus Shooter - Concentration {PvP}" add_name="Focus">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -892,8 +860,7 @@
     </for>
   </weapon>
   <weapon id="14425" name="Icarus Stinger - Destruction {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -928,8 +895,7 @@
     </for>
   </weapon>
   <weapon id="14426" name="Icarus Stinger - Destruction {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -965,8 +931,7 @@
     </for>
   </weapon>
   <weapon id="14427" name="Icarus Stinger - Destruction {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1002,8 +967,7 @@
     </for>
   </weapon>
   <weapon id="14428" name="Icarus Stinger - Destruction {PvP}" add_name="Light">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1039,9 +1003,7 @@
     </for>
   </weapon>
   <weapon id="14429" name="Icarus Spirit - Nature {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1074,9 +1036,7 @@
     </for>
   </weapon>
   <weapon id="14430" name="Icarus Spirit - Nature {PvP}" add_name="Acumen">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1109,9 +1069,7 @@
     </for>
   </weapon>
   <weapon id="14431" name="Icarus Spirit - Nature {PvP}" add_name="Mana Up">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1144,9 +1102,7 @@
     </for>
   </weapon>
   <weapon id="14432" name="Icarus Spirit - Nature {PvP}" add_name="Conversion">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1180,9 +1136,7 @@
     </for>
   </weapon>
   <weapon id="14433" name="Icarus Spitter - Concentration {PvP}">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1216,9 +1170,7 @@
     </for>
   </weapon>
   <weapon id="14434" name="Icarus Spitter - Concentration {PvP}" add_name="Cheap Shot">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1260,9 +1212,7 @@
     </for>
   </weapon>
   <weapon id="14435" name="Icarus Spitter - Concentration {PvP}" add_name="Guidance">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1297,9 +1247,7 @@
     </for>
   </weapon>
   <weapon id="14436" name="Icarus Spitter - Concentration {PvP}" add_name="Focus">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1334,8 +1282,7 @@
     </for>
   </weapon>
   <weapon id="14437" name="Icarus Wingblade - Lightning {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1368,8 +1315,7 @@
     </for>
   </weapon>
   <weapon id="14438" name="Icarus Wingblade - Lightning {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1403,8 +1349,7 @@
     </for>
   </weapon>
   <weapon id="14439" name="Icarus Wingblade - Lightning {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1438,8 +1383,7 @@
     </for>
   </weapon>
   <weapon id="14440" name="Icarus Wingblade - Lightning {PvP}" add_name="Light">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1473,8 +1417,7 @@
     </for>
   </weapon>
   <weapon id="14441" name="Icarus Trident - Thunder {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1508,8 +1451,7 @@
     </for>
   </weapon>
   <weapon id="14442" name="Icarus Trident - Thunder {PvP}" add_name="Anger">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1544,8 +1486,7 @@
     </for>
   </weapon>
   <weapon id="14443" name="Icarus Trident - Thunder {PvP}" add_name="Critical Stun">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1582,8 +1523,7 @@
     </for>
   </weapon>
   <weapon id="14444" name="Icarus Trident - Thunder {PvP}" add_name="Light">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1618,8 +1558,7 @@
     </for>
   </weapon>
   <weapon id="14445" name="Icarus Hammer - Earth {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1652,8 +1591,7 @@
     </for>
   </weapon>
   <weapon id="14446" name="Icarus Hammer - Earth {PvP}" add_name="Anger">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1687,8 +1625,7 @@
     </for>
   </weapon>
   <weapon id="14447" name="Icarus Hammer - Earth {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1722,8 +1659,7 @@
     </for>
   </weapon>
   <weapon id="14448" name="Icarus Hammer - Earth {PvP}" add_name="Rsk. Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1757,8 +1693,7 @@
     </for>
   </weapon>
   <weapon id="14449" name="Icarus Hand - Destruction {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1792,8 +1727,7 @@
     </for>
   </weapon>
   <weapon id="14450" name="Icarus Hand - Destruction {PvP}" add_name="Rsk. Evasion">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1828,8 +1762,7 @@
     </for>
   </weapon>
   <weapon id="14451" name="Icarus Hand - Destruction {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1864,8 +1797,7 @@
     </for>
   </weapon>
   <weapon id="14452" name="Icarus Hand - Destruction {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1900,8 +1832,7 @@
     </for>
   </weapon>
   <weapon id="14453" name="Icarus Heavy Arms - Lightning {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1933,8 +1864,7 @@
     </for>
   </weapon>
   <weapon id="14454" name="Icarus Heavy Arms - Lightning {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -1967,8 +1897,7 @@
     </for>
   </weapon>
   <weapon id="14455" name="Icarus Heavy Arms - Lightning {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -2001,8 +1930,7 @@
     </for>
   </weapon>
   <weapon id="14456" name="Icarus Heavy Arms - Lightning {PvP}" add_name="Light">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -2035,9 +1963,7 @@
     </for>
   </weapon>
   <weapon id="14457" name="Icarus Hall - Hail {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -2071,9 +1997,7 @@
     </for>
   </weapon>
   <weapon id="14458" name="Icarus Hall - Hail {PvP}" add_name="Mana Up">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -2107,9 +2031,7 @@
     </for>
   </weapon>
   <weapon id="14459" name="Icarus Hall - Hail {PvP}" add_name="Conversion">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -2144,9 +2066,7 @@
     </for>
   </weapon>
   <weapon id="14460" name="Icarus Hall - Hail {PvP}" add_name="Acumen">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="4965"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -2180,8 +2100,7 @@
     </for>
   </weapon>
   <weapon id="14461" name="Icarus Dual Daggers {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="5845"/>
     <set name="crystal_type" value="S80"/>
     <set name="crystallizable" value="true"/>
@@ -2216,8 +2135,7 @@
     </for>
   </weapon>
   <weapon id="14462" name="Vesper Dual Sword {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2250,8 +2168,7 @@
     </for>
   </weapon>
   <weapon id="14463" name="Vesper Cutter {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2283,8 +2200,7 @@
     </for>
   </weapon>
   <weapon id="14464" name="Vesper Slasher {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2316,9 +2232,7 @@
     </for>
   </weapon>
   <weapon id="14465" name="Vesper Buster {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2351,8 +2265,7 @@
     </for>
   </weapon>
   <weapon id="14466" name="Vesper Shaper {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2385,8 +2298,7 @@
     </for>
   </weapon>
   <weapon id="14467" name="Vesper Fighter {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2420,8 +2332,7 @@
     </for>
   </weapon>
   <weapon id="14468" name="Vesper Stormer {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2455,8 +2366,7 @@
     </for>
   </weapon>
   <weapon id="14469" name="Vesper Avenger {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2488,8 +2398,7 @@
     </for>
   </weapon>
   <weapon id="14470" name="Vesper Retributer {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2522,9 +2431,7 @@
     </for>
   </weapon>
   <weapon id="14471" name="Vesper Caster {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2557,9 +2464,7 @@
     </for>
   </weapon>
   <weapon id="14472" name="Vesper Singer {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2592,9 +2497,7 @@
     </for>
   </weapon>
   <weapon id="14473" name="Vesper Thrower {PvP}">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2629,8 +2532,7 @@
     </for>
   </weapon>
   <weapon id="14474" name="Vesper Pincer {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2665,9 +2567,7 @@
     </for>
   </weapon>
   <weapon id="14475" name="Vesper Sheutjeh {PvP}">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2700,8 +2600,7 @@
     </for>
   </weapon>
   <weapon id="14476" name="Vesper Nagan {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2735,8 +2634,7 @@
     </for>
   </weapon>
   <weapon id="14477" name="Vesper Dual Daggers {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="8233"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2771,8 +2669,7 @@
     </for>
   </weapon>
   <weapon id="14478" name="Vesper Cutter {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2804,8 +2701,7 @@
     </for>
   </weapon>
   <weapon id="14479" name="Vesper Cutter {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2837,8 +2733,7 @@
     </for>
   </weapon>
   <weapon id="14480" name="Vesper Cutter {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2870,8 +2765,7 @@
     </for>
   </weapon>
   <weapon id="14481" name="Vesper Slasher {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2903,8 +2797,7 @@
     </for>
   </weapon>
   <weapon id="14482" name="Vesper Slasher {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2936,8 +2829,7 @@
     </for>
   </weapon>
   <weapon id="14483" name="Vesper Slasher {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2969,9 +2861,7 @@
     </for>
   </weapon>
   <weapon id="14484" name="Vesper Buster {PvP}" add_name="Mana Up">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3003,9 +2893,7 @@
     </for>
   </weapon>
   <weapon id="14485" name="Vesper Buster {PvP}" add_name="Acumen">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3037,9 +2925,7 @@
     </for>
   </weapon>
   <weapon id="14486" name="Vesper Buster {PvP}" add_name="Magic Hold">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3073,8 +2959,7 @@
     </for>
   </weapon>
   <weapon id="14487" name="Vesper Shaper {PvP}" add_name="Crt. Damage">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3108,8 +2993,7 @@
     </for>
   </weapon>
   <weapon id="14488" name="Vesper Shaper {PvP}" add_name="HP Drain">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3143,8 +3027,7 @@
     </for>
   </weapon>
   <weapon id="14489" name="Vesper Shaper {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3178,8 +3061,7 @@
     </for>
   </weapon>
   <weapon id="14490" name="Vesper Fighter {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3213,8 +3095,7 @@
     </for>
   </weapon>
   <weapon id="14491" name="Vesper Fighter {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3248,8 +3129,7 @@
     </for>
   </weapon>
   <weapon id="14492" name="Vesper Fighter {PvP}" add_name="Crt. Stun">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3267,7 +3147,7 @@
       <slot id="LEFT_RIGHT_HAND"/>
     </equip>
 	<triggers>
-			<trigger id="3070" level="2" type="CRIT" chance="100"/>
+			<trigger id="3070" level="3" type="CRIT" chance="100"/>
 		</triggers>
     <skills>
       <skill id="3552" level="3"/>
@@ -3285,8 +3165,7 @@
     </for>
   </weapon>
   <weapon id="14493" name="Vesper Stormer {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3320,8 +3199,7 @@
     </for>
   </weapon>
   <weapon id="14494" name="Vesper Stormer {PvP}" add_name="Guidance">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3355,8 +3233,7 @@
     </for>
   </weapon>
   <weapon id="14495" name="Vesper Stormer {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3390,8 +3267,7 @@
     </for>
   </weapon>
   <weapon id="14496" name="Vesper Avenger {PvP}" add_name="HP Drain">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3424,8 +3300,7 @@
     </for>
   </weapon>
   <weapon id="14497" name="Vesper Avenger {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3458,8 +3333,7 @@
     </for>
   </weapon>
   <weapon id="14498" name="Vesper Avenger {PvP}" add_name="HP Regeneration">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3492,8 +3366,7 @@
     </for>
   </weapon>
   <weapon id="14499" name="Vesper Retributer {PvP}" add_name="HP Regeneration">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>

@@ -2561,7 +2561,7 @@
 		<point x="143955" y="110360" z="-3955" h="32768"/>
 		<npc id="25073"/><!--Bloody Priest Rudelto-->
 	</spawn>
-	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
+	<spawn count="1" respawn="28800" respawn_random="1800" period_of_day="none">
 		<point x="152260" y="110394" z="-5552" h="0"/>
 		<npc id="25725"/><!--Drake Lord (Raid Boss)-->
 	</spawn>
@@ -2714,7 +2714,7 @@
 		<npc id="31758"/><!--Rafi-->
 	</spawn>
 	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
-		<point x="147408" y="-43552" z="-2328" h="0"/>
+		<point x="147316" y="-64797" z="-3469" h="0"/>
 		<npc id="29095"/><!--Gordon-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
@@ -2742,7 +2742,7 @@
 		<npc id="32007"/><!--Galba-->
 	</spawn>
 	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
-		<point x="144600" y="-5500" z="-4720" h="43200"/>
+		<point x="144600" y="-5500" z="-4100" h="43200"/>
 		<npc id="25524"/><!--Flamestone Giant-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">

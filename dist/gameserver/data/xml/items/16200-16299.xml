@@ -3,8 +3,7 @@
 
 <list>
   <weapon id="16200" name="Vesper Retributer - Gail {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -38,8 +37,7 @@
     </for>
   </weapon>
   <weapon id="16201" name="Vesper Retributer - Gail {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -73,8 +71,7 @@
     </for>
   </weapon>
   <weapon id="16202" name="Vesper Retributer - Gail {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -108,9 +105,7 @@
     </for>
   </weapon>
   <weapon id="16203" name="Vesper Caster - Cleverness {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -145,9 +140,7 @@
     </for>
   </weapon>
   <weapon id="16204" name="Vesper Caster - Cleverness {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -182,9 +175,7 @@
     </for>
   </weapon>
   <weapon id="16205" name="Vesper Caster - Cleverness {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -219,9 +210,7 @@
     </for>
   </weapon>
   <weapon id="16206" name="Vesper Singer - Tidal Wave {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -256,9 +245,7 @@
     </for>
   </weapon>
   <weapon id="16207" name="Vesper Singer - Tidal Wave {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -293,9 +280,7 @@
     </for>
   </weapon>
   <weapon id="16208" name="Vesper Singer - Tidal Wave {PvP}">
-    <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -332,9 +317,7 @@
     </for>
   </weapon>
   <weapon id="16209" name="Vesper Thrower - Clairvoyance {PvP}">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -369,9 +352,7 @@
     </for>
   </weapon>
   <weapon id="16210" name="Vesper Thrower - Clairvoyance {PvP}">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -406,9 +387,7 @@
     </for>
   </weapon>
   <weapon id="16211" name="Vesper Thrower - Clairvoyance {PvP}">
-    <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -442,8 +421,7 @@
     </for>
   </weapon>
   <weapon id="16212" name="Vesper Pincer- Thunder {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -479,8 +457,7 @@
     </for>
   </weapon>
   <weapon id="16213" name="Vesper Pincer- Thunder {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -516,8 +493,7 @@
     </for>
   </weapon>
   <weapon id="16214" name="Vesper Pincer- Thunder {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -553,9 +529,7 @@
     </for>
   </weapon>
   <weapon id="16215" name="Vesper Schutze - Clairvoyance {PvP}">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -589,9 +563,7 @@
     </for>
   </weapon>
   <weapon id="16216" name="Vesper Schutze - Clairvoyance {PvP}">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -625,9 +597,7 @@
     </for>
   </weapon>
   <weapon id="16217" name="Vesper Schutze - Clairvoyance {PvP}">
-    <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -660,8 +630,7 @@
     </for>
   </weapon>
   <weapon id="16218" name="Vesper Nagan - Gail {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -695,8 +664,7 @@
     </for>
   </weapon>
   <weapon id="16219" name="Vesper Nagan - Gail {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -730,8 +698,7 @@
     </for>
   </weapon>
   <weapon id="16220" name="Vesper Nagan - Gail {PvP}">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+
     <set name="crystal_count" value="7050"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>

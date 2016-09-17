@@ -26,16 +26,16 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile {
     private static int Shackle = 20235;
     private static HardReference<NpcInstance> _oldGilmoreRef = HardReferences.emptyRef();
     private static int _stage = 1;
-    private static List<MonsterInstance> _spawns = new ArrayList<>();
-    private static List<Location> points11 = new ArrayList<>();
-    private static List<Location> points12 = new ArrayList<>();
-    private static List<Location> points13 = new ArrayList<>();
-    private static List<Location> points21 = new ArrayList<>();
-    private static List<Location> points22 = new ArrayList<>();
-    private static List<Location> points23 = new ArrayList<>();
-    private static List<Location> points31 = new ArrayList<>();
-    private static List<Location> points32 = new ArrayList<>();
-    private static List<Location> points33 = new ArrayList<>();
+    private static List<MonsterInstance> _spawns = new ArrayList<MonsterInstance>();
+    private static List<Location> points11 = new ArrayList<Location>();
+    private static List<Location> points12 = new ArrayList<Location>();
+    private static List<Location> points13 = new ArrayList<Location>();
+    private static List<Location> points21 = new ArrayList<Location>();
+    private static List<Location> points22 = new ArrayList<Location>();
+    private static List<Location> points23 = new ArrayList<Location>();
+    private static List<Location> points31 = new ArrayList<Location>();
+    private static List<Location> points32 = new ArrayList<Location>();
+    private static List<Location> points33 = new ArrayList<Location>();
 
     @Override
     public void onLoad() {
@@ -173,7 +173,11 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile {
     }
 
     private void deactivateAI() {
-        _spawns.stream().filter(monster -> monster != null).forEach(MonsterInstance::deleteMe);
+        for (MonsterInstance monster : _spawns) {
+            if (monster != null) {
+                monster.deleteMe();
+            }
+        }
 
         NpcInstance GilmoreInstance = _oldGilmoreRef.get();
         if (GilmoreInstance != null) {

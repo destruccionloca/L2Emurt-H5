@@ -108,8 +108,8 @@ public class _254_LegendaryTales extends Quest implements ScriptFile {
         if (cond == 1) {
             int mask = 1;
             int var = npc.getNpcId();
-            for (int raid : raids) {
-                if (raid == var) {
+            for (int i = 0; i < raids.length; i++) {
+                if (raids[i] == var) {
                     break;
                 }
                 mask = mask << 1;

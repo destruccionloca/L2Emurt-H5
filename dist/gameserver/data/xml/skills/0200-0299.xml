@@ -224,7 +224,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<enchant2 levels="30" name="Power">
-			<table name="#targetCount">11 11 11 11 11 11 11 12 12 12 12 12 12 12 13 13 13 13 13 13 13 13 14 14 14 14 14 14 14 15</table>
+			<table name="#targetCount">9 9 9 9 9 9 9 10 10 10 10 10 10 10 11 11 11 11 11 11 11 11 12 12 12 12 12 12 12 13</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<for>
@@ -278,7 +278,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<for>
-			<effect count="0x7fffffff" name="SilentMove" stackOrder="1" stackType="SilentMove" time="3.33" val="5">
+			<effect count="0x7fffffff" name="SilentMove" stackOrder="1" stackType="SilentMove" time="3" val="5">
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
@@ -291,7 +291,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="OP_TOGGLE" />
 		<for>
-			<effect count="0x7fffffff" name="DamOverTime" time="3.33" val="16">
+			<effect count="0x7fffffff" name="DamOverTime" time="1" val="16">
 				<mul order="0x30" stat="pAtkSpd" val="1.25" />
 			</effect>
 		</for>
@@ -326,7 +326,7 @@
 			<using kind="Sword,Dagger,Dual Sword,Dual Dagger" />
 		</cond>
 		<enchant1 levels="30" name="Chance">
-			<table name="#activateRate">51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
+			<table name="#activateRate">51 51 51 52 52 52 53 53 53 54 54 54 55 55 55 56 56 56 57 57 57 58 58 58 59 59 59 60 60 60</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<enchant2 levels="30" name="Cost">
@@ -348,7 +348,6 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunResist" val="0.89" />
 			<add order="0x40" stat="rEvas" val="#gain">
 				<player running="true" />
 			</add>
@@ -362,7 +361,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="OP_TOGGLE" />
 		<for>
-			<effect count="0x7fffffff" name="Relax" time="3.33" val="2">
+			<effect count="0x7fffffff" name="Relax" time="2" val="2">
 				<add order="0x10" stat="regHp" val="5" />
 			</effect>
 		</for>
@@ -434,8 +433,8 @@
 		<table name="#effectPoint">219 495</table>
 		<table name="#abnormal_lv">1 2</table>
 		<table name="#abnormal_time">1200</table>
-		<table name="#rEvas">0</table>
-		<table name="#rootResist">1</table>
+		<table name="#rEvas">0 0</table>
+		<table name="#rootResist">0 0</table>
 		<table name="#mpConsume2">11 19</table>
 		<table name="#mpConsume1">3 5</table>
 		<table name="#magicLevel">32 52</table>
@@ -467,14 +466,14 @@
 		</enchant3>
 		<enchant4 levels="30" name="Freedom">
 			<table name="#abnormal_lv">3</table>
-			<table name="#rootResist">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.2 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.3</table>
+			<table name="#rootResist">30 31 31 32 32 33 33 34 34 35 35 36 36 37 37 38 38 39 39 40 40 41 41 42 42 43 43 44 44 45</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant4>
 		<for>
 			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="SpeedUp" time="#abnormal_time" val="0">
 				<add order="0x40" stat="runSpd" val="#Tab-runSpd" />
 				<add order="0x40" stat="rEvas" val="#rEvas" />
-				<mul order="0x30" stat="rootResist" val="#rootResist" />
+				<add order="0x40" stat="rootResist" val="#rootResist" />
 			</effect>
 		</for>
 	</skill>
@@ -561,21 +560,22 @@
 		</for>
 	</skill>
 	<skill id="234" levels="41" name="Robe Mastery">
-		<table name="#pDef">1.7 2.7 4.3 5.4 7.2 8.5 10.6 12.1 14.5 15.3 16.2 17.9 18.8 19.8 21.7 22.7 23.7 25.8 26.8 27.9 30.1 31.2 32.4 33.5 34.7 35.9 37.1 38.4 39.6 40.8 42.1 43.4 44.7 45.9 47.3 48.6 49.9 51.2 52.5 53.9 55.2</table>
+		<table name="#pDef">1.7 2.7 4.3 5.4 7.2 8.5 10.6 12.1 14.5 15.3 16.2 17.9 18.8 19.8 21.7 22.7 23.7 25.8 26.8 27.9 30.1 31.2 32.4 33.5 34.7 35.9 37.1 38.4 39.6 40.8 42.1 43.4 44.7 45.9 47.3 48.6 49.9 51.2 52.5 53.9 355.2</table>
 		<table name="#regMp">1</table>
 		<table name="#mDef">1</table>
 		<table name="#magicLevel">18 20 23 25 28 30 33 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
+		<table name="#mCrit">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</table>
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<enchant1 levels="30" name="Power">
-			<table name="#pDef">58 58 59 59 59 60 60 61 61 61 62 62 63 63 63 64 64 65 65 65 66 66 67 67 67 68 68 69 69 69</table>
+			<table name="#pDef">358 358 359 359 359 360 360 361 361 361 362 362 363 363 363 364 364 365 365 365 366 366 367 367 367 368 368 369 369 369</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<enchant2 levels="30" name="Mana">
-			<table name="#regMp">1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.40 1.41 1.42 1.43 1.44 1.45 1.46 1.47 1.48 1.49 1.5</table>
+			<table name="#regMp">1.3 1.31 1.32 1.32 1.33 1.34 1.34 1.35 1.36 1.36 1.37 1.38 1.38 1.39 1.4 1.4 1.41 1.42 1.42 1.43 1.44 1.44 1.45 1.46 1.46 1.47 1.48 1.48 1.49 1.5</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<enchant3 levels="30" name="Magic Defense">
@@ -584,7 +584,7 @@
 		</enchant3>
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef">
-				<using armor="Magic" />
+					<using armor="Magic" />
 			</add>
 			<mul order="0x30" stat="regMp" val="#regMp">
 				<and>
@@ -593,7 +593,10 @@
 				</and>
 			</mul>
 			<mul order="0x30" stat="mDef" val="#mDef">
-				<using armor="Magic" />
+					<using armor="Magic" />
+			</mul>
+			<mul order="0x30" stat="mCritRate" val="#mCrit">
+					<using armor="Magic" />
 			</mul>
 		</for>
 	</skill>
@@ -602,6 +605,7 @@
 		<table name="#regMp">1</table>
 		<table name="#mDef">1</table>
 		<table name="#magicLevel">18 20 23 25 28 30 33 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
+		<table name="#mCrit">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</table>
 		<set name="icon" val="icon.skill0235" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
@@ -612,7 +616,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<enchant2 levels="30" name="Mana">
-			<table name="#regMp">1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.40 1.41 1.42 1.43 1.44 1.45 1.46 1.47 1.48 1.49 1.5</table>
+			<table name="#regMp">1.3 1.31 1.32 1.32 1.33 1.34 1.34 1.35 1.36 1.36 1.37 1.38 1.38 1.39 1.4 1.4 1.41 1.42 1.42 1.43 1.44 1.44 1.45 1.46 1.46 1.47 1.48 1.48 1.49 1.5</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<enchant3 levels="30" name="Magic Defense">
@@ -621,7 +625,7 @@
 		</enchant3>
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef">
-				<using armor="Magic" />
+					<using armor="Magic" />
 			</add>
 			<mul order="0x30" stat="regMp" val="#regMp">
 				<and>
@@ -630,7 +634,10 @@
 				</and>
 			</mul>
 			<mul order="0x30" stat="mDef" val="#mDef">
-				<using armor="Magic" />
+					<using armor="Magic" />
+			</mul>
+			<mul order="0x30" stat="mCritRate" val="#mCrit">
+					<using armor="Magic" />
 			</mul>
 		</for>
 	</skill>
@@ -720,6 +727,8 @@
 		<set name="hitTime" val="180000" />
 		<set name="hitCancelTime" val="500" />
 		<set name="mpConsume1" val="50" />
+		<set name="isSkillTimePermanent" val="true" />
+		<set name="isReuseDelayPermanent" val="true" />
 		<set name="target" val="TARGET_HOLY" />
 		<set name="skillType" val="TAKECASTLE" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -768,10 +777,9 @@
 			<mul order="0x30" stat="mAtkSpd" val="0.7">
 				<using kind="Bow, Pole" />
 			</mul>
-			<sub order="0x40" stat="accCombat" val="8">
+			<sub order="0x40" stat="accCombat" val="9">
 				<using kind="Bow, Pole" />
 			</sub>
-			<add order="0x40" stat="absorbDamMp" val="10" />
 		</for>
 	</skill>
 	<skill id="250" levels="42" name="Weapon Mastery">
@@ -792,7 +800,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="0.7">
 				<using kind="Bow, Pole" />
 			</mul>
-			<sub order="0x40" stat="accCombat" val="9">
+			<sub order="0x40" stat="accCombat" val="8">
 				<using kind="Bow, Pole" />
 			</sub>
 		</for>
@@ -802,6 +810,7 @@
 		<table name="#regMp">1</table>
 		<table name="#mDef">1</table>
 		<table name="#magicLevel">4 7 11 14 17 20 23 25 28 30 33 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
+		<table name="#mCrit">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</table>
 		<set name="icon" val="icon.skill0251" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
@@ -820,8 +829,9 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
+			<add order="0x40" stat="mCritRate" val="2" />
 			<add order="0x40" stat="pDef" val="#pDef">
-				<using armor="Magic" />
+					<using armor="Magic" />
 			</add>
 			<mul order="0x30" stat="regMp" val="#regMp">
 				<and>
@@ -831,6 +841,9 @@
 			</mul>
 			<mul order="0x30" stat="mDef" val="#mDef">
 				<using armor="Magic" />
+			</mul>
+			<mul order="0x30" stat="mCritRate" val="#mCrit">
+					<using armor="Magic" />
 			</mul>
 		</for>
 	</skill>
@@ -949,7 +962,7 @@
 		<for>
 			<effect count="#debuff-count" name="Buff" time="30" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd" />
-				<sub order="0x40" stat="attackEarth" val="#earthRcpt" />
+				<sub order="0x40" stat="defenceEarth" val="#earthRcpt" />
 			</effect>
 			<effect count="#decay-count" name="DamOverTime" time="0" val="#dmg" />
 		</for>
@@ -976,7 +989,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="256" levels="1" name="Accuracy">
-		<table name="#mana">0.4</table>
+		<table name="#mana">0.2</table>
 		<table name="#magicLevel">24</table>
 		<set name="icon" val="icon.skill0256" />
 		<set name="magicLevel" val="#magicLevel" />
@@ -985,17 +998,17 @@
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="OP_TOGGLE" />
 		<enchant1 levels="30" name="Cost">
-			<table name="#mana">.39 .39 .39 .38 .38 .38 .38 .37 .37 .37 .36 .36 .36 .36 .35 .35 .35 .34 .34 .34 .34 .33 .33 .33 .32 .32 .32 .32 .31 .31</table>
+			<table name="#mana">.195 .19 .185 .18 .175 .17 .165 .16 .155 .15 .145 .14 .135 .13 .125 .12 .115 .11 .105 .1 .095 .09 .085 .08 .075 .07 .065 .06 .055 .05</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<for>
-			<effect count="0x7fffffff" name="LDManaDamOverTime" time="3.33" val="#mana">
+			<effect count="0x7fffffff" name="LDManaDamOverTime" time="3" val="#mana">
 				<add order="0x40" stat="accCombat" val="3" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="257" levels="45" name="Sword/Blunt Weapon Mastery">
-		<table name="#pAtk">4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3</table>
+		<table name="#pAtk">4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.4 82.9 86.5 90.2 94 97.9 101.9 106 110.2 114.5 118.9 123.4 128 132.7 137.5</table>
 		<table name="#magicLevel">20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
 		<set name="icon" val="icon.skill0257" />
 		<set name="magicLevel" val="#magicLevel" />
@@ -1013,7 +1026,7 @@
 		<table name="#pDef">11.1 11.8 12.5 14 14.8 15.6 17.3 18.1 19 20.8 21.7 22.6 24.5 25.5 26.4 27.4 28.4 29.5 30.5 31.6 32.6 33.7 34.8 35.9 37 38.1 39.2 40.3 41.4 42.6 43.7 44.8 46</table>
 		<table name="#regMp">1.2</table>
 		<enchant1 levels="30" name="Power">
-			<table name="#pDef">47 47 48 48 49 49 49 50 50 50 51 51 52 52 52 53 53 53 54 54 55 55 55 56 56 56 57 57 58 58</table>
+			<table name="#pDef">47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<enchant2 levels="30" name="Power">
@@ -1042,7 +1055,7 @@
 		</for>
 	</skill>
 	<skill id="259" levels="33" name="Heavy Armor Mastery">
-		<table name="#pDef">14.8 15.6 16.5 18.3 19.2 20.2 22.1 23.1 24.1 26.2 27.3 28.4 30.6 31.8 33 34.1 35.3 36.5 37.8 39 40.3 41.5 42.8 44.1 45.4 46.7 48 49.4 50.7 52 53.4 54.7 56.1</table>
+		<table name="#pDef">14.8 15.6 16.5 18.3 19.2 20.2 22.1 23.1 24.1 26.2 27.3 28.4 30.6 31.8 33 34.2 35.5 36.9 38.4 40 41.7 43.5 45.4 47.4 49.5 51.7 54 56.4 58.9 61.5 64.2 67 69.6</table>
 		<table name="#mAtkSpd">1.68</table>
 		<table name="#pAtkSpd">1.25</table>
 		<table name="#magicLevel">38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -1056,7 +1069,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<enchant2 levels="30" name="Power">
-			<table name="#mAtkSpd">1.69 1.69 1.69 1.69 1.69 1.69 1.69 1.69 1.69 1.69 1.69 1.69 1.69 1.69 1.7 1.7 1.7 1.7 1.7 1.7 1.7 1.7 1.7 1.7 1.7 1.7 1.7 1.7 1.7 1.71</table>
+			<table name="#mAtkSpd">1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.72 1.73</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<enchant3 levels="30" name="Power">
@@ -1296,25 +1309,25 @@
 		</enchant2>
 		<enchant3 name="Fire Attack">
 			<table name="#element">fire</table>
-			<table name="#elementPower">2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 			<table name="#power">5504 5529 5554 5579 5604 5629 5654 5680 5705 5730 5755 5780 5805 5830 5855 5880 5905 5930 5955 5980 6005 6030 6055 6080 6105 6130 6156 6181 6206 6231</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<enchant4 name="Water Attack">
 			<table name="#element">water</table>
-			<table name="#elementPower">2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 			<table name="#power">5504 5529 5554 5579 5604 5629 5654 5680 5705 5730 5755 5780 5805 5830 5855 5880 5905 5930 5955 5980 6005 6030 6055 6080 6105 6130 6156 6181 6206 6231</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant4>
 		<enchant5 name="Wind Attack">
 			<table name="#element">wind</table>
-			<table name="#elementPower">2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 			<table name="#power">5504 5529 5554 5579 5604 5629 5654 5680 5705 5730 5755 5780 5805 5830 5855 5880 5905 5930 5955 5980 6005 6030 6055 6080 6105 6130 6156 6181 6206 6231</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant5>
 		<enchant6 name="Earth Attack">
 			<table name="#element">earth</table>
-			<table name="#elementPower">2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 			<table name="#power">5504 5529 5554 5579 5604 5629 5654 5680 5705 5730 5755 5780 5805 5830 5855 5880 5905 5930 5955 5980 6005 6030 6055 6080 6105 6130 6156 6181 6206 6231</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant6>
@@ -1777,7 +1790,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<for>
-			<effect count="1" name="Cubic" stackType="viper_cubic" stackOrder="1" time="900">
+			<effect name="Cubic" stackType="viper_cubic" stackOrder="1" time="900">
 				<def name="cubicId" val="4" />
 				<def name="cubicLevel" val="#cubicLevel" />
 				<player cubic="4" />
@@ -1847,13 +1860,15 @@
 		<set name="effectPoint" val="#effectPoint" />
 		<set name="weaponsAllowed" val="1024" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="element" val="fire" />
 		<set name="overHit" val="true" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="shieldignore" val="true" />
 		<set name="criticalRate" val="15" />
 		<set name="nextAction" val="attack" />
-		<table name="#elementPower">20</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
 		<set name="elementPower" val="#elementPower" />
 		<set name="element" val="#element" />
 		<enchant1 levels="30" name="Power">
@@ -1866,7 +1881,7 @@
 		</enchant2>
 		<enchant3 name="Fire Attack">
 			<table name="#element">fire</table>
-			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 	</skill>
@@ -1902,7 +1917,7 @@
 		<set name="trait" val="SHOCK" />
 		<set name="saveVs" val="CON" />
 		<enchant1 levels="30" name="Chance">
-			<table name="#activateRate">51 52 53 54 55 56 57 58 59 60 61 63 64 65 66 67 68 69 70 71 72 73 74 76 77 78 79 80 81 82</table>
+			<table name="#activateRate">51 51 51 52 52 52 53 53 53 54 54 54 55 55 55 56 56 56 57 57 57 58 58 58 59 59 59 60 60 60</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<enchant2 name="Cost">
@@ -1950,7 +1965,7 @@
 	</skill>
 	<skill id="283" levels="7" name="Summon Dark Panther">
 		<table name="#itemConsumeCount">1 3 3 2 4 2 4</table>
-		<table name="#itemConsumeCountInTime">1 1 2 3 3 4</table>
+		<table name="#itemConsumeCountInTime">1 1 2 3 4</table>
 		<table name="#expPenalty">0.15</table>
 		<table name="#mpConsume2">56 70 85 92 98 104 109</table>
 		<table name="#mpConsume1">14 18 22 23 25 26 28</table>
@@ -2057,7 +2072,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<enchant1 levels="30" name="Power">
-			<table name="#ManaHeal-eff">82 82 83 83 83 83 83 83 84 84 84 84 84 84 85 85 85 85 85 86 86 86 86 86 86 87 87 87 87 87</table>
+			<table name="#ManaHeal-eff">82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<for>
@@ -2080,7 +2095,7 @@
 		<set name="effectPoint" val="#effectPoint" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillRadius" val="#skillRadius" />
-		<set name="skillType" val="AGGRESSION" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect count="1" name="Buff" time="#time" val="0">
@@ -2089,8 +2104,7 @@
 		</for>
 	</skill>
 	<skill id="287" levels="3" name="Lionheart">
-		<table name="#res">1.4 1.6 1.8</table>
-		<table name="#cancelRes">40 60 100</table>
+		<table name="#res">40 60 80</table>
 		<table name="#mpConsume2">16 22 29</table>
 		<table name="#magicLevel">36 49 62</table>
 		<set name="icon" val="icon.skill0287" />
@@ -2104,16 +2118,16 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect count="1" name="Buff" time="60" val="0">
-				<mul order="0x30" stat="sleepResist" val="#res" />
-				<mul order="0x30" stat="stunResist" val="#res" />
-				<mul order="0x30" stat="rootResist" val="#res" />
-				<mul order="0x30" stat="paralyzeResist" val="#res" />
-				<add order="0x40" stat="cancelResist" val="#cancelRes" />
+				<add order="0x40" stat="sleepResist" val="#res" />
+				<add order="0x40" stat="stunResist" val="#res" />
+				<add order="0x40" stat="rootResist" val="#res" />
+				<add order="0x40" stat="paralyzeResist" val="#res" />
+				<add order="0x40" stat="cancelResist" val="#res" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="288" levels="4" name="Guard Stance">
-		<table name="#mpDrain">2</table>
+		<table name="#mpDrain">1.5</table>
 		<table name="#pDef">121.8 161.1 212.1 256.5</table>
 		<table name="#mpConsume1">8 10 12 13</table>
 		<table name="#magicLevel">43 52 62 70</table>
@@ -2124,16 +2138,16 @@
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="OP_TOGGLE" />
 		<enchant1 levels="30" name="Power">
-			<table name="#pDef">259.4 262.3 265.2 268.1 271 274 276.9 279.8 282.7 285.6 288.5 291.5 294.4 297.3 300.2 303.1 306 309 311.9 314.8 317.7 320.6 323.5 326.5 329.4 332.3 335.2 338.1 341 344</table>
+			<table name="#pDef">259.4 262.3 265.2 268.1 271 271 276.9 279.8 282.7 285.6 288.5 291.5 294.4 297.3 200.2 303.1 306 309 311.9 214.8 317.7 320.6 323.5 326.5 329.4 332.3 335.2 338.1 341 344</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<enchant2 levels="30" name="Cost">
-			<table name="#mpDrain">1.98 1.96 1.95 1.93 1.91 1.9 1.88 1.86 1.85 1.83 1.81 1.8 1.78 1.76 1.75 1.73 1.71 1.7 1.68 1.66 1.65 1.63 1.61 1.6 1.58 1.56 1.55 1.53 1.51 1.5</table>
+			<table name="#mpDrain">1 0.98 0.96 0.95 0.94 0.92 0.90 0.88 0.86 0.84 0.82 0.80 0.78 0.76 0.74 0.72 0.70 0.68 0.66 0.64 0.62 0.60 0.58 0.56 0.54 0.52 0.50 0.48 0.46 0.44</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 			<table name="#mpConsume1">12 12 12 11 11 11 10 10 10 9 9 9 8 8 8 7 7 7 6 6 6 5 5 5 4 4 4 3 3 3</table>
 		</enchant2>
 		<for>
-			<effect count="0x7fffffff" name="LDManaDamOverTime" time="3.33" val="#mpDrain">
+			<effect count="0x7fffffff" name="LDManaDamOverTime" time="3" val="#mpDrain">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<mul order="0x30" stat="rShld" val="1.5" />
 			</effect>
@@ -2243,7 +2257,7 @@
 				<add order="0x40" stat="baseCrit" val="100">
 					<player percentHP="60" />
 				</add>
-				<mul order="0x30" stat="pAtk" val="1.3">
+				<mul order="0x30" stat="pAtk" val="1.23">
 					<player percentHP="30" />
 				</mul>
 				<add order="0x40" stat="baseCrit" val="300">

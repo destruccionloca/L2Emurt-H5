@@ -97,10 +97,10 @@ public class Hitman extends Functions implements ScriptFile, OnDeathListener, On
 
     @Override
     public void onLoad() {
-        _orderMap = new HashMap<>();
+        _orderMap = new HashMap<Integer, Order>();
         _itemsList = new StringBuilder();
-        _allowedItems = new HashMap<>();
-        _inList = new ArrayList<>();
+        _allowedItems = new HashMap<String, Integer>();
+        _inList = new ArrayList<Integer>();
 
         CharListenerList.addGlobal(this);
 

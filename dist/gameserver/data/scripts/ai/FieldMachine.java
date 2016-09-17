@@ -29,9 +29,11 @@ public class FieldMachine extends DefaultAI {
             Functions.npcSayCustomMessage(actor, "scripts.ai.FieldMachine." + actor.getNpcId());
             List<NpcInstance> around = actor.getAroundNpc(1500, 300);
             if (around != null && !around.isEmpty()) {
-                around.stream().filter(npc -> npc.isMonster() && npc.getNpcId() >= 22656 && npc.getNpcId() <= 22659).forEach(npc -> {
-                    npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
-                });
+                for (NpcInstance npc : around) {
+                    if (npc.isMonster() && npc.getNpcId() >= 22656 && npc.getNpcId() <= 22659) {
+                        npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
+                    }
+                }
             }
         }
     }

@@ -143,9 +143,11 @@ public class FreyaNormal extends Reflection {
 
     private void manageCastleController(int state) {
         // 1-7 enabled, 8 - disabled
-        getNpcs().stream().filter(n -> n.getNpcId() == IceCastleController).forEach(n -> {
-            n.setNpcState(state);
-        });
+        for (NpcInstance n : getNpcs()) {
+            if (n.getNpcId() == IceCastleController) {
+                n.setNpcState(state);
+            }
+        }
     }
 
     private void manageStorm(boolean active) {
@@ -267,7 +269,11 @@ public class FreyaNormal extends Reflection {
         @Override
         public void runImpl() throws Exception {
             firstStageGuardSpawn.cancel(true);
-            getNpcs().stream().filter(n -> n.getNpcId() != Sirra && n.getNpcId() != IceCastleController).forEach(NpcInstance::deleteMe);
+            for (NpcInstance n : getNpcs()) {
+                if (n.getNpcId() != Sirra && n.getNpcId() != IceCastleController) {
+                    n.deleteMe();
+                }
+            }
 
             for (Player p : getPlayers()) {
                 p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_PHASE_A);
@@ -305,7 +311,9 @@ public class FreyaNormal extends Reflection {
 
         @Override
         public void runImpl() throws Exception {
-            getNpcs().forEach(NpcInstance::block);
+            for (NpcInstance n : getNpcs()) {
+                n.block();
+            }
             for (Player p : getPlayers()) {
                 p.showQuestMovie(ExStartScenePlayer.SCENE_ICE_HEAVYKNIGHT_SPAWN);
             }
@@ -318,7 +326,9 @@ public class FreyaNormal extends Reflection {
         @Override
         public void runImpl() throws Exception {
             manageDamageZone(4, false);
-            getNpcs().forEach(NpcInstance::unblock);
+            for (NpcInstance n : getNpcs()) {
+                n.unblock();
+            }
             NpcInstance knightLeader = addSpawnWithoutRespawn(IceKnightLeaderNormal, new Location(114707, -114799, -11199, 15956), 0);
             knightLeader.addListener(_deathListener);
         }
@@ -332,7 +342,11 @@ public class FreyaNormal extends Reflection {
                 p.sendPacket(new ExSendUIEvent(p, false, false, 60, 0, NpcString.TIME_REMAINING_UNTIL_NEXT_BATTLE));
             }
             secondStageGuardSpawn.cancel(true);
-            getNpcs().stream().filter(n -> n.getNpcId() != Sirra && n.getNpcId() != IceCastleController).forEach(NpcInstance::deleteMe);
+            for (NpcInstance n : getNpcs()) {
+                if (n.getNpcId() != Sirra && n.getNpcId() != IceCastleController) {
+                    n.deleteMe();
+                }
+            }
             ThreadPoolManager.getInstance().schedule(new PreThirdStageM(), 60000L);
         }
     }
@@ -371,7 +385,9 @@ public class FreyaNormal extends Reflection {
 
         @Override
         public void runImpl() throws Exception {
-            getNpcs().forEach(NpcInstance::block);
+            for (NpcInstance n : getNpcs()) {
+                n.block();
+            }
             for (Player p : getPlayers()) {
                 p.block();
                 p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_KEGOR_INTRUSION);
@@ -384,7 +400,9 @@ public class FreyaNormal extends Reflection {
 
         @Override
         public void runImpl() throws Exception {
-            getNpcs().forEach(NpcInstance::unblock);
+            for (NpcInstance n : getNpcs()) {
+                n.unblock();
+            }
             for (Player p : getPlayers()) {
                 p.unblock();
                 p.sendPacket(new ExShowScreenMessage(NpcString.BEGIN_STAGE_4_FREYA, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
@@ -407,7 +425,9 @@ public class FreyaNormal extends Reflection {
             manageAttackUpZone(true);
             managePcBuffZone(true);
             //Deleting all NPCs + Freya corpse
-            getNpcs().forEach(NpcInstance::deleteMe);
+            for (NpcInstance n : getNpcs()) {
+                n.deleteMe();
+            }
             //Movie + quest update
             for (Player p : getPlayers()) {
                 QuestState qs = p.getQuestState(_10286_ReunionWithSirra.class);
@@ -429,7 +449,9 @@ public class FreyaNormal extends Reflection {
     }
 
     public void notifyElimination() {
-        getNpcs().forEach(NpcInstance::deleteMe);
+        for (NpcInstance n : getNpcs()) {
+            n.deleteMe();
+        }
         for (Player p : getPlayers()) {
             p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_ENDING_B);
         }

@@ -724,7 +724,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<triggers>
-			<trigger id="3070" level="2" type="CRIT" chance="100"/>
+			<trigger id="3070" level="3" type="CRIT" chance="100"/>
 		</triggers>
 		<skills>
 			<skill id="3552" level="1"/>

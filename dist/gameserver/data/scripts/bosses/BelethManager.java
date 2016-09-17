@@ -33,8 +33,8 @@ public class BelethManager extends Functions implements ScriptFile {
     private static final Logger _log = LoggerFactory.getLogger(BelethManager.class);
     private static Zone _zone = ReflectionUtils.getZone("[Beleth_room]");
     private static ZoneListener _zoneListener = new ZoneListener();
-    private static List<Player> _indexedPlayers = new ArrayList<>();
-    private static List<NpcInstance> _npcList = new ArrayList<>();
+    private static List<Player> _indexedPlayers = new ArrayList<Player>();
+    private static List<NpcInstance> _npcList = new ArrayList<NpcInstance>();
     private static final int _doorWaitTimeDuration = 60000; // 1min
     private static final int _spawnWaitTimeDuration = 120000; // 2min
     private static final int _closeDoorTimeDuration = 180000; // 3min
@@ -80,7 +80,7 @@ public class BelethManager extends Functions implements ScriptFile {
     private static RaidBossInstance _beleth = null;
     private static final int centerX = 16325; // Center of the room
     private static final int centerY = 213135;
-    private static Map<MonsterInstance, Location> _clones = new ConcurrentHashMap<>();
+    private static Map<MonsterInstance, Location> _clones = new ConcurrentHashMap<MonsterInstance, Location>();
     private static Location[] _cloneLoc = new Location[56];
     private static ScheduledFuture<?> cloneRespawnTask;
     private static ScheduledFuture<?> ringSpawnTask;
@@ -302,7 +302,11 @@ public class BelethManager extends Functions implements ScriptFile {
                     setRingAvailable(false);
                     break;
                 case entity_clear:
-                    _npcList.stream().filter(n -> n != null).forEach(NpcInstance::deleteMe);
+                    for (NpcInstance n : _npcList) {
+                        if (n != null) {
+                            n.deleteMe();
+                        }
+                    }
                     _npcList.clear();
 
                     // Close coffin and corridor doors
@@ -318,7 +322,9 @@ public class BelethManager extends Functions implements ScriptFile {
                     _taskStarted = false;
                     break;
                 case clone_despawn:
-                    _clones.keySet().forEach(MonsterInstance::deleteMe);
+                    for (MonsterInstance clonetodelete : _clones.keySet()) {
+                        clonetodelete.deleteMe();
+                    }
                     _clones.clear();
                     break;
                 case inactivity_check:

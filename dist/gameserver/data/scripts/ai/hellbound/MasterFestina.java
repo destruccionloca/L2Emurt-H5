@@ -83,9 +83,11 @@ public class MasterFestina extends Fighter {
         if (System.currentTimeMillis() - _lastFactionNotifyTime > _minFactionNotifyInterval) {
             _lastFactionNotifyTime = System.currentTimeMillis();
 
-            actor.getAroundNpc(3000, 500).stream().filter(npc -> npc.getNpcId() == FOUNDRY_MYSTIC_ID || npc.getNpcId() == FOUNDRY_SPIRIT_GUARD_ID).forEach(npc -> {
-                npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, Rnd.get(1, 100));
-            });
+            for (NpcInstance npc : actor.getAroundNpc(3000, 500)) {
+                if (npc.getNpcId() == FOUNDRY_MYSTIC_ID || npc.getNpcId() == FOUNDRY_SPIRIT_GUARD_ID) {
+                    npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, Rnd.get(1, 100));
+                }
+            }
         }
 
         super.onEvtAttacked(attacker, damage);
@@ -97,7 +99,11 @@ public class MasterFestina extends Fighter {
         _lastFactionNotifyTime = 0;
 
         // Удаляем охрану
-        actor.getAroundNpc(3000, 500).stream().filter(npc -> npc.getNpcId() == FOUNDRY_MYSTIC_ID || npc.getNpcId() == FOUNDRY_SPIRIT_GUARD_ID).forEach(NpcInstance::deleteMe);
+        for (NpcInstance npc : actor.getAroundNpc(3000, 500)) {
+            if (npc.getNpcId() == FOUNDRY_MYSTIC_ID || npc.getNpcId() == FOUNDRY_SPIRIT_GUARD_ID) {
+                npc.deleteMe();
+            }
+        }
 
         setZoneActive();
         super.onEvtDead(killer);

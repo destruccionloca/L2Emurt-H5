@@ -41,7 +41,7 @@ public class _622_DeliveryofSpecialLiquor extends Quest implements ScriptFile {
     }
 
     private static void takeDrink(QuestState st, int setcond) {
-        st.setCond(setcond);
+        st.setCond(Integer.valueOf(setcond));
         st.takeItems(SpecialDrink, 1);
         st.giveItems(FeeOfSpecialDrink, 1);
         st.playSound(SOUND_MIDDLE);

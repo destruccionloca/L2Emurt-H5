@@ -412,13 +412,13 @@ public class _233_TestOfWarspirit extends Quest implements ScriptFile {
             qs.giveItems(MORDEOS_TALON, 1);
             qs.playSound(qs.getQuestItemsCount(MORDEOS_TALON) == 10 ? SOUND_MIDDLE : SOUND_ITEMGET);
         } else if ((npcId == Noble_Ant || npcId == Noble_Ant_Leader) && qs.getQuestItemsCount(RACOYS_TOTEM) > 0) {
-            List<Integer> drops = new ArrayList<>();
+            List<Integer> drops = new ArrayList<Integer>();
             for (int drop_id : Noble_Ant_Drops) {
                 if (qs.getQuestItemsCount(drop_id) == 0) {
                     drops.add(drop_id);
                 }
             }
-            if (!drops.isEmpty() && Rnd.chance(30)) {
+            if (drops.size() > 0 && Rnd.chance(30)) {
                 int drop_id = drops.get(Rnd.get(drops.size()));
                 qs.giveItems(drop_id, 1);
                 qs.playSound(drops.size() == 1 ? SOUND_MIDDLE : SOUND_ITEMGET);
@@ -426,13 +426,13 @@ public class _233_TestOfWarspirit extends Quest implements ScriptFile {
             drops.clear();
             drops = null;
         } else if ((npcId == Leto_Lizardman_Shaman || npcId == Leto_Lizardman_Overlord) && qs.getQuestItemsCount(PEKIRONS_TOTEM) > 0) {
-            List<Integer> drops = new ArrayList<>();
+            List<Integer> drops = new ArrayList<Integer>();
             for (int drop_id : Leto_Lizardman_Drops) {
                 if (qs.getQuestItemsCount(drop_id) == 0) {
                     drops.add(drop_id);
                 }
             }
-            if (!drops.isEmpty() && Rnd.chance(25)) {
+            if (drops.size() > 0 && Rnd.chance(25)) {
                 int drop_id = drops.get(Rnd.get(drops.size()));
                 qs.giveItems(drop_id, 1);
                 qs.playSound(drops.size() == 1 ? SOUND_MIDDLE : SOUND_ITEMGET);
@@ -440,13 +440,13 @@ public class _233_TestOfWarspirit extends Quest implements ScriptFile {
             drops.clear();
             drops = null;
         } else if (npcId == Medusa && qs.getQuestItemsCount(MANAKIAS_TOTEM) > 0) {
-            List<Integer> drops = new ArrayList<>();
+            List<Integer> drops = new ArrayList<Integer>();
             for (int drop_id : Medusa_Drops) {
                 if (qs.getQuestItemsCount(drop_id) == 0) {
                     drops.add(drop_id);
                 }
             }
-            if (!drops.isEmpty() && Rnd.chance(30)) {
+            if (drops.size() > 0 && Rnd.chance(30)) {
                 int drop_id = drops.get(Rnd.get(drops.size()));
                 qs.giveItems(drop_id, 1);
                 qs.playSound(drops.size() == 1 && qs.getQuestItemsCount(HERMODTS_SKULL) > 0 ? SOUND_MIDDLE : SOUND_ITEMGET);

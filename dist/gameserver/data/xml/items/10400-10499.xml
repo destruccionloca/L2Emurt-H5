@@ -184,7 +184,7 @@
   <armor id="10416" name="Blue Talisman - Explosion">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i01"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -200,7 +200,7 @@
   <armor id="10417" name="Blue Talisman - Magic Explosion">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i01"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -216,7 +216,7 @@
   <armor id="10418" name="White Talisman - Storm">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i06"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -232,7 +232,7 @@
   <armor id="10419" name="White Talisman - Darkness">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i06"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -248,7 +248,7 @@
   <armor id="10420" name="White Talisman - Water">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i06"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -264,7 +264,7 @@
   <armor id="10421" name="White Talisman - Fire">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i06"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -280,7 +280,7 @@
   <armor id="10422" name="White Talisman - Light">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i06"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -296,7 +296,7 @@
   <armor id="10423" name="Blue Talisman - Self-Destruction">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="60"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i01"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>
@@ -312,7 +312,7 @@
   <armor id="10424" name="Blue Talisman - Greater Healing">
     <set name="crystal_type" value="NONE"/>
     <set name="dropable" value="false"/>
-    <set name="durability" value="65"/>
+    <set name="durability" value="300"/>
     <set name="icon" value="icon.etc_talisman_i01"/>
     <set name="sellable" value="false"/>
     <set name="tradeable" value="false"/>

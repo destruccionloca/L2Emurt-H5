@@ -47,7 +47,7 @@ import org.slf4j.LoggerFactory;
 public class SavingSnowman extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener {
 
     private static final Logger _log = LoggerFactory.getLogger(SavingSnowman.class);
-    private static List<SimpleSpawner> _spawns = new ArrayList<>();
+    private static List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
     private static ScheduledFuture<?> _snowmanShoutTask;
     private static ScheduledFuture<?> _saveTask;
     private static ScheduledFuture<?> _sayTask;
@@ -56,11 +56,11 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
     private static NpcInstance _snowman;
     private static Creature _thomas;
 
-    public enum SnowmanState {
+    public static enum SnowmanState {
 
         CAPTURED,
         KILLED,
-        SAVED
+        SAVED;
     }
     private static final int INITIAL_SAVE_DELAY = 10 * 60 * 1000; // 10 мин
     private static final int SAVE_INTERVAL = 60 * 60 * 1000; // 60 мин
@@ -72,9 +72,31 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
     private static final int EVENT_REWARDER_ID = 13186;
     private static final int SNOWMAN_ID = 13160;
     private static final int THOMAS_ID = 13183;
-    private static final int SANTA_BUFF_REUSE = 12 * 3600 * 1000; // 12 hours
-    private static final int SANTA_LOTTERY_REUSE = 3 * 3600 * 1000; // 3 hours
-    // Оружие для обмена купонов
+    private static final int SANTA_BUFF_REUSE = 2 * 3600 * 1000; // 2 hours
+    private static final int SANTA_LOTTERY_REUSE = 1 * 3600 * 1000; // 1 hours
+   
+   
+    private static Location[] SNOWMAN = {
+        new Location(-5864, 109832, -3216),
+        new Location(-43192, 74664, -3528),
+        new Location(-123256, 76872, -3304),
+        new Location(-20840, 129496, -3728),
+        new Location(-92424, 240760, -3424),
+        new Location(-21512, 134360, -3968),
+        new Location(-15992, 209320, -3664),
+        new Location(-47880, 60440, -3336),
+        new Location(43768, 148872, -3672),
+        new Location(-111640, 234264, -3696),
+        new Location(109672,-173848, -560),
+        new Location(-7832, 113448, -3480),
+        new Location(-11032, 76040, -3600),
+        new Location(-122408, 71704, -3008),
+        new Location(-87592, 87768, -3424),
+        new Location(-67496, 120520, -3640),
+        new Location(66920, 72184, -3792),
+        new Location(-21336, 14216, -3368)};
+
+   // Оружие для обмена купонов
     private static final int WEAPONS[][] = {{20109, 20110, 20111, 20112, 20113, 20114, 20115, 20116, 20117, 20118, 20119, 20120, 20121, 20122}, // D
     {20123, 20124, 20125, 20126, 20127, 20128, 20129, 20130, 20131, 20132, 20133, 20134, 20135, 20136}, // C
     {20137, 20138, 20139, 20140, 20141, 20142, 20143, 20144, 20145, 20146, 20147, 20148, 20149, 20150}, // B
@@ -254,7 +276,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
         if (_active && killer != null) {
             Player pKiller = killer.getPlayer();
             if (pKiller != null && SimpleCheckDrop(cha, killer) && Rnd.get(1000) < Config.EVENT_SAVING_SNOWMAN_REWARDER_CHANCE) {
-                List<Player> players = new ArrayList<>();
+                List<Player> players = new ArrayList<Player>();
                 if (pKiller.isInParty()) {
                     players = pKiller.getParty().getPartyMembers();
                 } else {
@@ -497,24 +519,12 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
         }
     }
 
-    private static Location getRandomSpawnPoint() {
+	private static Location getRandomSpawnPoint() {
 
         Location loc = new Location(117935, -126003, -2585);
-        boolean flag = true;
-        while (flag) {
-            for (List<SpawnTemplate> spawnTemplate : SpawnHolder.getInstance().getSpawns().values()) {
-                for (SpawnTemplate spawnTemplate1 : spawnTemplate) {
-                    if (Rnd.chance(50)) {
-                        loc = spawnTemplate1.getSpawnRange(0).getRandomLoc(ReflectionManager.DEFAULT.getGeoIndex());
-                        flag = false;
-                        break;
-                    }
-                }
-                if (!flag) {
-                    break;
-                }
-            }
-        }
+        
+        loc = SNOWMAN[Rnd.get(SNOWMAN.length)];
+        
         return loc;
     }
 
@@ -553,7 +563,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
             return;
         }
 
-        Location pos = Location.findPointToStay(_snowman, 100, 120);
+        Location pos = Location.findPointToStay(_snowman, _snowman.getLoc(), 50, 80);
 
         sp = new SimpleSpawner(template);
         sp.setLoc(pos);
@@ -627,7 +637,11 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
         Functions.npcSayCustomMessage(_snowman, "scripts.events.SavingSnowman.SnowmanSayTnx", player.getName());
         addItem(player, 20034, 3); // Revita-Pop
         addItem(player, 20338, 1); // Rune of Experience Points 50%	10 Hour Expiration Period
-        addItem(player, 20344, 1); // Rune of SP 50% 10 Hour Expiration Period
+		addItem(player, 20344, 1); // Rune of SP 50% 10 Hour Expiration Period
+		addItem(player, 6578, 1); // BSEA
+		addItem(player, 4357, 10); // SilverShilen
+		addItem(player, 6577, 1); // BSEW
+		addItem(player, 14612, 2); // Christmas Red Sock
 
         ThreadPoolManager.getInstance().execute(new RunnableImpl() {
             @Override
@@ -645,9 +659,11 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
                 return;
             }
 
-            _spawns.stream().filter(s -> s.getCurrentNpcId() == EVENT_MANAGER_ID).forEach(s -> {
-                Functions.npcSayCustomMessage(s.getLastSpawn(), "scripts.events.SavingSnowman.SantaSay");
-            });
+            for (SimpleSpawner s : _spawns) {
+                if (s.getCurrentNpcId() == EVENT_MANAGER_ID) {
+                    Functions.npcSayCustomMessage(s.getLastSpawn(), "scripts.events.SavingSnowman.SantaSay");
+                }
+            }
         }
     }
 

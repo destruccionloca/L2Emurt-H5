@@ -23,40 +23,18 @@
 	</zone>
 	<zone name="[antharas_epic]" type="epic">
 		<polygon>
-			<coords loc="181552 116384 -7704 -7604"/>
-			<coords loc="179849 118366 -7704 -7604"/>
-			<coords loc="175896 118465 -7704 -7604"/>
-			<coords loc="175328 118128 -7704 -7604"/>
-			<coords loc="173728 115536 -7704 -7604"/>
-			<coords loc="173609 114700 -7704 -7604"/>
-			<coords loc="173712 114128 -7704 -7604"/>
-			<coords loc="175385 111503 -7704 -7604"/>
-			<coords loc="176016 111216 -7704 -7604"/>
-			<coords loc="179896 111348 -7704 -7604"/>
-			<coords loc="180730 112225 -7704 -7604"/>
-			<coords loc="182199 114122 -7728 -7628"/>
-			<coords loc="184369 114148 -8216 -8116"/>
-			<coords loc="186526 113634 -8216 -8116"/>
-			<coords loc="187279 114909 -8216 -8116"/>
-			<coords loc="186627 115882 -8216 -8116"/>
-			<coords loc="184224 115472 -8208 -8108"/>
-			<coords loc="182272 115584 -7744 -7644"/>
+			<coords loc="163840 98304"/>
+			<coords loc="196592 98304"/>
+			<coords loc="196592 131056"/>
+			<coords loc="163840 131056"/>
 		</polygon>
 	</zone>
 	<zone name="[valakas_epic]" type="epic">
 		<polygon>
-			<coords loc="206088 -107576 -2572 5428"/>
-			<coords loc="208104 -104424 -2572 5428"/>
-			<coords loc="212840 -103640 -2572 5428"/>
-			<coords loc="218680 -105016 -2572 5428"/>
-			<coords loc="224008 -113320 -2572 5428"/>
-			<coords loc="223209 -117763 -2572 5428"/>
-			<coords loc="218489 -124769 -2572 5428"/>
-			<coords loc="213681 -125520 -2572 5428"/>
-			<coords loc="206515 -123778 -2572 5428"/>
-			<coords loc="202753 -120443 -2572 5428"/>
-			<coords loc="200331 -113198 -2572 5428"/>
-			<coords loc="203374 -107683 -2572 5428"/>
+			<coords loc="196710 -130845 -3753 32767"/>
+			<coords loc="228895 -130845 -3753 32767"/>
+			<coords loc="229126 -96162 -3753 32767"/>
+			<coords loc="196478 -98187 -3753 32767"/>
 		</polygon>
 	</zone>
 	<zone name="[sailren_epic]" type="epic">
@@ -85,7 +63,7 @@
 		</polygon>
 	</zone>
 	<zone name="[queen_ant_epic]" type="epic">
-		<set name="levelLimit" val="48"/>
+		<set name="levelLimit" val="85"/>
 		<set name="tele" val="-25464 172424 -4203"/>
 		<polygon>
 			<coords loc="-21490 178313 -5949 -5547" />

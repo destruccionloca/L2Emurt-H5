@@ -1,5 +1,6 @@
 package services.community;
 
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
@@ -7,19 +8,26 @@ import java.util.StringTokenizer;
 import l2p.gameserver.Config;
 import l2p.gameserver.data.htm.HtmCache;
 import l2p.gameserver.data.xml.holder.ItemHolder;
+import l2p.gameserver.data.xml.holder.SkillAcquireHolder;
 import l2p.gameserver.handler.bbs.CommunityBoardManager;
 import l2p.gameserver.handler.bbs.ICommunityBoardHandler;
 import l2p.gameserver.model.Player;
+import l2p.gameserver.model.Skill;
+import l2p.gameserver.model.SkillLearn;
 import l2p.gameserver.model.SubClass;
 import l2p.gameserver.model.Zone;
+import l2p.gameserver.model.base.AcquireType;
 import l2p.gameserver.model.base.ClassId;
 import l2p.gameserver.model.base.ClassType;
+import l2p.gameserver.model.base.ClassType2;
 import l2p.gameserver.model.base.PlayerClass;
 import l2p.gameserver.model.base.Race;
 import l2p.gameserver.model.entity.olympiad.Olympiad;
 import l2p.gameserver.model.items.ItemInstance;
+import l2p.gameserver.scripts.Functions;
 import l2p.gameserver.scripts.ScriptFile;
 import l2p.gameserver.serverpackets.ShowBoard;
+import l2p.gameserver.serverpackets.SkillList;
 import l2p.gameserver.serverpackets.SystemMessage2;
 import l2p.gameserver.serverpackets.components.CustomMessage;
 import l2p.gameserver.serverpackets.components.SystemMsg;
@@ -62,6 +70,7 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
     @Override
     public void onBypassCommand(Player activeChar, String command) {
         if (!CheckCondition(activeChar)) {
+			getBypass(activeChar, "_bbshome");
             return;
         }
 
@@ -74,15 +83,15 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
             html.append("<center><table width=755>");
             html.append("<tr><td WIDTH=20 align=left valign=top></td>");
             if (activeChar.isLangRus()) {
-                html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font> Добро пожаловать ").append(activeChar.getName()).append(".</td></tr>");
+                html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font> Добро пожаловать ").append(activeChar.getName()).append(".</td></tr>");
             } else {
-                html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font> Welcome ").append(activeChar.getName()).append(".</td></tr>");
+                html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font> Welcome ").append(activeChar.getName()).append(".</td></tr>");
             }
             html.append("<tr><td WIDTH=20 align=left valign=top></td>");
             if (activeChar.isLangRus()) {
-                html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font> Ваша текущая профессия <font color=LEVEL>").append(activeChar.getClassId().getNameRu()).append("</font>.</td></tr></table>");
+                html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font> Ваша текущая профессия <font color=LEVEL>").append(activeChar.getClassId().getNameRu()).append("</font>.</td></tr></table>");
             } else {
-                html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font> Your current profession <font color=LEVEL>").append(activeChar.getClassId().getNameRu()).append("</font>.</td></tr></table>");
+                html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font> Your current profession <font color=LEVEL>").append(activeChar.getClassId().getNameRu()).append("</font>.</td></tr></table>");
             }
 
             if (Config.ALLOW_CLASS_MASTERS_LIST.isEmpty() || !Config.ALLOW_CLASS_MASTERS_LIST.contains(jobLevel)) {
@@ -97,7 +106,7 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
                         continue;
                     }
                     if (cid.childOf(classId) && cid.level() == classId.level() + 1) {
-                        html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                        html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"450\" height=\"1\"></center></td></tr></table>");
                         html.append("<table border=0 cellspacing=4 cellpadding=3><tr>");
                         html.append("<td FIXWIDTH=50 align=right valign=top><img src=\"icon.etc_royal_membership_i00\" width=32 height=32></td>");
                         html.append("<td FIXWIDTH=576 align=left valign=top><font color=\"0099FF\">").append(cid.getNameRu()).append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(Util.formatAdena(Config.CLASS_MASTERS_PRICE_LIST[jobLevel])).append(" Adena.</td>");
@@ -281,9 +290,9 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
                     subsAvailable = getAvailableSubClasses(activeChar, true);
                     if (subsAvailable != null && !subsAvailable.isEmpty()) {
 
-                        html.append("<center><table width=755>");
+                        html.append("<center><table width=519>");
                         html.append("<tr><td WIDTH=20 align=left valign=top></td>");
-                        html.append(activeChar.isLangRus() ? "<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Вам доступны следующие саб-классы:</td></tr></table>" : "<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>You have the following sub-classes:</td></tr></table>");
+                        html.append(activeChar.isLangRus() ? "<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Вам доступны следующие саб-классы:</td></tr></table>" : "<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>You have the following sub-classes:</td></tr></table>");
                         int k = 0;
 
                         if (subsAvailable.size() <= count_on_page) {
@@ -292,10 +301,10 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
                         for (PlayerClass subClass : subsAvailable) {
 
                             if (k < (page * count_on_page) && k >= ((page - 1) * count_on_page)) {
-                                html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                                html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"450\" height=\"1\"></center></td></tr></table>");
                                 html.append("<table border=0 cellspacing=4 cellpadding=3><tr>");
                                 html.append("<td FIXWIDTH=50 align=right valign=top><img src=\"icon.etc_royal_membership_i00\" width=32 height=32></td>");
-                                html.append("<td FIXWIDTH=576 align=left valign=top><font color=\"0099FF\">").append(activeChar.isLangRus() ? formatClassForDisplayRu(subClass) : subClass).append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
+                                html.append("<td FIXWIDTH=300 align=left valign=top><font color=\"0099FF\">").append(activeChar.isLangRus() ? formatClassForDisplayRu(subClass) : subClass).append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
                                 html.append(activeChar.isLangRus() ? "<td FIXWIDTH=95 align=center valign=top><button value=\"Добавить\" action=\"bypass _bbscareer;sub;4 " : "<td FIXWIDTH=95 align=center valign=top><button value=\"Add\" action=\"bypass _bbscareer;sub;4 ").append(subClass.ordinal()).append(" 0 1").append("\" back=\"l2ui_ct1.button.button_df_small_down\" fore=\"l2ui_ct1.button.button_df_small\" width=\"80\" height=\"25\"/>");
                                 html.append("</td></tr></table><br>");
 
@@ -323,7 +332,7 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
                         }
 
                         html.append("<br><br><br>");
-                        html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                        html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"450\" height=\"1\"></center></td></tr></table>");
                         html.append("</center>");
                     } else {
                         activeChar.sendMessage(new CustomMessage("l2p.gameserver.model.instances.L2VillageMasterInstance.NoSubAtThisTime", activeChar));
@@ -334,33 +343,33 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
 
                     if (playerClassList.size() < 2) {
 
-                        html.append("<center><table width=755>");
+                        html.append("<center><table width=519>");
                         html.append("<tr><td WIDTH=20 align=left valign=top></td>");
                         if (activeChar.isLangRus()) {
-                            html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>У вас нет саб-классов для переключения, но вы можете добавить его прямо сейчас<br><a action=\"bypass _bbscareer;sub;1 0 0 1\">Добавить саб.</a></td></tr></table>");
+                            html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>У вас нет саб-классов для переключения, но вы можете добавить его прямо сейчас<br><a action=\"bypass _bbscareer;sub;1 0 0 1\">Добавить саб.</a></td></tr></table>");
                         } else {
-                            html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>You do not have sub-classes to switch, but you can add it now!<br><a action=\"bypass _bbscareer;sub;1 0 0 1\">Add sub</a></td></tr></table>");
+                            html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>You do not have sub-classes to switch, but you can add it now!<br><a action=\"bypass _bbscareer;sub;1 0 0 1\">Add sub</a></td></tr></table>");
                         }
 
                     } else {
-                        html.append("<center><table width=755>");
+                        html.append("<center><table width=519>");
                         html.append("<tr><td WIDTH=20 align=left valign=top></td>");
                         if (activeChar.isLangRus()) {
-                            html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Какой саб-класс вы желаете использовать?</td></tr></table>");
+                            html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Какой саб-класс вы желаете использовать?</td></tr></table>");
                         } else {
-                            html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>What sub-class you want to use?</td></tr></table>");
+                            html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>What sub-class you want to use?</td></tr></table>");
                         }
                         if (baseClassId == activeChar.getActiveClassId()) {
-                            html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                            html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"500\" height=\"1\"></center></td></tr></table>");
                             html.append("<table border=0 cellspacing=4 cellpadding=3><tr>");
                             html.append("<td FIXWIDTH=50 align=right valign=top><img src=\"icon.etc_royal_membership_i00\" width=32 height=32></td>");
-                            html.append("<td FIXWIDTH=576 align=left valign=top><font color=\"0099FF\">").append(HtmlUtils.htmlClassName(baseClassId)).append(activeChar.isLangRus() ? "(Базовый)" : "(Base)").append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
+                            html.append("<td FIXWIDTH=300 align=left valign=top><font color=\"0099FF\">").append(HtmlUtils.htmlClassName(baseClassId)).append(activeChar.isLangRus() ? "(Базовый)" : "(Base)").append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
                             html.append("</tr></table>");
                         } else {
-                            html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                            html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"500\" height=\"1\"></center></td></tr></table>");
                             html.append("<table border=0 cellspacing=4 cellpadding=3><tr>");
                             html.append("<td FIXWIDTH=50 align=right valign=top><img src=\"icon.etc_royal_membership_i00\" width=32 height=32></td>");
-                            html.append("<td FIXWIDTH=576 align=left valign=top><font color=\"0099FF\">").append(HtmlUtils.htmlClassName(baseClassId)).append(activeChar.isLangRus() ? "(Базовый)" : "(Base)").append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
+                            html.append("<td FIXWIDTH=300 align=left valign=top><font color=\"0099FF\">").append(HtmlUtils.htmlClassName(baseClassId)).append(activeChar.isLangRus() ? "(Базовый)" : "(Base)").append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
                             html.append(activeChar.isLangRus() ? "<td FIXWIDTH=95 align=center valign=top><button value=\"Сменить\" action=\"bypass _bbscareer;sub;5 " : "<td FIXWIDTH=95 align=center valign=top><button value=\"Change\" action=\"bypass _bbscareer;sub;5 ").append(baseClassId).append(" 0 1").append("\" back=\"l2ui_ct1.button.button_df_small_down\" fore=\"l2ui_ct1.button.button_df_small\" width=\"80\" height=\"25\"/>");
                             html.append("</td></tr></table>");
                         }
@@ -373,45 +382,47 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
 
                             if (subClassId == activeChar.getActiveClassId()) {
 
-                                html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                                html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"500\" height=\"1\"></center></td></tr></table>");
                                 html.append("<table border=0 cellspacing=4 cellpadding=3><tr>");
                                 html.append("<td FIXWIDTH=50 align=right valign=top><img src=\"icon.etc_royal_membership_i00\" width=32 height=32></td>");
-                                html.append("<td FIXWIDTH=576 align=left valign=top><font color=\"0099FF\">").append(HtmlUtils.htmlClassName(subClassId)).append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
+                                html.append("<td FIXWIDTH=300 align=left valign=top><font color=\"0099FF\">").append(HtmlUtils.htmlClassName(subClassId)).append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
                                 html.append("</tr></table>");
                             } else {
-                                html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                                html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"500\" height=\"1\"></center></td></tr></table>");
                                 html.append("<table border=0 cellspacing=4 cellpadding=3><tr>");
                                 html.append("<td FIXWIDTH=50 align=right valign=top><img src=\"icon.etc_royal_membership_i00\" width=32 height=32></td>");
-                                html.append("<td FIXWIDTH=576 align=left valign=top><font color=\"0099FF\">").append(HtmlUtils.htmlClassName(subClassId)).append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
+                                html.append("<td FIXWIDTH=300 align=left valign=top><font color=\"0099FF\">").append(HtmlUtils.htmlClassName(subClassId)).append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
                                 html.append("<td FIXWIDTH=95 align=center valign=top><button value=\"Сменить\" action=\"bypass _bbscareer;sub;5 ").append(subClassId).append(" 0 1").append("\" back=\"l2ui_ct1.button.button_df_small_down\" fore=\"l2ui_ct1.button.button_df_small\" width=\"80\" height=\"25\"/>");
                                 html.append("</td></tr></table>");
                             }
                         }
                         html.append("<br><br><br>");
-                        html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                        html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"500\" height=\"1\"></center></td></tr></table>");
                         html.append("</center>");
                     }
 
                     break;
                 case 3: // Отмена сабкласса - список имеющихся (см case 6)
-                    html.append("<center><table width=755>");
+                    html.append("<center><table width=519>");
                     html.append("<tr><td WIDTH=20 align=left valign=top></td>");
                     if (activeChar.isLangRus()) {
-                        html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Отмена саб-класса:<br>Какой из имеющихся сабов вы хотете заменить?</td></tr></table>");
+                        html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Отмена саб-класса:<br>Какой из имеющихся сабов вы хотете заменить?</td></tr></table>");
                     } else {
-                        html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Cancel sub-class:<br>Which of the existing subs you want to replace?</td></tr></table>");
+                        html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Cancel sub-class:<br>Which of the existing subs you want to replace?</td></tr></table>");
                     }
-                    playerClassList.values().stream().filter(sub -> !sub.isBase()).forEach(sub -> {
+                    for (SubClass sub : playerClassList.values()) {
+                        if (!sub.isBase()) {
 
-                        html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
-                        html.append("<table border=0 cellspacing=4 cellpadding=3><tr>");
-                        html.append("<td FIXWIDTH=50 align=right valign=top><img src=\"icon.etc_royal_membership_i00\" width=32 height=32></td>");
-                        html.append("<td FIXWIDTH=576 align=left valign=top><font color=\"0099FF\">").append(HtmlUtils.htmlClassName(sub.getClassId())).append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
-                        html.append(activeChar.isLangRus() ? "<td FIXWIDTH=95 align=center valign=top><button value=\"Отменить\" action=\"bypass _bbscareer;sub;6 " : "<td FIXWIDTH=95 align=center valign=top><button value=\"Cancel\" action=\"bypass _bbscareer;sub;6 ").append(sub.getClassId()).append(" 0 1").append("\" back=\"l2ui_ct1.button.button_df_small_down\" fore=\"l2ui_ct1.button.button_df_small\" width=\"80\" height=\"25\"/>");
-                        html.append("</td></tr></table>");
-                    });
+                            html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"500\" height=\"1\"></center></td></tr></table>");
+                            html.append("<table border=0 cellspacing=4 cellpadding=3><tr>");
+                            html.append("<td FIXWIDTH=50 align=right valign=top><img src=\"icon.etc_royal_membership_i00\" width=32 height=32></td>");
+                            html.append("<td FIXWIDTH=300 align=left valign=top><font color=\"0099FF\">").append(HtmlUtils.htmlClassName(sub.getClassId())).append(activeChar.isLangRus() ? ".</font>&nbsp;<br1>›&nbsp;Стоимость: " : ".</font>&nbsp;<br1>›&nbsp;Cost: ").append(activeChar.isLangRus() ? " Бесплатно.</td>" : " Free.</td>");
+                            html.append(activeChar.isLangRus() ? "<td FIXWIDTH=95 align=center valign=top><button value=\"Отменить\" action=\"bypass _bbscareer;sub;6 " : "<td FIXWIDTH=95 align=center valign=top><button value=\"Cancel\" action=\"bypass _bbscareer;sub;6 ").append(sub.getClassId()).append(" 0 1").append("\" back=\"l2ui_ct1.button.button_df_small_down\" fore=\"l2ui_ct1.button.button_df_small\" width=\"80\" height=\"25\"/>");
+                            html.append("</td></tr></table>");
+                        }
+                    }
                     html.append("<br><br><br>");
-                    html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                    html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"500\" height=\"1\"></center></td></tr></table>");
                     html.append("</center>");
                     break;
                 case 4: // Добавление сабкласса - обработка выбора из case 1
@@ -465,18 +476,18 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
 
                     if (allowAddition) {
                         if (!activeChar.addSubClass(classId, true, 0)) {
-                            html.append("<center><table width=755>");
+                            html.append("<center><table width=519>");
                             html.append("<tr><td WIDTH=20 align=left valign=top></td>");
-                            html.append(activeChar.isLangRus() ? "<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Саб-класс не добавлен!</td></tr></table>" : "<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Sub-class is not added!</td></tr></table>");
+                            html.append(activeChar.isLangRus() ? "<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Саб-класс не добавлен!</td></tr></table>" : "<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Sub-class is not added!</td></tr></table>");
                             html.append("</center>");
                             return;
                         }
-                        html.append("<center><table width=755>");
+                        html.append("<center><table width=519>");
                         html.append("<tr><td WIDTH=20 align=left valign=top></td>");
                         if (activeChar.isLangRus()) {
-                            html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Саб-класс  ").append(HtmlUtils.htmlClassName(classId)).append(" успешно добавлен!</td></tr></table>");
+                            html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Саб-класс  ").append(HtmlUtils.htmlClassName(classId)).append(" успешно добавлен!</td></tr></table>");
                         } else {
-                            html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Sub-class  ").append(HtmlUtils.htmlClassName(classId)).append(" successfully added!</td></tr></table>");
+                            html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Sub-class  ").append(HtmlUtils.htmlClassName(classId)).append(" successfully added!</td></tr></table>");
                         }
                         html.append("</center>");
 
@@ -497,23 +508,25 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
 
                     activeChar.setActiveSubClass(classId, true);
 
-                    html.append("<center><table width=755>");
+                    html.append("<center><table width=519>");
                     html.append("<tr><td WIDTH=20 align=left valign=top></td>");
-                    html.append(activeChar.isLangRus() ? "<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Ваш активный саб-класс теперь:" : "<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Your active sub-class is now:").append(HtmlUtils.htmlClassName(activeChar.getActiveClassId())).append("</td></tr></table>");
+                    html.append(activeChar.isLangRus() ? "<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Ваш активный саб-класс теперь:" : "<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Your active sub-class is now:").append(HtmlUtils.htmlClassName(activeChar.getActiveClassId())).append("</td></tr></table>");
                     html.append("</center>");
 
                     activeChar.sendPacket(SystemMsg.YOU_HAVE_SUCCESSFULLY_SWITCHED_TO_YOUR_SUBCLASS); // Transfer
                     // completed.
                     break;
                 case 6: // Отмена сабкласса - обработка выбора из case 3
+
+
                     
-                    html.append("<center><table width=755>");
+                    html.append("<center><table width=519>");
                     html.append("<tr><td WIDTH=20 align=left valign=top></td>");
                     if (activeChar.isLangRus()) {
-                        html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Выберите саб-класс для смены.<br>" + //
+                        html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Выберите саб-класс для смены.<br>" + //
                                 "<font color=\"LEVEL\">Внимание!</font> Все профессии и скилы для этого саба будут удалены.</td></tr></table>");
                     } else {
-                        html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Select a sub-class to change.<br>" + //
+                        html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Select a sub-class to change.<br>" + //
                                 "<font color=\"LEVEL\">Attention!</font> All professions and skills for this subwoofer will be deleted.</td></tr></table>");
                     }
                     subsAvailable = getAvailableSubClasses(activeChar, false);
@@ -528,14 +541,14 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
                         for (PlayerClass subClass : subsAvailable) {
 
                             if (k < (page * count_on_page) && k >= ((page - 1) * count_on_page)) {
-                                html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                                html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"500\" height=\"1\"></center></td></tr></table>");
                                 html.append("<table border=0 cellspacing=4 cellpadding=3><tr>");
                                 html.append("<td FIXWIDTH=50 align=right valign=top><img src=\"icon.etc_royal_membership_i00\" width=32 height=32></td>");
                                 if (activeChar.isLangRus()) {
-                                    html.append("<td FIXWIDTH=576 align=left valign=top><font color=\"0099FF\">").append(formatClassForDisplayRu(subClass)).append(".</font>&nbsp;<br1>›&nbsp;Стоимость: ").append(" Бесплатно.</td>");
+                                    html.append("<td FIXWIDTH=300 align=left valign=top><font color=\"0099FF\">").append(formatClassForDisplayRu(subClass)).append(".</font>&nbsp;<br1>›&nbsp;Стоимость: ").append(" Бесплатно.</td>");
                                     html.append("<td FIXWIDTH=95 align=center valign=top><button value=\"Сменить\" action=\"bypass _bbscareer;sub;7 ").append(classId).append(" ").append(subClass.ordinal()).append(" 1").append("\" back=\"l2ui_ct1.button.button_df_small_down\" fore=\"l2ui_ct1.button.button_df_small\" width=\"80\" height=\"25\"/>");
                                 } else {
-                                    html.append("<td FIXWIDTH=576 align=left valign=top><font color=\"0099FF\">").append(subClass).append(".</font>&nbsp;<br1>›&nbsp;Cost: ").append(" Free.</td>");
+                                    html.append("<td FIXWIDTH=300 align=left valign=top><font color=\"0099FF\">").append(subClass).append(".</font>&nbsp;<br1>›&nbsp;Cost: ").append(" Free.</td>");
                                     html.append("<td FIXWIDTH=95 align=center valign=top><button value=\"Change\" action=\"bypass _bbscareer;sub;7 ").append(classId).append(" ").append(subClass.ordinal()).append(" 1").append("\" back=\"l2ui_ct1.button.button_df_small_down\" fore=\"l2ui_ct1.button.button_df_small\" width=\"80\" height=\"25\"/>");
                                 }
                                 html.append("</td></tr></table>");
@@ -564,7 +577,7 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
                         }
 
                         html.append("<br><br><br>");
-                        html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=755><center><img src=\"l2ui.squaregray\" width=\"720\" height=\"1\"></center></td></tr></table>");
+                        html.append("<table border=0 cellspacing=0 cellpadding=0><tr><td width=519><center><img src=\"l2ui.squaregray\" width=\"500\" height=\"1\"></center></td></tr></table>");
 
                         html.append("</center>");
                     } else {
@@ -599,12 +612,12 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
 
                     if (activeChar.modifySubClass(classId, newClassId)) {
 
-                        html.append("<center><table width=755>");
+                        html.append("<center><table width=519>");
                         html.append("<tr><td WIDTH=20 align=left valign=top></td>");
                         if (activeChar.isLangRus()) {
-                            html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Ваш саб-класс изменен на: ").append(HtmlUtils.htmlClassName(activeChar.getActiveClassId())).append("</td></tr></table>");
+                            html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Ваш саб-класс изменен на: ").append(HtmlUtils.htmlClassName(activeChar.getActiveClassId())).append("</td></tr></table>");
                         } else {
-                            html.append("<td WIDTH=690 align=left valign=top><font color=LEVEL>»</font>Your sub-class changed to: ").append(HtmlUtils.htmlClassName(activeChar.getActiveClassId())).append("</td></tr></table>");
+                            html.append("<td WIDTH=519 align=left valign=top><font color=LEVEL>»</font>Your sub-class changed to: ").append(HtmlUtils.htmlClassName(activeChar.getActiveClassId())).append("</td></tr></table>");
                         }
                         html.append("</center>");
 
@@ -637,6 +650,8 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
             ItemInstance pay = activeChar.getInventory().getItemByItemId(item.getItemId());
             if (pay != null && pay.getCount() >= price) {
                 activeChar.getInventory().destroyItem(pay, (long) price);
+
+
                 changeClass(activeChar, val);
                 onBypassCommand(activeChar, "_bbscareer;");
             } else if (Config.CLASS_MASTERS_PRICE_ITEM == 57) {
@@ -824,5 +839,16 @@ public class CommunityBoardProfession implements ScriptFile, ICommunityBoardHand
         }
 
         return true;
+    }
+	
+
+   private void getBypass(Player player, String bypass)
+    {
+        String cmd[] = bypass.split(":");
+
+        if(cmd.length < 1)
+            cmd = new String[] { "_bbshome" };
+
+        CommunityBoardManager.getInstance().getCommunityHandler(cmd[0]).onBypassCommand(player, bypass);
     }
 }

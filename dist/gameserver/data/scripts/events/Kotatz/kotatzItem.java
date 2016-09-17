@@ -73,7 +73,7 @@ public class kotatzItem extends ScriptItemHandler implements ScriptFile {
         }
 
         // Запрет на саммон елок слищком близко к другим НПЦ
-        if (!World.getAroundNpc(activeChar, 100, 200).isEmpty()) {
+        if (World.getAroundNpc(activeChar, 100, 200).size() > 0) {
             activeChar.sendPacket(SystemMsg.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
             return false;
         }

@@ -50,13 +50,19 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile {
         } else if (event.equalsIgnoreCase("sirraspawn")) {
             st.setCond(5);
             st.getPlayer().getReflection().addSpawnWithoutRespawn(Sirra, new Location(-23848, -8744, -5413, 49152), 0);
-            st.getPlayer().getAroundNpc(1000, 100).stream().filter(sirra -> sirra.getNpcId() == Sirra).forEach(sirra -> {
-                Functions.npcSay(sirra, "Вас послушать, получается, что Вы знаете обо всем на свете. Но я больше не могу слушать Ваши мудрствования");
-            });
+            for (NpcInstance sirra : st.getPlayer().getAroundNpc(1000, 100)) {
+                if (sirra.getNpcId() == Sirra) {
+                    Functions.npcSay(sirra, "Вас послушать, получается, что Вы знаете обо всем на свете. Но я больше не могу слушать Ваши мудрствования");
+                }
+            }
             return null;
         } else if (event.equalsIgnoreCase("sirra_q10285_07.htm")) {
             st.setCond(6);
-            st.getPlayer().getAroundNpc(1000, 100).stream().filter(sirra -> sirra.getNpcId() == 32762).forEach(NpcInstance::deleteMe);
+            for (NpcInstance sirra : st.getPlayer().getAroundNpc(1000, 100)) {
+                if (sirra.getNpcId() == 32762) {
+                    sirra.deleteMe();
+                }
+            }
         } else if (event.equalsIgnoreCase("jinia_q10285_10.htm")) {
             if (!st.getPlayer().getReflection().isDefault()) {
                 st.getPlayer().getReflection().startCollapseTimer(60 * 1000L);
@@ -168,7 +174,9 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile {
 
         @Override
         public void runImpl() throws Exception {
-            _r.getSpawns().forEach(Spawner::deleteAll);
+            for (Spawner sp : _r.getSpawns()) {
+                sp.deleteAll();
+            }
             if (_npc != null && !_npc.isDead()) {
                 _npc.deleteMe();
             }

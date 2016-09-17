@@ -116,7 +116,7 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler {
             html = html.replace("%selected_friend_list%", "");
             html = html.replace("%delete_all_msg%", "");
         } else if ("frienddeleteall".equals(cmd)) {
-            List<Friend> friends = new ArrayList<>(1);
+            List<Friend> friends = new ArrayList<Friend>(1);
             friends.addAll(player.getFriendList().getList().values());
             for (Friend friend : friends) {
                 player.getFriendList().removeFriend(friend.getName());
@@ -144,9 +144,11 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler {
             html = html.replace("%block_list%", getBlockList(player));
             html = html.replace("%delete_all_msg%", "");
         } else if ("friendblockdeleteall".equals(cmd)) {
-            List<String> bl = new ArrayList<>(1);
+            List<String> bl = new ArrayList<String>(1);
             bl.addAll(player.getBlockList());
-            bl.forEach(player::removeFromBlockList);
+            for (String name : bl) {
+                player.removeFromBlockList(name);
+            }
             html = html.replace("%block_list%", "");
             html = html.replace("%delete_all_msg%", "");
         }

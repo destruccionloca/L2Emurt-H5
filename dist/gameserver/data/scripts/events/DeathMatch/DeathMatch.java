@@ -458,7 +458,9 @@ public class DeathMatch extends Functions
     }
 
     public static void prepare() {
-        reflection.getDoors().forEach(DoorInstance::closeMe);
+        for (DoorInstance door : reflection.getDoors()) {
+            door.closeMe();
+        }
         for (Zone z : reflection.getZones()) {
             z.setType(Zone.ZoneType.peace_zone);
         }
@@ -546,15 +548,15 @@ public class DeathMatch extends Functions
     public static void giveItemsToWinner(boolean team1, boolean team2, double rate) {
         if (team1) {
             for (Player player : getPlayers(players_list1)) {
-                for (int[] reward : rewards) {
-                    addItem(player, reward[0], Math.round((Config.EVENT_DeathMatchrate ? player.getLevel() : 1) * reward[1] * rate));
+                for (int i = 0; i < rewards.length; i++) {
+                    addItem(player, rewards[i][0], Math.round((Config.EVENT_DeathMatchrate ? player.getLevel() : 1) * rewards[i][1] * rate));
                 }
             }
         }
         if (team2) {
             for (Player player : getPlayers(players_list2)) {
-                for (int[] reward : rewards) {
-                    addItem(player, reward[0], Math.round((Config.EVENT_DeathMatchrate ? player.getLevel() : 1) * reward[1] * rate));
+                for (int i = 0; i < rewards.length; i++) {
+                    addItem(player, rewards[i][0], Math.round((Config.EVENT_DeathMatchrate ? player.getLevel() : 1) * rewards[i][1] * rate));
                 }
             }
         }
@@ -677,20 +679,24 @@ public class DeathMatch extends Functions
     }
 
     public static void ressurectPlayers() {
-        getPlayers(players_list1).stream().filter(player -> player.isDead()).forEach(player -> {
-            player.restoreExp();
-            player.setCurrentCp(player.getMaxCp());
-            player.setCurrentHp(player.getMaxHp(), true);
-            player.setCurrentMp(player.getMaxMp());
-            player.broadcastPacket(new L2GameServerPacket[]{new Revive(player)});
-        });
-        getPlayers(players_list2).stream().filter(player -> player.isDead()).forEach(player -> {
-            player.restoreExp();
-            player.setCurrentCp(player.getMaxCp());
-            player.setCurrentHp(player.getMaxHp(), true);
-            player.setCurrentMp(player.getMaxMp());
-            player.broadcastPacket(new L2GameServerPacket[]{new Revive(player)});
-        });
+        for (Player player : getPlayers(players_list1)) {
+            if (player.isDead()) {
+                player.restoreExp();
+                player.setCurrentCp(player.getMaxCp());
+                player.setCurrentHp(player.getMaxHp(), true);
+                player.setCurrentMp(player.getMaxMp());
+                player.broadcastPacket(new L2GameServerPacket[]{new Revive(player)});
+            }
+        }
+        for (Player player : getPlayers(players_list2)) {
+            if (player.isDead()) {
+                player.restoreExp();
+                player.setCurrentCp(player.getMaxCp());
+                player.setCurrentHp(player.getMaxHp(), true);
+                player.setCurrentMp(player.getMaxMp());
+                player.broadcastPacket(new L2GameServerPacket[]{new Revive(player)});
+            }
+        }
     }
 
     public static void healPlayers() {
@@ -705,8 +711,16 @@ public class DeathMatch extends Functions
     }
 
     public static void cleanPlayers() {
-        getPlayers(players_list1).stream().filter(player -> !checkPlayer(player, false)).forEach(DeathMatch::removePlayer);
-        getPlayers(players_list2).stream().filter(player -> !checkPlayer(player, false)).forEach(DeathMatch::removePlayer);
+        for (Player player : getPlayers(players_list1)) {
+            if (!checkPlayer(player, false)) {
+                removePlayer(player);
+            }
+        }
+        for (Player player : getPlayers(players_list2)) {
+            if (!checkPlayer(player, false)) {
+                removePlayer(player);
+            }
+        }
     }
 
     public static void checkLive() {
@@ -908,15 +922,15 @@ public class DeathMatch extends Functions
     }
 
     public static void mageBuff(Player player) {
-        for (int[] mage_buff : mage_buffs) {
-            buff = SkillTable.getInstance().getInfo(mage_buff[0], mage_buff[1]);
+        for (int i = 0; i < mage_buffs.length; i++) {
+            buff = SkillTable.getInstance().getInfo(mage_buffs[i][0], mage_buffs[i][1]);
             buff.getEffects(player, player, false, false);
         }
     }
 
     public static void fighterBuff(Player player) {
-        for (int[] fighter_buff : fighter_buffs) {
-            buff = SkillTable.getInstance().getInfo(fighter_buff[0], fighter_buff[1]);
+        for (int i = 0; i < fighter_buffs.length; i++) {
+            buff = SkillTable.getInstance().getInfo(fighter_buffs[i][0], fighter_buffs[i][1]);
             buff.getEffects(player, player, false, false);
         }
     }

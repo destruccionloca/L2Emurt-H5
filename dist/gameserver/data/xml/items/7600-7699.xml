@@ -736,7 +736,7 @@
     <set name="crystal_type" value="NONE"/>
     <set name="icon" value="icon.etc_letter_envelope_i00"/>
     <set name="stackable" value="true"/>
-    <set name="type" value="QUEST"/>
+    <set name="type" value="OTHER"/>
   </etcitem>
   <armor id="7680" name="Raccoon Ears">
     <set name="crystal_type" value="NONE"/>

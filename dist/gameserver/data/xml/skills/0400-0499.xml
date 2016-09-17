@@ -770,7 +770,7 @@
 		</enchant2>
 		<for>
 			<effect count="1" name="Buff" time="#duration" val="0">
-				<mul order="0x30" stat="debuffResist" val="1.8" />
+				<mul order="0x30" stat="debuffResist" val="80" />
 				<add order="0x40" stat="cancelResist" val="40" />
 				<mul order="0x30" stat="mpConsumePhysical" val="0.5" />
 				<mul order="0x30" stat="hpEff" val="0.5" />
@@ -2224,7 +2224,7 @@
 	</skill>
 	<skill id="485" levels="7" name="Disarm">
 		<table name="#time">5</table>
-		<table name="#activateRate">70</table>
+		<table name="#activateRate">50</table>
 		<table name="#mpConsume2">25 30 35 40 46 51 55</table>
 		<table name="#magicLevel">36 43 49 55 62 68 74</table>
 		<set name="levelModifier" val="1" />
@@ -2241,7 +2241,7 @@
 		<set name="saveVs" val="STR" />
 		<set name="UDSafe" val="true" />
 		<enchant1 levels="30" name="Chance">
-			<table name="#activateRate">70 71 72 72 73 74 74 75 76 76 77 78 78 79 80 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90</table>
+			<table name="#activateRate">50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<enchant2 levels="30" name="Time">

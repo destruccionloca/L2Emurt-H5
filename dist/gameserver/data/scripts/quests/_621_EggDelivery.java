@@ -41,7 +41,7 @@ public class _621_EggDelivery extends Quest implements ScriptFile {
     }
 
     private static void takeEgg(QuestState st, int setcond) {
-        st.setCond(setcond);
+        st.setCond(Integer.valueOf(setcond));
         st.takeItems(BoiledEgg, 1);
         st.giveItems(FeeOfBoiledEgg, 1);
         st.playSound(SOUND_MIDDLE);

@@ -240,8 +240,8 @@ public class _060_GoodWorksReward extends Quest implements ScriptFile {
     @Override
     public void onShutdown() {
     }
-    private static final Map<Integer, String> profs = new HashMap<>();
-    private static final Map<String, int[]> marks = new HashMap<>();
+    private static final Map<Integer, String> profs = new HashMap<Integer, String>();
+    private static final Map<String, int[]> marks = new HashMap<String, int[]>();
 
     static {
         profs.put(1, "<a action=\"bypass -h Quest _060_GoodWorksReward marks-WL\">Warlord.</a><br><a action=\"bypass -h Quest _060_GoodWorksReward marks-GL\">Gladiator.</a>");

@@ -89,12 +89,14 @@ public class Clan extends Functions {
 
             // notify all the members about it
             final PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(player.getClan());
-            player.getClan().getAllMembers().stream().filter(mbr -> mbr.isOnline()).forEach(mbr -> {
-                mbr.getPlayer().updatePledgeClass();
-                mbr.getPlayer().sendPacket(Msg.CLANS_SKILL_LEVEL_HAS_INCREASED);
-                mbr.getPlayer().sendPacket(pu);
-                mbr.getPlayer().broadcastUserInfo(true);
-            });
+            for (UnitMember mbr : player.getClan().getAllMembers()) {
+                if (mbr.isOnline()) {
+                    mbr.getPlayer().updatePledgeClass();
+                    mbr.getPlayer().sendPacket(Msg.CLANS_SKILL_LEVEL_HAS_INCREASED);
+                    mbr.getPlayer().sendPacket(pu);
+                    mbr.getPlayer().broadcastUserInfo(true);
+                }
+            }
         }
     }
 

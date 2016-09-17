@@ -35,7 +35,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile 
 
     private static final Logger _log = LoggerFactory.getLogger(Bash.class);
 
-    private enum Commands {
+    private static enum Commands {
 
         admin_bashreload
     }
@@ -43,7 +43,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile 
     private static String notPage = "scripts/services/Bash-notPage.htm";
     private static String readPage = "scripts/services/Bash-readPage.htm";
     private static String xmlData = Config.DATAPACK_ROOT + "/data/xml/other/bash.xml";
-    private static List<String> quotes = new ArrayList<>();
+    private static List<String> quotes = new ArrayList<String>();
 
     @Override
     public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar) {

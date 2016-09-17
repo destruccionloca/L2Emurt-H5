@@ -58,7 +58,7 @@ public class KashaNegate implements ScriptFile {
     private static Future<?> _buffTask;
     private static long TICK_BUFF_DELAY = 10000L;
     private static ZoneListener _zoneListener;
-    private static final Map<Integer, Integer> KASHARESPAWN = new HashMap<>();
+    private static final Map<Integer, Integer> KASHARESPAWN = new HashMap<Integer, Integer>();
 
     static {
         KASHARESPAWN.put(18812, 18813);
@@ -69,10 +69,10 @@ public class KashaNegate implements ScriptFile {
     @Override
     public void onLoad() {
         _zoneListener = new ZoneListener();
-        for (String ZONE : ZONES) {
+        for (int i = 0; i < ZONES.length; i++) {
             int random = Rnd.get(60 * 1000 * 1, 60 * 1000 * 7);
             int message;
-            Zone zone = ReflectionUtils.getZone(ZONE);
+            Zone zone = ReflectionUtils.getZone(ZONES[i]);
 
             ThreadPoolManager.getInstance().schedule(new CampDestroyTask(zone), random);
             if (random > 5 * 60000) {
@@ -99,8 +99,8 @@ public class KashaNegate implements ScriptFile {
 
     @Override
     public void onReload() {
-        for (String ZONE : ZONES) {
-            Zone zone = ReflectionUtils.getZone(ZONE);
+        for (int i = 0; i < ZONES.length; i++) {
+            Zone zone = ReflectionUtils.getZone(ZONES[i]);
             zone.removeListener(_zoneListener);
         }
 
@@ -242,8 +242,8 @@ public class KashaNegate implements ScriptFile {
 
         @Override
         public void runImpl() throws Exception {
-            for (String ZONE : ZONES) {
-                Zone zone = ReflectionUtils.getZone(ZONE);
+            for (int i = 0; i < ZONES.length; i++) {
+                Zone zone = ReflectionUtils.getZone(ZONES[i]);
                 NpcInstance npc = getKasha(zone);
                 if (npc != null && zone != null) {
                     int curseLvl = 0;
@@ -292,7 +292,7 @@ public class KashaNegate implements ScriptFile {
     }
 
     private NpcInstance getKasha(Zone zone) {
-        List<NpcInstance> mob = new ArrayList<>();
+        List<NpcInstance> mob = new ArrayList<NpcInstance>();
         for (Creature c : zone.getObjects()) {
             if (c.isMonster() && !c.isDead()) {
                 for (int k : mobs) {
@@ -302,7 +302,7 @@ public class KashaNegate implements ScriptFile {
                 }
             }
         }
-        return !mob.isEmpty() ? mob.get(Rnd.get(mob.size())) : null;
+        return mob.size() > 0 ? mob.get(Rnd.get(mob.size())) : null;
     }
 
     private void addEffect(NpcInstance actor, Creature player, Skill skill, boolean animation) {

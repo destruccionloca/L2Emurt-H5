@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
-import java.util.stream.Collectors;
 
 import l2p.commons.threading.RunnableImpl;
 import l2p.commons.util.Rnd;
@@ -47,7 +46,9 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 
         @Override
         public void runImpl() throws Exception {
-            _angels.addAll(_angelSpawns.stream().map(spawn -> spawn.doSpawn(true)).collect(Collectors.toList()));
+            for (SimpleSpawner spawn : _angelSpawns) {
+                _angels.add(spawn.doSpawn(true));
+            }
         }
     }
 
@@ -175,10 +176,10 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
     private static SimpleSpawner _statueSpawn = null;
     private static NpcInstance _teleportCube = null;
     private static SimpleSpawner _teleportCubeSpawn = null;
-    private static List<NpcInstance> _monsters = new ArrayList<>();
-    private static Map<Integer, SimpleSpawner> _monsterSpawn = new ConcurrentHashMap<>();
-    private static List<NpcInstance> _angels = new ArrayList<>();
-    private static List<SimpleSpawner> _angelSpawns = new ArrayList<>();
+    private static List<NpcInstance> _monsters = new ArrayList<NpcInstance>();
+    private static Map<Integer, SimpleSpawner> _monsterSpawn = new ConcurrentHashMap<Integer, SimpleSpawner>();
+    private static List<NpcInstance> _angels = new ArrayList<NpcInstance>();
+    private static List<SimpleSpawner> _angelSpawns = new ArrayList<SimpleSpawner>();
     private static Zone _zone;
     private final static int ARCHANGEL = 29021;
     private final static int BAIUM = 29020;
@@ -206,7 +207,9 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
     private final static int FWB_RANDOMINTERVALOFBAIUM = Config.RANDOMINTERVALOFBAIUM * 60 * 60000;
 
     private static void banishForeigners() {
-        getPlayersInside().forEach(Player::teleToClosestTown);
+        for (Player player : getPlayersInside()) {
+            player.teleToClosestTown();
+        }
     }
 
     public static class onAnnihilated extends RunnableImpl {
@@ -225,10 +228,12 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 
     // Archangel ascension.
     private static void deleteArchangels() {
-        _angels.stream().filter(angel -> angel != null && angel.getSpawn() != null).forEach(angel -> {
-            angel.getSpawn().stopRespawn();
-            angel.deleteMe();
-        });
+        for (NpcInstance angel : _angels) {
+            if (angel != null && angel.getSpawn() != null) {
+                angel.getSpawn().stopRespawn();
+                angel.deleteMe();
+            }
+        }
         _angels.clear();
     }
 
@@ -280,7 +285,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
             _angelSpawns.clear();
 
             // 5 random numbers of 10, no duplicates
-            List<Integer> random = new ArrayList<>();
+            List<Integer> random = new ArrayList<Integer>();
             for (int i = 0; i < 5; i++) {
                 int r = -1;
                 while (r == -1 || random.contains(r)) {

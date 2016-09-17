@@ -21,7 +21,7 @@ public class _648_AnIceMerchantsDream extends Quest implements ScriptFile {
     // Chances
     private static int Silver_Hemocyte_Chance = 10;
     private static int Silver2Black_Chance = 30;
-    private static List<Integer> silver2black = new ArrayList<>();
+    private static List<Integer> silver2black = new ArrayList<Integer>();
 
     public _648_AnIceMerchantsDream() {
         super(true);

@@ -20,9 +20,11 @@ public class ctreeAI extends DefaultAI {
         }
 
         int skillId = 2139;
-        World.getAroundPlayers(actor, 200, 200).stream().filter(player -> player != null && !player.isInZonePeace() && player.getEffectList().getEffectsBySkillId(skillId) == null).forEach(player -> {
-            actor.doCast(SkillTable.getInstance().getInfo(skillId, 1), player, true);
-        });
+        for (Player player : World.getAroundPlayers(actor, 200, 200)) {
+            if (player != null && !player.isInZonePeace() && player.getEffectList().getEffectsBySkillId(skillId) == null) {
+                actor.doCast(SkillTable.getInstance().getInfo(skillId, 1), player, true);
+            }
+        }
         return false;
     }
 

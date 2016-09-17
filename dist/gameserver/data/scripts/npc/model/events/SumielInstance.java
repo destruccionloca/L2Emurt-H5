@@ -104,98 +104,92 @@ public class SumielInstance extends NpcInstance {
 
     @Override
     public void onBypassFeedback(Player player, String command) {
-        switch (command) {
-            case "teleport":
-                showChatWindow(player, "events/monastyre/minigame_instructor006.htm");
-                break;
-            case "teleport1":
+        if (command.equals("teleport")) {
+            showChatWindow(player, "events/monastyre/minigame_instructor006.htm");
+        } else if (command.equals("teleport1")) {
+            switch (getAISpawnParam()) {
+                case 1:
+                    player.teleToLocation(110705, -81328, -1600);
+                    break;
+                case 2:
+                    player.teleToLocation(114866, -71627, -560);
+                    break;
+            }
+        } else if (command.equals("teleport2")) {
+            player.teleToLocation(110712, -81352, -2688);
+        } else if (command.equals("start")) {
+            if (player.getInventory().getCountOf(15540) == 0) {
+                showChatWindow(player, "events/monastyre/minigame_instructor005.htm");
+            } else if (c_ai1 != player) {
+                showChatWindow(player, "events/monastyre/minigame_instructor004.htm");
+            } else if (c_ai1 == player) {
                 switch (getAISpawnParam()) {
                     case 1:
-                        player.teleToLocation(110705, -81328, -1600);
+                        if (HURRY_UP_1 != null) {
+                            HURRY_UP_1.cancel(false);
+                            HURRY_UP_1 = null;
+                        }
+                        if (HURRY_UP2_1 != null) {
+                            HURRY_UP2_1.cancel(false);
+                            HURRY_UP2_1 = null;
+                        }
                         break;
                     case 2:
-                        player.teleToLocation(114866, -71627, -560);
+                        if (HURRY_UP_2 != null) {
+                            HURRY_UP_2.cancel(false);
+                            HURRY_UP_2 = null;
+                        }
+                        if (HURRY_UP2_2 != null) {
+                            HURRY_UP2_2.cancel(false);
+                            HURRY_UP2_2 = null;
+                        }
                         break;
                 }
-                break;
-            case "teleport2":
-                player.teleToLocation(110712, -81352, -2688);
-                break;
-            case "start":
-                if (player.getInventory().getCountOf(15540) == 0) {
-                    showChatWindow(player, "events/monastyre/minigame_instructor005.htm");
-                } else if (c_ai1 != player) {
-                    showChatWindow(player, "events/monastyre/minigame_instructor004.htm");
-                } else if (c_ai1 == player) {
-                    switch (getAISpawnParam()) {
-                        case 1:
-                            if (HURRY_UP_1 != null) {
-                                HURRY_UP_1.cancel(false);
-                                HURRY_UP_1 = null;
-                            }
-                            if (HURRY_UP2_1 != null) {
-                                HURRY_UP2_1.cancel(false);
-                                HURRY_UP2_1 = null;
-                            }
-                            break;
-                        case 2:
-                            if (HURRY_UP_2 != null) {
-                                HURRY_UP_2.cancel(false);
-                                HURRY_UP_2 = null;
-                            }
-                            if (HURRY_UP2_2 != null) {
-                                HURRY_UP2_2.cancel(false);
-                                HURRY_UP2_2 = null;
-                            }
-                            break;
-                    }
 
-                    player.getInventory().destroyItemByItemId(15540, 1);
-                    player.getInventory().addItem(15485, 1);
-                    Functions.npcShout(this, NpcString.FURNFACE1);
-                    i_ai1 = Rnd.get(9) + 1;
-                    i_ai2 = Rnd.get(9) + 1;
-                    i_ai3 = Rnd.get(9) + 1;
-                    i_ai4 = Rnd.get(9) + 1;
-                    i_ai5 = Rnd.get(9) + 1;
-                    i_ai6 = Rnd.get(9) + 1;
-                    i_ai7 = Rnd.get(9) + 1;
-                    i_ai8 = Rnd.get(9) + 1;
-                    i_ai9 = Rnd.get(9) + 1;
-                    c_ai0 = player;
-                    if (i_quest9 == 1) {
-                    }
-
-                    switch (getAISpawnParam()) {
-                        case 1:
-                            HURRY_UP_1 = ThreadPoolManager.getInstance().schedule(new HURRY_UP(), 2 * 60 * 1000);
-                            break;
-                        case 2:
-                            HURRY_UP_2 = ThreadPoolManager.getInstance().schedule(new HURRY_UP(), 2 * 60 * 1000);
-                            break;
-                    }
-                    GAME_TIME = ThreadPoolManager.getInstance().schedule(new GAME_TIME(), 3 * 60 * 1000 + 10 * 1000);
-                    TIMER_0 = ThreadPoolManager.getInstance().schedule(new TIMER_0(), 1 * 1000);
-                } else if (command.equals("restart")) {
-                    i_quest1 = 1;
-                    i_ai1 = Rnd.get(9) + 1;
-                    i_ai2 = Rnd.get(9) + 1;
-                    i_ai3 = Rnd.get(9) + 1;
-                    i_ai4 = Rnd.get(9) + 1;
-                    i_ai5 = Rnd.get(9) + 1;
-                    i_ai6 = Rnd.get(9) + 1;
-                    i_ai7 = Rnd.get(9) + 1;
-                    i_ai8 = Rnd.get(9) + 1;
-                    i_ai9 = Rnd.get(9) + 1;
-                    c_ai0 = player;
-                    if (i_quest9 == 1) {
-                    }
-                    TIMER_0 = ThreadPoolManager.getInstance().schedule(new TIMER_0(), 1 * 1000);
+                player.getInventory().destroyItemByItemId(15540, 1);
+                player.getInventory().addItem(15485, 1);
+                Functions.npcShout(this, NpcString.FURNFACE1);
+                i_ai1 = Rnd.get(9) + 1;
+                i_ai2 = Rnd.get(9) + 1;
+                i_ai3 = Rnd.get(9) + 1;
+                i_ai4 = Rnd.get(9) + 1;
+                i_ai5 = Rnd.get(9) + 1;
+                i_ai6 = Rnd.get(9) + 1;
+                i_ai7 = Rnd.get(9) + 1;
+                i_ai8 = Rnd.get(9) + 1;
+                i_ai9 = Rnd.get(9) + 1;
+                c_ai0 = player;
+                if (i_quest9 == 1) {
                 }
-                break;
-            default:
-                super.onBypassFeedback(player, command);
-                break;
+
+                switch (getAISpawnParam()) {
+                    case 1:
+                        HURRY_UP_1 = ThreadPoolManager.getInstance().schedule(new HURRY_UP(), 2 * 60 * 1000);
+                        break;
+                    case 2:
+                        HURRY_UP_2 = ThreadPoolManager.getInstance().schedule(new HURRY_UP(), 2 * 60 * 1000);
+                        break;
+                }
+                GAME_TIME = ThreadPoolManager.getInstance().schedule(new GAME_TIME(), 3 * 60 * 1000 + 10 * 1000);
+                TIMER_0 = ThreadPoolManager.getInstance().schedule(new TIMER_0(), 1 * 1000);
+            } else if (command.equals("restart")) {
+                i_quest1 = 1;
+                i_ai1 = Rnd.get(9) + 1;
+                i_ai2 = Rnd.get(9) + 1;
+                i_ai3 = Rnd.get(9) + 1;
+                i_ai4 = Rnd.get(9) + 1;
+                i_ai5 = Rnd.get(9) + 1;
+                i_ai6 = Rnd.get(9) + 1;
+                i_ai7 = Rnd.get(9) + 1;
+                i_ai8 = Rnd.get(9) + 1;
+                i_ai9 = Rnd.get(9) + 1;
+                c_ai0 = player;
+                if (i_quest9 == 1) {
+                }
+                TIMER_0 = ThreadPoolManager.getInstance().schedule(new TIMER_0(), 1 * 1000);
+            }
+        } else {
+            super.onBypassFeedback(player, command);
         }
     }
 
@@ -203,9 +197,11 @@ public class SumielInstance extends NpcInstance {
 
         @Override
         public void runImpl() throws Exception {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setActive2114002();
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setActive2114002();
+                }
+            }
             TIMER_1 = ThreadPoolManager.getInstance().schedule(new TIMER_1(), interval_time * 2000);
         }
     }
@@ -214,9 +210,11 @@ public class SumielInstance extends NpcInstance {
 
         @Override
         public void runImpl() throws Exception {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setActive2114001(i_ai1);
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setActive2114001(i_ai1);
+                }
+            }
             TIMER_2 = ThreadPoolManager.getInstance().schedule(new TIMER_2(), interval_time * 1000);
         }
     }
@@ -225,9 +223,11 @@ public class SumielInstance extends NpcInstance {
 
         @Override
         public void runImpl() throws Exception {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setActive2114001(i_ai2);
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setActive2114001(i_ai2);
+                }
+            }
             TIMER_3 = ThreadPoolManager.getInstance().schedule(new TIMER_3(), interval_time * 1000);
         }
     }
@@ -236,9 +236,11 @@ public class SumielInstance extends NpcInstance {
 
         @Override
         public void runImpl() throws Exception {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setActive2114001(i_ai3);
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setActive2114001(i_ai3);
+                }
+            }
             TIMER_4 = ThreadPoolManager.getInstance().schedule(new TIMER_4(), interval_time * 1000);
         }
     }
@@ -247,9 +249,11 @@ public class SumielInstance extends NpcInstance {
 
         @Override
         public void runImpl() throws Exception {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setActive2114001(i_ai4);
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setActive2114001(i_ai4);
+                }
+            }
             TIMER_5 = ThreadPoolManager.getInstance().schedule(new TIMER_5(), interval_time * 1000);
         }
     }
@@ -258,9 +262,11 @@ public class SumielInstance extends NpcInstance {
 
         @Override
         public void runImpl() throws Exception {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setActive2114001(i_ai5);
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setActive2114001(i_ai5);
+                }
+            }
             TIMER_6 = ThreadPoolManager.getInstance().schedule(new TIMER_6(), interval_time * 1000);
         }
     }
@@ -269,9 +275,11 @@ public class SumielInstance extends NpcInstance {
 
         @Override
         public void runImpl() throws Exception {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setActive2114001(i_ai6);
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setActive2114001(i_ai6);
+                }
+            }
             TIMER_7 = ThreadPoolManager.getInstance().schedule(new TIMER_7(), interval_time * 1000);
         }
     }
@@ -280,9 +288,11 @@ public class SumielInstance extends NpcInstance {
 
         @Override
         public void runImpl() throws Exception {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setActive2114001(i_ai7);
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setActive2114001(i_ai7);
+                }
+            }
             TIMER_8 = ThreadPoolManager.getInstance().schedule(new TIMER_8(), interval_time * 1000);
         }
     }
@@ -291,9 +301,11 @@ public class SumielInstance extends NpcInstance {
 
         @Override
         public void runImpl() throws Exception {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setActive2114001(i_ai8);
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setActive2114001(i_ai8);
+                }
+            }
             TIMER_9 = ThreadPoolManager.getInstance().schedule(new TIMER_9(), interval_time * 1000);
         }
     }
@@ -302,9 +314,11 @@ public class SumielInstance extends NpcInstance {
 
         @Override
         public void runImpl() throws Exception {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setActive2114001(i_ai9);
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setActive2114001(i_ai9);
+                }
+            }
             PC_TURN = ThreadPoolManager.getInstance().schedule(new PC_TURN(), interval_time * 1000);
         }
     }
@@ -342,9 +356,11 @@ public class SumielInstance extends NpcInstance {
         public void runImpl() throws Exception {
             NpcInstance npc1 = GameObjectsStorage.getAsNpc(_storedId);
             Functions.npcShout(npc1, NpcString.FURNFACE4);
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setSCE_GAME_PLAYER_START();
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setSCE_GAME_PLAYER_START();
+                }
+            }
             i_ai0 = 1;
         }
     }
@@ -355,9 +371,11 @@ public class SumielInstance extends NpcInstance {
         public void runImpl() throws Exception {
             NpcInstance npc1 = GameObjectsStorage.getAsNpc(_storedId);
             Functions.npcShout(npc1, NpcString.FURNFACE5);
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setSCE_GAME_END();
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setSCE_GAME_END();
+                }
+            }
             c_ai0 = null;
             i_quest0 = 0;
             i_quest1 = 0;
@@ -408,9 +426,11 @@ public class SumielInstance extends NpcInstance {
         } else if (i == i_ai9 && i_ai0 == 9) {
             if (i_quest9 == 1) {
             }
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setSCE_GAME_END();
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setSCE_GAME_END();
+                }
+            }
 
             SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(18934));
             switch (getAISpawnParam()) {
@@ -449,9 +469,11 @@ public class SumielInstance extends NpcInstance {
             i_quest0 = 0;
             i_quest1 = 0;
         } else {
-            GameObjectsStorage.getAllNpcs().stream().filter(npc -> npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200).forEach(npc -> {
-                ((FurnfaceInstance) npc).setSCE_GAME_FAILURE();
-            });
+            for (NpcInstance npc : GameObjectsStorage.getAllNpcs()) {
+                if (npc != null && npc.getNpcId() == 18913 && getDistance(npc) <= 1200) {
+                    ((FurnfaceInstance) npc).setSCE_GAME_FAILURE();
+                }
+            }
             if (i_quest9 == 1) {
             } else if (i_quest0 < 2) {
                 i_quest0 = i_quest0 + 1;

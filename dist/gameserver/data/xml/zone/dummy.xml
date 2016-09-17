@@ -889,6 +889,9 @@
 			<coords loc="80312 117819"/>
 			<coords loc="73704 119032"/>
 		</polygon>
+		<restart_point>
+			<coords loc="-83736 242600 -3728 24575"/>
+		</restart_point>
 	</zone>
 	<zone name="[ssq_holy_burial_ground]" type="dummy">
 		<polygon>
@@ -991,6 +994,42 @@
 			<coords loc="140056 139480 -13000 -11500"/>
 		</polygon>
 	</zone>
+	<zone name="[aden_town_tvt]" type="dummy" >
+		<polygon>
+			<coords loc="148120 26072 -2184 8191" />
+			<coords loc="149064 26056 -2184 32767" />
+			<coords loc="149080 27320 -2184 13270" />
+			<coords loc="149112 27560 -2232 21220" />
+			<coords loc="149095 27704 -2224 16383" />
+			<coords loc="149080 27928 -2248 56731" />
+			<coords loc="149080 29192 -2248 16383" />
+			<coords loc="148104 29192 -2248 32767" />
+			<coords loc="147672 29112 -2264 16383" />
+			<coords loc="147240 29112 -2264 32767" />
+			<coords loc="146952 29192 -2248 0" />
+			<coords loc="145848 29192 -2248 30212" />
+			<coords loc="145848 27944 -2248 40959" />
+			<coords loc="145832 27720 -2216 0" />
+			<coords loc="145832 27528 -2216 49151" />
+			<coords loc="145865 27320 -2184 24575" />
+			<coords loc="145848 26088 -2184 48161" />
+			<coords loc="146792 26056 -2184 49151" />
+		</polygon>
+		<restart_point>
+			<coords loc="146184 27624 -2200 0"/>
+			<coords loc="148712 27624 -2200 27931"/>
+		</restart_point>
+	</zone>
+	<zone name="[giran_town_tvt]" type="dummy" >
+		<polygon>
+			<coords loc="83720 147496 -3408" />
+			<coords loc="83720 149768 -3400" />
+			<coords loc="80776 149768 -3464" />
+			<coords loc="80696 149704 -3464" />
+			<coords loc="80696 147544 -3464" />
+			<coords loc="80776 147480 -3464" />
+		</polygon>
+	</zone> 
 	<zone name="[hunter_town_tvt]" type="dummy" >
 		<polygon>
 			<coords loc="120837 78996 -2749 -1249" />
@@ -1081,5 +1120,72 @@
 			<coords loc="-43925 248990 -14240 -13340"/>
 			<coords loc="-46986 248990 -14240 -13340"/>
 		</polygon>
+	</zone>
+	<zone name="[Antharas Lair]" type="dummy">
+		<polygon>
+			<coords loc="153704 123800"/>
+			<coords loc="160776 113256"/>
+			<coords loc="154584 105736"/>
+			<coords loc="141320 105016"/>
+			<coords loc="137080 108632"/>
+			<coords loc="132504 112264"/>
+			<coords loc="129864 113448"/>
+			<coords loc="130920 115048"/>
+		</polygon>
+		<restart_point>
+			<coords loc="-83736 242600 -3728 24575"/>
+		</restart_point>
+	</zone>
+	<zone name="[Talkin pvp]" type="dummy">
+		<polygon>
+			<coords loc="-96312 258760"/>
+			<coords loc="-96988 258759"/>
+			<coords loc="-97736 258584"/>
+			<coords loc="-98030 258273"/>
+			<coords loc="-98995 256269"/>
+			<coords loc="-98840 255208"/>
+			<coords loc="-97240 254248"/>
+			<coords loc="-92856 255192"/>
+			<coords loc="-91464 258472"/>
+			<coords loc="-94920 259752"/>
+			<coords loc="-96312 259928"/>
+			<coords loc="-96344 258824"/>
+		</polygon>
+		<restart_point>
+			<coords loc="-96808 259704 -3616 49151"/>
+		</restart_point>
+	</zone>
+	<zone name="[Talkin_inst]" type="dummy">
+		<polygon>
+			<coords loc="49320 248376"/>
+			<coords loc="49400 248536"/>
+			<coords loc="47288 249624"/>
+			<coords loc="43624 248872"/>
+			<coords loc="42584 247848"/>
+			<coords loc="41336 246232"/>
+			<coords loc="43400 245048"/>
+			<coords loc="43208 244328"/>
+			<coords loc="47832 243224"/>
+			<coords loc="48200 243208"/>
+			<coords loc="48312 244664"/>
+			<coords loc="48216 246248"/>
+			<coords loc="48024 246552"/>
+			<coords loc="48072 247336"/>
+			<coords loc="48024 248664"/>
+		</polygon>
+		<restart_point>
+			<coords loc="-84472 242744 -3728 8191"/>
+		</restart_point>
+	</zone>
+	<zone name="[Talkin_inst_death]" type="dummy">
+		<polygon>
+			<coords loc="49352 248376 -5960 16383"/>
+			<coords loc="49320 248584 -5960 0"/>
+			<coords loc="47704 248664 -6360 0"/>
+			<coords loc="47688 248248 -6336 0"/>
+		</polygon>
+		<restart_point>
+			<coords loc="-84472 242744 -3728 8191"/>
+		</restart_point>
 	</zone>
 </list>

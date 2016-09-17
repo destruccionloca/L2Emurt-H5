@@ -3,8 +3,8 @@
 	<!-- Nightly Zaken -->
 	<instance id="114" name="Cavern of the Pirate Captain (nightmare)" nameRu="Cavern of the Pirate Captain (nightmare)" maxChannels="5" collapseIfEmpty="10" timelimit="120" dispelBuffs="true" respawn="60">
 		<collapse on-party-dismiss="true" timer="60"/>
-		<level min="55" max="65"/>
-		<party min="72" max="450"/>
+		<level min="1" max="85"/>
+		<party min="4" max="45"/>
 		<return loc="52212 218998 -3208"/>
 		<teleport loc="52680 219992 -3522"/>
 		<remove itemId="0" count="0" necessary="false"/>

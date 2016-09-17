@@ -19,8 +19,8 @@ public class Bingo {
     protected final static String[] nums = {"first", "second", "third", "fourth", "fifth", "final"};
     protected int lines;
     private final String _template_choice;
-    private final List<Integer> board = new ArrayList<>();
-    private final List<Integer> guesses = new ArrayList<>();
+    private final List<Integer> board = new ArrayList<Integer>();
+    private final List<Integer> guesses = new ArrayList<Integer>();
 
     public Bingo(String template_choice) {
         _template_choice = template_choice;
@@ -55,7 +55,7 @@ public class Bingo {
     }
 
     protected String getBoard() {
-        if (guesses.isEmpty()) {
+        if (guesses.size() == 0) {
             return "";
         }
         String result = template_board;
@@ -73,7 +73,7 @@ public class Bingo {
 
     public String getDialog(String _msg) {
         String result = template;
-        if (guesses.isEmpty()) {
+        if (guesses.size() == 0) {
             result = result.replaceFirst("%msg%", msg_begin);
         } else {
             result = result.replaceFirst("%msg%", _msg.equalsIgnoreCase("") ? msg_next : _msg);

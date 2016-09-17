@@ -289,15 +289,23 @@ public class _335_TheSongOfTheHunter extends Quest implements ScriptFile {
         for (Request r : Requests1) {
             addQuestItem(r.request_id);
             addQuestItem(r.request_item);
-            r.droplist.keySet().forEach(this::addKillId);
-            r.spawnlist.keySet().forEach(this::addKillId);
+            for (int id : r.droplist.keySet()) {
+                addKillId(id);
+            }
+            for (int id : r.spawnlist.keySet()) {
+                addKillId(id);
+            }
         }
 
         for (Request r : Requests2) {
             addQuestItem(r.request_id);
             addQuestItem(r.request_item);
-            r.droplist.keySet().forEach(this::addKillId);
-            r.spawnlist.keySet().forEach(this::addKillId);
+            for (int id : r.droplist.keySet()) {
+                addKillId(id);
+            }
+            for (int id : r.spawnlist.keySet()) {
+                addKillId(id);
+            }
         }
 
         addQuestItem(_1st_Circle_Hunter_License);
@@ -761,8 +769,8 @@ public class _335_TheSongOfTheHunter extends Quest implements ScriptFile {
 
         public final int request_id, request_item, request_count, reward_adena;
         public final String text;
-        public final Map<Integer, Integer> droplist = new HashMap<>();
-        public final Map<Integer, int[]> spawnlist = new HashMap<>();
+        public final Map<Integer, Integer> droplist = new HashMap<Integer, Integer>();
+        public final Map<Integer, int[]> spawnlist = new HashMap<Integer, int[]>();
 
         public Request(int requestid, int requestitem, int requestcount, int rewardadena, String txt) {
             request_id = requestid;

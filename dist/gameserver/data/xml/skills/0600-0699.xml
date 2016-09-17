@@ -1065,7 +1065,7 @@
 	<skill id="664" levels="1" name="Transform Anakim">
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="reuseDelay" val="14400000" />
+		<set name="reuseDelay" val="1800000" />
 		<set name="hitTime" val="2500" />
 		<set name="mpConsume2" val="44" />
 		<set name="target" val="TARGET_SELF" />

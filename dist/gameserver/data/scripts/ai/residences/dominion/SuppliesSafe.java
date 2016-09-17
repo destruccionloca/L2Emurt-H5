@@ -24,7 +24,7 @@ import quests._730_ProtectTheSuppliesSafe;
  */
 public class SuppliesSafe extends DefaultAI {
 
-    private static final IntObjectMap<NpcString[]> MESSAGES = new HashIntObjectMap<>(9);
+    private static final IntObjectMap<NpcString[]> MESSAGES = new HashIntObjectMap<NpcString[]>(9);
 
     static {
         MESSAGES.put(81, new NpcString[]{NpcString.PROTECT_THE_SUPPLIES_SAFE_OF_GLUDIO, NpcString.THE_SUPPLIES_SAFE_OF_GLUDIO_HAS_BEEN_DESTROYED});

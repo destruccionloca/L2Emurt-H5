@@ -1,5 +1,7 @@
 package npc.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 import l2p.gameserver.data.xml.holder.ItemHolder;
 import l2p.gameserver.model.Player;
@@ -21,9 +23,22 @@ public class SkillFromClassrInstance extends NpcInstance {
     // заполнять по порядку скилы потом их уровни //
     private static final int[][] CLASS_SKILL = {
         // id, skillid, level, itemId, count
-        {93, 7029, 1, 4037, 50},
-        {94, 7029, 2, 4037, 100}
+        {7, 230, 1, 4037, 5000},
+        {7, 230, 2, 4037, 5000},
+        {8, 230, 1, 4037, 5000},
+        {8, 230, 2, 4037, 5000},
+        {8, 410, 1, 4037, 5000},
+        {8, 410, 2, 4037, 5000},
+        {8, 410, 3, 4037, 5000},
+        {93, 230, 1, 4037, 5000},
+        {93, 230, 2, 4037, 5000},
+        {93, 410, 1, 4037, 5000},
+        {93, 410, 2, 4037, 5000},
+        {93, 410, 3, 4037, 5000},
+        {93, 355, 1, 4037, 5000}
     };
+
+    private final List<Skill> _skills = new ArrayList<Skill>(1);
 
     public SkillFromClassrInstance(int objectId, NpcTemplate template) {
         super(objectId, template);
@@ -50,6 +65,7 @@ public class SkillFromClassrInstance extends NpcInstance {
             htmltext = "charclasses.htm";
             StringBuilder dialog = new StringBuilder("");
             dialog.append("<br>Donat Skill:<br>");
+            _skills.clear();
             int sk = 0;
             int lv = 0;
             int oj = 0;
@@ -71,37 +87,52 @@ public class SkillFromClassrInstance extends NpcInstance {
                         continue;
                     }
 
-                    oj++;
-                    
-                    dialog.append("<table border=0 cellspacing=0 cellpadding=0>");
-                    dialog.append("<tr>");
-                    dialog.append("<td width=345>");
-                    dialog.append("<img src=l2ui.squaregray width=345 height=1>");
-                    dialog.append("</td>");
-                    dialog.append("</tr>");
-                    dialog.append("</table>");
-                    dialog.append("<table border=0 cellspacing=4 cellpadding=3>");
-                    dialog.append("<tr>");
-                    dialog.append("<td FIXWIDTH=50 align=right valign=top>");
+                    boolean knownSkill = false;
+                    for (int j = 0; j < player.getAllSkillsArray().length && !knownSkill; j++) {
+                        if (player.getAllSkillsArray()[j].getId() == sk) {
+                            knownSkill = true;
+                            if (player.getAllSkillsArray()[j].getLevel() == lv - 1) {
+                                _skills.add(skill);
+                            }
+                        }
 
-                    dialog.append("<button value=\"\" action=\"bypass -h npc_%objectId%_buyDonatSkillClass ").append(skill.getId()).append(" ").append(skill.getLevel()).append("\"  width=32 height=32 back=\"000000\" fore=").append(skill.getIcon()).append(">");
-
-                    //dialog.append("<img src=").append(skill.getIcon()).append(" width=32 height=32>");
-                    dialog.append("</td>");
-                    dialog.append("<td FIXWIDTH=200 align=left valign=top>");
-                    dialog.append("<font color=0099FF>").append(skill.getName());
-                    if (skill.isBuff()) {
-                        dialog.append("</font>  <font color=FFFF00>-=buff=- ");
                     }
-                    dialog.append("</font>&nbsp;<br1>›&nbsp;").append("Скил Id - ").append(skill.getId()).append("   Уровень - ").append(skill.getLevel());
-                    dialog.append("</td>");
-                    dialog.append("</tr>");
-                    dialog.append("</table>");
+                    if (!knownSkill && lv == 1) {
+                        _skills.add(skill);
+                    }
                 }
+            }
+            for (Skill skill : _skills) {
+                oj++;
+
+                dialog.append("<table border=0 cellspacing=0 cellpadding=0>");
+                dialog.append("<tr>");
+                dialog.append("<td width=345>");
+                dialog.append("<img src=l2ui.squaregray width=345 height=1>");
+                dialog.append("</td>");
+                dialog.append("</tr>");
+                dialog.append("</table>");
+                dialog.append("<table border=0 cellspacing=4 cellpadding=3>");
+                dialog.append("<tr>");
+                dialog.append("<td FIXWIDTH=50 align=right valign=top>");
+
+                dialog.append("<button value=\"\" action=\"bypass -h npc_%objectId%_buyDonatSkillClass ").append(skill.getId()).append(" ").append(skill.getLevel()).append("\"  width=32 height=32 back=\"000000\" fore=").append(skill.getIcon()).append(">");
+
+                //dialog.append("<img src=").append(skill.getIcon()).append(" width=32 height=32>");
+                dialog.append("</td>");
+                dialog.append("<td FIXWIDTH=200 align=left valign=top>");
+                dialog.append("<font color=0099FF>").append(skill.getName());
+                if (skill.isBuff()) {
+                    dialog.append("</font>  <font color=FFFF00>-=buff=- ");
+                }
+                dialog.append("</font>&nbsp;<br1>›&nbsp;").append("Скил Id - ").append(skill.getId()).append("   Уровень - ").append(skill.getLevel());
+                dialog.append("</td>");
+                dialog.append("</tr>");
+                dialog.append("</table>");
             }
 
             if (oj == 0) {
-                
+
                 dialog.append("<br>В данный момент для вас ничего нет<br>");
             }
 
@@ -145,7 +176,7 @@ public class SkillFromClassrInstance extends NpcInstance {
                 int itemCount = 0;
 
                 for (int[] SK_COST : CLASS_SKILL) {
-                    if (SK_COST[1] == skillId && SK_COST[2] == skillLvl) {
+                    if (player.getClassId().getId() == SK_COST[0] && SK_COST[1] == skillId && SK_COST[2] == skillLvl) {
                         itemId = SK_COST[3];
                         itemCount = SK_COST[4];
                         name = ItemHolder.getInstance().getTemplate(SK_COST[3]).getName();
@@ -186,6 +217,10 @@ public class SkillFromClassrInstance extends NpcInstance {
                 }
 
                 for (int[] SK_COST : CLASS_SKILL) {
+                    if (player.getClassId().getId() != SK_COST[0]){
+                        continue;
+                    }
+                    
                     if (SK_COST[1] != skillId) {
                         continue;
                     }

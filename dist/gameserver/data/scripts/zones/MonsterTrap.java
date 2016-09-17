@@ -72,7 +72,7 @@ public class MonsterTrap implements ScriptFile {
 
             //Структура: chance1:id11,id12...;chance2:id21,id22...
             String[] groups = zone.getParams().getString("monsters").split(";");
-            RndSelector<int[]> rnd = new RndSelector<>();
+            RndSelector<int[]> rnd = new RndSelector<int[]>();
             for (String group : groups) {
                 //Структура: chance:id1,id2,idN
                 params = group.split(":");

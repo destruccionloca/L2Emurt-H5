@@ -53,7 +53,11 @@ public final class SealDeviceInstance extends MonsterInstance {
 
         @Override
         public void runImpl() throws Exception {
-            _p.getReflection().getNpcs().stream().filter(n -> n.getNpcId() != 32586 && n.getNpcId() != 32587).forEach(NpcInstance::deleteMe);
+            for (NpcInstance n : _p.getReflection().getNpcs()) {
+                if (n.getNpcId() != 32586 && n.getNpcId() != 32587) {
+                    n.deleteMe();
+                }
+            }
             _p.getPlayer().teleToLocation(new Location(-89560, 215784, -7488));
         }
     }

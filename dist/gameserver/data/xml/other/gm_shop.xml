@@ -3712,6 +3712,10 @@
  </tradelist>
  <tradelist npc="-1" shop="9916" >
      <item id="57" />
+     <item id="4356" /> 
+	 <item id="4357" />	
+     <item id="24171" />
+     <item id="24172" />	 
      <item id="5575" />
      <item id="6673" />
      <item id="13067" />

@@ -35,33 +35,29 @@ public class _030_ChestCaughtWithABaitOfFire extends Quest implements ScriptFile
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "fisher_linneaus_q0030_0104.htm":
-                st.setState(STARTED);
-                st.setCond(1);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "fisher_linneaus_q0030_0201.htm":
-                if (st.getQuestItemsCount(RedTreasureChest) > 0) {
-                    st.takeItems(RedTreasureChest, 1);
-                    st.giveItems(RukalsMusicalScore, 1);
-                    st.setCond(2);
-                    st.playSound(SOUND_MIDDLE);
-                } else {
-                    htmltext = "fisher_linneaus_q0030_0202.htm";
-                }
-                break;
-            case "bard_rukal_q0030_0301.htm":
-                if (st.getQuestItemsCount(RukalsMusicalScore) == 1) {
-                    st.takeItems(RukalsMusicalScore, -1);
-                    st.giveItems(NecklaceOfProtection, 1);
-                    st.playSound(SOUND_FINISH);
-                    st.exitCurrentQuest(false);
-                } else {
-                    htmltext = "bard_rukal_q0030_0302.htm";
-                    st.exitCurrentQuest(true);
-                }
-                break;
+        if (event.equals("fisher_linneaus_q0030_0104.htm")) {
+            st.setState(STARTED);
+            st.setCond(1);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("fisher_linneaus_q0030_0201.htm")) {
+            if (st.getQuestItemsCount(RedTreasureChest) > 0) {
+                st.takeItems(RedTreasureChest, 1);
+                st.giveItems(RukalsMusicalScore, 1);
+                st.setCond(2);
+                st.playSound(SOUND_MIDDLE);
+            } else {
+                htmltext = "fisher_linneaus_q0030_0202.htm";
+            }
+        } else if (event.equals("bard_rukal_q0030_0301.htm")) {
+            if (st.getQuestItemsCount(RukalsMusicalScore) == 1) {
+                st.takeItems(RukalsMusicalScore, -1);
+                st.giveItems(NecklaceOfProtection, 1);
+                st.playSound(SOUND_FINISH);
+                st.exitCurrentQuest(false);
+            } else {
+                htmltext = "bard_rukal_q0030_0302.htm";
+                st.exitCurrentQuest(true);
+            }
         }
         return htmltext;
     }

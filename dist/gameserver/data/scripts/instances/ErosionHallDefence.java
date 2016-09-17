@@ -149,7 +149,7 @@ public class ErosionHallDefence extends Reflection {
                     }
                 }, tumorRespawnTime);
             } else if (self.getNpcId() == SoulWagon) {
-                if (!getAllByNpcId(SoulWagon, true).isEmpty()) {
+                if (getAllByNpcId(SoulWagon, true).size() > 0) {
                     rescheduleFailureTask(60000L);
                 } else {
                     conquestConclusion(true);

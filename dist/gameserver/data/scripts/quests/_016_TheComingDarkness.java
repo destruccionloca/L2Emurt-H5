@@ -72,7 +72,7 @@ public class _016_TheComingDarkness extends Quest implements ScriptFile {
         for (int[] element : ALTAR_LIST) {
             if (event.equalsIgnoreCase(String.valueOf(element[0]) + "-02.htm")) {
                 st.takeItems(CRYSTAL_OF_SEAL, 1);
-                st.setCond(element[1] + 1);
+                st.setCond(Integer.valueOf(element[1] + 1));
                 st.playSound(SOUND_MIDDLE);
             }
         }

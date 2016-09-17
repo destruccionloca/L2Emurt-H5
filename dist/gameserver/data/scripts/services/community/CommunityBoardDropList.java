@@ -35,9 +35,9 @@ public class CommunityBoardDropList implements ScriptFile, ICommunityBoardHandle
     private static CommunityBoardDropList _Instance = null;
     private static final NumberFormat pf = NumberFormat.getPercentInstance(Locale.ENGLISH);
     private static final NumberFormat df = NumberFormat.getInstance(Locale.ENGLISH);
-    private static final Map<Integer, String> list = new HashMap<>();
-    private static final Map<Integer, String> list2 = new HashMap<>();
-    private static final Map<Integer, String> list3 = new HashMap<>();
+    private static final Map<Integer, String> list = new HashMap<Integer, String>();
+    private static final Map<Integer, String> list2 = new HashMap<Integer, String>();
+    private static final Map<Integer, String> list3 = new HashMap<Integer, String>();
     private String val1 = "";
     private String val2 = "";
     private String val3 = "";
@@ -463,7 +463,7 @@ public class CommunityBoardDropList implements ScriptFile, ICommunityBoardHandle
             if (npc != null) {
                 boolean next = false;
 
-                if (npc.getRewards() == null || npc.getRewards().isEmpty() || npc.getRewards().isEmpty()) {
+                if (npc.getRewards() == null || npc.getRewards().isEmpty() || npc.getRewards().size() == 0) {
                     continue;
                 }
 
@@ -514,7 +514,7 @@ public class CommunityBoardDropList implements ScriptFile, ICommunityBoardHandle
             return;
         }
 
-        if (list.isEmpty() || list == null || list.isEmpty()) {
+        if (list.isEmpty() || list == null || list.size() == 0) {
             page++;
 
             result = new StringBuilder();
@@ -548,7 +548,7 @@ public class CommunityBoardDropList implements ScriptFile, ICommunityBoardHandle
             if (npc != null) {
                 boolean next = false;
 
-                if (npc.getRewards() == null || npc.getRewards().isEmpty() || npc.getRewards().isEmpty()) {
+                if (npc.getRewards() == null || npc.getRewards().isEmpty() || npc.getRewards().size() == 0) {
                     continue;
                 }
 
@@ -599,7 +599,7 @@ public class CommunityBoardDropList implements ScriptFile, ICommunityBoardHandle
             return;
         }
 
-        if (list.isEmpty() || list == null || list.isEmpty()) {
+        if (list.isEmpty() || list == null || list.size() == 0) {
             page++;
 
             result = new StringBuilder();
@@ -831,7 +831,7 @@ public class CommunityBoardDropList implements ScriptFile, ICommunityBoardHandle
             return;
         }
 
-        if (list2.isEmpty() || list2 == null || list2.isEmpty()) {
+        if (list2.isEmpty() || list2 == null || list2.size() == 0) {
             page++;
             result = new StringBuilder();
 

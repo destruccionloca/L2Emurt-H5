@@ -154,9 +154,11 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile {
             pleader.stopImmobilized();
             pleader.getEffectList().stopEffect(4082);
         }
-        st.getPlayer().getClan().getOnlineMembers(st.getPlayer().getClan().getLeaderId()).stream().filter(pl -> pl != null && pl.getQuestState(getName()) != null).forEach(pl -> {
-            pl.getQuestState(getName()).exitCurrentQuest(true);
-        });
+        for (Player pl : st.getPlayer().getClan().getOnlineMembers(st.getPlayer().getClan().getLeaderId())) {
+            if (pl != null && pl.getQuestState(getName()) != null) {
+                pl.getQuestState(getName()).exitCurrentQuest(true);
+            }
+        }
     }
 
     @Override
@@ -211,7 +213,7 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile {
             }
         } /* ##### Members area ###### */ // STATUE_OF_OFFERING
         else if (event.equalsIgnoreCase("30757-04.htm")) {
-            List<String> deadlist = new ArrayList<>();
+            List<String> deadlist = new ArrayList<String>();
             deadlist.addAll(Arrays.asList(leader.get("dead_list").split(" ")));
             deadlist.add(st.getPlayer().getName());
             String deadstr = "";
@@ -473,7 +475,9 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile {
         int attempts = leader.getInt("chest_try");
         leader.set("chest_try", String.valueOf(attempts + 1));
 
-        GameObjectsStorage.getAllByNpcId(CHESTS, false).forEach(NpcInstance::deleteMe);
+        for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(CHESTS, false)) {
+            npc.deleteMe();
+        }
 
         for (int n = 1; n <= 5; n++) {
             for (int i : CHESTS) {
@@ -490,7 +494,9 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile {
             return;
         }
 
-        GameObjectsStorage.getAllByNpcId(CHESTS, false).forEach(NpcInstance::deleteMe);
+        for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(CHESTS, false)) {
+            npc.deleteMe();
+        }
 
         leader.set("chest_game", "0");
     }

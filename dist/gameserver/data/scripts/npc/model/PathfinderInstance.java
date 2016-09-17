@@ -142,7 +142,7 @@ public class PathfinderInstance extends NpcInstance {
                 showChatWindow(player, val);
             } catch (NumberFormatException nfe) {
                 String filename = command.substring(5).trim();
-                if (filename.isEmpty()) {
+                if (filename.length() == 0) {
                     showChatWindow(player, "npcdefault.htm");
                 } else {
                     showChatWindow(player, filename);

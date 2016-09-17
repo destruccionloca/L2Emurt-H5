@@ -31,7 +31,7 @@ public class _340_SubjugationofLizardmen extends Quest implements ScriptFile {
     private static int HOLY_SYMBOL = 4256;
     private static int TRADE_CARGO = 4255;
     private static int EVIL_SPIRIT_OF_DARKNESS = 7190;
-    private static Map<Integer, Drop> DROPLIST = new HashMap<>();
+    private static Map<Integer, Drop> DROPLIST = new HashMap<Integer, Drop>();
 
     public _340_SubjugationofLizardmen() {
         super(false);
@@ -49,7 +49,9 @@ public class _340_SubjugationofLizardmen extends Quest implements ScriptFile {
         DROPLIST.put(LANGK_LIZARDMAN_LIEUTENANT, new Drop(3, 1, 12).addItem(HOLY_SYMBOL).addItem(ROSARY));
 
         addKillId(SERPENT_DEMON_BIFRONS);
-        DROPLIST.keySet().forEach(this::addKillId);
+        for (int kill_id : DROPLIST.keySet()) {
+            addKillId(kill_id);
+        }
 
         addQuestItem(TRADE_CARGO);
         addQuestItem(HOLY_SYMBOL);

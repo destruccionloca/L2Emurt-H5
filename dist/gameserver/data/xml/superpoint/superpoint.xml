@@ -2997,4 +2997,10 @@
 		<node x="109272" y="116104" z="-3104" />
 		<node x="108008" y="117912" z="-3056" />
 	</superpoint>
+	<superpoint name="drakos_dv1" type="CIRCLE">
+		<node x="82500" y="112732" z="-3080"/>
+		<node x="83100" y="113536" z="-3056"/>
+		<node x="84984" y="112408" z="-3056"/>
+		<node x="84224" y="111716" z="-3056"/>
+	</superpoint>
 </list>

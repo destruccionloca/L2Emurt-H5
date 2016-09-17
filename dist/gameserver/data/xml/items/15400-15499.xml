@@ -1165,9 +1165,9 @@
     <set name="class" value="OTHER"/>
     <set name="crystal_type" value="NONE"/>
     <set name="destroyable" value="false"/>
-    <set name="dropable" value="false"/>
+    <set name="dropable" value="True"/>
     <set name="icon" value="icon.etc_marguene_pet_collar_i00"/>
-    <set name="tradeable" value="false"/>
+    <set name="tradeable" value="True"/>
     <set name="type" value="OTHER"/>
     <cond msgId="1508">
       <not>
@@ -1179,9 +1179,9 @@
     <set name="class" value="OTHER"/>
     <set name="crystal_type" value="NONE"/>
     <set name="destroyable" value="false"/>
-    <set name="dropable" value="false"/>
+    <set name="dropable" value="True"/>
     <set name="icon" value="icon.etc_elite_marguene_pet_collar_i00"/>
-    <set name="tradeable" value="false"/>
+    <set name="tradeable" value="True"/>
     <set name="type" value="OTHER"/>
     <cond msgId="1508">
       <not>

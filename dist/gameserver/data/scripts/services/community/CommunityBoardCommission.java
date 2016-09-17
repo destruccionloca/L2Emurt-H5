@@ -43,6 +43,7 @@ public class CommunityBoardCommission extends Functions implements ScriptFile, I
     private static final Logger _log = LoggerFactory.getLogger(CommunityBoardCommission.class);
     private static final String SELECT_OLD_ITEMS = "SELECT * FROM `bbs_commission` WHERE date <?";
 
+	
     @Override
     public String[] getBypassCommands() {
         return new String[]{
@@ -357,11 +358,11 @@ public class CommunityBoardCommission extends Functions implements ScriptFile, I
 
         sb.append("<table width=320 border=0><tr><td width=320 height=290 align=center><table width=38 border=1><tr><td width=38 height=38 align=center><img src=\"").append(item.getTemplate().getIcon()).append("\" width=32 height=32></td></tr></table><br><img src=\"L2UI.SquareWhite\" width=300 height=1><br><table width=330 border=0>");
         sb.append("<tr><td width=80 align=right>Название:</td><td width=220><font color=0080c0>").append(item.getName()).append("</font></td></tr>");
-        if (!item.getTemplate().getAdditionalName().isEmpty()) {
+        if (item.getTemplate().getAdditionalName().length() > 0) {
             sb.append("<tr><td width=80 align=right>Особое Свойство:</td><td width=220><font color=ff8000>").append(item.getTemplate().getAdditionalName()).append("</font></td></tr>");
         }
         if (item.isStackable()) {
-            sb.append("<tr><td width=80 align=right>Количество:</td><td width=220><font color=ff8000>").append(item_count).append("</font> шт.</td></tr>");
+            sb.append("<tr><td width=80 align=right>Количество:</td><td width=220><font color=ffff00>").append(item_count).append("</font> шт.</td></tr>");
         }
         if (enchant_level > 0) {
             sb.append("<tr><td width=80 align=right>Уровень заточки:</td><td width=220><font color=ffff00>+").append(enchant_level).append("</font></td></tr>");
@@ -538,7 +539,7 @@ public class CommunityBoardCommission extends Functions implements ScriptFile, I
     private void addProduct(Player player, int page) {
         String html = HtmCache.getInstance().getHtml(Config.BBS_HOME_DIR + "pages/commission/commission.htm", player);
 
-        List<ItemInstance> temp = new ArrayList<>();
+        List<ItemInstance> temp = new ArrayList<ItemInstance>();
         for (ItemInstance item : player.getInventory().getItems()) {
             if (!checkItem(item)) {
                 continue;
@@ -600,7 +601,7 @@ public class CommunityBoardCommission extends Functions implements ScriptFile, I
                 } else {
                     long item_count = item.getCount();
                     sb.append("<table width=330 border=0").append(coun == 1 ? " bgcolor=433d32" : "").append("><tr><td width=38 height=38 align=center><img src=\"").append(item.getTemplate().getIcon()).append("\" width=32 height=32></td>");
-                    sb.append("<td width=200 align=center><a action=\"bypass _bbscommission:select-").append(objId).append("\"><font color=0080c0>").append(item.getName()).append("</font></a><br1><font color=LEVEL>Кол-во:</font> <font color=ff8040>").append(item_count).append(" шт.</font></td></tr></table><br>");
+                    sb.append("<td width=200 align=center><a action=\"bypass _bbscommission:select-").append(objId).append("\"><font color=0080c0>").append(item.getName()).append("</font></a><br1><font color=LEVEL>Кол-во:</font> <font color=ffff00>").append(item_count).append(" шт.</font></td></tr></table><br>");
                 }
             }
         }
@@ -792,18 +793,18 @@ public class CommunityBoardCommission extends Functions implements ScriptFile, I
                 }
                 sb.append("<table width=320 border=0><tr><td width=320 height=290 align=center><table width=238 border=1><tr><td width=38 height=38 align=center><img src=\"").append(item.getIcon()).append("\" width=32 height=32></td><td width=200 align=\"center\">");
                 if (owner_id == player.getObjectId()) {
-                    sb.append("<button value=\"Снять с продажи\" action=\"bypass _bbscommission:get-").append(id).append("\" width=180 height=30 back=\"L2UI_ct1.button_df_down\" fore=\"L2UI_ct1.button_df\">");
+                    sb.append("<button value=\"Снять с продажи\" action=\"bypass _bbscommission:get-").append(id).append("\" width=215 height=27 back=\"star_but.tp_but_down\" fore=\"star_but.tp_but\">");
                 } else {
-                    sb.append("<button value=\"Купить\" action=\"bypass _bbscommission:get-").append(id).append("\" width=180 height=30 back=\"L2UI_ct1.button_df_down\" fore=\"L2UI_ct1.button_df\">");
+                    sb.append("<button value=\"Купить\" action=\"bypass _bbscommission:get-").append(id).append("\" width=215 height=27 back=\"star_but.tp_but_down\" fore=\"star_but.tp_but\">");
                 }
                 sb.append("</td></tr></table><br><table width=330 border=0><tr><td width=80 align=right>Название:</td><td width=220><font color=0080c0>");
                 sb.append(item.getName());
                 sb.append("</font></td></tr>");
-                if (!item.getAdditionalName().isEmpty()) {
+                if (item.getAdditionalName().length() > 0) {
                     sb.append("<tr><td width=80 align=right>Особое Свойство:</td><td width=220><font color=ff8000>").append(item.getAdditionalName()).append("</font></td></tr>");
                 }
                 if (item.isStackable()) {
-                    sb.append("<tr><td width=80 align=right>Количество:</td><td width=220><font color=ff8000>").append(item_count).append("</font> шт.</td></tr>");
+                    sb.append("<tr><td width=80 align=right>Количество:</td><td width=220><font color=ffff00>").append(item_count).append("</font> шт.</td></tr>");
                 }
                 if (enchant_level > 0) {
                     sb.append("<tr><td width=80 align=right>Уровень заточки:</td><td width=220><font color=ffff00>+").append(enchant_level).append("</font></td></tr>");
@@ -847,8 +848,8 @@ public class CommunityBoardCommission extends Functions implements ScriptFile, I
                     }
                     sb.append("</table></td></tr>");
                 }
-                sb.append("<tr><td height=15></td><td></td></tr><tr><td width=80 align=right>Продавец:</td><td width=220><font color=00ff00>").append(getCharName(owner_id)).append(owner_id == player.getObjectId() ? " (вы)" : "").append("</font></td></tr>");
-                sb.append("<tr><td height=20></td><td></td></tr><tr><td width=80 align=right>Стоимость:</td><td width=220><font color=00ff00>").append(Util.formatAdena(price_count)).append(" ").append(ItemFunctions.getName(price_id, false)).append("</font></td></tr>");
+                sb.append("<tr><td height=15></td><td></td></tr><tr><td width=80 align=right>Продавец:</td><td width=220><font color=ffff00>").append(getCharName(owner_id)).append(owner_id == player.getObjectId() ? " (вы)" : "").append("</font></td></tr>");
+                sb.append("<tr><td height=20></td><td></td></tr><tr><td width=80 align=right>Стоимость:</td><td width=220><font color=ffff00>").append(Util.formatAdena(price_count)).append(" ").append(ItemFunctions.getName(price_id, false)).append("</font></td></tr>");
                 sb.append("</table></td></tr></table><br>");
             }
         } catch (Exception e) {
@@ -903,7 +904,7 @@ public class CommunityBoardCommission extends Functions implements ScriptFile, I
             pg.append("<table width=330 border=0><tr><td width=330 height=20 align=left>Страница:</td></tr></table><table width=330 border=0><tr>");
             int pages = items / Config.COMMUNITY_COMMISSION_COUNT_TO_PAGE + 1;
             int count_to_line = 1;
-            for (int cur = 1; cur < pages; cur++) {
+            for (int cur = 1; cur <= pages; cur++) {
                 if (page == cur) {
                     pg.append("<td width=25 align=center>[").append(cur).append("]</td>");
                 } else {
@@ -1029,7 +1030,7 @@ public class CommunityBoardCommission extends Functions implements ScriptFile, I
                     int att_count = attribute_fire + attribute_water + attribute_wind + attribute_earth + attribute_holy + attribute_unholy;
                     sb.append("<table width=330 border=0").append(i == 1 ? " bgcolor=433d32" : "").append("><tr><td width=38 height=38 align=center><img src=\"").append(item.getIcon()).append("\" width=32 height=32></td>");
                     sb.append("<td width=200 align=center><a action=\"bypass _bbscommission:show-").append(id).append("\"><font color=0080c0>").append(item.getName()).append(" [").append(item.getCrystalType().toString()).append("]").append("</font></a><br1><font color=LEVEL>").append(enchant_level > 0 ? "Заточен: <font color=804000>" + enchant_level + "</font> / " : "").append(augment_id > 0 ? "Аугм: <font color=008000>Есть</font> / " : "").append(att_count > 0 ? " Атт: <font color=008000>Есть</font>" : "").append("</font></td>");
-                    sb.append("<td width=92 align=center><font color=804000>Цена</font><br1><font color=00ff00>").append(Util.formatAdena(price_count)).append("<br1>").append(ItemFunctions.getName(price_id, false)).append("</font></td></tr></table><br>");
+                    sb.append("<td width=92 align=center><font color=804000>Цена</font><br1><font color=ffff00>").append(Util.formatAdena(price_count)).append("<br1>").append(ItemFunctions.getName(price_id, false)).append("</font></td></tr></table><br>");
                 } else if (item.isArmor()) {
                     int enchant_level = rset.getInt("enchant_level");
                     int attribute_fire = rset.getInt("attribute_fire");
@@ -1041,18 +1042,18 @@ public class CommunityBoardCommission extends Functions implements ScriptFile, I
                     int att_count = attribute_fire + attribute_water + attribute_wind + attribute_earth + attribute_holy + attribute_unholy;
                     sb.append("<table width=330 border=0").append(i == 1 ? " bgcolor=433d32" : "").append("><tr><td width=38 height=38 align=center><img src=\"").append(item.getIcon()).append("\" width=32 height=32></td>");
                     sb.append("<td width=200 align=center><a action=\"bypass _bbscommission:show-").append(id).append("\"><font color=0080c0>").append(item.getName()).append(" [").append(item.getCrystalType().toString()).append("]").append("</font></a><br1><font color=LEVEL>").append(enchant_level > 0 ? "Заточен: <font color=804000>" + enchant_level + "</font> / " : "").append(att_count > 0 ? "Атт: <font color=008000>Есть</font>" : "").append("</font></td>");
-                    sb.append("<td width=92 align=center><font color=804000>Цена</font><br1><font color=00ff00>").append(Util.formatAdena(price_count)).append("<br1>").append(ItemFunctions.getName(price_id, false)).append("</font></td></tr></table><br>");
+                    sb.append("<td width=92 align=center><font color=804000>Цена</font><br1><font color=ffff00>").append(Util.formatAdena(price_count)).append("<br1>").append(ItemFunctions.getName(price_id, false)).append("</font></td></tr></table><br>");
                 } else if (item.isAccessory() && (category.equalsIgnoreCase("all") || category.equalsIgnoreCase("jewelry") || category.equalsIgnoreCase("search"))) {
                     int enchant_level = rset.getInt("enchant_level");
                     int augment_id = rset.getInt("augment_id");
                     sb.append("<table width=330 border=0").append(i == 1 ? " bgcolor=433d32" : "").append("><tr><td width=38 height=38 align=center><img src=\"").append(item.getIcon()).append("\" width=32 height=32></td>");
                     sb.append("<td width=200 align=center><a action=\"bypass _bbscommission:show-").append(id).append("\"><font color=0080c0>").append(item.getName()).append(" [").append(item.getCrystalType().toString()).append("]").append("</font></a><br1><font color=LEVEL>").append(enchant_level > 0 ? "Заточен: <font color=804000>" + enchant_level + "</font> / " : "").append(augment_id > 0 ? "Аугм: <font color=008000>Есть</font>" : "").append("</font></td>");
-                    sb.append("<td width=92 align=center><font color=804000>Цена</font><br1><font color=00ff00>").append(Util.formatAdena(price_count)).append("<br1>").append(ItemFunctions.getName(price_id, false)).append("</font></td></tr></table><br>");
+                    sb.append("<td width=92 align=center><font color=804000>Цена</font><br1><font color=ffff00>").append(Util.formatAdena(price_count)).append("<br1>").append(ItemFunctions.getName(price_id, false)).append("</font></td></tr></table><br>");
                 } else {
                     int item_count = rset.getInt("item_count");
                     sb.append("<table width=330 border=0").append(i == 1 ? " bgcolor=433d32" : "").append("><tr><td width=38 height=38 align=center><img src=\"").append(item.getIcon()).append("\" width=32 height=32></td>");
-                    sb.append("<td width=200 align=center><a action=\"bypass _bbscommission:show-").append(id).append("\"><font color=0080c0>").append(item.getName()).append("</font></a><br1><font color=LEVEL>Кол-во:</font> <font color=ff8040>").append(item_count).append(" шт.</font></td>");
-                    sb.append("<td width=92 align=center><font color=804000>Цена</font><br1><font color=00ff00>").append(Util.formatAdena(price_count)).append("<br1>").append(ItemFunctions.getName(price_id, false)).append("</font></td></tr></table><br>");
+                    sb.append("<td width=200 align=center><a action=\"bypass _bbscommission:show-").append(id).append("\"><font color=0080c0>").append(item.getName()).append("</font></a><br1><font color=LEVEL>Кол-во:</font> <font color=ffff00>").append(item_count).append(" шт.</font></td>");
+                    sb.append("<td width=92 align=center><font color=804000>Цена</font><br1><font color=ffff00>").append(Util.formatAdena(price_count)).append("<br1>").append(ItemFunctions.getName(price_id, false)).append("</font></td></tr></table><br>");
                 }
             }
         } catch (Exception e) {

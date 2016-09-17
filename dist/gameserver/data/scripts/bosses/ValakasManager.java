@@ -49,8 +49,8 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     {215184, -111504, -1392, 0},
     {215456, -117328, -1392, 0},
     {213200, -118160, -1424, 0}};
-    private static List<NpcInstance> _teleportCube = new ArrayList<>();
-    private static List<NpcInstance> _spawnedMinions = new ArrayList<>();
+    private static List<NpcInstance> _teleportCube = new ArrayList<NpcInstance>();
+    private static List<NpcInstance> _spawnedMinions = new ArrayList<NpcInstance>();
     private static BossInstance _valakas;
     // Tasks.
     private static ScheduledFuture<?> _valakasSpawnTask = null;
@@ -255,7 +255,9 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
                     break;
                 case 11:
                     // Reset camera.
-                    _players.forEach(Player::leaveMovieMode);
+                    for (Player pc : _players) {
+                        pc.leaveMovieMode();
+                    }
 
                     _valakas.unblock();
                     broadcastScreenMessage(NpcString.VALAKAS_ARROGAANT_FOOL_YOU_DARE_TO_CHALLENGE_ME);
@@ -368,7 +370,9 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     }
 
     private static void banishForeigners() {
-        getPlayersInside().forEach(Player::teleToClosestTown);
+        for (Player player : getPlayersInside()) {
+            player.teleToClosestTown();
+        }
     }
 
     private synchronized static void checkAnnihilated() {
@@ -454,7 +458,9 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
             _valakas.deleteMe();
         }
 
-        _spawnedMinions.forEach(NpcInstance::deleteMe);
+        for (NpcInstance npc : _spawnedMinions) {
+            npc.deleteMe();
+        }
 
         // Delete teleport cube.
         for (NpcInstance cube : _teleportCube) {
@@ -585,7 +591,11 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 
         @Override
         public void runImpl() {
-            _players.stream().filter(pc -> pc.getParty() == null || (pc.getParty() != null && pc.getParty().getCommandChannel() == null)).forEach(Player::teleToClosestTown);
+            for (Player pc : _players) {
+                if (pc.getParty() == null || (pc.getParty() != null && pc.getParty().getCommandChannel() == null)) {
+                    pc.teleToClosestTown();
+                }
+            }
         }
     }
 }

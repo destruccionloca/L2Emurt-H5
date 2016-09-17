@@ -80,7 +80,7 @@
 			<coords loc="72072 143400 -3797 0"/>
 		</restart_point>
 	</zone>
-	<zone name="[colosseum_battle]" type="battle_zone" >
+		<zone name="[colosseum_battle]" type="battle_zone" >
         <set name="index" val="4" />
         <set name="entering_message_no" val="283" />
         <set name="leaving_message_no" val="284" />

@@ -41,16 +41,18 @@ public class TotemSummon extends DefaultAI {
                     getActor().deleteMe();
                 }
             }
-        }, 30 * 60 * 1000L);
+        }, 1440 * 60 * 1000L);
     }
 
     @Override
     protected boolean thinkActive() {
         if (_timer < System.currentTimeMillis()) {
             _timer = System.currentTimeMillis() + 15000L;
-            getActor().getAroundCharacters(450, 200).stream().filter(c -> c.isPlayable() && !c.isDead()).forEach(c -> {
-                c.altOnMagicUseTimer(c, SkillTable.getInstance().getInfo(getBuffId(getActor().getNpcId()), 1));
-            });
+            for (Creature c : getActor().getAroundCharacters(450, 200)) {
+                if (c.isPlayable() && !c.isDead()) {
+                    c.altOnMagicUseTimer(c, SkillTable.getInstance().getInfo(getBuffId(getActor().getNpcId()), 1));
+                }
+            }
         }
 
         return true;

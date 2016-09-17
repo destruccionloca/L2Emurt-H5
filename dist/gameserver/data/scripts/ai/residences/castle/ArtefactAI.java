@@ -52,9 +52,11 @@ public class ArtefactAI extends CharacterAI {
                 return;
             }
 
-            actor.getAroundNpc(1500, 200).stream().filter(npc -> npc.isSiegeGuard() && Rnd.chance(20)).forEach(npc -> {
-                npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
-            });
+            for (NpcInstance npc : actor.getAroundNpc(1500, 200)) {
+                if (npc.isSiegeGuard() && Rnd.chance(20)) {
+                    npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
+                }
+            }
 
             if (attacker.getCastingSkill() != null && attacker.getCastingSkill().getTargetType() == Skill.SkillTargetType.TARGET_HOLY) {
                 ThreadPoolManager.getInstance().schedule(this, 10000);

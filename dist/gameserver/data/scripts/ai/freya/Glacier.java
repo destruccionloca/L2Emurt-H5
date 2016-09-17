@@ -29,9 +29,11 @@ public class Glacier extends Fighter {
 
     @Override
     protected void onEvtDead(Creature killer) {
-        _actor.getAroundCharacters(350, 100).stream().filter(cha -> cha.isPlayer()).forEach(cha -> {
-            cha.altOnMagicUseTimer(cha, SkillTable.getInstance().getInfo(6301, 1));
-        });
+        for (Creature cha : _actor.getAroundCharacters(350, 100)) {
+            if (cha.isPlayer()) {
+                cha.altOnMagicUseTimer(cha, SkillTable.getInstance().getInfo(6301, 1));
+            }
+        }
         super.onEvtDead(killer);
     }
 
@@ -40,9 +42,11 @@ public class Glacier extends Fighter {
         // Cold Air buff
         if (_buffTimer + 5000L < System.currentTimeMillis()) {
             _buffTimer = System.currentTimeMillis();
-            _actor.getAroundCharacters(200, 100).stream().filter(cha -> cha.isPlayer() && Rnd.chance(50)).forEach(cha -> {
-                cha.altOnMagicUseTimer(cha, SkillTable.getInstance().getInfo(6302, 1));
-            });
+            for (Creature cha : _actor.getAroundCharacters(200, 100)) {
+                if (cha.isPlayer() && Rnd.chance(50)) {
+                    cha.altOnMagicUseTimer(cha, SkillTable.getInstance().getInfo(6302, 1));
+                }
+            }
         }
         super.thinkAttack();
     }

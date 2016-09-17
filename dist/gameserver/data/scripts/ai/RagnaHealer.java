@@ -29,9 +29,11 @@ public class RagnaHealer extends Priest {
             lastFactionNotifyTime = System.currentTimeMillis();
             List<NpcInstance> around = actor.getAroundNpc(500, 300);
             if (around != null && !around.isEmpty()) {
-                around.stream().filter(npc -> npc.isMonster() && npc.getNpcId() >= 22691 && npc.getNpcId() <= 22702).forEach(npc -> {
-                    npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
-                });
+                for (NpcInstance npc : around) {
+                    if (npc.isMonster() && npc.getNpcId() >= 22691 && npc.getNpcId() <= 22702) {
+                        npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
+                    }
+                }
             }
         }
 

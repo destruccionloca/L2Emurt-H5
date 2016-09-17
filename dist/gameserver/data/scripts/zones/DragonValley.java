@@ -24,8 +24,8 @@ public class DragonValley implements ScriptFile, OnPlayerExitListener {
 
     private static ZoneListener _zoneListener;
     private static Zone zone;
-    private static final Map<ClassId, Double> weight = new HashMap<>();
-    private static List<Player> inzone = new ArrayList<>();
+    private static final Map<ClassId, Double> weight = new HashMap<ClassId, Double>();
+    private static List<Player> inzone = new ArrayList<Player>();
     private static ScheduledFuture<?> buffTask;
     private static boolean _isActive;
 

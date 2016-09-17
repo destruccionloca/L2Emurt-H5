@@ -27,9 +27,11 @@ public class FollowersLematan extends Fighter {
             return;
         }
 
-        World.getAroundNpc(minion, 1000, 1000).stream().filter(target -> target.getNpcId() == LEMATAN && target.getCurrentHpPercents() < 65).forEach(target -> {
-            minion.doCast(SkillTable.getInstance().getInfo(5712, 1), target, true);
-        });
+        for (NpcInstance target : World.getAroundNpc(minion, 1000, 1000)) {
+            if (target.getNpcId() == LEMATAN && target.getCurrentHpPercents() < 65) {
+                minion.doCast(SkillTable.getInstance().getInfo(5712, 1), target, true);
+            }
+        }
         return;
     }
 

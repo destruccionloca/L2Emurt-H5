@@ -41,54 +41,45 @@ public class _037_PleaseMakeMeFormalWear extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "30842-1.htm":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "31520-1.htm":
-                st.giveItems(SIGNET_RING, 1);
-                st.setCond(2);
-                break;
-            case "31521-1.htm":
-                st.takeItems(SIGNET_RING, 1);
-                st.giveItems(ICE_WINE, 1);
-                st.setCond(3);
-                break;
-            case "31627-1.htm":
-                if (st.getQuestItemsCount(ICE_WINE) > 0) {
-                    st.takeItems(ICE_WINE, 1);
-                    st.setCond(4);
-                } else {
-                    htmltext = "You don't have enough materials";
-                }
-                break;
-            case "31521-3.htm":
-                st.giveItems(BOX_OF_COOKIES, 1);
-                st.setCond(5);
-                break;
-            case "31520-3.htm":
-                st.takeItems(BOX_OF_COOKIES, 1);
-                st.setCond(6);
-                break;
-            case "31520-5.htm":
-                st.takeItems(MYSTERIOUS_CLOTH, 1);
-                st.takeItems(JEWEL_BOX, 1);
-                st.takeItems(SEWING_KIT, 1);
-                st.setCond(7);
-                break;
-            case "31520-7.htm":
-                if (st.getQuestItemsCount(DRESS_SHOES_BOX) > 0) {
-                    st.takeItems(DRESS_SHOES_BOX, 1);
-                    st.giveItems(ItemTemplate.ITEM_ID_FORMAL_WEAR, 1);
-                    st.unset("cond");
-                    st.playSound(SOUND_FINISH);
-                    st.exitCurrentQuest(false);
-                } else {
-                    htmltext = "You don't have enough materials";
-                }
-                break;
+        if (event.equals("30842-1.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("31520-1.htm")) {
+            st.giveItems(SIGNET_RING, 1);
+            st.setCond(2);
+        } else if (event.equals("31521-1.htm")) {
+            st.takeItems(SIGNET_RING, 1);
+            st.giveItems(ICE_WINE, 1);
+            st.setCond(3);
+        } else if (event.equals("31627-1.htm")) {
+            if (st.getQuestItemsCount(ICE_WINE) > 0) {
+                st.takeItems(ICE_WINE, 1);
+                st.setCond(4);
+            } else {
+                htmltext = "You don't have enough materials";
+            }
+        } else if (event.equals("31521-3.htm")) {
+            st.giveItems(BOX_OF_COOKIES, 1);
+            st.setCond(5);
+        } else if (event.equals("31520-3.htm")) {
+            st.takeItems(BOX_OF_COOKIES, 1);
+            st.setCond(6);
+        } else if (event.equals("31520-5.htm")) {
+            st.takeItems(MYSTERIOUS_CLOTH, 1);
+            st.takeItems(JEWEL_BOX, 1);
+            st.takeItems(SEWING_KIT, 1);
+            st.setCond(7);
+        } else if (event.equals("31520-7.htm")) {
+            if (st.getQuestItemsCount(DRESS_SHOES_BOX) > 0) {
+                st.takeItems(DRESS_SHOES_BOX, 1);
+                st.giveItems(ItemTemplate.ITEM_ID_FORMAL_WEAR, 1);
+                st.unset("cond");
+                st.playSound(SOUND_FINISH);
+                st.exitCurrentQuest(false);
+            } else {
+                htmltext = "You don't have enough materials";
+            }
         }
         return htmltext;
     }

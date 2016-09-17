@@ -455,7 +455,7 @@
 		<point x="-16464" y="123952" z="-3112" h="0"/>
 		<npc id="31796"/><!--Adventure Guildsman-->
 	</spawn>
-	<spawn count="1" respawn="86400" respawn_random="14400" period_of_day="none">
+	<spawn count="1" respawn="86400" respawn_random="3600" period_of_day="none">
 		<point x="-21610" y="181594" z="-5734" h="0"/>
 		<npc id="29001"/><!--Queen Ant-->
 	</spawn>

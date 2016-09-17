@@ -41,9 +41,11 @@ public class SeducedInvestigator extends Fighter {
 
         List<NpcInstance> around = actor.getAroundNpc(1000, 300);
         if (around != null && !around.isEmpty()) {
-            around.stream().filter(npc -> ArrayUtils.contains(_allowedTargets, npc.getNpcId())).forEach(npc -> {
-                actor.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, npc, 300);
-            });
+            for (NpcInstance npc : around) {
+                if (ArrayUtils.contains(_allowedTargets, npc.getNpcId())) {
+                    actor.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, npc, 300);
+                }
+            }
         }
 
         if (Rnd.chance(0.1) && _reuse + 30000 < System.currentTimeMillis()) {

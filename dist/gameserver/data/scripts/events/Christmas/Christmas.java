@@ -55,7 +55,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
      { 6903, 2 },
      { 8555, 2 }
      */};
-    private static List<SimpleSpawner> _spawns = new ArrayList<>();
+    private static List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
     private static boolean _active = false;
 
     @Override

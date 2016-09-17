@@ -156,7 +156,7 @@ public class Baylor extends DefaultAI {
             return chooseTaskAndTargets(null, target, distance);
         }
 
-        Map<Skill, Integer> skills = new HashMap<>();
+        Map<Skill, Integer> skills = new HashMap<Skill, Integer>();
 
         addDesiredSkill(skills, target, distance, GroundStrike);
         addDesiredSkill(skills, target, distance, JumpAttack);

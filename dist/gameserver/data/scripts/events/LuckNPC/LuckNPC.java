@@ -33,7 +33,7 @@ public class LuckNPC extends Functions implements ScriptFile, OnPlayerEnterListe
     private static ScheduledFuture<?> _startTask;
     private static boolean _active = false;
     private static ScheduledFuture<?> _stopTask;
-    private static List<SimpleSpawner> _spawns = new ArrayList<>();
+    private static List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
     private static final Logger _log = LoggerFactory.getLogger(LuckNPC.class);
     private static int[][] EVENT_MANAGERS;
     private static int[][] EVENT_REWARD;

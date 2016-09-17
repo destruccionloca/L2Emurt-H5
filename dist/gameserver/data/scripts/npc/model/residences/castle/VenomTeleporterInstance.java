@@ -3,6 +3,7 @@ package npc.model.residences.castle;
 import l2p.gameserver.model.Player;
 import l2p.gameserver.model.entity.residence.Castle;
 import l2p.gameserver.model.instances.NpcInstance;
+import l2p.gameserver.model.items.attachment.FlagItemAttachment;
 import l2p.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -17,6 +18,11 @@ public class VenomTeleporterInstance extends NpcInstance {
 
     @Override
     public void onBypassFeedback(Player player, String command) {
+        FlagItemAttachment attachment = player.getActiveWeaponFlagAttachment();
+        if (attachment != null) {
+            player.sendActionFailed();
+            return;
+        }
         Castle castle = getCastle();
         if (castle.getSiegeEvent().isInProgress()) {
             showChatWindow(player, "residence2/castle/rune_massymore_teleporter002.htm");

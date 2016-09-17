@@ -98,10 +98,12 @@ public class _726_LightwithintheDarkness extends Quest implements ScriptFile {
 
         if (cond == 1 && npcId == KanadisGuide3 && checkAllDestroyed(KanadisGuide3, player.getReflectionId())) {
             if (player.isInParty()) {
-                party.getPartyMembers().stream().filter(member -> !member.isDead() && member.getParty().isInReflection()).forEach(member -> {
-                    member.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
-                    member.setVar("q726", "done", -1);
-                });
+                for (Player member : party.getPartyMembers()) {
+                    if (!member.isDead() && member.getParty().isInReflection()) {
+                        member.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
+                        member.setVar("q726", "done", -1);
+                    }
+                }
             }
             player.getReflection().startCollapseTimer(5 * 60 * 1000L);
         }

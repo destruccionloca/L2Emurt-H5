@@ -254,7 +254,11 @@ public class ErosionHallAttack extends Reflection {
             p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(15));
             p.sendPacket(new ExShowScreenMessage(win ? NpcString.CONGRATULATIONS_YOU_HAVE_SUCCEEDED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE : NpcString.YOU_HAVE_FAILED_AT_S1_S2, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HALL_OF_EROSION.getId(), "#" + NpcString.ATTACK.getId()));
         }
-        getNpcs().stream().filter(npc -> npc.getNpcId() == AliveTumor || npc.getNpcId() == DeadTumor).forEach(NpcInstance::deleteMe);
+        for (NpcInstance npc : getNpcs()) {
+            if (npc.getNpcId() == AliveTumor || npc.getNpcId() == DeadTumor) {
+                npc.deleteMe();
+            }
+        }
     }
 
     private int getAliveTumorCount() {

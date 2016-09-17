@@ -125,7 +125,7 @@ public class ElcardiaAssistant extends DefaultAI {
         if (ref != null && _chatTimer < System.currentTimeMillis()) {
             _chatTimer = System.currentTimeMillis() + 5000;
             Player masterplayer = target.getPlayer();
-            Map<Skill, Integer> d_skill = new HashMap<>();
+            Map<Skill, Integer> d_skill = new HashMap<Skill, Integer>();
             double distance = actor.getDistance(target);
             switch (ref.getInstancedZoneId()) {
                 case 156:

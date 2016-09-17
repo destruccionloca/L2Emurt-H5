@@ -42,18 +42,19 @@ public class Fire extends DefaultAI {
             }
         }
 
-        // Включаем паузу что бы не спавнилось много Катлов.
-// Зажигаем кастер.
-// Время паузы
-        actor.getAroundNpc(150, 150).stream().filter(npc -> npc.isMonster() && npc.getNpcId() == 18908).filter(npc -> _firstTime).forEach(npc -> {
-            // Включаем паузу что бы не спавнилось много Катлов.
-            _firstTime = false;
-            if (actor.getNpcState() < 1) {
-                actor.setNpcState((byte) 1); // Зажигаем кастер.
+        for (NpcInstance npc : actor.getAroundNpc(150, 150)) {
+            if (npc.isMonster() && npc.getNpcId() == 18908) {
+                if (_firstTime) {
+                    // Включаем паузу что бы не спавнилось много Катлов.
+                    _firstTime = false;
+                    if (actor.getNpcState() < 1) {
+                        actor.setNpcState((byte) 1); // Зажигаем кастер.
+                    }
+                    NpcUtils.spawnSingle(FEED, new Location(actor.getX(), actor.getY(), actor.getZ()), 0);
+                    ThreadPoolManager.getInstance().schedule(new SpawnStart(), 20000); // Время паузы
+                }
             }
-            NpcUtils.spawnSingle(FEED, new Location(actor.getX(), actor.getY(), actor.getZ()), 0);
-            ThreadPoolManager.getInstance().schedule(new SpawnStart(), 20000); // Время паузы
-        });
+        }
         return true;
     }
 

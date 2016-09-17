@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+
+<list>
+  <etcitem id="40000" name="Silver">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_jewel_silver_i00"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40001" name="Green">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_jewel_green_i00"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40002" name="Blue">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_jewel_blue_i00"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40003" name="Red">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_jewel_red_i00"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40004" name="Gold">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_jewel_gold_i00"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  
+  <etcitem id="40005" name="Proof of Courage">
+    <set name="icon" value="icon.etc_permit_card_i00"/>
+	<set name="stackable" value="true"/>
+	<set name="class" value="OTHER"/>
+	<set name="crystal_type" value="NONE"/>
+	<set name="type" value="QUEST"/>
+  </etcitem> 
+
+  <etcitem id="40007" name="Rune PH-CLUB">
+    <set name="class" value="OTHER"/>
+	<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+    <set name="crystal_type" value="NONE"/>
+	<set name="temporal" value="true"/>
+	<set name="durability" value="720"/>
+	<set name="freightable" value="true"/>
+    <set name="icon" value="icon.skill30530"/>
+    <set name="type" value="RUNE"/>
+    <set name="weight" value="0"/>
+    <skills>
+      <skill id="90010" level="1"/>
+    </skills>	
+		<for>					
+			<enchant stat="pDef" order="0x0C" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+  </etcitem>
+	<armor id="40008" name="Baium's Soul Ring">
+    <set name="crystal_count" value="83"/>
+    <set name="crystal_type" value="S"/>
+    <set name="crystallizable" value="true"/>
+    <set name="augmentable" value="false"/>
+    <set name="icon" value="souls.baium"/>
+    <set name="price" value="1730000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="150"/>
+    <equip>
+      <slot id="RIGHT_FINGER"/>
+      <slot id="LEFT_FINGER"/>
+    </equip>
+    <skills>
+      <skill id="3561" level="3"/>
+    </skills>
+    <for>
+      <add stat="mDef" order="0x10" value="79"/>
+      <add stat="maxMp" order="0x10" value="31"/>
+      <enchant stat="mDef" order="0x0C" value="0"/>
+    </for>
+  </armor>
+<armor id="40009" name="Queen Ant's Soul Ring">
+    <set name="crystal_count" value="83"/>
+    <set name="crystal_type" value="S"/>
+    <set name="crystallizable" value="true"/>
+    <set name="augmentable" value="false"/>
+    <set name="icon" value="souls.aq"/>
+    <set name="price" value="1730000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="150"/>
+    <equip>
+      <slot id="RIGHT_FINGER"/>
+      <slot id="LEFT_FINGER"/>
+    </equip>
+    <skills>
+      <skill id="3562" level="3"/>
+    </skills>
+    <for>
+      <add stat="mDef" order="0x10" value="79"/>
+      <add stat="maxMp" order="0x10" value="31"/>
+      <enchant stat="mDef" order="0x0C" value="0"/>
+    </for>
+  </armor> 
+<armor id="40010" name="Frintezza's Soul Necklace">
+    <set name="crystal_count" value="150"/>
+    <set name="crystal_type" value="S"/>
+    <set name="crystallizable" value="true"/>
+    <set name="augmentable" value="false"/>
+    <set name="icon" value="souls.frinta"/>
+    <set name="price" value="11730000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="250"/>
+    <equip>
+      <slot id="NECKLACE"/>
+    </equip>
+    <skills>
+      <skill id="3604" level="2"/>
+    </skills>
+    <for>
+      <add stat="mDef" order="0x10" value="158"/>
+      <add stat="maxMp" order="0x10" value="62"/>
+      <enchant stat="mDef" order="0x0C" value="0"/>
+    </for>
+  </armor>
+<armor id="40011" name="Blessed Antharas' Earring">
+    <set name="crystal_count" value="150"/>
+    <set name="crystal_type" value="S"/>
+    <set name="crystallizable" value="true"/>
+	<set name="augmentable" value="false"/>
+    <set name="icon" value="icon.accessory_earring_of_antaras_i00"/>
+    <set name="price" value="111730000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="200"/>
+    <equip>
+      <slot id="RIGHT_EAR"/>
+      <slot id="LEFT_EAR"/>
+    </equip>
+    <skills>
+      <skill id="3558" level="2"/>
+	  <skill id="90016" level="1"/>
+    </skills>	
+    <for>
+      <add stat="mDef" order="0x10" value="170"/>
+      <add stat="maxMp" order="0x10" value="59"/>
+      <enchant stat="mDef" order="0x0C" value="0"/>
+    </for>
+  </armor>
+<armor id="40012" name="Blessed Valakas' Necklace">
+    <set name="crystal_count" value="150"/>
+    <set name="crystal_type" value="S"/>
+    <set name="crystallizable" value="true"/>
+    <set name="augmentable" value="false"/>
+    <set name="icon" value="icon.accessory_necklace_of_valakas_i00"/>
+    <set name="price" value="111730000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="250"/>
+    <equip>
+      <slot id="NECKLACE"/>
+    </equip>
+    <skills>
+      <skill id="3557" level="2"/>
+	  <skill id="90018" level="1"/>
+    </skills>	
+    <for>
+      <add stat="mDef" order="0x10" value="226"/>
+      <add stat="maxMp" order="0x10" value="79"/>
+      <enchant stat="mDef" order="0x0C" value="0"/>
+    </for>
+  </armor>
+  <etcitem id="40013" name="Bottle Fragment of Antharas' Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.frag_taras_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40014" name="Bottle Fragment of Baium's Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.frag_baium_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40015" name="Bottle Fragment of Frintezza's Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_jewel_gold_i00"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40016" name="Bottle Fragment of Valakas' Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.frag_valik_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40017" name="Bottle Fragment of Queen Ant's Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.frag_baium_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40018" name="Bottle of Queen Ant's Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.baium_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40019" name="Bottle of Baium's Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.baium_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40020" name="Bottle of Valakas' Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.valik_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40021" name="Bottle Fragment of Antharas' Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.taras_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40022" name="Bottle Fragment of Frintezza's Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.frinta_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+<armor id="40023" name="Beleth's Earring">
+    <set name="crystal_count" value="150"/>
+    <set name="crystal_type" value="S"/>
+    <set name="crystallizable" value="true"/>
+	<set name="augmentable" value="false"/>
+    <set name="icon" value="souls.beleth_ear"/>
+    <set name="price" value="111730000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="200"/>
+    <equip>
+      <slot id="RIGHT_EAR"/>
+      <slot id="LEFT_EAR"/>
+    </equip>
+    <skills>
+      <skill id="90019" level="1"/>
+    </skills>	
+    <for>
+      <add stat="mDef" order="0x10" value="71"/>
+      <add stat="maxMp" order="0x10" value="31"/>
+      <enchant stat="mDef" order="0x0C" value="0"/>
+    </for>
+  </armor>
+  <armor id="40024" name="Beleth's Soul Ring">
+    <set name="crystal_count" value="152"/>
+    <set name="crystal_type" value="S"/>
+    <set name="crystallizable" value="true"/>
+    <set name="augmentable" value="false"/>
+    <set name="icon" value="icon.accessary_dynasty_ring_i00"/>
+    <set name="price" value="2400000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="150"/>
+    <equip>
+      <slot id="RIGHT_FINGER"/>
+      <slot id="LEFT_FINGER"/>
+    </equip>
+    <skills>
+      <skill id="3649" level="2"/>
+    </skills>
+    <for>
+      <add stat="mDef" order="0x10" value="55"/>
+      <add stat="maxMp" order="0x10" value="30"/>
+      <enchant stat="mDef" order="0x0C" value="0"/>
+    </for>
+  </armor>
+<armor id="40025" name="Beleth's Soul Earring">
+    <set name="crystal_count" value="150"/>
+    <set name="crystal_type" value="S"/>
+    <set name="crystallizable" value="true"/>
+	<set name="augmentable" value="false"/>
+    <set name="icon" value="souls.beleth_ear"/>
+    <set name="price" value="111730000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="200"/>
+    <equip>
+      <slot id="RIGHT_EAR"/>
+      <slot id="LEFT_EAR"/>
+    </equip>
+    <skills>
+      <skill id="90019" level="2"/>
+    </skills>	
+    <for>
+      <add stat="mDef" order="0x10" value="101"/>
+      <add stat="maxMp" order="0x10" value="51"/>
+      <enchant stat="mDef" order="0x0C" value="0"/>
+    </for>
+  </armor>
+<armor id="40026" name="Orfen's Soul Earring">
+    <set name="crystal_count" value="150"/>
+    <set name="crystal_type" value="S"/>
+    <set name="crystallizable" value="true"/>
+	<set name="augmentable" value="false"/>
+    <set name="icon" value="souls.orfen"/>
+    <set name="price" value="111730000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="200"/>
+    <equip>
+      <slot id="RIGHT_EAR"/>
+      <slot id="LEFT_EAR"/>
+    </equip>
+    <skills>
+      <skill id="3560" level="2"/>
+    </skills>	
+    <for>
+      <add stat="mDef" order="0x10" value="118"/>
+      <add stat="maxMp" order="0x10" value="46"/>
+      <enchant stat="mDef" order="0x0C" value="0"/>
+    </for>
+  </armor>
+  <armor id="40027" name="Core's Soul Ring">
+    <set name="crystal_count" value="152"/>
+    <set name="crystal_type" value="S"/>
+    <set name="crystallizable" value="true"/>
+    <set name="augmentable" value="false"/>
+    <set name="icon" value="souls.Core"/>
+    <set name="price" value="2400000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="150"/>
+    <equip>
+      <slot id="RIGHT_FINGER"/>
+      <slot id="LEFT_FINGER"/>
+    </equip>
+    <skills>
+      <skill id="3563" level="2"/>
+    </skills>
+    <for>
+      <add stat="mDef" order="0x10" value="50"/>
+      <add stat="maxMp" order="0x10" value="21"/>
+      <enchant stat="mDef" order="0x0C" value="0"/>
+    </for>
+  </armor>
+  <etcitem id="40028" name="Bottle Fragment of Beleth's Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.frag_beleth_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40029" name="Bottle of Beleth's Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.beleth_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40030" name="Bottle of Orfen's Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.orfen_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40031" name="Bottle of Core's Soul">
+    <set name="class" value="MATHERIALS"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="souls.taras_soul"/>
+    <set name="price" value="200"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="MATERIAL"/>
+    <set name="weight" value="2"/>
+  </etcitem>
+  <etcitem id="40032" name="Mental Shield Potion">
+    <set name="class" value="CONSUMABLE"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_fruit_juice_glass_bottle_i09"/>
+    <set name="price" value="2000"/>
+	<set name="reuse_delay" value="120000"/>
+    <set name="stackable" value="true"/>
+	<set name="dropable" value="true"/>
+	<set name="tradeable" value="true"/>
+	<set name="freightable" value="true"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="180"/>
+    <skills>
+      <skill id="90020" level="1"/>
+    </skills>
+  </etcitem>
+  <etcitem id="40033" name="Regeneration Potion">
+    <set name="class" value="CONSUMABLE"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_fruit_juice_glass_bottle_i09"/>
+    <set name="price" value="2000"/>
+	<set name="reuse_delay" value="120000"/>
+    <set name="stackable" value="true"/>
+	<set name="dropable" value="true"/>
+	<set name="tradeable" value="true"/>
+	<set name="freightable" value="true"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="180"/>
+    <skills>
+      <skill id="90021" level="1"/>
+    </skills>
+  </etcitem>
+  <etcitem id="40034" name="Focus Potion">
+    <set name="class" value="CONSUMABLE"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_fruit_juice_glass_bottle_i09"/>
+    <set name="price" value="2000"/>
+	<set name="reuse_delay" value="120000"/>
+    <set name="stackable" value="true"/>
+	<set name="dropable" value="true"/>
+	<set name="tradeable" value="true"/>
+	<set name="freightable" value="true"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="180"/>
+    <skills>
+      <skill id="90022" level="1"/>
+    </skills>
+  </etcitem>
+  <etcitem id="40035" name="Bless the Body Potion">
+    <set name="class" value="CONSUMABLE"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_fruit_juice_glass_bottle_i09"/>
+    <set name="price" value="2000"/>
+	<set name="reuse_delay" value="120000"/>
+    <set name="stackable" value="true"/>
+	<set name="dropable" value="true"/>
+	<set name="tradeable" value="true"/>
+	<set name="freightable" value="true"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="180"/>
+    <skills>
+      <skill id="90023" level="1"/>
+    </skills>
+  </etcitem>  
+  <etcitem id="40036" name="Путь в Харнака">
+    <set name="class" value="OTHER"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_skull_white_i00"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="OTHER"/>
+  </etcitem>
+  <etcitem id="40037" name="Осколок">
+    <set name="price" value="339600"/>
+    <set name="class" value="PIECES"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_vesper_caster_piece_i00"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="60"/>
+  </etcitem>
+  <etcitem id="40038" name="Обломок">
+    <set name="price" value="335300"/>
+    <set name="class" value="PIECES"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_vesper_thrower_piece_i00"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="60"/>
+  </etcitem>
+  <etcitem id="40039" name="Основная">
+    <set name="price" value="336700"/>
+    <set name="class" value="PIECES"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_vesper_burster_piece_i00"/>
+    <set name="stackable" value="true"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="60"/>
+  </etcitem>
+
+
+</list>

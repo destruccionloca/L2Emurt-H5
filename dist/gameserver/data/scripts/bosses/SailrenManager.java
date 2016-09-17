@@ -3,7 +3,6 @@ package bosses;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-import java.util.stream.Collectors;
 
 import l2p.commons.threading.RunnableImpl;
 import l2p.commons.util.Rnd;
@@ -194,7 +193,9 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
     private static boolean Dying = false;
 
     private static void banishForeigners() {
-        getPlayersInside().forEach(Player::teleToClosestTown);
+        for (Player player : getPlayersInside()) {
+            player.teleToClosestTown();
+        }
     }
 
     private synchronized static void checkAnnihilated() {
@@ -399,7 +400,12 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
         if (pc.getParty() == null) {
             pc.teleToLocation(Location.findPointToStay(_enter, 80, pc.getGeoIndex()));
         } else {
-            List<Player> members = pc.getParty().getPartyMembers().stream().filter(mem -> mem != null && !mem.isDead() && mem.isInRange(pc, 1000)).collect(Collectors.toList());
+            List<Player> members = new ArrayList<Player>();
+            for (Player mem : pc.getParty().getPartyMembers()) {
+                if (mem != null && !mem.isDead() && mem.isInRange(pc, 1000)) {
+                    members.add(mem);
+                }
+            }
             for (Player mem : members) {
                 mem.teleToLocation(Location.findPointToStay(_enter, 80, mem.getGeoIndex()));
             }

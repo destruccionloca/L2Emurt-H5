@@ -17,7 +17,7 @@ public class DimensionMovingDevice extends DefaultAI {
         22542, // Dragon Steed Troop Magic Leader
         22548 // Dragon Steed Troop Javelin Thrower
     };
-    private List<NpcInstance> _npcs = new ArrayList<>();
+    private List<NpcInstance> _npcs = new ArrayList<NpcInstance>();
 
     public DimensionMovingDevice(NpcInstance actor) {
         super(actor);

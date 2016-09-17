@@ -11,6 +11,10 @@ public class BuyWashCarma extends Functions {
 
     public void list() {
         Player player = getSelf();
+		if(player.isCursedWeaponEquipped()) {
+            player.sendMessage(player.isLangRus() ? "Вам запрещено пользоваться этой функцией." : "You are not allowed to use this feature.");
+			return;
+		}
         if (!Config.SERVICES_WASH_PK_CARMA_ENABLED) {
             show(HtmCache.getInstance().getHtml("npcdefault.htm", player), player);
             return;

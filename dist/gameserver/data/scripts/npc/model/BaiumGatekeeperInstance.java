@@ -4,6 +4,7 @@ import l2p.gameserver.model.GameObjectsStorage;
 import l2p.gameserver.model.Player;
 import l2p.gameserver.model.instances.NpcInstance;
 import l2p.gameserver.scripts.Functions;
+import l2p.gameserver.tables.SkillTable;
 import l2p.gameserver.templates.npc.NpcTemplate;
 import l2p.gameserver.utils.ItemFunctions;
 import l2p.gameserver.utils.Location;
@@ -28,6 +29,7 @@ public final class BaiumGatekeeperInstance extends NpcInstance {
         if (!canBypassCheck(player, this)) {
             return;
         }
+        NpcInstance baiumNpc = GameObjectsStorage.getByNpcId(BaiumNpc);
 
         if (command.startsWith("request_entrance")) {
             if (ItemFunctions.getItemCount(player, BloodedFabric) > 0) {
@@ -36,7 +38,6 @@ public final class BaiumGatekeeperInstance extends NpcInstance {
                     showChatWindow(player, "default/31862-1.htm");
                     return;
                 }
-                NpcInstance baiumNpc = GameObjectsStorage.getByNpcId(BaiumNpc);
                 if (baiumNpc == null) {
                     showChatWindow(player, "default/31862-2.htm");
                     return;
@@ -58,6 +59,9 @@ public final class BaiumGatekeeperInstance extends NpcInstance {
             }
             setBusy(true);
             Functions.npcSay(this, "You called my name! Now you gonna die!");
+			// Переделать на MagicSkillUse
+            //baiumNpc.doCast(SkillTable.getInstance().getInfo(4136, 1), player, true);
+            player.doDie(baiumNpc);
             BaiumManager.spawnBaium(this, player);
         } else {
             super.onBypassFeedback(player, command);

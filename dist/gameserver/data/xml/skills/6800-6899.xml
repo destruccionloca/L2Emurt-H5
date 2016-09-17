@@ -1200,15 +1200,16 @@
 		<set name="icon" val="icon.skill6878"/>
 		<set name="coolTime" val="300"/>
 		<set name="reuseDelay" val="30000"/>
-		<set name="magicLevel" val="83"/>
+		<set name="magicLevel" val="84"/>
 		<set name="hitTime" val="6000"/>
 		<set name="castRange" val="300"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="123"/>
-		<set name="target" val="TARGET_AURA"/>
+		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PARALYZE"/>
 		<set name="skillRadius" val="400"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="activateRate" val="10" />
 		<set name="trait" val="PARALYZE"/>
 		<set name="saveVs" val="MEN"/>
 		<for>

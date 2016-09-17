@@ -132,7 +132,7 @@ public class _230_TestOfSummoner extends Quest implements ScriptFile {
         }
     // Brynthea
     };
-    static Map<Integer, String> NAMES = new HashMap<>();
+    static Map<Integer, String> NAMES = new HashMap<Integer, String>();
 
     static {
         NAMES.put(30635, "Almors");
@@ -142,7 +142,7 @@ public class _230_TestOfSummoner extends Quest implements ScriptFile {
         NAMES.put(30639, "Celestiel");
         NAMES.put(30640, "Brynthea");
     }
-    static Map<Integer, Integer[]> DROPLIST_LARA = new HashMap<>();
+    static Map<Integer, Integer[]> DROPLIST_LARA = new HashMap<Integer, Integer[]>();
 
     static {
         DROPLIST_LARA.put(20555, new Integer[]{
@@ -306,7 +306,9 @@ public class _230_TestOfSummoner extends Quest implements ScriptFile {
         for (int npcId : npc) {
             addTalkId(npcId);
         }
-        DROPLIST_LARA.keySet().forEach(this::addKillId);
+        for (int mobId : DROPLIST_LARA.keySet()) {
+            addKillId(mobId);
+        }
         for (int mobId : DROPLIST_SUMMON.keySet()) {
             addKillId(mobId);
             addAttackId(mobId);
@@ -537,7 +539,7 @@ public class _230_TestOfSummoner extends Quest implements ScriptFile {
         }
         return htmltext;
     }
-    static Map<Integer, Integer[]> DROPLIST_SUMMON = new HashMap<>();
+    static Map<Integer, Integer[]> DROPLIST_SUMMON = new HashMap<Integer, Integer[]>();
 
     static {
         DROPLIST_SUMMON.put(27102, new Integer[]{
@@ -583,7 +585,7 @@ public class _230_TestOfSummoner extends Quest implements ScriptFile {
             CRYSTAL_OF_VICTORY6_ID
         }); // Silhoutte Tilfo
     }
-    static Map<Integer, String> DROPLIST_SUMMON_VARS = new HashMap<>();
+    static Map<Integer, String> DROPLIST_SUMMON_VARS = new HashMap<Integer, String>();
 
     static {
         NAMES.put(27102, "Almors");

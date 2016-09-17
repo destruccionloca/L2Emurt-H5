@@ -42,8 +42,8 @@ public class Darion extends Fighter {
         }
 
         //Doors
-        for (int door1 : doors) {
-            DoorInstance door = ReflectionUtils.getDoor(door1);
+        for (int i = 0; i < doors.length; i++) {
+            DoorInstance door = ReflectionUtils.getDoor(doors[i]);
             door.closeMe();
         }
     }
@@ -51,14 +51,18 @@ public class Darion extends Fighter {
     @Override
     protected void onEvtDead(Creature killer) {
         //Doors
-        for (int door1 : doors) {
-            DoorInstance door = ReflectionUtils.getDoor(door1);
+        for (int i = 0; i < doors.length; i++) {
+            DoorInstance door = ReflectionUtils.getDoor(doors[i]);
             door.openMe();
         }
 
-        GameObjectsStorage.getAllByNpcId(25614, false).forEach(NpcInstance::deleteMe);
+        for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(25614, false)) {
+            npc.deleteMe();
+        }
 
-        GameObjectsStorage.getAllByNpcId(25615, false).forEach(NpcInstance::deleteMe);
+        for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(25615, false)) {
+            npc.deleteMe();
+        }
 
         super.onEvtDead(killer);
     }

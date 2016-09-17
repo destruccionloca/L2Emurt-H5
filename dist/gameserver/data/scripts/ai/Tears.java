@@ -31,7 +31,11 @@ public class Tears extends DefaultAI {
 
         @Override
         public void runImpl() {
-            spawns.stream().filter(npc -> npc != null).forEach(NpcInstance::deleteMe);
+            for (NpcInstance npc : spawns) {
+                if (npc != null) {
+                    npc.deleteMe();
+                }
+            }
             spawns.clear();
             despawnTask = null;
         }
@@ -51,7 +55,7 @@ public class Tears extends DefaultAI {
     private static final int Tears_Copy = 25535;
     ScheduledFuture<?> spawnTask;
     ScheduledFuture<?> despawnTask;
-    List<NpcInstance> spawns = new ArrayList<>();
+    List<NpcInstance> spawns = new ArrayList<NpcInstance>();
     private boolean _isUsedInvincible = false;
     private int _scale_count = 0;
     private long _last_scale_time = 0;

@@ -422,7 +422,9 @@ public class LastHero extends Functions
     }
 
     public static void prepare() {
-        reflection.getDoors().forEach(DoorInstance::closeMe);
+        for (DoorInstance door : reflection.getDoors()) {
+            door.closeMe();
+        }
         for (Zone z : reflection.getZones()) {
             z.setType(Zone.ZoneType.peace_zone);
         }
@@ -456,7 +458,9 @@ public class LastHero extends Functions
         _status = 0;
         removeAura();
 
-        reflection.getDoors().forEach(DoorInstance::openMe);
+        for (DoorInstance door : reflection.getDoors()) {
+            door.openMe();
+        }
 
         for (Zone z : reflection.getZones()) {
             z.setType(Zone.ZoneType.peace_zone);
@@ -582,13 +586,15 @@ public class LastHero extends Functions
     }
 
     public static void ressurectPlayers() {
-        getPlayers(players_list).stream().filter(player -> player.isDead()).forEach(player -> {
-            player.restoreExp();
-            player.setCurrentCp(player.getMaxCp());
-            player.setCurrentHp(player.getMaxHp(), true);
-            player.setCurrentMp(player.getMaxMp());
-            player.broadcastPacket(new L2GameServerPacket[]{new Revive(player)});
-        });
+        for (Player player : getPlayers(players_list)) {
+            if (player.isDead()) {
+                player.restoreExp();
+                player.setCurrentCp(player.getMaxCp());
+                player.setCurrentHp(player.getMaxHp(), true);
+                player.setCurrentMp(player.getMaxMp());
+                player.broadcastPacket(new L2GameServerPacket[]{new Revive(player)});
+            }
+        }
     }
 
     public static void healPlayers() {
@@ -599,7 +605,11 @@ public class LastHero extends Functions
     }
 
     public static void cleanPlayers() {
-        getPlayers(players_list).stream().filter(player -> !checkPlayer(player, false)).forEach(LastHero::removePlayer);
+        for (Player player : getPlayers(players_list)) {
+            if (!checkPlayer(player, false)) {
+                removePlayer(player);
+            }
+        }
     }
 
     public static void checkLive() {
@@ -615,7 +625,7 @@ public class LastHero extends Functions
 
         for (Player player : getPlayers(live_list)) {
             if ((player.isInZone(_zone)) && (!player.isDead()) && (!player.isLogoutStarted())) {
-                player.setTeam(TeamType.BLUE);
+
             } else {
                 loosePlayer(player);
             }
@@ -646,7 +656,7 @@ public class LastHero extends Functions
 
     @Override
     public void onDeath(Creature self, Creature killer) {
-        if ((_status > 1) && (self.isPlayer()) && (self.getTeam() != TeamType.NONE) && (live_list.contains(self.getStoredId()))) {
+        if ((_status > 1) && (self.isPlayer()) && (live_list.contains(self.getStoredId()))) {
             Player player = (Player) self;
             loosePlayer(player);
             checkLive();
@@ -662,7 +672,7 @@ public class LastHero extends Functions
         if (_zone.checkIfInZone(x, y, z, reflection)) {
             return;
         }
-        if ((_status > 1) && (player.getTeam() != TeamType.NONE) && (live_list.contains(player.getStoredId()))) {
+        if ((_status > 1) && (live_list.contains(player.getStoredId()))) {
             removePlayer(player);
             checkLive();
         }
@@ -686,7 +696,7 @@ public class LastHero extends Functions
             return;
         }
 
-        if ((_status > 1) && (player.getTeam() != TeamType.NONE) && (live_list.contains(player.getStoredId()))) {
+        if ((_status > 1) && (live_list.contains(player.getStoredId()))) {
             removePlayer(player);
             checkLive();
         }
@@ -727,12 +737,14 @@ public class LastHero extends Functions
     }
 
     public static void buffPlayers() {
-        getPlayers(players_list).stream().filter(player -> !Config.EVENT_LastHeroAllowBuffs).forEach(player -> {
-            player.getEffectList().stopAllEffects();
-            if (player.getPet() != null) {
-                player.getPet().getEffectList().stopAllEffects();
+        for (Player player : getPlayers(players_list)) {
+            if (!Config.EVENT_LastHeroAllowBuffs) {
+                player.getEffectList().stopAllEffects();
+                if (player.getPet() != null) {
+                    player.getPet().getEffectList().stopAllEffects();
+                }
             }
-        });
+        }
 
         if (!Config.EVENT_LastHeroBuffPlayers) {
             return;
@@ -791,16 +803,16 @@ public class LastHero extends Functions
     }
 
     public static void mageBuff(Player player) {
-        for (int[] mage_buff : mage_buffs) {
-            buff = SkillTable.getInstance().getInfo(mage_buff[0], mage_buff[1]);
+        for (int i = 0; i < mage_buffs.length; i++) {
+            buff = SkillTable.getInstance().getInfo(mage_buffs[i][0], mage_buffs[i][1]);
 
             buff.getEffects(player, player, false, false);
         }
     }
 
     public static void fighterBuff(Player player) {
-        for (int[] fighter_buff : fighter_buffs) {
-            buff = SkillTable.getInstance().getInfo(fighter_buff[0], fighter_buff[1]);
+        for (int i = 0; i < fighter_buffs.length; i++) {
+            buff = SkillTable.getInstance().getInfo(fighter_buffs[i][0], fighter_buffs[i][1]);
 
             buff.getEffects(player, player, false, false);
         }
@@ -874,7 +886,7 @@ public class LastHero extends Functions
                 return;
             }
             Player player = cha.getPlayer();
-            if ((LastHero._status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && (LastHero.live_list.contains(player.getStoredId()))) {
+            if ((LastHero._status > 1) && (player != null) && (LastHero.live_list.contains(player.getStoredId()))) {
                 double angle = PositionUtils.convertHeadingToDegree(cha.getHeading());
                 double radian = Math.toRadians(angle - 90.0D);
                 int x = (int) (cha.getX() + 250.0D * Math.sin(radian));

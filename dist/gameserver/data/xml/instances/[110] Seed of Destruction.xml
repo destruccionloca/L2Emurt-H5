@@ -4,7 +4,7 @@
 	<instance id="110" name="Seed of Destruction" nameRu="Seed of Destruction" maxChannels="3" collapseIfEmpty="20" timelimit="130" dispelBuffs="false">
 		<collapse on-party-dismiss="true" timer="60"/>
 		<level min="75" max="85"/>
-		<party min="36" max="45"/>
+		<party min="4" max="45"/>
 		<return loc="-248376 250440 4344"/>
 		<teleport loc="-242738 219995 -9984"/>
 		<remove itemId="0" count="0" necessary="false"/>

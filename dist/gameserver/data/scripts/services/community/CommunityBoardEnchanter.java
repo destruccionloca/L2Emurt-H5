@@ -84,7 +84,8 @@ public class CommunityBoardEnchanter extends Functions implements ScriptFile, IC
             sb.append("<table width=400>");
             ItemInstance[] arr = activeChar.getInventory().getItems();
             int len = arr.length;
-            for (ItemInstance _item : arr) {
+            for (int i = 0; i < len; i++) {
+                ItemInstance _item = arr[i];
                 if (_item == null || _item.getTemplate().isBelt() || _item.isCursed() || _item.isArrow()
                         || _item.getTemplate().isBracelet() || _item.getTemplate().isCloak() || _item.isNoEnchant()
                         || !_item.isEquipped() || _item.isShieldNoEnchant() || _item.getItemType() == ArmorType.SIGIL || _item.isHeroWeapon()
@@ -93,17 +94,17 @@ public class CommunityBoardEnchanter extends Functions implements ScriptFile, IC
                         || _item.getEquipSlot() == ItemTemplate.SLOT_HAIR || _item.getEquipSlot() == ItemTemplate.SLOT_DHAIR) {
                     continue;
                 }
-                sb.append(new StringBuilder("<tr><td><img src=icon." + _item.getTemplate().getIcon() + " width=32 height=32></td><td>"));
+                sb.append(new StringBuilder("<tr><td><img src=" + _item.getTemplate().getIcon() + " width=32 height=32></td><td>"));
                 sb.append(new StringBuilder("<font color=\"LEVEL\">" + _item.getTemplate().getName() + " " + (_item.getEnchantLevel() <= 0 ? "" : new StringBuilder("</font><br1><font color=3293F3>Заточено на: +" + _item.getEnchantLevel())) + "</font><br1>"));
                 sb.append(new StringBuilder("Заточка за: <font color=\"LEVEL\">" + name + "</font>"));
                 sb.append("<img src=\"l2ui.squaregray\" width=\"170\" height=\"1\">");
                 sb.append("</td><td>");
                 if (Config.ALLOW_BBS_ENCHANT_ELEMENTAR) {
-                    sb.append(new StringBuilder("<button value=\"Обычная\" action=\"bypass _bbsechantlist:" + _item.getObjectId() + ";\" width=75 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">"));
+                    sb.append(new StringBuilder("<button value=\"Обычная\" action=\"bypass _bbsechantlist:" + _item.getObjectId() + ";\" width=84 height=25 back=\"LineageNpcsTexAV.little-n\" fore=\"LineageNpcsTexAV.little-n\">"));
                 }
                 sb.append("</td><td>");
                 if (Config.ALLOW_BBS_ENCHANT_ATT) {
-                    sb.append(new StringBuilder("<button value=\"Аттрибут\" action=\"bypass _bbsechantChus:" + _item.getObjectId() + ";\" width=75 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">"));
+                    sb.append(new StringBuilder("<button value=\"Аттрибут\" action=\"bypass _bbsechantChus:" + _item.getObjectId() + ";\" width=84 height=25 back=\"LineageNpcsTexAV.little-n\" fore=\"LineageNpcsTexAV.little-n\">"));
                 }
                 sb.append("</td></tr>");
             }
@@ -123,24 +124,24 @@ public class CommunityBoardEnchanter extends Functions implements ScriptFile, IC
 
             StringBuilder sb = new StringBuilder("");
             sb.append("Для обычной заточки выбрана вещь:<br1><table width=300>");
-            sb.append(new StringBuilder("<tr><td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td><td width=236><center>"));
+            sb.append(new StringBuilder("<tr><td width=32><img src=" + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td><td width=236><center>"));
             sb.append(new StringBuilder("<font color=\"LEVEL\">" + EhchantItem.getTemplate().getName() + " " + (EhchantItem.getEnchantLevel() <= 0 ? "" : new StringBuilder("</font><br1><font color=3293F3>Заточено на: +" + EhchantItem.getEnchantLevel())) + "</font><br1>"));
 
             sb.append(new StringBuilder("Заточка производится за: <font color=\"LEVEL\">" + name + "</font>"));
             sb.append("<img src=\"l2ui.squaregray\" width=\"236\" height=\"1\"><center></td>");
-            sb.append(new StringBuilder("<td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td>"));
+            sb.append(new StringBuilder("<td width=32><img src=" + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td>"));
             sb.append("</tr>");
             sb.append("</table>");
             sb.append("<br>");
             sb.append("<br>");
             sb.append("<table border=0 width=400><tr><td width=200>");
-            for (int i = 0; i < enchant_level.length; i++) {
+            for (int i = 15; i < enchant_level.length; i++) {
                 if (EhchantItem.getEnchantLevel() >= enchant_level[i])
                     continue;
-                sb.append(new StringBuilder("<button value=\"На +" + enchant_level[i] + " (Цена:" + (EhchantItem.getTemplate().isWeapon() != false ? ench_price_weapon[i] : ench_price_armor[i]) + " " + name + ")\" action=\"bypass _bbsechantgo:" + enchant_level[i] + ":" + (EhchantItem.getTemplate().isWeapon() != false ? ench_price_weapon[i] : ench_price_armor[i]) + ":" + ItemForEchantObjID + ";\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">"));
+                sb.append(new StringBuilder("<button value=\"На +" + enchant_level[i] + " (Цена:" + (EhchantItem.getTemplate().isWeapon() != false ? ench_price_weapon[i] : ench_price_armor[i]) + " " + name + ")\" action=\"bypass _bbsechantgo:" + enchant_level[i] + ":" + (EhchantItem.getTemplate().isWeapon() != false ? ench_price_weapon[i] : ench_price_armor[i]) + ":" + ItemForEchantObjID + ";\" width=215 height=27 back=\"star_but.tp_but\" fore=\"star_but.tp_but\">"));
                 //sb.append("<br1>");
             }
-            sb.append("</td></tr></table><br1><button value=\"Назад\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+            sb.append("</td></tr></table><br1><button value=\"Назад\" action=\"bypass _bbsechant;\" width=84 height=25 back=\"LineageNpcsTexAV.little-n\" fore=\"LineageNpcsTexAV.little-n\">");
             html = html.replace("%enchanter%", sb.toString());
             ShowBoard.separateAndSend(html, activeChar);
         }
@@ -155,12 +156,12 @@ public class CommunityBoardEnchanter extends Functions implements ScriptFile, IC
 
             StringBuilder sb = new StringBuilder("");
             sb.append("Для заточки на атрибут выбрана вещь:<br><table width=300>");
-            sb.append(new StringBuilder("<tr><td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td><td width=236><center>"));
+            sb.append(new StringBuilder("<tr><td width=32><img src=" + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td><td width=236><center>"));
             sb.append(new StringBuilder("<font color=\"LEVEL\">" + EhchantItem.getTemplate().getName() + " " + (EhchantItem.getEnchantLevel() <= 0 ? "" : new StringBuilder("</font><br1><font color=3293F3>Заточено на: +" + EhchantItem.getEnchantLevel())) + "</font><br1>"));
 
             sb.append(new StringBuilder("Заточка производится за: <font color=\"LEVEL\">" + name + "</font>"));
             sb.append("<img src=\"l2ui.squaregray\" width=\"236\" height=\"1\"><center></td>");
-            sb.append(new StringBuilder("<td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td>"));
+            sb.append(new StringBuilder("<td width=32><img src=" + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td>"));
             sb.append("</tr>");
             sb.append("</table>");
             sb.append("<br>");
@@ -179,7 +180,7 @@ public class CommunityBoardEnchanter extends Functions implements ScriptFile, IC
             sb.append(new StringBuilder("<button value=\"Divine \" action=\"bypass _bbsechantAtr:4:" + ItemForEchantObjID + ";\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">"));
             sb.append("<br><center><img src=icon.etc_unholy_stone_i00 width=32 height=32></center><br>");
             sb.append(new StringBuilder("<button value=\"Dark \" action=\"bypass _bbsechantAtr:5:" + ItemForEchantObjID + ";\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">"));
-            sb.append("</td></tr></table><br1><button value=\"Назад\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+            sb.append("</td></tr></table><br1><button value=\"Назад\" action=\"bypass _bbsechant;\" width=84 height=25 back=\"LineageNpcsTexAV.little-n\" fore=\"LineageNpcsTexAV.little-n\">");
             html = html.replace("%enchanter%", sb.toString());
             ShowBoard.separateAndSend(html, activeChar);
         }
@@ -208,12 +209,12 @@ public class CommunityBoardEnchanter extends Functions implements ScriptFile, IC
             ItemInstance EhchantItem = activeChar.getInventory().getItemByObjectId(ItemForEchantObjID);
             StringBuilder sb = new StringBuilder("");
             sb.append(new StringBuilder("Выбран элемент: <font color=\"LEVEL\">" + ElementName + "</font><br1> Для заточки выбрана вещь:<br1><table width=300>"));
-            sb.append(new StringBuilder("<tr><td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td><td width=236><center>"));
+            sb.append(new StringBuilder("<tr><td width=32><img src=" + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td><td width=236><center>"));
             sb.append(new StringBuilder("<font color=\"LEVEL\">" + EhchantItem.getTemplate().getName() + " " + (EhchantItem.getEnchantLevel() <= 0 ? "" : new StringBuilder("</font><br1><font color=3293F3>Заточено на: +" + EhchantItem.getEnchantLevel())) + "</font><br1>"));
 
             sb.append(new StringBuilder("Заточка производится за: <font color=\"LEVEL\">" + name + "</font>"));
             sb.append("<img src=\"l2ui.squaregray\" width=\"236\" height=\"1\"><center></td>");
-            sb.append(new StringBuilder("<td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td>"));
+            sb.append(new StringBuilder("<td width=32><img src=" + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td>"));
             sb.append("</tr>");
             sb.append("<br1>");
             sb.append("<br1>");
@@ -221,14 +222,14 @@ public class CommunityBoardEnchanter extends Functions implements ScriptFile, IC
                 sb.append("<table border=0 width=400><tr><td width=200>");
                 for (int i = 0; i < (EhchantItem.getTemplate().isWeapon() != false ? atr_lvl_weapon.length : atr_lvl_armor.length); i++) {
                     sb.append("<center><button value=\"На +");
-                    sb.append(new StringBuilder((EhchantItem.getTemplate().isWeapon() != false ? atr_lvl_weapon[i] : atr_lvl_armor[i]) + " (Цена:" + (EhchantItem.getTemplate().isWeapon() != false ? atr_price_weapon[i] : atr_price_armor[i]) + " " + name + ")\" action=\"bypass _bbsechantuseAtr:" + (EhchantItem.getTemplate().isWeapon() != false ? atr_lvl_weapon[i] : atr_lvl_armor[i]) + ":" + AtributType + ":" + (EhchantItem.getTemplate().isWeapon() != false ? atr_price_weapon[i] : atr_price_armor[i]) + ":" + ItemForEchantObjID + ";\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">"));
+                    sb.append(new StringBuilder((EhchantItem.getTemplate().isWeapon() != false ? atr_lvl_weapon[i] : atr_lvl_armor[i]) + " (Цена:" + (EhchantItem.getTemplate().isWeapon() != false ? atr_price_weapon[i] : atr_price_armor[i]) + " " + name + ")\" action=\"bypass _bbsechantuseAtr:" + (EhchantItem.getTemplate().isWeapon() != false ? atr_lvl_weapon[i] : atr_lvl_armor[i]) + ":" + AtributType + ":" + (EhchantItem.getTemplate().isWeapon() != false ? atr_price_weapon[i] : atr_price_armor[i]) + ":" + ItemForEchantObjID + ";\" width=215 height=27 back=\"star_but.tp_but\" fore=\"star_but.tp_but\">"));
                     sb.append("<br1>");
                 }
                 sb.append("</td></tr></table><br1>");
             } else if (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.S || EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.S80 || EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.S84) {
                 sb.append("<table border=0 width=400><tr><td width=200>");
                 for (int i = 0; i < (EhchantItem.getTemplate().isWeapon() != false ? atr_lvl_weapon.length : atr_lvl_armor.length); i++) {
-                    sb.append(new StringBuilder("<center><button value=\"На +" + (EhchantItem.getTemplate().isWeapon() != false ? atr_lvl_weapon[i] : atr_lvl_armor[i]) + " (Цена:" + (EhchantItem.getTemplate().isWeapon() != false ? atr_price_weapon[i] : atr_price_armor[i]) + " " + name + ")\" action=\"bypass _bbsechantuseAtr:" + (EhchantItem.getTemplate().isWeapon() != false ? atr_lvl_weapon[i] : atr_lvl_armor[i]) + ":" + AtributType + ":" + (EhchantItem.getTemplate().isWeapon() != false ? atr_price_weapon[i] : atr_price_armor[i]) + ":" + ItemForEchantObjID + ";\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">"));
+                    sb.append(new StringBuilder("<center><button value=\"На +" + (EhchantItem.getTemplate().isWeapon() != false ? atr_lvl_weapon[i] : atr_lvl_armor[i]) + " (Цена:" + (EhchantItem.getTemplate().isWeapon() != false ? atr_price_weapon[i] : atr_price_armor[i]) + " " + name + ")\" action=\"bypass _bbsechantuseAtr:" + (EhchantItem.getTemplate().isWeapon() != false ? atr_lvl_weapon[i] : atr_lvl_armor[i]) + ":" + AtributType + ":" + (EhchantItem.getTemplate().isWeapon() != false ? atr_price_weapon[i] : atr_price_armor[i]) + ":" + ItemForEchantObjID + ";\" width=215 height=27 back=\"star_but.tp_but\" fore=\"star_but.tp_but\">"));
                     sb.append("<br1>");
                 }
                 sb.append("</td></tr></table><br1>");
@@ -246,7 +247,7 @@ public class CommunityBoardEnchanter extends Functions implements ScriptFile, IC
                 sb.append("<br1>");
                 sb.append("</td></tr></table><br1>");
             }
-            sb.append("<button value=\"Назад\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+            sb.append("<button value=\"Назад\" action=\"bypass _bbsechant;\" width=84 height=25 back=\"LineageNpcsTexAV.little-n\" fore=\"LineageNpcsTexAV.little-n\">");
             html = html.replace("%enchanter%", sb.toString());
             ShowBoard.separateAndSend(html, activeChar);
         }

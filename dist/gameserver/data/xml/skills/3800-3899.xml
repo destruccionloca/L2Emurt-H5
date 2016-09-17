@@ -10,9 +10,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.028" />
-			<add order="0x40" stat="maxMp" val="133" />
-			<add order="0x40" stat="defenceUnholy" val="3.33" />
+			<mul order="0x30" stat="mAtk" val="1.02" />
+			<mul order="0x30" stat="maxMp" val="1.01" />
+			<add order="0x60" stat="defenceUnholy" val="5" />
 		</for>
 	</skill>
 	<skill id="3801" levels="1" name="Dynasty Gloves">
@@ -25,9 +25,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0083" />
-			<add order="0x40" stat="maxMp" val="53" />
-			<add order="0x40" stat="defenceUnholy" val="1.33" />
+			<mul order="0x30" stat="mAtk" val="1.02" />
+			<mul order="0x30" stat="maxMp" val="1.01" />
+			<add order="0x60" stat="defenceUnholy" val="5" />
 		</for>
 	</skill>
 	<skill id="3802" levels="1" name="Dynasty Shoes">
@@ -40,9 +40,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0083" />
-			<add order="0x40" stat="maxMp" val="53" />
-			<add order="0x40" stat="defenceUnholy" val="1.33" />
+			<mul order="0x30" stat="mAtk" val="1.02" />
+			<mul order="0x30" stat="maxMp" val="1.01" />
+			<add order="0x60" stat="defenceUnholy" val="5" />
 		</for>
 	</skill>
 	<skill id="3803" levels="1" name="Dynasty Circlet">
@@ -55,9 +55,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0125" />
-			<add order="0x40" stat="maxMp" val="80" />
-			<add order="0x40" stat="defenceUnholy" val="2" />
+			<mul order="0x30" stat="mAtk" val="1.02" />
+			<mul order="0x30" stat="maxMp" val="1.01" />
+			<add order="0x60" stat="defenceUnholy" val="5" />
 		</for>
 	</skill>
 	<skill id="3804" levels="1" name="Dynasty Silver Satin Tunic">
@@ -70,7 +70,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			<mul order="0x30" stat="pDef" val="1.02" />
+			<mul order="0x30" stat="maxHp" val="1.02" />
+			<add order="0x60" stat="defenceUnholy" val="7" />
+			<mul order="0x30" stat="mpConsum" val="0.98" />
 		</for>
 	</skill>
 	<skill id="3805" levels="1" name="Dynasty Jewel Leather Mail">
@@ -83,11 +86,11 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3.4" />
-			<add order="0x40" stat="rEvas" val="3.4" />
-			<add order="0x60" stat="defenceUnholy" val="3.2" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0477" />
-			<add order="0x40" stat="maxMp" val="492" />
+			<add order="0x60" stat="accCombat" val="2" />
+			<add order="0x60" stat="rEvas" val="2" />
+			<add order="0x60" stat="defenceUnholy" val="7" />
+			<mul order="0x30" stat="pAtkSpd" val="1.02" />
+			<mul order="0x30" stat="maxHp" val="1.02" />
 			<add order="0x10" stat="openCloakSlot" val="1" />
 		</for>
 	</skill>
@@ -101,10 +104,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0724" />
-			<add order="0x40" stat="maxHp" val="1023" />
-			<add order="0x40" stat="defenceUnholy" val="3.2" />
-			<mul order="0x30" stat="mpConsum" val="0.95" />
+			<mul order="0x30" stat="pDef" val="1.02" />
+			<mul order="0x30" stat="maxHp" val="1.02" />
+			<add order="0x60" stat="defenceUnholy" val="7" />
+			<mul order="0x30" stat="mpConsum" val="0.98" />
 		</for>
 	</skill>
 	<skill id="3807" levels="1" name="Adamantite Earring">
@@ -117,7 +120,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="maxMp" val="17" />
+			<add order="0x60" stat="maxMp" val="11" />
 		</for>
 	</skill>
 	<skill id="3808" levels="1" name="Adamantite Necklace">
@@ -130,7 +133,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunResist" val="1.0357" />
+			<add order="0x60" stat="stunResist" val="7" />
 		</for>
 	</skill>
 	<skill id="3809" levels="1" name="Adamantite Ring">
@@ -156,7 +159,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="defenceUnholy" val="1.71" />
+			<add order="0x60" stat="defenceUnholy" val="5" />
 		</for>
 	</skill>
 	<skill id="3811" levels="1" name="Necklace of Black Ore">
@@ -169,7 +172,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunResist" val="1.0476" />
+			<add order="0x60" stat="stunResist" val="7" />
 		</for>
 	</skill>
 	<skill id="3812" levels="1" name="Ring of Black Ore">
@@ -182,7 +185,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="maxMp" val="9" />
+			<add order="0x60" stat="maxMp" val="7" />
 		</for>
 	</skill>
 	<skill id="3813" levels="1" name="Phoenix Necklace">
@@ -195,7 +198,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="maxMp" val="21" />
+			<add order="0x60" stat="maxMp" val="21" />
 		</for>
 	</skill>
 	<skill id="3814" levels="1" name="Phoenix Ring">
@@ -221,7 +224,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="magicResist" val="1.01" />
+			<mul order="0x30" stat="mDef" val="1.01" />
 		</for>
 	</skill>
 	<skill id="3816" levels="1" name="Majestic Necklace">
@@ -234,7 +237,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="magicResist" val="1.01" />
+			<mul order="0x30" stat="mDef" val="1.01" />
 		</for>
 	</skill>
 	<skill id="3817" levels="1" name="Majestic Ring">
@@ -247,7 +250,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="maxMp" val="11" />
+			<add order="0x60" stat="maxMp" val="11" />
 		</for>
 	</skill>
 	<skill id="3818" levels="1" name="Majestic Earring">
@@ -260,7 +263,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonResist" val="1.0571" />
+			<add order="0x60" stat="poisonResist" val="5" />
 		</for>
 	</skill>
 	<skill id="3819" levels="1" name="Tateossian Necklace">
@@ -273,7 +276,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedResist" val="1.0761" />
+			<add order="0x60" stat="bleedResist" val="7" />
 		</for>
 	</skill>
 	<skill id="3820" levels="1" name="Tateossian Ring">
@@ -286,7 +289,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="defenceEarth" val="1.14" />
+			<add order="0x60" stat="defenceEarth" val="1" />
 		</for>
 	</skill>
 	<skill id="3821" levels="1" name="Tateossian Earring">
@@ -299,7 +302,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="maxMp" val="20" />
+			<add order="0x60" stat="maxMp" val="20" />
 		</for>
 	</skill>
 	<skill id="3822" levels="1" name="Dynasty Necklace">
@@ -312,7 +315,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="maxMp" val="30" />
+			<add order="0x60" stat="maxMp" val="30" />
 		</for>
 	</skill>
 	<skill id="3823" levels="1" name="Dynasty Ring">
@@ -325,7 +328,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="defenceUnholy" val="1.14" />
+			<add order="0x60" stat="defenceUnholy" val="1" />
 		</for>
 	</skill>
 	<skill id="3824" levels="1" name="Dynasty Earring">
@@ -338,7 +341,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="sleepResist" val="1.05" />
+			<add order="0x60" stat="sleepResist" val="5" />
 		</for>
 	</skill>
 	<skill id="3825" levels="3" name="Sword of Might">

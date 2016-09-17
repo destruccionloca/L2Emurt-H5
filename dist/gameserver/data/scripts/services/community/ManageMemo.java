@@ -119,7 +119,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler {
             html = html.replace("%memo_id%", "0");
             html = html.replace("%TREE%", "&nbsp;>&nbsp;Создание записки");
             
-            List<String> args = new ArrayList<>();
+            List<String> args = new ArrayList<String>();
             args.add("0");
             args.add("0");
             args.add("0");
@@ -210,7 +210,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler {
                     html = html.replace("%memo_id%", String.valueOf(memoId));
                     html = html.replace("%TREE%", "&nbsp;>&nbsp;<a action=\"bypass _mmread_" + memoId + "_" + page + "\">Записка: " + rset.getString("title") + "</a>&nbsp;>&nbsp;Редактирование");
                     
-                    List<String> args = new ArrayList<>();
+                    List<String> args = new ArrayList<String>();
                     args.add("0");
                     args.add("0");
                     args.add(String.valueOf(memoId));
@@ -275,7 +275,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler {
                     memoId = Integer.parseInt(arg2);
                 }
 
-                if (!title.isEmpty() && !memo.isEmpty()) {
+                if (title.length() > 0 && memo.length() > 0) {
                     Connection con = null;
                     PreparedStatement stmt = null;
                     try {

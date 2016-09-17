@@ -25,7 +25,11 @@ public class Potions extends SimpleItemHandler implements ScriptFile {
         10001,
         10002,
         13750,
-        14612
+        14612,
+		40032,
+		40033,
+		40034,
+		40035
     };
 
     @Override
@@ -50,12 +54,24 @@ public class Potions extends SimpleItemHandler implements ScriptFile {
     @Override
     public void onShutdown() {
     }
+	
+	private boolean getExists(int id) {
+        int[] itemsEx = new int[] {
+                40032,40033,40034,40035
+        };
+        for (int i = 0; i < itemsEx.length; i++) {
+            if (id == itemsEx[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     @Override
     protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl) {
         int itemId = item.getItemId();
 
-        if (player.isInOlympiadMode()) {
+        if (player.isInOlympiadMode() && getExists(itemId)) {
             player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
             return false;
         }
@@ -154,6 +170,26 @@ public class Potions extends SimpleItemHandler implements ScriptFile {
             case 21033:
                 player.broadcastPacket(new MagicSkillUse(player, player, 22173, 1, 0, 0));
                 player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(22173, 1));
+                break;
+			//Mental Shield Potion
+            case 40032:
+                player.broadcastPacket(new MagicSkillUse(player, player, 90020, 1, 0, 0));
+                player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(90020, 1));
+                break;
+			//Regeneration Potion
+            case 40033:
+                player.broadcastPacket(new MagicSkillUse(player, player, 90021, 1, 0, 0));
+                player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(90021, 1));
+                break;
+			//Regeneration Potion
+            case 40034:
+                player.broadcastPacket(new MagicSkillUse(player, player, 90022, 1, 0, 0));
+                player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(90022, 1));
+                break;
+			//Regeneration Potion
+            case 40035:
+                player.broadcastPacket(new MagicSkillUse(player, player, 90023, 1, 0, 0));
+                player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(90023, 1));
                 break;
             default:
                 return false;

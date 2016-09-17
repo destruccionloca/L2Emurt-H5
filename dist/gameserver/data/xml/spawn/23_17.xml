@@ -2486,7 +2486,7 @@
 		<npc id="36228"/><!--Main Machine-->
 	</spawn>
 	<spawn group="western_fortress_siege_minister" count="1" respawn="600" respawn_random="0" period_of_day="none">
-		<point x="113912" y="-14396" z="-958" h="32767"/>
+		<point x="113912" y="-14806" z="-958" h="32768"/>
 		<npc id="36243"/><!--Minister-->
 	</spawn> 
 	<spawn group="western_fortress_siege_commanders" count="1" respawn="600" respawn_random="0" period_of_day="none">

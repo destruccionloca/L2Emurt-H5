@@ -59,7 +59,7 @@ public class Seed extends ScriptItemHandler {
         }
 
         // Запрет на саммон елок слищком близко к другим НПЦ
-        if (!World.getAroundNpc(activeChar, 100, 200).isEmpty()) {
+        if (World.getAroundNpc(activeChar, 100, 200).size() > 0) {
             activeChar.sendPacket(Msg.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
             return false;
         }

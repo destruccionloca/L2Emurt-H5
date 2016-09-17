@@ -160,9 +160,11 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile 
     }
 
     private void teleportElcardia(Player player) {
-        player.getReflection().getNpcs().stream().filter(n -> n.getNpcId() == ElcardiaInzone1).forEach(n -> {
-            n.teleToLocation(Location.findPointToStay(player, 60));
-        });
+        for (NpcInstance n : player.getReflection().getNpcs()) {
+            if (n.getNpcId() == ElcardiaInzone1) {
+                n.teleToLocation(Location.findPointToStay(player, 60));
+            }
+        }
     }
 
     @Override

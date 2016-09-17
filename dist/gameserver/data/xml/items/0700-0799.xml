@@ -255,7 +255,7 @@
     <set name="crystal_type" value="NONE"/>
     <set name="icon" value="icon.etc_reagent_blue_i00"/>
     <set name="price" value="2000"/>
-	<set name="reuse_delay" value="15000"/>
+	<set name="reuse_delay" value="8000"/>
     <set name="stackable" value="true"/>
     <set name="type" value="POTION"/>
     <set name="weight" value="180"/>

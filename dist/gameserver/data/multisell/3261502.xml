@@ -2104,6 +2104,23 @@
 		<ingredient id="5581" count="1"/>
 		<ingredient id="2133" count="140"/>
 	</item>
-
+	<item>
+		<production id="24025" count="1"/>
+		<ingredient id="24024" count="1"/>
+		<ingredient id="15828" count="1"/>
+		<ingredient id="2134" count="2300"/>
+	</item>
+		<item>
+		<production id="24026" count="1"/>
+		<ingredient id="24024" count="1"/>
+		<ingredient id="15827" count="1"/>
+		<ingredient id="2134" count="2300"/>
+	</item>
+		<item>
+		<production id="24027" count="1"/>
+		<ingredient id="24024" count="1"/>
+		<ingredient id="15826" count="1"/>
+		<ingredient id="2134" count="2300"/>
+	</item>
 
 </list>

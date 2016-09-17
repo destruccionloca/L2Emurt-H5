@@ -49,4 +49,37 @@
 			<coords loc="-23176 177928 -6000 -5500"/>
 		</polygon>
 	</zone>
+	<zone name="[Talkin_inst_no]" type="no_summon">
+		<polygon>
+			<coords loc="49320 248376"/>
+			<coords loc="49400 248536"/>
+			<coords loc="47288 249624"/>
+			<coords loc="43624 248872"/>
+			<coords loc="42584 247848"/>
+			<coords loc="41336 246232"/>
+			<coords loc="43400 245048"/>
+			<coords loc="43208 244328"/>
+			<coords loc="47832 243224"/>
+			<coords loc="48200 243208"/>
+			<coords loc="48312 244664"/>
+			<coords loc="48216 246248"/>
+			<coords loc="48024 246552"/>
+			<coords loc="48072 247336"/>
+			<coords loc="48024 248664"/>
+		</polygon>
+		<restart_point>
+			<coords loc="-84472 242744 -3728 8191"/>
+		</restart_point>
+	</zone>
+	<zone name="[Talkin_inst_no1]" type="no_summon">
+		<polygon>
+			<coords loc="32768 229376"/>
+			<coords loc="65520 229376"/>
+			<coords loc="65520 262128"/>
+			<coords loc="32768 262128"/>
+		</polygon>
+		<restart_point>
+			<coords loc="-84472 242744 -3728 8191"/>
+		</restart_point>
+	</zone>
 </list>

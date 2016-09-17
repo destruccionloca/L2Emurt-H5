@@ -45,9 +45,11 @@ public class SirraInstance extends NpcInstance {
         }
 
         if (command.equalsIgnoreCase("teleport_in")) {
-            getReflection().getNpcs().stream().filter(n -> n.getNpcId() == 29179 || n.getNpcId() == 29180).forEach(n -> {
-                player.sendPacket(new ExChangeClientEffectInfo(2));
-            });
+            for (NpcInstance n : getReflection().getNpcs()) {
+                if (n.getNpcId() == 29179 || n.getNpcId() == 29180) {
+                    player.sendPacket(new ExChangeClientEffectInfo(2));
+                }
+            }
             player.teleToLocation(new Location(114712, -113544, -11225));
         } else {
             super.onBypassFeedback(player, command);

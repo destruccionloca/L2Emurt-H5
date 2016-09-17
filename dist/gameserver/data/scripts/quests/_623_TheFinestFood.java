@@ -102,7 +102,7 @@ public class _623_TheFinestFood extends Quest implements ScriptFile {
         {
             if (npcId == HOT_SPRINGS_BUFFALO) {
                 if (st.getQuestItemsCount(BUFFALO_MEAT) < 100) {
-                    st.giveItems(BUFFALO_MEAT, 1);
+                    st.giveItems(BUFFALO_MEAT, 6);
                     if (st.getQuestItemsCount(BUFFALO_MEAT) == 100) {
                         if (summ(st) >= 300) {
                             st.setCond(2);
@@ -114,7 +114,7 @@ public class _623_TheFinestFood extends Quest implements ScriptFile {
                 }
             } else if (npcId == HOT_SPRINGS_FLAVA) {
                 if (st.getQuestItemsCount(LEAF_OF_FLAVA) < 100) {
-                    st.giveItems(LEAF_OF_FLAVA, 1);
+                    st.giveItems(LEAF_OF_FLAVA, 6);
                     if (st.getQuestItemsCount(LEAF_OF_FLAVA) == 100) {
                         if (summ(st) >= 300) {
                             st.setCond(2);
@@ -126,7 +126,7 @@ public class _623_TheFinestFood extends Quest implements ScriptFile {
                 }
             } else if (npcId == HOT_SPRINGS_ANTELOPE) {
                 if (st.getQuestItemsCount(ANTELOPE_HORN) < 100) {
-                    st.giveItems(ANTELOPE_HORN, 1);
+                    st.giveItems(ANTELOPE_HORN, 6);
                     if (st.getQuestItemsCount(ANTELOPE_HORN) == 100) {
                         if (summ(st) >= 300) {
                             st.setCond(2);

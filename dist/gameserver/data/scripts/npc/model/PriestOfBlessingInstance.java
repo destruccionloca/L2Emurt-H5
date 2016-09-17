@@ -29,7 +29,7 @@ public class PriestOfBlessingInstance extends NpcInstance {
             itemId = id;
         }
     }
-    private static List<Hourglass> hourglassList = new ArrayList<>();
+    private static List<Hourglass> hourglassList = new ArrayList<Hourglass>();
 
     static {
         hourglassList.add(new Hourglass(1, 19, 4000, new int[]{17095, 17096, 17097, 17098, 17099})); // 1-19

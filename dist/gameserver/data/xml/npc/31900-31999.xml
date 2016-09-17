@@ -3788,6 +3788,7 @@
             </sublist>
             <sublist id="2">
                 <target StringName="Frost Lake" StringNameLang="Замерзшее Озеро" item_id="57" loc="107577 -122392 -3632" name="1010620" price="1000"/>
+				<target StringName="The Ice Queen's Castle" StringNameLang="Замок Ледяной Королевы" item_id="57" loc="109060 -128655 -3084" name="1010621" price="1000"/>
                 <target StringName="Grave Robber Hideout" StringNameLang="Укрытие Грабителей Могил" item_id="57" loc="44221 -114232 -2784" name="1010591" price="1000"/>
                 <target StringName="Sky Wagon Relic" StringNameLang="Руины Воздушной Дороги" item_id="57" loc="121618 -141554 -1496" name="1010588" price="1000"/>
                 <target StringName="Gludin Arena" StringNameLang="Арена Глудина" item_id="57" loc="-87328 142266 -3640" name="1010506" price="1000"/>
@@ -3796,6 +3797,7 @@
             </sublist>
             <sublist id="3">
                 <target StringName="Frost Lake" StringNameLang="Замерзшее Озеро" item_id="13722" loc="107577 -122392 -3632" name="1010620" price="1"/>
+				<target StringName="The Ice Queen's Castle" StringNameLang="Замок Ледяной Королевы" item_id="13722" loc="109060 -128655 -3084" name="1010621" price="1"/>
                 <target StringName="Grave Robber Hideout" StringNameLang="Укрытие Грабителей Могил" item_id="13722" loc="44221 -114232 -2784" name="1010591" price="1"/>
                 <target StringName="Sky Wagon Relic" StringNameLang="Руины Воздушной Дороги" item_id="13722" loc="121618 -141554 -1496" name="1010588" price="1"/>
                 <target StringName="Gludin Arena" StringNameLang="Арена Глудина" item_id="13722" loc="-87328 142266 -3640" name="1010506" price="1"/>

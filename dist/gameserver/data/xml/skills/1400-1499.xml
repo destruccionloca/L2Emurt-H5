@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="1400" levels="10" name="Turn Undead">
+		<!-- Done by EmuRT http://emurt.ru -->
+		<set name="name-ru" val="Испугать Нежить" />
 		<table name="#Consume">3 3 4 4 4 4 5 5 5 5</table>
-		<table name="#activateRate">30</table>
-		<table name="#lethal2">25</table>
+		<table name="#lethal2">75</table>
 		<table name="#time">20</table>
 		<table name="#power">0</table>
 		<table name="#buffCount">0</table>
@@ -15,6 +16,7 @@
 		<set name="power" val="#power" />
 		<set name="icon" val="icon.skill1400" />
 		<set name="reuseDelay" val="4000" />
+		<set name="isMagic" val="false" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="4000" />
@@ -23,19 +25,17 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
-		<set name="activateRate" val="#activateRate" />
+		<set name="activateRate" val="50" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="#Consume" />
-		<set name="lethal2" val="#lethal2" />
+		<set name="lethal2" val="75" />
 		<set name="undeadOnly" val="true" />
 		<enchant1 levels="30" name="Power">
-			<table name="#activateRate">30 31 32 32 33 34 34 35 36 36 37 38 38 39 40 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50</table>
-			<table name="#lethal2"> 25 25 25 26 26 26 27 27 27 28 28 28 28 29 29 29 30 30 30 31 31 31 31 32 32 32 33 33 33 34 </table>
+			<table name="#lethal2">25 25 25 26 26 26 27 27 27 28 28 28 28 29 29 29 30 30 30 31 31 31 31 32 32 32 33 33 33 34</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
 		<enchant2 levels="30" name="Cost">
-			<table name="#time">21 22 24 25 26 28 29 30 32 33 34 36 37 38 40 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 			<table name="#mpConsume1">13 13 12 12 12 12 12 11 11 11 11 10 10 10 10 9 9 9 9 9 8 8 8 8 7 7 7 7 7 6</table>
 			<table name="#mpConsume2">53 52 51 50 49 48 48 47 46 45 44 43 42 41 40 39 38 38 37 36 35 34 33 32 31 30 29 29 28 27</table>
@@ -50,7 +50,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant4>
 		<for>
-			<effect count="3" abnormal="soulshock" name="Fear" stackOrder="-1" stackType="Fear" time="#time" val="0" />
+			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="#time" val="0" />
 			<effect count="#buffCount" name="Buff" time="60" applyOnCaster="true" isOffensive="false">
 				<add order="0x40" stat="attackHoly" val="#elementPower" />
 			</effect>
@@ -628,7 +628,7 @@
 			<target pvp="true" />
 		</cond>
 		<for>
-			<effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="10" val="0" cancelOnAction="true" />
+			<effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="1" stackType="invincibility" time="10" val="0" cancelOnAction="true" />
 		</for>
 	</skill>
 	<skill id="1419" levels="1" name="Volcano">
@@ -1397,14 +1397,14 @@
 		<!--
 			Description: Steals abnormal state of enemy.
 		-->
-		<table name="#stealCount">3 4 5 6 7</table>
+		<table name="#stealCount">1 2 3</table>
 		<table name="#mpConsume2">40 44 48 51 53</table>
 		<table name="#mpConsume1">10 11 12 13 14</table>
 		<table name="#magicLevel">55 60 64 68 72</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1440" />
 		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="15000" />
+		<set name="reuseDelay" val="20000" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1200" />
@@ -1560,13 +1560,10 @@
 		<for>
 			<effect count="1" name="Buff" time="#time" val="0">
 				<mul order="0x30" stat="pAtk" val="#pAtk">
-					<or>
-						<using kind="Rapier" />
-						<using kind="Ancient Sword" />
-						<using kind="Crossbow" />
-					</or>
+
 				</mul>
-				<mul order="0x30" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="mAtk" val="#mAtk" />	
+
 				<mul order="0x30" stat="blowRate" val="#blowRate" />
 			</effect>
 		</for>

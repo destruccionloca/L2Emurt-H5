@@ -21,11 +21,11 @@
 		<point x="50016" y="108048" z="-1040" h="0"/>
 		<npc id="20549"/><!--Ol Mahum Lord-->
 	</spawn>
-	<spawn count="1" respawn="900" respawn_random="0" period_of_day="none">
+	<spawn count="1" respawn="86400" respawn_random="3600" period_of_day="none">
 		<point x="46828" y="246674" z="-6672" h="0"/>
-		<npc id="27016"/><!--Nerkas-->
+		<npc id="25696"/><!--Taklacan-->
 	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+	<spawn count="1" respawn="60" respawn_random="1" period_of_day="none">
 		<point x="47952" y="244368" z="-6570" h="0"/>
 		<npc id="27117"/><!--Nahir-->
 	</spawn>
@@ -153,10 +153,7 @@
 		<point x="43673" y="49683" z="-3046" h="0"/>
 		<npc id="30414"/><!--Rosella-->
 	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="49328" y="248416" z="-5952" h="24576"/>
-		<npc id="30429"/><!--Tiramisa-->
-	</spawn>
+
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="43996" y="108998" z="-2035" h="61440"/>
 		<npc id="30596"/><!--Harkel-->
@@ -381,10 +378,7 @@
 		<point x="37728" y="-49216" z="-1128" h="39851"/>
 		<npc id="31339"/><!--Hakran-->
 	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="42596" y="-47988" z="-792" h="0"/>
-		<npc id="31340"/><!--Mathias-->
-	</spawn>
+
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="42596" y="-48484" z="-800" h="0"/>
 		<npc id="31341"/><!--Richtor-->
@@ -697,7 +691,7 @@
 		<point x="50592" y="54896" z="-3376" h="40960"/>
 		<npc id="31853"/><!--Treant Bremec-->
 	</spawn>
-	<spawn count="1" respawn="129600" respawn_random="14400" period_of_day="none">
+	<spawn count="1" respawn="86400" respawn_random="3600" period_of_day="none">
 		<point x="55024" y="17368" z="-5412" h="0"/>
 		<npc id="29014"/><!--Orfen-->
 	</spawn>

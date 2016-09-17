@@ -22,9 +22,11 @@ public class JiniaGuild extends Fighter {
 
         List<NpcInstance> around = actor.getAroundNpc(4000, 300);
         if (around != null && !around.isEmpty()) {
-            around.stream().filter(npc -> npc.getNpcId() == 29179).forEach(npc -> {
-                actor.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, npc, 3000);
-            });
+            for (NpcInstance npc : around) {
+                if (npc.getNpcId() == 29179) {
+                    actor.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, npc, 3000);
+                }
+            }
         }
         return true;
     }

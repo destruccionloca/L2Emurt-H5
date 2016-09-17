@@ -71,7 +71,7 @@ public class _232_TestOfLord extends Quest implements ScriptFile {
     private static int BEAR_FANG_NECKLACE = 3412;
     private static int MARTANKUS_CHARM = 3413;
     private static int IMMORTAL_FLAME = 3416;
-    private static Map<Integer, Drop> DROPLIST = new HashMap<>();
+    private static Map<Integer, Drop> DROPLIST = new HashMap<Integer, Drop>();
 
     public _232_TestOfLord() {
         super(false);
@@ -102,7 +102,9 @@ public class _232_TestOfLord extends Quest implements ScriptFile {
         DROPLIST.put(Marsh_Spider, new Drop(1, 10, 100).addItem(MARSH_SPIDER_FEELER).addItem(MARSH_SPIDER_FEET));
         DROPLIST.put(Enchanted_Monstereye, new Drop(1, 20, 90).addItem(CORNEA_OF_EN_MONSTEREYE));
 
-        DROPLIST.keySet().forEach(this::addKillId);
+        for (int kill_id : DROPLIST.keySet()) {
+            addKillId(kill_id);
+        }
 
         for (Drop drop : DROPLIST.values()) {
             for (int item_id : drop.itemList) {

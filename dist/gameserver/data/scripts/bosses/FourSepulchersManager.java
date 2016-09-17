@@ -122,7 +122,9 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
     }
 
     private static void cleanUp() {
-        getPlayersInside().forEach(Player::teleToClosestTown);
+        for (Player player : getPlayersInside()) {
+            player.teleToClosestTown();
+        }
 
         FourSepulchersSpawn.deleteAllMobs();
 
@@ -481,7 +483,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
     }
 
     private static List<Player> getPlayersInside() {
-        List<Player> result = new ArrayList<>();
+        List<Player> result = new ArrayList<Player>();
         for (Zone zone : getZones()) {
             result.addAll(zone.getInsidePlayers());
         }

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- loto -->
+
+<list>
+	<item><ingredient id="24172" count="500"/><production id="24020" count="3"/></item>
+	<item><ingredient id="4357" count="30"/><production id="22341" count="5"/></item>
+	<item><ingredient id="4356" count="60"/><production id="22342" count="5"/></item>
+</list>

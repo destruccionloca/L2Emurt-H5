@@ -413,7 +413,7 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler {
     }
 
     private static List<Player> getSellersList(int townId, int type, String search, boolean byItem) {
-        List<Player> list = new ArrayList<>();
+        List<Player> list = new ArrayList<Player>();
         int town[] = _towns[townId];
         int rx = town[1];
         int ry = town[2];
@@ -439,7 +439,7 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler {
         }
 
         if (!search.isEmpty() && !list.isEmpty()) {
-            List<Player> s_list = new ArrayList<>();
+            List<Player> s_list = new ArrayList<Player>();
             for (Player seller : list) {
                 List<TradeItem> tl = seller.getTradeList();
                 List<ManufactureItem> cl = seller.getCreateList();
@@ -481,7 +481,7 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler {
         if (!list.isEmpty()) {
             Player[] players = new Player[list.size()];
             list.toArray(players);
-            Arrays.sort(players, new PlayersComparator<>());
+            Arrays.sort(players, new PlayersComparator<Player>());
             list.clear();
             list.addAll(Arrays.asList(players));
         }

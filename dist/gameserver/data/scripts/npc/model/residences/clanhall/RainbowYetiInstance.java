@@ -92,7 +92,7 @@ public class RainbowYetiInstance extends NpcInstance {
         WORLD_LIST[6] = new Word("RAINBOW", new int[]{ItemR, 1}, new int[]{ItemA, 1}, new int[]{ItemI, 1}, new int[]{ItemN, 1}, new int[]{ItemB, 1}, new int[]{ItemO, 1}, new int[]{ItemW, 1});
         WORLD_LIST[7] = new Word("SPRING", new int[]{ItemS, 1}, new int[]{ItemP, 1}, new int[]{ItemR, 1}, new int[]{ItemI, 1}, new int[]{ItemN, 1}, new int[]{ItemG, 1});
     }
-    private List<GameObject> _mobs = new ArrayList<>();
+    private List<GameObject> _mobs = new ArrayList<GameObject>();
     private int _generated = -1;
     private Future<?> _task = null;
 
@@ -129,7 +129,9 @@ public class RainbowYetiInstance extends NpcInstance {
             _task = null;
         }
 
-        _mobs.forEach(GameObject::deleteMe);
+        for (GameObject object : _mobs) {
+            object.deleteMe();
+        }
 
         _mobs.clear();
     }

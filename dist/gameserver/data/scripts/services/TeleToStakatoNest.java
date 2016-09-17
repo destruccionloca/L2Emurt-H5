@@ -48,9 +48,11 @@ public class TeleToStakatoNest extends Functions {
         if (party == null) {
             player.teleToLocation(loc);
         } else {
-            party.getPartyMembers().stream().filter(member -> member != null && member.isInRange(player, 1000)).forEach(member -> {
-                member.teleToLocation(loc);
-            });
+            for (Player member : party.getPartyMembers()) {
+                if (member != null && member.isInRange(player, 1000)) {
+                    member.teleToLocation(loc);
+                }
+            }
         }
     }
 }

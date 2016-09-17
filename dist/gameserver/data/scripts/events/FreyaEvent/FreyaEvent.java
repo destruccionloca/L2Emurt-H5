@@ -67,7 +67,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
     private static final String _msgStarted = "scripts.events.FreyaEvent.AnnounceEventStarted";
     private static final String _msgEnded = "scripts.events.FreyaEvent.AnnounceEventStoped";
     private static final Logger _log = LoggerFactory.getLogger(FreyaEvent.class);
-    private static List<SimpleSpawner> _spawns = new ArrayList<>();
+    private static List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
     private static boolean _active = false;
 
     @Override

@@ -130,7 +130,7 @@ public class l2day extends LettersCollection {
         // дальше трогать не рекомендуется
         final int DROP_MULT = 3; // Множитель шанса дропа
         // Балансируем дроплист на базе используемых слов
-        Map<Integer, Integer> temp = new HashMap<>();
+        Map<Integer, Integer> temp = new HashMap<Integer, Integer>();
         for (Integer[][] ii : _words.values()) {
             for (Integer[] i : ii) {
                 Integer curr = temp.get(i[0]);

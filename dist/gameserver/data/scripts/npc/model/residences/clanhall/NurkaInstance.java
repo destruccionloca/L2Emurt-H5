@@ -53,7 +53,7 @@ public class NurkaInstance extends SiegeGuardInstance {
     public Clan getMostDamagedClan() {
         Player temp = null;
 
-        Map<Player, Integer> damageMap = new HashMap<>();
+        Map<Player, Integer> damageMap = new HashMap<Player, Integer>();
 
         for (AggroList.HateInfo info : getAggroList().getPlayableMap().values()) {
             Playable killer = (Playable) info.attacker;

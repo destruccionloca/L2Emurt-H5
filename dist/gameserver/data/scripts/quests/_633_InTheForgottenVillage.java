@@ -17,8 +17,8 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile {
     private static int RIB_BONE = 7544;
     private static int Z_LIVER = 7545;
     // Mobid : DROP CHANCES
-    private static Map<Integer, Double> DAMOBS = new HashMap<>();
-    private static Map<Integer, Double> UNDEADS = new HashMap<>();
+    private static Map<Integer, Double> DAMOBS = new HashMap<Integer, Double>();
+    private static Map<Integer, Double> UNDEADS = new HashMap<Integer, Double>();
 
     @Override
     public void onLoad() {
@@ -66,9 +66,13 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile {
         addStartNpc(MINA);
         addQuestItem(RIB_BONE);
 
-        UNDEADS.keySet().forEach(this::addKillId);
+        for (int i : UNDEADS.keySet()) {
+            addKillId(i);
+        }
 
-        DAMOBS.keySet().forEach(this::addKillId);
+        for (int i : DAMOBS.keySet()) {
+            addKillId(i);
+        }
     }
 
     @Override

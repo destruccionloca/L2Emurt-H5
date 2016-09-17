@@ -4,7 +4,7 @@
 	<instance id="136" name="Final Emperial Tomb" nameRu="Final Emperial Tomb" maxChannels="5" collapseIfEmpty="10" timelimit="120" dispelBuffs="false">
 		<collapse on-party-dismiss="true" timer="60"/>
 		<level min="80" max="85"/>
-		<party min="36" max="45"/>
+		<party min="4" max="45"/>
 		<return loc="181384 -80840 -2757"/>
 		<teleport loc="-88015 -141153 -9168"/>
 		<remove itemId="0" count="0" necessary="false"/>

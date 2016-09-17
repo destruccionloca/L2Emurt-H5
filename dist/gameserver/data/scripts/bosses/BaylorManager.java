@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-import java.util.stream.Collectors;
 
 import l2p.commons.threading.RunnableImpl;
 import l2p.commons.util.Rnd;
@@ -154,7 +153,8 @@ public class BaylorManager extends Functions implements ScriptFile {
                     player.broadcastPacket(new FlyToLocation(player, flyLoc, FlyType.THROW_HORIZONTAL));
                 }
             }
-            for (NpcInstance npc : _crystaline) {
+            for (int i = 0; i < _crystaline.length; i++) {
+                NpcInstance npc = _crystaline[i];
                 if (npc != null) {
                     npc.reduceCurrentHp(npc.getMaxHp() + 1, npc, null, true, true, false, false, false, false, false);
                 }
@@ -250,7 +250,13 @@ public class BaylorManager extends Functions implements ScriptFile {
             pc.teleToLocation(153569 + Rnd.get(-80, 80), 142075 + Rnd.get(-80, 80), -12732);
             pc.block();
         } else {
-            List<Player> members = pc.getParty().getPartyMembers().stream().filter(mem -> !mem.isDead() && mem.isInRange(pc, 1500)).collect(Collectors.toList()); // list of member of teleport candidate.
+            List<Player> members = new ArrayList<Player>(); // list of member of teleport candidate.
+            for (Player mem : pc.getParty().getPartyMembers()) // teleporting it within alive and the range of recognition of the leader of the party.
+            {
+                if (!mem.isDead() && mem.isInRange(pc, 1500)) {
+                    members.add(mem);
+                }
+            }
             for (Player mem : members) {
                 mem.teleToLocation(153569 + Rnd.get(-80, 80), 142075 + Rnd.get(-80, 80), -12732);
                 mem.block();
@@ -260,7 +266,10 @@ public class BaylorManager extends Functions implements ScriptFile {
     }
 
     private static List<Player> getPlayersInside() {
-        List<Player> result = getZone().getInsidePlayers().stream().collect(Collectors.toList());
+        List<Player> result = new ArrayList<Player>();
+        for (Player player : getZone().getInsidePlayers()) {
+            result.add(player);
+        }
         return result;
     }
 

@@ -21,7 +21,7 @@ public class EpicBossState {
 
     private static final Logger _log = LoggerFactory.getLogger(EpicBossState.class);
 
-    public enum State {
+    public static enum State {
 
         NOTSPAWN,
         ALIVE,
@@ -29,7 +29,7 @@ public class EpicBossState {
         INTERVAL
     }
 
-    public enum NestState {
+    public static enum NestState {
 
         ALLOW,
         LIMIT_EXCEEDED,

@@ -534,7 +534,7 @@
     <set name="crystal_type" value="NONE"/>
     <set name="type" value="OTHER"/>
   </etcitem>
-	<armor id="22256" name="Chic Silver Chapeau">
+  <armor id="22256" name="Chic Silver Chapeau">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
 		<set name="type" value="NONE"/>

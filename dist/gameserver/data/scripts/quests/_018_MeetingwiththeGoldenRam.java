@@ -36,24 +36,20 @@ public class _018_MeetingwiththeGoldenRam extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "warehouse_chief_donal_q0018_0104.htm":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "freighter_daisy_q0018_0201.htm":
-                st.setCond(2);
-                st.giveItems(SUPPLY_BOX, 1);
-                st.playSound(SOUND_ACCEPT);
-                break;
-            case "supplier_abercrombie_q0018_0301.htm":
-                st.takeItems(SUPPLY_BOX, -1);
-                st.addExpAndSp(126668, 11731);
-                st.giveItems(ADENA_ID, 40000);
-                st.playSound(SOUND_FINISH);
-                st.exitCurrentQuest(false);
-                break;
+        if (event.equals("warehouse_chief_donal_q0018_0104.htm")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("freighter_daisy_q0018_0201.htm")) {
+            st.setCond(2);
+            st.giveItems(SUPPLY_BOX, 1);
+            st.playSound(SOUND_ACCEPT);
+        } else if (event.equals("supplier_abercrombie_q0018_0301.htm")) {
+            st.takeItems(SUPPLY_BOX, -1);
+            st.addExpAndSp(126668, 11731);
+            st.giveItems(ADENA_ID, 40000);
+            st.playSound(SOUND_FINISH);
+            st.exitCurrentQuest(false);
         }
         return htmltext;
     }

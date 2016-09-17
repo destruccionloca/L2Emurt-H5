@@ -68,7 +68,7 @@ public class _999_T1Tutorial extends Quest implements ScriptFile {
             this.item = item;
         }
     }
-    private static Map<String, Event> events = new HashMap<>();
+    private static Map<String, Event> events = new HashMap<String, Event>();
 
     static {
         events.put("32133_02", new Event("32133-03.htm", -119692, 44504, 380, DIPLOMA, 0x7b, SOULSHOT_NOVICE, 200, 0x7c, SOULSHOT_NOVICE, 200));
@@ -85,7 +85,7 @@ public class _999_T1Tutorial extends Quest implements ScriptFile {
         events.put("30573_02", new Event("30573-03.htm", 0, 0, 0, VOUCHER_OF_FLAME, 0x31, SPIRITSHOT_NOVICE, 100, 0x2c, SOULSHOT_NOVICE, 200));
         events.put("30573_04", new Event("30573-04.htm", -45067, -113549, -235, 0, 0x31, 0, 0, 0x2c, 0, 0));
     }
-    private static Map<Integer, Talk> talks = new HashMap<>();
+    private static Map<Integer, Talk> talks = new HashMap<Integer, Talk>();
 
     static {
         talks.put(30017, new Talk(0, new String[]{

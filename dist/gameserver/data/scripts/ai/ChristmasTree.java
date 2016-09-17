@@ -33,9 +33,11 @@ public class ChristmasTree extends DefaultAI {
                 }
 
                 int skillId = 2139;
-                World.getAroundPlayers(actor, 150, 100).stream().filter(player -> player != null && !player.isInZonePeace() && player.getEffectList().getEffectsBySkillId(skillId) == null).forEach(player -> {
-                    actor.doCast(SkillTable.getInstance().getInfo(skillId, 1), player, true);
-                });
+                for (Player player : World.getAroundPlayers(actor, 150, 100)) {
+                    if (player != null && !player.isInZonePeace() && player.getEffectList().getEffectsBySkillId(skillId) == null) {
+                        actor.doCast(SkillTable.getInstance().getInfo(skillId, 1), player, true);
+                    }
+                }
 
                 if (Rnd.chance(50)) {
                     actor.broadcastPacketToOthers(new L2GameServerPacket[]{new MagicSkillUse(actor, actor, ((Integer) SOUNDS.select()).intValue(), 1, 500, 0L)});
@@ -58,10 +60,10 @@ public class ChristmasTree extends DefaultAI {
     }
 
     static {
-        SOUNDS.add(2140, 20);
-        SOUNDS.add(2142, 20);
-        SOUNDS.add(2145, 20);
-        SOUNDS.add(2147, 20);
-        SOUNDS.add(2149, 20);
+        SOUNDS.add(Integer.valueOf(2140), 20);
+        SOUNDS.add(Integer.valueOf(2142), 20);
+        SOUNDS.add(Integer.valueOf(2145), 20);
+        SOUNDS.add(Integer.valueOf(2147), 20);
+        SOUNDS.add(Integer.valueOf(2149), 20);
     }
 }

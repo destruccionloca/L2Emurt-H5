@@ -49,13 +49,13 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile {
     private final static int ANTIDOTE = 1831;
     private final static int HEALING_POTION = 1061;
     //ARK: [key, summon, no-key text, openning-with-key text, already-openned text, content item]
-    private final static Map<Integer, Integer[]> ARKS = new HashMap<>();
-    private final static Map<Integer, String[]> ARKS_TEXT = new HashMap<>();
+    private final static Map<Integer, Integer[]> ARKS = new HashMap<Integer, Integer[]>();
+    private final static Map<Integer, String[]> ARKS_TEXT = new HashMap<Integer, String[]>();
     //npc: letter to take, item to check for, 1st time htm, return htm, completed part htm, [x,y,z of chest]
-    private final static Map<Integer, Integer[]> ARK_OWNERS = new HashMap<>();
-    private final static Map<Integer, String[]> ARK_OWNERS_TEXT = new HashMap<>();
+    private final static Map<Integer, Integer[]> ARK_OWNERS = new HashMap<Integer, Integer[]>();
+    private final static Map<Integer, String[]> ARK_OWNERS_TEXT = new HashMap<Integer, String[]>();
     //mob: cond, giveItem, amount, chance%, takeItem (assumed to take only 1 of it)
-    private final static Map<Integer, Integer[]> DROPS = new HashMap<>();
+    private final static Map<Integer, Integer[]> DROPS = new HashMap<Integer, Integer[]>();
 
     static {
         ARKS.put(HOLY_ARK_OF_SECRECY_1, new Integer[]{
@@ -211,11 +211,17 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile {
 
         addTalkId(ARK_GUARDIANS_CORPSE);
 
-        ARK_OWNERS.keySet().forEach(this::addTalkId);
+        for (int i : ARK_OWNERS.keySet()) {
+            addTalkId(i);
+        }
 
-        ARKS.keySet().forEach(this::addTalkId);
+        for (int i : ARKS.keySet()) {
+            addTalkId(i);
+        }
 
-        DROPS.keySet().forEach(this::addKillId);
+        for (int i : DROPS.keySet()) {
+            addKillId(i);
+        }
 
         addQuestItem(new int[]{
             HANELLINS_FIRST_LETTER,
@@ -239,28 +245,22 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "30864_02":
-                st.setCond(2);
-                htmltext = "30864-03.htm";
-                break;
-            case "30864_04a":
-//work alone
-
-                st.setCond(4);
-                st.takeItems(SHELL_OF_MONSTERS, -1);
-                htmltext = "30864-04c.htm";
-                st.set("companions", "0");
-                break;
-            case "30864_04b":
-//work with friends
-
-                st.setCond(3);
-                st.set("companions", "1");
-                st.takeItems(SHELL_OF_MONSTERS, -1);
-                htmltext = "not yet implemented";
-                //todo: give flowers & handle the multiperson quest...
-                break;
+        if (event.equals("30864_02")) {
+            st.setCond(2);
+            htmltext = "30864-03.htm";
+        } else if (event.equals("30864_04a"))//work alone
+        {
+            st.setCond(4);
+            st.takeItems(SHELL_OF_MONSTERS, -1);
+            htmltext = "30864-04c.htm";
+            st.set("companions", "0");
+        } else if (event.equals("30864_04b"))//work with friends
+        {
+            st.setCond(3);
+            st.set("companions", "1");
+            st.takeItems(SHELL_OF_MONSTERS, -1);
+            htmltext = "not yet implemented";
+            //todo: give flowers & handle the multiperson quest...
         }
         if (event.equals("30864-09a.htm")) {
             st.setCond(29);

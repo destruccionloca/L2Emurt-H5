@@ -67,7 +67,7 @@ public class _662_AGameOfCards extends Quest implements ScriptFile {
     private final static int ZIGGOS_GEMSTONE = 8868;
     // Chances
     private final static int drop_chance = 35;
-    private final static Map<Integer, CardGame> Games = new ConcurrentHashMap<>();
+    private final static Map<Integer, CardGame> Games = new ConcurrentHashMap<Integer, CardGame>();
 
     public _662_AGameOfCards() {
         super(true);
@@ -208,7 +208,7 @@ public class _662_AGameOfCards extends Quest implements ScriptFile {
 
         private String finish(QuestState st) {
             String result = html_header + table_header;
-            Map<String, Integer> matches = new HashMap<>();
+            Map<String, Integer> matches = new HashMap<String, Integer>();
             for (String card : cards) {
                 int count = matches.containsKey(card) ? matches.remove(card) : 0;
                 count++;

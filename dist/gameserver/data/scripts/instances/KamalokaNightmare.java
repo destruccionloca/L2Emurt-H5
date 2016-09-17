@@ -3,7 +3,6 @@ package instances;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
-import java.util.stream.Collectors;
 
 import l2p.commons.threading.RunnableImpl;
 import l2p.gameserver.ThreadPoolManager;
@@ -105,15 +104,21 @@ public class KamalokaNightmare extends Reflection {
 
                     KamalokaNightmare.this.getSpawns().clear();
 
-                    List<GameObject> delete = new ArrayList<>();
+                    List<GameObject> delete = new ArrayList<GameObject>();
                     lock.lock();
                     try {
-                        delete.addAll(_objects.stream().filter(o -> !o.isPlayable()).collect(Collectors.toList()));
+                        for (GameObject o : _objects) {
+                            if (!o.isPlayable()) {
+                                delete.add(o);
+                            }
+                        }
                     } finally {
                         lock.unlock();
                     }
 
-                    delete.forEach(GameObject::deleteMe);
+                    for (GameObject o : delete) {
+                        o.deleteMe();
+                    }
 
                     Player p = (Player) GameObjectsStorage.findObject(getPlayerId());
                     if (p != null) {

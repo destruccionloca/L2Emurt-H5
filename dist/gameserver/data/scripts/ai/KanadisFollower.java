@@ -26,9 +26,11 @@ public class KanadisFollower extends Fighter {
         NpcInstance actor = getActor();
         List<NpcInstance> around = actor.getAroundNpc(7000, 300);
         if (around != null && !around.isEmpty()) {
-            around.stream().filter(npc -> npc.getNpcId() == 36562).forEach(npc -> {
-                actor.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, npc, 500);
-            });
+            for (NpcInstance npc : around) {
+                if (npc.getNpcId() == 36562) {
+                    actor.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, npc, 500);
+                }
+            }
         }
     }
 

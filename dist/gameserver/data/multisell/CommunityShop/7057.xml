@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--morai Armor mw-->
+
+
+<list>
+     <item><ingredient id="4356" count="30"/><production id="16295" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16289" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16298" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16301" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16296" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16290" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16299" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16302" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16291" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16297" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16300" count="1"/></item>
+     <item><ingredient id="4356" count="30"/><production id="16303" count="1"/></item>
+	  <item><ingredient id="4356" count="30"/><production id="16305" count="1"/></item>
+	  <item><ingredient id="4356" count="30"/><production id="16304" count="1"/></item>
+ </list>

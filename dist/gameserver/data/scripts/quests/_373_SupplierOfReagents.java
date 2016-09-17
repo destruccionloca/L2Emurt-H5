@@ -684,8 +684,8 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile {
         super(true);
         addStartNpc(WESLEY);
         addTalkId(URN);
-        for (int[] aDROPLIST_COND : DROPLIST_COND) {
-            addKillId(aDROPLIST_COND[2]);
+        for (int i = 0; i < DROPLIST_COND.length; i++) {
+            addKillId(DROPLIST_COND[i][2]);
         }
     }
 
@@ -701,9 +701,9 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile {
             String temp = st.get("temp");
             String r_ingr = "";
             if (ingr != 0) {
-                for (Object[] ITEM : ITEMS) {
-                    if ((Integer) ITEM[0] == ingr) {
-                        r_ingr = ITEM[2] + "x" + st.get("i_qty");
+                for (int i = 0; i < ITEMS.length; i++) {
+                    if ((Integer) ITEMS[i][0] == ingr) {
+                        r_ingr = ITEMS[i][2] + "x" + st.get("i_qty");
                     }
                 }
             } else {
@@ -711,9 +711,9 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile {
             }
             String r_cata = "";
             if (cata != 0) {
-                for (Object[] ITEM : ITEMS) {
-                    if ((Integer) ITEM[0] == cata) {
-                        r_cata = ITEM[2] + "x" + st.get("c_qty");
+                for (int i = 0; i < ITEMS.length; i++) {
+                    if ((Integer) ITEMS[i][0] == cata) {
+                        r_cata = ITEMS[i][2] + "x" + st.get("c_qty");
                     }
                 }
             } else {
@@ -739,12 +739,12 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile {
             html = "<html><body>Insert:<table border=0>";
             int amt = 0;
             int item = 0;
-            for (Object[] ITEM : ITEMS) {
-                item = (Integer) ITEM[0];
+            for (int i = 0; i < ITEMS.length; i++) {
+                item = (Integer) ITEMS[i][0];
                 if (item >= 6011 && item <= 6031 || item >= 6320 && item <= 6321) {
                     if (st.getQuestItemsCount(item) > 0) {
                         amt += 1;
-                        html += "<tr><td height=45><img src=icon." + ITEM[1] + " height=32 width=32></td><td width=180>" + ITEM[2] + "</td><td><button value=X1 action=\"bypass -h Quest _373_SupplierOfReagents x_1_" + page[1] + "_" + str(item) + "\" width=40 height=15 fore=sek.cbui92><button value=X10 action=\"bypass -h Quest _373_SupplierOfReagents x_2_" + page[1] + "_" + str(item) + "\" width=40 height=15 fore=sek.cbui92></td></tr>";
+                        html += "<tr><td height=45><img src=icon." + ITEMS[i][1] + " height=32 width=32></td><td width=180>" + ITEMS[i][2] + "</td><td><button value=X1 action=\"bypass -h Quest _373_SupplierOfReagents x_1_" + page[1] + "_" + str(item) + "\" width=40 height=15 fore=sek.cbui92><button value=X10 action=\"bypass -h Quest _373_SupplierOfReagents x_2_" + page[1] + "_" + str(item) + "\" width=40 height=15 fore=sek.cbui92></td></tr>";
                     }
                 }
             }
@@ -868,9 +868,9 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile {
                     st.set("c_qty", "0");
                     st.set("temp", "0");
                     int item = 0;
-                    for (int[] FORMULA : FORMULAS) {
-                        if (ingredient == FORMULA[1] && catalyst == FORMULA[3] && iq == FORMULA[2] && cq == FORMULA[4] || ingredient == FORMULA[3] && catalyst == FORMULA[1] && iq == FORMULA[4] && cq == FORMULA[2]) {
-                            item = FORMULA[0];
+                    for (int i = 0; i < FORMULAS.length; i++) {
+                        if (ingredient == FORMULAS[i][1] && catalyst == FORMULAS[i][3] && iq == FORMULAS[i][2] && cq == FORMULAS[i][4] || ingredient == FORMULAS[i][3] && catalyst == FORMULAS[i][1] && iq == FORMULAS[i][4] && cq == FORMULAS[i][2]) {
+                            item = FORMULAS[i][0];
                             break;
                         }
                     }
@@ -891,10 +891,10 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile {
                     if (item > 0) {
                         int chance = 0;
                         int qty = 0;
-                        for (int[] aTEMPERATURE : TEMPERATURE) {
-                            if (aTEMPERATURE[0] == temp) {
-                                chance = aTEMPERATURE[1];
-                                qty = aTEMPERATURE[2];
+                        for (int i = 0; i < TEMPERATURE.length; i++) {
+                            if (TEMPERATURE[i][0] == temp) {
+                                chance = TEMPERATURE[i][1];
+                                qty = TEMPERATURE[i][2];
                             }
                         }
                         if (item == MIMIRS_ELIXIR) {

@@ -36,9 +36,11 @@ public class DeluLizardmanSpecialCommander extends Fighter {
 
             List<NpcInstance> around = actor.getAroundNpc(1000, 300);
             if (around != null && !around.isEmpty()) {
-                around.stream().filter(npc -> npc.isMonster()).forEach(npc -> {
-                    npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
-                });
+                for (NpcInstance npc : around) {
+                    if (npc.isMonster()) {
+                        npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
+                    }
+                }
             }
         }
         super.onEvtAttacked(attacker, damage);

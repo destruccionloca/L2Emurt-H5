@@ -3,8 +3,8 @@
 
 <list>
   <weapon id="16000" name="Jade Claw {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -38,8 +38,8 @@
     </for>
   </weapon>
   <weapon id="16001" name="Demitelum {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -73,8 +73,8 @@
     </for>
   </weapon>
   <weapon id="16002" name="Demitelum {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -108,8 +108,8 @@
     </for>
   </weapon>
   <weapon id="16003" name="Demitelum {PvP}" add_name="Guidance">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -144,8 +144,8 @@
   </weapon>
   <weapon id="16004" name="Sacredium {PvP}" add_name="Mana Up">
     <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -179,8 +179,8 @@
   </weapon>
   <weapon id="16005" name="Sacredium {PvP}" add_name="Acumen">
     <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -214,8 +214,8 @@
   </weapon>
   <weapon id="16006" name="Sacredium {PvP}" add_name="MP Regeneration">
     <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -249,8 +249,8 @@
   </weapon>
   <weapon id="16007" name="Cyclic Cane {PvP}" add_name="Magic Hold">
     <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -286,8 +286,8 @@
   </weapon>
   <weapon id="16008" name="Cyclic Cane {PvP}" add_name="Empower">
     <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -321,8 +321,8 @@
   </weapon>
   <weapon id="16009" name="Cyclic Cane {PvP}" add_name="MP Regeneration">
     <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -356,8 +356,8 @@
   </weapon>
   <weapon id="16010" name="Archangel Sword {PvP}" add_name="Magic Hold">
     <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -392,8 +392,8 @@
   </weapon>
   <weapon id="16011" name="Archangel Sword {PvP}" add_name="Mana Up">
     <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -426,8 +426,8 @@
   </weapon>
   <weapon id="16012" name="Archangel Sword {PvP}" add_name="Acumen">
     <set name="is_magic_weapon" value="true"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -460,8 +460,8 @@
   </weapon>
   <weapon id="16013" name="Recurve Thorne Bow {PvP}" add_name="Crt. Slow">
     <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -498,8 +498,8 @@
   </weapon>
   <weapon id="16014" name="Recurve Thorne Bow {PvP}" add_name="Cheap Shot">
     <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -534,8 +534,8 @@
   </weapon>
   <weapon id="16015" name="Recurve Thorne Bow {PvP}" add_name="Focus">
     <set name="atk_reuse" value="1500"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -569,8 +569,8 @@
     </for>
   </weapon>
   <weapon id="16016" name="Heavenstare Rapier {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -605,8 +605,8 @@
     </for>
   </weapon>
   <weapon id="16017" name="Heavenstare Rapier {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -641,8 +641,8 @@
     </for>
   </weapon>
   <weapon id="16018" name="Heavenstare Rapier {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -677,8 +677,8 @@
     </for>
   </weapon>
   <weapon id="16019" name="Pyseal Blade {PvP}" add_name="Focus">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -711,8 +711,8 @@
     </for>
   </weapon>
   <weapon id="16020" name="Pyseal Blade {PvP}" add_name="Haste">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -745,8 +745,8 @@
     </for>
   </weapon>
   <weapon id="16021" name="Pyseal Blade {PvP}" add_name="Health">
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -780,8 +780,8 @@
   </weapon>
   <weapon id="16022" name="Thorne Crossbow {PvP}" add_name="Crt. Slow">
     <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -817,8 +817,8 @@
   </weapon>
   <weapon id="16023" name="Thorne Crossbow {PvP}" add_name="Cheap Shot">
     <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -852,8 +852,8 @@
   </weapon>
   <weapon id="16024" name="Thorne Crossbow {PvP}" add_name="Focus">
     <set name="atk_reuse" value="400"/>
-    <set name="attributable" value="false"/>
-    <set name="augmentable" value="false"/>
+    <set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>

@@ -41,28 +41,24 @@ public class _173_ToTheIsleOfSouls extends Quest implements ScriptFile {
     @Override
     public String onEvent(String event, QuestState st, NpcInstance npc) {
         String htmltext = event;
-        switch (event) {
-            case "1":
-                st.setCond(1);
-                st.setState(STARTED);
-                st.playSound(SOUND_ACCEPT);
-                st.giveItems(GALLADUCCIS_ORDER_DOCUMENT_ID_1, 1);
-                htmltext = "30097-03.htm";
-                break;
-            case "2":
-                st.setCond(2);
-                st.takeItems(GALLADUCCIS_ORDER_DOCUMENT_ID_1, 1);
-                st.giveItems(MAGIC_SWORD_HILT_ID, 1);
-                htmltext = "30094-02.htm";
-                break;
-            case "3":
-                st.unset("cond");
-                st.takeItems(MAGIC_SWORD_HILT_ID, 1);
-                st.giveItems(SCROLL_OF_ESCAPE_KAMAEL_VILLAGE, 1);
-                htmltext = "30097-12.htm";
-                st.playSound(SOUND_FINISH);
-                st.exitCurrentQuest(false);
-                break;
+        if (event.equals("1")) {
+            st.setCond(1);
+            st.setState(STARTED);
+            st.playSound(SOUND_ACCEPT);
+            st.giveItems(GALLADUCCIS_ORDER_DOCUMENT_ID_1, 1);
+            htmltext = "30097-03.htm";
+        } else if (event.equals("2")) {
+            st.setCond(2);
+            st.takeItems(GALLADUCCIS_ORDER_DOCUMENT_ID_1, 1);
+            st.giveItems(MAGIC_SWORD_HILT_ID, 1);
+            htmltext = "30094-02.htm";
+        } else if (event.equals("3")) {
+            st.unset("cond");
+            st.takeItems(MAGIC_SWORD_HILT_ID, 1);
+            st.giveItems(SCROLL_OF_ESCAPE_KAMAEL_VILLAGE, 1);
+            htmltext = "30097-12.htm";
+            st.playSound(SOUND_FINISH);
+            st.exitCurrentQuest(false);
         }
         return htmltext;
     }

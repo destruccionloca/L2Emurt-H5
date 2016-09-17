@@ -23,7 +23,7 @@ public class ScriptConfig extends Functions implements ScriptFile  {
 
     @Override
     public void onLoad() {
-        properties = new ConcurrentHashMap<>();
+        properties = new ConcurrentHashMap<String, String>();
         LoadConfig();
         _log.info("Loaded Service: ScripsConfig");
     }
@@ -59,6 +59,7 @@ public class ScriptConfig extends Functions implements ScriptFile  {
                     Properties p = new Properties();
                     p.load(is);
                     loadProperties(p);
+                } catch (FileNotFoundException e) {
                 } catch (IOException e) {
                 }
             }

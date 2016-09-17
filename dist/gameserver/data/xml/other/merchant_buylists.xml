@@ -1,5 +1,69 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
+	<!-- Primerochnaya -->
+	<tradelist npc="-1" shop="10050">
+		<item id="24133" name="Costumes" />
+		<item id="25081" name="Costumes" />
+		<item id="25082" name="Costumes" />
+		<item id="25084" name="Costumes" />
+		<item id="25086" name="Costumes" />
+		<item id="24134" name="Costumes" />
+		<item id="24136" name="Costumes" />
+		<item id="24180" name="Costumes" />		
+		<item id="24181" name="Costumes" />
+		<item id="24182" name="Costumes" />
+		<item id="24183" name="Costumes" />
+		<item id="24184" name="Costumes" />
+		<item id="24185" name="Costumes" />
+		<item id="24186" name="Costumes" />
+		<item id="24187" name="Costumes" />
+		<item id="24188" name="Costumes" />
+		<item id="24189" name="Costumes" />
+		<item id="24190" name="Costumes" />
+		<item id="24191" name="Costumes" />		
+		<item id="24192" name="Costumes" />
+		<item id="24193" name="Costumes" />
+		<item id="24194" name="Costumes" />
+		<item id="24195" name="Costumes" />
+		<item id="24196" name="Costumes" />
+		<item id="24197" name="Costumes" />
+		<item id="24198" name="Costumes" />
+		<item id="24199" name="Costumes" />
+		<item id="24200" name="Costumes" />
+		<item id="24201" name="Costumes" />
+		<item id="24202" name="Costumes" />
+		<item id="24203" name="Costumes" />
+		<item id="24204" name="Costumes" />
+		<item id="24205" name="Costumes" />
+		<item id="24206" name="Costumes" />
+		<item id="24207" name="Costumes" />
+		<item id="24208" name="Costumes" />
+		<item id="25000" name="Cloack"/>
+		<item id="25001" name="Cloack"/>
+		<item id="25002" name="Cloack"/>
+		<item id="25024" name="Cloack"/>
+		<item id="25025" name="Cloack"/>
+		<item id="25026" name="Cloack"/>
+		<item id="25027" name="Cloack"/>
+		<item id="25028" name="Cloack"/>
+		<item id="25029" name="Cloack"/>
+		<item id="25030" name="Cloack"/>
+		<item id="25031" name="Cloack"/>
+		<item id="25032" name="Cloack"/>
+		<item id="25033" name="Cloack"/>
+		<item id="25034" name="Cloack"/>
+		<item id="25035" name="Cloack"/>
+		<item id="25036" name="Cloack"/>
+		<item id="25037" name="Cloack"/>
+		<item id="25038" name="Cloack"/>
+		<item id="25039" name="Cloack"/>
+		<item id="25040" name="Cloack"/>
+		<item id="25041" name="Cloack"/>
+		<item id="25042" name="Cloack"/>
+		<item id="25043" name="Cloack"/>
+		<item id="25045" name="Cloack"/>
+		<item id="25046" name="Cloack"/>
+	</tradelist>
 	<!-- Lector, Talking Island, Weapons, Warrior -->
 	<tradelist npc="30001" shop="1" markup="15">
 		<item id="1" name="Short Sword" />

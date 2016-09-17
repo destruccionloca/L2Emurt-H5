@@ -25,7 +25,7 @@ public class TheFallHarvest extends Functions implements ScriptFile, OnDeathList
 
     private static final Logger _log = LoggerFactory.getLogger(TheFallHarvest.class);
     private static int EVENT_MANAGER_ID = 31255;
-    private static List<SimpleSpawner> _spawns = new ArrayList<>();
+    private static List<SimpleSpawner> _spawns = new ArrayList<SimpleSpawner>();
     private static File multiSellFile = new File(Config.DATAPACK_ROOT, "data/xml/scripts/TheFallHarvest/31255.xml");
 
     private static boolean _active = false;

@@ -130,17 +130,13 @@ public class BBSBufferBBSManager extends Functions implements ScriptFile, ICommu
             String[] param = command.split(":", 2)[1].trim().split(",", 2); // get max 2 parameters
 
             try {
-                switch (use) {
-                    case "Buff":
-                        BB.useBuff(Integer.parseInt(param[0].trim()), true);
-                        break;
-                    case "Scheme":
-                        BB.useBuffScheme(Integer.parseInt(param[0].trim()), true);
-                        break;
-                    case "SchemeOn":
-                        BB.getFilter().setShowBuffsForPlayer(Integer.parseInt(param[1].trim()));
-                        BB.useBuffScheme(Integer.parseInt(param[0].trim()), true);
-                        break;
+                if (use.equals("Buff")) {
+                    BB.useBuff(Integer.parseInt(param[0].trim()), true);
+                } else if (use.equals("Scheme")) {
+                    BB.useBuffScheme(Integer.parseInt(param[0].trim()), true);
+                } else if (use.equals("SchemeOn")) {
+                    BB.getFilter().setShowBuffsForPlayer(Integer.parseInt(param[1].trim()));
+                    BB.useBuffScheme(Integer.parseInt(param[0].trim()), true);
                 }
 
             } catch (Exception e) {
@@ -157,49 +153,37 @@ public class BBSBufferBBSManager extends Functions implements ScriptFile, ICommu
             }
 
             try {
-                switch (scheme) {
-                    case "Init":
-// initializing scheme creation
+                if (scheme.equals("Init")) // initializing scheme creation
+                {
+                    BB.setTempBuffScheme(new Scheme());
+                    BB.getTempBuffScheme().setDbStatus(DBStatus.INSERTED);
+                    BB.setFilter(new Filter());
 
-                        BB.setTempBuffScheme(new Scheme());
-                        BB.getTempBuffScheme().setDbStatus(DBStatus.INSERTED);
-                        BB.setFilter(new Filter());
-
-                        //BB.getFilter().setShowBuffsForPlayer(Integer.parseInt(param));
-                        BB.setMode(BufferMode.SCHEME_CREATE_NAME);
-                        break;
-                    case "SetName":
-                        BB.getTempBuffScheme().trySetSchemeName(BB, param);
-                        break;
-                    case "AddBuff":
-                        if (BB.getTempBuffScheme().getBuffList().size() < Config.SCHEME_BUFF_LIMIT) {
-                            BB.getTempBuffScheme().addBuff(Integer.parseInt(param));
-                        } else {
-                            BB.getActiveChar().sendMessage("You can't add more buff's");
-                        }
-                        break;
-                    case "RemoveBuff":
-                        BB.getTempBuffScheme().removeBuff(Integer.parseInt(param));
-                        break;
-                    case "Load":
-// load existing scheme to tempBuffScheme
-
-                        BB.loadBuffScheme(Integer.parseInt(param));
-                        BB.setMode(BufferMode.SCHEME_EDIT_BUFF_LIST);
-                        break;
-                    case "Edit":
-// load existing scheme to tempBuffScheme and go to buff list of this scheme.
-
-                        BB.loadBuffScheme(Integer.parseInt(param));
-                        BB.setMode(BufferMode.SCHEME_EDIT_BUFF_LIST);
-                        break;
-                    case "Save":
-                        BB.saveBuffScheme();
-                        break;
-                    case "Remove":
-                        BB.removeBuffScheme(Integer.parseInt(param));
-                        BB.setMode(BufferMode.SHOW_SCHEME_MANAGER_EDIT);
-                        break;
+                    //BB.getFilter().setShowBuffsForPlayer(Integer.parseInt(param));
+                    BB.setMode(BufferMode.SCHEME_CREATE_NAME);
+                } else if (scheme.equals("SetName")) {
+                    BB.getTempBuffScheme().trySetSchemeName(BB, param);
+                } else if (scheme.equals("AddBuff")) {
+                    if (BB.getTempBuffScheme().getBuffList().size() < Config.SCHEME_BUFF_LIMIT) {
+                        BB.getTempBuffScheme().addBuff(Integer.parseInt(param));
+                    } else {
+                        BB.getActiveChar().sendMessage("You can't add more buff's");
+                    }
+                } else if (scheme.equals("RemoveBuff")) {
+                    BB.getTempBuffScheme().removeBuff(Integer.parseInt(param));
+                } else if (scheme.equals("Load")) // load existing scheme to tempBuffScheme
+                {
+                    BB.loadBuffScheme(Integer.parseInt(param));
+                    BB.setMode(BufferMode.SCHEME_EDIT_BUFF_LIST);
+                } else if (scheme.equals("Edit")) // load existing scheme to tempBuffScheme and go to buff list of this scheme.
+                {
+                    BB.loadBuffScheme(Integer.parseInt(param));
+                    BB.setMode(BufferMode.SCHEME_EDIT_BUFF_LIST);
+                } else if (scheme.equals("Save")) {
+                    BB.saveBuffScheme();
+                } else if (scheme.equals("Remove")) {
+                    BB.removeBuffScheme(Integer.parseInt(param));
+                    BB.setMode(BufferMode.SHOW_SCHEME_MANAGER_EDIT);
                 }
 
             } catch (Exception e) {
@@ -210,26 +194,20 @@ public class BBSBufferBBSManager extends Functions implements ScriptFile, ICommu
             String param = command.split(":", 2)[1].trim();
 
             try {
-                switch (filter) {
-                    case "SBForPlayer":
-                        BB.getFilter().setShowBuffsForPlayer(Integer.parseInt(param));
-                        break;
-                    case "SBWithTheSameEffect":
-                        BB.getFilter().setShowBuffsWithTheSameEffect(Integer.parseInt(param));
-                        BB.setPage(1);
-                        break;
-                    case "SBFromGroup":
-                        BB.getFilter().setShowBuffsFromGroup(Integer.parseInt(param));
-                        BB.setPage(1);
-                        break;
-                    case "SBFromGroupForSimpleMode":
-                        BB.getFilter().setShowBuffsFromGroup(Integer.parseInt(param));
-                        BB.setMode(BufferMode.SHOW_SINGLE_BUFF_LIST);
-                        BB.setPage(1);
-                        break;
-                    case "Reset":
-                        BB.setFilter(new Filter());
-                        break;
+                if (filter.equals("SBForPlayer")) {
+                    BB.getFilter().setShowBuffsForPlayer(Integer.parseInt(param));
+                } else if (filter.equals("SBWithTheSameEffect")) {
+                    BB.getFilter().setShowBuffsWithTheSameEffect(Integer.parseInt(param));
+                    BB.setPage(1);
+                } else if (filter.equals("SBFromGroup")) {
+                    BB.getFilter().setShowBuffsFromGroup(Integer.parseInt(param));
+                    BB.setPage(1);
+                } else if (filter.equals("SBFromGroupForSimpleMode")) {
+                    BB.getFilter().setShowBuffsFromGroup(Integer.parseInt(param));
+                    BB.setMode(BufferMode.SHOW_SINGLE_BUFF_LIST);
+                    BB.setPage(1);
+                } else if (filter.equals("Reset")) {
+                    BB.setFilter(new Filter());
                 }
 
             } catch (Exception e) {

@@ -773,6 +773,7 @@
 		<table name="#item">5591 5592</table>
 		<table name="#power">50 200</table>
 		<set name="magicType" val="SPECIAL" />
+		<set name="reuseDelay" val="20000" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="#power" />
 		<set name="magicLevel" val="1" />

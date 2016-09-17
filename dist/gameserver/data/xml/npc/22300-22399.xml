@@ -4830,7 +4830,7 @@
         </rewardlist>
         <rewardlist type="NOT_RATED_NOT_GROUPED">
             <reward item_id="9599" min="3" max="9" chance="67.8600" />
-            <reward item_id="9714" min="1" max="1" chance="50.0000" />
+            <reward item_id="9714" min="1" max="1" chance="100.0000" />
         </rewardlist>
         <attributes>
             <attack attribute="unholy" value="150"/>
@@ -5020,7 +5020,7 @@
             <reward chance="94.6016" item_id="6706" max="1" min="1"/>
         </rewardlist>
         <rewardlist type="NOT_RATED_NOT_GROUPED">
-            <reward item_id="9685" min="1" max="1" chance="20.0000" />
+            <reward item_id="9685" min="1" max="1" chance="100.0000" />
         </rewardlist>
         <attributes>
             <attack attribute="unholy" value="150"/>
@@ -5117,7 +5117,7 @@
             <reward chance="0.6787" item_id="960" max="1" min="1"/>
         </rewardlist>
         <rewardlist type="NOT_RATED_NOT_GROUPED">
-            <reward item_id="9685" min="1" max="1" chance="3.0000" />	<!--Gate Key: Darkness-->
+            <reward item_id="9685" min="1" max="1" chance="100.0000" />	<!--Gate Key: Darkness-->
         </rewardlist>
         <attributes>
             <attack attribute="unholy" value="150"/>
@@ -8280,7 +8280,7 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="4156"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="653"/>
+        <set name="baseMDef" value="353"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1777.4"/>
         <set name="baseMpReg" value="3"/>
@@ -8302,7 +8302,7 @@
         <set name="rewardSp" value="26626"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
+        <set name="type" value="HellboundMonster"/>
         <faction name="castle_clan" range="300"/>
         <equip>
             <rhand item_id="8217"/>
@@ -8371,7 +8371,7 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="4156"/>
         <set name="baseMAtkSpd" value="500"/>
-        <set name="baseMDef" value="653"/>
+        <set name="baseMDef" value="353"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1777.4"/>
         <set name="baseMpReg" value="3"/>
@@ -8393,7 +8393,7 @@
         <set name="rewardSp" value="38241"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
+        <set name="type" value="HellboundMonster"/>
         <ai_params>
             <set name="noRandomWalk" value="true"/>
         </ai_params>

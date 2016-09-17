@@ -2,7 +2,6 @@ package ai.SkyshadowMeadow;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import l2p.commons.util.Rnd;
 import l2p.gameserver.ai.CtrlEvent;
@@ -22,7 +21,7 @@ import l2p.gameserver.serverpackets.components.NpcString;
 public class SelMahumRecruit extends Fighter {
 
     private long _wait_timeout = System.currentTimeMillis() + 180000;
-    private List<NpcInstance> _arm = new ArrayList<>();
+    private List<NpcInstance> _arm = new ArrayList<NpcInstance>();
     private boolean _firstTimeAttacked = true;
     public static final NpcString[] _text = {NpcString.SCHOOL1, NpcString.SCHOOL2};
 
@@ -43,7 +42,11 @@ public class SelMahumRecruit extends Fighter {
         }
 
         if (_arm == null || _arm.isEmpty()) {
-            _arm.addAll(getActor().getAroundNpc(750, 750).stream().filter(npc -> npc != null && (npc.getNpcId() == 22775 || npc.getNpcId() == 22776 || npc.getNpcId() == 22778 || npc.getNpcId() == 22780 || npc.getNpcId() == 22782 || npc.getNpcId() == 22783 || npc.getNpcId() == 22784 || npc.getNpcId() == 22785)).collect(Collectors.toList()));
+            for (NpcInstance npc : getActor().getAroundNpc(750, 750)) {
+                if (npc != null && (npc.getNpcId() == 22775 || npc.getNpcId() == 22776 || npc.getNpcId() == 22778 || npc.getNpcId() == 22780 || npc.getNpcId() == 22782 || npc.getNpcId() == 22783 || npc.getNpcId() == 22784 || npc.getNpcId() == 22785)) {
+                    _arm.add(npc);
+                }
+            }
         }
         return true;
     }

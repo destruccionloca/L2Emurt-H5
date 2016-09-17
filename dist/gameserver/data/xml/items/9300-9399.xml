@@ -2191,7 +2191,7 @@
     <equip>
       <slot id="LEFT_RIGHT_HAND"/>
     </equip>
-	<triggers>
+		<triggers>
 		<trigger id="3574" level="1" type="CRIT" chance="100"/>
 	</triggers>
     <skills>

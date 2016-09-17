@@ -66,9 +66,11 @@ public class StakatoNest extends Fighter {
             _zone_mob_buff_pc_display.setActive(true);
             _zone_pc_buff.setActive(false);
         }
-        World.getAroundPlayers(actor).stream().filter(player -> player != null).forEach(player -> {
-            player.sendPacket(Msg.SHYEED_S_ROAR_FILLED_WITH_WRATH_RINGS_THROUGHOUT_THE_STAKATO_NEST);
-        });
+        for (Player player : World.getAroundPlayers(actor)) {
+            if (player != null) {
+                player.sendPacket(Msg.SHYEED_S_ROAR_FILLED_WITH_WRATH_RINGS_THROUGHOUT_THE_STAKATO_NEST);
+            }
+        }
         super.onEvtSpawn();
     }
 

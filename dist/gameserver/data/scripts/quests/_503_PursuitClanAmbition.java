@@ -675,7 +675,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile {
                     setLeaderVar(st, "ImpGraveKeeper", "2");
                 } else {
                     List<Player> players = World.getAroundPlayers(npc, 900, 200);
-                    if (!players.isEmpty()) {
+                    if (players.size() > 0) {
                         Player player = players.get(Rnd.get(players.size()));
                         if (player != null) {
                             player.teleToLocation(185462, 20342, -3250);

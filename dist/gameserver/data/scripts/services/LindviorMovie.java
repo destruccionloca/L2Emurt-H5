@@ -41,9 +41,11 @@ public class LindviorMovie implements ScriptFile {
             List<Player> insideZoners = _zone.getInsidePlayers();
 
             if (insideZoners != null && !insideZoners.isEmpty()) {
-                insideZoners.stream().filter(player -> !player.isInBoat() && !player.isInFlyingTransform()).forEach(player -> {
-                    player.showQuestMovie(ExStartScenePlayer.SCENE_LINDVIOR);
-                });
+                for (Player player : insideZoners) {
+                    if (!player.isInBoat() && !player.isInFlyingTransform()) {
+                        player.showQuestMovie(ExStartScenePlayer.SCENE_LINDVIOR);
+                    }
+                }
             }
         }
     }

@@ -2,10 +2,16 @@
 <list>
 	<char>
 		<PlayerID set="-1"/>
-		<IsGM set="true"/>
+		<IsGM set="false"/>
 		<CanUseGMCommand set="true"/>
+		<Heal set="true"/>
+		<Res set="true"/>
+		<CanTeleport set="true"/>
+		<CanRename set="true"/>
 		<CanAnnounce set="true"/>
+		<CanBan set="true"/>
 		<CanBanChat set="true"/>
+		<CanUnBanChat set="true"/>
 		<CanKick set="true"/>
 		<GodMode set="true"/>
 		<CanViewChar set="true"/>
@@ -13,10 +19,45 @@
 		<FastUnstuck set="true"/>
 		<ResurectFixed set="true"/>
 		<Door set="true"/>
-		<PeaceAttack set="false"/>
-		<UseTrade set="false"/>
-		<CanAttack set="false"/>
+		<PeaceAttack set="true"/>
+		<UseTrade set="true"/>
+		<CanAttack set="true"/>
 		<CanJoinClan set="false"/>
-		<BlockInventory set="true"/>
+		<BlockInventory set="false"/>
+		<Menu set="true"/>
+		<UseGMShop set="true"/>
+		<CanViewChar set="true"/>
+		<CanEditChar set="true"/>
+		<UseShop set="true"/>
+	</char>
+	
+	<char>
+		<PlayerID set="-1"/>
+		<IsGM set="false"/>
+		<CanUseGMCommand set="true"/>
+		<Heal set="true"/>
+		<Res set="true"/>
+		<CanTeleport set="true"/>
+		<CanRename set="true"/>
+		<CanAnnounce set="true"/>
+		<CanBan set="true"/>
+		<CanBanChat set="true"/>
+		<CanUnBanChat set="true"/>
+		<CanKick set="true"/>
+		<GodMode set="true"/>
+		<CanViewChar set="true"/>
+		<CanTeleport set="true"/>
+		<FastUnstuck set="true"/>
+		<ResurectFixed set="true"/>
+		<Door set="true"/>
+		<PeaceAttack set="true"/>
+		<UseTrade set="true"/>
+		<CanAttack set="true"/>
+		<CanJoinClan set="false"/>
+		<BlockInventory set="false"/>
+		<Menu set="true"/>
+		<UseGMShop set="true"/>
+		<CanViewChar set="true"/>
+		<CanEditChar set="true"/>
 	</char>
 </list>

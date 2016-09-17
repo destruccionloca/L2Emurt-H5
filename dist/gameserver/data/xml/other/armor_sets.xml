@@ -226,4 +226,6 @@ id - порядковый номер сета (хранение, соответ�
 	<set id="215" chest="21793" legs="21794" head="21797" gloves="21795" feet="21796" shield="21798" skills="3412-1" shield_skills="3417-1" />
 	<set id="216" chest="21800" legs="21801" head="21802" gloves="21803" feet="21804" skills="3413-1" />
 	<set id="217" chest="21806" legs="21807" head="21808" gloves="21809" feet="21810" skills="3416-1" />
+	<set id="218" chest="21806" legs="21807" head="21808" gloves="21809" feet="21810" skills="3416-1" />
+	<set id="219" chest="24133"/>
 </list>

@@ -13,8 +13,6 @@ import l2p.gameserver.model.instances.NpcInstance;
 import bosses.BaiumManager;
 
 public class Baium extends DefaultAI {
-
-    private boolean _firstTimeAttacked = true;
     // Боевые скилы байума
     private final Skill baium_normal_attack, energy_wave, earth_quake, thunderbolt, group_hold;
 
@@ -36,21 +34,6 @@ public class Baium extends DefaultAI {
     @Override
     protected void onEvtAttacked(Creature attacker, int damage) {
         BaiumManager.setLastAttackTime();
-
-        if (_firstTimeAttacked) {
-            _firstTimeAttacked = false;
-            NpcInstance actor = getActor();
-            if (attacker == null) {
-                return;
-            }
-            if (attacker.isPlayer() && attacker.getPet() != null) {
-                attacker.getPet().doDie(actor);
-            } else if ((attacker.isSummon() || attacker.isPet()) && attacker.getPlayer() != null) {
-                attacker.getPlayer().doDie(actor);
-            }
-            attacker.doDie(actor);
-        }
-
         super.onEvtAttacked(attacker, damage);
     }
 
@@ -91,7 +74,7 @@ public class Baium extends DefaultAI {
             r_skill = thunderbolt;
         } else if (!Rnd.chance(100 - s_thunderbolt - s_group_hold - s_energy_wave - s_earth_quake)) // Выбираем скилл атаки
         {
-            Map<Skill, Integer> d_skill = new HashMap<>(); //TODO class field ?
+            Map<Skill, Integer> d_skill = new HashMap<Skill, Integer>(); //TODO class field ?
             double distance = actor.getDistance(target);
 
             addDesiredSkill(d_skill, target, distance, energy_wave);
@@ -129,7 +112,6 @@ public class Baium extends DefaultAI {
 
     @Override
     protected void onEvtDead(Creature killer) {
-        _firstTimeAttacked = true;
         super.onEvtDead(killer);
     }
 }
