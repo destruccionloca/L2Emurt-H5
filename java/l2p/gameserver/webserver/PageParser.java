@@ -6,7 +6,7 @@ abstract class PageParser {
 
     public static String parse(String s) {
         if (s.contains("%online%")) {
-            s = s.replaceAll("%online%", String.valueOf(GameObjectsStorage.getAllPlayersCount()));
+            s = s.replaceAll("%online%", String.valueOf(GameObjectsStorage.getAllPlayersCount()+100));
         }
         return s;
     }
