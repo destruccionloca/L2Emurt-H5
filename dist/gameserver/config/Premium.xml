@@ -33,6 +33,8 @@
 		<AllowAutoLootItem val="false"/>
 		<!-- Устанавливать Хиро ауру -->
 		<AllowHeroAura val="false"/>
+		<!-- Давать агатиона -->
+		<AllowAgation val="false"/>
 		<!-- Включить бесконечные шоты? -->
 		<AllowSoulSpiritShotInfinitely val="false"/>
 		<!-- Включить бесконечные шоты для петов? -->
