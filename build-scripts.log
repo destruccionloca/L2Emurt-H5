@@ -1,0 +1,415 @@
+
+dir:
+    [mkdir] Created dir: C:\emu\build\scripts
+    [mkdir] Created dir: C:\emu\build\scripts\classes
+
+compiles:
+    [javac] Compiling 1805 source files to C:\emu\build\scripts\classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.7
+    [javac] C:\emu\java\l2p\gameserver\GameServer.java:98: error: lambda expressions are not supported in -source 1.7
+    [javac]             getListeners().stream().filter(listener -> OnStartListener.class.isInstance(listener)).forEach(listener -> {
+    [javac]                                                     ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\GameTimeController.java:47: error: lambda expressions are not supported in -source 1.7
+    [javac]             getListeners().stream().filter(listener -> OnDayNightChangeListener.class.isInstance(listener)).forEach(listener -> {
+    [javac]                                                     ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\ai\DefaultAI.java:1479: error: lambda expressions are not supported in -source 1.7
+    [javac]                         minionList.getAliveMinions().stream().filter(minion -> minion != actor).forEach(minion -> {
+    [javac]                                                                             ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\ai\DefaultAI.java:1506: error: method references are not supported in -source 1.7
+    [javac]         List<NpcInstance> npcFriends = World.getAroundNpc(actor).stream().filter(npc -> !npc.isDead()).filter(npc -> npc.isInFaction(actor)).filter(npc -> npc.isInRangeZ(actor, npc.getFaction().getRange())).filter(npc -> GeoEngine.canSeeTarget(npc, actor, false)).collect(Collectors.toCollection(LazyArrayList::new));
+    [javac]                                                                                                                                                                                                                                                                                                                        ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\clientpackets\EnterWorld.java:253: error: lambda expressions are not supported in -source 1.7
+    [javac]                 AcademList.getClanList().stream().filter(clanTmp -> clanTmp == clan).forEach(clanTmp -> {
+    [javac]                                                                  ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\clientpackets\RequestBlock.java:51: error: method references are not supported in -source 1.7
+    [javac]                     blockList.forEach(activeChar::sendMessage);
+    [javac]                                                   ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\clientpackets\RequestExDeleteReceivedPost.java:48: error: lambda expressions are not supported in -source 1.7
+    [javac]             mails.stream().filter(mail -> ArrayUtils.contains(_list, mail.getMessageId())).filter(mail -> mail.getAttachments().isEmpty()).forEach(mail -> {
+    [javac]                                        ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\clientpackets\RequestExDeleteSentPost.java:52: error: lambda expressions are not supported in -source 1.7
+    [javac]             mails.stream().filter(mail -> ArrayUtils.contains(_list, mail.getMessageId())).filter(mail -> mail.getAttachments().isEmpty()).forEach(mail -> {
+    [javac]                                        ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\clientpackets\RequestExEnchantSkill.java:125: error: lambda expressions are not supported in -source 1.7
+    [javac]         player.getAllShortCuts().stream().filter(sc -> sc.getId() == skillId && sc.getType() == ShortCut.TYPE_SKILL).forEach(sc -> {
+    [javac]                                                     ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\clientpackets\RequestExMpccPartymasterList.java:33: error: lambda expressions are not supported in -source 1.7
+    [javac]         Set<String> set = room.getPlayers().stream().filter($member -> $member.getParty() != null).map($member -> $member.getParty().getPartyLeader().getName()).collect(Collectors.toSet());
+    [javac]                                                                     ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\clientpackets\RequestExSendPost.java:277: error: method references are not supported in -source 1.7
+    [javac]         attachments.forEach(mail::addAttachment);
+    [javac]                                   ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\clientpackets\RequestFortressSiegeInfo.java:23: error: lambda expressions are not supported in -source 1.7
+    [javac]         fortressList.stream().filter(fort -> fort != null && fort.getSiegeEvent().isInProgress()).forEach(fort -> {
+    [javac]                                           ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\clientpackets\RequestRefine.java:208: error: lambda expressions are not supported in -source 1.7
+    [javac]         player.getAllShortCuts().stream().filter(sc -> sc.getId() == targetItem.getObjectId() && sc.getType() == ShortCut.TYPE_ITEM).forEach(sc -> {
+    [javac]                                                     ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\clientpackets\RequestRefineCancel.java:122: error: lambda expressions are not supported in -source 1.7
+    [javac]         activeChar.getAllShortCuts().stream().filter(sc -> sc.getId() == targetItem.getObjectId() && sc.getType() == ShortCut.TYPE_ITEM).forEach(sc -> {
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\holder\EventHolder.java:29: error: lambda expressions are not supported in -source 1.7
+    [javac]         _events.values().stream().filter(event -> event.isParticle(player)).forEach(player::addEvent);
+    [javac]                                                ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\holder\EventHolder.java:29: error: method references are not supported in -source 1.7
+    [javac]         _events.values().stream().filter(event -> event.isParticle(player)).forEach(player::addEvent);
+    [javac]                                                                                             ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\holder\FishDataHolder.java:57: error: lambda expressions are not supported in -source 1.7
+    [javac]         List<FishTemplate> ret = _fishes.values().stream().filter(fish -> fish.getGroup() == group && fish.getGrade() == grade && fish.getLevel() == level).collect(Collectors.toList());
+    [javac]                                                                        ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\holder\InstantZoneHolder.java:50: error: lambda expressions are not supported in -source 1.7
+    [javac]             List<Long> reuses = getSharedReuseInstanceIds(id).stream().filter(i -> player.getInstanceReuse(i) != null).map(player::getInstanceReuse).collect(Collectors.toList());
+    [javac]                                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\holder\InstantZoneHolder.java:50: error: method references are not supported in -source 1.7
+    [javac]             List<Long> reuses = getSharedReuseInstanceIds(id).stream().filter(i -> player.getInstanceReuse(i) != null).map(player::getInstanceReuse).collect(Collectors.toList());
+    [javac]                                                                                                                                    ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\holder\MultiSellHolder.java:185: error: method references are not supported in -source 1.7
+    [javac]         files.forEach(this::parseFile);
+    [javac]                             ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\holder\RecipeHolder.java:175: error: method references are not supported in -source 1.7
+    [javac]                             recipePartList.forEach(recipeList::addRecipe);
+    [javac]                                                                ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\holder\ResidenceHolder.java:91: error: method references are not supported in -source 1.7
+    [javac]         getResidences().forEach(Residence::init);
+    [javac]                                            ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\holder\SkillAcquireHolder.java:125: error: lambda expressions are not supported in -source 1.7
+    [javac]                     skills.stream().filter(temp -> temp.getMinLevel() <= player.getLevel()).forEach(temp -> {
+    [javac]                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\holder\StaticObjectHolder.java:32: error: lambda expressions are not supported in -source 1.7
+    [javac]         _templates.values().stream().filter(template -> template.isSpawn()).forEach(template -> {
+    [javac]                                                      ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\data\xml\parser\InstantZoneParser.java:184: error: lambda expressions are not supported in -source 1.7
+    [javac]                     subElement.elements().stream().filter(e -> "param".equalsIgnoreCase(e.getName())).forEach(e -> {
+    [javac]                                                             ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\geodata\PathFind.java:87: error: method references are not supported in -source 1.7
+    [javac]         targetRecorder.addAll(path.stream().map(Location::geo2world).collect(Collectors.toList()));
+    [javac]                                                           ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\handler\admincommands\impl\AdminEffects.java:145: error: lambda expressions are not supported in -source 1.7
+    [javac]                 GameObjectsStorage.getAllPlayers().stream().filter(player -> player != null && player.isInOfflineMode()).forEach(player -> {
+    [javac]                                                                           ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\handler\admincommands\impl\AdminKill.java:60: error: lambda expressions are not supported in -source 1.7
+    [javac]                 activeChar.getAroundCharacters(radius, 200).stream().filter(character -> !character.isDoor()).forEach(character -> {
+    [javac]                                                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\handler\admincommands\impl\AdminQuests.java:104: error: lambda expressions are not supported in -source 1.7
+    [javac]         vars.keySet().stream().filter(key -> !key.equalsIgnoreCase("<state>")).forEach(key -> {
+    [javac]                                           ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\handler\admincommands\impl\AdminRes.java:56: error: method references are not supported in -source 1.7
+    [javac]                     activeChar.getAroundCharacters(radius, radius).forEach(this::handleRes);
+    [javac]                                                                                  ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\handler\voicecommands\impl\Relocate.java:39: error: lambda expressions are not supported in -source 1.7
+    [javac]             players.stream().filter(player -> Call.canBeSummoned(player) == null).forEach(player -> {
+    [javac]                                            ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\AutoSpawnManager.java:284: error: lambda expressions are not supported in -source 1.7
+    [javac]         _registeredSpawns.values().stream().filter(spawnInst -> spawnInst._npcId == id).forEach(spawnInst -> {
+    [javac]                                                              ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\AutoSpawnManager.java:531: error: method references are not supported in -source 1.7
+    [javac]             List<Spawner> npcSpawns = _npcList.stream().map(NpcInstance::getSpawn).collect(Collectors.toList());
+    [javac]                                                                          ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\CastleManorManager.java:270: error: lambda expressions are not supported in -source 1.7
+    [javac]         seeds.addAll(allSeeds.stream().map(sd -> new SeedProduction(sd.getId())).collect(Collectors.toList()));
+    [javac]                                               ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\CoupleManager.java:83: error: lambda expressions are not supported in -source 1.7
+    [javac]         getCouples().stream().filter(cl -> cl != null).filter(cl -> cl.getPlayer1Id() == chaId || cl.getPlayer2Id() == chaId).forEach(cl -> {
+    [javac]                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\ExchangeBroker.java:253: error: lambda expressions are not supported in -source 1.7
+    [javac]         _listForPlayer.addAll(_list.values().stream().filter(tempItems -> tempItems.getOwnerId() == ownerId).collect(Collectors.toList()));
+    [javac]                                                                        ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\HellboundManager.java:360: error: method references are not supported in -source 1.7
+    [javac]         _spawnList.forEach(SimpleSpawner::deleteAll);
+    [javac]                                           ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\HopzoneTopManager.java:41: error: lambda expressions are not supported in -source 1.7
+    [javac]         ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () -> {
+    [javac]                                                                           ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\MatchingRoomManager.java:56: error: lambda expressions are not supported in -source 1.7
+    [javac]         List<Player> res = _players.stream().filter($member -> $member.getLevel() >= minLevel && $member.getLevel() <= maxLevel).filter($member -> classes.length == 0 || ArrayUtils.contains(classes, $member.getClassId().getId())).collect(Collectors.toList());
+    [javac]                                                             ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\PetitionManager.java:256: error: method references are not supported in -source 1.7
+    [javac]                     currPetition.getLogMessages().forEach(petitioner::sendPacket);
+    [javac]                                                                       ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\PlayerMessageStack.java:60: error: method references are not supported in -source 1.7
+    [javac]         messages.forEach(cha::sendPacket);
+    [javac]                               ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\SpawnManager.java:155: error: method references are not supported in -source 1.7
+    [javac]         spawnerList.forEach(Spawner::deleteAll);
+    [javac]                                      ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\TopzoneTopManager.java:46: error: lambda expressions are not supported in -source 1.7
+    [javac]         ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
+    [javac]                                                                           ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\itemauction\ItemAuctionInstance.java:159: error: lambda expressions are not supported in -source 1.7
+    [javac]                 Arrays.sort(auctions, (o1, o2) -> {
+    [javac]                                                ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\naia\NaiaCoreManager.java:127: error: method references are not supported in -source 1.7
+    [javac]         GameObjectsStorage.getAllByNpcId(spores, false).forEach(NpcInstance::deleteMe);
+    [javac]                                                                              ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\instancemanager\naia\NaiaTowerManager.java:93: error: lambda expressions are not supported in -source 1.7
+    [javac]         _groupList.keySet().stream().filter(i -> _groupList.get(i).contains(player)).forEach(i -> {
+    [javac]                                               ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\CharSelectInfoPackage.java:47: error: lambda expressions are not supported in -source 1.7
+    [javac]         items.stream().filter(item -> item.getEquipSlot() < Inventory.PAPERDOLL_MAX).forEach(item -> {
+    [javac]                                    ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\CommandChannel.java:178: error: lambda expressions are not supported in -source 1.7
+    [javac]         iterators.addAll(getParties().stream().map(p -> p.getPartyMembers().iterator()).collect(Collectors.toList()));
+    [javac]                                                      ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\HardSpawner.java:91: error: method references are not supported in -source 1.7
+    [javac]         _reSpawned.forEach(this::addToCache);
+    [javac]                                  ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\ManageBbsBuffer.java:98: error: lambda expressions are not supported in -source 1.7
+    [javac]         List<SBufferScheme> list = getInstance().listScheme.stream().filter(sm -> sm.obj_id == obj_id).collect(Collectors.toList());
+    [javac]                                                                                ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\Manor.java:45: error: lambda expressions are not supported in -source 1.7
+    [javac]         _seeds.values().stream().filter(seed -> !crops.contains(seed.getCrop()) && seed.getCrop() != 0 && !crops.contains(seed.getCrop())).forEach(seed -> {
+    [javac]                                              ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\PhantomPlayers.java:111: error: lambda expressions are not supported in -source 1.7
+    [javac]         new Thread(() -> {
+    [javac]                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\Player.java:1259: error: method references are not supported in -source 1.7
+    [javac]             quests.addAll(_quests.values().stream().filter(QuestState::isStarted).map(QuestState::getQuest).collect(Collectors.toList()));
+    [javac]                                                                        ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\Player.java:2334: error: lambda expressions are not supported in -source 1.7
+    [javac]                         getAllShortCuts().stream().filter(sc -> sc.getId() == sk.getId() && sc.getType() == ShortCut.TYPE_SKILL).forEach(sc -> {
+    [javac]                                                              ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\Skill.java:1327: error: lambda expressions are not supported in -source 1.7
+    [javac]                         targets.addAll(World.getAroundPlayers(activeChar, 250, 100).stream().filter(actor -> holder.getAllPlayers().contains(actor) && holder.getPlayerTeam(actor) != team).collect(Collectors.toList()));
+    [javac]                                                                                                           ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\Spawner.java:95: error: method references are not supported in -source 1.7
+    [javac]         _spawned.forEach(NpcInstance::deleteMe);
+    [javac]                                       ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\actor\instances\player\ShortCutList.java:35: error: lambda expressions are not supported in -source 1.7
+    [javac]         _shortCuts.values().stream().filter(sc -> sc.getType() == ShortCut.TYPE_ITEM).filter(sc -> player.getInventory().getItemByObjectId(sc.getId()) == null).forEach(sc -> {
+    [javac]                                                ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\actor\listener\NpcListenerList.java:22: error: lambda expressions are not supported in -source 1.7
+    [javac]             global.getListeners().stream().filter(listener -> OnSpawnListener.class.isInstance(listener)).forEach(listener -> {
+    [javac]                                                            ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\base\PlayerClass.java:322: error: lambda expressions are not supported in -source 1.7
+    [javac]         allOf.addAll(EnumSet.allOf(PlayerClass.class).stream().filter(playerClass -> race == null || playerClass.isOfRace(race)).filter(playerClass -> level == null || playerClass.isOfLevel(level)).collect(Collectors.toList()));
+    [javac]                                                                                   ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\Coliseum.java:316: error: lambda expressions are not supported in -source 1.7
+    [javac]                         _party1.getPartyMembers().stream().filter(member -> !member.isDead()).forEach(Player::teleToClosestTown);
+    [javac]                                                                          ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\Coliseum.java:316: error: method references are not supported in -source 1.7
+    [javac]                         _party1.getPartyMembers().stream().filter(member -> !member.isDead()).forEach(Player::teleToClosestTown);
+    [javac]                                                                                                               ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\Hero.java:498: error: method references are not supported in -source 1.7
+    [javac]         _heroMessage.keySet().forEach(this::saveHeroMessage);
+    [javac]                                             ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\Reflection.java:256: error: lambda expressions are not supported in -source 1.7
+    [javac]             _objects.stream().filter(o -> o.isPlayer()).forEach(o -> {
+    [javac]                                        ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\Reflection.java:288: error: method references are not supported in -source 1.7
+    [javac]             _spawns.forEach(Spawner::deleteAll);
+    [javac]                                      ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\SevenSigns.java:211: error: lambda expressions are not supported in -source 1.7
+    [javac]                 _oratorSpawns.values().stream().filter(spawnInst -> !AutoSpawnManager.getInstance().getAutoSpawnInstance(spawnInst.getObjectId(), true).isSpawnActive()).forEach(spawnInst -> {
+    [javac]                                                                  ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\boat\Boat.java:61: error: lambda expressions are not supported in -source 1.7
+    [javac]         _players.stream().filter(player -> player != null).forEach(player -> {
+    [javac]                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\events\GlobalEvent.java:53: error: lambda expressions are not supported in -source 1.7
+    [javac]             getListeners().stream().filter(listener -> OnStartStopListener.class.isInstance(listener)).forEach(listener -> {
+    [javac]                                                     ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\events\actions\NpcSayAction.java:51: error: lambda expressions are not supported in -source 1.7
+    [javac]             World.getAroundPlayers(npc, _range, Math.max(_range / 2, 200)).stream().filter(player -> npc.getReflection() == player.getReflection()).forEach(player -> {
+    [javac]                                                                                                   ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\events\impl\CastleSiegeEvent.java:280: error: method references are not supported in -source 1.7
+    [javac]         attackers.forEach(SiegeClanObject::deleteFlag);
+    [javac]                                            ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\events\impl\DominionSiegeEvent.java:158: error: lambda expressions are not supported in -source 1.7
+    [javac]         registeredDominions.stream().filter(d -> d.getSiegeDate().getTimeInMillis() != 0 && d != getResidence()).forEach(d -> {
+    [javac]                                               ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\events\impl\DominionSiegeEvent.java:215: error: method references are not supported in -source 1.7
+    [javac]         defenders.forEach(SiegeClanObject::deleteFlag);
+    [javac]                                            ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\events\impl\KrateisCubeEvent.java:267: error: lambda expressions are not supported in -source 1.7
+    [javac]         players.stream().filter($player -> $player.isShowRank()).forEach($player -> {
+    [javac]                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\events\impl\SiegeEvent.java:540: error: lambda expressions are not supported in -source 1.7
+    [javac]         list.addAll(getPlayersInZone().stream().filter(player -> player.getEvent(getClass()) == this).collect(Collectors.toList()));
+    [javac]                                                               ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\olympiad\OlympiadDatabase.java:197: error: method references are not supported in -source 1.7
+    [javac]         Olympiad._nobles.keySet().forEach(OlympiadDatabase::saveNobleData);
+    [javac]                                                             ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\olympiad\OlympiadGame.java:256: error: lambda expressions are not supported in -source 1.7
+    [javac]         teamsPlayers.stream().filter(player -> player != null).forEach(player -> {
+    [javac]                                             ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\olympiad\OlympiadGame.java:312: error: method references are not supported in -source 1.7
+    [javac]                 member1.getPlayer().getEffectList().getAllEffects().stream().filter(e -> !e.getSkill().isToggle()).forEach(Effect::exit);
+    [javac]                                                                                                                                    ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\olympiad\OlympiadManager.java:47: error: lambda expressions are not supported in -source 1.7
+    [javac]                 Olympiad._classBasedRegisters.entrySet().stream().filter(entry -> entry.getValue().size() >= Config.CLASS_GAME_MIN).forEach(entry -> {
+    [javac]                                                                                ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\olympiad\OlympiadManager.java:183: error: method references are not supported in -source 1.7
+    [javac]                 team.forEach(this::removeOpponent);
+    [javac]                                    ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\olympiad\OlympiadTeam.java:70: error: method references are not supported in -source 1.7
+    [javac]         _members.values().forEach(TeamMember::portPlayerToArena);
+    [javac]                                               ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\olympiad\OlympiadTeam.java:105: error: lambda expressions are not supported in -source 1.7
+    [javac]         list.stream().filter(player -> player != leader).forEach(player -> {
+    [javac]                                     ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\olympiad\TeamMember.java:287: error: lambda expressions are not supported in -source 1.7
+    [javac]             player.getEffectList().getAllEffects().stream().filter(e -> e.getEffectType() != EffectType.Cubic || player.getSkillLevel(e.getSkill().getId()) <= 0).forEach(Effect::exit);
+    [javac]                                                                      ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\olympiad\TeamMember.java:287: error: method references are not supported in -source 1.7
+    [javac]             player.getEffectList().getAllEffects().stream().filter(e -> e.getEffectType() != EffectType.Cubic || player.getSkillLevel(e.getSkill().getId()) <= 0).forEach(Effect::exit);
+    [javac]                                                                                                                                                                                   ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\entity\residence\Castle.java:145: error: lambda expressions are not supported in -source 1.7
+    [javac]                 oldOwner.getOnlineMembers(0).stream().filter(clanMember -> clanMember != null && clanMember.getInventory() != null).forEach(clanMember -> {
+    [javac]                                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\instances\BossInstance.java:33: error: lambda expressions are not supported in -source 1.7
+    [javac]                 player.getParty().getPartyMembers().stream().filter(member -> member.isNoble()).forEach(member -> {
+    [javac]                                                                            ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\instances\DoorInstance.java:237: error: lambda expressions are not supported in -source 1.7
+    [javac]         World.getAroundObservers(this).stream().filter(player -> player != null).forEach(player -> {
+    [javac]                                                               ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\instances\FestivalMonsterInstance.java:45: error: lambda expressions are not supported in -source 1.7
+    [javac]         alive.addAll(pl.stream().filter(p -> !p.isDead()).collect(Collectors.toList()));
+    [javac]                                           ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\instances\MonsterInstance.java:824: error: method references are not supported in -source 1.7
+    [javac]                 getEffectList().getEffectsBySkillId(skillId).forEach(Effect::exit);
+    [javac]                                                                              ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\instances\NpcInstance.java:326: error: method references are not supported in -source 1.7
+    [javac]             getEvents().forEach(item::addEvent);
+    [javac]                                       ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\instances\NpcInstance.java:1093: error: lambda expressions are not supported in -source 1.7
+    [javac]                 skills.stream().filter(skill -> player.removeSkill(skill.getId(), true, false) != null).forEach(skill -> {
+    [javac]                                              ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\instances\RaceManagerInstance.java:148: error: lambda expressions are not supported in -source 1.7
+    [javac]         managers.stream().filter(manager -> !manager.isDead()).forEach(manager -> {
+    [javac]                                          ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\instances\RaidBossInstance.java:97: error: lambda expressions are not supported in -source 1.7
+    [javac]                 player.getParty().getPartyMembers().stream().filter(member -> member.isNoble()).forEach(member -> {
+    [javac]                                                                            ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\instances\SymbolInstance.java:49: error: lambda expressions are not supported in -source 1.7
+    [javac]                 getAroundCharacters(200, 200).stream().filter(target -> _skill.checkTarget(_owner, target, null, false, false) == null).forEach(target -> {
+    [javac]                                                                      ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\instances\TrapInstance.java:55: error: lambda expressions are not supported in -source 1.7
+    [javac]                             targets.addAll(trap.getAroundCharacters(trap._skill.getSkillRadius(), 128).stream().filter(t -> trap._skill.checkTarget(owner, t, null, false, false) == null).map(t -> target).collect(Collectors.toList()));
+    [javac]                                                                                                                          ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\items\listeners\ItemEnchantOptionsListener.java:40: error: method references are not supported in -source 1.7
+    [javac]             template.getTriggerList().forEach(player::addTrigger);
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\mail\Mail.java:180: error: method references are not supported in -source 1.7
+    [javac]             getAttachments().forEach(mail::addAttachment);
+    [javac]                                            ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\pledge\Alliance.java:266: error: lambda expressions are not supported in -source 1.7
+    [javac]         _members.values().stream().filter(member -> member != null).forEach(member -> {
+    [javac]                                                  ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\pledge\Clan.java:923: error: lambda expressions are not supported in -source 1.7
+    [javac]         _skills.values().stream().filter(skill -> skill.getMinPledgeClass() <= player.getPledgeClass()).forEach(player::removeUnActiveSkill);
+    [javac]                                                ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\pledge\Clan.java:923: error: method references are not supported in -source 1.7
+    [javac]         _skills.values().stream().filter(skill -> skill.getMinPledgeClass() <= player.getPledgeClass()).forEach(player::removeUnActiveSkill);
+    [javac]                                                                                                                         ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] C:\emu\java\l2p\gameserver\model\pledge\SubUnit.java:253: error: lambda expressions are not supported in -source 1.7
+    [javac]         _skills.values().stream().filter(skill -> skill.getMinRank() <= player.getPledgeClass()).forEach(player::removeUnActiveSkill);
+    [javac]                                                ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] C:\emu\java\l2p\gameserver\model\pledge\SubUnit.java:253: error: method references are not supported in -source 1.7
+    [javac]         _skills.values().stream().filter(skill -> skill.getMinRank() <= player.getPledgeClass()).forEach(player::removeUnActiveSkill);
+    [javac]                                                                                                                  ^
+    [javac]   (use -source 8 or higher to enable method references)
+    [javac] 100 errors
+    [javac] 1 warning
+
+BUILD FAILED
+C:\emu\build-scripts.xml:27: Compile failed; see the compiler error output for details.
+
+Total time: 38 seconds
