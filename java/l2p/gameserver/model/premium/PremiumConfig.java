@@ -85,6 +85,9 @@ public class PremiumConfig {
                         } else if ("AllowHeroAura".equalsIgnoreCase(cd.getNodeName())) {
                             attrs = cd.getAttributes();
                             _config.ALLOW_HERO_AURA = Boolean.parseBoolean(attrs.getNamedItem("val").getNodeValue());
+                        } else if ("AllowAgation".equalsIgnoreCase(cd.getNodeName())) {
+                            attrs = cd.getAttributes();
+                            _config.ALLOW_AGATION = Boolean.parseBoolean(attrs.getNamedItem("val").getNodeValue());
                         } else if ("AllowSoulSpiritShotInfinitely".equalsIgnoreCase(cd.getNodeName())) {
                             attrs = cd.getAttributes();
                             _config.ALLOW_SOUL_SPIRIT_SHOT_INFINITELY = Boolean.parseBoolean(attrs.getNamedItem("val").getNodeValue());

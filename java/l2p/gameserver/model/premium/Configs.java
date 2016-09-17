@@ -26,6 +26,7 @@ public class Configs implements Comparable<Object> {
     public boolean ALLOW_TRANSFER_ITEM = false;
     public boolean ALLOW_AUTO_LOOT_ITEM = false;
     public boolean ALLOW_HERO_AURA = false;
+    public boolean ALLOW_AGATION = false;
     public boolean ALLOW_SOUL_SPIRIT_SHOT_INFINITELY = false;
     public boolean ALLOW_SOUL_SPIRIT_SHOT_INFINITELY_PET = false;
     public boolean ALLOW_ARROW_INFINITELY = false;
