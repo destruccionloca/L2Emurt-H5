@@ -451,6 +451,10 @@ public class EnterWorld extends L2GameClientPacket {
             activeChar.setHeroAura(true);
         }
 
+        if (!activeChar.hasBonus()) {
+            activeChar.getInventory().destroyItemByItemId(20970, 1);
+        }
+
         if (!activeChar.isHero()) {
             for (ItemInstance item : activeChar.getInventory().getItems()) {
                 if (item.isHeroWeapon()) {

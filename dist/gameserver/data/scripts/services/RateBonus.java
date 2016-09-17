@@ -125,6 +125,7 @@ public class RateBonus extends Functions {
         }
         if (PremiumConfig.getPremConfigId(i).ALLOW_HERO_AURA) {
             player.setHeroAura(true);
+            player.getInventory().addItem(20970, 1);
             player.broadcastCharInfo();
         }
         
