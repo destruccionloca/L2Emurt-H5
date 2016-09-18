@@ -4,6 +4,7 @@ import bosses.EpicBossState.NestState;
 import bosses.EpicBossState.State;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Calendar;
 import java.util.concurrent.ScheduledFuture;
 import l2p.commons.threading.RunnableImpl;
 import l2p.commons.util.Rnd;
@@ -69,10 +70,11 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     private static long _lastAttackTime = 0;
     private static final int FWV_LIMITUNTILSLEEP = 20 * 60000; // 20
     private static final int FWV_APPTIMEOFVALAKAS = 10 * 60000;	 // 10
-    private static final int FWV_FIXINTERVALOFVALAKAS = Config.FIXINTERVALOFVALAKAS * 60 * 60000;
+    private static final int FWV_FIXINTERVALOFVALAKAS = Config.FIXINTERVALOFVALAKAS_DAYS * 24 * 60 * 60000;
     private static boolean Dying = false;
     private static final Location TELEPORT_POSITION = new Location(203940, -111840, 66);
     private static boolean _entryLocked = false;
+    private static Calendar calendar;
     private final static int FWB_RANDOMINTERVALOFVALAKAS = Config.RANDOMINTERVALOFVALAKAS * 60 * 60000;
 
     private static class CheckLastAttack extends RunnableImpl {
@@ -127,7 +129,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
                     _valakas.block();
                     _valakas.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "BS03_A", 1, _valakas.getObjectId(), _valakas.getLoc()));
 
-                    _state.setRespawnDate(Rnd.get(FWV_FIXINTERVALOFVALAKAS, FWV_FIXINTERVALOFVALAKAS));
+                    _state.setRespawnDate((Config.ENABLERANDOMVALAKAS)?Rnd.get(FWV_FIXINTERVALOFVALAKAS, FWV_FIXINTERVALOFVALAKAS):0);
                     _state.setState(EpicBossState.State.ALIVE);
                     _state.update();
 
@@ -386,7 +388,11 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     }
 
     private static int getRespawnInterval() {
-        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * FWV_FIXINTERVALOFVALAKAS + Rnd.get(0, FWB_RANDOMINTERVALOFVALAKAS));
+        calendar = Calendar.getInstance();
+        calendar.add(Calendar.DAY_OF_MONTH, Config.FIXINTERVALOFVALAKAS_DAYS);
+        calendar.set(Calendar.HOUR_OF_DAY, 21);
+        int interval = (int) (calendar.getTimeInMillis() - System.currentTimeMillis());
+        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * interval + ((Config.ENABLERANDOMVALAKAS)?Rnd.get(0, FWB_RANDOMINTERVALOFVALAKAS):0));
     }
 
     public static Zone getZone() {

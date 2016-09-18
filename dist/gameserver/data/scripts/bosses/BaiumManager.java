@@ -203,7 +203,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
     private final static Location STATUE_LOCATION = new Location(115996, 17417, 10106, 41740);
     private final static int TELEPORT_CUBE = 31759;
     private final static int FWB_LIMITUNTILSLEEP = 30 * 60000;
-    private final static int FWB_FIXINTERVALOFBAIUM = Config.FIXINTERVALOFBAIUM_HOUR * 60 * 60000;
+    private final static int FWB_FIXINTERVALOFBAIUM = Config.FIXINTERVALOFBAIUM_DAYS * 24 * 60 * 60000;
     private final static int FWB_RANDOMINTERVALOFBAIUM = Config.RANDOMINTERVALOFBAIUM * 60 * 60000;
 
     private static void banishForeigners() {
@@ -356,7 +356,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
     }
 
     private static int getRespawnInterval() {
-        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * (FWB_FIXINTERVALOFBAIUM + Rnd.get(0, FWB_RANDOMINTERVALOFBAIUM)));
+        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * (FWB_FIXINTERVALOFBAIUM + ((Config.ENABLERANDOMBAIUM)?Rnd.get(0, FWB_RANDOMINTERVALOFBAIUM):0)));
     }
 
     // start interval.

@@ -1504,16 +1504,18 @@ public class Config {
     public static long MAX_PLAYER_CONTRIBUTION;
 
     /* Конфигурации Епиков */
-    public static int FIXINTERVALOFANTHARAS_HOUR;
-    public static int FIXINTERVALOFBAIUM_HOUR;
+    public static int FIXINTERVALOFANTHARAS_DAYS;
+    public static int FIXINTERVALOFBAIUM_DAYS;
     public static int RANDOMINTERVALOFBAIUM;
+    public static boolean ENABLERANDOMBAIUM;
     public static int FIXINTERVALOFBAYLORSPAWN_HOUR;
     public static int RANDOMINTERVALOFBAYLORSPAWN;
     public static int FIXINTERVALOFBELETHSPAWN_HOUR;
     public static int FIXINTERVALOFSAILRENSPAWN_HOUR;
     public static int RANDOMINTERVALOFSAILRENSPAWN;
-    public static int FIXINTERVALOFVALAKAS;
+    public static int FIXINTERVALOFVALAKAS_DAYS;
     public static int RANDOMINTERVALOFVALAKAS;
+    public static boolean ENABLERANDOMVALAKAS;
     public static int EPIC_BOSS_SPAWN_ANNON;
 
     /* Количество очков репутации необходимое для поднятия уровня клану.*/
@@ -3086,16 +3088,18 @@ public class Config {
     public static void loadEpicBossConfig() {
         ExProperties epicBossSettings = load(EPIC_BOSS_FILE);
 
-        FIXINTERVALOFANTHARAS_HOUR = epicBossSettings.getProperty("FWA_FIX_INTERVAL_OF_ANTHARAS_HOUR", 264);
-        FIXINTERVALOFBAIUM_HOUR = epicBossSettings.getProperty("FIX_INTERVAL_OF_BAIUM_HOUR", 120);
+        FIXINTERVALOFANTHARAS_DAYS = epicBossSettings.getProperty("FWA_FIX_INTERVAL_OF_ANTHARAS_DAYS", 11);
+        FIXINTERVALOFBAIUM_DAYS = epicBossSettings.getProperty("FIX_INTERVAL_OF_BAIUM_DAYS", 5);
         RANDOMINTERVALOFBAIUM = epicBossSettings.getProperty("RANDOM_INTERVAL_OF_BAIUM", 8);
+        ENABLERANDOMBAIUM = epicBossSettings.getProperty("ENABLE_RANDOM_BAIUM", true);
         FIXINTERVALOFBAYLORSPAWN_HOUR = epicBossSettings.getProperty("FIX_INTERVAL_OF_BAYLOR_SPAWN_HOUR", 24);
         RANDOMINTERVALOFBAYLORSPAWN = epicBossSettings.getProperty("RANDOM_INTERVAL_OF_BAYLOR_SPAWN", 24);
         FIXINTERVALOFBELETHSPAWN_HOUR = epicBossSettings.getProperty("FIX_INTERVAL_OF_BELETH_SPAWN_HOUR", 48);
         FIXINTERVALOFSAILRENSPAWN_HOUR = epicBossSettings.getProperty("FIX_INTERVAL_OF_SAILREN_SPAWN_HOUR", 24);
         RANDOMINTERVALOFSAILRENSPAWN = epicBossSettings.getProperty("RANDOM_INTERVAL_OF_SAILREN_SPAWN", 24);
-        FIXINTERVALOFVALAKAS = epicBossSettings.getProperty("FIX_INTERVAL_OF_VALAKAS_HOUR", 264);
+        FIXINTERVALOFVALAKAS_DAYS = epicBossSettings.getProperty("FIX_INTERVAL_OF_VALAKAS_DAYS", 11);
         RANDOMINTERVALOFVALAKAS = epicBossSettings.getProperty("RANDOM_INTERVAL_OF_VALAKAS", 8);
+        ENABLERANDOMVALAKAS = epicBossSettings.getProperty("ENABLE_RANDOM_VALAKAS", true);
         EPIC_BOSS_SPAWN_ANNON = epicBossSettings.getProperty("EpicBossSpawnAnnon", 5);
     }
 
