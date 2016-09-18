@@ -3079,7 +3079,7 @@ public class Config {
         ALLOW_INSTANCES_PARTY_MANUAL = instancesSettings.getProperty("AllowInstancesPartyManual", false);
         INSTANCES_LEVEL_MIN = instancesSettings.getProperty("InstancesLevelMin", 1);
         INSTANCES_LEVEL_MAX = instancesSettings.getProperty("InstancesLevelMax", 85);
-        INSTANCES_PARTY_MIN = instancesSettings.getProperty("InstancesPartyMin", 2);k
+        INSTANCES_PARTY_MIN = instancesSettings.getProperty("InstancesPartyMin", 2);
         INSTANCES_PARTY_MAX = instancesSettings.getProperty("InstancesPartyMax", 100);
     }
 
