@@ -286,17 +286,17 @@ public class DominionSiegeRunnerEvent extends GlobalEvent {
             if (castle.getOwnDate().getTimeInMillis() == 0) {
                 return;
             }
-            _startTime = (Calendar) Config.CASTLE_VALIDATION_DATE.clone();
+            _startTime = (Calendar) Config.TW_VALIDATION_DATE.clone();
             _startTime.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-            if (_startTime.before(Config.CASTLE_VALIDATION_DATE)) {
+            if (_startTime.before(Config.TW_VALIDATION_DATE)) {
                 _startTime.add(Calendar.WEEK_OF_YEAR, 1);
             }
-            _startTime.set(Calendar.HOUR_OF_DAY, 20);
+            _startTime.set(Calendar.HOUR_OF_DAY, Config.TW_SELECT_HOURS);
             _startTime.set(Calendar.MINUTE, 0);
             _startTime.set(Calendar.SECOND, 0);
             _startTime.set(Calendar.MILLISECOND, 0);
             while (_startTime.getTimeInMillis() < System.currentTimeMillis()) {
-                _startTime.add(Calendar.WEEK_OF_YEAR, 2);
+                _startTime.add(Calendar.WEEK_OF_YEAR, Config.TW_WEEK);
             }
             d.getSiegeDate().setTimeInMillis(_startTime.getTimeInMillis());
             reCalcNextTime(false);
