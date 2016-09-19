@@ -387,7 +387,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     }
 
     private static int getRespawnInterval() {
-        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * Config.VALAKAS_RESPAWN_INTERVAL + ((Config.ENABLERANDOMVALAKAS)?Rnd.get(0, FWB_RANDOMINTERVALOFVALAKAS):0));
+        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * (Config.VALAKAS_RESPAWN_INTERVAL - System.currentTimeMillis()) + ((Config.ENABLERANDOMVALAKAS)?Rnd.get(0, FWB_RANDOMINTERVALOFVALAKAS):0));
     }
 
     public static Zone getZone() {

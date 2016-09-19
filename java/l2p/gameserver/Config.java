@@ -3120,7 +3120,7 @@ public class Config {
         VALAKAS_VALIDATION_INTRVAL.set(Calendar.MINUTE, 0);
         VALAKAS_VALIDATION_INTRVAL.set(Calendar.SECOND, 0);
         VALAKAS_VALIDATION_INTRVAL.set(Calendar.MILLISECOND, 0);
-        VALAKAS_RESPAWN_INTERVAL = (int)(VALAKAS_VALIDATION_INTRVAL.getTimeInMillis() - System.currentTimeMillis());
+        VALAKAS_RESPAWN_INTERVAL = (int)(VALAKAS_VALIDATION_INTRVAL.getTimeInMillis());
 
         ANTARAS_VALIDATION_INTRVAL = Calendar.getInstance();
         ANTARAS_VALIDATION_INTRVAL.add(Calendar.DAY_OF_MONTH, FIXINTERVALOFANTHARAS_DAYS);
@@ -3128,7 +3128,7 @@ public class Config {
         ANTARAS_VALIDATION_INTRVAL.set(Calendar.MINUTE, 0);
         ANTARAS_VALIDATION_INTRVAL.set(Calendar.SECOND, 0);
         ANTARAS_VALIDATION_INTRVAL.set(Calendar.MILLISECOND, 0);
-        ANTARAS_RESPAWN_INTERVAL = (int)(ANTARAS_VALIDATION_INTRVAL.getTimeInMillis() - System.currentTimeMillis());
+        ANTARAS_RESPAWN_INTERVAL = (int)(ANTARAS_VALIDATION_INTRVAL.getTimeInMillis());
 
         BAIUM_VALIDATION_INTRVAL = Calendar.getInstance();
         BAIUM_VALIDATION_INTRVAL.add(Calendar.DAY_OF_MONTH, FIXINTERVALOFBAIUM_DAYS);
@@ -3136,7 +3136,7 @@ public class Config {
         BAIUM_VALIDATION_INTRVAL.set(Calendar.MINUTE, 0);
         BAIUM_VALIDATION_INTRVAL.set(Calendar.SECOND, 0);
         BAIUM_VALIDATION_INTRVAL.set(Calendar.MILLISECOND, 0);
-        BAIUM_RESPAWN_INTERVAL = (int)(BAIUM_VALIDATION_INTRVAL.getTimeInMillis() - System.currentTimeMillis());
+        BAIUM_RESPAWN_INTERVAL = (int)(BAIUM_VALIDATION_INTRVAL.getTimeInMillis());
 
     }
 

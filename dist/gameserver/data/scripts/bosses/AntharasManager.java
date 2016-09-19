@@ -217,7 +217,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
     }
 
     private static int getRespawnInterval() {
-        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * Config.ANTARAS_RESPAWN_INTERVAL);
+        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * (Config.ANTARAS_RESPAWN_INTERVAL - System.currentTimeMillis()));
     }
 
     public static Zone getZone() {
