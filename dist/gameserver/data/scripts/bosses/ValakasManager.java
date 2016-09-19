@@ -67,7 +67,6 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     private static final int _teleportCubeId = 31759;
     private static EpicBossState _state;
     private static Zone _zone;
-    private static Calendar calendar;
     private static long _lastAttackTime = 0;
     private static final int FWV_LIMITUNTILSLEEP = 20 * 60000; // 20
     private static final int FWV_APPTIMEOFVALAKAS = 10 * 60000;	 // 10
