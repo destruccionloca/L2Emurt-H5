@@ -1504,6 +1504,12 @@ public class Config {
     public static long MAX_PLAYER_CONTRIBUTION;
 
     /* Конфигурации Епиков */
+    public static Calendar VALAKAS_VALIDATION_INTRVAL;
+    public static int VALAKAS_RESPAWN_INTERVAL;
+    public static Calendar ANTARAS_VALIDATION_INTRVAL;
+    public static int ANTARAS_RESPAWN_INTERVAL;
+    public static Calendar BAIUM_VALIDATION_INTRVAL;
+    public static int BAIUM_RESPAWN_INTERVAL;
     public static int FIXINTERVALOFANTHARAS_DAYS;
     public static int FIXINTERVALOFBAIUM_DAYS;
     public static int RANDOMINTERVALOFBAIUM;
@@ -3107,6 +3113,31 @@ public class Config {
         RANDOMINTERVALOFVALAKAS = epicBossSettings.getProperty("RANDOM_INTERVAL_OF_VALAKAS", 8);
         ENABLERANDOMVALAKAS = epicBossSettings.getProperty("ENABLE_RANDOM_VALAKAS", true);
         EPIC_BOSS_SPAWN_ANNON = epicBossSettings.getProperty("EpicBossSpawnAnnon", 5);
+
+        VALAKAS_VALIDATION_INTRVAL = Calendar.getInstance();
+        VALAKAS_VALIDATION_INTRVAL.add(Calendar.DAY_OF_MONTH, FIXINTERVALOFVALAKAS_DAYS);
+        VALAKAS_VALIDATION_INTRVAL.set(Calendar.HOUR_OF_DAY, RESPAWNHOURVALAKAS);
+        VALAKAS_VALIDATION_INTRVAL.set(Calendar.MINUTE, 0);
+        VALAKAS_VALIDATION_INTRVAL.set(Calendar.SECOND, 0);
+        VALAKAS_VALIDATION_INTRVAL.set(Calendar.MILLISECOND, 0);
+        VALAKAS_RESPAWN_INTERVAL = (int)(VALAKAS_VALIDATION_INTRVAL.getTimeInMillis() - System.currentTimeMillis());
+
+        ANTARAS_VALIDATION_INTRVAL = Calendar.getInstance();
+        ANTARAS_VALIDATION_INTRVAL.add(Calendar.DAY_OF_MONTH, FIXINTERVALOFANTHARAS_DAYS);
+        ANTARAS_VALIDATION_INTRVAL.set(Calendar.HOUR_OF_DAY, RESPAWNHOURANTARAS);
+        ANTARAS_VALIDATION_INTRVAL.set(Calendar.MINUTE, 0);
+        ANTARAS_VALIDATION_INTRVAL.set(Calendar.SECOND, 0);
+        ANTARAS_VALIDATION_INTRVAL.set(Calendar.MILLISECOND, 0);
+        ANTARAS_RESPAWN_INTERVAL = (int)(ANTARAS_VALIDATION_INTRVAL.getTimeInMillis() - System.currentTimeMillis());
+
+        BAIUM_VALIDATION_INTRVAL = Calendar.getInstance();
+        BAIUM_VALIDATION_INTRVAL.add(Calendar.DAY_OF_MONTH, FIXINTERVALOFBAIUM_DAYS);
+        BAIUM_VALIDATION_INTRVAL.set(Calendar.HOUR_OF_DAY, RESPAWNHOURBAIUM);
+        BAIUM_VALIDATION_INTRVAL.set(Calendar.MINUTE, 0);
+        BAIUM_VALIDATION_INTRVAL.set(Calendar.SECOND, 0);
+        BAIUM_VALIDATION_INTRVAL.set(Calendar.MILLISECOND, 0);
+        BAIUM_RESPAWN_INTERVAL = (int)(BAIUM_VALIDATION_INTRVAL.getTimeInMillis() - System.currentTimeMillis());
+
     }
 
     public static void loadFormulasConfig() {

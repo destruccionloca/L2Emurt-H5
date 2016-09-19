@@ -217,11 +217,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
     }
 
     private static int getRespawnInterval() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DAY_OF_MONTH, Config.FIXINTERVALOFANTHARAS_DAYS);
-        calendar.set(Calendar.HOUR_OF_DAY, Config.RESPAWNHOURANTARAS);
-        int interval = (int) (calendar.getTimeInMillis() - System.currentTimeMillis());
-        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * interval);
+        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * Config.ANTARAS_RESPAWN_INTERVAL);
     }
 
     public static Zone getZone() {

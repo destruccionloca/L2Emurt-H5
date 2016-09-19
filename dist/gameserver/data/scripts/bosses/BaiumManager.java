@@ -357,11 +357,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
     }
 
     private static int getRespawnInterval() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DAY_OF_MONTH, Config.FIXINTERVALOFBAIUM_DAYS);
-        calendar.set(Calendar.HOUR_OF_DAY, Config.RESPAWNHOURBAIUM);
-        int interval = (int) (calendar.getTimeInMillis() - System.currentTimeMillis());
-        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * (interval + ((Config.ENABLERANDOMBAIUM)?Rnd.get(0, FWB_RANDOMINTERVALOFBAIUM):0)));
+        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * (Config.BAIUM_RESPAWN_INTERVAL + ((Config.ENABLERANDOMBAIUM)?Rnd.get(0, FWB_RANDOMINTERVALOFBAIUM):0)));
     }
 
     // start interval.

@@ -67,6 +67,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     private static final int _teleportCubeId = 31759;
     private static EpicBossState _state;
     private static Zone _zone;
+    private static Calendar calendar;
     private static long _lastAttackTime = 0;
     private static final int FWV_LIMITUNTILSLEEP = 20 * 60000; // 20
     private static final int FWV_APPTIMEOFVALAKAS = 10 * 60000;	 // 10
@@ -387,11 +388,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     }
 
     private static int getRespawnInterval() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DAY_OF_MONTH, Config.FIXINTERVALOFVALAKAS_DAYS);
-        calendar.set(Calendar.HOUR_OF_DAY, Config.RESPAWNHOURVALAKAS);
-        int interval = (int) (calendar.getTimeInMillis() - System.currentTimeMillis());
-        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * interval + ((Config.ENABLERANDOMVALAKAS)?Rnd.get(0, FWB_RANDOMINTERVALOFVALAKAS):0));
+        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * Config.VALAKAS_RESPAWN_INTERVAL + ((Config.ENABLERANDOMVALAKAS)?Rnd.get(0, FWB_RANDOMINTERVALOFVALAKAS):0));
     }
 
     public static Zone getZone() {
@@ -576,9 +573,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     }
 
     @Override
-    public void onLoad() {
-        init();
-    }
+    public void onLoad() {  init();}
 
     @Override
     public void onReload() {
