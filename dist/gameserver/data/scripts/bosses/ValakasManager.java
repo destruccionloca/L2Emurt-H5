@@ -74,7 +74,6 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     private static boolean Dying = false;
     private static final Location TELEPORT_POSITION = new Location(203940, -111840, 66);
     private static boolean _entryLocked = false;
-    private static Calendar calendar;
     private final static int FWB_RANDOMINTERVALOFVALAKAS = Config.RANDOMINTERVALOFVALAKAS * 60 * 60000;
 
     private static class CheckLastAttack extends RunnableImpl {
@@ -388,9 +387,9 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
     }
 
     private static int getRespawnInterval() {
-        calendar = Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DAY_OF_MONTH, Config.FIXINTERVALOFVALAKAS_DAYS);
-        calendar.set(Calendar.HOUR_OF_DAY, 21);
+        calendar.set(Calendar.HOUR_OF_DAY, Config.RESPAWNHOURVALAKAS);
         int interval = (int) (calendar.getTimeInMillis() - System.currentTimeMillis());
         return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * interval + ((Config.ENABLERANDOMVALAKAS)?Rnd.get(0, FWB_RANDOMINTERVALOFVALAKAS):0));
     }

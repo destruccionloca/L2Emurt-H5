@@ -3,6 +3,7 @@ package bosses;
 import bosses.EpicBossState.NestState;
 import bosses.EpicBossState.State;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import l2p.commons.threading.RunnableImpl;
@@ -216,7 +217,11 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
     }
 
     private static int getRespawnInterval() {
-        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * FWA_FIXINTERVALOFANTHARAS);
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DAY_OF_MONTH, Config.FIXINTERVALOFANTHARAS_DAYS);
+        calendar.set(Calendar.HOUR_OF_DAY, Config.RESPAWNHOURANTARAS);
+        int interval = (int) (calendar.getTimeInMillis() - System.currentTimeMillis());
+        return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * interval);
     }
 
     public static Zone getZone() {

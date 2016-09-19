@@ -1514,6 +1514,9 @@ public class Config {
     public static int FIXINTERVALOFSAILRENSPAWN_HOUR;
     public static int RANDOMINTERVALOFSAILRENSPAWN;
     public static int FIXINTERVALOFVALAKAS_DAYS;
+    public static int RESPAWNHOURVALAKAS;
+    public static int RESPAWNHOURBAIUM;
+    public static int RESPAWNHOURANTARAS;
     public static int RANDOMINTERVALOFVALAKAS;
     public static boolean ENABLERANDOMVALAKAS;
     public static int EPIC_BOSS_SPAWN_ANNON;
@@ -3098,6 +3101,9 @@ public class Config {
         FIXINTERVALOFSAILRENSPAWN_HOUR = epicBossSettings.getProperty("FIX_INTERVAL_OF_SAILREN_SPAWN_HOUR", 24);
         RANDOMINTERVALOFSAILRENSPAWN = epicBossSettings.getProperty("RANDOM_INTERVAL_OF_SAILREN_SPAWN", 24);
         FIXINTERVALOFVALAKAS_DAYS = epicBossSettings.getProperty("FIX_INTERVAL_OF_VALAKAS_DAYS", 11);
+        RESPAWNHOURANTARAS = epicBossSettings.getProperty("RESPAWN_HOUR_ANTARAS", 20);
+        RESPAWNHOURBAIUM = epicBossSettings.getProperty("RESPAWN_HOUR_VALAKAS", 20);
+        RESPAWNHOURVALAKAS = epicBossSettings.getProperty("RESPAWN_HOUR_BAIUM", 20);
         RANDOMINTERVALOFVALAKAS = epicBossSettings.getProperty("RANDOM_INTERVAL_OF_VALAKAS", 8);
         ENABLERANDOMVALAKAS = epicBossSettings.getProperty("ENABLE_RANDOM_VALAKAS", true);
         EPIC_BOSS_SPAWN_ANNON = epicBossSettings.getProperty("EpicBossSpawnAnnon", 5);
