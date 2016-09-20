@@ -360,6 +360,9 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DAY_OF_MONTH, Config.FIXINTERVALOFBAIUM_DAYS);
         calendar.set(Calendar.HOUR_OF_DAY, Config.RESPAWNHOURBAIUM);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
         int interval = (int) (calendar.getTimeInMillis() - System.currentTimeMillis());
         return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * (interval + ((Config.ENABLERANDOMBAIUM)?Rnd.get(0, FWB_RANDOMINTERVALOFBAIUM):0)));
     }
