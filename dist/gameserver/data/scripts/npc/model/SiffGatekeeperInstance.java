@@ -45,11 +45,11 @@ public final class SiffGatekeeperInstance extends NpcInstance{
     private boolean checkParty(Party party) {
         for(Player member : party.getPartyMembers()) {
             if(!member.isInRangeZ(this, 200)) {
-                party.broadcastMessageToPartyMembers("„лен группы :"+ member.getName()+" находитс€ слишком далеко от Npc");
+                party.broadcastMessageToPartyMembers("„лен группы: "+ member.getName()+" находитс€ слишком далеко от Npc");
                 return false;
             }
             if(member.isCursedWeaponEquipped()) {
-                party.broadcastMessageToPartyMembers("„лен группы :"+ member.getName()+" владелец прокл€того оружи€");
+                party.broadcastMessageToPartyMembers("„лен группы: "+ member.getName()+" владелец прокл€того оружи€");
                 return false;
             }
 
