@@ -18,17 +18,18 @@ public final class SiffGatekeeperInstance extends NpcInstance{
         super(objectId, template);
     }
     @Override
+    @Override
     public void onBypassFeedback(Player player, String command) {
         if (!canBypassCheck(player, this)) {
             return;
         }
 
         if (command.startsWith("request_enter_er")) {
-            Party party = player.getParty();
-            if(!party.isLeader(player)) {
+            if(player.isInParty() && !player.getParty().isLeader(player)) {
                 player.sendMessage("Доступно только для лидера группы");
                 return;
             }
+            Party party = player.getParty();
             if(party != null) {
                 if(checkParty(party) && player.reduceItem(TeletortItem, 1, true)) {
                     party.getPartyMembers().forEach(member -> member.teleToLocation(TELEPORT_POSITION1));
