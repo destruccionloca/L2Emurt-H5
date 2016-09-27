@@ -4,12 +4,10 @@ import l2p.gameserver.model.Party;
 import l2p.gameserver.model.Player;
 import l2p.gameserver.model.instances.NpcInstance;
 import l2p.gameserver.templates.npc.NpcTemplate;
-import l2p.gameserver.utils.ItemFunctions;
 import l2p.gameserver.utils.Location;
-import l2p.gameserver.utils.ReflectionUtils;
 
 /**
- * Created by Trick on 19.08.2016.
+ * Created by Trick on 19.08.2016, updated Alex 27.09.2016.
  */
 public final class SiffGatekeeperInstance extends NpcInstance{
 
@@ -26,21 +24,33 @@ public final class SiffGatekeeperInstance extends NpcInstance{
         }
 
         if (command.startsWith("request_enter_er")) {
-            if (player.getParty() == null || player.getParty().getMemberCount() < 2) {
-                showChatWindow(player, "default/30427-2.htm");
-            } else if (ItemFunctions.getItemCount(player, TeletortItem) > 0) {
-                Party party_tp = player.getParty();
-                ItemFunctions.removeItem(player, TeletortItem, 1, true);
-                for (Player member : party_tp) {
-                    if (member.isInRange(this, 100) && !member.isCursedWeaponEquipped()) {
-                        member.teleToLocation(TELEPORT_POSITION1);
+            Party party = player.getParty();
+            if(party != null && checkPlayer(player) && party.isLeader(player) && player.reduceItem(TeletortItem, 1, true)) {
+                boolean allChecked = true;
+                for(Player member : party.getPartyMembers()) {
+                    if(!checkPlayer(member)) {
+                        allChecked = false;
                     }
                 }
-                } else {
+                if(allChecked) {
+                    party.getPartyMembers().forEach(member -> member.teleToLocation(TELEPORT_POSITION1));
+                }
+            } else {
                 showChatWindow(player, "default/30427-1.htm");
             }
         } else {
             super.onBypassFeedback(player, command);
         }
+    }
+
+    private boolean checkPlayer(Player player) {
+        if(!player.isInRangeZ(this, 100)) {
+            return false;
+        }
+        if(player.isCursedWeaponEquipped()) {
+            return false;
+        }
+        return true;
+
     }
 }
