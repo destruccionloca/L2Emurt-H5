@@ -1,5 +1,6 @@
 package npc.model;
 
+import l2p.commons.util.Rnd;
 import l2p.gameserver.model.Party;
 import l2p.gameserver.model.Player;
 import l2p.gameserver.model.instances.NpcInstance;
@@ -12,12 +13,11 @@ import l2p.gameserver.utils.Location;
 public final class SiffGatekeeperInstance extends NpcInstance{
 
     private static final int TeletortItem = 40036;
-    private static final Location TELEPORT_POSITION1 = new Location(-114712, 150664, 424);
+    private static final Location TELEPORT_POSITION1 = new Location(-114696, 149576, 456);
 
     public SiffGatekeeperInstance(int objectId, NpcTemplate template) {
         super(objectId, template);
     }
-    @Override
     @Override
     public void onBypassFeedback(Player player, String command) {
         if (!canBypassCheck(player, this)) {
@@ -32,7 +32,7 @@ public final class SiffGatekeeperInstance extends NpcInstance{
             Party party = player.getParty();
             if(party != null) {
                 if(checkParty(party) && player.reduceItem(TeletortItem, 1, true)) {
-                    party.getPartyMembers().forEach(member -> member.teleToLocation(TELEPORT_POSITION1));
+                    party.getPartyMembers().forEach(member -> member.teleToLocation(getTeleportLoc()));
                 }
             } else {
                 showChatWindow(player, "default/30427-1.htm");
@@ -45,7 +45,7 @@ public final class SiffGatekeeperInstance extends NpcInstance{
     private boolean checkParty(Party party) {
         for(Player member : party.getPartyMembers()) {
             if(!member.isInRangeZ(this, 200)) {
-                party.broadcastMessageToPartyMembers("„лен группы: "+ member.getName()+" находитс€ слишком далеко от Npc");
+                party.broadcastMessageToPartyMembers("„лен группы: "+ member.getName()+" находитс€ слишком далеко.");
                 return false;
             }
             if(member.isCursedWeaponEquipped()) {
@@ -55,5 +55,30 @@ public final class SiffGatekeeperInstance extends NpcInstance{
 
         }
         return true;
+    }
+
+    private Location getTeleportLoc() {
+
+        int i0, i1, i2, i3;
+        i0 = Rnd.get(3);
+        if(i0 == 0)
+        {
+            i1 = -114712 + Rnd.get(100);
+            i2 = 150664 + Rnd.get(100);
+            i3 = 424;
+        }
+        else if(i0 == 1)
+        {
+            i1 = -114752 + Rnd.get(100);
+            i2 = 150674 + Rnd.get(100);
+            i3 = 424;
+        }
+        else
+        {
+            i1 = -114732 + Rnd.get(100);
+            i2 = 150644 + Rnd.get(100);
+            i3 = 424;
+        }
+        return new Location(i1, i2, i3);
     }
 }
