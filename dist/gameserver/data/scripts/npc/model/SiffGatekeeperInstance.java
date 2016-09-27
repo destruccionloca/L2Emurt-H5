@@ -25,14 +25,14 @@ public final class SiffGatekeeperInstance extends NpcInstance{
 
         if (command.startsWith("request_enter_er")) {
             Party party = player.getParty();
-            if(party != null && checkPlayer(player) && party.isLeader(player) && player.reduceItem(TeletortItem, 1, true)) {
+            if(party != null && checkPlayer(player) && party.isLeader(player)) {
                 boolean allChecked = true;
                 for(Player member : party.getPartyMembers()) {
                     if(!checkPlayer(member)) {
                         allChecked = false;
                     }
                 }
-                if(allChecked) {
+                if(allChecked && player.reduceItem(TeletortItem, 1, true)) {
                     party.getPartyMembers().forEach(member -> member.teleToLocation(TELEPORT_POSITION1));
                 }
             } else {
