@@ -25,14 +25,12 @@ public final class SiffGatekeeperInstance extends NpcInstance{
 
         if (command.startsWith("request_enter_er")) {
             Party party = player.getParty();
-            if(party != null && checkPlayer(player) && party.isLeader(player)) {
-                boolean allChecked = true;
-                for(Player member : party.getPartyMembers()) {
-                    if(!checkPlayer(member)) {
-                        allChecked = false;
-                    }
-                }
-                if(allChecked && player.reduceItem(TeletortItem, 1, true)) {
+            if(!party.isLeader(player)) {
+                player.sendMessage("Доступно только для лидера группы");
+                return;
+            }
+            if(party != null) {
+                if(checkParty(party) && player.reduceItem(TeletortItem, 1, true)) {
                     party.getPartyMembers().forEach(member -> member.teleToLocation(TELEPORT_POSITION1));
                 }
             } else {
@@ -43,14 +41,18 @@ public final class SiffGatekeeperInstance extends NpcInstance{
         }
     }
 
-    private boolean checkPlayer(Player player) {
-        if(!player.isInRangeZ(this, 100)) {
-            return false;
-        }
-        if(player.isCursedWeaponEquipped()) {
-            return false;
+    private boolean checkParty(Party party) {
+        for(Player member : party.getPartyMembers()) {
+            if(!member.isInRangeZ(this, 200)) {
+                party.broadcastMessageToPartyMembers("Член группы :"+ member.getName()+" находится слишком далеко от Npc");
+                return false;
+            }
+            if(member.isCursedWeaponEquipped()) {
+                party.broadcastMessageToPartyMembers("Член группы :"+ member.getName()+" владелец проклятого оружия");
+                return false;
+            }
+
         }
         return true;
-
     }
 }
