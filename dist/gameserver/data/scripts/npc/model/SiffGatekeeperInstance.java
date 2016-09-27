@@ -7,7 +7,7 @@ import l2p.gameserver.templates.npc.NpcTemplate;
 import l2p.gameserver.utils.Location;
 
 /**
- * Created on Trick 19.08.2016.
+ * Created by Trick on 19.08.2016.
  */
 public final class SiffGatekeeperInstance extends NpcInstance{
 
