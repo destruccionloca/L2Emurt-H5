@@ -2622,6 +2622,30 @@ public final class Player extends Playable implements PlayerGroup {
         return result;
     }
 
+    /**
+     * Забирает определенное количество итемов у игрока.<BR>
+     * <BR>
+     *
+     * @param itemId - какой итем забрать
+     * @param itemCount - сколько итема забрать
+     * @param notify - отображать системное сообщение
+     * <p>
+     * @return true если сняли
+     */
+    public boolean reduceItem(int itemId, long itemCount, boolean notify) {
+        if (itemCount <= 0 || itemId <= 0) {
+            return false;
+        }
+
+        boolean result = getInventory().destroyItemByItemId(itemId, itemCount);
+
+        if (notify && result) {
+            sendPacket(SystemMessage2.removeItems(itemId, itemCount));
+        }
+
+        return result;
+    }
+
     public ItemInstance addAdena(long adena) {
         return addAdena(adena, false);
     }
@@ -10658,26 +10682,3 @@ public final class Player extends Playable implements PlayerGroup {
     }
 
 }
-    /**
-     * Забирает определенное количество итемов у игрока.<BR>
-     * <BR>
-     *
-     * @param itemId - какой итем забрать
-     * @param itemCount - сколько итема забрать
-     * @param notify - отображать системное сообщение
-     * <p>
-     * @return true если сняли
-     */
-    public boolean reduceItem(int itemId, long itemCount, boolean notify) {
-        if (itemCount <= 0 || itemId <= 0) {
-            return false;
-        }
-
-        boolean result = getInventory().destroyItemByItemId(itemId, itemCount);
-
-        if (notify && result) {
-            sendPacket(SystemMessage.removeItems(itemId, itemCount));
-        }
-
-        return result;
-    }
