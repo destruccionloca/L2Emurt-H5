@@ -13,7 +13,7 @@ import l2p.gameserver.utils.Location;
 public final class SiffGatekeeperInstance extends NpcInstance{
 
     private static final int TeletortItem = 40036;
-    private static final Location TELEPORT_POSITION1 = new Location(-114696, 149576, 456);
+    private static final Location TELEPORT_POSITION1 = new Location(-114680, 150744, 424);
 
     public SiffGatekeeperInstance(int objectId, NpcTemplate template) {
         super(objectId, template);
@@ -63,20 +63,20 @@ public final class SiffGatekeeperInstance extends NpcInstance{
         i0 = Rnd.get(3);
         if(i0 == 0)
         {
-            i1 = -114712 + Rnd.get(100);
-            i2 = 150664 + Rnd.get(100);
+            i1 = -114680 + Rnd.get(100);
+            i2 = 150744 + Rnd.get(100);
             i3 = 424;
         }
         else if(i0 == 1)
         {
-            i1 = -114752 + Rnd.get(100);
-            i2 = 150674 + Rnd.get(100);
+            i1 = -114648 + Rnd.get(100);
+            i2 = 150632 + Rnd.get(100);
             i3 = 424;
         }
         else
         {
-            i1 = -114732 + Rnd.get(100);
-            i2 = 150644 + Rnd.get(100);
+            i1 = -114744 + Rnd.get(100);
+            i2 = 150600 + Rnd.get(100);
             i3 = 424;
         }
         return new Location(i1, i2, i3);
