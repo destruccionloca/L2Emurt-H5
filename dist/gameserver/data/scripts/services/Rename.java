@@ -313,6 +313,14 @@ public class Rename extends Functions {
         }
 
         String name = args[0];
+		if (Config.SERVICES_FORBIDDEN_NAMES.length > 1) {
+            for (final String st : Config.SERVICES_FORBIDDEN_NAMES) {
+                if (name.toLowerCase().contains(st.toLowerCase())) {
+                    return;
+                }
+            }
+        }
+		
         if (!Util.isMatchingRegexp(name, Config.CNAME_TEMPLATE) && !Config.SERVICES_CHANGE_NICK_ALLOW_SYMBOL) {
             show(new CustomMessage("scripts.services.Rename.incorrectinput", player), player);
             return;
@@ -443,7 +451,7 @@ public class Rename extends Functions {
                 player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
             }
             return;
-        }
+        }		
 
         show(new CustomMessage("scripts.services.Rename.changedname", player).addString(player.getClan().getName()).addString(param[0]), player);
         SubUnit sub = player.getClan().getSubUnit(Clan.SUBUNIT_MAIN_CLAN);
