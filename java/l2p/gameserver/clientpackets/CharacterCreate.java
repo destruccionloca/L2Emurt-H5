@@ -61,6 +61,14 @@ public class CharacterCreate extends L2GameClientPacket {
                 return;
             }
         }
+        if (Config.FORBIDDEN_NAMES_CREATE.length > 1) {
+            for (final String st : Config.FORBIDDEN_NAMES_CREATE) {
+                if (name.toLowerCase().contains(st.toLowerCase())) {
+                    return;
+                }
+            }
+        }
+
         if (CharacterDAO.getInstance().accountCharNumber(getClient().getLogin()) >= 8) {
             sendPacket(CharacterCreateFail.REASON_TOO_MANY_CHARACTERS);
             return;
