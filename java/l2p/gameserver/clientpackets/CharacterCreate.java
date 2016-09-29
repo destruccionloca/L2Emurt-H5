@@ -63,7 +63,7 @@ public class CharacterCreate extends L2GameClientPacket {
         }
         if (Config.FORBIDDEN_NAMES_CREATE.length > 1) {
             for (final String st : Config.FORBIDDEN_NAMES_CREATE) {
-                if (name.toLowerCase().contains(st.toLowerCase())) {
+                if (_name.toLowerCase().contains(st.toLowerCase())) {
                     return;
                 }
             }
