@@ -469,6 +469,7 @@ public class Config {
     public static int MULTISELL_SIZE;
     public static boolean SERVICES_CHANGE_NICK_ENABLED;
     public static String[] SERVICES_FORBIDDEN_NAMES;
+    public static String[] FORBIDDEN_NAMES_CREATE;
     public static boolean SERVICES_CHANGE_NICK_ALLOW_SYMBOL;
     public static int SERVICES_CHANGE_NICK_PRICE;
     public static int SERVICES_CHANGE_NICK_ITEM;
@@ -3659,6 +3660,7 @@ public class Config {
         ENCHANT_ATTRIBUTE_CHANCE_CORRECT = servicesSettings.getProperty("EnchantAttributeChanceCorrect", 0);
 
         CLASS_MASTERS_PRICE_ITEM = servicesSettings.getProperty("ClassMastersPriceItem", 57);
+        FORBIDDEN_NAMES_CREATE = servicesSettings.getProperty("ForbiddenNamesCreate", "").replaceAll(" ", "").split(",");
         SERVICES_FORBIDDEN_NAMES = servicesSettings.getProperty("ForbiddenNames", "").replaceAll(" ", "").split(",");
         SERVICES_CHANGE_NICK_ALLOW_SYMBOL = servicesSettings.getProperty("NickChangeAllowSimbol", false);
         SERVICES_CHANGE_NICK_ENABLED = servicesSettings.getProperty("NickChangeEnabled", false);
