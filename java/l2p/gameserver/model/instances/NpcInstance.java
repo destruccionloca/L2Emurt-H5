@@ -71,6 +71,7 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
+import java.util.stream.Collectors;
 
 public class NpcInstance extends Creature {
 
@@ -1494,8 +1495,13 @@ public class NpcInstance extends Creature {
     }
 
     public static void showAcquireList(AcquireType t, Player player) {
-        final Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(player, t);
+        Collection<SkillLearn> skills = new ArrayList<>();
 
+        if(t == AcquireType.CERTIFICATION) {
+            skills.addAll(SkillAcquireHolder.getInstance().getAvailableSkills(player, t).stream().filter(skillLearn -> player.getInventory().getItemByItemId(skillLearn.getItemId()) != null).collect(Collectors.toList()));
+        } else {
+            skills = SkillAcquireHolder.getInstance().getAvailableSkills(player, t);
+        }
         final AcquireSkillList asl = new AcquireSkillList(t, skills.size());
 
         for (SkillLearn s : skills) {
