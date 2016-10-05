@@ -1,1 +1,0 @@
-ant -f build-guard.xml -l compile-guard.log
