@@ -12,6 +12,7 @@ import l2p.gameserver.model.base.Element;
 import l2p.gameserver.model.base.SkillTrait;
 import l2p.gameserver.model.instances.ReflectionBossInstance;
 import l2p.gameserver.model.items.ItemInstance;
+import l2p.gameserver.serverpackets.ExShowScreenMessage;
 import l2p.gameserver.serverpackets.SystemMessage;
 import l2p.gameserver.serverpackets.SystemMessage2;
 import l2p.gameserver.serverpackets.components.SystemMsg;
@@ -930,10 +931,10 @@ public class Formulas {
 		
 		if(caster.isPlayer()) {
 		if (Config.SKILLS_CHANCE_SHOW && caster.getPlayer().getVarB("SkillsHideChance")) {
-            String result_ = (result)?"Успешное применение умения": "Неудачное применение умения";
+            String result_ = (result)?"Успешное применение умения":"Неудачное применение умения";
             int chance = (int) env.value;
-            caster.getPlayer().sendMessage("Шанс успешного применения умения " + chance + " %");
-            caster.getPlayer().sendMessage(result_);
+            caster.getPlayer().sendPacket(new ExShowScreenMessage("Шанс успешного применения умения " + chance + " %", 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+            caster.getPlayer().sendPacket(new ExShowScreenMessage(result_, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
         }
 		}
 		
