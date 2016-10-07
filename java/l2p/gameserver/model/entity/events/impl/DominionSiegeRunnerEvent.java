@@ -287,7 +287,7 @@ public class DominionSiegeRunnerEvent extends GlobalEvent {
                 return;
             }
             _startTime = (Calendar) Config.TW_VALIDATION_DATE.clone();
-            _startTime.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
+            _startTime.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
             if (_startTime.before(Config.CASTLE_VALIDATION_DATE)) {
                 _startTime.add(Calendar.WEEK_OF_YEAR, 1);
             }
