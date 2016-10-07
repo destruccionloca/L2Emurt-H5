@@ -930,8 +930,10 @@ public class Formulas {
 		
 		if(caster.isPlayer()) {
 		if (Config.SKILLS_CHANCE_SHOW && caster.getPlayer().getVarB("SkillsHideChance")) {
-            int chance = (int) env.value;            
+            String result_ = (result)?"Успешное применение умения": "Неудачное применение умения";
+            int chance = (int) env.value;
             caster.getPlayer().sendMessage("Шанс успешного применения умения " + chance + " %");
+            caster.getPlayer().sendMessage(result_);
         }
 		}
 		
