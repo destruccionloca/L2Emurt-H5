@@ -927,14 +927,16 @@ public class Formulas {
             if (debugTarget) {
                 target.getPlayer().sendMessage(stat.toString());
             }
+        }		
+		
+		if(caster.isPlayer()) {
+		if (Config.SKILLS_CHANCE_SHOW && caster.getPlayer().getVarB("SkillsHideChance")) {
+            String result_ = (result)?"Успешное применение умения": "Неудачное применение умения";
+            int chance = (int) env.value;
+            caster.getPlayer().sendMessage("Шанс успешного применения умения " + chance + " %");
+            caster.getPlayer().sendMessage(result_);
         }
-
-        if(caster.isPlayer()) {
-            if (Config.SKILLS_CHANCE_SHOW && caster.getPlayer().getVarB("SkillsHideChance")) {
-                int chance = (int) env.value;
-                caster.getPlayer().sendMessage("Шанс успешного применения умения " + chance + " %");
-            }
-        }
+		}
 		
         return result;
     }
