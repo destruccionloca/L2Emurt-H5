@@ -107,17 +107,6 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     private static ScheduledFuture<?> _endTask;
 
     private static Zone _zone;
-    private static Zone _zone1;
-    private static Zone _zone2;
-    private static Zone _zone3;
-    private static Zone _zone4;
-    private static Zone _zone5;
-    //new 
-    private static Zone _zone6;
-    private static Zone _zone7;
-    private static Zone _zone8;
-    private static Zone _zone9;
-    private static Zone _zone10;
     private static Zone _myZone = null;
     private static Territory territory = null;
     private static Map<Integer, Integer> _pScore = new HashMap<Integer, Integer>();
@@ -133,20 +122,8 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     @Override
     public void onLoad() {
         CharListenerList.addGlobal(this);
-		String[] zones = {"[giran_town_tvt]", "[cleft_tvt]", "[hellbound_quarry_tvt]"};        
-        _zones.put(zones[0], ReflectionUtils.getZone(zones[0]).getTemplate());
-        _zones.put(zones[1], ReflectionUtils.getZone(zones[1]).getTemplate());
-        _zones.put(zones[2], ReflectionUtils.getZone(zones[2]).getTemplate());
-        _zones.put(zones[0], ReflectionUtils.getZone(zones[0]).getTemplate());
-        _zones.put(zones[1], ReflectionUtils.getZone(zones[1]).getTemplate());
-        _zones.put(zones[2], ReflectionUtils.getZone(zones[2]).getTemplate());
-        //new 
-        _zones.put(zones[0], ReflectionUtils.getZone(zones[0]).getTemplate());
-        _zones.put(zones[1], ReflectionUtils.getZone(zones[1]).getTemplate());
-        _zones.put(zones[2], ReflectionUtils.getZone(zones[2]).getTemplate());
-        //new
-        _zones.put(zones[0], ReflectionUtils.getZone(zones[0]).getTemplate());
-        _zones.put(zones[1], ReflectionUtils.getZone(zones[1]).getTemplate());
+		String zone = "[UnderGroundPvPKandins]";
+        _zones.put(zone, ReflectionUtils.getZone(zone).getTemplate());
         for (final int doorId : doors) {
             _doors.put(doorId, ReflectionUtils.getDoor(doorId).getTemplate());
         }
@@ -155,35 +132,13 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
         //   reflection.setGeoIndex(geoIndex);
         reflection.init(_doors, _zones);
 
-        _zone = reflection.getZone(zones[0]);
-        _zone1 = reflection.getZone(zones[1]);
-        _zone2 = reflection.getZone(zones[2]);
-        _zone3 = reflection.getZone(zones[0]);
-        _zone4 = reflection.getZone(zones[1]);
-        _zone5 = reflection.getZone(zones[2]);
-        //new
-        _zone6 = reflection.getZone(zones[0]);
-        _zone7 = reflection.getZone(zones[1]);
-        _zone8 = reflection.getZone(zones[2]);
-        //new
-        _zone9 = reflection.getZone(zones[0]);
-        _zone10 = reflection.getZone(zones[1]);
+        _zone = reflection.getZone(zone);
         _active = ServerVariables.getString("TvT", "off").equalsIgnoreCase("on");
         if (isActive()) {
             scheduleEventStart();
         }
 
         _zone.addListener(_zoneListener);
-        _zone1.addListener(_zoneListener);
-        _zone2.addListener(_zoneListener);
-        _zone3.addListener(_zoneListener);
-        _zone4.addListener(_zoneListener);
-        _zone5.addListener(_zoneListener);
-        _zone6.addListener(_zoneListener);
-        _zone7.addListener(_zoneListener);
-        _zone8.addListener(_zoneListener);
-        _zone9.addListener(_zoneListener);
-        _zone10.addListener(_zoneListener);
 
         int i = 0;
 
@@ -736,43 +691,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     }
 
     public static void teleportPlayersToColiseum() {
-        switch (Rnd.get(1, 11)) {
-            case 1:
-                _myZone = _zone;
-                break;
-            case 2:
-                _myZone = _zone1;
-                break;
-            case 3:
-                _myZone = _zone2;
-                break;
-            case 4:
-                _myZone = _zone3;
-                break;
-            case 5:
-                _myZone = _zone4;
-                break;
-            case 6:
-                _myZone = _zone5;
-                break;
-            case 7:
-                _myZone = _zone6;
-                break;
-            case 8:
-                _myZone = _zone7;
-                break;
-            case 9:
-                _myZone = _zone8;
-                break;
-            case 10:
-                _myZone = _zone9;
-                break;
-            case 11:
-                _myZone = _zone10;
-                break;
-            default:
-                _myZone = _zone;
-        }
+        _myZone = _zone;
         territory = _myZone.getTerritory();
 
         for (Player player : getPlayers(_redTeamPoints)) {
