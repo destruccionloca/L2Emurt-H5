@@ -141,17 +141,7 @@ import l2p.gameserver.model.entity.residence.Castle;
 import l2p.gameserver.model.entity.residence.ClanHall;
 import l2p.gameserver.model.entity.residence.Fortress;
 import l2p.gameserver.model.entity.residence.Residence;
-import l2p.gameserver.model.instances.DecoyInstance;
-import l2p.gameserver.model.instances.FestivalMonsterInstance;
-import l2p.gameserver.model.instances.GuardInstance;
-import l2p.gameserver.model.instances.MonsterInstance;
-import l2p.gameserver.model.instances.NpcInstance;
-import l2p.gameserver.model.instances.PetBabyInstance;
-import l2p.gameserver.model.instances.PetInstance;
-import l2p.gameserver.model.instances.ReflectionBossInstance;
-import l2p.gameserver.model.instances.StaticObjectInstance;
-import l2p.gameserver.model.instances.TamedBeastInstance;
-import l2p.gameserver.model.instances.TrapInstance;
+import l2p.gameserver.model.instances.*;
 import l2p.gameserver.model.items.Inventory;
 import l2p.gameserver.model.items.ItemContainer;
 import l2p.gameserver.model.items.ItemInstance;
@@ -181,85 +171,14 @@ import l2p.gameserver.model.quest.QuestState;
 import l2p.gameserver.network.GameClient;
 import l2p.gameserver.scripts.Events;
 import l2p.gameserver.scripts.Functions;
-import l2p.gameserver.serverpackets.AbnormalStatusUpdate;
-import l2p.gameserver.serverpackets.ActionFail;
-import l2p.gameserver.serverpackets.AutoAttackStart;
-import l2p.gameserver.serverpackets.CameraMode;
-import l2p.gameserver.serverpackets.ChairSit;
-import l2p.gameserver.serverpackets.ChangeWaitType;
-import l2p.gameserver.serverpackets.CharInfo;
-import l2p.gameserver.serverpackets.ConfirmDlg;
-import l2p.gameserver.serverpackets.EtcStatusUpdate;
-import l2p.gameserver.serverpackets.ExAutoSoulShot;
-import l2p.gameserver.serverpackets.ExBR_AgathionEnergyInfo;
-import l2p.gameserver.serverpackets.ExBR_ExtraUserInfo;
-import l2p.gameserver.serverpackets.ExBR_PremiumState;
-import l2p.gameserver.serverpackets.ExBasicActionList;
-import l2p.gameserver.serverpackets.ExDominionWarStart;
-import l2p.gameserver.serverpackets.ExDuelUpdateUserInfo;
-import l2p.gameserver.serverpackets.ExOlympiadMatchEnd;
-import l2p.gameserver.serverpackets.ExOlympiadMode;
-import l2p.gameserver.serverpackets.ExOlympiadSpelledInfo;
-import l2p.gameserver.serverpackets.ExPCCafePointInfo;
-import l2p.gameserver.serverpackets.ExQuestItemList;
-import l2p.gameserver.serverpackets.ExSetCompassZoneCode;
+import l2p.gameserver.serverpackets.*;
+
 import static l2p.gameserver.serverpackets.ExSetCompassZoneCode.ZONE_ALTERED_FLAG;
 import static l2p.gameserver.serverpackets.ExSetCompassZoneCode.ZONE_PEACE_FLAG;
 import static l2p.gameserver.serverpackets.ExSetCompassZoneCode.ZONE_PVP_FLAG;
 import static l2p.gameserver.serverpackets.ExSetCompassZoneCode.ZONE_SIEGE_FLAG;
 import static l2p.gameserver.serverpackets.ExSetCompassZoneCode.ZONE_SSQ_FLAG;
-import l2p.gameserver.serverpackets.ExStartScenePlayer;
-import l2p.gameserver.serverpackets.ExStorageMaxCount;
-import l2p.gameserver.serverpackets.ExVitalityPointInfo;
-import l2p.gameserver.serverpackets.ExVoteSystemInfo;
-import l2p.gameserver.serverpackets.GetItem;
-import l2p.gameserver.serverpackets.HennaInfo;
-import l2p.gameserver.serverpackets.InventoryUpdate;
-import l2p.gameserver.serverpackets.ItemList;
-import l2p.gameserver.serverpackets.L2GameServerPacket;
-import l2p.gameserver.serverpackets.LeaveWorld;
-import l2p.gameserver.serverpackets.MagicSkillLaunched;
-import l2p.gameserver.serverpackets.MagicSkillUse;
-import l2p.gameserver.serverpackets.MyTargetSelected;
-import l2p.gameserver.serverpackets.NpcInfoPoly;
-import l2p.gameserver.serverpackets.ObserverEnd;
-import l2p.gameserver.serverpackets.ObserverStart;
-import l2p.gameserver.serverpackets.PartySmallWindowUpdate;
-import l2p.gameserver.serverpackets.PartySpelled;
-import l2p.gameserver.serverpackets.PlaySound;
-import l2p.gameserver.serverpackets.PledgeShowMemberListDelete;
-import l2p.gameserver.serverpackets.PledgeShowMemberListDeleteAll;
-import l2p.gameserver.serverpackets.PledgeShowMemberListUpdate;
-import l2p.gameserver.serverpackets.PrivateStoreListBuy;
-import l2p.gameserver.serverpackets.PrivateStoreListSell;
-import l2p.gameserver.serverpackets.PrivateStoreMsgBuy;
-import l2p.gameserver.serverpackets.PrivateStoreMsgSell;
-import l2p.gameserver.serverpackets.QuestList;
-import l2p.gameserver.serverpackets.RadarControl;
-import l2p.gameserver.serverpackets.RecipeShopMsg;
-import l2p.gameserver.serverpackets.RecipeShopSellList;
-import l2p.gameserver.serverpackets.RelationChanged;
-import l2p.gameserver.serverpackets.Ride;
-import l2p.gameserver.serverpackets.SendTradeDone;
-import l2p.gameserver.serverpackets.ServerClose;
-import l2p.gameserver.serverpackets.SetupGauge;
-import l2p.gameserver.serverpackets.ShortBuffStatusUpdate;
-import l2p.gameserver.serverpackets.ShortCutInit;
-import l2p.gameserver.serverpackets.ShortCutRegister;
-import l2p.gameserver.serverpackets.SkillCoolTime;
-import l2p.gameserver.serverpackets.SkillList;
-import l2p.gameserver.serverpackets.Snoop;
-import l2p.gameserver.serverpackets.SocialAction;
-import l2p.gameserver.serverpackets.SpawnEmitter;
-import l2p.gameserver.serverpackets.SpecialCamera;
-import l2p.gameserver.serverpackets.StatusUpdate;
-import l2p.gameserver.serverpackets.SystemMessage;
-import l2p.gameserver.serverpackets.SystemMessage2;
-import l2p.gameserver.serverpackets.TargetSelected;
-import l2p.gameserver.serverpackets.TargetUnselected;
-import l2p.gameserver.serverpackets.TeleportToLocation;
-import l2p.gameserver.serverpackets.UserInfo;
-import l2p.gameserver.serverpackets.ValidateLocation;
+
 import l2p.gameserver.serverpackets.components.ChatType;
 import l2p.gameserver.serverpackets.components.CustomMessage;
 import l2p.gameserver.serverpackets.components.IStaticPacket;
@@ -309,6 +228,7 @@ import l2p.gameserver.utils.Strings;
 import l2p.gameserver.utils.TeleportUtils;
 import l2p.gameserver.utils.autoenchant.EnchantParams;
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
@@ -9897,8 +9817,39 @@ public final class Player extends Playable implements PlayerGroup {
             return;
         }
         if (attacker != this) {
+            sendPacket(new ExShowScreenMessage(returnName(this) + " получаает от цели " + returnName(attacker) + " " + (long) damage + " урона.", 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
             sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber((long) damage));
         }
+    }
+
+    private String returnName(Creature cha) {
+        if (cha == null) {
+            return StringUtils.EMPTY;
+        }
+
+        if (cha.isDoor()) {
+            return ((DoorInstance) cha).getName();
+        }
+
+        if (cha.getNpcId() <= 0) {
+            if (cha.isCursedWeaponEquipped()) {
+                Player player = cha.getPlayer();
+                int cursedWeaponid = player.getCursedWeaponEquippedId();
+
+                if (cursedWeaponid == 8190) {
+                    String name__ = "Zariche";
+                    return StringUtils.defaultString(name__);
+                } else if (cursedWeaponid == 8689) {
+                    String name__ = "Akamanah";
+                    return StringUtils.defaultString(name__);
+                } else {
+                    return cha.getName();
+                }
+            }
+            return cha.getName();
+        }
+
+        return cha.getName();
     }
 
     public IntObjectMap<String> getPostFriends() {
