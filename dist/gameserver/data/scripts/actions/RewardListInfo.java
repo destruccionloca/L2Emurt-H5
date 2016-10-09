@@ -36,7 +36,6 @@ public abstract class RewardListInfo {
         final int diff = npc.calculateLevelDiffForDrop(player.isInParty() ? player.getParty().getLevel() : player.getLevel());
         double mod = npc.calcStat(Stats.REWARD_MULTIPLIER, 1.0, player, null);
         mod *= Experience.penaltyModifier(diff, 9);
-        mod *= player.getRateChance();
 
         HtmlMessage htmlMessage = new HtmlMessage(5);
         htmlMessage.replace("%npc_name%", HtmlUtils.htmlNpcName(npc.getNpcId()));
