@@ -83,7 +83,7 @@ public abstract class RewardListInfo {
 
     public static void ratedGroupedRewardList(StringBuilder tmp, NpcInstance npc, RewardList list, Player player, double mod) {
         tmp.append("<table width=270 border=0>");
-        tmp.append("<tr><td><table width=270 border=0><tr><td><font color=\"aaccff\">").append(list.getType()).append("</font></td></tr></table></td></tr>");
+        tmp.append("<tr><td><table width=270 border=0><tr><td><font color=\"aaccff\">").append("ЗАЛУПА").append("</font></td></tr></table></td></tr>");
         tmp.append("<tr><td><img src=\"L2UI.SquareWhite\" width=270 height=1> </td></tr>");
         tmp.append("<tr><td><img src=\"L2UI.SquareBlank\" width=270 height=10> </td></tr>");
 
@@ -198,7 +198,7 @@ public abstract class RewardListInfo {
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(Math.round(d.getMinDrop())).append("..").append(Math.round(d.getMaxDrop())).append("]&nbsp;");
-                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
+                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("&nbsp; cof:").append(rateChance).append("</font></td></tr>");
             }
             tmp.append("</table></td></tr>");
         }
@@ -243,7 +243,7 @@ public abstract class RewardListInfo {
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(d.getMinDrop()).append("..").append(Math.round(d.getMaxDrop() * imult)).append("]&nbsp;");
-                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
+                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("&nbsp; cof:").append(rateChance).append("</font></td></tr>");
             }
         }
 
