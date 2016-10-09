@@ -83,7 +83,7 @@ public abstract class RewardListInfo {
 
     public static void ratedGroupedRewardList(StringBuilder tmp, NpcInstance npc, RewardList list, Player player, double mod) {
         tmp.append("<table width=270 border=0>");
-        tmp.append("<tr><td><table width=270 border=0><tr><td><font color=\"aaccff\">").append("ЗАЛУПА").append("</font></td></tr></table></td></tr>");
+        tmp.append("<tr><td><table width=270 border=0><tr><td><font color=\"aaccff\">").append(list.getType()).append("</font></td></tr></table></td></tr>");
         tmp.append("<tr><td><img src=\"L2UI.SquareWhite\" width=270 height=1> </td></tr>");
         tmp.append("<tr><td><img src=\"L2UI.SquareBlank\" width=270 height=10> </td></tr>");
 
@@ -156,6 +156,10 @@ public abstract class RewardListInfo {
             tmp.append("<tr><td><table>");
             for (RewardData d : items) {
                 double imult = d.notRate() ? 1.0 : gmult;
+                double chance = d.getChance() * rateChance;
+                if (chance > RewardList.MAX_CHANCE) {
+                    chance = RewardList.MAX_CHANCE;
+                }
 
                 String icon = d.getItem().getIcon();
                 if (icon == null || icon.equals(StringUtils.EMPTY)) {
@@ -163,7 +167,7 @@ public abstract class RewardListInfo {
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(Math.round(d.getMinDrop() * (g.isAdena() ? gmult : 1.0))).append("..").append(Math.round(g.isAdena() ? d.getMaxDrop() * (imult) : d.getMaxDrop() * imult)).append("]&nbsp;");
-                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("&nbsp; cof:").append(rateChance).append("</font></td></tr>");
+                tmp.append(pf.format(chance / RewardList.MAX_CHANCE)).append("</font></td></tr>");
             }
             tmp.append("</table></td></tr>");
         }
@@ -182,6 +186,7 @@ public abstract class RewardListInfo {
             double gchance = g.getChance();
             double rateChance = player.getRateChance();
 
+
             tmp.append("<tr><td><img src=\"L2UI.SquareBlank\" width=270 height=10> </td></tr>");
             tmp.append("<tr><td>");
             tmp.append("<table width=270 border=0 bgcolor=333333>");
@@ -193,12 +198,16 @@ public abstract class RewardListInfo {
             tmp.append("<tr><td><table>");
             for (RewardData d : items) {
                 String icon = d.getItem().getIcon();
+                double chance = d.getChance() * rateChance;
+                if (chance > RewardList.MAX_CHANCE) {
+                    chance = RewardList.MAX_CHANCE;
+                }
                 if (icon == null || icon.equals(StringUtils.EMPTY)) {
                     icon = "icon.etc_question_mark_i00";
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(Math.round(d.getMinDrop())).append("..").append(Math.round(d.getMaxDrop())).append("]&nbsp;");
-                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("&nbsp; cof:").append(rateChance).append("</font></td></tr>");
+                tmp.append(pf.format(chance / RewardList.MAX_CHANCE)).append("</font></td></tr>");
             }
             tmp.append("</table></td></tr>");
         }
@@ -238,12 +247,16 @@ public abstract class RewardListInfo {
             for (RewardData d : items) {
                 double imult = d.notRate() ? 1.0 : gmult;
                 String icon = d.getItem().getIcon();
+                double chance = d.getChance() * rateChance;
+                if (chance > RewardList.MAX_CHANCE) {
+                    chance = RewardList.MAX_CHANCE;
+                }
                 if (icon == null || icon.equals(StringUtils.EMPTY)) {
                     icon = "icon.etc_question_mark_i00";
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(d.getMinDrop()).append("..").append(Math.round(d.getMaxDrop() * imult)).append("]&nbsp;");
-                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("&nbsp; cof:").append(rateChance).append("</font></td></tr>");
+                tmp.append(pf.format(chance / RewardList.MAX_CHANCE)).append("</font></td></tr>");
             }
         }
 
