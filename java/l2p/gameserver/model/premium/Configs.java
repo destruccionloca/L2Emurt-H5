@@ -18,6 +18,7 @@ public class Configs implements Comparable<Object> {
     public double RATE_ADENA = 2.;
     public double RATE_ITEM = 2.;
     public double RATE_SPOIL = 2.;
+    public double RATE_CHANCE = 2.;
     public double RATE_CRAFT_MW = 2.;
     public double RATE_CRAFT_DOUBLE = 2.;
     public double RATE_QUEST_REWARD = 2.;

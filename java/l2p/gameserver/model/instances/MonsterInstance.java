@@ -742,6 +742,7 @@ public class MonsterInstance extends NpcInstance {
         final int diff = calculateLevelDiffForDrop(topDamager.getLevel());
         double mod = calcStat(Stats.REWARD_MULTIPLIER, 1., activeChar, null);
         mod *= Experience.penaltyModifier(diff, 9);
+        mod *= activeChar.getChanceItems();
 
         List<RewardItem> rewardItems = list.roll(activePlayer, mod, this instanceof RaidBossInstance, isChampion());
         switch (type) {

@@ -67,6 +67,7 @@ public class Party implements PlayerGroup {
     private CommandChannel _commandChannel;
     public double _rateExp;
     public double _rateSp;
+    public double _rateChance;
     public double _rateDrop;
     public double _rateAdena;
     public double _rateSpoil;
@@ -87,6 +88,7 @@ public class Party implements PlayerGroup {
         _itemDistribution = itemDistribution;
         _members.add(leader);
         _partyLvl = leader.getLevel();
+        _rateChance = leader.hasBonus() ? PremiumConfig.getPremConfigId(leader.getBonus().getBonusId()).RATE_CHANCE : 1;
         _rateExp = leader.hasBonus() ? PremiumConfig.getPremConfigId(leader.getBonus().getBonusId()).RATE_XP : 1;
         _rateSp = leader.hasBonus() ? PremiumConfig.getPremConfigId(leader.getBonus().getBonusId()).RATE_SP : 1;
         _rateAdena = leader.hasBonus() ? PremiumConfig.getPremConfigId(leader.getBonus().getBonusId()).RATE_ADENA : 1;
@@ -690,11 +692,13 @@ public class Party implements PlayerGroup {
         double rateDrop = 0.;
         double rateAdena = 0.;
         double rateSpoil = 0.;
+        double rateChance = 0.;
         double minRateExp = Double.MAX_VALUE;
         double minRateSp = Double.MAX_VALUE;
         double minRateDrop = Double.MAX_VALUE;
         double minRateAdena = Double.MAX_VALUE;
         double minRateSpoil = Double.MAX_VALUE;
+        double minRateChance = Double.MAX_VALUE;
         int count = 0;
 
         for (Player member : _members) {
@@ -707,12 +711,14 @@ public class Party implements PlayerGroup {
             rateDrop += member.hasBonus() ? PremiumConfig.getPremConfigId(member.getBonus().getBonusId()).RATE_ITEM : 1;
             rateAdena += member.hasBonus() ? PremiumConfig.getPremConfigId(member.getBonus().getBonusId()).RATE_ADENA : 1;
             rateSpoil += member.hasBonus() ? PremiumConfig.getPremConfigId(member.getBonus().getBonusId()).RATE_SPOIL : 1;
+            rateChance += member.hasBonus() ? PremiumConfig.getPremConfigId(member.getBonus().getBonusId()).RATE_CHANCE : 1;
 
             minRateExp = Math.min(minRateExp, member.hasBonus() ? PremiumConfig.getPremConfigId(member.getBonus().getBonusId()).RATE_XP : 1);
             minRateSp = Math.min(minRateSp, member.hasBonus() ? PremiumConfig.getPremConfigId(member.getBonus().getBonusId()).RATE_SP : 1);
             minRateDrop = Math.min(minRateDrop, member.hasBonus() ? PremiumConfig.getPremConfigId(member.getBonus().getBonusId()).RATE_ITEM : 1);
             minRateAdena = Math.min(minRateAdena, member.hasBonus() ? PremiumConfig.getPremConfigId(member.getBonus().getBonusId()).RATE_ADENA : 1);
             minRateSpoil = Math.min(minRateSpoil, member.hasBonus() ? PremiumConfig.getPremConfigId(member.getBonus().getBonusId()).RATE_SPOIL : 1);
+            minRateChance = Math.min(minRateSpoil, member.hasBonus() ? PremiumConfig.getPremConfigId(member.getBonus().getBonusId()).RATE_CHANCE : 1);
         }
 
         _rateExp = Config.RATE_PARTY_MIN ? minRateExp : rateExp / count;
@@ -720,6 +726,7 @@ public class Party implements PlayerGroup {
         _rateDrop = Config.RATE_PARTY_MIN ? minRateDrop : rateDrop / count;
         _rateAdena = Config.RATE_PARTY_MIN ? minRateAdena : rateAdena / count;
         _rateSpoil = Config.RATE_PARTY_MIN ? minRateSpoil : rateSpoil / count;
+        _rateChance = Config.RATE_PARTY_MIN ? minRateChance : rateChance / count;
     }
 
     public int getLevel() {

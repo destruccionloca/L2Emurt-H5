@@ -10,6 +10,8 @@
 		<!-- Бонус EXP -->
 		<RateXP val="2"/>
 		<!-- Бонус SP -->
+		<RateChanceItems val="2"/>
+		<!-- Бонус SP -->
 		<RateSP val="2"/>
 		<!-- Бонус Adena -->
 		<RateAdena val="2"/>

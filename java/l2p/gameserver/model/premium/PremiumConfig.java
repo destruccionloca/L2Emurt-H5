@@ -58,6 +58,9 @@ public class PremiumConfig {
                         } else if ("RateAdena".equalsIgnoreCase(cd.getNodeName())) {
                             attrs = cd.getAttributes();
                             _config.RATE_ADENA = Double.parseDouble(attrs.getNamedItem("val").getNodeValue());
+                        } else if ("RateChanceItem".equalsIgnoreCase(cd.getNodeName())) {
+                            attrs = cd.getAttributes();
+                            _config.RATE_CHANCE = Double.parseDouble(attrs.getNamedItem("val").getNodeValue());
                         } else if ("RateItem".equalsIgnoreCase(cd.getNodeName())) {
                             attrs = cd.getAttributes();
                             _config.RATE_ITEM = Double.parseDouble(attrs.getNamedItem("val").getNodeValue());

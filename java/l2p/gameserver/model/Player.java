@@ -7723,6 +7723,10 @@ public final class Player extends Playable implements PlayerGroup {
         return _bonus.getBonusExpire() > System.currentTimeMillis() / 1000L;
     }
 
+    public double getChanceItems() {
+        return _party == null ? hasBonus() ? PremiumConfig.getPremConfigId(this.getBonus().getBonusId()).RATE_CHANCE: 1 : _party._rateChance;
+    }
+
     @Override
     public double getRateAdena() {
         return _party == null ? (hasBonus() ? PremiumConfig.getPremConfigId(this.getBonus().getBonusId()).RATE_ADENA : 1) : _party._rateAdena;
