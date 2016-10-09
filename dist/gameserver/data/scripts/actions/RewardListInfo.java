@@ -94,6 +94,7 @@ public abstract class RewardListInfo {
             double grate;
             double gmult;
             double rateDrop;
+            double rateChance = player.getRateChance();
             double rateAdena = Config.RATE_DROP_ADENA * player.getRateAdena();
             double rateEpolets = Config.RATE_DROP_EPOLET * player.getRateItems();
 
@@ -162,7 +163,7 @@ public abstract class RewardListInfo {
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(Math.round(d.getMinDrop() * (g.isAdena() ? gmult : 1.0))).append("..").append(Math.round(g.isAdena() ? d.getMaxDrop() * (imult) : d.getMaxDrop() * imult)).append("]&nbsp;");
-                tmp.append(pf.format((d.getChance() * player.getRateChance()) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
+                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
             }
             tmp.append("</table></td></tr>");
         }
@@ -179,6 +180,7 @@ public abstract class RewardListInfo {
         for (RewardGroup g : list) {
             List<RewardData> items = g.getItems();
             double gchance = g.getChance();
+            double rateChance = player.getRateChance();
 
             tmp.append("<tr><td><img src=\"L2UI.SquareBlank\" width=270 height=10> </td></tr>");
             tmp.append("<tr><td>");
@@ -196,7 +198,7 @@ public abstract class RewardListInfo {
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(Math.round(d.getMinDrop())).append("..").append(Math.round(d.getMaxDrop())).append("]&nbsp;");
-                tmp.append(pf.format((d.getChance() * player.getRateChance()) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
+                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
             }
             tmp.append("</table></td></tr>");
         }
@@ -217,6 +219,7 @@ public abstract class RewardListInfo {
             double gmod = mod;
             double grate;
             double gmult;
+            double rateChance = player.getRateChance();
 
             if (rate == 0) {
                 continue;
@@ -240,7 +243,7 @@ public abstract class RewardListInfo {
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(d.getMinDrop()).append("..").append(Math.round(d.getMaxDrop() * imult)).append("]&nbsp;");
-                tmp.append(pf.format((d.getChance() * player.getRateChance()) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
+                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
             }
         }
 
