@@ -163,7 +163,7 @@ public abstract class RewardListInfo {
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(Math.round(d.getMinDrop() * (g.isAdena() ? gmult : 1.0))).append("..").append(Math.round(g.isAdena() ? d.getMaxDrop() * (imult) : d.getMaxDrop() * imult)).append("]&nbsp;");
-                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
+                tmp.append(pf.format((d.getChance() * rateChance) / RewardList.MAX_CHANCE)).append("&nbsp; cof:").append(rateChance).append("</font></td></tr>");
             }
             tmp.append("</table></td></tr>");
         }
