@@ -9799,7 +9799,7 @@ public final class Player extends Playable implements PlayerGroup {
             sendPacket(new ExShowScreenMessage("Промах", 3000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true));
             sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(this));
         } else if (!target.isDamageBlocked()) {
-            sendPacket(new ExShowScreenMessage("Нанесено" + (long) damage, 3000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true));
+            sendPacket(new ExShowScreenMessage("Нанесено " + (long) damage, 3000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true));
             sendPacket(new SystemMessage(SystemMessage.C1_HAS_GIVEN_C2_DAMAGE_OF_S3).addName(this).addName(target).addNumber(damage));
         }
 
