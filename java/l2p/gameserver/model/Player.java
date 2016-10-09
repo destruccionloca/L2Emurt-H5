@@ -7723,7 +7723,7 @@ public final class Player extends Playable implements PlayerGroup {
     }
 
     public double getRateChance() {
-        return _party == null ? hasBonus() ? PremiumConfig.getPremConfigId(this.getBonus().getBonusId()).RATE_CHANCE: 1 : _party._rateChance;
+        return _party == null ? hasBonus() ? PremiumConfig.getPremConfigId(this.getBonus().getBonusId()).RATE_CHANCE : 1 : _party._rateChance;
     }
 
     @Override
@@ -9792,10 +9792,10 @@ public final class Player extends Playable implements PlayerGroup {
         }
         if (crit) {
             if (magic) {
-                sendPacket(new ExShowScreenMessage("Маг. Крит", 3000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true));
+                sendPacket(new ExShowScreenMessage("Маг. Крит", 3000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, true));
                 sendPacket(new SystemMessage(SystemMessage.MAGIC_CRITICAL_HIT).addName(this));
             } else {
-                sendPacket(new ExShowScreenMessage("Крит", 3000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true));
+                sendPacket(new ExShowScreenMessage("Крит", 3000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, true));
                 sendPacket(new SystemMessage(SystemMessage.C1_HAD_A_CRITICAL_HIT).addName(this));
             }
         }

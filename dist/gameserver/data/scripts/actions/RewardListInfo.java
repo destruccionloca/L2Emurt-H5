@@ -67,13 +67,13 @@ public abstract class RewardListInfo {
                     ratedGroupedRewardList(builder, npc, rewardList, player, mod);
                     break;
                 case NOT_RATED_GROUPED:
-                    notRatedGroupedRewardList(builder, rewardList, mod);
+                    notRatedGroupedRewardList(builder, rewardList, player, mod);
                     break;
                 case NOT_RATED_NOT_GROUPED:
-                    notGroupedRewardList(builder, rewardList, 1.0, mod);
+                    notGroupedRewardList(builder, rewardList, 1.0, player, mod);
                     break;
                 case SWEEP:
-                    notGroupedRewardList(builder, rewardList, Config.RATE_DROP_SPOIL * player.getRateSpoil(), mod);
+                    notGroupedRewardList(builder, rewardList, Config.RATE_DROP_SPOIL * player.getRateSpoil(), player, mod);
                     break;
             }
         }
@@ -162,7 +162,7 @@ public abstract class RewardListInfo {
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(Math.round(d.getMinDrop() * (g.isAdena() ? gmult : 1.0))).append("..").append(Math.round(g.isAdena() ? d.getMaxDrop() * (imult) : d.getMaxDrop() * imult)).append("]&nbsp;");
-                tmp.append(pf.format(d.getChance() / RewardList.MAX_CHANCE)).append("</font></td></tr>");
+                tmp.append(pf.format((d.getChance() * player.getRateChance()) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
             }
             tmp.append("</table></td></tr>");
         }
@@ -170,7 +170,7 @@ public abstract class RewardListInfo {
         tmp.append("</table>");
     }
 
-    public static void notRatedGroupedRewardList(StringBuilder tmp, RewardList list, double mod) {
+    public static void notRatedGroupedRewardList(StringBuilder tmp, RewardList list, Player player, double mod) {
         tmp.append("<table width=270 border=0>");
         tmp.append("<tr><td><table width=270 border=0><tr><td><font color=\"aaccff\">").append(list.getType()).append("</font></td></tr></table></td></tr>");
         tmp.append("<tr><td><img src=\"L2UI.SquareWhite\" width=270 height=1> </td></tr>");
@@ -196,7 +196,7 @@ public abstract class RewardListInfo {
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(Math.round(d.getMinDrop())).append("..").append(Math.round(d.getMaxDrop())).append("]&nbsp;");
-                tmp.append(pf.format(d.getChance() / RewardList.MAX_CHANCE)).append("</font></td></tr>");
+                tmp.append(pf.format((d.getChance() * player.getRateChance()) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
             }
             tmp.append("</table></td></tr>");
         }
@@ -204,7 +204,7 @@ public abstract class RewardListInfo {
         tmp.append("</table>");
     }
 
-    public static void notGroupedRewardList(StringBuilder tmp, RewardList list, double rate, double mod) {
+    public static void notGroupedRewardList(StringBuilder tmp, RewardList list, double rate, Player player, double mod) {
         tmp.append("<table width=270 border=0>");
         tmp.append("<tr><td><img src=\"L2UI.SquareBlank\" width=270 height=10> </td></tr>");
         tmp.append("<tr><td><table width=270 border=0><tr><td><font color=\"aaccff\">").append(list.getType()).append("</font></td></tr></table></td></tr>");
@@ -240,7 +240,7 @@ public abstract class RewardListInfo {
                 }
                 tmp.append("<tr><td width=32><img src=").append(icon).append(" width=32 height=32></td><td width=238>").append(HtmlUtils.htmlItemName(d.getItemId())).append("<br1>");
                 tmp.append("<font color=\"b09979\">[").append(d.getMinDrop()).append("..").append(Math.round(d.getMaxDrop() * imult)).append("]&nbsp;");
-                tmp.append(pf.format(d.getChance() / RewardList.MAX_CHANCE)).append("</font></td></tr>");
+                tmp.append(pf.format((d.getChance() * player.getRateChance()) / RewardList.MAX_CHANCE)).append("</font></td></tr>");
             }
         }
 
