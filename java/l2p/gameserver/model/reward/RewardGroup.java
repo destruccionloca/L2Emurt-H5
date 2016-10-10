@@ -26,9 +26,6 @@ public class RewardGroup implements Cloneable {
     private static final Logger _log = LoggerFactory.getLogger(RewardGroup.class);
 
     public RewardGroup(double chance) {
-        if (chance > RewardList.MAX_CHANCE) {
-            chance = RewardList.MAX_CHANCE;
-        }
         setChance(chance);
     }
 
@@ -116,40 +113,40 @@ public class RewardGroup implements Cloneable {
             case NOT_RATED_GROUPED:
             case NOT_RATED_NOT_GROUPED: {
                 _isRaid = false;
-                return rollItems(mod, 1.0, 1.0);
+                return rollItems(mod, 1.0, 1.0, 1.0);
             }
             case SWEEP: {
                 _isRaid = false;
-                return rollItems(mod, Config.RATE_DROP_SPOIL, player.getRateSpoil());
+                return rollItems(mod, Config.RATE_DROP_SPOIL, player.getRateSpoil(), player.getRateChance());
             }
             case RATED_GROUPED:
                 if (_isAdena) {
-                    return rollAdena(mod, Config.RATE_DROP_ADENA, player.getRateAdena());
+                    return rollAdena(mod, Config.RATE_DROP_ADENA, player.getRateAdena(), player.getRateChance());
                 }
                 if (_isHerb) {
                     _isRaid = false;
-                    return rollItems(mod, Config.RATE_DROP_HERBS, 1.0);
+                    return rollItems(mod, Config.RATE_DROP_HERBS, 1.0, player.getRateChance());
                 }
                 if (_isEpolets) {
                     _isRaid = false;
-                    return rollItems(mod, Config.RATE_DROP_EPOLET, player.getRateItems());
+                    return rollItems(mod, Config.RATE_DROP_EPOLET, player.getRateItems(), player.getRateChance());
                 }
                 if (isRaid) {
                     _isRaid = true;
-                    return rollItems(mod, Config.RATE_DROP_RAIDBOSS, 1.0);
+                    return rollItems(mod, Config.RATE_DROP_RAIDBOSS, 1.0, player.getRateChance());
                 }
                 if (isSiegeGuard) {
                     _isRaid = false;
-                    return rollItems(mod, Config.RATE_DROP_SIEGE_GUARD, 1.0);
+                    return rollItems(mod, Config.RATE_DROP_SIEGE_GUARD, 1.0, player.getRateChance());
                 }
                 _isRaid = false;
-                return rollItems(mod, Config.RATE_DROP_ITEMS, player.getRateItems());
+                return rollItems(mod, Config.RATE_DROP_ITEMS, player.getRateItems(), player.getRateChance());
             default:
                 return Collections.emptyList();
         }
     }
 
-    public List<RewardItem> rollItems(double mod, double baseRate, double playerRate) {
+    public List<RewardItem> rollItems(double mod, double baseRate, double playerRate, double playerRateChance) {
         if (mod <= 0) {
             return Collections.emptyList();
         }
@@ -165,6 +162,8 @@ public class RewardGroup implements Cloneable {
             }
         }
 
+        double raiteChance = _chance * playerRateChance;
+
         double mult = Math.ceil(rate);
         double reite;
         if (Config.ALT_DROP_RATE) {
@@ -175,14 +174,14 @@ public class RewardGroup implements Cloneable {
 
         List<RewardItem> ret = new ArrayList<RewardItem>((int) (mult * _items.size()));
         for (long n = 0; n < mult; n++) {
-            if (Rnd.get(1, RewardList.MAX_CHANCE) <= _chance * Math.min(rate - n, 1.0)) {
-                rollFinal(_items, ret, reite, Math.max(_chanceSum, RewardList.MAX_CHANCE));
+            if (Rnd.get(1, RewardList.MAX_CHANCE) <= raiteChance * Math.min(rate - n, 1.0)) {
+                rollFinal(_items, ret, reite, Math.max(_chanceSum, RewardList.MAX_CHANCE), playerRateChance);
             }
         }
         return ret;
     }
 
-    private List<RewardItem> rollAdena(double mod, double baseRate, double playerRate) {
+    private List<RewardItem> rollAdena(double mod, double baseRate, double playerRate, double playerRateChance) {
         double chance = _chance;
         if (mod > 10) {
             mod *= _chance / RewardList.MAX_CHANCE;
@@ -193,14 +192,16 @@ public class RewardGroup implements Cloneable {
             return Collections.emptyList();
         }
 
-        if (Rnd.get(1, RewardList.MAX_CHANCE) > chance) {
+        double raiteChance = chance * playerRateChance;
+
+        if (Rnd.get(1, RewardList.MAX_CHANCE) > raiteChance) {
             return Collections.emptyList();
         }
 
         double rate = baseRate * playerRate * mod;
 
         List<RewardItem> ret = new ArrayList<RewardItem>(_items.size());
-        rollFinal(_items, ret, rate, Math.max(_chanceSum, RewardList.MAX_CHANCE));
+        rollFinal(_items, ret, rate, Math.max(_chanceSum, RewardList.MAX_CHANCE), playerRateChance);
         for (RewardItem i : ret) {
             i.isAdena = true;
         }
@@ -208,13 +209,13 @@ public class RewardGroup implements Cloneable {
         return ret;
     }
 
-    private void rollFinal(List<RewardData> items, List<RewardItem> ret, double mult, double chanceSum) {
+    private void rollFinal(List<RewardData> items, List<RewardItem> ret, double mult, double chanceSum, double chanceRate) {
         // перебираем все вещи в группе и проверяем шанс
         int chance = Rnd.get(0, (int) chanceSum);
         long count;
 
         for (RewardData i : items) {
-            if (chance < i.getChanceInGroup() && chance > i.getChanceInGroup() - i.getChance()) {
+            if (chance < (i.getChanceInGroup() * chanceRate) && chance > i.getChanceInGroup() - (i.getChance() * chanceRate)) { // умножаем шансы на шанс райт игрока
 
                 double imult;
                 if (Config.ALT_DROP_RATE) {
