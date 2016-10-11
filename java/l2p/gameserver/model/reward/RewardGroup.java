@@ -175,7 +175,7 @@ public class RewardGroup implements Cloneable {
         List<RewardItem> ret = new ArrayList<RewardItem>((int) (mult * _items.size()));
         for (long n = 0; n < mult; n++) {
             if (Rnd.get(1, RewardList.MAX_CHANCE) <= raiteChance * Math.min(rate - n, 1.0)) {
-                rollFinal(_items, ret, reite, Math.max(_chanceSum, RewardList.MAX_CHANCE), playerRateChance);
+                rollFinal(_items, ret, reite,  playerRateChance);
             }
         }
         return ret;
@@ -201,7 +201,7 @@ public class RewardGroup implements Cloneable {
         double rate = baseRate * playerRate * mod;
 
         List<RewardItem> ret = new ArrayList<RewardItem>(_items.size());
-        rollFinal(_items, ret, rate, Math.max(_chanceSum, RewardList.MAX_CHANCE), playerRateChance);
+        rollFinal(_items, ret, rate, playerRateChance);
         for (RewardItem i : ret) {
             i.isAdena = true;
         }
@@ -209,14 +209,15 @@ public class RewardGroup implements Cloneable {
         return ret;
     }
 
-    private void rollFinal(List<RewardData> items, List<RewardItem> ret, double mult, double chanceSum, double chanceRate) {
+    private void rollFinal(List<RewardData> items, List<RewardItem> ret, double mult, double chanceRate) {
         // перебираем все вещи в группе и проверяем шанс
-        int chance = Rnd.get(0, (int) chanceSum);
+        int chance = Rnd.get(0, RewardList.MAX_CHANCE);
         long count;
 
         for (RewardData i : items) {
-            if (chance < (i.getChanceInGroup() * chanceRate) && chance > i.getChanceInGroup() - (i.getChance() * chanceRate)) { // умножаем шансы на шанс райт игрока
-
+            double preChanceInGroup = (chanceRate > 1.)? i.getChanceInGroup() + (i.getChance() * (chanceRate - 1.)): i.getChanceInGroup();
+            double ChanceInGroup = (preChanceInGroup > RewardList.MAX_CHANCE)? RewardList.MAX_CHANCE: preChanceInGroup;
+            if (chance <= ChanceInGroup && chance >= ChanceInGroup - (i.getChance() * chanceRate)) { // умножаем шансы на шанс райт игрока
                 double imult;
                 if (Config.ALT_DROP_RATE) {
                     if (i.notRate()) {
