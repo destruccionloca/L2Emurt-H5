@@ -163,7 +163,7 @@ public class RewardGroup implements Cloneable {
         }
 
         double raiteChance = _chance * playerRateChance;
-
+        if (raiteChance > RewardList.MAX_CHANCE) raiteChance = RewardList.MAX_CHANCE;
         double mult = Math.ceil(rate);
         double reite;
         if (Config.ALT_DROP_RATE) {
@@ -175,7 +175,7 @@ public class RewardGroup implements Cloneable {
         List<RewardItem> ret = new ArrayList<RewardItem>((int) (mult * _items.size()));
         for (long n = 0; n < mult; n++) {
             if (Rnd.get(1, RewardList.MAX_CHANCE) <= raiteChance * Math.min(rate - n, 1.0)) {
-                rollFinal(_items, ret, reite,  playerRateChance);
+                rollFinal(_items, ret, reite, playerRateChance);
             }
         }
         return ret;
@@ -193,7 +193,7 @@ public class RewardGroup implements Cloneable {
         }
 
         double raiteChance = chance * playerRateChance;
-
+        if (raiteChance > RewardList.MAX_CHANCE) raiteChance = RewardList.MAX_CHANCE;
         if (Rnd.get(1, RewardList.MAX_CHANCE) > raiteChance) {
             return Collections.emptyList();
         }
@@ -212,7 +212,7 @@ public class RewardGroup implements Cloneable {
     private void rollFinal(List<RewardData> items, List<RewardItem> ret, double mult, double chanceRate) {
         // перебираем все вещи в группе и проверяем шанс
         int chance = Rnd.get(0, RewardList.MAX_CHANCE);
-        long count;
+        long count, max;
 
         for (RewardData i : items) {
             double preChanceInGroup = (chanceRate > 1.)? i.getChanceInGroup() + (i.getChance() * (chanceRate - 1.)): i.getChanceInGroup();
@@ -233,17 +233,10 @@ public class RewardGroup implements Cloneable {
                     imult = i.notRate() ? 1.0 : mult;
                 }
 
-                if (i.getMinDrop() >= i.getMaxDrop()) {
-                    count = Math.round(i.getMinDrop() * imult);
-                    if ((double) count > imult && !isAdena() && Config.ALT_DROP_RATE) {
-                        count = count / (long) 2.4;
-                    }
-                } else {
-                    count = Rnd.get(Math.round(i.getMinDrop() * imult), Math.round(i.getMaxDrop() * imult));
-                    if ((double) count > imult && !isAdena() && Config.ALT_DROP_RATE) {
-                        count = count / (long) 2.4;
-                    }
-                }
+                count = (long)Math.floor(i.getMinDrop() * imult);
+                max = (long)Math.ceil(i.getMaxDrop() * imult);
+                if (count != max)
+                    count = Rnd.get(count, max);
 
                 RewardItem t = null;
 
