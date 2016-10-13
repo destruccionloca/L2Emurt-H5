@@ -165,17 +165,12 @@ public class RewardGroup implements Cloneable {
         double raiteChance = _chance * playerRateChance;
         if (raiteChance > RewardList.MAX_CHANCE) raiteChance = RewardList.MAX_CHANCE;
         double mult = Math.ceil(rate);
-        double reite;
-        if (Config.ALT_DROP_RATE) {
-            reite = rate;
-        } else {
-            reite = 1.;
-        }
 
-        List<RewardItem> ret = new ArrayList<RewardItem>((int) (mult * _items.size()));
+        List<RewardItem> ret = new ArrayList<RewardItem>(_items.size() * 3 / 2);
         for (long n = 0; n < mult; n++) {
-            if (Rnd.get(1, RewardList.MAX_CHANCE) <= raiteChance * Math.min(rate - n, 1.0)) {
-                rollFinal(_items, ret, reite, playerRateChance);
+            double gmult = rate - n;
+            if (Rnd.get(1, RewardList.MAX_CHANCE) <= raiteChance * Math.min(gmult, 1.0)) {
+                rollFinal(_items, ret, Math.max(gmult, 1.0), playerRateChance);
             }
         }
         return ret;
