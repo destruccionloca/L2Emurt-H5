@@ -72,7 +72,7 @@ public abstract class RewardListInfo {
                     notGroupedRewardList(builder, rewardList, 1.0, player, mod);
                     break;
                 case SWEEP:
-                    notGroupedRewardList(builder, rewardList, Config.RATE_DROP_SPOIL * player.getRateSpoil(), player, mod);
+                    notGroupedRewardList(builder, rewardList, Config.RATE_DROP_SPOIL * (Config.RATE_SPOIL_ITEMS_PA) ? player.getRateSpoil() : 1., player, mod);
                     break;
             }
         }
@@ -88,7 +88,7 @@ public abstract class RewardListInfo {
 
         for (RewardGroup g : list) {
             List<RewardData> items = g.getItems();
-            double gchance = g.getChance();
+            double gchance = g.getChance() * player.getRateChance();
             double gmod = mod;
             double grate;
             double gmult;
@@ -126,7 +126,11 @@ public abstract class RewardListInfo {
                 } else if (npc.isSiegeGuard()) {
                     rateDrop = Config.RATE_DROP_SIEGE_GUARD;
                 } else {
-                    rateDrop = Config.RATE_DROP_ITEMS * player.getRateItems();
+                    if (Config.RATE_DROP_ITEMS_PA) {
+                        rateDrop = Config.RATE_DROP_ITEMS * player.getRateItems();
+                    } else {
+                        rateDrop = Config.RATE_DROP_ITEMS;
+                    }
                 }
 
                 if (rateDrop == 0) {
@@ -182,7 +186,7 @@ public abstract class RewardListInfo {
 
         for (RewardGroup g : list) {
             List<RewardData> items = g.getItems();
-            double gchance = g.getChance();
+            double gchance = g.getChance() * player.getRateChance();
             double rateChance = player.getRateChance();
 
 
