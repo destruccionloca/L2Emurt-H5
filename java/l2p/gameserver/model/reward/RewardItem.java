@@ -8,6 +8,6 @@ public class RewardItem {
 
     public RewardItem(int itemId) {
         this.itemId = itemId;
-        count = 1;
+        this.count = 1L;
     }
 }

@@ -650,6 +650,8 @@ public class Config {
     public static double RATE_CHAMPION_DROP_ADENA;
     public static double RATE_DROP_SPOIL_CHAMPION;
     public static double RATE_DROP_ITEMS;
+    public static boolean RATE_DROP_ITEMS_PA;
+    public static boolean RATE_SPOIL_ITEMS_PA;
     public static double RATE_CHANCE_GROUP_DROP_ITEMS;
     public static double RATE_CHANCE_DROP_ADENA;
     public static double RATE_CHANCE_DROP_ITEMS;
@@ -2804,6 +2806,8 @@ public class Config {
         RATE_CHAMPION_DROP_ADENA = ratesSettings.getProperty("RateChampionDropAdena", 1.);
         RATE_DROP_SPOIL_CHAMPION = ratesSettings.getProperty("RateSpoilChampion", 1.);
         RATE_DROP_ITEMS = ratesSettings.getProperty("RateDropItems", 1.);
+        RATE_DROP_ITEMS_PA = ratesSettings.getProperty("RateDropItemsPA", true);
+        RATE_SPOIL_ITEMS_PA = ratesSettings.getProperty("RateSpoilItemsPA", true);
         RATE_CHANCE_GROUP_DROP_ITEMS = ratesSettings.getProperty("RateChanceGroupDropItems", 1.);
         RATE_CHANCE_DROP_ADENA = ratesSettings.getProperty("RateChanceDropAdena", 1.);
         RATE_CHANCE_DROP_ITEMS = ratesSettings.getProperty("RateChanceDropItems", 1.);

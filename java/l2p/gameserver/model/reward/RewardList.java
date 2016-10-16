@@ -37,11 +37,13 @@ public class RewardList extends ArrayList<RewardGroup> {
     }
 
     public List<RewardItem> roll(Player player, double mod, boolean isRaid, boolean isSiegeGuard, boolean isChampion) {
-        List<RewardItem> temp = new ArrayList<>(size());
+        List<RewardItem> temp = new ArrayList<RewardItem>(size());
         for (RewardGroup g : this) {
             List<RewardItem> tdl = g.roll(_type, player, mod, isRaid, isSiegeGuard, isChampion);
             if (!tdl.isEmpty()) {
-                temp.addAll(tdl.stream().collect(Collectors.toList()));
+                for(RewardItem itd : tdl) {
+                    temp.add(itd);
+                }
             }
         }
         return temp;
@@ -53,16 +55,10 @@ public class RewardList extends ArrayList<RewardGroup> {
             for (RewardData d : g.getItems()) {
                 chanceSum += d.getChance();
             }
-            if (Config.RATE_CHANCE_DROP_ITEMS != 1.) {
-                if (chanceSum > MAX_CHANCE) {
-                    chanceSum = MAX_CHANCE;
-                }
-            }
             if (chanceSum <= MAX_CHANCE) // всё в порядке?
             {
                 return true;
             }
-
             double mod = MAX_CHANCE / chanceSum;
             for (RewardData d : g.getItems()) {
                 double chance = d.getChance() * mod; // коррекция шанса группы
