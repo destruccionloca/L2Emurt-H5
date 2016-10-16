@@ -72,7 +72,7 @@ public abstract class RewardListInfo {
                     notGroupedRewardList(builder, rewardList, 1.0, player, mod);
                     break;
                 case SWEEP:
-                    notGroupedRewardList(builder, rewardList, Config.RATE_DROP_SPOIL * (Config.RATE_SPOIL_ITEMS_PA) ? player.getRateSpoil() : 1., player, mod);
+                    notGroupedRewardList(builder, rewardList, Config.RATE_DROP_SPOIL * ((Config.RATE_SPOIL_ITEMS_PA) ? player.getRateSpoil() : 1.), player, mod);
                     break;
             }
         }
