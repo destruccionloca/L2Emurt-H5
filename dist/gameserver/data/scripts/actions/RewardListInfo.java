@@ -89,6 +89,9 @@ public abstract class RewardListInfo {
         for (RewardGroup g : list) {
             List<RewardData> items = g.getItems();
             double gchance = g.getChance() * player.getRateChance();
+            if (gchance > RewardList.MAX_CHANCE) {
+                gchance = RewardList.MAX_CHANCE;
+            }
             double gmod = mod;
             double grate;
             double gmult;
@@ -187,6 +190,9 @@ public abstract class RewardListInfo {
         for (RewardGroup g : list) {
             List<RewardData> items = g.getItems();
             double gchance = g.getChance() * player.getRateChance();
+            if (gchance > RewardList.MAX_CHANCE) {
+                gchance = RewardList.MAX_CHANCE;
+            }
             double rateChance = player.getRateChance();
 
 
