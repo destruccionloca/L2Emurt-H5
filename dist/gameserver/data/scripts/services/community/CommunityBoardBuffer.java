@@ -411,7 +411,7 @@ public class CommunityBoardBuffer extends Functions implements ScriptFile, IComm
             String[] mBypass = st2.nextToken().split(":");
             if (!player.getVarB("isPlayerBuff") && player.getPet() != null && player.getEffectList().getEffectsBySkillId(Skill.SKILL_RAID_CURSE) == null) {
                 player.getPet().getEffectList().stopAllEffects();
-            } else if (player.getVarB("isPlayerBuff") && player.getEffectList().getEffectsBySkillId(Skill.SKILL_RAID_CURSE) == null) {
+            } else if (player.getEffectList().getEffectsBySkillId(Skill.SKILL_RAID_CURSE) == null) {
                 player.getEffectList().stopAllEffects();
             }
             ShowHtml(mBypass[1], player);
@@ -543,9 +543,9 @@ public class CommunityBoardBuffer extends Functions implements ScriptFile, IComm
 
         String html = HtmCache.getInstance().getHtml(Config.BBS_HOME_DIR + "pages/buffer/" + name + ".htm", player);
         if (player.isLangRus()) {
-            html = html.replaceFirst("%aim%", player.getVarB("isPlayerBuff") ? "Персонаж" : "Питомец");
+            html = html.replaceFirst("%aim%", player.getVarB("isPlayerBuff") ? "Питомец" : "Персонаж");
         } else {
-            html = html.replaceFirst("%aim%", player.getVarB("isPlayerBuff") ? "Character" : "Pet");
+            html = html.replaceFirst("%aim%", player.getVarB("isPlayerBuff") ? "Pet" : "Character");
         }
 
         if (Config.COMMUNITYBOARD_BOARD_ALT_ENABLED) {
