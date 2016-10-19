@@ -72,7 +72,7 @@ public class CommunityBoardBuffer extends Functions implements ScriptFile, IComm
             "_bbsblist"
         };
     }
-
+		
     @Override
     public void onBypassCommand(Player player, String bypass) {
         String html = "";
@@ -214,7 +214,7 @@ public class CommunityBoardBuffer extends Functions implements ScriptFile, IComm
                     }
                 }
             }
-
+		
             player.reduceAdena(pice, true);
             ShowHtml(page, player);
         } else if (bypass.startsWith("_bbsbaim")) {
@@ -414,7 +414,7 @@ public class CommunityBoardBuffer extends Functions implements ScriptFile, IComm
             } else if (player.getEffectList().getEffectsBySkillId(Skill.SKILL_RAID_CURSE) == null) {
                 player.getEffectList().stopAllEffects();
             }
-            ShowHtml(mBypass[1], player);
+            ShowHtml(mBypass[1], player);					
         } else if (bypass.startsWith("_bbsbsave")) {
             StringTokenizer st2 = new StringTokenizer(bypass, ";");
             String[] mBypass = st2.nextToken().split(":");
@@ -480,10 +480,10 @@ public class CommunityBoardBuffer extends Functions implements ScriptFile, IComm
                 }
             } catch (ArrayIndexOutOfBoundsException e) {
                 player.sendMessage(player.isLangRus() ? "Вы не ввели имя для сохранения!" : "You did not enter a name to save!");
+				ShowHtml(mBypass.length == 1 ? "index" : mBypass[1], player);
                 return;
-            }
-
-            ShowHtml(mBypass[1], player);
+            }			
+            ShowHtml(mBypass[1], player);			
         } else if (bypass.startsWith("_bbsbdelete")) {
             StringTokenizer st2 = new StringTokenizer(bypass, ";");
             String[] mBypass = st2.nextToken().split(":");
@@ -673,11 +673,11 @@ public class CommunityBoardBuffer extends Functions implements ScriptFile, IComm
 
     }
 
-    private static boolean CheckCondition(Player player) {
+		private static boolean CheckCondition(Player player) {
         if (player == null) {
             return false;
         }
-
+		
         if (player.isDead()) {
             return false;
         }
