@@ -238,7 +238,13 @@ public final class VillageMasterInstance extends NpcInstance {
                         player.sendMessage(new CustomMessage("l2p.gameserver.model.instances.L2VillageMasterInstance.NoSubBeforeLevel", player).addNumber(Config.ALT_GAME_LEVEL_TO_GET_SUBCLASS));
                         allowAddition = false;
                     }
-
+					
+                    // Проверка взята ли вторая профа
+                    if (player.getClassId().getLevel() < 3) {
+                        player.sendMessage(new CustomMessage("l2p.gameserver.model.instances.L2VillageMasterInstance.NoSubBeforeLevel", player).addNumber(Config.ALT_GAME_LEVEL_TO_GET_SUBCLASS));
+                        allowAddition = false;
+                    }
+					
                     if (!playerClassList.isEmpty()) {
                         for (SubClass subClass : playerClassList.values()) {
                             if (subClass.getLevel() < Config.ALT_GAME_LEVEL_TO_GET_SUBCLASS) {
