@@ -5,6 +5,7 @@
 package l2p.gameserver.utils.simpleAcp;
 
 import l2p.gameserver.Config;
+import l2p.gameserver.ThreadPoolManager;
 import l2p.gameserver.model.Player;
 import l2p.gameserver.model.items.ItemInstance;
 import l2p.gameserver.serverpackets.ExUseSharedGroupItem;
@@ -13,9 +14,10 @@ import l2p.gameserver.skills.TimeStamp;
 import l2p.gameserver.stats.Stats;
 
 import java.util.Timer;
+import java.util.concurrent.Future;
 
 public class PotionModel {
-    private Timer timer;
+    private Future<?> task;
     private int minPercent = 0;
     private int maxPercent = 100;
     private boolean isEating = false;
@@ -33,13 +35,11 @@ public class PotionModel {
         potionType = type;
     }
 
-    @SuppressWarnings("all")
     public void startEating() {
         if (getCurrentListnerValue() < getMaxListnerValue() && !isEating() && isAllow()) {
-            timer = new Timer();
-            synchronized (timer) {
+            if (task == null || task.isCancelled()) {
+                task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new EatTask(), 0, delay);
                 isEating = true;
-                timer.schedule(new EatTask(), 0, delay);
             }
         }
     }
@@ -176,23 +176,16 @@ public class PotionModel {
         return itemId;
     }
 
-    public Timer getTimer() {
-        return timer;
-    }
-
-    public void setTimer(Timer timer) {
-        this.timer = timer;
-    }
-
     public ItemInstance getItem() {
         return player.getInventory().getItemByItemId(itemId);
     }
 
-    private class EatTask extends java.util.TimerTask {
+    private class EatTask implements Runnable {
         @Override
         public void run() {
             if (player == null) {
-                timer.cancel();
+                task.cancel(true);
+                isEating = false;
                 return;
             }
             if (!player.hasBonus() && Config.ACP_ONLY_PREMIUM) {
@@ -207,7 +200,7 @@ public class PotionModel {
                     && currentPercent < getMaxPercent() && isAllow())
                 eat();
             else {
-                timer.cancel();
+                task.cancel(false);
                 isEating = false;
             }
         }
