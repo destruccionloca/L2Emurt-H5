@@ -248,7 +248,7 @@ public class Olympiad {
             }
         }
 
-        if (Config.OLYMPIAD_PLAYER_HWID && _playersHWID.containsKey(noble)) {
+        if (Config.OLYMPIAD_PLAYER_HWID && _playersHWID.containsValue(noble.getNetConnection().getHWID())) {
 			noble.sendMessage(new CustomMessage("l2p.gameserver.model.entity.Olympiad.BlockHWID", noble));
 			return false;
         }
@@ -433,10 +433,10 @@ public class Olympiad {
         _teamBasedRegisters.removeValue(noble.getObjectId());
 		if(noble != null) {
 			if (Config.OLYMPIAD_PLAYER_IP) {
-				_playersIp.remove(noble.getIP());
+				_playersIp.remove(noble);
 			}
 			if (Config.OLYMPIAD_PLAYER_HWID && _playersHWID.containsKey(noble)) {
-				_playersHWID.remove(noble.getNetConnection().getHWID());
+				_playersHWID.remove(noble);
 			}
 		}
 
