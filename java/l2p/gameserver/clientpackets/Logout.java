@@ -53,7 +53,7 @@ public class Logout extends L2GameClientPacket {
             activeChar.sendActionFailed();
             return;
         }
-
+		
         if (activeChar._event != null) {
             activeChar.sendMessage(activeChar.isLangRus() ? "Вы не можите выйти во время участия в ивенте!" : "You can follow any responses did not leave while participating in the event!");
             activeChar.sendActionFailed();
@@ -72,6 +72,6 @@ public class Logout extends L2GameClientPacket {
             return;
         }
 
-        activeChar.logout();
+		activeChar.logout();		
     }
 }
