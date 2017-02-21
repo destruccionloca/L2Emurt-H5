@@ -144,7 +144,7 @@ public class Cfg extends Functions implements IVoicedCommandHandler {
         }
         dialog = dialog.replaceFirst("%dli%", activeChar.getVarB("DroplistIcons") ? "On" : "Off");
         dialog = dialog.replaceFirst("%noe%", activeChar.getVarB("NoExp") ? "On" : "Off");
-        dialog = dialog.replaceFirst("%pf%", activeChar.getVarB("no_pf") ? "On" : "Off");
+        dialog = dialog.replaceFirst("%pf%", activeChar.getVarB("no_pf") ? "Off" : "On");
         dialog = dialog.replaceFirst("%notraders%", activeChar.getVarB("notraders") ? "On" : "Off");
         dialog = dialog.replaceFirst("%notShowBuffAnim%", activeChar.getVarB("notShowBuffAnim") ? "On" : "Off");
         dialog = dialog.replaceFirst("%noShift%", activeChar.getVarB("noShift") ? "On" : "Off");
