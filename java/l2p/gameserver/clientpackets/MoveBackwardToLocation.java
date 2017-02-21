@@ -44,7 +44,6 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
             activeChar.sendActionFailed();
             if (activeChar.getDistance(_originLoc) > 100000) {
                 activeChar.sendActionFailed();
-                _log.warn("Player " + activeChar + " try move to coords with distance more then 100000. Possible cheater?");
             }
             return;
         }
