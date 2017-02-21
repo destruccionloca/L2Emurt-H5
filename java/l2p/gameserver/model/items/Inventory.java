@@ -11,7 +11,7 @@ import l2p.gameserver.model.Playable;
 import l2p.gameserver.model.Player;
 import l2p.gameserver.model.items.ItemInstance.ItemLocation;
 import l2p.gameserver.model.items.listeners.StatsListener;
-import l2p.gameserver.model.visual.VisualConfig;
+import l2p.gameserver.model.visual.VisualUtils;
 import l2p.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import l2p.gameserver.templates.item.ItemTemplate;
 import l2p.gameserver.templates.item.WeaponTemplate.WeaponType;
@@ -250,12 +250,44 @@ public abstract class Inventory extends ItemContainer {
                 equipItem(item);
             }
         }
-    }/* 
+    }
 
     public int getPaperdollItemId(int slot) {
         ItemInstance item = getPaperdollItem(slot);
+        if (item == null) {
+            if(slot == PAPERDOLL_HAIR) {
+                item = _paperdoll[PAPERDOLL_DHAIR];
+                if(item != null)
+                    return item.getItemId();
+                else
+                    return 0;
+            } else {
+                return 0;
+            }
+        }
+
+        if (getActor() != null && getActor().getPlayer() != null && !getActor().getPlayer().isInOlympiadMode()) {
+            ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
+            if (chest != null && chest.isVisualItem() && VisualUtils.isCostume(chest)) {
+                switch (slot) {
+                    case PAPERDOLL_CHEST:
+                        return chest.getVisualItemId();
+                    case PAPERDOLL_LEGS:
+                    case PAPERDOLL_FEET:
+                    case PAPERDOLL_GLOVES:
+                        return 0;
+                }
+            }
+            return item.isVisualItem() ? item.getVisualItemId() : item.getItemId();
+        } else {
+            return item.getItemId();
+        }
+    }
+
+    /*
+    public int getPaperdollItemId(int slot) {
+        ItemInstance item = getPaperdollItem(slot);
         if (item != null) {
-            ItemInstance paperdollItem;
             if (getPaperdollItem(PAPERDOLL_CHEST).isVisualItem() && getPaperdollItem(PAPERDOLL_CHEST) != null) {
                 switch (slot) {
                     case PAPERDOLL_CHEST:
@@ -290,8 +322,9 @@ public abstract class Inventory extends ItemContainer {
             return item.getItemId();
         }
         return 0;
-    } */
-
+    }
+    */
+    /*
     public int getPaperdollItemId(int slot) {
 
         ItemInstance item = getPaperdollItem(slot);
@@ -393,6 +426,7 @@ public abstract class Inventory extends ItemContainer {
 
         return 0;
     }
+    */
 
     public int getPaperdollObjectId(int slot) {
         ItemInstance item = _paperdoll[slot];
