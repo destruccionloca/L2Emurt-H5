@@ -76,8 +76,6 @@ public class EnchantUtils {
             if (item.isWeapon()) {
                 if (item.getCrystalType() == ItemTemplate.Grade.NONE)
                     continue;
-                if (item.isNoEnchant())
-                    continue;
                 weapon.add(item);
             }
         return weapon;
@@ -86,10 +84,9 @@ public class EnchantUtils {
     public List<ItemInstance> getArmor(Player player) {
         List<ItemInstance> armor = new ArrayList<>();
         for (ItemInstance item : player.getInventory().getItems())
-            if (item.isArmor() || (item.getBodyPart() == 25 && Config.ENCHANT_ALLOW_BELTS)) {
+            if (item.isArmor() || item.getBodyPart() == ItemTemplate.SLOT_UNDERWEAR
+                    || (item.getBodyPart() == 25 && Config.ENCHANT_ALLOW_BELTS)) {
                 if (item.getCrystalType() == ItemTemplate.Grade.NONE)
-                    continue;
-                if (item.isNoEnchant())
                     continue;
                 armor.add(item);
             }
@@ -101,8 +98,6 @@ public class EnchantUtils {
         for (ItemInstance item : player.getInventory().getItems())
             if (item.isAccessory()) {
                 if (item.getCrystalType() == ItemTemplate.Grade.NONE)
-                    continue;
-                if (item.isNoEnchant())
                     continue;
                 jewelry.add(item);
             }
