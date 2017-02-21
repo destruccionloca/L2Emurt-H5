@@ -5973,7 +5973,6 @@ public final class Player extends Playable implements PlayerGroup {
 
     public void returnFromObserverMode() {
         if (!_observerMode.compareAndSet(OBSERVER_LEAVING, OBSERVER_NONE)) {
-            _log.warn("Return from observ mode " + getName() + ". ObservMode ID: " + _observerMode.get());
             //Thread.dumpStack();
             return;
         }
@@ -5999,7 +5998,6 @@ public final class Player extends Playable implements PlayerGroup {
         }
 
         if (!_observerMode.compareAndSet(_olympiadObserverMode ? OBSERVER_STARTED : OBSERVER_NONE, OBSERVER_STARTING)) {
-            _log.warn("Not starting observ mode " + getName() + ". ObservMode ID: " + _observerMode.get());
             //Thread.dumpStack();
             return;
         }
@@ -6042,7 +6040,6 @@ public final class Player extends Playable implements PlayerGroup {
             return;
         }
         if (!_observerMode.compareAndSet(OBSERVER_STARTED, OBSERVER_LEAVING)) {
-            _log.warn("Leave observ mode " + getName() + ". ObservMode ID: " + _observerMode.get());
             //Thread.dumpStack();
             return;
         }
