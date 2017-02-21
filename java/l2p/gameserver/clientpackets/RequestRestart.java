@@ -46,7 +46,7 @@ public class RequestRestart extends L2GameClientPacket {
             activeChar.sendPacket(RestartResponse.FAIL, ActionFail.STATIC);
             return;
         }
-
+		
         if (activeChar._event != null) {
             activeChar.sendMessage(activeChar.isLangRus() ? "Вы не можите выйти во время участия в ивенте!" : "You can follow any responses did not leave while participating in the event!");
             activeChar.sendPacket(RestartResponse.FAIL, ActionFail.STATIC);
