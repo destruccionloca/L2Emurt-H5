@@ -168,6 +168,7 @@ import l2p.gameserver.model.premium.PremiumConfig;
 import l2p.gameserver.model.quest.Quest;
 import l2p.gameserver.model.quest.QuestEventType;
 import l2p.gameserver.model.quest.QuestState;
+import l2p.gameserver.model.visual.VisualParams;
 import l2p.gameserver.network.GameClient;
 import l2p.gameserver.scripts.Events;
 import l2p.gameserver.scripts.Functions;
@@ -539,6 +540,8 @@ public final class Player extends Playable implements PlayerGroup {
     private Future<?> agationTask = null;
 
     private SmallAcp acp;
+
+    private final VisualParams visualParams = new VisualParams();
 
     /**
      * Конструктор для L2Player. Напрямую не вызывается, для создания игрока
@@ -2539,6 +2542,26 @@ public final class Player extends Playable implements PlayerGroup {
             sendPacket(SystemMessage2.removeItems(ItemTemplate.ITEM_ID_ADENA, adena));
         }
         return result;
+    }
+
+    /**
+     * Проверяет есть ли определенное количество итемов у игрока.<BR>
+     * <BR>
+     *
+     * @param itemId - какой итем
+     * @param itemCount - сколько итема
+     * <p>
+     * @return true если есть
+     */
+    public boolean checkItem(int itemId, long itemCount) {
+        if (itemCount <= 0 || itemId <= 0) {
+            return false;
+        }
+        ItemInstance item = getInventory().getItemByItemId(itemId);
+        if (item == null || item.getCount() < itemCount) {
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -10638,4 +10661,7 @@ public final class Player extends Playable implements PlayerGroup {
         return enchantParams == null ? enchantParams = new EnchantParams() : enchantParams;
     }
 
+    public VisualParams getVisualParams() {
+        return visualParams;
+    }
 }
