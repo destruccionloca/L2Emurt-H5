@@ -2,7 +2,7 @@ package l2p.gameserver.model.visual;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-
+@Deprecated
 public class ConfigVisual implements Comparable<Object> {
 
     public int ID = 1;
