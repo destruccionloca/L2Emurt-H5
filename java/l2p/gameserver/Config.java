@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
@@ -315,6 +314,10 @@ public class Config {
      * Auto-loot for/from players with karma also?
      */
     public static boolean AUTO_LOOT_PK;
+    /**
+     * Итемы для прохода (SiffGatekeeper)
+     */
+    public static FastMap<Integer, Integer> ALLOW_LIST_ENTER_SIFFGATEKEEPER = new FastMap<>();
     /**
      * Character name template
      */
@@ -1827,6 +1830,16 @@ public class Config {
     public static int[] ACP_POTIONS_DELAY;
     public static String[] ACP_POTIONS_TYPE;
 
+    public static int[] VISUAL_DISALLOWED_ITEMS;
+    public static int[] VISUAL_COSTUMES;
+    public static int VISUAL_ARMOR_PRICE_ID;
+    public static int VISUAL_ARMOR_PRICE_COUNT;
+    public static boolean VISUAL_RETURN_VISUAL_ITEM;
+    public static int VISUAL_WEAPON_PRICE_ID;
+    public static int VISUAL_WEAPON_PRICE_COUNT;
+    public static int VISUAL_COSTUME_PRICE_ID;
+    public static int VISUAL_COSTUME_PRICE_COUNT;
+
 
     public static void loadBBSBufferConfig() {
 
@@ -2278,6 +2291,17 @@ public class Config {
 
             COMMUNITY_WAREHOUSE_RANGE_Z = communitySettings.getProperty("CommunityWarehouseRangeZ", false);
             SERVICES_ACADEM_REWARD = communitySettings.getProperty("AcademReward", "Адена,57;Золото,4037");
+
+            VISUAL_DISALLOWED_ITEMS = communitySettings.getProperty("VisualDisallowedItems", new int[0]);
+            VISUAL_COSTUMES = communitySettings.getProperty("VisualCostumes", new int[0]);
+            VISUAL_ARMOR_PRICE_ID = communitySettings.getProperty("VisualPriceId", 57);
+            VISUAL_ARMOR_PRICE_COUNT = communitySettings.getProperty("VisualPriceCount", 1000);
+            VISUAL_RETURN_VISUAL_ITEM = communitySettings.getProperty("VisualReturnVisualItem", true);
+            VISUAL_COSTUME_PRICE_ID = communitySettings.getProperty("VisualCostumePriceId", 57);
+            VISUAL_COSTUME_PRICE_COUNT = communitySettings.getProperty("VisualCostumePriceCount", 1000);
+            VISUAL_WEAPON_PRICE_ID = communitySettings.getProperty("VisualWeaponPriceId", 57);
+            VISUAL_WEAPON_PRICE_COUNT = communitySettings.getProperty("VisualWeaponPriceCount", 1000);
+
 
             String[] splitTele = communitySettings.getProperty("CommunityTeleportPPrice", "").trim().replaceAll(" ", "").split(";");
             TELE_PPRISE = new int[splitTele.length][5];
@@ -3354,6 +3378,16 @@ public class Config {
         AUTO_LOOT_INDIVIDUAL = altSettings.getProperty("AutoLootIndividual", false);
         AUTO_LOOT_FROM_RAIDS = altSettings.getProperty("AutoLootFromRaids", false);
         AUTO_LOOT_PK = altSettings.getProperty("AutoLootPK", false);
+        String[] propertySplit = altSettings.getProperty("SiffEnterItems", "25097,1;25098,1").split(";");
+        if (propertySplit != null) {
+            for (String s_id1 : propertySplit) {
+
+                String[] s_id1_count = s_id1.split(",");
+                int id = Integer.parseInt(s_id1_count[0]);
+                int count = Integer.parseInt(s_id1_count[1]);
+                ALLOW_LIST_ENTER_SIFFGATEKEEPER.put(id, count);
+            }
+        }
         ALT_GAME_KARMA_PLAYER_CAN_SHOP = altSettings.getProperty("AltKarmaPlayerCanShop", false);
         SAVING_SPS = altSettings.getProperty("SavingSpS", false);
         MANAHEAL_SPS_BONUS = altSettings.getProperty("ManahealSpSBonus", false);
@@ -3601,7 +3635,7 @@ public class Config {
         ALT_TRIGGER_LIMIT = altSettings.getProperty("TriggerLimit", 12);
         ENABLE_MODIFY_SKILL_DURATION = altSettings.getProperty("EnableSkillDuration", false);
         if (ENABLE_MODIFY_SKILL_DURATION) {
-            String[] propertySplit = altSettings.getProperty("SkillDurationList", "").split(";");
+            propertySplit = altSettings.getProperty("SkillDurationList", "").split(";");
             SKILL_DURATION_LIST = new TIntIntHashMap(propertySplit.length);
             for (String skill : propertySplit) {
                 String[] skillSplit = skill.split(",");
