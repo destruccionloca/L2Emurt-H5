@@ -125,7 +125,6 @@ public class RequestPreviewItem extends L2GameClientPacket {
                     activeChar.sendPacket(SystemMsg.YOU_CAN_NOT_TRY_THOSE_ITEMS_ON_AT_THE_SAME_TIME);
                     return;
                 } else {
-                    _log.info("paperdoll="+paperdoll+" itemId="+itemId);
                     itemList.put(paperdoll, itemId);
                 }
 
