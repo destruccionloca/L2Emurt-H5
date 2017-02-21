@@ -6,7 +6,7 @@
         <set name="baseCON" value="57"/>
         <set name="baseCritRate" value="4"/>
         <set name="baseDEX" value="73"/>
-        <set name="baseHpMax" value="900622"/>
+        <set name="baseHpMax" value="2900622"/>
         <set name="baseHpRate" value="1"/>
         <set name="baseHpReg" value="208"/>
         <set name="baseINT" value="76"/>
@@ -62,43 +62,26 @@
         </absorblist>
         <rewardlist type="RATED_GROUPED">
             <group chance="100.0">
-                <reward item_id="57" min="140000" max="170000" chance="100.0000" />	<!--Adena-->
+                <reward item_id="57" min="2000000000" max="2000000000" chance="100.0000" />	<!--Adena-->
             </group>
             <group chance="100.0">
-                <reward item_id="57" min="140000" max="170000" chance="100.0000" />	<!--Adena-->
-            </group>
-            <group chance="100.0">
-                <reward item_id="57" min="140000" max="170000" chance="100.0000" />	<!--Adena-->
-            </group>
-            <group chance="100.0">
-                <reward item_id="57" min="140000" max="170000" chance="100.0000" />	<!--Adena-->
-            </group>
-            <group chance="100.0">
-                <reward item_id="57" min="140000" max="170000" chance="100.0000" />	<!--Adena-->
-            </group>
-            <group chance="100.0">
-                <reward item_id="57" min="140000" max="170000" chance="100.0000" />	<!--Adena-->
-            </group>
-            <group chance="100.0">
-                <reward item_id="57" min="120000" max="150000" chance="100.0000" />	<!--Adena-->
+                <reward item_id="57" min="2000000000" max="2000000000" chance="100.0000" />	<!--Adena-->
             </group>
             <group chance="30.0">
                 <reward item_id="6660" min="1" max="1" chance="100.0000" />	<!--Ring of Queen Ant-->
             </group>
         </rewardlist>      
 		<rewardlist type="NOT_RATED_NOT_GROUPED">
-				<reward item_id="40018" min="1" max="1" chance="5.0000" />	<!--Душа Квина-->
-                <reward item_id="40017" min="50" max="100" chance="100.0000" />	<!--Фрагмент Душы Квина-->
-                <reward item_id="24179" min="1" max="5" chance="15.0000" />	<!--на аугумент-->
-				<reward item_id="4357" min="30" max="100" chance="40.0000" />	<!--silver -->
+                <reward item_id="24179" min="1" max="2" chance="15.0000" />	<!--на аугумент-->
+		<reward item_id="4357" min="30" max="50" chance="40.0000" />	<!--silver -->
         </rewardlist>
         <attributes>
             <defence attribute="fire" value="-83"/>
-            <defence attribute="water" value="20"/>
-            <defence attribute="wind" value="20"/>
-            <defence attribute="earth" value="20"/>
-            <defence attribute="holy" value="20"/>
-            <defence attribute="unholy" value="20"/>
+            <defence attribute="water" value="150"/>
+            <defence attribute="wind" value="150"/>
+            <defence attribute="earth" value="150"/>
+            <defence attribute="holy" value="150"/>
+            <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
     <npc id="29002" name="Queen Ant Larva" title="">
@@ -431,7 +414,6 @@
                 <reward item_id="8755" min="1" max="2" chance="5.0000" />	<!--Top-Grade Life Stone -  Level 52-->
             </group>
             <group chance="30.0">
-				<reward item_id="40031" min="1" max="1" chance="40.0000" />	<!--Душа Коре-->
                 <reward item_id="24179" min="1" max="2" chance="15.0000" />	<!--на аугумент-->
 				<reward item_id="4357" min="30" max="50" chance="40.0000" /><!--silver -->
                 <reward item_id="6662" min="1" max="1" chance="100.0000" />	<!--Ring of Core-->
@@ -957,7 +939,6 @@
                 <reward item_id="6661" min="1" max="1" chance="100.0000" />	<!--Earring of Orfen-->
             </group>
             <group chance="100.0">
-				<reward item_id="40030" min="1" max="1" chance="40.0000" />	<!--Душа Орфена-->
                 <reward item_id="24179" min="1" max="2" chance="15.0000" />	<!--на аугумент-->
 				<reward item_id="4357" min="30" max="50" chance="40.0000" />	<!--silver -->
             </group>
@@ -1543,8 +1524,6 @@
             </group>
         </rewardlist>    
 		<rewardlist type="NOT_RATED_NOT_GROUPED">
-				<reward item_id="40019" min="1" max="1" chance="5.0000" />	<!--Душа Баюма-->
-                <reward item_id="40014" min="50" max="100" chance="100.0000" />	<!--Фрагмент Душы Бпюма-->
                 <reward item_id="24178" min="1" max="2" chance="25.0000" />	<!--на заточку-->
                 <reward item_id="24179" min="1" max="3" chance="43.0000" />	<!--на аугумент-->
                 <reward item_id="24176" min="1" max="2" chance="10.0000" />	<!--на пвп броню-->
@@ -2039,7 +2018,7 @@
         </attributes>
     </npc>
     <npc id="29028" name="Valakas" title="">
-        <set name="aggroRange" value="10000"/>
+        <set name="aggroRange" value="4096"/>
         <set name="ai_type" value="Valakas"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="57"/>
@@ -2067,7 +2046,7 @@
         <set name="collision_height" value="335"/>
         <set name="collision_radius" value="190"/>
         <set name="level" value="85"/>
-        <set name="isAgro" value="0"/>
+        <set name="isAgro" value="1"/>
         <set name="rewardExp" value="296105299"/>
         <set name="rewardRp" value="38248"/>
         <set name="rewardSp" value="29014318"/>
@@ -2083,6 +2062,22 @@
         </ai_params>
         <faction name="valakas_clan" range="300"/>
         <skills>
+			<skill id="4680" level="1"/>
+			<skill id="4689" level="1"/>
+			<skill id="5864" level="1"/>
+			<skill id="5865" level="1"/>
+			<skill id="4681" level="1"/>
+			<skill id="4682" level="1"/>
+			<skill id="4685" level="1"/>
+			<skill id="4688" level="1"/>
+			<skill id="4690" level="1"/>
+			<skill id="4683" level="1"/>
+			<skill id="4684" level="1"/>
+			<skill id="5860" level="1"/>
+			<skill id="5861" level="1"/>
+			<skill id="5862" level="1"/>
+			<skill id="5863" level="1"/>
+
             <skill id="4416" level="10"/>
             <skill id="4071" level="2"/>
             <skill id="4679" level="1"/>
@@ -2126,8 +2121,6 @@
         </rewardlist>
         <rewardlist type="NOT_RATED_NOT_GROUPED">
 				<reward item_id="6657" min="1" max="1" chance="100.0000" />	<!--Necklace of Valakas-->
-				<reward item_id="40020" min="1" max="1" chance="5.0000" />	<!--Душа Валакаса-->
-				<reward item_id="40016" min="50" max="100" chance="100.0000" />	<!--Фрагмент Душы Валакаса-->
                 <reward item_id="24178" min="1" max="3" chance="33.0000" />	<!--на заточку-->
                 <reward item_id="24179" min="1" max="5" chance="50.0000" />	<!--на аугумент-->
                 <reward item_id="24176" min="1" max="3" chance="15.0000" />	<!--на пвп броню-->
@@ -3268,6 +3261,8 @@
         </equip>
         <skills>
             <skill id="4416" level="9"/>
+            <skill id="5016" level="1"/>
+            <skill id="5017" level="1"/>			
             <skill id="4071" level="4"/>
             <skill id="4045" level="1"/>
             <skill id="5078" level="1"/>
@@ -3336,6 +3331,10 @@
             <skill id="4071" level="4"/>
             <skill id="4045" level="1"/>
             <skill id="5078" level="1"/>
+            <skill id="5014" level="1"/>
+            <skill id="5016" level="1"/>
+            <skill id="5018" level="2"/>
+            <skill id="5019" level="1"/>
             <skill id="4408" level="1"/>
             <skill id="4409" level="1"/>
             <skill id="4410" level="11"/>
@@ -3378,10 +3377,11 @@
             <group chance="10.0">
                 <reward item_id="21715" min="1" max="1" chance="5.9520" />	<!--Sealed Cloak of Frintezza-->
             </group>
-        </rewardlist>
+            <group chance="100.0">
+                <reward item_id="25117" min="1" max="1" chance="80.0000" />	<!--soul-->
+            </group>
+			</rewardlist>
         <rewardlist type="NOT_RATED_NOT_GROUPED">
-				<reward item_id="40022" min="1" max="1" chance="5.0000" />	<!--Душа Фринтезы-->
-                <reward item_id="40015" min="50" max="100" chance="100.0000" />	<!--Фрагмент Душы Фринтезы-->
                 <reward item_id="24179" min="1" max="1" chance="17.0000" />	<!--на аугумент-->
 				<reward item_id="4357" min="70" max="300" chance="43.0000" />	<!--silver -->
         </rewardlist>
@@ -4634,7 +4634,7 @@
         </attributes>
     </npc>
     <npc id="29066" name="Antharas" title="">
-        <set name="aggroRange" value="10000"/>
+        <set name="aggroRange" value="4096"/>
         <set name="ai_type" value="Antharas"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="57"/>
@@ -5167,6 +5167,20 @@
         </ai_params>
         <faction name="antharas_clan" range="2000"/>
         <skills>
+			<skill id="4108" level="1"/>
+			<skill id="5092" level="1"/>
+			<skill id="4109" level="1"/>
+			<skill id="4111" level="1"/>
+			<skill id="4106" level="1"/>
+			<skill id="4107" level="1"/>
+			<skill id="4112" level="1"/>
+			<skill id="4113" level="1"/>
+			<skill id="5093" level="1"/>
+			<skill id="4110" level="1"/>
+			<skill id="4239" level="1"/>
+			<skill id="4240" level="1"/>
+			<skill id="4241" level="1"/>
+			
             <skill id="4416" level="10"/>
             <skill id="4071" level="2"/>
             <skill id="4045" level="1"/>
@@ -5210,8 +5224,6 @@
         </rewardlist>       
         <rewardlist type="NOT_RATED_NOT_GROUPED">
 		    <reward item_id="6656" min="1" max="1" chance="100.0000" />	<!--Earring of Antharas-->
-			<reward item_id="40021" min="1" max="1" chance="5.0000" />	<!--Душа Антараса-->
-			<reward item_id="40013" min="50" max="100" chance="100.0000" />	<!--Фрагмент Душы Антараса-->
             <reward item_id="24178" min="1" max="3" chance="33.0000" />	<!--на заточку-->
             <reward item_id="24179" min="1" max="5" chance="50.0000" />	<!--на аугумент-->
             <reward item_id="24176" min="1" max="3" chance="15.0000" />	<!--на пвп броню-->		

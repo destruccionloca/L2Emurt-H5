@@ -16,4 +16,16 @@
 			<add order="0x40" stat="mCritRate" value="2" />
 		</for>
 	</skill>
+	<skill id="27001" levels="1" name="Blessed Scroll of Escape: Castle">
+		<set name="magicType" val="SPECIAL" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="magicLevel" val="1" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="180000"/>
+		<set name="isHandler" val="true" />
+		<set name="castle" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="RECALL" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>	
 </list>

@@ -19,6 +19,7 @@ import l2p.gameserver.serverpackets.MagicSkillUse;
 import l2p.gameserver.serverpackets.SystemMessage2;
 import l2p.gameserver.serverpackets.components.CustomMessage;
 import l2p.gameserver.serverpackets.components.SystemMsg;
+import l2p.gameserver.templates.item.ItemTemplate;
 import l2p.gameserver.utils.Log;
 
 public class RateBonus extends Functions {
@@ -128,7 +129,11 @@ public class RateBonus extends Functions {
             player.broadcastCharInfo();
         }
         
-		player.getInventory().addItem(20970, 1);
+		if (PremiumConfig.getPremConfigId(i).ALLOW_AGATION) {
+            player.getInventory().addItem(20970, 1);
+            player.sendPacket(SystemMessage2.obtainItems(20970, 1, 0));
+            player.broadcastCharInfo();
+        }
         player.getNetConnection().setBonus(i);
         player.getNetConnection().setBonusExpire(bonusExpire);
         player.stopBonusTask();

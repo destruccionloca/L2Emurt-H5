@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "spawn.dtd">
 <list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-81992" y="151496" z="-3120" h="49151"/>
+		<npc id="31046"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-82056" y="151630" z="-3129" h="49151"/>
+		<npc id="30120"/>
+	</spawn>
+	<spawn count="1" respawn="180" respawn_random="0" period_of_day="none">
+		<point x="-82152" y="151630" z="-3129" h="49151"/>
+		<npc id="30109"/>
+	</spawn>
+	<spawn count="1" respawn="180" respawn_random="0" period_of_day="none">
+		<point x="-82262" y="151630" z="-3129" h="49151"/>
+		<npc id="30115"/>
+	</spawn>
+	<spawn count="1" respawn="180" respawn_random="0" period_of_day="none">
+		<point x="-82485" y="151630" z="-3129" h="49151"/>
+		<npc id="30513"/>
+	</spawn>
+	<spawn count="1" respawn="180" respawn_random="0" period_of_day="none">
+		<point x="-82598" y="151630" z="-3129" h="49151"/>
+		<npc id="30474"/>
+	</spawn>
+	<spawn count="1" respawn="180" respawn_random="0" period_of_day="none">
+		<point x="-82712" y="151630" z="-3129" h="49151"/>
+		<npc id="32213"/>
+	</spawn>
+	<spawn count="1" respawn="180" respawn_random="0" period_of_day="none">
+		<point x="-82375" y="151582" z="-3129" h="49151"/>
+		<npc id="32323"/>
+	</spawn>
 	<spawn count="1" respawn="180" respawn_random="0" period_of_day="none">
 		<point x="-81247" y="75607" z="-3360" h="0"/>
 		<npc id="27165"/><!--Abyssal Jewel 1-->
@@ -283,7 +315,7 @@
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-82437" y="150282" z="-3120" h="16384"/>
-		<npc id="30417"/><!--Sir Klaus Vasper-->
+		<npc id="36601"/><!--Sir Klaus Vasper-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-84400" y="149872" z="-3129" h="49152"/>
@@ -500,8 +532,8 @@
 		<npc id="31046"/><!--Marsden-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-83123" y="150868" z="-3128" h="0"/>
-		<npc id="31076"/><!--Newbie Guide-->
+		<point x="-83119" y="150935" z="-3129" h="0"/>
+		<npc id="30427"/><!--Newbie Guide-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-80555" y="150387" z="-3040" h="45000"/>
@@ -510,7 +542,7 @@
 		</npc>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-82368" y="151618" z="-3120" h="48000"/>
+		<point x="-80740" y="151108" z="-3044" h="0"/>
 		<npc id="31085"><!--Dusk Priestess-->
 			<set name="town" value="gludin"/>
 		</npc>		
@@ -624,8 +656,8 @@
 		<npc id="31789"/><!--Adventure Guildsman-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-83160" y="150844" z="-3120" h="0"/>
-		<npc id="31790"/><!--Adventure Guildsman-->
+		<point x="-83120" y="150808" z="-3129" h="0"/>
+		<npc id="31340"/><!--Adventure Guildsman-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-83524" y="149488" z="-3120" h="16500"/>
@@ -654,11 +686,7 @@
 
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="class_master">
 		<point x="-81637" y="150251" z="-3130" h="16277"/>
-		<npc id="31860"/><!--Buzz the Cat-->
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="event_gatekeeper">
-		<point x="-80724" y="149802" z="-3044" h="24577"/>
-		<npc id="31217"/><!--Event Gatekeeper-->
+		<npc id="31740"/><!--Buzz the Cat-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-84697" y="153134" z="-3160" h="16384"/>
@@ -781,7 +809,7 @@
 		<npc id="32497"/><!--Inspector Adler-->
 	</spawn>
 	<spawn count="1" respawn="30" respawn_random="0" period_of_day="none">
-		<point x="-80776" y="150536" z="-3040" h="39479"/>
+		<point x="-81248" y="150564" z="-3129" h="27931"/>
 		<npc id="32320"/><!--Item Broker-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">

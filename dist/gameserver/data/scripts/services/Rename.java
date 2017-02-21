@@ -316,6 +316,7 @@ public class Rename extends Functions {
 		if (Config.SERVICES_FORBIDDEN_NAMES.length > 1) {
             for (final String st : Config.SERVICES_FORBIDDEN_NAMES) {
                 if (name.toLowerCase().contains(st.toLowerCase())) {
+				 player.sendMessage("Вы не являетесь тем, за кого себя пытаетесь выдать.");
                     return;
                 }
             }

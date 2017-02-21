@@ -5,224 +5,270 @@
 
   <!-- Плащ Охотника на Раков -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24141" count="1"/>
   </item>
   
   <!-- Плащ Укротителя Змей -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24142" count="1"/>
   </item>
   
   <!-- Памятный Плащ -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24143" count="1"/>
   </item>
   
   <!-- Плащ Повелителя Животных -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24144" count="1"/>
   </item>
   
   <!-- Кожанный Плащ Кочевника -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24145" count="1"/>
   </item>
   
   <!-- Плащ Защитника -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24146" count="1"/>
   </item>
   
   <!-- Плащ Хэллоуин -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24147" count="1"/>
   </item>
   
   <!-- Плащ Валакаса -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24148" count="1"/>
   </item>
   
   <!-- Плащ Антараса -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25035" count="1"/>
   </item>
      
   <!-- Плащ темного дракона -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25041" count="1"/>
   </item>
     
   <!-- Польский Плащ -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24149" count="1"/>
   </item>
   
     <!-- Редкий Плащ -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24150" count="1"/>
   </item>
   
     <!-- Золотой Плащ Дворянина -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24151" count="1"/>
   </item>
   
   <!-- Мантия Повелителя Стихий -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24138" count="1"/>
   </item>
   
   <!-- Советский Плащ -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24139" count="1"/>
   </item>
   
   <!-- Мантия Победителя -->
   <item id="3">
-    <ingredient id="4357" count="400"/>
+    <ingredient id="4356" count="125"/>
     <production id="24140" count="1"/>
   </item>
   
   <!-- Мантия Розы -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25000" count="1"/>
   </item>
   
   <!-- Мантия Орла -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25001" count="1"/>
   </item>
   
   <!-- Мантия Феникса -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25002" count="1"/>
   </item>
 
   <!-- 1 -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25024" count="1"/>
   </item>
   
   <!-- 2 -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25025" count="1"/>
   </item>
 
   <!-- 4 -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25028" count="1"/>
   </item>
   
   <!-- 5 -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25029" count="1"/>
   </item>
   
   <!-- 6 -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25030" count="1"/>
   </item>
   
   <!-- 7 -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25031" count="1"/>
   </item>
   
   <!-- 8 -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25032" count="1"/>
   </item>
   
   <!-- 9 -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25033" count="1"/>
   </item>
   
   <!-- 10 -->
   <item id="3">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4356" count="125"/>
     <production id="25034" count="1"/>
   </item>
 
   <!-- 12 -->
   <item id="3">
-    <ingredient id="4357" count="750"/>
+    <ingredient id="4356" count="125"/>
     <production id="25036" count="1"/>
   </item>
   
   <!-- 13 -->
   <item id="3">
-    <ingredient id="4357" count="750"/>
+    <ingredient id="4356" count="125"/>
     <production id="25037" count="1"/>
   </item>
   
   <!-- 14 -->
   <item id="3">
-    <ingredient id="4357" count="750"/>
+    <ingredient id="4356" count="125"/>
     <production id="25038" count="1"/>
   </item>
   
   <!-- 15 -->
   <item id="3">
-    <ingredient id="4357" count="750"/>
+    <ingredient id="4356" count="125"/>
     <production id="25039" count="1"/>
   </item>
   
   <!-- 16 -->
   <item id="3">
-    <ingredient id="4357" count="750"/>
+    <ingredient id="4356" count="125"/>
     <production id="25040" count="1"/>
   </item>
 
   <!-- 18 -->
   <item id="3">
-    <ingredient id="4357" count="750"/>
+    <ingredient id="4356" count="125"/>
     <production id="25042" count="1"/>
   </item>
   
   <!-- 19 -->
   <item id="3">
-    <ingredient id="4357" count="750"/>
+    <ingredient id="4356" count="125"/>
     <production id="25043" count="1"/>
   </item>
   
   <!-- 20 -->
   <item id="3">
-    <ingredient id="4357" count="750"/>
+    <ingredient id="4356" count="125"/>
     <production id="25045" count="1"/>
   </item>
   
   <!-- 22 -->
   <item id="3">
-    <ingredient id="4357" count="750"/>
+    <ingredient id="4356" count="125"/>
     <production id="25046" count="1"/>
   </item>
+
+  <!-- Cloak of Draconic -->
+  <item id="16">
+    <ingredient id="4356" count="95"/>
+    <production id="24007" count="1"/>
+  </item>
+
+  <!-- Cloak of Vesper -->
+  <item id="16">
+    <ingredient id="4356" count="95"/>
+    <production id="24006" count="1"/>
+  </item>
+
+  <!-- Cloak of Elegia -->
+  <item id="16">
+    <ingredient id="4356" count="95"/>
+    <production id="24005" count="1"/>
+  </item>
+
+  <!-- Cloak of Vorpal -->
+  <item id="16">
+    <ingredient id="4356" count="95"/>
+    <production id="24004" count="1"/>
+  </item>
+
+  <!-- Cloak of Morai -->
+  <item id="16">
+    <ingredient id="4356" count="95"/>
+    <production id="24003" count="1"/>
+  </item>
   
+	<!-- Holy Spirit Cloak -->
+	<item id="24">
+		<ingredient id="4356" count="95" />
+		<production id="21717" count="1" />
+	</item>	
+	
+	<item id="24">
+		<ingredient id="4356" count="95" />
+		<production id="21718" count="1" />
+	</item>
+	<!-- Holy Spirit Cloak -->
+	<item id="24">
+		<ingredient id="4356" count="95" />
+		<production id="21716" count="1" />
+	</item>
+ 
 </list>

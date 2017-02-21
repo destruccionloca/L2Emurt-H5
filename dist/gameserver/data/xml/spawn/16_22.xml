@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<list>
+	<spawn count="1" respawn="86400" respawn_random="3600" period_of_day="none">
+		<point x="-114712" y="147912" z="6576" h="32767"/>
+		<npc id="36759"/><!--Призрак Харнака-->
+	</spawn>
+<!--Этаж 1 Спот 1-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112193" y="148178" z="477" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111806" y="147268" z="477" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111267" y="147796" z="477" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111425" y="147411" z="477" h="483"/>
+		<npc id="36768"/><!--Ракджан-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112333" y="147799" z="477" h="483"/>
+		<npc id="36760"/><!--Ботус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111814" y="148335" z="477" h="483"/>
+		<npc id="36760"/><!--Ботус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112173" y="147426" z="477" h="483"/>
+		<npc id="36764"/><!--Кракус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111428" y="148171" z="477" h="483"/>
+		<npc id="36764"/><!--Кракус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111591" y="147875" z="477" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111879" y="147569" z="477" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111970" y="147954" z="477" h="483"/>
+		<npc id="36767"/><!--Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111653" y="147637" z="477" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112387" y="148590" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112603" y="148389" z="474" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112754" y="148943" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112959" y="148755" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-113339" y="149127" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-113124" y="149322" z="474" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+<!--Этаж 1 Спот 1 Конец-->
+<!--Этаж 1 Спот 2-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114711" y="147120" z="477" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-115083" y="146210" z="477" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114342" y="146215" z="477" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-115081" y="146956" z="477" h="483"/>
+		<npc id="36760"/><!--Ботус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114712" y="146050" z="477" h="483"/>
+		<npc id="36768"/><!--Ракджан-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114339" y="146955" z="477" h="483"/>
+		<npc id="36760"/><!--Ботус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114193" y="146584" z="477" h="483"/>
+		<npc id="36764"/><!--Кракус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-115232" y="146584" z="477" h="483"/>
+		<npc id="36764"/><!--Кракус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114538" y="146498" z="477" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114889" y="146496" z="477" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114712" y="146371" z="477" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114710" y="146815" z="477" h="483"/>
+		<npc id="36767"/><!--Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114560" y="147542" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114843" y="147560" z="474" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114843" y="148075" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114560" y="148074" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114563" y="148601" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114845" y="148600" z="474" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+<!--Этаж 1 Спот 2 Конец-->
+<!--Этаж 1 Спот 3-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117236" y="148172" z="477" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118124" y="147799" z="477" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117609" y="147279" z="477" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117981" y="147426" z="477" h="483"/>
+		<npc id="36768"/><!--Ракджан-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117624" y="148320" z="477" h="483"/>
+		<npc id="36760"/><!--Ботус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117103" y="147798" z="477" h="483"/>
+		<npc id="36760"/><!--Ботус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117252" y="147428" z="477" h="483"/>
+		<npc id="36764"/><!--Кракус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117976" y="148140" z="477" h="483"/>
+		<npc id="36764"/><!--Кракус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117547" y="147620" z="477" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117786" y="147861" z="477" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117437" y="147970" z="477" h="483"/>
+		<npc id="36767"/><!--Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117772" y="147652" z="477" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116833" y="148371" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117020" y="148588" z="474" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116650" y="148958" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116453" y="148755" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116282" y="149324" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116084" y="149108" z="474" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+<!--Этаж 1 Спот 3 Конец-->
+
+<!--Этаж 1 Спот 1 закрытые Комнаты-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110985" y="152892" z="474" h="483"/>
+		<npc id="36767"/><!--Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110719" y="152649" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110610" y="152376" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110721" y="152098" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111260" y="152116" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111370" y="152362" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111258" y="152634" z="474" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111117" y="151306" z="472" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110882" y="151316" z="472" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111102" y="151016" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110898" y="151032" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110912" y="150581" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111210" y="150783" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111210" y="150547" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111545" y="150546" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111540" y="150765" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111926" y="150765" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111924" y="150562" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112277" y="150766" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112266" y="150565" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112763" y="150766" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112760" y="150567" z="473" h="483"/>
+		<npc id="36761"/><!--Кан Ваисс-->
+	</spawn>
+<!--Этаж 1 Спот 1 Закрытые Комнаты Конец-->
+
+<!--Этаж 1 Спот 2 закрытые Комнаты-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110484" y="154213" z="471" h="483"/>
+		<npc id="36768"/><!--Ракджан-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110722" y="153937" z="471" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110986" y="153807" z="471" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111261" y="153937" z="471" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111262" y="154476" z="471" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111000" y="154588" z="471" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110726" y="154474" z="471" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112042" y="154303" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112026" y="154113" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112408" y="154129" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112422" y="154318" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112781" y="154267" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112608" y="153717" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112811" y="153709" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112813" y="153318" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112609" y="153301" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112610" y="152898" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112814" y="152888" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112813" y="152469" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112624" y="152467" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112643" y="151860" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-113035" y="152016" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-113048" y="151807" z="470" h="483"/>
+		<npc id="36763"/><!--Лотус Кракии-->
+	</spawn>
+<!--Этаж 1 Спот 2 Закрытые Комнаты Конец-->
+
+<!--Этаж 1 Спот 3 закрытые Комнаты-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114711" y="154815" z="472" h="483"/>
+		<npc id="36767"/><!--Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114433" y="154571" z="472" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114319" y="154310" z="472" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114438" y="154031" z="472" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114972" y="154036" z="472" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-115086" y="154299" z="472" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114986" y="154574" z="472" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114816" y="153224" z="473" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114610" y="153239" z="473" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114608" y="152933" z="473" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114813" y="152917" z="473" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114815" y="152523" z="473" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114607" y="152520" z="473" h="483"/>
+		<npc id="36765"/><!--Эль Ваисс-->
+	</spawn>
+<!--Этаж 1 Спот 3 Закрытые Комнаты Конец-->
+
+<!--Этаж 1 Спот 4 закрытые Комнаты-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118958" y="154218" z="473" h="483"/>
+		<npc id="36768"/><!--Ракджан-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118714" y="154491" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118438" y="154606" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118176" y="154491" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118166" y="153956" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118423" y="153826" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118699" y="153939" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117399" y="154111" z="472" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117408" y="154315" z="472" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117015" y="154114" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117017" y="154318" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116659" y="154269" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116815" y="153993" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116624" y="153992" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116814" y="153705" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116611" y="153732" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116816" y="153321" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116610" y="153304" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116796" y="152887" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116624" y="152887" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116812" y="152470" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116609" y="152471" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116610" y="152134" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116812" y="152135" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116778" y="151843" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116388" y="152029" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116376" y="151823" z="473" h="483"/>
+		<npc id="36760"/><!--Батус Кракии-->
+	</spawn>
+<!--Этаж 1 Спот 4 Закрытые Комнаты Конец-->
+
+<!--Этаж 1 Спот 5 закрытые Комнаты-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118440" y="152892" z="475" h="483"/>
+		<npc id="36767"/><!--Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118175" y="152648" z="475" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118052" y="152390" z="475" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118166" y="152111" z="475" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118700" y="152102" z="475" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118813" y="152362" z="475" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118714" y="152656" z="475" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118525" y="151321" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118354" y="151320" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118351" y="151012" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118557" y="151031" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118510" y="150596" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118212" y="150782" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118200" y="150576" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117944" y="150577" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117944" y="150749" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117449" y="150578" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117460" y="150750" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117111" y="150562" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117111" y="150767" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116731" y="150562" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116728" y="150750" z="474" h="483"/>
+		<npc id="36762"/><!--Бамонти-->
+	</spawn>
+<!--Этаж 1 Спот 5 Закрытые Комнаты Конец-->
+
+
+
+
+
+
+
+
+
+
+<!--Этаж 2 Спот 1-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112189" y="146767" z="3568" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111801" y="145873" z="3568" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111280" y="146392" z="3568" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111445" y="146048" z="3568" h="3578"/>
+		<npc id="36772"/><!--Демонический Ракджан-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111799" y="146909" z="3568" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112335" y="146394" z="3568" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112171" y="146035" z="3568" h="3578"/>
+		<npc id="36770"/><!--Демонический Кракос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111443" y="146748" z="3568" h="3578"/>
+		<npc id="36770"/><!--Демонический Кракос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111606" y="146465" z="3568" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111861" y="146213" z="3568" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111973" y="146565" z="3568" h="3578"/>
+		<npc id="36776"/><!--Демонический Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111636" y="146228" z="3568" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112402" y="147181" z="3565" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112586" y="146998" z="3565" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112937" y="147366" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112785" y="147550" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-113153" y="147917" z="3565" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-113323" y="147747" z="3565" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+<!--Этаж 2 Спот 1 Конец-->
+<!--Этаж 2 Спот 2-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114711" y="145711" z="3568" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-115070" y="144818" z="3568" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114353" y="144819" z="3568" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114323" y="145562" z="3568" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114711" y="144659" z="3568" h="3578"/>
+		<npc id="36772"/><!--Демонический Ракджан-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-115066" y="145548" z="3568" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114177" y="145190" z="3568" h="3578"/>
+		<npc id="36770"/><!--Демонический Кракос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-115231" y="145189" z="3568" h="3578"/>
+		<npc id="36770"/><!--Демонический Кракос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114524" y="145105" z="3568" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114871" y="145104" z="3568" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114711" y="144959" z="3568" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114712" y="145411" z="3568" h="3578"/>
+		<npc id="36776"/><!--Демонический Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114593" y="146166" z="3565" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114831" y="146168" z="3565" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114828" y="146679" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114579" y="146694" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114593" y="147220" z="3565" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114829" y="147208" z="3565" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+<!--Этаж 2 Спот 2 Конец-->
+<!--Этаж 2 Спот 3-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117235" y="146779" z="3568" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118141" y="146392" z="3568" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117622" y="145871" z="3568" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117982" y="146035" z="3568" h="3578"/>
+		<npc id="36772"/><!--Демонический Ракджан-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117091" y="146392" z="3568" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117624" y="146926" z="3568" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117981" y="146764" z="3568" h="3578"/>
+		<npc id="36770"/><!--Демонический Кракос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117252" y="146021" z="3568" h="3578"/>
+		<npc id="36770"/><!--Демонический Кракос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117805" y="146452" z="3568" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117547" y="146196" z="3568" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117454" y="146547" z="3568" h="3578"/>
+		<npc id="36776"/><!--Демонический Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117789" y="146224" z="3568" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116836" y="147013" z="3565" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117002" y="147179" z="3565" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116466" y="147378" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116632" y="147544" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116266" y="147899" z="3565" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116101" y="147746" z="3565" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+<!--Этаж 2 Спот 3 Конец-->
+
+<!--Этаж 2 Спот 1 закрытые Комнаты-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111002" y="151502" z="3564" h="3578"/>
+		<npc id="36776"/><!--Демонический Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110720" y="151241" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110612" y="150984" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110709" y="150709" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111274" y="150709" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111376" y="150967" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111256" y="151225" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111085" y="149915" z="3563" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110912" y="149916" z="3563" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111088" y="149576" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110897" y="149576" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110931" y="149190" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111240" y="149352" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111240" y="149170" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111511" y="149357" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111512" y="149168" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111978" y="149171" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111976" y="149356" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112326" y="149357" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112327" y="149169" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112715" y="149167" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112725" y="149360" z="3564" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+<!--Этаж 2 Спот 1 Закрытые Комнаты Конец-->
+
+<!--Этаж 2 Спот 2 закрытые Комнаты-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110487" y="152808" z="3562" h="3578"/>
+		<npc id="36772"/><!--Демонический Ракджан-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110720" y="152531" z="3562" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110984" y="152416" z="3562" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111260" y="152534" z="3562" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-111259" y="153071" z="3562" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110998" y="153183" z="3562" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110722" y="153085" z="3562" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112052" y="152894" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112056" y="152722" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112381" y="152705" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112376" y="152912" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112778" y="152874" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112612" y="152584" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112797" y="152584" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112797" y="152297" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112626" y="152311" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112627" y="151910" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112796" y="151912" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112795" y="151496" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112626" y="151490" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112628" y="151079" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112798" y="151064" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112797" y="150747" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112629" y="150753" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-112630" y="150435" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-113046" y="150417" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-113047" y="150590" z="3561" h="3578"/>
+		<npc id="36771"/><!--Демонический Лотус-->
+	</spawn>
+<!--Этаж 2 Спот 2 Закрытые Комнаты Конец-->
+
+<!--Этаж 2 Спот 3 закрытые Комнаты-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114711" y="153422" z="3563" h="3578"/>
+		<npc id="36776"/><!--Демонический Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114986" y="153180" z="3563" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-115102" y="152904" z="3563" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114974" y="152628" z="3563" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114432" y="152626" z="3563" h="3578"/>
+		<npc id="36773"/><!--Демонический Кан Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114319" y="152905" z="3563" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114436" y="153180" z="3563" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114809" y="151833" z="3564" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114626" y="151830" z="3564" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114792" y="151496" z="3564" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114608" y="151476" z="3564" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114612" y="151126" z="3564" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114794" y="151128" z="3564" h="3578"/>
+		<npc id="36774"/><!--Демонический Эль Ваисс-->
+	</spawn>
+<!--Этаж 2 Спот 3 Закрытые Комнаты Конец-->
+
+<!--Этаж 2 Спот 4 закрытые Комнаты-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118939" y="152808" z="3564" h="3578"/>
+		<npc id="36772"/><!--Демонический Ракджан-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118702" y="152531" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118424" y="152437" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118166" y="152543" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118163" y="153084" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118423" y="153196" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118699" y="153085" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117381" y="152909" z="3563" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117368" y="152741" z="3563" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117014" y="152721" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117013" y="152909" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116632" y="152904" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116810" y="152568" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116625" y="152568" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116797" y="152313" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116630" y="152326" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116624" y="151907" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116797" y="151911" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116793" y="151496" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116627" y="151493" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116795" y="151079" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116623" y="151080" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116611" y="150758" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116783" y="150759" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116779" y="150438" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116392" y="150584" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116376" y="150422" z="3564" h="3578"/>
+		<npc id="36769"/><!--Демонический Батус-->
+	</spawn>
+<!--Этаж 2 Спот 4 Закрытые Комнаты Конец-->
+
+<!--Этаж 2 Спот 5 закрытые Комнаты-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118440" y="151516" z="3574" h="3578"/>
+		<npc id="36776"/><!--Демонический Секнос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118718" y="151261" z="3574" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118828" y="150966" z="3574" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118714" y="150693" z="3574" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118166" y="150703" z="3574" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118047" y="150983" z="3574" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118164" y="151245" z="3574" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118524" y="149915" z="3573" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118354" y="149912" z="3573" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118524" y="149608" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118353" y="149608" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118505" y="149201" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118200" y="149358" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-118200" y="149173" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117928" y="149174" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117940" y="149341" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117459" y="149359" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117463" y="149168" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117107" y="149171" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-117109" y="149340" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116712" y="149339" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-116712" y="149167" z="3565" h="3578"/>
+		<npc id="36775"/><!--Демонический Бамонти-->
+	</spawn>
+<!--Этаж 2 Спот 5 Закрытые Комнаты Конец-->
+
+</list>

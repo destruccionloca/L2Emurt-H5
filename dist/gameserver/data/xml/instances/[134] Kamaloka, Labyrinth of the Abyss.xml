@@ -5,7 +5,7 @@
 		<collapse on-party-dismiss="true" timer="60" />
 		<level min="78" max="85" />
 		<party min="2" max="9" />
-		<return loc="-84472 242744 -3728 8191" />
+		<return loc="-83048 150856 -3120 8191" />
 		<teleport loc="22010 -174867 -10904" />
 		<remove itemId="0" count="0" necessary="false" />
 		<give itemId="0" count="0" />
@@ -44,7 +44,7 @@
 				<coords loc="15828 -174885 -10384 0" />
 			</spawn>
 			<!-- BOSS: Lost Captain -->
-			<spawn mobId="25710" type="point">
+			<spawn mobId="36766" type="point">
 				<coords loc="12047 -174887 -9944 0" />
 			</spawn>
 		</spawns>

@@ -1287,8 +1287,16 @@
     <set name="crystal_type" value="NONE"/>
     <set name="type" value="OTHER"/>
   </etcitem>
+  
   <armor id="21793" name="Dynasty Breastplate of Friendship" add_name="90 day limited period">
-    <set name="crystal_type" value="S"/>
+    <set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
     <set name="icon" value="icon.armor_t91_u_i00"/>
     <set name="price" value="0"/>
     <set name="type" value="HEAVY"/>
@@ -1303,7 +1311,14 @@
     </for>
   </armor>
   <armor id="21794" name="Dynasty Gaiters of Friendship" add_name="90 day limited period">
-    <set name="crystal_type" value="S"/>
+    <set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
     <set name="icon" value="icon.armor_t91_l_i00"/>
     <set name="price" value="0"/>
     <set name="type" value="HEAVY"/>
@@ -1318,7 +1333,14 @@
     </for>
   </armor>
   <armor id="21795" name="Dynasty Gauntlet of Friendship" add_name="90 day limited period">
-    <set name="crystal_type" value="S"/>
+    <set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
     <set name="icon" value="icon.armor_t91_g_i00"/>
     <set name="price" value="0"/>
     <set name="type" value="NONE"/>
@@ -1333,7 +1355,14 @@
     </for>
   </armor>
   <armor id="21796" name="Dynasty Boots of Friendship" add_name="90 day limited period">
-    <set name="crystal_type" value="S"/>
+    <set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
     <set name="icon" value="icon.armor_t91_b_i00"/>
     <set name="price" value="0"/>
     <set name="type" value="NONE"/>
@@ -1348,7 +1377,14 @@
     </for>
   </armor>
   <armor id="21797" name="Dynasty Helmet of Friendship" add_name="90 day limited period">
-    <set name="crystal_type" value="S"/>
+    <set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
     <set name="icon" value="icon.armor_helmet_i00"/>
     <set name="price" value="0"/>
     <set name="type" value="NONE"/>
@@ -1363,7 +1399,14 @@
     </for>
   </armor>
   <weapon id="21798" name="Dynasty Shield of Friendship" add_name="90-day limited period">
-    <set name="crystal_type" value="S"/>
+    <set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
     <set name="icon" value="icon.shield_dynasty_shield_i00"/>
     <set name="price" value="0"/>
     <set name="type" value="NONE"/>

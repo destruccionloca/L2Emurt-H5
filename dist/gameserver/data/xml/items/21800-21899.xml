@@ -2,7 +2,14 @@
 
 <list>
 	<armor id="21800" name="Dynasty Leather Armor of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t92_u_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="LIGHT"/>
@@ -17,7 +24,14 @@
 		</for>
 	</armor>
 	<armor id="21801" name="Dynasty Leather Leggings of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t92_l_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="LIGHT"/>
@@ -32,7 +46,14 @@
 		</for>
 	</armor>
 	<armor id="21802" name="Dynasty Leather Helmet of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
@@ -47,7 +68,14 @@
 		</for>
 	</armor>
 	<armor id="21803" name="Dynasty Leather Gloves of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t92_g_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
@@ -62,7 +90,14 @@
 		</for>
 	</armor>
 	<armor id="21804" name="Dynasty Leather Boots of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t92_b_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
@@ -83,7 +118,14 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<armor id="21806" name="Dynasty Tunic of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_u_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="MAGIC"/>
@@ -99,7 +141,14 @@
 		</for>
 	</armor>
 	<armor id="21807" name="Dynasty Stockings of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_l_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="MAGIC"/>
@@ -115,7 +164,14 @@
 		</for>
 	</armor>
 	<armor id="21808" name="Dynasty Circlet of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_circlet_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
@@ -130,7 +186,14 @@
 		</for>
 	</armor>
 	<armor id="21809" name="Dynasty Gloves of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_g_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
@@ -145,7 +208,14 @@
 		</for>
 	</armor>
 	<armor id="21810" name="Dynasty Shoes of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_b_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
@@ -160,13 +230,20 @@
 		</for>
 	</armor>
 	<armor id="21811" name="Dynasty Sickle of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.dynasty_sigil_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="930"/>
 		<equip>
-			<slot id="NONE"/>
+			<slot id="LEFT_HAND"/>
 		</equip>
 		<for>
 			<add stat="pDef" order="0x10" value="15"/>
@@ -235,7 +312,14 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<armor id="21817" name="Dynasty Earrings of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_dynasty_earing_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
@@ -251,7 +335,14 @@
 		</for>
 	</armor>
 	<armor id="21818" name="Dynasty Necklace of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_dynasty_necklace_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
@@ -266,7 +357,14 @@
 		</for>
 	</armor>
 	<armor id="21819" name="Dynasty Ring of Friendship" add_name="90 day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_dynasty_ring_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
@@ -553,7 +651,14 @@
 		</for>
 	</weapon>
 	<weapon id="21833" name="Dynasty Phantom of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_magic_sword_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="SWORD"/>
@@ -562,19 +667,29 @@
 		<set name="spiritshots" value="1"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="LEFT_HAND"/>
+			<slot id="RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="267"/>
-			<add stat="mAtk" order="0x10" value="202"/>
-			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3047" level="2"/>
+    </skills>
+    <for>
+      <add stat="pAtk" order="0x10" value="267"/>
+      <add stat="mAtk" order="0x10" value="202"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="379"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21834" name="Dynasty Knife of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_dagger_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="DAGGER"/>
@@ -583,20 +698,30 @@
 		<set name="spiritshots" value="1"/>
 		<set name="rnd_dam" value="5"/>
 		<equip>
-			<slot id="LEFT_HAND"/>
+			<slot id="RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="291"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="433"/>
-			<set stat="baseCrit" order="0x08" value="12.0"/>
-			<add stat="accCombat" order="0x10" value="-3.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3066" level="4"/>
+    </skills>
+    <for>
+      <add stat="pAtk" order="0x10" value="291"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="120"/>
+      <set stat="atkBaseSpeed" order="0x08" value="433"/>
+      <add stat="accCombat" order="0x10" value="-4.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21835" name="Dynasty Bow of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_bow_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="BOW"/>
@@ -608,18 +733,28 @@
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="654"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="293"/>
-			<set stat="baseCrit" order="0x08" value="12.0"/>
-			<add stat="accCombat" order="0x10" value="-3.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3567" level="2"/>
+    </skills>
+    <for>
+      <add stat="pAtk" order="0x10" value="654"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="120"/>
+      <set stat="atkBaseSpeed" order="0x08" value="293"/>
+      <add stat="accCombat" order="0x10" value="-4.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21836" name="Dynasty Cudgel of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_hammer_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="BLUNT"/>
@@ -628,20 +763,30 @@
 		<set name="spiritshots" value="1"/>
 		<set name="rnd_dam" value="20"/>
 		<equip>
-			<slot id="LEFT_HAND"/>
+			<slot id="RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="333"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<set stat="baseCrit" order="0x08" value="4.0"/>
-			<add stat="accCombat" order="0x10" value="4.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3013" level="3"/>
+    </skills>
+    <for>
+      <add stat="pAtk" order="0x10" value="333"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="40"/>
+      <set stat="atkBaseSpeed" order="0x08" value="379"/>
+      <add stat="accCombat" order="0x10" value="5.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21837" name="Dynasty Sword of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_blade_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="SWORD"/>
@@ -650,19 +795,29 @@
 		<set name="spiritshots" value="1"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="LEFT_HAND"/>
+			<slot id="RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="333"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3566" level="2"/>
+    </skills>
+    <for>
+      <add stat="pAtk" order="0x10" value="333"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="379"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21838" name="Dynasty Blade of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_twohand_sword_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="BIGSWORD"/>
@@ -673,17 +828,27 @@
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="405"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="325"/>
-			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3566" level="2"/>
+    </skills>
+    <for>
+      <add stat="pAtk" order="0x10" value="405"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="325"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21839" name="Dynasty Bagh-Nakh of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_jamadhr_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="DUALFIST"/>
@@ -694,18 +859,28 @@
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="405"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="325"/>
-			<set stat="baseCrit" order="0x08" value="4.0"/>
-			<add stat="accCombat" order="0x10" value="4.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3565" level="2"/>
+    </skills>
+    <for>
+      <add stat="pAtk" order="0x10" value="405"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="40"/>
+      <set stat="atkBaseSpeed" order="0x08" value="325"/>
+      <add stat="accCombat" order="0x10" value="5.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21840" name="Dynasty Dualsword of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="DUAL"/>
@@ -716,17 +891,29 @@
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="405"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="325"/>
-			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3552" level="1"/>
+    </skills>
+    <enchant4_skill id="3411" level="1"/>
+    <!--Special Ability: Focus-->
+    <for>
+      <add stat="pAtk" order="0x10" value="405"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="325"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21841" name="Dynasty Halberd of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_spear_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="POLE"/>
@@ -737,21 +924,29 @@
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<skills>
-      <skill id="3599" level="1"/>
+    <skills>
+      <skill id="3552" level="2"/>
+	  <skill id="3599" level="1"/>
     </skills>
-		<for>
-			<add stat="pAtk" order="0x10" value="333"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="325"/>
-			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<add stat="accCombat" order="0x10" value="-3.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <for>
+      <add stat="pAtk" order="0x10" value="333"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="325"/>
+      <add stat="accCombat" order="0x10" value="-4.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21842" name="Dynasty Ancient Sword of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_ancient_sword_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="BIGSWORD"/>
@@ -762,18 +957,28 @@
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="361"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="350"/>
-			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<add stat="accCombat" order="0x10" value="2.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3566" level="2"/>
+    </skills>
+    <for>
+      <add stat="pAtk" order="0x10" value="361"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="350"/>
+      <add stat="accCombat" order="0x10" value="2.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21843" name="Dynasty Rapier of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_rapier_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="RAPIER"/>
@@ -782,20 +987,32 @@
 		<set name="spiritshots" value="1"/>
 		<set name="rnd_dam" value="40"/>
 		<equip>
-			<slot id="LEFT_HAND"/>
+			<slot id="RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="302"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="406"/>
-			<set stat="baseCrit" order="0x08" value="10.0"/>
-			<add stat="accCombat" order="0x10" value="-1.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3566" level="2"/>
+    </skills>
+    <enchant4_skill id="3426" level="1"/>
+    <!--Maximum Ability-->
+    <for>
+      <add stat="pAtk" order="0x10" value="302"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="100"/>
+      <set stat="atkBaseSpeed" order="0x08" value="406"/>
+      <add stat="accCombat" order="0x10" value="-2.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<weapon id="21844" name="Dynasty Crossbow of Friendship" add_name="90-day limited period">
-		<set name="crystal_type" value="S"/>
+		<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="360"/>
+	<set name="freightable" value="true"/>
+	<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_crossbow_i01"/>
 		<set name="price" value="0"/>
 		<set name="type" value="CROSSBOW"/>
@@ -806,15 +1023,18 @@
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<for>
-			<add stat="pAtk" order="0x10" value="401"/>
-			<add stat="mAtk" order="0x10" value="151"/>
-			<set stat="atkBaseSpeed" order="0x08" value="303"/>
-			<set stat="baseCrit" order="0x08" value="10.0"/>
-			<add stat="accCombat" order="0x10" value="-1.0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="mAtk" order="0x0C" value="0"/>
-		</for>
+    <skills>
+      <skill id="3567" level="2"/>
+    </skills>
+    <for>
+      <add stat="pAtk" order="0x10" value="401"/>
+      <add stat="mAtk" order="0x10" value="151"/>
+      <set stat="baseCrit" order="0x08" value="100"/>
+      <set stat="atkBaseSpeed" order="0x08" value="303"/>
+      <add stat="accCombat" order="0x10" value="-2.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
 	</weapon>
 	<etcitem id="21845" name="Mysterious No Grade Soulshot">
 		<set name="icon" value="icon.etc_spirit_bullet_white_i00"/>

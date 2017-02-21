@@ -455,7 +455,7 @@
 		<point x="-16464" y="123952" z="-3112" h="0"/>
 		<npc id="31796"/><!--Adventure Guildsman-->
 	</spawn>
-	<spawn count="1" respawn="86400" respawn_random="3600" period_of_day="none">
+	<spawn count="1" respawn="86400" respawn_random="7200" period_of_day="none">
 		<point x="-21610" y="181594" z="-5734" h="0"/>
 		<npc id="29001"/><!--Queen Ant-->
 	</spawn>
@@ -2337,7 +2337,7 @@
 	</spawn>
 	<spawn count="1" respawn="120" respawn_random="0" period_of_day="none">
 		<point x="-12752" y="279696" z="-13596" h="32768"/>
-		<npc id="32467"/><!--Teleportation Cubic-->
+		<npc id="36786"/><!--Teleportation Cubic-->
 	</spawn>
 	<spawn count="1" respawn="120" respawn_random="0" period_of_day="none">
 		<point x="-13848" y="279944" z="-13626" h="0"/>

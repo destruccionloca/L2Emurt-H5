@@ -1563,7 +1563,7 @@
 	</skill>
 	<skill id="5592" levels="16" name="Lightning Barrier">
 		<!-- Description: Temporarily paralyzed. -->
-		<table name="#chance">80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
+		<table name="#chance">60 61 62 63 64 65 66 67 68 69 70 71 92 73 74 75</table>
 		<table name="#magicLevel">80 81 81 81 82 82 82 83 83 83 84 84 85 85 85 85</table>
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="SPECIAL" />

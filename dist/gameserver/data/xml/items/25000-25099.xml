@@ -1,0 +1,1647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+
+<list>
+	<armor id="25000" name="Плащ Пылающей Розы">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="CloakEve.7anni_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25001" name="Плащ Пылающего Орла">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="CloakEve6.7anni_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25002" name="Плащ Пылающего Феникса">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="CloakEve7.7anni_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+	<armor id="25011" name="Плащ Света - Аден">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="1011671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<cond msgId="113">
+		  <player residence="Castle;5"/>
+		</cond>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<skills>
+		  <skill id="27001" level="1"/>
+		</skills>	
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25012" name="Плащ Света - Гиран">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="1011671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<cond msgId="113">
+		  <player residence="Castle;3"/>
+		</cond>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<skills>
+		  <skill id="27001" level="1"/>
+		</skills>	
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25013" name="Плащ Света - Годдард">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="1011671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<cond msgId="113">
+		  <player residence="Castle;7"/>
+		</cond>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<skills>
+		  <skill id="27001" level="1"/>
+		</skills>	
+	   <attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25014" name="Плащ Света - Руна">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="1011671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<cond msgId="113">
+		  <player residence="Castle;8"/>
+		</cond>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<skills>
+		  <skill id="27001" level="1"/>
+		</skills>	
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25015" name="Плащ Света - Дион">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="1011671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<cond msgId="113">
+		  <player residence="Castle;2"/>
+		</cond>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<skills>
+		  <skill id="27001" level="1"/>
+		</skills>	
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25016" name="Плащ Света - Орен">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="1011671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<cond msgId="113">
+		  <player residence="Castle;4"/>
+		</cond>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<skills>
+		  <skill id="27001" level="1"/>
+		</skills>	
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25017" name="Плащ Света - Шуттгард">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="1011671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<cond msgId="113">
+		  <player residence="Castle;9"/>
+		</cond>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<skills>
+		  <skill id="27001" level="1"/>
+		</skills>	
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25018" name="Плащ Света - Иннадрил">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="1011671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<cond msgId="113">
+		  <player residence="Castle;6"/>
+		</cond>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<skills>
+		  <skill id="27001" level="1"/>
+		</skills>	
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25019" name="Плащ Света - Глудио">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="1011671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<cond msgId="113">
+		  <player residence="Castle;1"/>
+		</cond>	
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<skills>
+		  <skill id="27001" level="1"/>
+		</skills>	
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor> 
+	<armor id="25020" name="Плащ Яркого Света">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="1011671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25021" name="Плащ Холодной Тьмы">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25022" name="Плащ Света">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25023" name="Плащ Тьмы">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Mantle01.kovico"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25024" name="Плащ Героя">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="HeroCloak.hero_r_ico"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25025" name="Плащ Славы">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="HeroCloak.hero_b_ico"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25026" name="Багровый Плащ">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Averia_addition.Icon.g_cloak_anniversary"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25027" name="Золотой Плащ">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="Averia_addition.Icon.g_cloak_noblesse"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25028" name="Классический Плащ">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25029" name="Плащ Свирепости">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+    <armor id="25030" name="Плащ Убийцы Драконов">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="icon.vesper_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25031" name="Демонический Плащ">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="icon.vesper_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25032" name="Плащ Крепости">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="icon.vesper_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25033" name="Плащ Падших">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="icon.vesper_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25034" name="Плащ Темного Рыцаря">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="LineageCustom4.cloak_darken_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25035" name="Плащ Антараса">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25036" name="Плащ Герцога">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25037" name="Плащ Заклинателя">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25038" name="Плащ Лучника 2">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25039" name="Плащ Целителя 2">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25040" name="Плащ Рыцаря 2">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25041" name="Плащ Темного Дракона">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25042" name="Плащ Разбойника 2">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25043" name="Плащ Призывателя 2">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25045" name="Плащ Воителя">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25046" name="Плащ Мага 2">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <attributes>
+	<attribute element="fire" value="60"/>
+      <attribute element="water" value="60"/>
+      <attribute element="wind" value="60"/>
+      <attribute element="earth" value="60"/>
+      <attribute element="holy" value="60"/>
+      <attribute element="unholy" value="60"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="70"/>
+      <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+    <armor id="25047" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25048" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25049" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25050" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25051" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25052" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25053" name="Головной Убор Ниндзя">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="BranchSys3.icon.g_co_ninja_hair"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25054" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25055" name="Яркий Пляжный Убор">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="BranchSys3.icon.g_beach_cap"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25056" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25057" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25058" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25059" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25060" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25061" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25062" name="Черный берет">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="BranchSys3.icon.g_co_military_hair_m"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25063" name="Пилотка">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="BranchSys3.icon.g_co_military_hair_f"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25064" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25065" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25066" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25067" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25068" name="Шляпа налетчика">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="shapki2.razico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25069" name="Шлем Темного Рыцаря">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="LineageCustom4.Dark_helmet"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25070" name="Белый Капюшон разбойника">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="LineageCustom2.ico.Hel_asmw_ico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25072" name="Шляпа Капитана">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="LineageCustom5.H_captain_ico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25073" name="Бандана Пирата">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="LineageCustom5.H_pirate_ico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25074" name="Шляпа Мушкетера">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="LineageCustom5.H_mst_ico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25075" name="Шляпа Волшебника">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="LineageCustom5.H_wzd_ico"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+    <armor id="25078" name="Шлем Белефа">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="Beres_armor.g_co_beres_hair"/>
+    <set name="price" value="2000000"/>
+    <set name="type" value="NONE"/>
+    <set name="weight" value="10"/>
+    <equip>
+      <slot id="HAIR_ALL"/>
+    </equip>
+  </armor>
+  <etcitem id="25079" name="Сертификат помощи Матису">
+    <set name="class" value="OTHER"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_permit_card_i00"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="1"/>
+	<set name="stackable" value="true"/>
+  </etcitem>
+	<armor id="25080" name="Шапка Ковбоя">
+		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_h003_i00"/>
+		<set name="freightable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+	</armor>
+	<armor id="25081" name="Костюм Ковбоя">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_003_i00"/>
+		<set name="freightable" value="True"/>
+		<set name="sellable" value="False"/>
+		<set name="tradeable" value="False"/>
+		<set name="dropable" value="False"/>
+		<set name="price" value="5000000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="FORMAL_WEAR"/>
+		</equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
+	</armor>
+	<armor id="25082" name="Костюм Лучника">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_001_i00"/>
+		<set name="freightable" value="True"/>
+		<set name="sellable" value="False"/>
+		<set name="tradeable" value="False"/>
+		<set name="dropable" value="False"/>
+		<set name="price" value="5000000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="FORMAL_WEAR"/>
+		</equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
+	</armor>
+	<armor id="25083" name="Шапка Лучника">
+		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_h001_i00"/>
+		<set name="freightable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+	</armor>
+	<armor id="25084" name="Костюм Короля">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_002_i00"/>
+		<set name="freightable" value="True"/>
+		<set name="sellable" value="False"/>
+		<set name="tradeable" value="False"/>
+		<set name="dropable" value="False"/>
+		<set name="price" value="5000000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="FORMAL_WEAR"/>
+		</equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
+	</armor>
+	<armor id="25085" name="Корона Короля">
+		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_h002_i00"/>
+		<set name="freightable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+	</armor>
+	<armor id="25086" name="Костюм Ассасина Белый">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_006_i00"/>
+		<set name="freightable" value="True"/>
+		<set name="sellable" value="False"/>
+		<set name="tradeable" value="False"/>
+		<set name="dropable" value="False"/>
+		<set name="price" value="5000000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="FORMAL_WEAR"/>
+		</equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
+	</armor>	
+	<armor id="25087" name="Плащ Морского Пирата">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25088" name="Плащ Благородства">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25089" name="Плащ Волка">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25090" name="Плащ Бури">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25091" name="Плащ Гонца">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25092" name="Плащ Благословения">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25093" name="Плащ Лиги">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25094" name="Плащ Вампира">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25095" name="Плащ Ангельский">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+	<armor id="25096" name="Плащ Черепа">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S84"/>    
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="price" value="28671000"/>
+		<set name="type" value="NONE"/>    
+		<set name="weight" value="220"/>
+		<equip>
+		  <slot id="BACK"/>
+		</equip>
+		<attributes>
+		<attribute element="fire" value="60"/>
+		  <attribute element="water" value="60"/>
+		  <attribute element="wind" value="60"/>
+		  <attribute element="earth" value="60"/>
+		  <attribute element="holy" value="60"/>
+		  <attribute element="unholy" value="60"/>
+		</attributes>
+		<for>
+		  <add stat="pDef" order="0x10" value="70"/>
+		  <enchant stat="pDef" order="0x0C" value="0"/>
+		  <enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	  </armor>
+ 
+  <etcitem id="25097" name="Thief Key">
+    <set name="class" value="OTHER"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_key_i00"/>
+    <set name="price" value="1000"/>
+    <set name="stackable" value="false"/>
+	<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="freightable" value="true"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="10"/>
+  </etcitem>	  
+  <etcitem id="25098" name="Thief Key">
+    <set name="class" value="OTHER"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="icon.etc_key_i00"/>
+    <set name="price" value="1000"/>
+    <set name="stackable" value="false"/>
+	<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="false" />
+	<set name="temporal" value="true"/>
+	<set name="durability" value="10080"/>
+	<set name="freightable" value="true"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="10"/>
+  </etcitem>	  
+</list>

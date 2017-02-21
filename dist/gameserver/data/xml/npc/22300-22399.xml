@@ -5620,7 +5620,7 @@
         <set name="collision_height" value="45"/>
         <set name="collision_radius" value="15"/>
         <set name="level" value="83"/>
-        <set name="isAgro" value="1"/>
+        <set name="isAgro" value="0"/>
         <set name="rewardExp" value="271142"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="28589"/>

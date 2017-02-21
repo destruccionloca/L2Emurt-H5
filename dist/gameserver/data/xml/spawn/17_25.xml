@@ -1,414 +1,411 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "spawn.dtd">
 <list>
-	<spawn count="1" respawn="86400" respawn_random="0" period_of_day="none">
+	<spawn count="1" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
-			<add x="-92433" y="253691" zmin="-3341" zmax="-3660"/>
-			<add x="-92191" y="253608" zmin="-3356" zmax="-3660"/>
-			<add x="-92091" y="253778" zmin="-3353" zmax="-3660"/>
-			<add x="-92273" y="253811" zmin="-3343" zmax="-3660"/>
+			<add x="-95753" y="255888" zmin="-3562" zmax="-3162"/>
+			<add x="-95638" y="253698" zmin="-3562" zmax="-3162"/>
+			<add x="-94965" y="252334" zmin="-3562" zmax="-3162"/>
+			<add x="-93101" y="252768" zmin="-3562" zmax="-3162"/>
+			<add x="-93123" y="254272" zmin="-3562" zmax="-3162"/>
 		</territory>
-		<npc id="36754"/><!--Belka-->
-	</spawn>
-	<spawn count="1" respawn="300" respawn_random="600" period_of_day="none">
-		<territory>
-			<add x="-98247" y="253886" zmin="-3485" zmax="-3660"/>
-			<add x="-96708" y="254071" zmin="-3509" zmax="-3660"/>
-			<add x="-96248" y="248716" zmin="-3588" zmax="-3660"/>
-			<add x="-98132" y="247363" zmin="-3645" zmax="-3660"/>
-		</territory>
-		<npc id="36753"/><!--Belka-->
-	</spawn>
-	<spawn count="1" respawn="300" respawn_random="600" period_of_day="none">
-		<territory>
-			<add x="-94648" y="249542" zmin="-3571" zmax="-3660"/>
-			<add x="-95465" y="254782" zmin="-3368" zmax="-3660"/>
-			<add x="-93625" y="254168" zmin="-3287" zmax="-3660"/>
-			<add x="-92747" y="252740" zmin="-3421" zmax="-3660"/>
-		</territory>
-		<npc id="36753"/><!--Belka-->
-	</spawn>
-
-	<spawn count="1" respawn="300" respawn_random="600" period_of_day="none">
-		<territory>
-			<add x="-92148" y="252105" zmin="-3456" zmax="-3660"/>
-			<add x="-91275" y="253475" zmin="-3407" zmax="-3660"/>
-			<add x="-89026" y="252868" zmin="-3608" zmax="-3660"/>
-			<add x="-89795" y="252203" zmin="-3451" zmax="-3660"/>
-		</territory>
-		<npc id="36753"/><!--Belka-->
-	</spawn>
-
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-95796" y="247848" zmin="-3652" zmax="-3660"/>
-			<add x="-96002" y="248998" zmin="-3581" zmax="-3660"/>
-			<add x="-97027" y="248611" zmin="-3609" zmax="-3660"/>
-			<add x="-96745" y="247590" zmin="-3659" zmax="-3660"/>
-		</territory>
-		<npc id="36750"/><!--Belka-->
-	</spawn>
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-97285" y="247867" zmin="-3639" zmax="-3660"/>
-			<add x="-97750" y="247308" zmin="-3656" zmax="-3660"/>
-			<add x="-97608" y="248518" zmin="-3601" zmax="-3660"/>
-			<add x="-97184" y="248900" zmin="-3633" zmax="-3660"/>
-		</territory>
-		<npc id="36750"/><!--Belka-->
+		<npc id="20006"/><!--Orc Archer-->
 	</spawn>
 	<spawn count="1" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
-			<add x="-97691" y="246940" zmin="-3700" zmax="-3710"/>
-			<add x="-98229" y="246586" zmin="-3704" zmax="-3710"/>
-			<add x="-98227" y="248132" zmin="-3587" zmax="-3710"/>
-			<add x="-97676" y="248282" zmin="-3604" zmax="-3710"/>
+			<add x="-94728" y="252235" zmin="-3687" zmax="-3287"/>
+			<add x="-95242" y="250280" zmin="-3687" zmax="-3287"/>
+			<add x="-94949" y="249330" zmin="-3687" zmax="-3287"/>
+			<add x="-93686" y="249482" zmin="-3687" zmax="-3287"/>
+			<add x="-93127" y="251504" zmin="-3687" zmax="-3287"/>
 		</territory>
-		<npc id="36750"/><!--Belka-->
+		<npc id="20006"/><!--Orc Archer-->
 	</spawn>
 	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
-			<add x="-96251" y="249304" zmin="-3595" zmax="-3710"/>
-			<add x="-96168" y="250008" zmin="-3588" zmax="-3710"/>
-			<add x="-97157" y="250008" zmin="-3628" zmax="-3710"/>
-			<add x="-97346" y="248984" zmin="-3635" zmax="-3710"/>
+			<add x="-98216" y="256883" zmin="-3686" zmax="-3286"/>
+			<add x="-98209" y="252352" zmin="-3686" zmax="-3286"/>
+			<add x="-96437" y="253123" zmin="-3686" zmax="-3286"/>
+			<add x="-96772" y="256438" zmin="-3686" zmax="-3286"/>
 		</territory>
-		<npc id="36750"/><!--Belka-->
+		<npc id="20006"/><!--Orc Archer-->
 	</spawn>
 	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
-			<add x="-98244" y="248784" zmin="-3601" zmax="-3710"/>
-			<add x="-97501" y="249014" zmin="-3635" zmax="-3710"/>
-			<add x="-97497" y="250086" zmin="-3621" zmax="-3710"/>
-			<add x="-98250" y="250015" zmin="-3583" zmax="-3710"/>
+			<add x="-98218" y="230359" zmin="-3780" zmax="-3280"/>
+			<add x="-98154" y="236965" zmin="-3780" zmax="-3280"/>
+			<add x="-95067" y="235023" zmin="-3780" zmax="-3280"/>
+			<add x="-95068" y="233416" zmin="-3780" zmax="-3280"/>
 		</territory>
-		<npc id="36750"/><!--Belka-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-96033" y="250391" zmin="-3555" zmax="-3710"/>
-			<add x="-95832" y="251192" zmin="-3517" zmax="-3710"/>
-			<add x="-97539" y="251275" zmin="-3555" zmax="-3710"/>
-			<add x="-97371" y="250315" zmin="-3601" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Belka-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-97638" y="250177" zmin="-3614" zmax="-3710"/>
-			<add x="-98245" y="249695" zmin="-3594" zmax="-3710"/>
-			<add x="-98247" y="250676" zmin="-3622" zmax="-3710"/>
-			<add x="-97416" y="251239" zmin="-3544" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Belka-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-95988" y="251893" zmin="-3508" zmax="-3710"/>
-			<add x="-97235" y="251672" zmin="-3561" zmax="-3710"/>
-			<add x="-97733" y="252551" zmin="-3639" zmax="-3710"/>
-			<add x="-96456" y="253063" zmin="-3563" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Belka-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-98215" y="251216" zmin="-3615" zmax="-3710"/>
-			<add x="-97438" y="251348" zmin="-3548" zmax="-3710"/>
-			<add x="-97370" y="252931" zmin="-3643" zmax="-3710"/>
-			<add x="-98210" y="253161" zmin="-3582" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Belka-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-98185" y="253380" zmin="-3558" zmax="-3710"/>
-			<add x="-96857" y="252872" zmin="-3601" zmax="-3710"/>
-			<add x="-96600" y="254133" zmin="-3501" zmax="-3710"/>
-			<add x="-98228" y="254701" zmin="-3464" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Belka-->
+		<npc id="20006"/><!--Orc Archer-->
 	</spawn>
 	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
-			<add x="-97000" y="252851" zmin="-3618" zmax="-3710"/>
-			<add x="-96888" y="254003" zmin="-3520" zmax="-3710"/>
-			<add x="-97889" y="253815" zmin="-3517" zmax="-3710"/>
-			<add x="-98085" y="252964" zmin="-3617" zmax="-3710"/>
+			<add x="-98216" y="256883" zmin="-3686" zmax="-3286"/>
+			<add x="-98209" y="252352" zmin="-3686" zmax="-3286"/>
+			<add x="-96437" y="253123" zmin="-3686" zmax="-3286"/>
+			<add x="-96772" y="256438" zmin="-3686" zmax="-3286"/>
 		</territory>
-		<npc id="36752"/><!--Volf-->
+		<npc id="20093"/><!--Orc Fighter-->
+	</spawn>
+	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-96348" y="252767" zmin="-3687" zmax="-3337"/>
+			<add x="-98218" y="252163" zmin="-3687" zmax="-3337"/>
+			<add x="-98211" y="248508" zmin="-3687" zmax="-3337"/>
+			<add x="-96106" y="248712" zmin="-3687" zmax="-3337"/>
+			<add x="-95658" y="251474" zmin="-3687" zmax="-3337"/>
+		</territory>
+		<npc id="20093"/><!--Orc Fighter-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-84049" y="251268" zmin="-3821" zmax="-3371"/>
+			<add x="-82767" y="252347" zmin="-3821" zmax="-3371"/>
+			<add x="-81298" y="248821" zmin="-3821" zmax="-3371"/>
+			<add x="-82122" y="248159" zmin="-3821" zmax="-3371"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="3" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-87802" y="253270" zmin="-3818" zmax="-3418"/>
+			<add x="-87254" y="255497" zmin="-3818" zmax="-3418"/>
+			<add x="-84753" y="254363" zmin="-3818" zmax="-3418"/>
+			<add x="-85795" y="252581" zmin="-3818" zmax="-3418"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="4" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-87463" y="238775" zmin="-3794" zmax="-3444"/>
+			<add x="-86398" y="237982" zmin="-3794" zmax="-3444"/>
+			<add x="-83411" y="238691" zmin="-3794" zmax="-3444"/>
+			<add x="-85976" y="240595" zmin="-3794" zmax="-3444"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-89542" y="242525" zmin="-3777" zmax="-3427"/>
+			<add x="-88045" y="242761" zmin="-3777" zmax="-3427"/>
+			<add x="-86619" y="241267" zmin="-3777" zmax="-3427"/>
+			<add x="-88003" y="239766" zmin="-3777" zmax="-3427"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="3" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-91722" y="242405" zmin="-3777" zmax="-3427"/>
+			<add x="-90847" y="239864" zmin="-3777" zmax="-3427"/>
+			<add x="-88243" y="239780" zmin="-3777" zmax="-3427"/>
+			<add x="-89678" y="242549" zmin="-3777" zmax="-3427"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="4" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-93848" y="245302" zmin="-3777" zmax="-3427"/>
+			<add x="-91997" y="242521" zmin="-3777" zmax="-3427"/>
+			<add x="-89885" y="242774" zmin="-3777" zmax="-3427"/>
+			<add x="-90979" y="244840" zmin="-3777" zmax="-3427"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-95944" y="245024" zmin="-3653" zmax="-3203"/>
+			<add x="-94851" y="241389" zmin="-3653" zmax="-3203"/>
+			<add x="-92110" y="242390" zmin="-3653" zmax="-3203"/>
+			<add x="-93893" y="245261" zmin="-3653" zmax="-3203"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98187" y="243765" zmin="-3705" zmax="-3205"/>
+			<add x="-98178" y="241151" zmin="-3705" zmax="-3205"/>
+			<add x="-94990" y="241377" zmin="-3705" zmax="-3205"/>
+			<add x="-96089" y="244984" zmin="-3705" zmax="-3205"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="3" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-94873" y="241267" zmin="-3698" zmax="-3198"/>
+			<add x="-94026" y="237770" zmin="-3698" zmax="-3198"/>
+			<add x="-90930" y="239772" zmin="-3698" zmax="-3198"/>
+			<add x="-92256" y="242113" zmin="-3698" zmax="-3198"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98029" y="238333" zmin="-3678" zmax="-3178"/>
+			<add x="-98002" y="241038" zmin="-3678" zmax="-3178"/>
+			<add x="-94792" y="241237" zmin="-3678" zmax="-3178"/>
+			<add x="-94104" y="238222" zmin="-3678" zmax="-3178"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="3" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-90950" y="238048" zmin="-3771" zmax="-3271"/>
+			<add x="-90128" y="236994" zmin="-3771" zmax="-3271"/>
+			<add x="-86492" y="237896" zmin="-3771" zmax="-3271"/>
+			<add x="-87632" y="238723" zmin="-3771" zmax="-3271"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-94394" y="235274" zmin="-3786" zmax="-3286"/>
+			<add x="-93987" y="234732" zmin="-3786" zmax="-3286"/>
+			<add x="-90189" y="236954" zmin="-3786" zmax="-3286"/>
+			<add x="-91010" y="238016" zmin="-3786" zmax="-3286"/>
+		</territory>
+		<npc id="20120"/><!--Wolf-->
+	</spawn>
+	<spawn count="5" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-91645" y="245161" zmin="-3777" zmax="-3427"/>
+			<add x="-91633" y="245875" zmin="-3777" zmax="-3427"/>
+			<add x="-92567" y="246452" zmin="-3777" zmax="-3427"/>
+			<add x="-94754" y="247029" zmin="-3777" zmax="-3427"/>
+			<add x="-93850" y="245413" zmin="-3777" zmax="-3427"/>
+		</territory>
+		<npc id="20121"/><!--Giant Toad-->
+	</spawn>
+	<spawn count="4" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-96643" y="246176" zmin="-3777" zmax="-3427"/>
+			<add x="-96060" y="245318" zmin="-3777" zmax="-3427"/>
+			<add x="-94045" y="245581" zmin="-3777" zmax="-3427"/>
+			<add x="-94829" y="246982" zmin="-3777" zmax="-3427"/>
+		</territory>
+		<npc id="20121"/><!--Giant Toad-->
+	</spawn>
+	<spawn count="4" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98263" y="245623" zmin="-3777" zmax="-3427"/>
+			<add x="-97812" y="244638" zmin="-3777" zmax="-3427"/>
+			<add x="-95964" y="245057" zmin="-3777" zmax="-3427"/>
+			<add x="-96701" y="246147" zmin="-3777" zmax="-3427"/>
+		</territory>
+		<npc id="20121"/><!--Giant Toad-->
+	</spawn>
+	<spawn count="4" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98205" y="246681" zmin="-3777" zmax="-3427"/>
+			<add x="-98176" y="248122" zmin="-3777" zmax="-3427"/>
+			<add x="-95909" y="248507" zmin="-3777" zmax="-3427"/>
+			<add x="-95862" y="247758" zmin="-3777" zmax="-3427"/>
+		</territory>
+		<npc id="20121"/><!--Giant Toad-->
+	</spawn>
+	<spawn count="3" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-95944" y="245024" zmin="-3653" zmax="-3203"/>
+			<add x="-94851" y="241389" zmin="-3653" zmax="-3203"/>
+			<add x="-92110" y="242390" zmin="-3653" zmax="-3203"/>
+			<add x="-93893" y="245261" zmin="-3653" zmax="-3203"/>
+		</territory>
+		<npc id="20130"/><!--Orc-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98187" y="243765" zmin="-3705" zmax="-3205"/>
+			<add x="-98178" y="241151" zmin="-3705" zmax="-3205"/>
+			<add x="-94990" y="241377" zmin="-3705" zmax="-3205"/>
+			<add x="-96089" y="244984" zmin="-3705" zmax="-3205"/>
+		</territory>
+		<npc id="20130"/><!--Orc-->
+	</spawn>
+	<spawn count="4" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-94873" y="241267" zmin="-3698" zmax="-3198"/>
+			<add x="-94026" y="237770" zmin="-3698" zmax="-3198"/>
+			<add x="-90930" y="239772" zmin="-3698" zmax="-3198"/>
+			<add x="-92256" y="242113" zmin="-3698" zmax="-3198"/>
+		</territory>
+		<npc id="20130"/><!--Orc-->
+	</spawn>
+	<spawn count="3" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98029" y="238333" zmin="-3678" zmax="-3178"/>
+			<add x="-98002" y="241038" zmin="-3678" zmax="-3178"/>
+			<add x="-94792" y="241237" zmin="-3678" zmax="-3178"/>
+			<add x="-94104" y="238222" zmin="-3678" zmax="-3178"/>
+		</territory>
+		<npc id="20130"/><!--Orc-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-96849" y="237616" zmin="-3598" zmax="-3098"/>
+			<add x="-95110" y="236557" zmin="-3598" zmax="-3098"/>
+			<add x="-94277" y="236970" zmin="-3598" zmax="-3098"/>
+			<add x="-94417" y="238044" zmin="-3598" zmax="-3098"/>
+		</territory>
+		<npc id="20130"/><!--Orc-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-94394" y="235274" zmin="-3786" zmax="-3286"/>
+			<add x="-93987" y="234732" zmin="-3786" zmax="-3286"/>
+			<add x="-90189" y="236954" zmin="-3786" zmax="-3286"/>
+			<add x="-91010" y="238016" zmin="-3786" zmax="-3286"/>
+		</territory>
+		<npc id="20130"/><!--Orc-->
+	</spawn>
+	<spawn count="3" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98187" y="243765" zmin="-3705" zmax="-3205"/>
+			<add x="-98178" y="241151" zmin="-3705" zmax="-3205"/>
+			<add x="-94990" y="241377" zmin="-3705" zmax="-3205"/>
+			<add x="-96089" y="244984" zmin="-3705" zmax="-3205"/>
+		</territory>
+		<npc id="20131"/><!--Orc Grunt-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98029" y="238333" zmin="-3678" zmax="-3178"/>
+			<add x="-98002" y="241038" zmin="-3678" zmax="-3178"/>
+			<add x="-94792" y="241237" zmin="-3678" zmax="-3178"/>
+			<add x="-94104" y="238222" zmin="-3678" zmax="-3178"/>
+		</territory>
+		<npc id="20131"/><!--Orc Grunt-->
+	</spawn>
+	<spawn count="2" respawn="25" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-96849" y="237616" zmin="-3598" zmax="-3098"/>
+			<add x="-95110" y="236557" zmin="-3598" zmax="-3098"/>
+			<add x="-94277" y="236970" zmin="-3598" zmax="-3098"/>
+			<add x="-94417" y="238044" zmin="-3598" zmax="-3098"/>
+		</territory>
+		<npc id="20131"/><!--Orc Grunt-->
+	</spawn>
+	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-92021" y="254827" zmin="-3785" zmax="-3235"/>
+			<add x="-91736" y="256098" zmin="-3785" zmax="-3235"/>
+			<add x="-88684" y="255484" zmin="-3785" zmax="-3235"/>
+			<add x="-88829" y="253600" zmin="-3785" zmax="-3235"/>
+		</territory>
+		<npc id="20131"/><!--Orc Grunt-->
+	</spawn>
+	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-93042" y="251920" zmin="-3635" zmax="-3185"/>
+			<add x="-93019" y="254324" zmin="-3635" zmax="-3185"/>
+			<add x="-89525" y="253247" zmin="-3635" zmax="-3185"/>
+			<add x="-90125" y="252255" zmin="-3635" zmax="-3185"/>
+		</territory>
+		<npc id="20131"/><!--Orc Grunt-->
+	</spawn>
+	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-94728" y="252235" zmin="-3687" zmax="-3287"/>
+			<add x="-95242" y="250280" zmin="-3687" zmax="-3287"/>
+			<add x="-94949" y="249330" zmin="-3687" zmax="-3287"/>
+			<add x="-93686" y="249482" zmin="-3687" zmax="-3287"/>
+			<add x="-93127" y="251504" zmin="-3687" zmax="-3287"/>
+		</territory>
+		<npc id="20131"/><!--Orc Grunt-->
+	</spawn>
+	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98218" y="230359" zmin="-3780" zmax="-3280"/>
+			<add x="-98154" y="236965" zmin="-3780" zmax="-3280"/>
+			<add x="-95067" y="235023" zmin="-3780" zmax="-3280"/>
+			<add x="-95068" y="233416" zmin="-3780" zmax="-3280"/>
+		</territory>
+		<npc id="20131"/><!--Orc Grunt-->
+	</spawn>
+	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-96348" y="252767" zmin="-3687" zmax="-3337"/>
+			<add x="-98218" y="252163" zmin="-3687" zmax="-3337"/>
+			<add x="-98211" y="248508" zmin="-3687" zmax="-3337"/>
+			<add x="-96106" y="248712" zmin="-3687" zmax="-3337"/>
+			<add x="-95658" y="251474" zmin="-3687" zmax="-3337"/>
+		</territory>
+		<npc id="20132"/><!--Werewolf-->
+	</spawn>
+	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98218" y="230359" zmin="-3780" zmax="-3280"/>
+			<add x="-98154" y="236965" zmin="-3780" zmax="-3280"/>
+			<add x="-95067" y="235023" zmin="-3780" zmax="-3280"/>
+			<add x="-95068" y="233416" zmin="-3780" zmax="-3280"/>
+		</territory>
+		<npc id="20132"/><!--Werewolf-->
+	</spawn>
+	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-92021" y="254827" zmin="-3785" zmax="-3235"/>
+			<add x="-91736" y="256098" zmin="-3785" zmax="-3235"/>
+			<add x="-88684" y="255484" zmin="-3785" zmax="-3235"/>
+			<add x="-88829" y="253600" zmin="-3785" zmax="-3235"/>
+		</territory>
+		<npc id="20326"/><!--Goblin Scout-->
+	</spawn>
+	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-93042" y="251920" zmin="-3635" zmax="-3185"/>
+			<add x="-93019" y="254324" zmin="-3635" zmax="-3185"/>
+			<add x="-89525" y="253247" zmin="-3635" zmax="-3185"/>
+			<add x="-90125" y="252255" zmin="-3635" zmax="-3185"/>
+		</territory>
+		<npc id="20326"/><!--Goblin Scout-->
+	</spawn>
+	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-95753" y="255888" zmin="-3562" zmax="-3162"/>
+			<add x="-95638" y="253698" zmin="-3562" zmax="-3162"/>
+			<add x="-94965" y="252334" zmin="-3562" zmax="-3162"/>
+			<add x="-93101" y="252768" zmin="-3562" zmax="-3162"/>
+			<add x="-93123" y="254272" zmin="-3562" zmax="-3162"/>
+		</territory>
+		<npc id="20326"/><!--Goblin Scout-->
+	</spawn>
+	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-94728" y="252235" zmin="-3687" zmax="-3287"/>
+			<add x="-95242" y="250280" zmin="-3687" zmax="-3287"/>
+			<add x="-94949" y="249330" zmin="-3687" zmax="-3287"/>
+			<add x="-93686" y="249482" zmin="-3687" zmax="-3287"/>
+			<add x="-93127" y="251504" zmin="-3687" zmax="-3287"/>
+		</territory>
+		<npc id="20326"/><!--Goblin Scout-->
 	</spawn>
 	<spawn count="1" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
-			<add x="-98020" y="252065" zmin="-3605" zmax="-3710"/>
-			<add x="-98245" y="251347" zmin="-3612" zmax="-3710"/>
-			<add x="-97831" y="251018" zmin="-3594" zmax="-3710"/>
-			<add x="-97419" y="251623" zmin="-3563" zmax="-3710"/>
+			<add x="-98216" y="256883" zmin="-3686" zmax="-3286"/>
+			<add x="-98209" y="252352" zmin="-3686" zmax="-3286"/>
+			<add x="-96437" y="253123" zmin="-3686" zmax="-3286"/>
+			<add x="-96772" y="256438" zmin="-3686" zmax="-3286"/>
 		</territory>
-		<npc id="36752"/><!--Volf-->
+		<npc id="20326"/><!--Goblin Scout-->
 	</spawn>
 	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
-			<add x="-96984" y="252209" zmin="-3577" zmax="-3710"/>
-			<add x="-97144" y="251130" zmin="-3525" zmax="-3710"/>
-			<add x="-96980" y="250743" zmin="-3539" zmax="-3710"/>
-			<add x="-95801" y="251647" zmin="-3513" zmax="-3710"/>
+			<add x="-96348" y="252767" zmin="-3687" zmax="-3337"/>
+			<add x="-98218" y="252163" zmin="-3687" zmax="-3337"/>
+			<add x="-98211" y="248508" zmin="-3687" zmax="-3337"/>
+			<add x="-96106" y="248712" zmin="-3687" zmax="-3337"/>
+			<add x="-95658" y="251474" zmin="-3687" zmax="-3337"/>
 		</territory>
-		<npc id="36752"/><!--Volf-->
-	</spawn>
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-96167" y="249943" zmin="-3591" zmax="-3710"/>
-			<add x="-96982" y="250103" zmin="-3612" zmax="-3710"/>
-			<add x="-97811" y="249115" zmin="-3628" zmax="-3710"/>
-			<add x="-96759" y="248715" zmin="-3615" zmax="-3710"/>
-		</territory>
-		<npc id="36752"/><!--Volf-->
-	</spawn>
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-97592" y="248104" zmin="-3616" zmax="-3710"/>
-			<add x="-96425" y="248438" zmin="-3597" zmax="-3710"/>
-			<add x="-96488" y="247656" zmin="-3662" zmax="-3710"/>
-			<add x="-97512" y="247399" zmin="-3659" zmax="-3710"/>
-		</territory>
-		<npc id="36752"/><!--Volf-->
-	</spawn>
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-98198" y="247939" zmin="-3593" zmax="-3710"/>
-			<add x="-97561" y="248279" zmin="-3609" zmax="-3710"/>
-			<add x="-97891" y="249136" zmin="-3624" zmax="-3710"/>
-			<add x="-98231" y="249287" zmin="-3600" zmax="-3710"/>
-		</territory>
-		<npc id="36752"/><!--Volf-->
+		<npc id="20326"/><!--Goblin Scout-->
 	</spawn>
 	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
-			<add x="-96555" y="248614" zmin="-3605" zmax="-3710"/>
-			<add x="-96123" y="250977" zmin="-3528" zmax="-3710"/>
-			<add x="-97763" y="250952" zmin="-3590" zmax="-3710"/>
-			<add x="-98166" y="248464" zmin="-3594" zmax="-3710"/>
+			<add x="-98218" y="230359" zmin="-3780" zmax="-3280"/>
+			<add x="-98154" y="236965" zmin="-3780" zmax="-3280"/>
+			<add x="-95067" y="235023" zmin="-3780" zmax="-3280"/>
+			<add x="-95068" y="233416" zmin="-3780" zmax="-3280"/>
 		</territory>
-		<npc id="36751"/><!--Volf-->
+		<npc id="20326"/><!--Goblin Scout-->
 	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-98181" y="251788" zmin="-3605" zmax="-3710"/>
-			<add x="-96472" y="252088" zmin="-3511" zmax="-3710"/>
-			<add x="-96631" y="254339" zmin="-3490" zmax="-3710"/>
-			<add x="-98212" y="254449" zmin="-3469" zmax="-3710"/>
-		</territory>
-		<npc id="36751"/><!--Volf-->
-	</spawn>
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-95016" y="249100" zmin="-3583" zmax="-3710"/>
-			<add x="-94248" y="249066" zmin="-3601" zmax="-3710"/>
-			<add x="-94280" y="249698" zmin="-3586" zmax="-3710"/>
-			<add x="-95175" y="249649" zmin="-3588" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-95238" y="249985" zmin="-3583" zmax="-3710"/>
-			<add x="-94620" y="250196" zmin="-3556" zmax="-3710"/>
-			<add x="-95384" y="248568" zmin="-3615" zmax="-3710"/>
-			<add x="-94368" y="251972" zmin="-3482" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-95242" y="252596" zmin="-3473" zmax="-3710"/>
-			<add x="-94232" y="252919" zmin="-3409" zmax="-3710"/>
-			<add x="-94534" y="253794" zmin="-3353" zmax="-3710"/>
-			<add x="-95608" y="253672" zmin="-3457" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-95628" y="254290" zmin="-3411" zmax="-3710"/>
-			<add x="-94398" y="254633" zmin="-3324" zmax="-3710"/>
-			<add x="-95267" y="255433" zmin="-3358" zmax="-3710"/>
-			<add x="-95751" y="255456" zmin="-3357" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-
-	<spawn count="4" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-94378" y="254521" zmin="-3319" zmax="-3710"/>
-			<add x="-94472" y="253534" zmin="-3372" zmax="-3710"/>
-			<add x="-93866" y="253080" zmin="-3384" zmax="-3710"/>
-			<add x="-93372" y="254246" zmin="-3280" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-93310" y="253366" zmin="-3348" zmax="-3710"/>
-			<add x="-93970" y="252861" zmin="-3400" zmax="-3710"/>
-			<add x="-93819" y="251909" zmin="-3455" zmax="-3710"/>
-			<add x="-93048" y="252215" zmin="-3442" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-92948" y="251814" zmin="-3465" zmax="-3710"/>
-			<add x="-93858" y="251653" zmin="-3499" zmax="-3710"/>
-			<add x="-94001" y="250568" zmin="-3563" zmax="-3710"/>
-			<add x="-93560" y="250856" zmin="-3560" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-93319" y="250505" zmin="-3586" zmax="-3710"/>
-			<add x="-93848" y="250248" zmin="-3581" zmax="-3710"/>
-			<add x="-94332" y="249412" zmin="-3598" zmax="-3710"/>
-			<add x="-94218" y="248842" zmin="-3617" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-92543" y="251945" zmin="-3468" zmax="-3710"/>
-			<add x="-92667" y="252717" zmin="-3429" zmax="-3710"/>
-			<add x="-91688" y="252696" zmin="-3436" zmax="-3710"/>
-			<add x="-91284" y="253100" zmin="-3418" zmax="-3710"/>
-			<add x="-90937" y="252031" zmin="-3409" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-90537" y="252100" zmin="-3375" zmax="-3710"/>
-			<add x="-89332" y="252759" zmin="-3567" zmax="-3710"/>
-			<add x="-90356" y="253351" zmin="-3499" zmax="-3710"/>
-			<add x="-91191" y="252566" zmin="-3422" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-95020" y="249706" zmin="-3573" zmax="-3710"/>
-			<add x="-94224" y="249721" zmin="-3595" zmax="-3710"/>
-			<add x="-93778" y="251095" zmin="-3555" zmax="-3710"/>
-			<add x="-94721" y="251365" zmin="-3523" zmax="-3710"/>
-		</territory>
-		<npc id="36752"/><!--Volf-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-94814" y="252069" zmin="-3498" zmax="-3710"/>
-			<add x="-93613" y="252310" zmin="-3419" zmax="-3710"/>
-			<add x="-93463" y="253494" zmin="-3343" zmax="-3710"/>
-			<add x="-95189" y="254199" zmin="-3400" zmax="-3710"/>
-		</territory>
-		<npc id="36752"/><!--Volf-->
-	</spawn>
-	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-93049" y="253017" zmin="-3379" zmax="-3710"/>
-			<add x="-92825" y="252030" zmin="-3453" zmax="-3710"/>
-			<add x="-90763" y="252240" zmin="-3393" zmax="-3710"/>
-		</territory>
-		<npc id="36752"/><!--Volf-->
-	</spawn>
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-90951" y="253394" zmin="-3434" zmax="-3710"/>
-			<add x="-91301" y="252894" zmin="-3421" zmax="-3710"/>
-			<add x="-90041" y="252297" zmin="-3433" zmax="-3710"/>
-			<add x="-89358" y="252819" zmin="-3570" zmax="-3710"/>
-		</territory>
-		<npc id="36752"/><!--Volf-->
-	</spawn>
-	<spawn count="4" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-94405" y="250067" zmin="-3560" zmax="-3710"/>
-			<add x="-95013" y="252445" zmin="-3478" zmax="-3710"/>
-			<add x="-93198" y="252995" zmin="-3378" zmax="-3710"/>
-			<add x="-93460" y="251085" zmin="-3536" zmax="-3710"/>
-		</territory>
-		<npc id="36751"/><!--Volf-->
-	</spawn>
-	<spawn count="4" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-92343" y="252148" zmin="-3454" zmax="-3710"/>
-			<add x="-92280" y="252693" zmin="-3447" zmax="-3710"/>
-			<add x="-91310" y="252871" zmin="-3421" zmax="-3710"/>
-			<add x="-90985" y="253588" zmin="-3431" zmax="-3710"/>
-			<add x="-89392" y="252965" zmin="-3578" zmax="-3710"/>
-			<add x="-90321" y="252120" zmin="-3382" zmax="-3710"/>
-		</territory>
-		<npc id="36751"/><!--Volf-->
-	</spawn>
-	<spawn count="2" respawn="20" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-94958" y="252503" zmin="-3475" zmax="-3710"/>
-			<add x="-94165" y="252921" zmin="-3405" zmax="-3710"/>
-			<add x="-93976" y="252423" zmin="-3417" zmax="-3710"/>
-			<add x="-94648" y="251800" zmin="-3500" zmax="-3710"/>
-		</territory>
-		<npc id="36750"/><!--Volf-->
-	</spawn>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<spawn count="6" respawn="25" respawn_random="0" period_of_day="none">
 		<territory>
 			<add x="-83755" y="246659" zmin="-3821" zmax="-3371"/>
@@ -663,6 +660,16 @@
 			<add x="-86772" y="250493" zmin="-3716" zmax="-3316"/>
 		</territory>
 		<npc id="20545"/><!--Young Keltir-->
+	</spawn>
+	<spawn count="1" respawn="180" respawn_random="0" period_of_day="none">
+		<territory>
+			<add x="-98217" y="249244" zmin="-3743" zmax="-3543"/>
+			<add x="-98205" y="246704" zmin="-3743" zmax="-3543"/>
+			<add x="-96593" y="247320" zmin="-3743" zmax="-3543"/>
+			<add x="-95997" y="247760" zmin="-3743" zmax="-3543"/>
+			<add x="-96081" y="249788" zmin="-3743" zmax="-3543"/>
+		</territory>
+		<npc id="27003"/><!--Spirit Of Mirrors-->
 	</spawn>
 	<spawn count="10" respawn="15" respawn_random="0" period_of_day="none">
 		<territory>

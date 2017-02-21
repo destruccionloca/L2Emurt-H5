@@ -7368,78 +7368,19 @@
             <absorb chance="50" max_level="16" min_level="13" type="PARTY_ONE"/>
         </absorblist>
         <rewardlist type="RATED_GROUPED">
-            <group chance="5.8133">
-                <reward item_id="24079" min="1" max="1" chance="5.4619" />	
-                <reward item_id="24080" min="1" max="1" chance="5.5381" />	
-                <reward item_id="24081" min="1" max="1" chance="5.4619" />	
-            </group>
-            <group chance="5.3055">
-                <reward item_id="24083" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24084" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24085" min="1" max="1" chance="5.3434" />	
-            </group>
-            <group chance="5.3055">
-                <reward item_id="24087" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24088" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24089" min="1" max="1" chance="5.3434" />	
-            </group>
-            <group chance="5.3055">
-                <reward item_id="24091" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24092" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24093" min="1" max="1" chance="5.3434" />	
-            </group>
-            <group chance="5.3055">
-                <reward item_id="24095" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24096" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24097" min="1" max="1" chance="5.3434" />	
+            <group chance="0.8133">
+                <reward item_id="14105" min="1" max="1" chance="38.4619" />	<!--Sealed Vesper Breastplate-->
+                <reward item_id="14108" min="1" max="1" chance="61.5381" />	<!--Sealed Vesper Gaiters-->
             </group>
             <group chance="0.3055">
-                <reward item_id="24099" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24100" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24101" min="1" max="1" chance="5.3434" />	
-            </group>
-            <group chance="0.3055">
-                <reward item_id="24103" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24104" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24105" min="1" max="1" chance="5.3434" />	
-            </group>
-            <group chance="0.3055">
-                <reward item_id="24107" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24108" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24109" min="1" max="1" chance="5.3434" />	
-            </group>
-            <group chance="0.3055">
-                <reward item_id="24111" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24112" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24113" min="1" max="1" chance="5.3434" />	
-            </group>
-            <group chance="0.3055">
-                <reward item_id="24115" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24116" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24117" min="1" max="1" chance="5.3434" />	
-            </group>
-            <group chance="0.3055">
-                <reward item_id="24119" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24120" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24123" min="1" max="1" chance="5.3434" />	
-            </group>
-            <group chance="0.3055">
-                <reward item_id="24124" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24125" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24127" min="1" max="1" chance="5.3434" />	
-            </group>
-            <group chance="0.3055">
-                <reward item_id="24128" min="1" max="1" chance="5.3333" />	
-                <reward item_id="24130" min="1" max="1" chance="5.3783" />	
-                <reward item_id="24131" min="1" max="1" chance="5.3434" />	
-            </group>
-<group chance="21.1311">
-                <reward item_id="24172" min="1500" max="3000" chance="90.9552" />	<!--Scroll: Enchant Weapon (S-Grade)-->
-                <reward item_id="4357" min="50" max="200" chance="50.4926" />	<!--Blessed Scroll: Enchant Weapon (S-Grade)-->
+                <reward item_id="13457" min="1" max="1" chance="33.3333" />	<!--Vesper Cutter-->
+                <reward item_id="13458" min="1" max="1" chance="33.3333" />	<!--Vesper Slasher-->
+                <reward item_id="13459" min="1" max="1" chance="33.3334" />	<!--Vesper Buster-->
             </group>
             <group chance="21.1311">
-                <reward item_id="6578" min="45" max="75" chance="89.9552" />	<!--Scroll: Enchant Weapon (S-Grade)-->
-                <reward item_id="6577" min="12" max="31" chance="85.4926" />	<!--Blessed Scroll: Enchant Weapon (S-Grade)-->
+                <reward item_id="959" min="1" max="1" chance="8.9552" />	<!--Scroll: Enchant Weapon (S-Grade)-->
+                <reward item_id="960" min="1" max="1" chance="89.5522" />	<!--Scroll: Enchant Armor (S-Grade)-->
+                <reward item_id="6577" min="1" max="1" chance="1.4926" />	<!--Blessed Scroll: Enchant Weapon (S-Grade)-->
             </group>
         </rewardlist>
         <attributes>

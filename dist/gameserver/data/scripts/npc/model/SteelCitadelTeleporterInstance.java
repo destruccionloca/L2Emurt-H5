@@ -85,6 +85,24 @@ public class SteelCitadelTeleporterInstance extends NpcInstance {
         } else if (command.equalsIgnoreCase("faceranku")) {
             ReflectionUtils.simpleEnterInstancedZone(player, getIz(6));
             return;
+        } else if (command.equalsIgnoreCase("up_01")) {
+            player.getParty().Teleport(new Location(-12808, 273976, -15296));
+            return;
+        } else if (command.equalsIgnoreCase("up_02")) {
+            player.getParty().Teleport(new Location(-12728, 273560, -13600));
+            return;
+        } else if (command.equalsIgnoreCase("up_03")) {
+            player.getParty().Teleport(new Location(-10728, 273160, -11936));
+            return;
+        } else if (command.equalsIgnoreCase("up_04")) {
+            player.getParty().Teleport(new Location(-12664, 273480, -10496));
+            return;
+        } else if (command.equalsIgnoreCase("up_05")) {
+            player.getParty().Teleport(new Location(-13544, 276040, -9032));
+            return;
+        } else if (command.equalsIgnoreCase("dorian")) {
+            player.getParty().Teleport(new Location(-13400, 272827, -15304));
+            return;
         } else if (command.equalsIgnoreCase("leave")) {
             player.getReflection().collapse();
             return;

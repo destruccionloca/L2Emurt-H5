@@ -431,4 +431,26 @@
 			</effect>
 		</for>
 	</skill>
+	<skill id="90024" levels="1" name="Storm">
+		<set name="magicType" val="MAGIC" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="power" val="1000" />
+		<set name="magicLevel" val="85" />
+		<set name="hitTime" val="3300" />
+		<set name="hitCancelTime" val="500" />
+		<set name="mpConsume2" val="1" />
+		<set name="mpConsume" val="1" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="element" val="HOLY" />
+		<set name="hitTime" val="3300" />
+		<set name="skillType" val="MDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="effectPoint" val="3000" />
+		<set name="activateRate" val="90" />
+		<set name="skillRadius" val="600" />
+		<set name="saveVs" val="MEN" />
+		<for>
+			<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" abnormal="stun"/>
+		</for>
+	</skill>
 </list>

@@ -1462,7 +1462,7 @@
 			<effect count="1" name="Cancel" time="0" val="0">
 				<def name="cancelRate" val="10" />
 				<def name="minChance" val="25" />
-				<def name="maxChance" val="75" />
+				<def name="maxChance" val="45" />
 				<def name="negateCount" val="3" />
 			</effect>
 		</for>

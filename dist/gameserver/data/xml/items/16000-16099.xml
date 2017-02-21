@@ -459,7 +459,7 @@
     </for>
   </weapon>
   <weapon id="16013" name="Recurve Thorne Bow {PvP}" add_name="Crt. Slow">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="attributable" value="true"/>
     <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
@@ -497,7 +497,7 @@
     </for>
   </weapon>
   <weapon id="16014" name="Recurve Thorne Bow {PvP}" add_name="Cheap Shot">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="attributable" value="true"/>
     <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
@@ -533,7 +533,7 @@
     </for>
   </weapon>
   <weapon id="16015" name="Recurve Thorne Bow {PvP}" add_name="Focus">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="attributable" value="true"/>
     <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>

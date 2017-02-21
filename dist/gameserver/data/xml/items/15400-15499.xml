@@ -868,7 +868,7 @@
   </etcitem>
   <etcitem id="15469" name="Frozen Core">
     <set name="class" value="OTHER"/>
-	<set name="reuse_delay" value="1200000"/>
+	<set name="reuse_delay" value="600000"/>
     <set name="crystal_type" value="NONE"/>
     <set name="icon" value="icon.etc_freezing_core_i00"/>
     <set name="type" value="OTHER"/>

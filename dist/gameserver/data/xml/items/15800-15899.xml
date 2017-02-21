@@ -1127,7 +1127,7 @@
     </for>
   </weapon>
   <weapon id="15859" name="Skull Carnium Bow" add_name="Focus">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="1000"/>
     <set name="crystal_count" value="8233"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1157,7 +1157,7 @@
     </for>
   </weapon>
   <weapon id="15860" name="Skull Carnium Bow" add_name="Crt. Slow">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="1000"/>
     <set name="crystal_count" value="8233"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1190,7 +1190,7 @@
     </for>
   </weapon>
   <weapon id="15861" name="Skull Carnium Bow" add_name="Cheap Shot">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="1000"/>
     <set name="crystal_count" value="8233"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>

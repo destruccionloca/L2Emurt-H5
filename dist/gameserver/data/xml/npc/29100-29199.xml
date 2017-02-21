@@ -1030,8 +1030,6 @@
         </absorblist>
         <rewardlist type="NOT_RATED_NOT_GROUPED">
             <reward item_id="57" min="150000000" max="300000000" chance="100.0000" />	<!--Adena-->		
-			<reward item_id="40029" min="1" max="1" chance="10.0000" />	<!--Душа белефа-->
-			<reward item_id="40028" min="50" max="100" chance="40.0000" />	<!--Фрагмент Душы Белефа-->
             <reward item_id="13893" min="1" max="1" chance="40.0000" />	<!--Sealed Holy Spirit's Cloak-->
         </rewardlist>
         <attributes>
@@ -4473,9 +4471,12 @@
             <group chance="0.09">
                 <reward item_id="8922" min="1" max="1" chance="100.0000" />	<!--Pirate Hat-->
             </group>
+            <group chance="70.00">
+                <reward item_id="25117" min="1" max="1" chance="100.0000" />	<!--Pirate Hat-->
+            </group>			
         </rewardlist>
         <rewardlist type="NOT_RATED_NOT_GROUPED">
-			<reward item_id="4357" min="50" max="100" chance="15.0000" />	<!--silver -->			
+			<reward item_id="4357" min="50" max="100" chance="15.0000" />	<!--silver -->	
         </rewardlist>		
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4724,6 +4725,9 @@
             <group chance="82.0">
                 <reward item_id="21894" min="1" max="1" chance="3.3540" />	<!--Ice Queen's Tiara-->
 				</group>
+			<group chance="100.00">
+					<reward item_id="25117" min="1" max="1" chance="75.0000" />	<!--soul-->
+			</group>		
 		</rewardlist>
 		<rewardlist type="NOT_RATED_NOT_GROUPED">
 				<reward item_id="21714" min="1" max="1" chance="60.3600" />	<!--Sealed Cloak of Freya-->
@@ -4854,7 +4858,10 @@
             <group chance="82.0">
                 <reward item_id="21714" min="1" max="1" chance="3.2440" />	<!--Sealed Cloak of Freya-->
             </group>
-        </rewardlist>
+			<group chance="100.00">
+					<reward item_id="25117" min="1" max="1" chance="95.0000" />	<!--soul-->
+			</group>        
+		</rewardlist> 	
 		<rewardlist type="NOT_RATED_NOT_GROUPED">
                 <reward item_id="24178" min="1" max="1" chance="24.0000" />	<!--на заточку-->
                 <reward item_id="24179" min="1" max="1" chance="32.0000" />	<!--на аугумент-->
@@ -4937,7 +4944,7 @@
                 <reward item_id="3936" min="1" max="10" chance="100.0000" />	<!--Blessed Scroll of Resurrection-->
             </group>
             <group chance="100.0">
-                <reward item_id="57" min="9000000" max="1100000" chance="100.0000" />	<!--Adena-->
+                <reward item_id="57" min="900000000" max="2147000000" chance="100.0000" />	<!--Adena-->
             </group>
             <group chance="100.0">
                 <reward item_id="16162" min="2" max="4" chance="60.0000" />	<!--High-Grade Life Stone -  Level 85-->
@@ -4955,6 +4962,9 @@
             <group chance="82.0">
                 <reward item_id="21892" min="1" max="1" chance="3.3030" />	<!--Pirate King Hat-->
             </group>
+            <group chance="100.00">
+                <reward item_id="25117" min="1" max="1" chance="90.0000" />	<!--soul-->
+            </group>			
         </rewardlist>
 		 <rewardlist type="NOT_RATED_NOT_GROUPED">
 			<reward item_id="4357" min="350" max="550" chance="50.0000" />	<!--silver -->			

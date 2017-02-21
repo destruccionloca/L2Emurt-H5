@@ -926,7 +926,9 @@
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
-		<set name="hitTime" val="200" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="180000"/>		
+		<set name="hitCancelTime" val="500" />		
 		<set name="itemConsumeId" val="5859" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isHandler" val="true" />

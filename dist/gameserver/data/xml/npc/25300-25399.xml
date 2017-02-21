@@ -1792,17 +1792,17 @@
         <set name="baseCON" value="57"/>
         <set name="baseCritRate" value="4"/>
         <set name="baseDEX" value="73"/>
-        <set name="baseHpMax" value="373386.071242416"/>
+        <set name="baseHpMax" value="1673386.071242416"/>
         <set name="baseHpRate" value="1"/>
         <set name="baseHpReg" value="117.68436242886"/>
         <set name="baseINT" value="76"/>
         <set name="baseMAtk" value="717"/>
         <set name="baseMAtkSpd" value="3819"/>
-        <set name="baseMDef" value="433"/>
+        <set name="baseMDef" value="733"/>
         <set name="baseMEN" value="80"/>
         <set name="baseMpMax" value="1345.8"/>
         <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="2155"/>
+        <set name="basePAtk" value="24155"/>
         <set name="basePAtkSpd" value="253"/>
         <set name="basePDef" value="888"/>
         <set name="baseRunSpd" value="190"/>
@@ -1813,7 +1813,7 @@
         <set name="baseWalkSpd" value="50"/>
         <set name="collision_height" value="30"/>
         <set name="collision_radius" value="8"/>
-        <set name="level" value="70"/>
+        <set name="level" value="85"/>
         <set name="isAgro" value="1"/>
         <set name="rewardExp" value="4596479"/>
         <set name="rewardRp" value="2884"/>
@@ -1849,37 +1849,37 @@
             <absorb chance="50" max_level="12" min_level="11" type="PARTY_ONE"/>
         </absorblist>
         <rewardlist type="RATED_GROUPED">
-            <group chance="79.4028">
-                <reward item_id="5312" min="1" max="1" chance="6.0811" />	<!--Sealed Helm of Nightmare-->
-                <reward item_id="5315" min="1" max="1" chance="8.6898" />	<!--Sealed Shield of Nightmare-->
-                <reward item_id="5317" min="1" max="1" chance="6.0811" />	<!--Sealed Majestic Circlet-->
-                <reward item_id="5527" min="9" max="27" chance="41.0386" />	<!--Sealed Helm of Nightmare Design-->
-                <reward item_id="5495" min="40" max="120" chance="11.7274" />	<!--Sealed Shield of Nightmare Fragment-->
-                <reward item_id="5528" min="14" max="42" chance="26.3820" />	<!--Sealed Majestic Circlet Design-->
+            <group chance="100.0">
+                <reward item_id="57" min="1000000000" max="2000000000" chance="100.0" />	<!--Sealed Helm of Nightmare-->
             </group>
-            <group chance="77.0643">
-                <reward item_id="5311" min="1" max="1" chance="3.2538" />	<!--Sealed Armor of Nightmare-->
-                <reward item_id="5316" min="1" max="1" chance="3.2538" />	<!--Sealed Majestic Plate Armor-->
-                <reward item_id="5522" min="4" max="12" chance="60.9733" />	<!--Sealed Armor of Nightmare Pattern-->
-                <reward item_id="5523" min="8" max="22" chance="32.5191" />	<!--Sealed Majestic Plate Armor Pattern-->
+            <group chance="100.0">
+                <reward item_id="7679" min="1" max="2" chance="100.0" />	<!--Sealed Armor of Nightmare-->
             </group>
-            <group chance="22.2579">
-                <reward item_id="6578" min="1" max="1" chance="28.5714" />	<!--Blessed Scroll: Enchant Armor (S-Grade)-->
-                <reward item_id="6570" min="1" max="1" chance="71.4286" />	<!--Blessed Scroll: Enchant Armor (A-Grade)-->
+	<group chance="100.0">
+                <reward item_id="9911" min="20" max="25" chance="95.0" />	<!--Sealed Armor of Nightmare-->
             </group>
-        </rewardlist>
-        <rewardlist type="NOT_RATED_NOT_GROUPED">
-            <reward item_id="8619" min="1" max="1" chance="52.0000" />	<!--Ancient Book: Divine Inspiration (Original Language Version)-->
-            <reward item_id="9818" min="3" max="7" chance="81.0000" />	<!--Angelic Essence-->
-            <reward item_id="8176" min="1" max="4" chance="81.0000" />	<!--Destruction Tombstone-->
+            <group chance="100.0">
+                <reward item_id="4357" min="10" max="15" chance="100.0" />	<!--Blessed Scroll: Enchant Armor (S-Grade)-->
+            </group>
+ 	<group chance="100.0">
+                <reward item_id="9627" min="10" max="25" chance="87.0" />	<!--Blessed Scroll: Enchant Armor (S-Grade)-->
+           </group>
+            <group chance="100.0">
+                <reward item_id="6577" min="10" max="25" chance="73.0" />	<!--Blessed Scroll: Enchant Armor (S-Grade)-->
+                <reward item_id="6578" min="20" max="35" chance="75.0" />	<!--Blessed Scroll: Enchant Armor (S-Grade)-->
+            </group>
+	<group chance="100.0">
+                <reward item_id="21580" min="1" max="1" chance="45.0" />	<!--Blessed Scroll: Enchant Armor (S-Grade)-->
+                <reward item_id="21582" min="1" max="5" chance="47.0" />	<!--Blessed Scroll: Enchant Armor (S-Grade)-->
+            </group>
         </rewardlist>
         <attributes>
-            <defence attribute="fire" value="20"/>
-            <defence attribute="water" value="20"/>
-            <defence attribute="wind" value="20"/>
-            <defence attribute="earth" value="20"/>
-            <defence attribute="holy" value="53"/>
-            <defence attribute="unholy" value="15"/>
+            <defence attribute="fire" value="250"/>
+            <defence attribute="water" value="250"/>
+            <defence attribute="wind" value="250"/>
+            <defence attribute="earth" value="250"/>
+            <defence attribute="holy" value="250"/>
+            <defence attribute="unholy" value="250"/>
         </attributes>
     </npc>
     <npc id="25326" name="Barakiel's Disciple" title="Raid Fighter">
@@ -1889,7 +1889,7 @@
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="1"/>
         <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="58887.3167955979"/>
+        <set name="baseHpMax" value="588087.3167955979"/>
         <set name="baseHpRate" value="1"/>
         <set name="baseHpReg" value="116.468584127042"/>
         <set name="baseINT" value="21"/>
@@ -1899,7 +1899,7 @@
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1314"/>
         <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="8357"/>
+        <set name="basePAtk" value="24357"/>
         <set name="basePAtkSpd" value="253"/>
         <set name="basePDef" value="437"/>
         <set name="baseRunSpd" value="190"/>
@@ -1910,7 +1910,7 @@
         <set name="baseWalkSpd" value="50"/>
         <set name="collision_height" value="38.5"/>
         <set name="collision_radius" value="11"/>
-        <set name="level" value="69"/>
+        <set name="level" value="85"/>
         <set name="isAgro" value="0"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1950,7 +1950,7 @@
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="1"/>
         <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="29443.6583977989"/>
+        <set name="baseHpMax" value="294043.6583977989"/>
         <set name="baseHpRate" value="1"/>
         <set name="baseHpReg" value="116.468584127042"/>
         <set name="baseINT" value="21"/>
@@ -1960,7 +1960,7 @@
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="1314"/>
         <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="4179"/>
+        <set name="basePAtk" value="26179"/>
         <set name="basePAtkSpd" value="253"/>
         <set name="basePDef" value="437"/>
         <set name="baseRunSpd" value="190"/>
@@ -1971,7 +1971,7 @@
         <set name="baseWalkSpd" value="50"/>
         <set name="collision_height" value="38.5"/>
         <set name="collision_radius" value="11"/>
-        <set name="level" value="69"/>
+        <set name="level" value="85"/>
         <set name="isAgro" value="0"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>

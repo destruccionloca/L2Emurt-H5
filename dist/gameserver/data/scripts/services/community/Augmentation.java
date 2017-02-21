@@ -20,6 +20,7 @@ import l2p.gameserver.serverpackets.ExShowVariationMakeWindow;
 import l2p.gameserver.serverpackets.InventoryUpdate;
 import l2p.gameserver.serverpackets.ShortCutRegister;
 import l2p.gameserver.serverpackets.components.SystemMsg;
+import l2p.gameserver.serverpackets.ShowBoard;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +33,7 @@ public class Augmentation extends Functions implements ScriptFile, ICommunityBoa
     private static final Logger _log = LoggerFactory.getLogger(Augmentation.class);
 
     private int PRICE_ID = 24179; // id уплаты
-    private int PRICE_COUNT = 3; // кол-во предметов
+    private int PRICE_COUNT = 1; // кол-во предметов
 
     @Override
     public void onLoad() {
@@ -67,25 +68,31 @@ public class Augmentation extends Functions implements ScriptFile, ICommunityBoa
 			
 			if (id == 1) {
                 player.sendPacket(Msg.SELECT_THE_ITEM_TO_BE_AUGMENTED, ExShowVariationMakeWindow.STATIC);
+				player.sendPacket(new ShowBoard());
                 return;
             }
 
             if (id == 0) {
                 player.sendPacket(Msg.SELECT_THE_ITEM_FROM_WHICH_YOU_WISH_TO_REMOVE_AUGMENTATION, ExShowVariationCancelWindow.STATIC);
+				player.sendPacket(new ShowBoard());
                 return;
             }
 
             if (item == null || item.isAugmented() || !item.canBeAugmented(player, false)) {
+				player.sendMessage("Предмет уже зачарован");
+				player.sendPacket(new ShowBoard());
                 return;
             }
+				
             if (!player.getInventory().destroyItemByItemId(PRICE_ID, PRICE_COUNT)) {
                 if (PRICE_ID == 4356) {
-                    player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-                } else {
-                    player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+                        player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+                    } else {
+                         player.sendMessage("Недостаточно Купонов");
+						 player.sendPacket(new ShowBoard());
+						 return;
+                    }
                 }
-                return;
-            }
 
             boolean equipped = false;
             if (equipped = item.isEquipped()) {
@@ -98,6 +105,8 @@ public class Augmentation extends Functions implements ScriptFile, ICommunityBoa
                 player.getInventory().equipItem(item);
             }
             player.sendPacket(new InventoryUpdate().addModifiedItem(item));
+			player.sendMessage("Зачарованно Успешно");
+			player.sendPacket(new ShowBoard());
 
             for (ShortCut sc : player.getAllShortCuts()) {
                 if (sc.getId() == item.getObjectId() && sc.getType() == ShortCut.TYPE_ITEM) {

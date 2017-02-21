@@ -8,65 +8,62 @@
   <!-- Dragon Bugle of Star -->
   <item id="4">
     <production id="4423" count="1"/>     
-	<ingredient id="4357" count="100"/>
+	<ingredient id="4357" count="125"/>
   </item>
 
   <!-- Dragon Bugle of Twilight -->
   <item id="5">
     <production id="4424" count="1"/>     
-	<ingredient id="4357" count="100"/>
+	<ingredient id="4357" count="125"/>
   </item>
 
   <!-- Dragon Bugle of Wind -->
   <item id="6">
     <production id="4422" count="1"/>     
-	<ingredient id="4357" count="100"/>
-  </item>
-
-  <!-- Fenrir Necklace -->
-  <item id="13">
-    <production id="10426" count="1"/>     
-	<ingredient id="4357" count="100"/>
-  </item>
-
-  <!-- Snow Fenrir Necklace -->
-  <item id="14">
-    <production id="10611" count="1"/>     
-	<ingredient id="4357" count="100"/>
-  </item>
-
-  <!-- Great Snow Wolf Necklace -->
-  <item id="15">
-    <production id="10307" count="1"/>     
-	<ingredient id="4357" count="100"/>
+	<ingredient id="4357" count="125"/>
   </item>
 
   <!-- Guardian's Dragon Bugle -->
   <item id="18">
     <production id="14819" count="1"/>     
-	<ingredient id="4357" count="300"/>
+	<ingredient id="4357" count="125"/>
   </item>
     <!-- pet -->
-  <item id="19">
-    <production id="14061" count="1"/>     
-	<ingredient id="4356" count="110"/>
+
+  <!-- Snow Fenrir Necklace -->
+  <item id="14">
+    <production id="10611" count="1"/>     
+	<ingredient id="4357" count="125"/>
   </item>
 
-  <!-- pet -->
-  <item id="20">
-    <production id="14062" count="1"/>     
-	<ingredient id="4356" count="110"/>
+  <!-- Great Snow Wolf Necklace -->
+  <item id="15">
+    <production id="10307" count="1"/>     
+	<ingredient id="4357" count="125"/>
   </item>
-  
+
+
+
     <!-- pet -->
   <item id="21">
     <production id="21395" count="1"/>     
-	<ingredient id="4357" count="150"/>
+	<ingredient id="4357" count="125"/>
   </item>
   
     <!-- pet -->
   <item id="22">
     <production id="13547" count="1"/>     
-	<ingredient id="4357" count="150"/>
+	<ingredient id="4357" count="125"/>
   </item>
+  <item id="19">
+    <production id="14061" count="1"/>     
+	<ingredient id="4356" count="95"/>
+  </item>
+
+  <!-- pet -->
+  <item id="20">
+    <production id="14062" count="1"/>     
+	<ingredient id="4356" count="95"/>
+  </item>
+  
 </list>

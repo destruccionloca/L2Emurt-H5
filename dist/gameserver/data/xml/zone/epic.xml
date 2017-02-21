@@ -31,10 +31,10 @@
 	</zone>
 	<zone name="[valakas_epic]" type="epic">
 		<polygon>
-			<coords loc="196710 -130845 -3753 32767"/>
-			<coords loc="228895 -130845 -3753 32767"/>
-			<coords loc="229126 -96162 -3753 32767"/>
-			<coords loc="196478 -98187 -3753 32767"/>
+			<coords loc="196608 -131072 -1616 32767"/>
+			<coords loc="229360 -131072 -1616 32767"/>
+			<coords loc="229360 -98320 -1616 32767"/>
+			<coords loc="196608 -98320 -1616 32767"/>
 		</polygon>
 	</zone>
 	<zone name="[sailren_epic]" type="epic">

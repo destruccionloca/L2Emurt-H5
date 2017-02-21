@@ -1,0 +1,143 @@
+﻿<html noscrollbar>
+	<!--Заголовок окна-->
+	<title>Community Board</title>
+	<body>
+		<br>
+		<table width=800>
+			<tr>
+	<center>
+	<td>
+		<table border=0 cellpadding=0 cellspacing=0 width=790 height=123 background="l2ui_ct1.windows_df_small_vertical_bg">
+		<tr>
+		<td>
+		<table cellpadding=-2 cellspacing=4>
+		<tr>
+		<td width=110></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbshome" back="star_g.main_down" fore="star_g.main" width="140" height="31"/>
+		</td>
+		<td width=3></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbspage:shop" back="star_g.shop_down" fore="star_g.shop" width="140" height="31"/>
+		</td>
+		<td width=3></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbsbuff:index" back="star_g.buff_down" fore="star_g.buff" width="140" height="31"/>
+		</td>
+		<td width=3></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbsteleport" back="star_g.tp_down" fore="star_g.tp" width="140" height="31"/>
+		</td>
+		<td width=100></td>
+		</tr>
+		</table>
+		<table cellpadding=-8 cellspacing=4>
+		<tr>
+		<td width=180></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbscareer;" back="star_g.proff_down" fore="star_g.proff" width="140" height="31"/>
+		</td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbspage:service" back="star_g.service_down" fore="star_g.service" width="140" height="31"/>
+		</td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbspage:events" back="star_g.event_down" fore="star_g.event" width="140" height="31"/>
+		</td>
+		<td width=100></td>
+		</tr>
+		</table>
+		<table cellpadding=-4 cellspacing=4>
+		<tr>
+		<td width=250></td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbsshowitem:10050" back="star_g.pr_down" fore="star_g.pr" width="140" height="31"/>
+		</td>
+		<td width=20 valign="top" align="center">
+        <br><button value="" action="bypass _bbspage:help" back="star_g.helpserver_down" fore="star_g.helpserver" width="140" height="31"/>
+		</td>
+		<td width=100></td>
+		</tr>
+		</table>
+		</td>
+		</tr>
+		</table>
+		<br><br>
+<font name="hs12"><center>Сервис визуализации</center></font>
+<br><br><center>
+<table border=0>
+	<tr>
+		<td width=300 align=center>
+		<table width=260 height=220	cellspacing=6 cellpadding=6 border=0 background="l2ui_ct1.windows_df_small_vertical_bg">
+			<tr>
+				<td align=center><font color="BCBCBC" name="hs12">Предмет</font></td>
+			</tr>		
+			<tr>
+				<td align=center><table height=36 width=36 cellpadding=1 cellspacing=1 background="L2UI_CT1.Windows_DF_TooltipBG"><tr><td align=left valign=top>%item_icon%</td></tr></table></td>
+			</tr>
+			<tr>
+				<td align=center><img src=L2UI.SquareGray width=160 height=1></td>
+			</tr>
+			<tr>
+				<td align=center><font color="B59A75">%item_name%</font></td>
+			</tr>
+			<tr>
+				<td align=center><img src=L2UI.SquareGray width=160 height=1></td>
+			</tr>			
+			<tr>
+				<td align=center><button value="Выбрать" action="bypass _bbsvisual:item_select" width=140 height=32 back="ItemPH.main_down" fore="ItemPH.main"></td>
+			</tr>						
+		</table>
+		</td>
+		<td width=300 align=center>
+		<table width=260 height=220 cellspacing=6 cellpadding=6 border=0 background="l2ui_ct1.windows_df_small_vertical_bg">
+			<tr>
+				<td align=center><font color="BCBCBC" name="hs12">Внешность</font></td>
+			</tr>		
+			<tr>
+				<td align=center><table height=36 width=36 cellpadding=1 cellspacing=1 background="L2UI_CT1.Windows_DF_TooltipBG"><tr><td align=left valign=top>%consumable_icon%</td></tr></table></td>
+			</tr>
+			<tr>
+				<td align=center><img src=L2UI.SquareGray width=160 height=1></td>
+			</tr>
+			<tr>
+				<td align=center><font color="B59A75">%consumable_name%</font></td>
+			</tr>
+			<tr>
+				<td align=center><img src=L2UI.SquareGray width=160 height=1></td>
+			</tr>			
+			<tr>
+				<td align=center><button value="Выбрать" action="bypass _bbsvisual:consumable_select" width=140 height=32 back="ItemPH.main_down" fore="ItemPH.main"></td>
+			</tr>						
+		</table>
+		</td>
+	</tr>
+</table>
+<br><br>
+<table border=0>
+	<tr>
+		<td><button value="магазин предметов" action="bypass _bbsmultisell:8000;_bbsvisual" width=180 height=31 back="ItemPH.setting_down" fore="ItemPH.setting"></td>
+	</tr>	
+</table>
+<font color="B59A75">Стоимость:</font> <font color="BCBCBC">%price_count% %price_name%</font><br1>
+<table border=0>
+	<tr>
+		<td><button value="Установить" action="bypass _bbsvisual:insert" width=180 height=31 back="ItemPH.setting_down" fore="ItemPH.setting"></td>
+	</tr>
+	<tr>
+		<td align=center><button value="Удалить" action="bypass _bbsvisual:remove" width=100 height=28 back="ItemPH.delete_down" fore="ItemPH.delete"></td>
+	</tr>	
+</table>
+<br>
+<table border=0 cellpadding=0 cellspacing=4 width=800 height=64 background="l2ui_ct1.windows_df_small_vertical_bg">
+<tr>
+<td align=center valign=top>
+<br><font name="hs12" color="LEVEL">Справка:</font><font name="hs12"> В левом окне выберите предмет, внешность которого вы хотите изменить. В правом окне предмет с внешностью, которую хотите взять. После чего нажмите кнопку "Установить".</font>
+</td>
+</tr>
+</table>
+	</td>
+	</center>
+			</tr>
+		</table>
+	</body>
+</html>

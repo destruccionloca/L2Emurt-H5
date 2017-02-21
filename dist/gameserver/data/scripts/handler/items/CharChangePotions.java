@@ -21,7 +21,10 @@ public class CharChangePotions extends ScriptItemHandler implements ScriptFile {
         5245,
         5246,
         5247,
-        5248 // Hair Style
+        5248, // Hair Style
+		40047,
+		40048,
+		40049
     };
 
     @Override
@@ -99,6 +102,15 @@ public class CharChangePotions extends ScriptItemHandler implements ScriptFile {
             case 5248:
                 player.setHairStyle(6);
                 break;
+			case 40047:
+                player.setHairStyle(7);
+                break;
+			case 40048:
+                player.setHairStyle(8);
+                break;
+			case 40049:
+                player.setHairStyle(9);
+                break;	
         }
 
         player.broadcastPacket(new MagicSkillUse(player, player, 2003, 1, 1, 0));

@@ -13,7 +13,7 @@ public final class h7GatekeeperInstance extends NpcInstance{
     private static final Location TELEPORT_POSITION1 = new Location(-114712, 149576, 447); // 1 Этаж
     private static final Location TELEPORT_POSITION2 = new Location(-114712, 148120, 3552); // 2 Этаж
     private static final Location TELEPORT_POSITION3 = new Location(-114696, 146776, 6616); // 3 Этаж
-	private static final Location TELEPORT_POSITION4 = new Location(-84456, 242152, -3728); // Выход
+	private static final Location TELEPORT_POSITION4 = new Location(-83032, 150872, -3120); // Выход
 	
     public h7GatekeeperInstance(int objectId, NpcTemplate template) {
         super(objectId, template);

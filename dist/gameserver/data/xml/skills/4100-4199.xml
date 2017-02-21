@@ -1366,10 +1366,10 @@
 		<set name="reflectable" val="false" />
 		<for>
 			<effect count="1" name="Cancel" time="0" val="0">
-				<def name="cancelRate" val="5" />
-				<def name="minChance" val="25" />
-				<def name="maxChance" val="75" />
-				<def name="negateCount" val="3" />
+				<def name="cancelRate" val="1" />
+				<def name="minChance" val="15" />
+				<def name="maxChance" val="30" />
+				<def name="negateCount" val="1" />
 			</effect>
 		</for>
 	</skill>

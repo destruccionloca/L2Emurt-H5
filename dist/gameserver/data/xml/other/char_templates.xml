@@ -34,9 +34,9 @@
 			<set name="lvlCpMod" value="0.05"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-83675"/>
+			<set name="spawnY" value="150469"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="9.0"/>
 			<set name="male_collision_height" value="23.0"/>
 			<set name="female_collision_radius" value="8.0"/>
@@ -45,7 +45,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="1" name="Warrior">
@@ -92,7 +92,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="2" name="Gladiator">
@@ -139,7 +139,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="3" name="Warlord">
@@ -186,7 +186,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="4" name="Human Knight">
@@ -233,7 +233,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="5" name="Paladin">
@@ -280,7 +280,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="6" name="Dark Avenger">
@@ -327,7 +327,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="7" name="Rogue">
@@ -374,7 +374,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="8" name="Treasure Hunter">
@@ -421,7 +421,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="9" name="Hawkeye">
@@ -468,7 +468,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="10" name="Human Mage">
@@ -504,9 +504,9 @@
 			<set name="lvlCpMod" value="0.09"/>
 			<set name="lvlMpAdd" value="7.2"/>
 			<set name="lvlMpMod" value="0.08"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-83675"/>
+			<set name="spawnY" value="150469"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="22.8"/>
 			<set name="female_collision_radius" value="6.5"/>
@@ -514,7 +514,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="11" name="Human Wizard">
@@ -560,7 +560,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="12" name="Sorcerer">
@@ -606,7 +606,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="13" name="Necromancer">
@@ -652,7 +652,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="14" name="Warlock">
@@ -698,7 +698,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="15" name="Cleric">
@@ -744,7 +744,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="17" name="Human Prophet">
@@ -790,7 +790,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="16" name="Bishop">
@@ -836,7 +836,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="19" name="Elf Knight">
@@ -883,7 +883,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="18" name="Elf Fighter">
@@ -919,9 +919,9 @@
 			<set name="lvlCpMod" value="0.06"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-83672"/>
+			<set name="spawnY" value="151223"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.5"/>
@@ -930,7 +930,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="21" name="Swordsinger">
@@ -977,7 +977,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="20" name="Temple Knight">
@@ -1024,7 +1024,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="23" name="Plains Walker">
@@ -1071,7 +1071,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="22" name="Scout">
@@ -1118,7 +1118,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="25" name="Elf Mage">
@@ -1154,9 +1154,9 @@
 			<set name="lvlCpMod" value="0.09"/>
 			<set name="lvlMpAdd" value="7.2"/>
 			<set name="lvlMpMod" value="0.08"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-83672"/>
+			<set name="spawnY" value="151223"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.5"/>
@@ -1164,7 +1164,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="24" name="Silver Ranger">
@@ -1211,7 +1211,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="27" name="Spellsinger">
@@ -1257,7 +1257,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="26" name="Elf Wizard">
@@ -1303,7 +1303,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="29" name="Oracle">
@@ -1349,7 +1349,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="28" name="Elemental Summoner">
@@ -1395,7 +1395,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="31" name="DE Fighter">
@@ -1431,9 +1431,9 @@
 			<set name="lvlCpMod" value="0.06"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-82489"/>
+			<set name="spawnY" value="151229"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.0"/>
@@ -1442,7 +1442,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="30" name="Elder">
@@ -1488,7 +1488,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="34" name="Bladedancer">
@@ -1535,7 +1535,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="35" name="Assassin">
@@ -1582,7 +1582,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="32" name="Palus Knight">
@@ -1629,7 +1629,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="33" name="Shillien Knight">
@@ -1676,7 +1676,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="38" name="DE Mage">
@@ -1712,9 +1712,9 @@
 			<set name="lvlCpMod" value="0.09"/>
 			<set name="lvlMpAdd" value="7.2"/>
 			<set name="lvlMpMod" value="0.08"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-82489"/>
+			<set name="spawnY" value="151229"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.0"/>
@@ -1722,7 +1722,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="39" name="DE Wizard">
@@ -1768,7 +1768,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="36" name="Abyss Walker">
@@ -1815,7 +1815,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="37" name="Phantom Ranger">
@@ -1862,7 +1862,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="42" name="Shillien Oracle">
@@ -1908,7 +1908,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="43" name="Shillien Elder">
@@ -1954,7 +1954,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="40" name="Spell Howler">
@@ -2000,7 +2000,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="41" name="Phantom Summoner">
@@ -2046,7 +2046,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="46" name="Destroyer">
@@ -2093,7 +2093,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="47" name="Monk">
@@ -2140,7 +2140,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="44" name="Orc Fighter">
@@ -2176,9 +2176,9 @@
 			<set name="lvlCpMod" value="0.07"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-81498"/>
+			<set name="spawnY" value="151244"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="11.0"/>
 			<set name="male_collision_height" value="28.0"/>
 			<set name="female_collision_radius" value="7.0"/>
@@ -2187,7 +2187,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="45" name="Raider">
@@ -2234,7 +2234,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="51" name="Overlord">
@@ -2280,7 +2280,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="50" name="Shaman">
@@ -2326,7 +2326,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="49" name="Orc Mage">
@@ -2362,9 +2362,9 @@
 			<set name="lvlCpMod" value="0.09"/>
 			<set name="lvlMpAdd" value="7.2"/>
 			<set name="lvlMpMod" value="0.08"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-81498"/>
+			<set name="spawnY" value="151244"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="7.0"/>
 			<set name="male_collision_height" value="27.5"/>
 			<set name="female_collision_radius" value="8.0"/>
@@ -2372,7 +2372,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="48" name="Tyrant">
@@ -2419,7 +2419,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="55" name="Bounty Hunter">
@@ -2465,7 +2465,7 @@
 			<item id="1147" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2370" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="54" name="Scavenger">
@@ -2511,7 +2511,7 @@
 			<item id="1147" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2370" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="53" name="Dwarf Fighter">
@@ -2547,9 +2547,9 @@
 			<set name="lvlCpMod" value="0.1"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-81472"/>
+			<set name="spawnY" value="150500"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="9.0"/>
 			<set name="male_collision_height" value="18.0"/>
 			<set name="female_collision_radius" value="5.0"/>
@@ -2557,7 +2557,7 @@
 			<item id="1147" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2370" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="52" name="Warcryer">
@@ -2603,7 +2603,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="57" name="Warsmith">
@@ -2649,7 +2649,7 @@
 			<item id="1147" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2370" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="56" name="Artisan">
@@ -2695,7 +2695,7 @@
 			<item id="1147" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2370" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="93" name="Adventurer">
@@ -2742,14 +2742,14 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="92" name="Sagittarius">
 			<set name="raceId" value="0"/>
-			<set name="baseSTR" value="40"/>
+			<set name="baseSTR" value="55"/>
 			<set name="baseCON" value="43"/>
-			<set name="baseDEX" value="30"/>
+			<set name="baseDEX" value="35"/>
 			<set name="baseINT" value="21"/>
 			<set name="baseWIT" value="11"/>
 			<set name="baseMEN" value="25"/>
@@ -2789,7 +2789,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="95" name="Soultaker">
@@ -2835,7 +2835,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="94" name="Archmage">
@@ -2881,7 +2881,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="89" name="DreadNought">
@@ -2928,7 +2928,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="88" name="Duelist">
@@ -2975,7 +2975,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="91" name="Hell Knight">
@@ -3022,7 +3022,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="90" name="Phoenix Knight">
@@ -3069,12 +3069,12 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="102" name="Moonlight Sentinel">
 			<set name="raceId" value="1"/>
-			<set name="baseSTR" value="36"/>
+			<set name="baseSTR" value="50"/>
 			<set name="baseCON" value="36"/>
 			<set name="baseDEX" value="35"/>
 			<set name="baseINT" value="23"/>
@@ -3116,7 +3116,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="103" name="Mystic Muse">
@@ -3162,7 +3162,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="100" name="Sword Muse">
@@ -3209,7 +3209,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="101" name="Wind Rider">
@@ -3256,7 +3256,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="98" name="Hierophant">
@@ -3302,7 +3302,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="99" name="Eva Templar">
@@ -3349,7 +3349,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="96" name="Arcana Lord">
@@ -3395,7 +3395,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="97" name="Cardinal">
@@ -3441,7 +3441,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="110" name="Storm Screamer">
@@ -3487,7 +3487,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="111" name="Spectral Master">
@@ -3533,7 +3533,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="108" name="Ghost Hunter">
@@ -3580,14 +3580,14 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="109" name="Ghost Sentinel">
 			<set name="raceId" value="2"/>
-			<set name="baseSTR" value="41"/>
+			<set name="baseSTR" value="60"/>
 			<set name="baseCON" value="32"/>
-			<set name="baseDEX" value="34"/>
+			<set name="baseDEX" value="35"/>
 			<set name="baseINT" value="25"/>
 			<set name="baseWIT" value="12"/>
 			<set name="baseMEN" value="26"/>
@@ -3627,7 +3627,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="106" name="Shillien Templar">
@@ -3674,7 +3674,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="107" name="Spectral Dancer">
@@ -3721,7 +3721,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="104" name="Elemental Master">
@@ -3767,7 +3767,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="105" name="Eva Saint">
@@ -3813,7 +3813,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="118" name="Maestro">
@@ -3860,7 +3860,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2370" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="117" name="Fortune Seeker">
@@ -3907,7 +3907,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2370" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="116" name="Doomcryer">
@@ -3953,7 +3953,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="115" name="Dominator">
@@ -3999,7 +3999,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="114" name="Grand Khauatari">
@@ -4046,7 +4046,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="113" name="Titan">
@@ -4093,7 +4093,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2368" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="112" name="Shillen Saint">
@@ -4139,7 +4139,7 @@
 			<item id="425" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="461" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="6" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="127" name="Berserker">
@@ -4186,7 +4186,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="126" name="Warder">
@@ -4233,7 +4233,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="125" name="Trooper">
@@ -4280,7 +4280,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="124" name="Female Soldier">
@@ -4316,9 +4316,9 @@
 			<set name="lvlCpMod" value="0.06"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-82627"/>
+			<set name="spawnY" value="150504"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="23.0"/>
 			<set name="female_collision_radius" value="7.0"/>
@@ -4327,7 +4327,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="123" name="Male Soldier">
@@ -4363,9 +4363,9 @@
 			<set name="lvlCpMod" value="0.06"/>
 			<set name="lvlMpAdd" value="5.4"/>
 			<set name="lvlMpMod" value="0.06"/>
-			<set name="spawnX" value="-83976"/>
-			<set name="spawnY" value="242760"/>
-			<set name="spawnZ" value="-3728"/>
+			<set name="spawnX" value="-82627"/>
+			<set name="spawnY" value="150504"/>
+			<set name="spawnZ" value="-3129"/>
 			<set name="male_collision_radius" value="7.5"/>
 			<set name="male_collision_height" value="24.0"/>
 			<set name="female_collision_radius" value="7.0"/>
@@ -4374,7 +4374,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="136" name="Judicator">
@@ -4421,7 +4421,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="129" name="Female Soulbreaker">
@@ -4468,7 +4468,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="128" name="Male Soulbreaker">
@@ -4515,7 +4515,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="131" name="Doombringer">
@@ -4562,7 +4562,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="130" name="Arbalester">
@@ -4609,7 +4609,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="133" name="Female Soulhound">
@@ -4656,7 +4656,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="132" name="Male Soulhound">
@@ -4703,7 +4703,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="135" name="Inspector">
@@ -4750,7 +4750,7 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 
 		<template id="134" name="Trickster">
@@ -4797,6 +4797,6 @@
 			<item id="1146" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="2369" count="1" enchant="0" equipable="true" shortcut="-1"/>
 			<item id="10" count="1" enchant="0" equipable="true" shortcut="-1"/>
-			<item id="5588" count="1" enchant="0" equipable="false" shortcut="12"/>
+			
 		</template>
 </list>

@@ -34,7 +34,7 @@ public final class JiniaNpcInstance extends NpcInstance {
             if (player.getInventory().getCountOf(15469) > 0 || player.getInventory().getCountOf(15470) > 0) {
                 showChatWindow(player, 4);
             } else if (player.getQuestState("_10286_ReunionWithSirra") == null || !player.getQuestState("_10286_ReunionWithSirra").isCompleted()) {
-                ItemFunctions.addItem(player, 15470, 1);
+                ItemFunctions.addItem(player, 15469, 1);
                 showChatWindow(player, 5);
             } else {
                 ItemFunctions.addItem(player, 15469, 1);

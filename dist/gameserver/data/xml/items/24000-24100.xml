@@ -180,7 +180,7 @@
 			<slot id="HAIR_ALL"/>
 		</equip>
 	</armor>
-	<armor id="24012" name="Soltkriga Cloak">
+ <armor id="24012" name="Плащ Сольткрига Маг">
     <set name="enchantable" value="false"/>
     <set name="crystal_type" value="S84"/>    
     <set name="icon" value="icon.vesper_cloack_i00"/>
@@ -190,21 +190,25 @@
     <equip>
       <slot id="BACK"/>
     </equip>
+    <cond msgId="113" addName="1">
+      <player classId="94,95,103,110"/>
+    </cond>
     <attributes>
-	<attribute element="fire" value="40"/>
-      <attribute element="water" value="40"/>
-      <attribute element="wind" value="40"/>
-      <attribute element="earth" value="40"/>
-      <attribute element="holy" value="40"/>
-      <attribute element="unholy" value="40"/>
+	<attribute element="fire" value="50"/>
+      <attribute element="water" value="50"/>
+      <attribute element="wind" value="50"/>
+      <attribute element="earth" value="50"/>
+      <attribute element="holy" value="50"/>
+      <attribute element="unholy" value="50"/>
 	</attributes>
     <for>
-      <add stat="pDef" order="0x10" value="40"/>
+      <add stat="pDef" order="0x10" value="50"/>
+      <add stat="mDef" order="0x10" value="40"/>
       <enchant stat="pDef" order="0x0C" value="0"/>
       <enchant stat="maxHp" order="0x80" value="0"/>
     </for>
   </armor>
-	  <armor id="24013" name="Nabiaropa Cloak">
+ <armor id="24013" name="Плащ Набиаропа Суммонер">
     <set name="enchantable" value="false"/>
     <set name="crystal_type" value="S84"/>    
     <set name="icon" value="icon.vesper_cloack_i00"/>
@@ -214,21 +218,53 @@
     <equip>
       <slot id="BACK"/>
     </equip>
+    <cond msgId="113" addName="1">
+      <player classId="96,104,111"/>
+    </cond>	
     <attributes>
-		<attribute element="fire" value="40"/>
-      <attribute element="water" value="40"/>
-      <attribute element="wind" value="40"/>
-      <attribute element="earth" value="40"/>
-      <attribute element="holy" value="40"/>
-      <attribute element="unholy" value="40"/>
+		<attribute element="fire" value="50"/>
+      <attribute element="water" value="50"/>
+      <attribute element="wind" value="50"/>
+      <attribute element="earth" value="50"/>
+      <attribute element="holy" value="50"/>
+      <attribute element="unholy" value="50"/>
 	</attributes>
     <for>
-      <add stat="pDef" order="0x10" value="40"/>
+      <add stat="pDef" order="0x10" value="50"/>
+      <add stat="mDef" order="0x10" value="40"/>
+     <enchant stat="pDef" order="0x0C" value="0"/>
+      <enchant stat="maxHp" order="0x80" value="0"/>
+    </for>
+  </armor>
+ <armor id="24014" name="Плащ Сафироса Воин">
+    <set name="enchantable" value="false"/>
+    <set name="crystal_type" value="S84"/>    
+    <set name="icon" value="icon.vesper_cloack_i00"/>
+    <set name="price" value="28671000"/>
+    <set name="type" value="NONE"/>    
+    <set name="weight" value="220"/>
+    <equip>
+      <slot id="BACK"/>
+    </equip>
+    <cond msgId="113" addName="1">
+      <player classId="88,89,113,114,117,118,131,132,133"/>
+    </cond>	
+    <attributes>
+		<attribute element="fire" value="50"/>
+      <attribute element="water" value="50"/>
+      <attribute element="wind" value="50"/>
+      <attribute element="earth" value="50"/>
+      <attribute element="holy" value="50"/>
+      <attribute element="unholy" value="50"/>
+	</attributes>
+    <for>
+      <add stat="pDef" order="0x10" value="50"/>
+      <add stat="mDef" order="0x10" value="40"/>
       <enchant stat="pDef" order="0x0C" value="0"/>
       <enchant stat="maxHp" order="0x80" value="0"/>
     </for>
   </armor>
-	<armor id="24014" name="Safirosa Cloak">
+ <armor id="24015" name="Плащ Кайшунаги Разбойник">
     <set name="enchantable" value="false"/>
     <set name="crystal_type" value="S84"/>    
     <set name="icon" value="icon.vesper_cloack_i00"/>
@@ -238,21 +274,25 @@
     <equip>
       <slot id="BACK"/>
     </equip>
+    <cond msgId="113" addName="1">
+      <player classId="93,101,108,117"/>
+    </cond>	
     <attributes>
-		<attribute element="fire" value="40"/>
-      <attribute element="water" value="40"/>
-      <attribute element="wind" value="40"/>
-      <attribute element="earth" value="40"/>
-      <attribute element="holy" value="40"/>
-      <attribute element="unholy" value="40"/>
+		<attribute element="fire" value="50"/>
+      <attribute element="water" value="50"/>
+      <attribute element="wind" value="50"/>
+      <attribute element="earth" value="50"/>
+      <attribute element="holy" value="50"/>
+      <attribute element="unholy" value="50"/>
 	</attributes>
     <for>
-      <add stat="pDef" order="0x10" value="40"/>
+      <add stat="pDef" order="0x10" value="50"/>
+      <add stat="mDef" order="0x10" value="40"/>
       <enchant stat="pDef" order="0x0C" value="0"/>
       <enchant stat="maxHp" order="0x80" value="0"/>
     </for>
   </armor>
- <armor id="24015" name="Kayshunaga Cloak">
+ <armor id="24016" name="Плащ Лакисиса Хиллер">
     <set name="enchantable" value="false"/>
     <set name="crystal_type" value="S84"/>    
     <set name="icon" value="icon.vesper_cloack_i00"/>
@@ -262,21 +302,25 @@
     <equip>
       <slot id="BACK"/>
     </equip>
+    <cond msgId="113" addName="1">
+      <player classId="97,105,112"/>
+    </cond>	
     <attributes>
-		<attribute element="fire" value="40"/>
-      <attribute element="water" value="40"/>
-      <attribute element="wind" value="40"/>
-      <attribute element="earth" value="40"/>
-      <attribute element="holy" value="40"/>
-      <attribute element="unholy" value="40"/>
+		<attribute element="fire" value="50"/>
+      <attribute element="water" value="50"/>
+      <attribute element="wind" value="50"/>
+      <attribute element="earth" value="50"/>
+      <attribute element="holy" value="50"/>
+      <attribute element="unholy" value="50"/>
 	</attributes>
     <for>
-      <add stat="pDef" order="0x10" value="40"/>
+      <add stat="pDef" order="0x10" value="50"/>
+      <add stat="mDef" order="0x10" value="40"/>
       <enchant stat="pDef" order="0x0C" value="0"/>
       <enchant stat="maxHp" order="0x80" value="0"/>
     </for>
   </armor>
- <armor id="24016" name="Shigaraki Cloak">
+ <armor id="24017" name="Плащ Райстера Чародей">
     <set name="enchantable" value="false"/>
     <set name="crystal_type" value="S84"/>    
     <set name="icon" value="icon.vesper_cloack_i00"/>
@@ -286,21 +330,25 @@
     <equip>
       <slot id="BACK"/>
     </equip>
+    <cond msgId="113" addName="1">
+      <player classId="98,115,116,100,107,136"/>
+    </cond>	
     <attributes>
-		<attribute element="fire" value="40"/>
-      <attribute element="water" value="40"/>
-      <attribute element="wind" value="40"/>
-      <attribute element="earth" value="40"/>
-      <attribute element="holy" value="40"/>
-      <attribute element="unholy" value="40"/>
+		<attribute element="fire" value="50"/>
+      <attribute element="water" value="50"/>
+      <attribute element="wind" value="50"/>
+      <attribute element="earth" value="50"/>
+      <attribute element="holy" value="50"/>
+      <attribute element="unholy" value="50"/>
 	</attributes>
     <for>
-      <add stat="pDef" order="0x10" value="40"/>
+      <add stat="pDef" order="0x10" value="50"/>
+      <add stat="mDef" order="0x10" value="40"/>
       <enchant stat="pDef" order="0x0C" value="0"/>
       <enchant stat="maxHp" order="0x80" value="0"/>
     </for>
   </armor>
- <armor id="24017" name="Raysteo Cloak">
+ <armor id="24018" name="Плащ Кронвиста Лучник">
     <set name="enchantable" value="false"/>
     <set name="crystal_type" value="S84"/>    
     <set name="icon" value="icon.vesper_cloack_i00"/>
@@ -310,45 +358,25 @@
     <equip>
       <slot id="BACK"/>
     </equip>
+    <cond msgId="113" addName="1">
+      <player classId="92,102,109,134"/>
+    </cond>	
     <attributes>
-		<attribute element="fire" value="40"/>
-      <attribute element="water" value="40"/>
-      <attribute element="wind" value="40"/>
-      <attribute element="earth" value="40"/>
-      <attribute element="holy" value="40"/>
-      <attribute element="unholy" value="40"/>
+		<attribute element="fire" value="50"/>
+      <attribute element="water" value="50"/>
+      <attribute element="wind" value="50"/>
+      <attribute element="earth" value="50"/>
+      <attribute element="holy" value="50"/>
+      <attribute element="unholy" value="50"/>
 	</attributes>
     <for>
-      <add stat="pDef" order="0x10" value="40"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
- <armor id="24018" name="Kronobisa Cloak">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="icon.vesper_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-		<attribute element="fire" value="40"/>
-      <attribute element="water" value="40"/>
-      <attribute element="wind" value="40"/>
-      <attribute element="earth" value="40"/>
-      <attribute element="holy" value="40"/>
-      <attribute element="unholy" value="40"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="40"/>
+      <add stat="pDef" order="0x10" value="50"/>
+      <add stat="mDef" order="0x10" value="40"/>
       <enchant stat="pDef" order="0x0C" value="0"/>
       <enchant stat="maxHp" order="0x80" value="0"/>
     </for>
   </armor>   
-  <armor id="24019" name="Afeliusa Cloak">
+ <armor id="24019" name="Плащ Авелиуса	Рыцарь">
     <set name="enchantable" value="false"/>
     <set name="crystal_type" value="S84"/>    
     <set name="icon" value="icon.vesper_cloack_i00"/>
@@ -358,16 +386,20 @@
     <equip>
       <slot id="BACK"/>
     </equip>
+    <cond msgId="113" addName="1">
+      <player classId="90,91,99,106"/>
+    </cond>	
     <attributes>
-		<attribute element="fire" value="40"/>
-      <attribute element="water" value="40"/>
-      <attribute element="wind" value="40"/>
-      <attribute element="earth" value="40"/>
-      <attribute element="holy" value="40"/>
-      <attribute element="unholy" value="40"/>
+		<attribute element="fire" value="50"/>
+      <attribute element="water" value="50"/>
+      <attribute element="wind" value="50"/>
+      <attribute element="earth" value="50"/>
+      <attribute element="holy" value="50"/>
+      <attribute element="unholy" value="50"/>
 	</attributes>
     <for>
-      <add stat="pDef" order="0x10" value="40"/>
+      <add stat="pDef" order="0x10" value="50"/>
+      <add stat="mDef" order="0x10" value="40"/>
       <enchant stat="pDef" order="0x0C" value="0"/>
       <enchant stat="maxHp" order="0x80" value="0"/>
     </for>
@@ -425,6 +457,8 @@
     </equip>
   </armor>
     <weapon id="24024" name="Harnake Cutter">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -449,6 +483,8 @@
     </for>
   </weapon>
   <weapon id="24025" name="Harnake Cutter" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -476,6 +512,8 @@
     </for>
   </weapon>
     <weapon id="24026" name="Harnake Cutter" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -503,6 +541,8 @@
     </for>
   </weapon>
    <weapon id="24027" name="Harnake Cutter" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -530,6 +570,8 @@
     </for>
   </weapon>
     <weapon id="24028" name="Harnake Buster">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -554,6 +596,8 @@
     </for>
   </weapon>
   <weapon id="24029" name="Harnake Buster" add_name="Magic Hold">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -584,6 +628,8 @@
     </for>
   </weapon>
     <weapon id="24030" name="Harnake Buster" add_name="Mana Up">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -611,6 +657,8 @@
     </for>
   </weapon>
     <weapon id="24031" name="Harnake Buster" add_name="Acumen">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -638,6 +686,8 @@
     </for>
   </weapon>
    <weapon id="24032" name="Harnake Shaper">
+ 	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -662,6 +712,8 @@
     </for>
   </weapon>
   <weapon id="24033" name="Harnake Shaper" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -689,6 +741,8 @@
     </for>
   </weapon>
     <weapon id="24034" name="Harnake Shaper" add_name="Crt. Damage">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -716,6 +770,8 @@
     </for>
   </weapon>
     <weapon id="24035" name="Harnake Shaper" add_name="HP Drain">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -743,6 +799,8 @@
     </for>
   </weapon>
     <weapon id="24036" name="Harnake Slasher">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -767,6 +825,8 @@
     </for>
   </weapon>
     <weapon id="24037" name="Harnake Slasher" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -794,6 +854,8 @@
     </for>
   </weapon>
    <weapon id="24038" name="Harnake Slasher" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -821,6 +883,8 @@
     </for>
   </weapon>
     <weapon id="24039" name="Harnake Slasher" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -848,6 +912,8 @@
     </for>
   </weapon>
     <weapon id="24040" name="Harnake Stormer">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -875,6 +941,8 @@
     </for>
   </weapon>
    <weapon id="24041" name="Harnake Stormer" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -903,6 +971,8 @@
     </for>
   </weapon>
   <weapon id="24042" name="Harnake Stormer" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -931,6 +1001,8 @@
     </for>
   </weapon>
    <weapon id="24043" name="Harnake Stormer" add_name="Guidance">
+ 	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -959,6 +1031,8 @@
     </for>
   </weapon>
    <weapon id="24044" name="Harnake Thrower">
+ 	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="1500"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -986,6 +1060,8 @@
     </for>
   </weapon>
   <weapon id="24045" name="Harnake Thrower" add_name="Crt. Slow">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="1500"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1019,6 +1095,8 @@
     </for>
   </weapon>
    <weapon id="24046" name="Harnake Thrower" add_name="Cheap Shot">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="1500"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1050,6 +1128,8 @@
     </for>
   </weapon>
    <weapon id="24047" name="Harnake Thrower" add_name="Focus">
+ 	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="1500"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1080,6 +1160,8 @@
     </for>
   </weapon>
    <weapon id="24048" name="Harnake Fighter">
+ 	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1104,6 +1186,8 @@
     </for>
   </weapon>
    <weapon id="24049" name="Harnake Fighter" add_name="Crt. Stun">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1134,6 +1218,8 @@
     </for>
   </weapon>
    <weapon id="24050" name="Harnake Fighter" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1161,6 +1247,8 @@
     </for>
   </weapon>
   <weapon id="24051" name="Harnake Fighter" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1188,6 +1276,8 @@
     </for>
   </weapon>
     <weapon id="24052" name="Harnake Rapier">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1215,6 +1305,8 @@
     </for>
   </weapon>
     <weapon id="24053" name="Harnake Rapier" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1245,6 +1337,8 @@
     </for>
   </weapon>
    <weapon id="24054" name="Harnake Rapier" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1275,6 +1369,8 @@
     </for>
   </weapon>
   <weapon id="24055" name="Harnake Rapier" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1305,6 +1401,8 @@
     </for>
   </weapon>
    <weapon id="24056" name="Harnake Crossbow">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="400"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1331,6 +1429,8 @@
     </for>
   </weapon>
     <weapon id="24057" name="Harnake Crossbow" add_name="Crt. Slow">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="400"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1363,6 +1463,8 @@
     </for>
   </weapon>
    <weapon id="24058" name="Harnake Crossbow" add_name="Cheap Shot">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="400"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1393,6 +1495,8 @@
     </for>
   </weapon>
     <weapon id="24059" name="Harnake Crossbow" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="400"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1422,6 +1526,8 @@
     </for>
   </weapon>
   <weapon id="24060" name="Harnake Sacredium">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1447,6 +1553,8 @@
     </for>
   </weapon>
   <weapon id="24061" name="Harnake Sacredium" add_name="Mana Up">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1475,6 +1583,8 @@
     </for>
   </weapon>
   <weapon id="24062" name="Harnake Sacredium" add_name="Acumen">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1503,6 +1613,8 @@
     </for>
   </weapon>
   <weapon id="24063" name="Harnake Sacredium" add_name="MP Regeneration">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1531,6 +1643,8 @@
     </for>
   </weapon>
    <weapon id="24064" name="Harnake Cane">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1556,6 +1670,8 @@
     </for>
   </weapon>
    <weapon id="24065" name="Harnake Cane" add_name="Magic Hold">
+ 	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1587,6 +1703,8 @@
     </for>
   </weapon>
    <weapon id="24066" name="Harnake Cane" add_name="Empower">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1615,6 +1733,8 @@
     </for>
   </weapon>
   <weapon id="24067" name="Harnake Cane" add_name="MP Regeneration">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -1643,6 +1763,8 @@
     </for>
   </weapon>
    <weapon id="24068" name="Harnake Blade">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1668,6 +1790,8 @@
     </for>
   </weapon>
   <weapon id="24069" name="Harnake Blade" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1696,6 +1820,8 @@
     </for>
   </weapon>
    <weapon id="24070" name="Harnake Blade" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1724,6 +1850,8 @@
     </for>
   </weapon>
   <weapon id="24071" name="Harnake Blade" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1752,6 +1880,8 @@
     </for>
   </weapon>
    <weapon id="24072" name="Harnake Mace">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1776,6 +1906,8 @@
     </for>
   </weapon>
    <weapon id="24073" name="Harnake Mace" add_name="HP Regeneration">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1803,6 +1935,8 @@
     </for>
   </weapon>
    <weapon id="24074" name="Harnake Mace" add_name="HP Drain">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1830,6 +1964,8 @@
     </for>
   </weapon>
   <weapon id="24075" name="Harnake Mace" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1857,6 +1993,8 @@
     </for>
   </weapon>
     <weapon id="24076" name="Harnake Dual Daggers">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="11421"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1886,6 +2024,8 @@
     </for>
   </weapon>
    <weapon id="24077" name="Harnake Dual Sword">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1914,6 +2054,8 @@
     </for>
   </weapon>
     <weapon id="24078" name="Harnake Cutter(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1943,6 +2085,8 @@
     </for>
   </weapon>
   <weapon id="24079" name="Harnake Cutter(PVP)" add_name="Focus">
+  	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -1973,6 +2117,8 @@
     </for>
   </weapon>
     <weapon id="24080" name="Harnake Cutter(PVP)" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2003,6 +2149,8 @@
     </for>
   </weapon>
    <weapon id="24081" name="Harnake Cutter(PVP)" add_name="Health">
+ 	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2033,6 +2181,8 @@
     </for>
   </weapon>
     <weapon id="24082" name="Harnake Buster(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -2061,6 +2211,8 @@
     </for>
   </weapon>
   <weapon id="24083" name="Harnake Buster(PVP)" add_name="Magic Hold">
+ 	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -2095,6 +2247,8 @@
     </for>
   </weapon>
     <weapon id="24084" name="Harnake Buster(PVP)" add_name="Mana Up">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -2124,7 +2278,8 @@
     </for>
   </weapon>
     <weapon id="24085" name="Harnake Buster(PVP)" add_name="Acumen">
-    <set name="is_magic_weapon" value="true"/>
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2153,6 +2308,8 @@
     </for>
   </weapon>
    <weapon id="24086" name="Harnake Shaper(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2182,6 +2339,8 @@
     </for>
   </weapon>
   <weapon id="24087" name="Harnake Shaper(PVP)" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2211,6 +2370,8 @@
     </for>
   </weapon>
     <weapon id="24088" name="Harnake Shaper(PVP)" add_name="Crt. Damage">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2240,6 +2401,8 @@
     </for>
   </weapon>
     <weapon id="24089" name="Harnake Shaper(PVP)" add_name="HP Drain">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2269,6 +2432,8 @@
     </for>
   </weapon>
     <weapon id="24090" name="Harnake Slasher(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2298,6 +2463,8 @@
     </for>
   </weapon>
     <weapon id="24091" name="Harnake Slasher(PVP)" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2327,6 +2494,8 @@
     </for>
   </weapon>
    <weapon id="24092" name="Harnake Slasher(PVP)" add_name="Haste">
+ 	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2356,6 +2525,8 @@
     </for>
   </weapon>
     <weapon id="24093" name="Harnake Slasher(PVP)" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2385,6 +2556,8 @@
     </for>
   </weapon>
     <weapon id="24094" name="Harnake Stormer(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2415,6 +2588,8 @@
     </for>
   </weapon>
    <weapon id="24095" name="Harnake Stormer(PVP)" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2445,6 +2620,8 @@
     </for>
   </weapon>
   <weapon id="24096" name="Harnake Stormer(PVP)" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2475,6 +2652,8 @@
     </for>
   </weapon>
    <weapon id="24097" name="Harnake Stormer(PVP)" add_name="Guidance">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2505,6 +2684,8 @@
     </for>
   </weapon>
    <weapon id="24098" name="Harnake Thrower(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="1500"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -2538,6 +2719,8 @@
     </for>
   </weapon>
   <weapon id="24099" name="Harnake Thrower(PVP)" add_name="Crt. Slow">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="1500"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -2572,6 +2755,8 @@
     </for>
   </weapon>
    <weapon id="24100" name="Harnake Thrower(PVP)" add_name="Cheap Shot">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="1500"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -2604,6 +2789,8 @@
     </for>
   </weapon>
    <weapon id="24101" name="Harnake Thrower(PVP)" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="1500"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -2636,6 +2823,8 @@
     </for>
   </weapon>
    <weapon id="24102" name="Harnake Fighter(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2666,6 +2855,8 @@
     </for>
   </weapon>
    <weapon id="24103" name="Harnake Fighter(PVP)" add_name="Crt. Stun">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2701,6 +2892,8 @@
     </for>
   </weapon>
    <weapon id="24104" name="Harnake Fighter(PVP)" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2731,6 +2924,8 @@
     </for>
   </weapon>
   <weapon id="24105" name="Harnake Fighter(PVP)" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2761,6 +2956,8 @@
     </for>
   </weapon>
     <weapon id="24106" name="Harnake Rapier(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2793,6 +2990,8 @@
     </for>
   </weapon>
     <weapon id="24107" name="Harnake Rapier(PVP)" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2825,6 +3024,8 @@
     </for>
   </weapon>
    <weapon id="24108" name="Harnake Rapier(PVP)" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2857,6 +3058,8 @@
     </for>
   </weapon>
   <weapon id="24109" name="Harnake Rapier(PVP)" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2889,6 +3092,8 @@
     </for>
   </weapon>
    <weapon id="24110" name="Harnake Crossbow(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="400"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -2920,6 +3125,8 @@
     </for>
   </weapon>
     <weapon id="24111" name="Harnake Crossbow(PVP)" add_name="Crt. Slow">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="400"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -2953,6 +3160,8 @@
     </for>
   </weapon>
    <weapon id="24112" name="Harnake Crossbow(PVP)" add_name="Cheap Shot">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="400"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -2984,6 +3193,8 @@
     </for>
   </weapon>
     <weapon id="24113" name="Harnake Crossbow(PVP)" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="atk_reuse" value="400"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -3015,6 +3226,8 @@
     </for>
   </weapon>
   <weapon id="24114" name="Harnake Sacredium(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -3045,6 +3258,8 @@
     </for>
   </weapon>
   <weapon id="24115" name="Harnake Sacredium(PVP)" add_name="Mana Up">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -3075,6 +3290,8 @@
     </for>
   </weapon>
   <weapon id="24116" name="Harnake Sacredium(PVP)" add_name="Acumen">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -3105,6 +3322,8 @@
     </for>
   </weapon>
   <weapon id="24117" name="Harnake Sacredium(PVP)" add_name="MP Regeneration">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -3135,6 +3354,8 @@
     </for>
   </weapon>
    <weapon id="24118" name="Harnake Cane(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -3165,6 +3386,8 @@
     </for>
   </weapon>
    <weapon id="24119" name="Harnake Cane(PVP)" add_name="Magic Hold">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -3200,6 +3423,8 @@
     </for>
   </weapon>
    <weapon id="24120" name="Harnake Cane(PVP)" add_name="Empower">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -3230,6 +3455,8 @@
     </for>
   </weapon>
   <weapon id="24121" name="Harnake Cane(PVP)" add_name="MP Regeneration">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="is_magic_weapon" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
@@ -3260,6 +3487,8 @@
     </for>
   </weapon>
    <weapon id="24122" name="Harnake Blade(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3291,6 +3520,8 @@
     </for>
   </weapon>
   <weapon id="24123" name="Harnake Blade(PVP)" add_name="Focus">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3321,6 +3552,8 @@
     </for>
   </weapon>
    <weapon id="24124" name="Harnake Blade(PVP)" add_name="Haste">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3351,6 +3584,8 @@
     </for>
   </weapon>
   <weapon id="24125" name="Harnake Blade(PVP)" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3381,6 +3616,8 @@
     </for>
   </weapon>
    <weapon id="24126" name="Harnake Mace(PVP)">
+  	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3409,6 +3646,8 @@
     </for>
   </weapon>
    <weapon id="24127" name="Harnake Mace(PVP)" add_name="HP Regeneration">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3438,6 +3677,8 @@
     </for>
   </weapon>
    <weapon id="24128" name="Harnake Mace(PVP)" add_name="HP Drain">
+ 	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3467,6 +3708,8 @@
     </for>
   </weapon>
   <weapon id="24129" name="Harnake Mace(PVP)" add_name="Health">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3496,6 +3739,8 @@
     </for>
   </weapon>
     <weapon id="24130" name="Harnake Dual Daggers(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="11421"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3527,6 +3772,8 @@
     </for>
   </weapon>
    <weapon id="24131" name="Harnake Dual Sword(PVP)">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -3569,21 +3816,27 @@
     <set name="crystal_type" value="NONE"/>
     <set name="icon" value="icons.g_co_cutie_maid"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
     <armor id="24134" name="Костюм Ассасина">
     <set name="crystal_type" value="NONE"/>
     <set name="icon" value="LineageCustom2.ico.Asm_ico"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24135" name="Капюшон Ассасина">
     <set name="crystal_type" value="NONE"/>
@@ -3599,11 +3852,14 @@
     <set name="crystal_type" value="NONE"/>
     <set name="icon" value="icons.g_co_sf_u"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24137" name="Маска Робота">
     <set name="crystal_type" value="NONE"/>
@@ -3958,7 +4214,7 @@
     <set name="type" value="NONE"/>
     <set name="weight" value="10"/>
     <equip>
-      <slot id="HAIR_ALL"/>
+      <slot id="HAIR"/>
     </equip>
   </armor>
   <armor id="24153" name="Гуральская Шапка">
@@ -4227,1277 +4483,378 @@
     <set name="crystal_type" value="NONE"/>
     <set name="icon" value="icons.vamp"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
   	<armor id="24181" name="Костюм с Татуировкой Ангел">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="itemPH.tatu_i01"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
   	<armor id="24182" name="Костюм с Татуировкой Сеть">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="itemPH.tatu_i03"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
-      <slot id="FORMAL_WEAR"/>
+		<slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   	<armor id="24183" name="Костюм с Татуировкой Демон">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="itemPH.tatu_i03"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
     <armor id="24184" name="Вечерний костюм Красный">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="salinka.MultiCrazY_ico_k"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
     <armor id="24185" name="Вечерний Костюм Бирюзовый">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="salinka.MultiCrazY_ico"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
     <armor id="24186" name="Вечерний Костюм Сиреневый">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="salinka.MultiCrazY_ico_s"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
     <armor id="24187" name="Вечерний Костюм Розовый">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="salinka.MultiCrazY_ico_r"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
       <armor id="24188" name="Костюм Таути Тяжелый">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="Tauti_armor.upper_h_i00"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
       <armor id="24189" name="Костюм Таути Легкий">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="Tauti_armor.upper_l_i00"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
       <armor id="24190" name="Костюм Таути Магический">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="Tauti_armor.upper_r_i00"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
       <armor id="24191" name="Костюм Айдиоса Тяжелый">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="Eternal_armor.armor_t701_u_i00"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
       <armor id="24192" name="Костюм Айдиоса Легкий">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="Eternal_armor.armor_t702_u_i00"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+		<cond msgId="113" addName="1">
+		  <player classId="53"/>
+		</cond>		
   </armor>
       <armor id="24193" name="Костюм Айдиоса Магический">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="Eternal_armor.armor_t703_u_i00"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
        <armor id="24194" name="Костюм Кадейры Тяжелый">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="Seraph_armor.armor_t401_u_i00"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
        <armor id="24195" name="Костюм Бессмертия Магический">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="Immortal_armor.armor_t503_u_i00"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
     <armor id="24196" name="Костюм Капитана">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="LineageCustom5.captain_ico"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
      <armor id="24197" name="Костюм Пирата">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="LineageCustom5.pirate_ico"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
     <armor id="24198" name="Костюм Мушкетера">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="LineageCustom5.mst_ico"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
     <armor id="24199" name="Костюм Волшебника">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="LineageCustom5.wzd_ico"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24200" name="Костюм Крестоносца">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="LineageUniqueTex.uniqarmor_icon"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+	<set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24201" name="Костюм Ветра">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="BranchSys3.g_co_paiwan_u"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24202" name="Костюм Росомахи">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="LineageCustom2.anakim_ico"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24203" name="Костюм Ниндзи">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="BranchSys3.icon1.g_co_ninja_u"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24204" name="Костюм Офицера">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="navy_uniform.navy_uniform_a_i00"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24205" name="Костюм Белефа">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="Beres_armor.g_co_beres_u"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24206" name="Костюм Темного Рыцаря">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="LineageCustom4.Dark_Kninght"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24207" name="Школьный Костюм 1">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="LineageCustom4.Br_schoollook"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
   <armor id="24208" name="Школьный Костюм 2">
     <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icons.g_co_tatu"/>
+    <set name="icon" value="LineageCustom4.Br_schoollook_b"/>
     <set name="price" value="5000000"/>
-    <set name="type" value="NONE"/>
+    <set name="type" value="LIGHT"/>
     <set name="weight" value="1000"/>
     <equip>
       <slot id="FORMAL_WEAR"/>
     </equip>
-  </armor>
-  <armor id="25020" name="Плащ Яркого Света">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Mantle01.kovico"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-  <armor id="25021" name="Плащ Холодной Тьмы">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Mantle01.kovico"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-  <armor id="25022" name="Плащ Света">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Mantle01.kovico"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-  <armor id="25023" name="Плащ Тьмы">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Mantle01.kovico"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-  <armor id="25024" name="Плащ Героя">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="HeroCloak.hero_r_ico"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-  <armor id="25025" name="Плащ Славы">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="HeroCloak.hero_b_ico"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-  <armor id="25026" name="Багровый Плащ">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Averia_addition.Icon.g_cloak_anniversary"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-  <armor id="25027" name="Золотой Плащ">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Averia_addition.Icon.g_cloak_noblesse"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-  <armor id="25028" name="Классический Плащ">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="icon.vesper_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-  <armor id="25029" name="Плащ Свирепости">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="icon.vesper_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-    <armor id="25000" name="Плащ Пылающей Розы">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="CloakEve.7anni_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-      <armor id="25001" name="Плащ Пылающего Орла">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="CloakEve6.7anni_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-      <armor id="25002" name="Плащ Пылающего Феникса">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="CloakEve7.7anni_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25030" name="Плащ Убийцы Драконов">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="icon.vesper_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25031" name="Демонический Плащ">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="icon.vesper_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25032" name="Плащ Крепости">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="icon.vesper_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25033" name="Плащ Падших">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="icon.vesper_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25034" name="Плащ Темного Рыцаря">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="LineageCustom4.cloak_darken_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25035" name="Плащ Антараса">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25036" name="Плащ Герцога">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25037" name="Плащ Заклинателя">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25038" name="Плащ Лучника 2">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25039" name="Плащ Целителя 2">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25040" name="Плащ Рыцаря 2">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25041" name="Плащ Темного Дракона">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25042" name="Плащ Разбойника 2">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25043" name="Плащ Призывателя 2">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25045" name="Плащ Воителя">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-        <armor id="25046" name="Плащ Мага 2">
-    <set name="enchantable" value="false"/>
-    <set name="crystal_type" value="S84"/>    
-    <set name="icon" value="Class_cloack.Class_cloack_i00"/>
-    <set name="price" value="28671000"/>
-    <set name="type" value="NONE"/>    
-    <set name="weight" value="220"/>
-    <equip>
-      <slot id="BACK"/>
-    </equip>
-    <attributes>
-	<attribute element="fire" value="60"/>
-      <attribute element="water" value="60"/>
-      <attribute element="wind" value="60"/>
-      <attribute element="earth" value="60"/>
-      <attribute element="holy" value="60"/>
-      <attribute element="unholy" value="60"/>
-	</attributes>
-    <for>
-      <add stat="pDef" order="0x10" value="70"/>
-      <enchant stat="pDef" order="0x0C" value="0"/>
-      <enchant stat="maxHp" order="0x80" value="0"/>
-    </for>
-  </armor>
-    <armor id="25047" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25048" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25049" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25050" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25051" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25052" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25053" name="Головной Убор Ниндзя">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="BranchSys3.icon.g_co_ninja_hair"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25054" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25055" name="Яркий Пляжный Убор">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="BranchSys3.icon.g_beach_cap"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25056" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25057" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25058" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25059" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25060" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25061" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25062" name="Черный берет">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="BranchSys3.icon.g_co_military_hair_m"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25063" name="Пилотка">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="BranchSys3.icon.g_co_military_hair_f"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25064" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25065" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25066" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25067" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25068" name="Шляпа налетчика">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="shapki2.razico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25069" name="Шлем Темного Рыцаря">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="LineageCustom4.Dark_helmet"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25070" name="Белый Капюшон разбойника">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="LineageCustom2.ico.Hel_asmw_ico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-    <armor id="25072" name="Шляпа Капитана">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="LineageCustom5.H_captain_ico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-      <armor id="25073" name="Бандана Пирата">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="LineageCustom5.H_pirate_ico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-      <armor id="25074" name="Шляпа Мушкетера">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="LineageCustom5.H_mst_ico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-        <armor id="25075" name="Шляпа Волшебника">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="LineageCustom5.H_wzd_ico"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
-  </armor>
-        <armor id="25078" name="Шлем Белефа">
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="Beres_armor.g_co_beres_hair"/>
-    <set name="price" value="2000000"/>
-    <set name="type" value="NONE"/>
-    <set name="weight" value="10"/>
-    <equip>
-      <slot id="HAIR_ALL"/>
-    </equip>
+	<cond msgId="113" addName="1">
+		<player classId="53"/>
+	</cond>		
   </armor>
     <weapon id="60000" name="Меч Дракона">
     <set name="crystal_count" value="9872"/>
@@ -5523,107 +4880,4 @@
       <enchant stat="mAtk" order="0x0C" value="0"/>
     </for>
   </weapon>
-    <etcitem id="25079" name="Сертификат помощи Матису">
-    <set name="class" value="OTHER"/>
-    <set name="crystal_type" value="NONE"/>
-    <set name="icon" value="icon.etc_permit_card_i00"/>
-    <set name="type" value="OTHER"/>
-    <set name="weight" value="1"/>
-	<set name="stackable" value="true"/>
-  </etcitem>
-  <armor id="25080" name="Шапка Ковбоя">
-		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_h003_i00"/>
-		<set name="freightable" value="true"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="true"/>
-		<set name="dropable" value="false"/>
-		<set name="crystal_type" value="NONE"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="10"/>
-		<equip>
-			<slot id="HAIR"/>
-		</equip>
-	</armor>
-	<armor id="25081" name="Костюм Ковбоя">
-		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_003_i00"/>
-		<set name="freightable" value="True"/>
-		<set name="sellable" value="False"/>
-		<set name="tradeable" value="False"/>
-		<set name="dropable" value="False"/>
-		<set name="price" value="5000000"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="1000"/>
-		<equip>
-			<slot id="FORMAL_WEAR"/>
-		</equip>
-	</armor>
-	<armor id="25082" name="Костюм Лучника">
-		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_001_i00"/>
-		<set name="freightable" value="True"/>
-		<set name="sellable" value="False"/>
-		<set name="tradeable" value="False"/>
-		<set name="dropable" value="False"/>
-		<set name="price" value="5000000"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="1000"/>
-		<equip>
-			<slot id="FORMAL_WEAR"/>
-		</equip>
-	</armor>
-	<armor id="25083" name="Шапка Лучника">
-		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_h001_i00"/>
-		<set name="freightable" value="true"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="true"/>
-		<set name="dropable" value="false"/>
-		<set name="crystal_type" value="NONE"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="10"/>
-		<equip>
-			<slot id="HAIR"/>
-		</equip>
-	</armor>
-	<armor id="25084" name="Костюм Короля">
-		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_002_i00"/>
-		<set name="freightable" value="True"/>
-		<set name="sellable" value="False"/>
-		<set name="tradeable" value="False"/>
-		<set name="dropable" value="False"/>
-		<set name="price" value="5000000"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="1000"/>
-		<equip>
-			<slot id="FORMAL_WEAR"/>
-		</equip>
-	</armor>
-	<armor id="25085" name="Корона Короля">
-		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_h002_i00"/>
-		<set name="freightable" value="true"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="true"/>
-		<set name="dropable" value="false"/>
-		<set name="crystal_type" value="NONE"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="10"/>
-		<equip>
-			<slot id="HAIR"/>
-		</equip>
-	</armor>
-	<armor id="25086" name="Костюм Ассасина Белый">
-		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="In2u_L2Game2.viRUS_Icon.viRUS_006_i00"/>
-		<set name="freightable" value="True"/>
-		<set name="sellable" value="False"/>
-		<set name="tradeable" value="False"/>
-		<set name="dropable" value="False"/>
-		<set name="price" value="5000000"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="1000"/>
-		<equip>
-			<slot id="FORMAL_WEAR"/>
-		</equip>
-	</armor>	
 </list>

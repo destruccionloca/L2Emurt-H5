@@ -481,8 +481,8 @@ public class LastHero extends Functions
                 player.updatePledgeClass();
                 player.sendPacket(new SkillList(player));
                 player.broadcastUserInfo(true);
-                player.setVar("HeroPeriod", String.valueOf(System.currentTimeMillis() + 60 * 1000 * 60 * 24 * 1), -1);
-                ThreadPoolManager.getInstance().schedule(new EndHero(player), System.currentTimeMillis() + (60 * 1000 * 60 * 24 * 1));
+                player.setVar("HeroPeriod", String.valueOf(System.currentTimeMillis() + 60 * 1000 * 60 * 3 * 1), -1);
+                ThreadPoolManager.getInstance().schedule(new EndHero(player), System.currentTimeMillis() + (60 * 1000 * 60 * 3 * 1));
                 player.broadcastPacket(new SocialAction(player.getObjectId(), 16));
                 
                 
@@ -678,11 +678,16 @@ public class LastHero extends Functions
         }
     }
 
+	public static Location OnEscape(Player player) {
+        if (_status > 1 && player != null && (live_list.contains(player.getStoredId()))) {
+            removePlayer(player);
+            checkLive();
+        }
+        return null;
+    }
+
     @Override
     public void onPlayerExit(Player player) {
-        if (player.getTeam() == TeamType.NONE) {
-            return;
-        }
 
         if ((_status == 0) && (_isRegistrationActive) && (live_list.contains(player.getStoredId()))) {
             removePlayer(player);
@@ -692,14 +697,11 @@ public class LastHero extends Functions
         if ((_status == 1) && (live_list.contains(player.getStoredId()))) {
             player.teleToLocation((Location) playerRestoreCoord.get(player.getStoredId()), ReflectionManager.DEFAULT);
             removePlayer(player);
-
             return;
         }
 
-        if ((_status > 1) && (live_list.contains(player.getStoredId()))) {
-            removePlayer(player);
-            checkLive();
-        }
+        // Вышел или вылетел во время эвента
+        OnEscape(player);
     }
 
     private static void loosePlayer(Player player) {

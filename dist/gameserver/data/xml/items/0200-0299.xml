@@ -2094,7 +2094,7 @@
     </for>
   </weapon>
   <weapon id="288" name="Carnage Bow">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="1128"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -2121,7 +2121,7 @@
     </for>
   </weapon>
   <weapon id="289" name="Soul Bow">
-    <set name="atk_reuse" value="820"/>
+    <set name="atk_reuse" value="1500"/>
     <set name="crystal_count" value="1659"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>

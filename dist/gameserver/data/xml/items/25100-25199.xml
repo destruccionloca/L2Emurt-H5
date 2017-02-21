@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+
+<list>
+   <weapon id="25100" name="Harnake Cutter">
+    <set name="crystal_type " value="NONE"/>
+    <set name="icon" value="dragon_icon.ant_cut_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="10"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="SWORD"/>
+    <set name="weight" value="1520"/>
+    <equip>
+      <slot id="RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="379"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+	</weapon>
+   <weapon id="25101" name="Harnake Buster">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.ant_bus_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="10"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="SWORD"/>
+    <set name="weight" value="1520"/>
+    <equip>
+      <slot id="RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="379"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25102" name="Harnake Shaper">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.ant_sha_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="5"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="DAGGER"/>
+    <set name="weight" value="1520"/>
+    <equip>
+      <slot id="RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="433"/>
+      <add stat="accCombat" order="0x10" value="-4.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+	</weapon>
+   <weapon id="25103" name="Harnake Slasher">
+   <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.ant_sla_00"/>
+    <set name="kamael_convert" value="24068"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="10"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="BIGSWORD"/>
+    <set name="weight" value="1740"/>
+    <equip>
+      <slot id="LEFT_RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="325"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25104" name="Harnake Stormer">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.ant_sto_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="10"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="POLE"/>
+    <set name="weight" value="2010"/>
+    <equip>
+      <slot id="LEFT_RIGHT_HAND"/>
+    </equip>
+    <skills>
+      <skill id="3599" level="1"/>
+    </skills>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="325"/>
+      <add stat="accCombat" order="0x10" value="-4.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25105" name="Harnake Thrower">
+	<set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.ant_bow_00"/>
+    <set name="mp_consume" value="6"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="5"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="BOW"/>
+    <set name="weight" value="1520"/>
+    <equip>
+      <slot id="LEFT_RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="100"/>
+      <set stat="atkBaseSpeed" order="0x08" value="293"/>
+      <add stat="accCombat" order="0x10" value="-4.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25106" name="Harnake Fighter">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.ant_fig_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="5"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="DUALFIST"/>
+    <set name="weight" value="1550"/>
+    <equip>
+      <slot id="LEFT_RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="40"/>
+      <set stat="atkBaseSpeed" order="0x08" value="325"/>
+      <add stat="accCombat" order="0x10" value="5.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25107" name="Harnake Rapier">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.lind_cut_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="40"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="RAPIER"/>
+    <set name="weight" value="1280"/>
+    <equip>
+      <slot id="RIGHT_HAND"/>
+    </equip>
+    <enchant4_skill id="3426" level="1"/>
+    <!--Maximum Ability-->
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="100"/>
+      <set stat="atkBaseSpeed" order="0x08" value="406"/>
+      <add stat="accCombat" order="0x10" value="-2.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25108" name="Harnake Crossbow">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.lind_sho_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="10"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="CROSSBOW"/>
+    <set name="weight" value="1580"/>
+    <equip>
+      <slot id="LEFT_RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="100"/>
+      <set stat="atkBaseSpeed" order="0x08" value="303"/>
+      <add stat="accCombat" order="0x10" value="-2.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25109" name="Harnake Sacredium">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.lind_cas_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="10"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="BLUNT"/>
+    <set name="weight" value="1080"/>
+    <equip>
+      <slot id="RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="40"/>
+      <set stat="atkBaseSpeed" order="0x08" value="379"/>
+      <add stat="accCombat" order="0x10" value="5.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25110" name="Harnake Cane">
+	<set name="attributable" value="true"/>
+    <set name="augmentable" value="true"/>
+    <set name="is_magic_weapon" value="true"/>
+    <set name="crystal_count" value="9872"/>
+    <set name="crystal_type" value="S84"/>
+    <set name="crystallizable" value="true"/>
+    <set name="icon" value="dragon_icon.val_ret_00"/>
+    <set name="price" value="205668000"/>
+    <set name="rnd_dam" value="20"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="BIGBLUNT"/>
+    <set name="weight" value="1080"/>
+    <equip>
+      <slot id="LEFT_RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="448"/>
+      <add stat="mAtk" order="0x10" value="294"/>
+      <set stat="baseCrit" order="0x08" value="40"/>
+      <set stat="atkBaseSpeed" order="0x08" value="325"/>
+      <add stat="accCombat" order="0x10" value="5.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25111" name="Harnake Blade">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.lind_sla_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="15"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="ANCIENTSWORD"/>
+    <set name="weight" value="1800"/>
+    <equip>
+      <slot id="LEFT_RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="350"/>
+      <add stat="accCombat" order="0x10" value="2.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25112" name="Harnake Mace">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.ant_ave_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="20"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="BLUNT"/>
+    <set name="weight" value="1740"/>
+    <equip>
+      <slot id="RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="40"/>
+      <set stat="atkBaseSpeed" order="0x08" value="379"/>
+      <add stat="accCombat" order="0x10" value="5.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25113" name="Harnake Dual Daggers">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.lind_ddag_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="10"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="DUALDAGGER"/>
+    <set name="weight" value="2050"/>
+    <equip>
+      <slot id="LEFT_RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="120"/>
+      <set stat="atkBaseSpeed" order="0x08" value="433"/>
+      <add stat="accCombat" order="0x10" value="-4.0000"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+   <weapon id="25114" name="Harnake Dual Sword">
+    <set name="crystal_type" value="NONE"/>
+    <set name="icon" value="dragon_icon.ant_dual_00"/>
+    <set name="price" value="2000"/>
+    <set name="rnd_dam" value="10"/>
+    <set name="soulshots" value="1"/>
+    <set name="spiritshots" value="1"/>
+    <set name="type" value="DUAL"/>
+    <set name="weight" value="1520"/>
+    <equip>
+      <slot id="LEFT_RIGHT_HAND"/>
+    </equip>
+    <for>
+      <add stat="pAtk" order="0x10" value="100"/>
+      <add stat="mAtk" order="0x10" value="100"/>
+      <set stat="baseCrit" order="0x08" value="80"/>
+      <set stat="atkBaseSpeed" order="0x08" value="325"/>
+      <enchant stat="pAtk" order="0x0C" value="0"/>
+      <enchant stat="mAtk" order="0x0C" value="0"/>
+    </for>
+  </weapon>
+  <etcitem id="25115" name="Камень Обработки Доспехов">
+    <set name="class" value="OTHER"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="stackable" value="true"/>
+    <set name="icon" value="itemPH.am_stone"/>
+    <set name="price" value="1000"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="10"/>
+  </etcitem>	  
+  <etcitem id="25116" name="Камень Обработки Оружия">
+    <set name="class" value="OTHER"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="stackable" value="true"/>
+    <set name="icon" value="itemPH.wp_stone"/>
+    <set name="price" value="1000"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="10"/>
+  </etcitem>	  
+  <etcitem id="25117" name="Душа Гранд босса">
+    <set name="class" value="OTHER"/>
+    <set name="crystal_type" value="NONE"/>
+    <set name="stackable" value="True"/>
+	<set name="dropable" value="false" />
+    <set name="sellable" value="false" />
+    <set name="tradeable" value="false" />
+	<set name="storeable" value="True" />
+	<set name="freightable" value="true"/>
+	<set name="icon" value="itemPH.soul_boss"/>
+    <set name="price" value="1000"/>
+    <set name="type" value="OTHER"/>
+    <set name="weight" value="10"/>
+  </etcitem>
+</list>

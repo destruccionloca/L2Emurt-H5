@@ -30,7 +30,7 @@
     </for>
   </weapon>
   <weapon id="15901" name="Recurve Thorne Bow" add_name="Crt. Slow">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -63,7 +63,7 @@
     </for>
   </weapon>
   <weapon id="15902" name="Recurve Thorne Bow" add_name="Cheap Shot">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -94,7 +94,7 @@
     </for>
   </weapon>
   <weapon id="15903" name="Recurve Thorne Bow" add_name="Focus">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -718,7 +718,7 @@
     </for>
   </weapon>
   <weapon id="15923" name="Recurve Thorne Bow {PvP}">
-
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="9872"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2317,7 +2317,7 @@
     </for>
   </weapon>
   <weapon id="15971" name="Skull Carnium Bow {PvP}" add_name="Focus">
-
+    <set name="atk_reuse" value="1000"/>
     <set name="crystal_count" value="8233"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2351,7 +2351,7 @@
     </for>
   </weapon>
   <weapon id="15972" name="Skull Carnium Bow {PvP}" add_name="Crt. Slow">
-
+    <set name="atk_reuse" value="1000"/>
     <set name="crystal_count" value="8233"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>
@@ -2390,7 +2390,7 @@
     </for>
   </weapon>
   <weapon id="15973" name="Skull Carnium Bow {PvP}" add_name="Cheap Shot">
-
+    <set name="atk_reuse" value="1000"/>
     <set name="crystal_count" value="8233"/>
     <set name="crystal_type" value="S84"/>
     <set name="crystallizable" value="true"/>

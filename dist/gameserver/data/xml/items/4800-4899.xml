@@ -883,7 +883,7 @@
     </for>
   </weapon>
   <weapon id="4831" name="Carnage Bow" add_name="Critical Bleed">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="1464"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -912,7 +912,7 @@
     </for>
   </weapon>
   <weapon id="4832" name="Carnage Bow" add_name="Mana Up">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="1464"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -938,7 +938,7 @@
     </for>
   </weapon>
   <weapon id="4833" name="Carnage Bow" add_name="Quick Recovery">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="1464"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>

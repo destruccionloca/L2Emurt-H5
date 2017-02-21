@@ -3895,7 +3895,7 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="CaravanTrader"/>
+        <set name="type" value="SteelCitadelTeleporter"/>
         <skills>
             <skill id="4416" level="14"/>
             <skill id="4408" level="1"/>

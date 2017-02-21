@@ -1,31 +1,32 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 
 <list maintainEnchantment="true">
-  	<!-- Olf's T-Shirt  +10-->
-  <item id="60">
-    <ingredient id="4356" count="800" />
-    <production id="21580" count="1" enchant="10" />
-  </item>
+
 	<!-- Olf's T-Shirt  -->
   <item id="10">
-    <ingredient id="4357" count="600"/>
+    <ingredient id="4357" count="549"/>
     <production id="21580" count="1"/>
   </item>
 
     <!-- Olf's T-Shirt Enchant Scroll  -->
   <item id="10">
-    <ingredient id="4357" count="15"/>
+    <ingredient id="4357" count="8"/>
     <production id="21581" count="1"/>
   </item>
   
      <!-- Blessed Olf's T-Shirt Enchant Scroll  -->
   <item id="11">
-    <ingredient id="4357" count="30"/>
+    <ingredient id="4357" count="21"/>
     <production id="21582" count="1"/>
   </item>
-     <!-- Mastery  -->
-  <item id="16">
-    <ingredient id="4357" count="150"/>
-    <production id="9627" count="25"/>
-  </item> 
+
+  <item id="11">
+    <ingredient id="4357" count="149"/>
+    <production id="25115" count="1"/>
+  </item>
+  <item id="11">
+    <ingredient id="4357" count="149"/>
+    <production id="25116" count="1"/>
+  </item>
+
 </list>

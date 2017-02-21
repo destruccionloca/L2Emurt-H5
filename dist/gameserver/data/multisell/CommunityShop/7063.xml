@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--Салон красоты-->
+
+
+<list>  
+	 <item><ingredient id="4356" count="200"/><production id="40047" count="1"/></item>
+	 <item><ingredient id="4356" count="200"/><production id="40048" count="1"/></item>
+	 <item><ingredient id="4356" count="200"/><production id="40049" count="1"/></item>
+	 </list>

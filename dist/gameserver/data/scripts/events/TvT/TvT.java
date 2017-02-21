@@ -122,7 +122,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     @Override
     public void onLoad() {
         CharListenerList.addGlobal(this);
-		String zone = "[UnderGroundPvPKandins]";
+		String zone = "[tvt_tiat]";
         _zones.put(zone, ReflectionUtils.getZone(zone).getTemplate());
         for (final int doorId : doors) {
             _doors.put(doorId, ReflectionUtils.getDoor(doorId).getTemplate());
@@ -929,15 +929,15 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
         }
     }
 
-    @Override
-    public void onDeath(Creature self, Creature killer) {
-        if (_status > 1 && self != null && self.isPlayer() && self.getTeam() != TeamType.NONE && (live_list1.contains(self) || live_list2.contains(self))) {
+
+	public void onDeath(Creature self, Creature killer) {
+        if (_status > 1 && self != null && self.isPlayer() && self.getPlayer().isDead() && self.getTeam() != TeamType.NONE && (live_list1.contains(self) || live_list2.contains(self))) {
+            _log.info("Killed");
             checkKillsAndAnnounce(killer.getPlayer());
             increasePlayerPoints(killer.getPlayer(), killer.getTeam());
             _pScore.remove(self.getPlayer().getObjectId());
             executeTask("events.TvT.TvT", "resurrectAtBase", new Object[]{self}, 1 * 1000);
         }
-
     }
 
     public synchronized void increasePlayerPoints(Player player, TeamType team) {
@@ -1051,17 +1051,21 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
     public void onTeleport(Player player, int x, int y, int z, Reflection reflection) {
     }
 
+	public static Location OnEscape(Player player) {
+        if (_status > 1 && player != null && (live_list1.contains(player) || live_list2.contains(player))) {
+            removePlayer(player);
+            checkLive();
+        }
+        return null;
+    }
+
     @Override
     public void onPlayerExit(Player player) {
         if (player == null) {
             return;
         }
 
-        if (player.getTeam() == TeamType.NONE) {
-            return;
-        }
-
-        if (_status == 0 && _isRegistrationActive && player.getTeam() != TeamType.NONE && (live_list1.contains(player) || live_list2.contains(player))) {
+        if (_status == 0 && _isRegistrationActive && (live_list1.contains(player) || live_list2.contains(player))) {
             removePlayer(player);
             return;
         }
@@ -1072,10 +1076,8 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
             return;
         }
 
-        if (_status > 1 && player.getTeam() != TeamType.NONE && (live_list1.contains(player) || live_list2.contains(player))) {
-            removePlayer(player);
-            checkLive();
-        }
+        // Вышел или вылетел во время эвента
+        OnEscape(player);
     }
 
     private static class ZoneListener implements OnZoneEnterLeaveListener {

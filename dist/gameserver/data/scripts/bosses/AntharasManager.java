@@ -62,7 +62,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
     private static final int FWA_LIMITUNTILSLEEP = 15 * 60000;
     private static final int FWA_FIXINTERVALOFANTHARAS_DAYS = Config.FIXINTERVALOFANTHARAS_DAYS; // 24 часа
     private static final int FWA_FIXINTERVALOFANTHARAS = FWA_FIXINTERVALOFANTHARAS_DAYS * 24 * 60 * 60000;
-    private static final int FWA_APPTIMEOFANTHARAS = 3 * 60000; // 5 минут ожидание перед респом
+    private static final int FWA_APPTIMEOFANTHARAS = 5 * 60000; // 5 минут ожидание перед респом
     private static boolean Dying = false;
     private static boolean _entryLocked = false;
 

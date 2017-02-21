@@ -146,79 +146,106 @@
     </item>
 	<!-- Stars Box - low -->
 	    <item id="24020" type="0">
-        <product id="9582" chance="300" count="1" />
-        <product id="14952" chance="300" count="1" />
-        <product id="14956" chance="300" count="1" />
-        <product id="14960" chance="300" count="1" />
-        <product id="10500" chance="300" count="1" />
-        <product id="10501" chance="300" count="1" />
-        <product id="10502" chance="300" count="1" />
-        <product id="6622" chance="300" count="10" />
-        <product id="9627" chance="300" count="5" />
-        <product id="9626" chance="300" count="2" />
-        <product id="24152" chance="300" count="1" />
-        <product id="24153" chance="300" count="1" />
-        <product id="24155" chance="300" count="1" />
-        <product id="24162" chance="300" count="1" />
-		<product id="24163" chance="300" count="1" />
-		<product id="25064" chance="300" count="1" />
+        <product id="9582" chance="50" count="1" />
+        <product id="14952" chance="50" count="1" />
+        <product id="14956" chance="50" count="1" />
+        <product id="14960" chance="50" count="1" />
+        <product id="10500" chance="50" count="1" />
+        <product id="10501" chance="50" count="1" />
+        <product id="10502" chance="50" count="1" />
+        <product id="6622" chance="50" count="10" />
+        <product id="9627" chance="50" count="5" />
+        <product id="9626" chance="50" count="2" />
+        <product id="24152" chance="50" count="1" />
+        <product id="24153" chance="50" count="1" />
+        <product id="24155" chance="50" count="1" />
+        <product id="24162" chance="50" count="1" />
+		<product id="24163" chance="50" count="1" />
+		<product id="25064" chance="50" count="1" />
 		<product id="24178" chance="5" count="1" />
 		<product id="24179" chance="2" count="1" />
 		<product id="24176" chance="2" count="1" />
 		<product id="24177" chance="2" count="1" />
     </item>
+
 	<!-- Stars Box - Mid -->
-	    <item id="22341" type="0">
-        <product id="4357" chance="300" count="15" />
-        <product id="14953" chance="300" count="1" />
-        <product id="14957" chance="300" count="1" />
-		<product id="9627" chance="300" count="20" />
-        <product id="14961" chance="300" count="1" />
-        <product id="9588" chance="300" count="1" />
-        <product id="10512" chance="300" count="1" />
-        <product id="10513" chance="300" count="1" />
-        <product id="10514" chance="300" count="1" />
-        <product id="25078" chance="300" count="1" />
-        <product id="25070" chance="300" count="1" />
-        <product id="25067" chance="300" count="1" />
-        <product id="24166" chance="300" count="1" />
-		<product id="24169" chance="300" count="1" />
-		<product id="24159" chance="300" count="1" />
-		<product id="20207" chance="300" count="1" />
-		<product id="20204" chance="300" count="1" />
-		<product id="24022" chance="300" count="1" />
-		<product id="24178" chance="30" count="1" />
-		<product id="24179" chance="10" count="1" />
-		<product id="24176" chance="10" count="1" />
-		<product id="24177" chance="10" count="1" />
+	<item id="22341" type="0">	
+		<product id="6622" chance="800" count="10" /> <!-- Кодексы гигантов -->
+		<product id="9627" chance="800" count="5" /> <!-- Кодексы гигантов мастер -->
+		<product id="21180" chance="600" count="1" /> <!-- Еретик -->
+		<product id="21181" chance="600" count="1" /> <!-- Мастер Долин -->
+        <product id="21183" chance="600" count="1" /> <!-- Саблезубый Тигр -->
+        <product id="21184" chance="600" count="1" /> <!-- Сфинкс -->
+        <product id="21184" chance="600" count="1" /> <!-- Мстительная Кукла -->	
+        <product id="24166" chance="200" count="1" /> <!-- Кепка 228 -->
+        <product id="24169" chance="200" count="1" /> <!-- Кепка FBI -->
+        <product id="24162" chance="200" count="1" /> <!-- Панамка конопля -->	
+        <product id="24005" chance="200" count="1" /> <!-- Плащ Элегии -->
+        <product id="25087" chance="200" count="1" /> <!-- морского пирата -->
+        <product id="25088" chance="200" count="1" /> <!-- благородства -->
+        <product id="25090" chance="250" count="1" /> <!-- бури -->
+        <product id="25091" chance="250" count="1" /> <!-- гонца -->
+        <product id="25092" chance="250" count="1" /> <!-- благословения -->
+		<product id="25028" chance="250" count="1" /> <!-- классический -->
+		<product id="40036" chance="200" count="6" /> <!-- Проход в харнак -->    	
+		<product id="20520" chance="150" count="5" /> <!-- Ancient Armor Enchant Crystal (S-Grade)  -->
+		<product id="20519" chance="150" count="2" /> <!-- Ancient Weapon Enchant Crystal (S-Grade)  -->	
+		<product id="4357" chance="200" count="100" /><!-- Silver Shilen -->	
+		<product id="14678" chance="150" count="1" />   <!-- Свера Сэрома B -->
+		<product id="14679" chance="150" count="1" />  <!-- Свера Сэрома A -->
+		<product id="14680" chance="150" count="1" />  <!-- Свера Сэрома S -->
+		<product id="6659" chance="70" count="1" /><!-- Закен -->
+		<product id="16025" chance="70" count="1" /><!-- Фрея -->
+		<product id="8191" chance="70" count="1" /><!-- Фринта -->
+		<product id="6661" chance="100" count="1" /><!-- Орфен -->
+		<product id="6662" chance="100" count="1" /><!-- Коре -->
+		<product id="10170" chance="100" count="1" /><!-- Байлор -->
+		<product id="6660" chance="50" count="1" /><!-- АК -->
+		<product id="10314" chance="50" count="1" /><!-- Белеф -->	
+		<product id="6658" chance="10" count="1" /><!-- Баюм -->
+		<product id="21712" chance="10" count="1" /><!-- Б.Закен -->
+		<product id="25098" chance="5" count="1" /><!-- Серебрянный ключ -->		
     </item>
-	<!-- Star Box - High -->
+	<!-- Stars Box - High -->
 	    <item id="22342" type="0">
-		<product id="40013" chance="30" count="15" />
-		<product id="40014" chance="30" count="15" />
-		<product id="40015" chance="30" count="15" />
-		<product id="40016" chance="30" count="15" />
-		<product id="40017" chance="30" count="15" />
-		<product id="40028" chance="30" count="15" />
-        <product id="6660" chance="40" count="1" />
-        <product id="6659" chance="40" count="1" />
-        <product id="24150" chance="200" count="1" />
-        <product id="24151" chance="200" count="1" />
-        <product id="24148" chance="200" count="1" />
-        <product id="25035" chance="200" count="1" />
-        <product id="25041" chance="200" count="1" />
-        <product id="25028" chance="200" count="1" />
-        <product id="25029" chance="200" count="1" />
-        <product id="25030" chance="200" count="1" />
-        <product id="25032" chance="200" count="1" />
-        <product id="25031" chance="200" count="1" />
-		<product id="25033" chance="200" count="1" />
-		<product id="25034" chance="200" count="1" />
-		<product id="24179" chance="50" count="1" />
-		<product id="24176" chance="50" count="1" />
-		<product id="24177" chance="50" count="1" />
-		<product id="24178" chance="50" count="1" />
+		<product id="6622" chance="800" count="20" /><!-- Кодексы гигантов -->
+		<product id="9627" chance="800" count="15" /><!-- Кодексы гигантов мастер -->
+        <product id="25080" chance="450" count="1" /><!-- Шапка ковбоя -->
+        <product id="24157" chance="450" count="1" /><!-- Головной Убор Воина -->
+        <product id="24161" chance="450" count="1" /><!-- Пиратская шляпа, редкая -->
+        <product id="20522" chance="200" count="3" /><!-- Divine Armor Enchant Crystal (S-Grade)  -->
+		<product id="20521" chance="200" count="2" /><!-- Divine Weapon Enchant Crystal (S-Grade) -->
+        <product id="17139" chance="250" count="1" /><!-- Анаким -->
+        <product id="17140" chance="250" count="1" /><!-- Закен -->
+        <product id="21187" chance="300" count="1" /><!-- Беном -->
+        <product id="21188" chance="300" count="1" /><!-- Гордон -->
+        <product id="21189" chance="300" count="1" /><!-- Ранку -->
+        <product id="21190" chance="300" count="1" /><!-- кечи -->
+        <product id="21191" chance="300" count="1" /><!-- демон принц -->
+        <product id="21148" chance="200" count="1" /><!-- мастер ли  -->
+        <product id="21149" chance="200" count="1" /><!-- девка  ли -->
+		<product id="14681" chance="250" count="1" /><!-- Neolithic Crystal - S80 -->
+		<product id="21579" chance="250" count="1" /><!-- Neolithic Crystal - S84 -->
+		<product id="25095" chance="200" count="1" /><!-- Ангельский -->
+		<product id="25089" chance="200" count="1" /><!-- волка -->
+		<product id="25093" chance="200" count="1" /><!-- лиги -->
+		<product id="25094" chance="200" count="1" /><!-- вампира  -->
+		<product id="25096" chance="200" count="1" /><!-- черепа -->
+		<product id="25033" chance="200" count="1" /><!-- падших -->
+		<product id="25029" chance="200" count="1" /><!-- свирепости -->
+		<product id="25030" chance="200" count="1" /><!-- драконов -->
+		<product id="25031" chance="200" count="1" /><!-- демонический -->
+		<product id="25032" chance="200" count="1" /><!-- крепости -->
+		<product id="4356" chance="150" count="100" /><!-- голд -->
+		<product id="21712" chance="70" count="1" /><!-- Б.Закен  -->
+		<product id="16026" chance="70" count="1" /><!-- Б.Фрея -->
+		<product id="6660" chance="100" count="1" /><!-- АК -->
+		<product id="10314" chance="100" count="1" /><!-- Белеф -->
+		<product id="6656" chance="10" count="1" /><!-- Тарас -->
+		<product id="6657" chance="10" count="1" /><!-- Валакас -->		
+		<product id="6658" chance="10" count="1" /><!-- Баюм -->
     </item>
+	
     <!-- Упаковка: Браслет MotoZ (7 дней) -->
     <item id="21409" type="0">
         <product id="21415" chance="10000" count="1" />
@@ -2101,6 +2128,87 @@
     </item>
 	<item id="21087" type="1">
         <product id="21086" chance="10000" count="1" />
+    </item>
+
+
+
+<item id="40040" type="1"> <!-- Robe-->
+        <product id="21806" chance="100000" count="1" />
+		<product id="21807" chance="100000" count="1" />
+		<product id="21808" chance="100000" count="1" />
+		<product id="21809" chance="100000" count="1" />
+		<product id="21810" chance="100000" count="1" />
+		<product id="21811" chance="100000" count="1" />
+		<product id="21798" chance="100000" count="1" />
+		<product id="21817" chance="100000" count="1" />
+		<product id="21817" chance="100000" count="1" />
+		<product id="21818" chance="100000" count="1" />
+		<product id="21819" chance="100000" count="1" />
+		<product id="21819" chance="100000" count="1" />
+		<product id="21833" chance="100000" count="1" />
+		<product id="728" chance="100000" count="10" />
+		<product id="3952" chance="100000" count="1000" />
+	</item>
+	
+	<item id="40041" type="1"><!-- Light -->
+        <product id="21800" chance="100000" count="1" />
+		<product id="21801" chance="100000" count="1" />
+		<product id="21802" chance="100000" count="1" />
+		<product id="21803" chance="100000" count="1" />
+		<product id="21804" chance="100000" count="1" />
+		<product id="21817" chance="100000" count="1" />
+		<product id="21817" chance="100000" count="1" />
+		<product id="21818" chance="100000" count="1" />
+		<product id="21819" chance="100000" count="1" />
+		<product id="21819" chance="100000" count="1" />
+		<product id="21834" chance="100000" count="1" />
+		<product id="21835" chance="100000" count="1" />
+		<product id="21839" chance="100000" count="1" />
+		<product id="21842" chance="100000" count="1" />
+		<product id="21843" chance="100000" count="1" />
+		<product id="21844" chance="100000" count="1" />
+		<product id="728" chance="100000" count="10" />
+		<product id="9637" chance="100000" count="1000" />
+		<product id="1345" chance="100000" count="1000" />
+		<product id="1467" chance="100000" count="5000" />
+
+	</item>
+	
+	<item id="40042" type="1"><!-- Heavy -->
+        <product id="21793" chance="100000" count="1" />
+		<product id="21794" chance="100000" count="1" />
+		<product id="21795" chance="100000" count="1" />
+		<product id="21796" chance="100000" count="1" />
+		<product id="21797" chance="100000" count="1" />
+		<product id="21798" chance="100000" count="1" />
+		<product id="21817" chance="100000" count="1" />
+		<product id="21817" chance="100000" count="1" />
+		<product id="21818" chance="100000" count="1" />
+		<product id="21819" chance="100000" count="1" />
+		<product id="21819" chance="100000" count="1" />
+		<product id="21836" chance="100000" count="1" />
+		<product id="21837" chance="100000" count="1" />
+		<product id="21838" chance="100000" count="1" />
+		<product id="21840" chance="100000" count="1" />
+		<product id="21841" chance="100000" count="1" />
+		<product id="728" chance="100000" count="10" />
+		<product id="1467" chance="100000" count="5000" />
+	</item>
+
+	<item id="40043" type="1"> <!-- L2 TOP -->
+        <product id="4357" chance="10000" count="15" />
+		<product id="4037" chance="2000" count="1" />
+    </item>
+	
+	<item id="40044" type="1"> <!-- MMOTOP -->
+        <product id="4357" chance="10000" count="15" />
+		<product id="40007" chance="10000" count="1" />
+		<product id="4037" chance="2000" count="1" />
+    </item>
+	
+	<item id="40045" type="1"> <!-- TvT CTF -->
+        <product id="4357" chance="10000" count="30" />
+        <product id="21874" chance="10000" count="2" />
     </item>
 </list>
 

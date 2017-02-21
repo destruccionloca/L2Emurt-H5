@@ -3,24 +3,227 @@
 
 
 <list>
-     <item><ingredient id="57" count="70000"/><production id="955" count="1"/></item>
-     <item><ingredient id="57" count="50000"/><production id="956" count="1"/></item>
-     <item><ingredient id="57" count="470000"/><production id="6575" count="1"/></item>
-     <item><ingredient id="57" count="70000"/><production id="6576" count="1"/></item>
-     <item><ingredient id="57" count="200000"/><production id="951" count="1"/></item>
-     <item><ingredient id="57" count="100000"/><production id="952" count="1"/></item>
-     <item><ingredient id="57" count="1700000"/><production id="6573" count="1"/></item>
-     <item><ingredient id="57" count="250000"/><production id="6574" count="1"/></item>
-     <item><ingredient id="57" count="1000000"/><production id="947" count="1"/></item>
-     <item><ingredient id="57" count="500000"/><production id="948" count="1"/></item>
-     <item><ingredient id="57" count="3700000"/><production id="6571" count="1"/></item>
-     <item><ingredient id="57" count="1000000"/><production id="6572" count="1"/></item>
-     <item><ingredient id="57" count="5000000"/><production id="729" count="1"/></item>
-     <item><ingredient id="57" count="3000000"/><production id="730" count="1"/></item>
-     <item><ingredient id="57" count="10000000"/><production id="6569" count="1"/></item>
-     <item><ingredient id="57" count="7000000"/><production id="6570" count="1"/></item>
-     <item><ingredient id="57" count="25000000"/><production id="959" count="1"/></item>
-     <item><ingredient id="57" count="10000000"/><production id="960" count="1"/></item>
-     <item><ingredient id="57" count="100000000"/><production id="6577" count="1"/></item>
-     <item><ingredient id="57" count="50000000"/><production id="6578" count="1"/></item>
+<!-- Fire Stone -->
+  <item id="1">
+    <ingredient id="57" count="20000000"/>
+    <production id="9546" count="1"/>
+  </item>
+
+  <!-- Water Stone -->
+  <item id="2">
+    <ingredient id="57" count="20000000"/>
+    <production id="9547" count="1"/>
+  </item>
+
+  <!-- Earth Stone -->
+  <item id="3">
+    <ingredient id="57" count="20000000"/>
+    <production id="9548" count="1"/>
+  </item>
+
+  <!-- Wind Stone -->
+  <item id="4">
+    <ingredient id="57" count="20000000"/>
+    <production id="9549" count="1"/>
+  </item>
+
+  <!-- Dark Stone -->
+  <item id="5">
+    <ingredient id="57" count="20000000"/>
+    <production id="9550" count="1"/>
+  </item>
+
+  <!-- Divine Stone -->
+  <item id="6">
+    <ingredient id="57" count="20000000"/>
+    <production id="9551" count="1"/>
+  </item>
+
+ <!-- Fire Crystal -->
+  <item id="1">
+    <ingredient id="57" count="17000000"/>
+    <ingredient id="9546" count="5"/>
+    <production id="9552" count="1"/>
+  </item>
+
+  <!-- Water Crystal -->
+  <item id="2">
+    <ingredient id="57" count="17000000"/>
+    <ingredient id="9547" count="5"/>
+    <production id="9553" count="1"/>
+  </item>
+
+  <!-- Earth Crystal -->
+  <item id="3">
+    <ingredient id="57" count="17000000"/>
+    <ingredient id="9548" count="5"/>
+    <production id="9554" count="1"/>
+  </item>
+
+  <!-- Wind Crystal -->
+  <item id="4">
+    <ingredient id="57" count="17000000"/>
+    <ingredient id="9549" count="5"/>
+    <production id="9555" count="1"/>
+  </item>
+
+  <!-- Dark Crystal -->
+  <item id="5">
+    <ingredient id="57" count="17000000"/>
+    <ingredient id="9550" count="5"/>
+    <production id="9556" count="1"/>
+  </item>
+
+  <!-- Divine Crystal -->
+  <item id="6">
+    <ingredient id="57" count="17000000"/>
+    <ingredient id="9551" count="5"/>
+    <production id="9557" count="1"/>
+  </item>
+
+     <item><ingredient id="57" count="1000000"/><production id="956" count="1"/></item>
+     <item><ingredient id="57" count="2000000"/><production id="952" count="1"/></item>
+     <item><ingredient id="57" count="5000000"/><production id="948" count="1"/></item>
+     <item><ingredient id="57" count="10000000"/><production id="730" count="1"/></item>
+     <item><ingredient id="57" count="30000000"/><production id="960" count="1"/></item>
+     <item><ingredient id="57" count="20000000"/><production id="6622" count="1"/></item>
+     <item><ingredient id="57" count="5000000"/><production id="955" count="1"/></item>
+     <item><ingredient id="57" count="10000000"/><production id="951" count="1"/></item>
+     <item><ingredient id="57" count="20000000"/><production id="947" count="1"/></item>
+     <item><ingredient id="57" count="30000000"/><production id="729" count="1"/></item>
+     <item><ingredient id="57" count="50000000"/><production id="959" count="1"/></item>
+     <item><ingredient id="4357" count="14"/><production id="9627" count="1"/></item>
+     <item><ingredient id="57" count="2000000"/><production id="6576" count="1"/></item>
+     <item><ingredient id="57" count="4000000"/><production id="6574" count="1"/></item>
+     <item><ingredient id="57" count="10000000"/><production id="6572" count="1"/></item>
+     <item><ingredient id="57" count="30000000"/><production id="6570" count="1"/></item>
+     <item><ingredient id="57" count="100000000"/><production id="6578" count="1"/></item>
+     <item><ingredient id="4357" count="25"/><production id="9626" count="1"/></item>
+     <item><ingredient id="57" count="10000000"/><production id="6575" count="1"/></item>
+     <item><ingredient id="57" count="20000000"/><production id="6573" count="1"/></item>
+     <item><ingredient id="57" count="40000000"/><production id="6571" count="1"/></item>
+     <item><ingredient id="57" count="100000000"/><production id="6569" count="1"/></item>
+     <item><ingredient id="57" count="130000000"/><production id="6577" count="1"/></item>
+     <item><ingredient id="4357" count="12"/><production id="9625" count="1"/></item>
+ 
+
+
+
+<!-- Accessory Life Stone - Level 76 -->
+  <item id="1">
+    <ingredient id="57" count="125000000"/>
+    <production id="12763" count="1"/>
+  </item>
+  
+<!-- Accessory Life Stone - Level 80 -->
+  <item id="2">
+    <ingredient id="57" count="175000000"/>
+    <production id="12821" count="1"/>
+  </item> 
+
+<!-- Accessory Life Stone - Level 82 -->
+  <item id="3">
+    <ingredient id="57" count="200000000"/>
+    <production id="12822" count="1"/>
+  </item>
+
+<!-- Accessory Life Stone - Level 84 -->
+  <item id="5">
+    <ingredient id="57" count="225000000"/>
+    <production id="14008" count="1"/>
+  </item>    
+  
+<!-- Accessory Life Stone - Level 85 -->
+  <item id="6">
+    <ingredient id="57" count="275000000"/>
+    <production id="16177" count="1"/>
+  </item>
+
+<!-- Accessory Life Stone - Level 86 -->
+  <item id="7">
+    <ingredient id="57" count="300000000"/>
+    <production id="16178" count="1"/>
+  </item>
+
+
+  <!-- Top-Grade Life Stone: level 76 -->
+  <item id="25">
+    <ingredient id="57" count="250000000"/>
+    <production id="8762" count="1"/>
+  </item>
+
+  <!-- Top-Grade Life Stone: level 80 -->
+  <item id="26">
+    <ingredient id="57" count="300000000"/>
+    <production id="9576" count="1"/>
+  </item>
+
+  <!-- Top-Grade Life Stone - level 82 -->
+  <item id="27">
+    <ingredient id="57" count="350000000"/>
+    <production id="10486" count="1"/>
+  </item>
+
+  <!-- Top-Grade Life Stone - level 84 -->
+  <item id="28">
+    <ingredient id="57" count="400000000"/>
+    <production id="14169" count="1"/>
+  </item>
+  
+	<!-- Top-Grade Life Stone - level 85 -->
+	<item id="29">
+		<ingredient id="57" count="450000000" />
+		<production id="16163" count="1" />
+	</item>
+
+	<!-- Top-Grade Life Stone - level 86 -->
+	<item id="30">
+		<ingredient id="57" count="500000000" />
+		<production id="16167" count="1" />
+	</item>
+	
+
+<item id="13">
+    <ingredient id="4357" count="70"/>
+    <production id="13071" count="1"/>
+  </item>
+<item id="14">
+    <ingredient id="4357" count="70"/>
+    <production id="13072" count="1"/>
+  </item>
+  <item id="15">
+    <ingredient id="4357" count="70"/>
+    <production id="13073" count="1"/>
+  </item>
+    <item id="16">
+    <ingredient id="4357" count="150"/>
+    <production id="15541" count="1"/>
+  </item>
+  <item id="17">
+    <ingredient id="4357" count="150"/>
+    <production id="15542" count="1"/>
+  </item>
+  <item id="18">
+    <ingredient id="4357" count="150"/>
+    <production id="15543" count="1"/>
+  </item>
+    <item id="19">
+    <ingredient id="4357" count="200"/>
+    <production id="15826" count="1"/>
+  </item>
+      <item id="20">
+    <ingredient id="4357" count="200"/>
+    <production id="15827" count="1"/>
+  </item>
+        <item id="21">
+    <ingredient id="4357" count="200"/>
+    <production id="15828" count="1"/>
+  </item>
+
+
+
+
+
+
+
 </list>

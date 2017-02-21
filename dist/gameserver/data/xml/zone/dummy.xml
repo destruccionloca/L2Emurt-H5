@@ -1157,35 +1157,76 @@
 	</zone>
 	<zone name="[Talkin_inst]" type="dummy">
 		<polygon>
-			<coords loc="49320 248376"/>
-			<coords loc="49400 248536"/>
-			<coords loc="47288 249624"/>
-			<coords loc="43624 248872"/>
-			<coords loc="42584 247848"/>
-			<coords loc="41336 246232"/>
-			<coords loc="43400 245048"/>
-			<coords loc="43208 244328"/>
-			<coords loc="47832 243224"/>
-			<coords loc="48200 243208"/>
-			<coords loc="48312 244664"/>
-			<coords loc="48216 246248"/>
-			<coords loc="48024 246552"/>
-			<coords loc="48072 247336"/>
-			<coords loc="48024 248664"/>
+			<coords loc="-90415 148473"/>
+			<coords loc="-90416 151655"/>
+			<coords loc="-92416 151720"/>
+			<coords loc="-93297 153851"/>
+			<coords loc="-91800 155751"/>
+			<coords loc="-87059 153618"/>
+			<coords loc="-86961 152066"/>
+			<coords loc="-87331 147209"/>
+			<coords loc="-92126 144420"/>
+			<coords loc="-95187 146626"/>
+			<coords loc="-94991 147694"/>
+			<coords loc="-93446 148704"/>
+			<coords loc="-93087 148727"/>
+			<coords loc="-92765 148413"/>
 		</polygon>
 		<restart_point>
-			<coords loc="-84472 242744 -3728 8191"/>
+			<coords loc="-91615 150505 -3627 8191"/>
 		</restart_point>
 	</zone>
-	<zone name="[Talkin_inst_death]" type="dummy">
+	<zone name="[Harnake_battle_zone]" type="dummy">
 		<polygon>
-			<coords loc="49352 248376 -5960 16383"/>
-			<coords loc="49320 248584 -5960 0"/>
-			<coords loc="47704 248664 -6360 0"/>
-			<coords loc="47688 248248 -6336 0"/>
+			<coords loc="-131072 131072"/>
+			<coords loc="-98320 131072"/>
+			<coords loc="-98320 163824"/>
+			<coords loc="-131072 163824"/>
+		</polygon>
+		<restart_point>
+			<coords loc="-114712 150664 424"/>
+		</restart_point>
+	</zone>
+	<zone name="[Barikel_battle_zone]" type="dummy">
+		<polygon>
+			<coords loc="65536 -98304 3184"/>
+			<coords loc="98288 -98304 -1024"/>
+			<coords loc="98288 -65552 -1472"/>
+			<coords loc="65536 -65552 -192"/>
 		</polygon>
 		<restart_point>
 			<coords loc="-84472 242744 -3728 8191"/>
 		</restart_point>
 	</zone>
+	<zone name="[tully_tvt]" type="dummy" >
+		<polygon>
+			<coords loc="-10591 273130 -12050 -11600" />
+			<coords loc="-11701 272013 -12050 -11600" />
+			<coords loc="-13311 272008 -12050 -11600" />
+			<coords loc="-14437 273135 -12050 -11600" />
+			<coords loc="-14434 274724 -12050 -11600" />
+			<coords loc="-13307 275856 -12050 -11600" />
+			<coords loc="-11728 575863 -12050 -11600" />
+			<coords loc="-10582 274736 -12050 -11600" />
+		</polygon>
+	</zone> 
+	<zone name="[tvt_tiat]" type="dummy">
+		<polygon>
+			<coords loc="-248360 210248 -11968 -7000"/>
+			<coords loc="-248347 206141 -11968 -7000"/>
+			<coords loc="-248611 205897 -11968 -7000"/>
+			<coords loc="-248950 205936 -11968 -7000"/>
+			<coords loc="-250045 206824 -11968 -7000"/>
+			<coords loc="-250296 206878 -11968 -7000"/>
+			<coords loc="-250511 206872 -11968 -7000"/>
+			<coords loc="-250752 206824 -11968 -7000"/>
+			<coords loc="-251301 206510 -11968 -7000"/>
+			<coords loc="-251896 205903 -11968 -7000"/>
+			<coords loc="-252198 205903 -11968 -7000"/>
+			<coords loc="-252449 206134 -11968 -7000"/>
+			<coords loc="-252451 210249 -11968 -7000"/>
+			<coords loc="-252186 210515 -11968 -7000"/>
+			<coords loc="-248621 210519 -11968 -7000"/>
+		</polygon>
+	</zone>	
 </list>

@@ -1376,7 +1376,7 @@
 		<table name="#mpConsume2">49 51 52 53 55</table>
 		<table name="#mpConsume1">13 13 13 14 14</table>
 		<table name="#magicLevel">66 68 70 72 74</table>
-		<table name="#power">96 99 102 105 108</table>
+		<table name="#power">58 60 63 65 68</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1439" />
 		<set name="coolTime" val="200" />

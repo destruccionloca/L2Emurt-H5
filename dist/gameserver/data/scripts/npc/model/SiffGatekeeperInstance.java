@@ -1,14 +1,18 @@
 package npc.model;
 
+import java.util.ArrayList;
+import java.util.List;
+import javolution.util.FastMap;
 import l2p.commons.util.Rnd;
 import l2p.gameserver.model.Party;
 import l2p.gameserver.model.Player;
 import l2p.gameserver.model.instances.NpcInstance;
 import l2p.gameserver.templates.npc.NpcTemplate;
 import l2p.gameserver.utils.Location;
+import l2p.gameserver.Config;
 
 /**
- * Created by Trick on 19.08.2016, updated Alex 27.09.2016.
+ * Created by Trick on 19.08.2016, updated 27.09.2016.
  */
 public final class SiffGatekeeperInstance extends NpcInstance{
 
@@ -26,12 +30,12 @@ public final class SiffGatekeeperInstance extends NpcInstance{
 
         if (command.startsWith("request_enter_er")) {
             if(player.isInParty() && !player.getParty().isLeader(player)) {
-                player.sendMessage("Доступно только для лидера группы");
+                player.sendMessage("Р”РѕСЃС‚СѓРїРЅРѕ С‚РѕР»СЊРєРѕ РґР»СЏ Р»РёРґРµСЂР° РіСЂСѓРїРїС‹");
                 return;
             }
             Party party = player.getParty();
             if(party != null) {
-                if(checkParty(party) && player.reduceItem(TeletortItem, 1, true)) {
+                if(checkParty(party) && checkItems(Config.ALLOW_LIST_ENTER_SIFFGATEKEEPER, player, TeletortItem)) {
                     party.getPartyMembers().forEach(member -> member.teleToLocation(getTeleportLoc()));
                 }
             } else {
@@ -45,16 +49,35 @@ public final class SiffGatekeeperInstance extends NpcInstance{
     private boolean checkParty(Party party) {
         for(Player member : party.getPartyMembers()) {
             if(!member.isInRangeZ(this, 200)) {
-                party.broadcastMessageToPartyMembers("Член группы: "+ member.getName()+" находится слишком далеко.");
+                party.broadcastMessageToPartyMembers("Р§Р»РµРЅ РіСЂСѓРїРїС‹: "+ member.getName()+" РЅР°С…РѕРґРёС‚СЃСЏ СЃР»РёС€РєРѕРј РґР°Р»РµРєРѕ.");
                 return false;
             }
             if(member.isCursedWeaponEquipped()) {
-                party.broadcastMessageToPartyMembers("Член группы: "+ member.getName()+" владелец проклятого оружия");
+                party.broadcastMessageToPartyMembers("Р§Р»РµРЅ РіСЂСѓРїРїС‹: "+ member.getName()+" РІР»Р°РґРµР»РµС† РїСЂРѕРєР»СЏС‚РѕРіРѕ РѕСЂСѓР¶РёСЏ");
                 return false;
             }
 
         }
         return true;
+    }
+
+    private boolean checkItems(FastMap<Integer, Integer> items, Player player, int TeleportItem) {
+        boolean result = false;
+        for (int id : Config.ALLOW_LIST_ENTER_SIFFGATEKEEPER.keySet()) {
+            if (player.checkItem(id, Config.ALLOW_LIST_ENTER_SIFFGATEKEEPER.get(id))) {
+                result = true;
+            }
+        }
+        if (result) {
+            return true;
+        } else {
+            if (player.reduceItem(TeletortItem, 1, true)) {
+                return true;
+            } else {
+                player.sendMessage("РћС‚СЃСѓС‚СЃС‚РІСѓСЋС‚ РїСЂРµРґРјРµС‚С‹ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РґР»СЏ РІС…РѕРґР°.");
+                return false;
+            }
+        }
     }
 
     private Location getTeleportLoc() {

@@ -1,6 +1,1576 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "spawn.dtd">
 <list>
+	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
+
+			<point x="-54395" y="146525" z="-2878" h="-2878"/>
+
+	<npc id="36754"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
+
+			<point x="-43937" y="141802" z="-3002" h="-3002"/>
+
+	<npc id="36758"/><!--Arachnid Predator-->
+	</spawn>
+
+
+
+
+
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52188" y="146253" z="-2768" h="-2768"/>
+
+	<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51631" y="145498" z="-2802" h="-2802"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53178" y="145792" z="-2867" h="-2867"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52637" y="145514" z="-2833" h="-2833"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52063" y="145799" z="-2782" h="-2782"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52626" y="145894" z="-2802" h="-2802"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51322" y="147219" z="-2260" h="-2260"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>	
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51441" y="146771" z="-2307" h="-2307"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51778" y="147338" z="-2291" h="-2291"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52480" y="147108" z="-2514" h="-2514"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52310" y="147602" z="-2367" h="-2367"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52163" y="147920" z="-2262" h="-2262"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52283" y="144751" z="-2893" h="-2893"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52844" y="144937" z="-2897" h="-2897"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52648" y="144255" z="-2895" h="-2895"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53282" y="144666" z="-2880" h="-2880"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-54018" y="144759" z="-2893" h="-2893"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53944" y="145299" z="-2877" h="-2877"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-54278" y="144139" z="-2893" h="-2893"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53795" y="143947" z="-2893" h="-2893"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53293" y="143641" z="-2894" h="-2894"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-54447" y="143112" z="-2872" h="-2872"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53788" y="143156" z="-2893" h="-2893"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53163" y="142827" z="-2894" h="-2894"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52381" y="142887" z="-2898" h="-2898"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52045" y="142365" z="-2899" h="-2899"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52008" y="141629" z="-2899" h="-2899"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51389" y="141641" z="-2856" h="-2856"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51348" y="141101" z="-2856" h="-2856"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50902" y="141294" z="-2856" h="-2856"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51807" y="140953" z="-2856" h="-2856"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51464" y="142284" z="-2893" h="-2893"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50751" y="142058" z="-2893" h="-2893"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50381" y="141709" z="-2869" h="-2869"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50537" y="142704" z="-2893" h="-2893"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51072" y="143176" z="-2893" h="-2893"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50491" y="143590" z="-2893" h="-2893"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50827" y="144128" z="-2893" h="-2893"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-49859" y="143011" z="-2718" h="-2718"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-49501" y="142583" z="-2606" h="-2606"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-49352" y="143384" z="-2469" h="-2469"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-49208" y="142780" z="-2459" h="-2459"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-49600" y="143879" z="-2472" h="-2472"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-49528" y="144543" z="-2425" h="-2425"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50090" y="144817" z="-2373" h="-2373"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-49786" y="145473" z="-2301" h="-2301"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-48701" y="142410" z="-2437" h="-2437"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-48888" y="141772" z="-2516" h="-2516"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-48278" y="141632" z="-2454" h="-2454"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-48141" y="140964" z="-2567" h="-2567"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-48677" y="140856" z="-2632" h="-2632"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-48429" y="140469" z="-2658" h="-2658"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-49657" y="141473" z="-2876" h="-2876"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50060" y="139221" z="-2882" h="-2882"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50646" y="139527" z="-2862" h="-2862"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51569" y="139623" z="-2902" h="-2902"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51624" y="140317" z="-2856" h="-2856"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51120" y="139189" z="-2924" h="-2924"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52629" y="139654" z="-2936" h="-2936"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53087" y="140198" z="-2862" h="-2862"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53572" y="139533" z="-2893" h="-2893"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-54197" y="140163" z="-2857" h="-2857"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-54389" y="139440" z="-2872" h="-2872"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53720" y="140821" z="-2856" h="-2856"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53082" y="141015" z="-2856" h="-2856"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52933" y="141480" z="-2856" h="-2856"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53332" y="142032" z="-2862" h="-2862"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53973" y="141657" z="-2856" h="-2856"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-54295" y="142357" z="-2867" h="-2867"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-54913" y="142244" z="-2825" h="-2825"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53455" y="140056" z="-2856" h="-2856"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51708" y="138565" z="-2897" h="-2897"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51911" y="138106" z="-2912" h="-2912"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51453" y="137788" z="-2866" h="-2866"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-51686" y="137133" z="-2850" h="-2850"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52309" y="137016" z="-2882" h="-2882"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50799" y="136693" z="-2887" h="-2887"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50972" y="137264" z="-2894" h="-2894"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50155" y="137288" z="-2888" h="-2888"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50295" y="138133" z="-2895" h="-2895"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-50929" y="138515" z="-2918" h="-2918"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-49581" y="138631" z="-2901" h="-2901"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-49576" y="137726" z="-2884" h="-2884"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-52510" y="138825" z="-2928" h="-2928"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53426" y="138888" z="-2903" h="-2903"/>
+
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-53445" y="138339" z="-2904" h="-2904"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-54067" y="138471" z="-2832" h="-2832"/>
+
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-53570" y="137464" z="-2901" h="-2901"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-53754" y="137948" z="-2880" h="-2880"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-52995" y="137037" z="-2886" h="-2886"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-53616" y="136919" z="-2799" h="-2799"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-54260" y="137157" z="-2754" h="-2754"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-55020" y="137303" z="-2780" h="-2780"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-55404" y="136948" z="-2784" h="-2784"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-54407" y="137799" z="-2782" h="-2782"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55886" y="137051" z="-2786" h="-2786"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55082" y="135643" z="-2748" h="-2748"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55522" y="136183" z="-2751" h="-2751"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-56053" y="135532" z="-2649" h="-2649"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-56146" y="136278" z="-2767" h="-2767"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-56771" y="135962" z="-2648" h="-2648"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-56141" y="138600" z="-2511" h="-2511"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55738" y="139111" z="-2508" h="-2508"/>
+	
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-56365" y="139223" z="-2545" h="-2545"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55951" y="139652" z="-2508" h="-2508"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55160" y="140280" z="-2507" h="-2507"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55779" y="140930" z="-2558" h="-2558"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55042" y="141335" z="-2514" h="-2514"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55606" y="141798" z="-2630" h="-2630"/>
+	
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55155" y="141683" z="-2617" h="-2617"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-56187" y="141780" z="-2629" h="-2628"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-56526" y="141301" z="-2629" h="-2629"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-57144" y="141227" z="-2648" h="-2648"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-55865" y="140349" z="-2550" h="-2550"/>
+	
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-57463" y="140548" z="-2639" h="-2639"/>
+	
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-57842" y="138648" z="-2766" h="-2766"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-57179" y="137995" z="-2772" h="-2772"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-57528" y="136952" z="-2784" h="-2784"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+		<point x="-56971" y="136459" z="-2775" h="-2775"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-56497" y="137361" z="-2800" h="-2800"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+
+			<point x="-56677" y="138832" z="-2639" h="-2639"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-57217" y="139432" z="-2629" h="-2629"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-57256" y="138696" z="-2702" h="-2702"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-57794" y="139409" z="-2703" h="-2703"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-57138" y="137332" z="-2786" h="-2786"/>
+	
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-58260" y="136915" z="-2766" h="-2766"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-58487" y="139089" z="-2689" h="-2689"/>
+	
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-58586" y="139793" z="-2555" h="-2555"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-58120" y="140582" z="-2631" h="-2631"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-57970" y="141385" z="-2571" h="-2571"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-57616" y="142114" z="-2571" h="-2571"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-56922" y="142566" z="-2587" h="-2587"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-57255" y="143127" z="-2528" h="-2528"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-56450" y="143360" z="-2570" h="-2570"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-55834" y="143096" z="-2585" h="-2585"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-56032" y="143740" z="-2526" h="-2526"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-55310" y="143355" z="-2545" h="-2545"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-55128" y="144066" z="-2570" h="-2570"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-58579" y="141546" z="-2550" h="-2550"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-58710" y="140813" z="-2563" h="-2563"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-59251" y="140702" z="-2515" h="-2515"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-59151" y="140104" z="-2495" h="-2495"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-60050" y="139340" z="-2458" h="-2458"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-59350" y="139619" z="-2476" h="-2476"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-59092" y="138909" z="-2465" h="-2465"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-59240" y="138193" z="-2415" h="-2415"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-59830" y="138269" z="-2389" h="-2389"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-60163" y="138579" z="-2397" h="-2397"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-59640" y="137658" z="-2344" h="-2344"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-60725" y="137949" z="-2327" h="-2327"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-60326" y="137498" z="-2328" h="-2328"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-60568" y="136680" z="-2361" h="-2361"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-59766" y="136435" z="-2392" h="-2392"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-59036" y="136535" z="-2402" h="-2402"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-58923" y="135997" z="-2427" h="-2427"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-57789" y="135849" z="-2460" h="-2460"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-57336" y="135416" z="-2441" h="-2441"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-56859" y="134892" z="-2433" h="-2433"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-56314" y="135074" z="-2439" h="-2439"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-58380" y="135933" z="-2448" h="-2448"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-59768" y="136952" z="-2376" h="-2376"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-49000" y="147208" z="-2818" h="-2818"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48431" y="146953" z="-2847" h="-2847"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48519" y="146427" z="-2795" h="-2795"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-49648" y="147738" z="-2792" h="-2792"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-49352" y="148342" z="-2742" h="-2742"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48157" y="148168" z="-2916" h="-2916"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48794" y="147922" z="-2797" h="-2797"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48604" y="148578" z="-2812" h="-2812"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47838" y="147450" z="-2947" h="-2947"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-47895" y="146797" z="-2886" h="-2886"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47848" y="146074" z="-2850" h="-2850"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+		<point x="-47086" y="146450" z="-2968" h="-2968"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-46891" y="147586" z="-2973" h="-2973"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-47046" y="148690" z="-2960" h="-2960"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-45519" y="148343" z="-2967" h="-2967"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-45863" y="147200" z="-2975" h="-2975"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48084" y="149346" z="-3013" h="-3013"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47899" y="150689" z="-2940" h="-2940"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48565" y="151652" z="-2954" h="-2954"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-49361" y="152147" z="-2869" h="-2869"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-50165" y="151241" z="-2781" h="-2781"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-49579" y="149984" z="-2754" h="-2754"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-50567" y="149192" z="-2763" h="-2763"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-49654" y="150734" z="-2735" h="-2735"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-50688" y="150251" z="-2760" h="-2760"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-51106" y="151464" z="-2646" h="-2646"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-50027" y="152134" z="-2776" h="-2776"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-49224" y="151490" z="-2876" h="-2876"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48984" y="149336" z="-2820" h="-2820"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-49945" y="149200" z="-2754" h="-2754"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48972" y="150275" z="-2872" h="-2872"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48176" y="150167" z="-2949" h="-2949"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47515" y="148186" z="-2981" h="-2981"/>
+
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48089" y="151636" z="-2954" h="-2954"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47330" y="151428" z="-2940" h="-2940"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47740" y="152138" z="-2987" h="-2987"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47549" y="152882" z="-3019" h="-3019"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47686" y="153633" z="-3044" h="-3044"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-47480" y="154088" z="-3021" h="-3021"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48650" y="153824" z="-2847" h="-2847"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+		<point x="-49015" y="152940" z="-2949" h="-2949"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48412" y="152347" z="-3027" h="-3027"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48263" y="153007" z="-3046" h="-3046"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-46482" y="148219" z="-2972" h="-2972"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-46455" y="146765" z="-3001" h="-3001"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-45900" y="146061" z="-2982" h="-2982"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-46469" y="145136" z="-2980" h="-2980"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-48214" y="145446" z="-2836" h="-2836"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47163" y="145836" z="-2936" h="-2936"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47487" y="145012" z="-2878" h="-2878"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-47670" y="144269" z="-2851" h="-2851"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-46974" y="144392" z="-2927" h="-2924"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-45639" y="145167" z="-3013" h="-3013"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-44829" y="145220" z="-3019" h="-3019"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-45097" y="144432" z="-3041" h="-3041"/>
+	
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-45942" y="144217" z="-3039" h="-3039"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-46559" y="143415" z="-2877" h="-2877"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-47273" y="143389" z="-2875" h="-2875"/>
+	
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-46892" y="142678" z="-2872" h="-2872"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-46745" y="141948" z="-2905" h="-2905"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-45832" y="141924" z="-2902" h="-2902"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-46022" y="140927" z="-2917" h="-2917"/>
+	
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-45130" y="143299" z="-3027" h="-3027"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-43727" y="143317" z="-2977" h="-2977"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-43078" y="141986" z="-2938" h="-2938"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+	
+			<point x="-44511" y="142151" z="-3040" h="-3040"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-44904" y="140814" z="-2930" h="-2930"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-44770" y="139532" z="-2878" h="-2878"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-42944" y="140682" z="-2929" h="-2929"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-44070" y="141119" z="-2978" h="-2978"/>
+		
+		<npc id="36750"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-43433" y="141317" z="-2932" h="-2932"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-43749" y="142480" z="-2985" h="-2985"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-45349" y="142408" z="-2990" h="-2990"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-45986" y="142915" z="-2924" h="-2924"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-45120" y="141467" z="-2958" h="-2958"/>
+	
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-45368" y="140328" z="-2878" h="-2878"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-44493" y="140296" z="-2908" h="-2908"/>
+	
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-43825" y="140268" z="-2887" h="-2887"/>
+		
+		<npc id="36751"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="40" respawn_random="60" period_of_day="none">
+		
+			<point x="-44532" y="143109" z="-3029" h="-3029"/>
+		
+		<npc id="36752"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-50329" y="140318" z="-2856" h="-2856"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-50522" y="140720" z="-2856" h="-2856"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-50880" y="140435" z="-2856" h="-2856"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-52022" y="143827" z="-2893" h="-2893"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-51678" y="143470" z="-2893" h="-2893"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-52116" y="143448" z="-2893" h="-2893"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-52701" y="138189" z="-2922" h="-2922"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-52475" y="137790" z="-2922" h="-2922"/>
+	
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-52870" y="137815" z="-2921" h="-2921"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+	
+			<point x="-54787" y="136274" z="-2751" h="-2751"/>
+	
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-54581" y="136555" z="-2751" h="-2751"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-58011" y="137638" z="-2786" h="-2786"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-58003" y="137934" z="-2786" h="-2786"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+	
+			<point x="-56663" y="140383" z="-2629" h="-2629"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+	<spawn count="1" respawn="600" respawn_random="1500" period_of_day="none">
+		
+			<point x="-56573" y="140701" z="-2629" h="-2629"/>
+		
+		<npc id="36753"/><!--Arachnid Predator-->
+	</spawn>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
 			<add x="-45264" y="131236" zmin="-3176" zmax="-2576"/>
@@ -30,47 +1600,6 @@
 			<add x="-34552" y="139456" zmin="-3640" zmax="-2840"/>
 		</territory>
 		<npc id="20050"/><!--Arachnid Predator-->
-	</spawn>
-	<spawn count="4" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-45016" y="143172" zmin="-3108" zmax="-2608"/>
-			<add x="-46688" y="141940" zmin="-3108" zmax="-2608"/>
-			<add x="-44744" y="139244" zmin="-3108" zmax="-2608"/>
-			<add x="-43020" y="140712" zmin="-3108" zmax="-2608"/>
-			<add x="-43440" y="142784" zmin="-3108" zmax="-2608"/>
-		</territory>
-		<npc id="20053"/><!--Ol Mahum Patrol-->
-	</spawn>
-	<spawn count="5" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-48380" y="146036" zmin="-3144" zmax="-2644"/>
-			<add x="-46672" y="142076" zmin="-3144" zmax="-2644"/>
-			<add x="-44996" y="143292" zmin="-3144" zmax="-2644"/>
-			<add x="-44684" y="144956" zmin="-3144" zmax="-2644"/>
-			<add x="-46180" y="146456" zmin="-3144" zmax="-2644"/>
-		</territory>
-		<npc id="20053"/><!--Ol Mahum Patrol-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-48240" y="148424" zmin="-3085" zmax="-2585"/>
-			<add x="-49768" y="147584" zmin="-3085" zmax="-2585"/>
-			<add x="-48420" y="146040" zmin="-3085" zmax="-2585"/>
-			<add x="-46304" y="146512" zmin="-3085" zmax="-2585"/>
-			<add x="-46515" y="148465" zmin="-3085" zmax="-2585"/>
-		</territory>
-		<npc id="20053"/><!--Ol Mahum Patrol-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-51164" y="152900" zmin="-3164" zmax="-2564"/>
-			<add x="-50768" y="149284" zmin="-3164" zmax="-2564"/>
-			<add x="-49732" y="147772" zmin="-3164" zmax="-2564"/>
-			<add x="-48244" y="148572" zmin="-3164" zmax="-2564"/>
-			<add x="-47556" y="151248" zmin="-3164" zmax="-2564"/>
-			<add x="-47884" y="154520" zmin="-3164" zmax="-2564"/>
-		</territory>
-		<npc id="20053"/><!--Ol Mahum Patrol-->
 	</spawn>
 	<spawn count="3" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
@@ -130,196 +1659,6 @@
 			<add x="-33044" y="133080" zmin="-3968" zmax="-3468"/>
 		</territory>
 		<npc id="20055"/><!--Wandering Eye-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-45016" y="143172" zmin="-3108" zmax="-2608"/>
-			<add x="-46688" y="141940" zmin="-3108" zmax="-2608"/>
-			<add x="-44744" y="139244" zmin="-3108" zmax="-2608"/>
-			<add x="-43020" y="140712" zmin="-3108" zmax="-2608"/>
-			<add x="-43440" y="142784" zmin="-3108" zmax="-2608"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-48380" y="146036" zmin="-3144" zmax="-2644"/>
-			<add x="-46672" y="142076" zmin="-3144" zmax="-2644"/>
-			<add x="-44996" y="143292" zmin="-3144" zmax="-2644"/>
-			<add x="-44684" y="144956" zmin="-3144" zmax="-2644"/>
-			<add x="-46180" y="146456" zmin="-3144" zmax="-2644"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-48240" y="148424" zmin="-3085" zmax="-2585"/>
-			<add x="-49768" y="147584" zmin="-3085" zmax="-2585"/>
-			<add x="-48420" y="146040" zmin="-3085" zmax="-2585"/>
-			<add x="-46304" y="146512" zmin="-3085" zmax="-2585"/>
-			<add x="-46515" y="148465" zmin="-3085" zmax="-2585"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="3" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-51164" y="152900" zmin="-3164" zmax="-2564"/>
-			<add x="-50768" y="149284" zmin="-3164" zmax="-2564"/>
-			<add x="-49732" y="147772" zmin="-3164" zmax="-2564"/>
-			<add x="-48244" y="148572" zmin="-3164" zmax="-2564"/>
-			<add x="-47556" y="151248" zmin="-3164" zmax="-2564"/>
-			<add x="-47884" y="154520" zmin="-3164" zmax="-2564"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-48532" y="142216" zmin="-2808" zmax="-2208"/>
-			<add x="-49032" y="141980" zmin="-2808" zmax="-2208"/>
-			<add x="-48836" y="140400" zmin="-2808" zmax="-2208"/>
-			<add x="-47720" y="140892" zmin="-2808" zmax="-2208"/>
-			<add x="-47976" y="141632" zmin="-2808" zmax="-2208"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-49776" y="143436" zmin="-2792" zmax="-2192"/>
-			<add x="-49736" y="142480" zmin="-2792" zmax="-2192"/>
-			<add x="-49056" y="142000" zmin="-2792" zmax="-2192"/>
-			<add x="-48568" y="142268" zmin="-2792" zmax="-2192"/>
-			<add x="-48960" y="143360" zmin="-2792" zmax="-2192"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-49892" y="144252" zmin="-2644" zmax="-2144"/>
-			<add x="-49748" y="143508" zmin="-2644" zmax="-2144"/>
-			<add x="-48996" y="143420" zmin="-2644" zmax="-2144"/>
-			<add x="-49280" y="144520" zmin="-2644" zmax="-2144"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-49936" y="145704" zmin="-2640" zmax="-2040"/>
-			<add x="-50348" y="144524" zmin="-2640" zmax="-2040"/>
-			<add x="-50072" y="144244" zmin="-2640" zmax="-2040"/>
-			<add x="-49376" y="144572" zmin="-2640" zmax="-2040"/>
-			<add x="-49484" y="145820" zmin="-2640" zmax="-2040"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-52580" y="147724" zmin="-2536" zmax="-2036"/>
-			<add x="-52276" y="148084" zmin="-2536" zmax="-2036"/>
-			<add x="-51000" y="146832" zmin="-2536" zmax="-2036"/>
-			<add x="-51180" y="146392" zmin="-2536" zmax="-2036"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-54628" y="145664" zmin="-2992" zmax="-2292"/>
-			<add x="-55292" y="146292" zmin="-2992" zmax="-2292"/>
-			<add x="-55028" y="147260" zmin="-2992" zmax="-2292"/>
-			<add x="-53164" y="147552" zmin="-2992" zmax="-2292"/>
-			<add x="-53072" y="147312" zmin="-2992" zmax="-2292"/>
-			<add x="-53648" y="146088" zmin="-2992" zmax="-2292"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-53452" y="145932" zmin="-3004" zmax="-2404"/>
-			<add x="-54440" y="145404" zmin="-3004" zmax="-2404"/>
-			<add x="-54644" y="143072" zmin="-3004" zmax="-2404"/>
-			<add x="-54200" y="142544" zmin="-3004" zmax="-2404"/>
-			<add x="-52852" y="142760" zmin="-3004" zmax="-2404"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-52372" y="146112" zmin="-2996" zmax="-2496"/>
-			<add x="-53312" y="146000" zmin="-2996" zmax="-2496"/>
-			<add x="-52488" y="141756" zmin="-2996" zmax="-2496"/>
-			<add x="-50204" y="142532" zmin="-2996" zmax="-2496"/>
-			<add x="-50156" y="143772" zmin="-2996" zmax="-2496"/>
-			<add x="-51216" y="145260" zmin="-2996" zmax="-2496"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-49456" y="138816" zmin="-3068" zmax="-2468"/>
-			<add x="-49288" y="141204" zmin="-3068" zmax="-2468"/>
-			<add x="-50152" y="142484" zmin="-3068" zmax="-2468"/>
-			<add x="-52452" y="141672" zmin="-3068" zmax="-2468"/>
-			<add x="-51440" y="139104" zmin="-3068" zmax="-2468"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-51468" y="137044" zmin="-3032" zmax="-2532"/>
-			<add x="-51412" y="139012" zmin="-3032" zmax="-2532"/>
-			<add x="-49440" y="138788" zmin="-3032" zmax="-2532"/>
-			<add x="-49780" y="137148" zmin="-3032" zmax="-2532"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-53524" y="136844" zmin="-3012" zmax="-2512"/>
-			<add x="-54684" y="137348" zmin="-3012" zmax="-2512"/>
-			<add x="-54040" y="139012" zmin="-3012" zmax="-2512"/>
-			<add x="-51452" y="139040" zmin="-3012" zmax="-2512"/>
-			<add x="-51496" y="137016" zmin="-3012" zmax="-2512"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-54076" y="139084" zmin="-3140" zmax="-2440"/>
-			<add x="-54540" y="141668" zmin="-3140" zmax="-2440"/>
-			<add x="-54188" y="142452" zmin="-3140" zmax="-2440"/>
-			<add x="-52828" y="142632" zmin="-3140" zmax="-2440"/>
-			<add x="-51560" y="139144" zmin="-3140" zmax="-2440"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-57528" y="143268" zmin="-2804" zmax="-2304"/>
-			<add x="-57884" y="142488" zmin="-2804" zmax="-2304"/>
-			<add x="-57268" y="142156" zmin="-2804" zmax="-2304"/>
-			<add x="-54992" y="143408" zmin="-2804" zmax="-2304"/>
-			<add x="-55136" y="144032" zmin="-2804" zmax="-2304"/>
-			<add x="-56516" y="143936" zmin="-2804" zmax="-2304"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-57944" y="142420" zmin="-2736" zmax="-2236"/>
-			<add x="-59404" y="140324" zmin="-2736" zmax="-2236"/>
-			<add x="-58240" y="139772" zmin="-2736" zmax="-2236"/>
-			<add x="-57056" y="141256" zmin="-2736" zmax="-2236"/>
-			<add x="-57328" y="142104" zmin="-2736" zmax="-2236"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-52032" y="135304" zmin="-3064" zmax="-2564"/>
-			<add x="-51932" y="136128" zmin="-3064" zmax="-2564"/>
-			<add x="-50728" y="136180" zmin="-3064" zmax="-2564"/>
-			<add x="-50748" y="135292" zmin="-3064" zmax="-2564"/>
-		</territory>
-		<npc id="20058"/><!--Ol Mahum Guard-->
 	</spawn>
 	<spawn count="8" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
@@ -400,266 +1739,6 @@
 		</territory>
 		<npc id="20059"/><!--Hungry Eye-->
 	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-53452" y="145932" zmin="-3004" zmax="-2404"/>
-			<add x="-54440" y="145404" zmin="-3004" zmax="-2404"/>
-			<add x="-54644" y="143072" zmin="-3004" zmax="-2404"/>
-			<add x="-54200" y="142544" zmin="-3004" zmax="-2404"/>
-			<add x="-52852" y="142760" zmin="-3004" zmax="-2404"/>
-		</territory>
-		<npc id="20061"/><!--Ol Mahum Straggler-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-54076" y="139084" zmin="-3140" zmax="-2440"/>
-			<add x="-54540" y="141668" zmin="-3140" zmax="-2440"/>
-			<add x="-54188" y="142452" zmin="-3140" zmax="-2440"/>
-			<add x="-52828" y="142632" zmin="-3140" zmax="-2440"/>
-			<add x="-51560" y="139144" zmin="-3140" zmax="-2440"/>
-		</territory>
-		<npc id="20061"/><!--Ol Mahum Straggler-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-57528" y="143268" zmin="-2804" zmax="-2304"/>
-			<add x="-57884" y="142488" zmin="-2804" zmax="-2304"/>
-			<add x="-57268" y="142156" zmin="-2804" zmax="-2304"/>
-			<add x="-54992" y="143408" zmin="-2804" zmax="-2304"/>
-			<add x="-55136" y="144032" zmin="-2804" zmax="-2304"/>
-			<add x="-56516" y="143936" zmin="-2804" zmax="-2304"/>
-		</territory>
-		<npc id="20061"/><!--Ol Mahum Straggler-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-59300" y="138520" zmin="-2768" zmax="-2168"/>
-			<add x="-60348" y="139332" zmin="-2768" zmax="-2168"/>
-			<add x="-59364" y="140188" zmin="-2768" zmax="-2168"/>
-			<add x="-58256" y="139644" zmin="-2768" zmax="-2168"/>
-			<add x="-58708" y="138832" zmin="-2768" zmax="-2168"/>
-		</territory>
-		<npc id="20061"/><!--Ol Mahum Straggler-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-60324" y="139180" zmin="-2580" zmax="-1980"/>
-			<add x="-60968" y="138252" zmin="-2580" zmax="-1980"/>
-			<add x="-60572" y="136312" zmin="-2580" zmax="-1980"/>
-			<add x="-59424" y="136752" zmin="-2580" zmax="-1980"/>
-			<add x="-59344" y="138428" zmin="-2580" zmax="-1980"/>
-		</territory>
-		<npc id="20061"/><!--Ol Mahum Straggler-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-53524" y="136844" zmin="-3012" zmax="-2512"/>
-			<add x="-54684" y="137348" zmin="-3012" zmax="-2512"/>
-			<add x="-54040" y="139012" zmin="-3012" zmax="-2512"/>
-			<add x="-51452" y="139040" zmin="-3012" zmax="-2512"/>
-			<add x="-51496" y="137016" zmin="-3012" zmax="-2512"/>
-		</territory>
-		<npc id="20063"/><!--Ol Mahum Shooter-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-54076" y="139084" zmin="-3140" zmax="-2440"/>
-			<add x="-54540" y="141668" zmin="-3140" zmax="-2440"/>
-			<add x="-54188" y="142452" zmin="-3140" zmax="-2440"/>
-			<add x="-52828" y="142632" zmin="-3140" zmax="-2440"/>
-			<add x="-51560" y="139144" zmin="-3140" zmax="-2440"/>
-		</territory>
-		<npc id="20063"/><!--Ol Mahum Shooter-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-55828" y="135312" zmin="-2984" zmax="-2484"/>
-			<add x="-55728" y="137152" zmin="-2984" zmax="-2484"/>
-			<add x="-55056" y="137476" zmin="-2984" zmax="-2484"/>
-			<add x="-53560" y="136720" zmin="-2984" zmax="-2484"/>
-			<add x="-54284" y="135416" zmin="-2984" zmax="-2484"/>
-		</territory>
-		<npc id="20063"/><!--Ol Mahum Shooter-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-58232" y="139600" zmin="-2872" zmax="-2272"/>
-			<add x="-58596" y="138960" zmin="-2872" zmax="-2272"/>
-			<add x="-58824" y="137032" zmin="-2872" zmax="-2272"/>
-			<add x="-57188" y="136372" zmin="-2872" zmax="-2272"/>
-			<add x="-56548" y="138512" zmin="-2872" zmax="-2272"/>
-			<add x="-56968" y="139132" zmin="-2872" zmax="-2272"/>
-		</territory>
-		<npc id="20063"/><!--Ol Mahum Shooter-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-56852" y="139152" zmin="-2808" zmax="-2108"/>
-			<add x="-58156" y="139736" zmin="-2808" zmax="-2108"/>
-			<add x="-57036" y="141104" zmin="-2808" zmax="-2108"/>
-			<add x="-56088" y="141000" zmin="-2808" zmax="-2108"/>
-			<add x="-56176" y="139876" zmin="-2808" zmax="-2108"/>
-		</territory>
-		<npc id="20063"/><!--Ol Mahum Shooter-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-59356" y="136704" zmin="-2544" zmax="-2144"/>
-			<add x="-57824" y="135796" zmin="-2544" zmax="-2144"/>
-			<add x="-57872" y="135336" zmin="-2544" zmax="-2144"/>
-			<add x="-59428" y="135132" zmin="-2544" zmax="-2144"/>
-			<add x="-60372" y="136284" zmin="-2544" zmax="-2144"/>
-		</territory>
-		<npc id="20066"/><!--Ol Mahum Captain-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-57180" y="134756" zmin="-2680" zmax="-2080"/>
-			<add x="-56288" y="134592" zmin="-2680" zmax="-2080"/>
-			<add x="-56084" y="135064" zmin="-2680" zmax="-2080"/>
-			<add x="-57172" y="135872" zmin="-2680" zmax="-2080"/>
-			<add x="-57740" y="135780" zmin="-2680" zmax="-2080"/>
-			<add x="-57812" y="135332" zmin="-2680" zmax="-2080"/>
-		</territory>
-		<npc id="20066"/><!--Ol Mahum Captain-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-55828" y="135312" zmin="-2984" zmax="-2484"/>
-			<add x="-55728" y="137152" zmin="-2984" zmax="-2484"/>
-			<add x="-55056" y="137476" zmin="-2984" zmax="-2484"/>
-			<add x="-53560" y="136720" zmin="-2984" zmax="-2484"/>
-			<add x="-54284" y="135416" zmin="-2984" zmax="-2484"/>
-		</territory>
-		<npc id="20066"/><!--Ol Mahum Captain-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-56076" y="139792" zmin="-2700" zmax="-2100"/>
-			<add x="-55620" y="139464" zmin="-2700" zmax="-2100"/>
-			<add x="-55596" y="138964" zmin="-2700" zmax="-2100"/>
-			<add x="-56052" y="138468" zmin="-2700" zmax="-2100"/>
-			<add x="-56440" y="138504" zmin="-2700" zmax="-2100"/>
-			<add x="-56808" y="139056" zmin="-2700" zmax="-2100"/>
-		</territory>
-		<npc id="20066"/><!--Ol Mahum Captain-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-51984" y="143956" zmin="-3008" zmax="-2508"/>
-			<add x="-52268" y="143676" zmin="-3008" zmax="-2508"/>
-			<add x="-52164" y="143364" zmin="-3008" zmax="-2508"/>
-			<add x="-51636" y="143460" zmin="-3008" zmax="-2508"/>
-			<add x="-51656" y="143964" zmin="-3008" zmax="-2508"/>
-		</territory>
-		<npc id="20066"/><!--Ol Mahum Captain-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-51040" y="140260" zmin="-3080" zmax="-2580"/>
-			<add x="-50800" y="140692" zmin="-3080" zmax="-2580"/>
-			<add x="-50516" y="140816" zmin="-3080" zmax="-2580"/>
-			<add x="-50156" y="140276" zmin="-3080" zmax="-2580"/>
-			<add x="-50608" y="140056" zmin="-3080" zmax="-2580"/>
-		</territory>
-		<npc id="20066"/><!--Ol Mahum Captain-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-54004" y="141156" zmin="-2964" zmax="-2464"/>
-			<add x="-53728" y="140620" zmin="-2964" zmax="-2464"/>
-			<add x="-53220" y="140884" zmin="-2964" zmax="-2464"/>
-			<add x="-53540" y="141472" zmin="-2964" zmax="-2464"/>
-		</territory>
-		<npc id="20066"/><!--Ol Mahum Captain-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-53088" y="137924" zmin="-3068" zmax="-2468"/>
-			<add x="-52780" y="137564" zmin="-3068" zmax="-2468"/>
-			<add x="-52300" y="138012" zmin="-3068" zmax="-2468"/>
-			<add x="-52536" y="138340" zmin="-3068" zmax="-2468"/>
-		</territory>
-		<npc id="20066"/><!--Ol Mahum Captain-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-54220" y="136132" zmin="-2904" zmax="-2404"/>
-			<add x="-54368" y="136608" zmin="-2904" zmax="-2404"/>
-			<add x="-54804" y="136592" zmin="-2904" zmax="-2404"/>
-			<add x="-55024" y="136204" zmin="-2904" zmax="-2404"/>
-			<add x="-54604" y="135848" zmin="-2904" zmax="-2404"/>
-		</territory>
-		<npc id="20066"/><!--Ol Mahum Captain-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-58192" y="137488" zmin="-2996" zmax="-2496"/>
-			<add x="-58444" y="137812" zmin="-2996" zmax="-2496"/>
-			<add x="-58232" y="138136" zmin="-2996" zmax="-2496"/>
-			<add x="-57688" y="138068" zmin="-2996" zmax="-2496"/>
-			<add x="-57716" y="137564" zmin="-2996" zmax="-2496"/>
-		</territory>
-		<npc id="20066"/><!--Ol Mahum Captain-->
-	</spawn>
-	<spawn count="3" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-51984" y="143956" zmin="-3008" zmax="-2508"/>
-			<add x="-52268" y="143676" zmin="-3008" zmax="-2508"/>
-			<add x="-52164" y="143364" zmin="-3008" zmax="-2508"/>
-			<add x="-51636" y="143460" zmin="-3008" zmax="-2508"/>
-			<add x="-51656" y="143964" zmin="-3008" zmax="-2508"/>
-		</territory>
-		<npc id="20076"/><!--Ol Mahum Commander-->
-	</spawn>
-	<spawn count="3" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-51040" y="140260" zmin="-3080" zmax="-2580"/>
-			<add x="-50800" y="140692" zmin="-3080" zmax="-2580"/>
-			<add x="-50516" y="140816" zmin="-3080" zmax="-2580"/>
-			<add x="-50156" y="140276" zmin="-3080" zmax="-2580"/>
-			<add x="-50608" y="140056" zmin="-3080" zmax="-2580"/>
-		</territory>
-		<npc id="20076"/><!--Ol Mahum Commander-->
-	</spawn>
-	<spawn count="3" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-54004" y="141156" zmin="-2964" zmax="-2464"/>
-			<add x="-53728" y="140620" zmin="-2964" zmax="-2464"/>
-			<add x="-53220" y="140884" zmin="-2964" zmax="-2464"/>
-			<add x="-53540" y="141472" zmin="-2964" zmax="-2464"/>
-		</territory>
-		<npc id="20076"/><!--Ol Mahum Commander-->
-	</spawn>
-	<spawn count="3" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-53088" y="137924" zmin="-3068" zmax="-2468"/>
-			<add x="-52780" y="137564" zmin="-3068" zmax="-2468"/>
-			<add x="-52300" y="138012" zmin="-3068" zmax="-2468"/>
-			<add x="-52536" y="138340" zmin="-3068" zmax="-2468"/>
-		</territory>
-		<npc id="20076"/><!--Ol Mahum Commander-->
-	</spawn>
-	<spawn count="3" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-54220" y="136132" zmin="-2904" zmax="-2404"/>
-			<add x="-54368" y="136608" zmin="-2904" zmax="-2404"/>
-			<add x="-54804" y="136592" zmin="-2904" zmax="-2404"/>
-			<add x="-55024" y="136204" zmin="-2904" zmax="-2404"/>
-			<add x="-54604" y="135848" zmin="-2904" zmax="-2404"/>
-		</territory>
-		<npc id="20076"/><!--Ol Mahum Commander-->
-	</spawn>
-	<spawn count="3" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-58192" y="137488" zmin="-2996" zmax="-2496"/>
-			<add x="-58444" y="137812" zmin="-2996" zmax="-2496"/>
-			<add x="-58232" y="138136" zmin="-2996" zmax="-2496"/>
-			<add x="-57688" y="138068" zmin="-2996" zmax="-2496"/>
-			<add x="-57716" y="137564" zmin="-2996" zmax="-2496"/>
-		</territory>
-		<npc id="20076"/><!--Ol Mahum Commander-->
-	</spawn>
 	<spawn count="6" respawn="21" respawn_random="0" period_of_day="none">
 		<territory>
 			<add x="-65344" y="163448" zmin="-3920" zmax="-3320"/>
@@ -699,421 +1778,6 @@
 		</territory>
 		<npc id="20359"/><!--Ratman Warrior-->
 	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-54628" y="145664" zmin="-2992" zmax="-2292"/>
-			<add x="-55292" y="146292" zmin="-2992" zmax="-2292"/>
-			<add x="-55028" y="147260" zmin="-2992" zmax="-2292"/>
-			<add x="-53164" y="147552" zmin="-2992" zmax="-2292"/>
-			<add x="-53072" y="147312" zmin="-2992" zmax="-2292"/>
-			<add x="-53648" y="146088" zmin="-2992" zmax="-2292"/>
-		</territory>
-		<npc id="20436"/><!--Ol Mahum Supplier-->
-	</spawn>
-	<spawn count="3" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-52372" y="146112" zmin="-2996" zmax="-2496"/>
-			<add x="-53312" y="146000" zmin="-2996" zmax="-2496"/>
-			<add x="-52488" y="141756" zmin="-2996" zmax="-2496"/>
-			<add x="-50204" y="142532" zmin="-2996" zmax="-2496"/>
-			<add x="-50156" y="143772" zmin="-2996" zmax="-2496"/>
-			<add x="-51216" y="145260" zmin="-2996" zmax="-2496"/>
-		</territory>
-		<npc id="20436"/><!--Ol Mahum Supplier-->
-	</spawn>
-	<spawn count="3" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-49456" y="138816" zmin="-3068" zmax="-2468"/>
-			<add x="-49288" y="141204" zmin="-3068" zmax="-2468"/>
-			<add x="-50152" y="142484" zmin="-3068" zmax="-2468"/>
-			<add x="-52452" y="141672" zmin="-3068" zmax="-2468"/>
-			<add x="-51440" y="139104" zmin="-3068" zmax="-2468"/>
-		</territory>
-		<npc id="20436"/><!--Ol Mahum Supplier-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-51468" y="137044" zmin="-3032" zmax="-2532"/>
-			<add x="-51412" y="139012" zmin="-3032" zmax="-2532"/>
-			<add x="-49440" y="138788" zmin="-3032" zmax="-2532"/>
-			<add x="-49780" y="137148" zmin="-3032" zmax="-2532"/>
-		</territory>
-		<npc id="20436"/><!--Ol Mahum Supplier-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-53524" y="136844" zmin="-3012" zmax="-2512"/>
-			<add x="-54684" y="137348" zmin="-3012" zmax="-2512"/>
-			<add x="-54040" y="139012" zmin="-3012" zmax="-2512"/>
-			<add x="-51452" y="139040" zmin="-3012" zmax="-2512"/>
-			<add x="-51496" y="137016" zmin="-3012" zmax="-2512"/>
-		</territory>
-		<npc id="20436"/><!--Ol Mahum Supplier-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-57944" y="142420" zmin="-2736" zmax="-2236"/>
-			<add x="-59404" y="140324" zmin="-2736" zmax="-2236"/>
-			<add x="-58240" y="139772" zmin="-2736" zmax="-2236"/>
-			<add x="-57056" y="141256" zmin="-2736" zmax="-2236"/>
-			<add x="-57328" y="142104" zmin="-2736" zmax="-2236"/>
-		</territory>
-		<npc id="20436"/><!--Ol Mahum Supplier-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-60324" y="139180" zmin="-2580" zmax="-1980"/>
-			<add x="-60968" y="138252" zmin="-2580" zmax="-1980"/>
-			<add x="-60572" y="136312" zmin="-2580" zmax="-1980"/>
-			<add x="-59424" y="136752" zmin="-2580" zmax="-1980"/>
-			<add x="-59344" y="138428" zmin="-2580" zmax="-1980"/>
-		</territory>
-		<npc id="20436"/><!--Ol Mahum Supplier-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-45016" y="143172" zmin="-3108" zmax="-2608"/>
-			<add x="-46688" y="141940" zmin="-3108" zmax="-2608"/>
-			<add x="-44744" y="139244" zmin="-3108" zmax="-2608"/>
-			<add x="-43020" y="140712" zmin="-3108" zmax="-2608"/>
-			<add x="-43440" y="142784" zmin="-3108" zmax="-2608"/>
-		</territory>
-		<npc id="20437"/><!--Ol Mahum Recruit-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-48380" y="146036" zmin="-3144" zmax="-2644"/>
-			<add x="-46672" y="142076" zmin="-3144" zmax="-2644"/>
-			<add x="-44996" y="143292" zmin="-3144" zmax="-2644"/>
-			<add x="-44684" y="144956" zmin="-3144" zmax="-2644"/>
-			<add x="-46180" y="146456" zmin="-3144" zmax="-2644"/>
-		</territory>
-		<npc id="20437"/><!--Ol Mahum Recruit-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-48240" y="148424" zmin="-3085" zmax="-2585"/>
-			<add x="-49768" y="147584" zmin="-3085" zmax="-2585"/>
-			<add x="-48420" y="146040" zmin="-3085" zmax="-2585"/>
-			<add x="-46304" y="146512" zmin="-3085" zmax="-2585"/>
-			<add x="-46515" y="148465" zmin="-3085" zmax="-2585"/>
-		</territory>
-		<npc id="20437"/><!--Ol Mahum Recruit-->
-	</spawn>
-	<spawn count="3" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-51164" y="152900" zmin="-3164" zmax="-2564"/>
-			<add x="-50768" y="149284" zmin="-3164" zmax="-2564"/>
-			<add x="-49732" y="147772" zmin="-3164" zmax="-2564"/>
-			<add x="-48244" y="148572" zmin="-3164" zmax="-2564"/>
-			<add x="-47556" y="151248" zmin="-3164" zmax="-2564"/>
-			<add x="-47884" y="154520" zmin="-3164" zmax="-2564"/>
-		</territory>
-		<npc id="20437"/><!--Ol Mahum Recruit-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-48532" y="142216" zmin="-2808" zmax="-2208"/>
-			<add x="-49032" y="141980" zmin="-2808" zmax="-2208"/>
-			<add x="-48836" y="140400" zmin="-2808" zmax="-2208"/>
-			<add x="-47720" y="140892" zmin="-2808" zmax="-2208"/>
-			<add x="-47976" y="141632" zmin="-2808" zmax="-2208"/>
-		</territory>
-		<npc id="20437"/><!--Ol Mahum Recruit-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-49776" y="143436" zmin="-2792" zmax="-2192"/>
-			<add x="-49736" y="142480" zmin="-2792" zmax="-2192"/>
-			<add x="-49056" y="142000" zmin="-2792" zmax="-2192"/>
-			<add x="-48568" y="142268" zmin="-2792" zmax="-2192"/>
-			<add x="-48960" y="143360" zmin="-2792" zmax="-2192"/>
-		</territory>
-		<npc id="20437"/><!--Ol Mahum Recruit-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-49892" y="144252" zmin="-2644" zmax="-2144"/>
-			<add x="-49748" y="143508" zmin="-2644" zmax="-2144"/>
-			<add x="-48996" y="143420" zmin="-2644" zmax="-2144"/>
-			<add x="-49280" y="144520" zmin="-2644" zmax="-2144"/>
-		</territory>
-		<npc id="20437"/><!--Ol Mahum Recruit-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-49936" y="145704" zmin="-2640" zmax="-2040"/>
-			<add x="-50348" y="144524" zmin="-2640" zmax="-2040"/>
-			<add x="-50072" y="144244" zmin="-2640" zmax="-2040"/>
-			<add x="-49376" y="144572" zmin="-2640" zmax="-2040"/>
-			<add x="-49484" y="145820" zmin="-2640" zmax="-2040"/>
-		</territory>
-		<npc id="20437"/><!--Ol Mahum Recruit-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-52580" y="147724" zmin="-2536" zmax="-2036"/>
-			<add x="-52276" y="148084" zmin="-2536" zmax="-2036"/>
-			<add x="-51000" y="146832" zmin="-2536" zmax="-2036"/>
-			<add x="-51180" y="146392" zmin="-2536" zmax="-2036"/>
-		</territory>
-		<npc id="20437"/><!--Ol Mahum Recruit-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-55828" y="135312" zmin="-2984" zmax="-2484"/>
-			<add x="-55728" y="137152" zmin="-2984" zmax="-2484"/>
-			<add x="-55056" y="137476" zmin="-2984" zmax="-2484"/>
-			<add x="-53560" y="136720" zmin="-2984" zmax="-2484"/>
-			<add x="-54284" y="135416" zmin="-2984" zmax="-2484"/>
-		</territory>
-		<npc id="20438"/><!--Ol Mahum General-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-57140" y="136368" zmin="-2904" zmax="-2304"/>
-			<add x="-56588" y="138204" zmin="-2904" zmax="-2304"/>
-			<add x="-55752" y="137188" zmin="-2904" zmax="-2304"/>
-			<add x="-55832" y="135728" zmin="-2904" zmax="-2304"/>
-		</territory>
-		<npc id="20438"/><!--Ol Mahum General-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-58232" y="139600" zmin="-2872" zmax="-2272"/>
-			<add x="-58596" y="138960" zmin="-2872" zmax="-2272"/>
-			<add x="-58824" y="137032" zmin="-2872" zmax="-2272"/>
-			<add x="-57188" y="136372" zmin="-2872" zmax="-2272"/>
-			<add x="-56548" y="138512" zmin="-2872" zmax="-2272"/>
-			<add x="-56968" y="139132" zmin="-2872" zmax="-2272"/>
-		</territory>
-		<npc id="20438"/><!--Ol Mahum General-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-56852" y="139152" zmin="-2808" zmax="-2108"/>
-			<add x="-58156" y="139736" zmin="-2808" zmax="-2108"/>
-			<add x="-57036" y="141104" zmin="-2808" zmax="-2108"/>
-			<add x="-56088" y="141000" zmin="-2808" zmax="-2108"/>
-			<add x="-56176" y="139876" zmin="-2808" zmax="-2108"/>
-		</territory>
-		<npc id="20438"/><!--Ol Mahum General-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-56076" y="139792" zmin="-2700" zmax="-2100"/>
-			<add x="-55620" y="139464" zmin="-2700" zmax="-2100"/>
-			<add x="-55596" y="138964" zmin="-2700" zmax="-2100"/>
-			<add x="-56052" y="138468" zmin="-2700" zmax="-2100"/>
-			<add x="-56440" y="138504" zmin="-2700" zmax="-2100"/>
-			<add x="-56808" y="139056" zmin="-2700" zmax="-2100"/>
-		</territory>
-		<npc id="20438"/><!--Ol Mahum General-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-55508" y="139860" zmin="-2764" zmax="-2264"/>
-			<add x="-55112" y="140220" zmin="-2764" zmax="-2264"/>
-			<add x="-55044" y="140816" zmin="-2764" zmax="-2264"/>
-			<add x="-55396" y="140964" zmin="-2764" zmax="-2264"/>
-			<add x="-56000" y="141052" zmin="-2764" zmax="-2264"/>
-			<add x="-56048" y="139972" zmin="-2764" zmax="-2264"/>
-		</territory>
-		<npc id="20438"/><!--Ol Mahum General-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-56004" y="142076" zmin="-2776" zmax="-2276"/>
-			<add x="-57080" y="141468" zmin="-2776" zmax="-2276"/>
-			<add x="-56940" y="141176" zmin="-2776" zmax="-2276"/>
-			<add x="-55436" y="140976" zmin="-2776" zmax="-2276"/>
-			<add x="-55176" y="141376" zmin="-2776" zmax="-2276"/>
-			<add x="-55456" y="141912" zmin="-2776" zmax="-2276"/>
-		</territory>
-		<npc id="20438"/><!--Ol Mahum General-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-53452" y="145932" zmin="-3004" zmax="-2404"/>
-			<add x="-54440" y="145404" zmin="-3004" zmax="-2404"/>
-			<add x="-54644" y="143072" zmin="-3004" zmax="-2404"/>
-			<add x="-54200" y="142544" zmin="-3004" zmax="-2404"/>
-			<add x="-52852" y="142760" zmin="-3004" zmax="-2404"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-52372" y="146112" zmin="-2996" zmax="-2496"/>
-			<add x="-53312" y="146000" zmin="-2996" zmax="-2496"/>
-			<add x="-52488" y="141756" zmin="-2996" zmax="-2496"/>
-			<add x="-50204" y="142532" zmin="-2996" zmax="-2496"/>
-			<add x="-50156" y="143772" zmin="-2996" zmax="-2496"/>
-			<add x="-51216" y="145260" zmin="-2996" zmax="-2496"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-49456" y="138816" zmin="-3068" zmax="-2468"/>
-			<add x="-49288" y="141204" zmin="-3068" zmax="-2468"/>
-			<add x="-50152" y="142484" zmin="-3068" zmax="-2468"/>
-			<add x="-52452" y="141672" zmin="-3068" zmax="-2468"/>
-			<add x="-51440" y="139104" zmin="-3068" zmax="-2468"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-51468" y="137044" zmin="-3032" zmax="-2532"/>
-			<add x="-51412" y="139012" zmin="-3032" zmax="-2532"/>
-			<add x="-49440" y="138788" zmin="-3032" zmax="-2532"/>
-			<add x="-49780" y="137148" zmin="-3032" zmax="-2532"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-53524" y="136844" zmin="-3012" zmax="-2512"/>
-			<add x="-54684" y="137348" zmin="-3012" zmax="-2512"/>
-			<add x="-54040" y="139012" zmin="-3012" zmax="-2512"/>
-			<add x="-51452" y="139040" zmin="-3012" zmax="-2512"/>
-			<add x="-51496" y="137016" zmin="-3012" zmax="-2512"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-54076" y="139084" zmin="-3140" zmax="-2440"/>
-			<add x="-54540" y="141668" zmin="-3140" zmax="-2440"/>
-			<add x="-54188" y="142452" zmin="-3140" zmax="-2440"/>
-			<add x="-52828" y="142632" zmin="-3140" zmax="-2440"/>
-			<add x="-51560" y="139144" zmin="-3140" zmax="-2440"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-57944" y="142420" zmin="-2736" zmax="-2236"/>
-			<add x="-59404" y="140324" zmin="-2736" zmax="-2236"/>
-			<add x="-58240" y="139772" zmin="-2736" zmax="-2236"/>
-			<add x="-57056" y="141256" zmin="-2736" zmax="-2236"/>
-			<add x="-57328" y="142104" zmin="-2736" zmax="-2236"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-59300" y="138520" zmin="-2768" zmax="-2168"/>
-			<add x="-60348" y="139332" zmin="-2768" zmax="-2168"/>
-			<add x="-59364" y="140188" zmin="-2768" zmax="-2168"/>
-			<add x="-58256" y="139644" zmin="-2768" zmax="-2168"/>
-			<add x="-58708" y="138832" zmin="-2768" zmax="-2168"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-60324" y="139180" zmin="-2580" zmax="-1980"/>
-			<add x="-60968" y="138252" zmin="-2580" zmax="-1980"/>
-			<add x="-60572" y="136312" zmin="-2580" zmax="-1980"/>
-			<add x="-59424" y="136752" zmin="-2580" zmax="-1980"/>
-			<add x="-59344" y="138428" zmin="-2580" zmax="-1980"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-59356" y="136704" zmin="-2544" zmax="-2144"/>
-			<add x="-57824" y="135796" zmin="-2544" zmax="-2144"/>
-			<add x="-57872" y="135336" zmin="-2544" zmax="-2144"/>
-			<add x="-59428" y="135132" zmin="-2544" zmax="-2144"/>
-			<add x="-60372" y="136284" zmin="-2544" zmax="-2144"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-57180" y="134756" zmin="-2680" zmax="-2080"/>
-			<add x="-56288" y="134592" zmin="-2680" zmax="-2080"/>
-			<add x="-56084" y="135064" zmin="-2680" zmax="-2080"/>
-			<add x="-57172" y="135872" zmin="-2680" zmax="-2080"/>
-			<add x="-57740" y="135780" zmin="-2680" zmax="-2080"/>
-			<add x="-57812" y="135332" zmin="-2680" zmax="-2080"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-55828" y="135312" zmin="-2984" zmax="-2484"/>
-			<add x="-55728" y="137152" zmin="-2984" zmax="-2484"/>
-			<add x="-55056" y="137476" zmin="-2984" zmax="-2484"/>
-			<add x="-53560" y="136720" zmin="-2984" zmax="-2484"/>
-			<add x="-54284" y="135416" zmin="-2984" zmax="-2484"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-57140" y="136368" zmin="-2904" zmax="-2304"/>
-			<add x="-56588" y="138204" zmin="-2904" zmax="-2304"/>
-			<add x="-55752" y="137188" zmin="-2904" zmax="-2304"/>
-			<add x="-55832" y="135728" zmin="-2904" zmax="-2304"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-58232" y="139600" zmin="-2872" zmax="-2272"/>
-			<add x="-58596" y="138960" zmin="-2872" zmax="-2272"/>
-			<add x="-58824" y="137032" zmin="-2872" zmax="-2272"/>
-			<add x="-57188" y="136372" zmin="-2872" zmax="-2272"/>
-			<add x="-56548" y="138512" zmin="-2872" zmax="-2272"/>
-			<add x="-56968" y="139132" zmin="-2872" zmax="-2272"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-56852" y="139152" zmin="-2808" zmax="-2108"/>
-			<add x="-58156" y="139736" zmin="-2808" zmax="-2108"/>
-			<add x="-57036" y="141104" zmin="-2808" zmax="-2108"/>
-			<add x="-56088" y="141000" zmin="-2808" zmax="-2108"/>
-			<add x="-56176" y="139876" zmin="-2808" zmax="-2108"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-55508" y="139860" zmin="-2764" zmax="-2264"/>
-			<add x="-55112" y="140220" zmin="-2764" zmax="-2264"/>
-			<add x="-55044" y="140816" zmin="-2764" zmax="-2264"/>
-			<add x="-55396" y="140964" zmin="-2764" zmax="-2264"/>
-			<add x="-56000" y="141052" zmin="-2764" zmax="-2264"/>
-			<add x="-56048" y="139972" zmin="-2764" zmax="-2264"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="1" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-56004" y="142076" zmin="-2776" zmax="-2276"/>
-			<add x="-57080" y="141468" zmin="-2776" zmax="-2276"/>
-			<add x="-56940" y="141176" zmin="-2776" zmax="-2276"/>
-			<add x="-55436" y="140976" zmin="-2776" zmax="-2276"/>
-			<add x="-55176" y="141376" zmin="-2776" zmax="-2276"/>
-			<add x="-55456" y="141912" zmin="-2776" zmax="-2276"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
-	<spawn count="2" respawn="27" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-55572" y="137988" zmin="-3080" zmax="-2580"/>
-			<add x="-55172" y="137644" zmin="-3080" zmax="-2580"/>
-			<add x="-54392" y="138648" zmin="-3080" zmax="-2580"/>
-			<add x="-54908" y="138972" zmin="-3080" zmax="-2580"/>
-		</territory>
-		<npc id="20439"/><!--Ol Mahum Officer-->
-	</spawn>
 	<spawn count="4" respawn="20" respawn_random="0" period_of_day="none">
 		<territory>
 			<add x="-50264" y="135236" zmin="-3292" zmax="-1892"/>
@@ -1145,34 +1809,6 @@
 			<add x="-33860" y="146544" zmin="-3596" zmax="-2796"/>
 		</territory>
 		<npc id="20548"/><!--Ol Mahum Deserter-->
-	</spawn>
-	<spawn count="10" respawn="45" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-49577" y="152987" zmin="-3148" zmax="-2648"/>
-			<add x="-49168" y="151453" zmin="-3148" zmax="-2648"/>
-			<add x="-47679" y="151459" zmin="-3148" zmax="-2648"/>
-			<add x="-47968" y="153661" zmin="-3148" zmax="-2648"/>
-		</territory>
-		<npc id="20782"/><!--Ol Mahum Novice-->
-	</spawn>
-	<spawn count="10" respawn="180" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="-48814" y="146894" zmin="-3071" zmax="-2671"/>
-			<add x="-46966" y="142770" zmin="-3071" zmax="-2671"/>
-			<add x="-44626" y="144138" zmin="-3071" zmax="-2671"/>
-			<add x="-46306" y="147658" zmin="-3071" zmax="-2671"/>
-		</territory>
-		<npc id="27038"/><!--Cat's Eye Bandit-->
-	</spawn>
-	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
-		<territory>
-			<add x="-54440" y="145764" zmin="-3000" zmax="-2400"/>
-			<add x="-53532" y="146480" zmin="-3000" zmax="-2400"/>
-			<add x="-54220" y="147364" zmin="-3000" zmax="-2400"/>
-			<add x="-54988" y="147000" zmin="-3000" zmax="-2400"/>
-			<add x="-55140" y="146252" zmin="-3000" zmax="-2400"/>
-		</territory>
-		<npc id="25001"/><!--Greyclaw Kutus-->
 	</spawn>
 	<!--Shanty Fortress spawn-->
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">

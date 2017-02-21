@@ -1775,7 +1775,7 @@
   </weapon>
   <weapon id="8864" name="Shadow Item: Carnage Bow">
     <set name="enchantable" value="false"/>
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_type" value="A"/>
     <set name="dropable" value="false"/>
     <set name="durability" value="300"/>

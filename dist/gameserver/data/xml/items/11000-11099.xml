@@ -1586,7 +1586,7 @@
     </for>
   </weapon>
   <weapon id="11054" name="Carnage Bow - Concentration" add_name="Light">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="1128"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1618,7 +1618,7 @@
     </for>
   </weapon>
   <weapon id="11055" name="Carnage Bow - Concentration" add_name="Critical Bleed">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="1128"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>
@@ -1649,7 +1649,7 @@
     </for>
   </weapon>
   <weapon id="11056" name="Carnage Bow - Concentration" add_name="Mana Up">
-    <set name="atk_reuse" value="1500"/>
+    <set name="atk_reuse" value="820"/>
     <set name="crystal_count" value="1128"/>
     <set name="crystal_type" value="A"/>
     <set name="crystallizable" value="true"/>

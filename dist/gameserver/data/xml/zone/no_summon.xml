@@ -71,15 +71,12 @@
 			<coords loc="-84472 242744 -3728 8191"/>
 		</restart_point>
 	</zone>
-	<zone name="[Talkin_inst_no1]" type="no_summon">
+	<zone name="[Harnake_no_summon]" type="no_summon">
 		<polygon>
-			<coords loc="32768 229376"/>
-			<coords loc="65520 229376"/>
-			<coords loc="65520 262128"/>
-			<coords loc="32768 262128"/>
+			<coords loc="-131072 131072"/>
+			<coords loc="-98320 131072"/>
+			<coords loc="-98320 163824"/>
+			<coords loc="-131072 163824"/>
 		</polygon>
-		<restart_point>
-			<coords loc="-84472 242744 -3728 8191"/>
-		</restart_point>
 	</zone>
 </list>
