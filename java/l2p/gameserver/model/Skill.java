@@ -492,7 +492,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     protected boolean _isOffensive;
     protected boolean _isBuff;
     protected boolean _castOverStun;
-    protected boolean _isCancelSkill;
+    protected boolean _cancelSkill;
     protected boolean _isPvpSkill;
     protected boolean _isNotUsedByAI;
     protected boolean _isFishingSkill;
@@ -601,7 +601,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
        //_set = set;        _id = set.getInteger("skill_id");
         _level = set.getInteger("level");
         _castOverStun = set.getBool("castOverStun", false);
-        _isCancelSkill = set.getBool("cancelSkill", false);
+        _cancelSkill = set.getBool("cancelSkill", false);
         _displayId = set.getInteger("displayId", _id);
         _displayLevel = set.getInteger("displayLevel", _level);
         _baseLevel = set.getInteger("base_level");
@@ -2173,7 +2173,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
         boolean invul = effected.isInvul();
         boolean result = false;
         if(invul) {
-            if(_isCancelSkill) {
+            if(_cancelSkill) {
                 result = false;
             }
             result = true;
