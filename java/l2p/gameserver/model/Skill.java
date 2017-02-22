@@ -486,6 +486,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     protected boolean _isAltUse;
     protected boolean _isBehind;
     protected boolean _isCancelable;
+    protected boolean _isCancelSkill;
     protected boolean _isCorpse;
     protected boolean _isCommon;
     protected boolean _isItemHandler;
@@ -597,8 +598,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
      * @param set парамерты скилла
      */
     protected Skill(StatsSet set) {
-        //_set = set;
-        _id = set.getInteger("skill_id");
+       //_set = set;        _id = set.getInteger("skill_id");
         _level = set.getInteger("level");
         _castOverStun = set.getBool("castOverStun", false);
         _displayId = set.getInteger("displayId", _id);
@@ -699,6 +699,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
         _activateRate = set.getInteger("activateRate", -1);
         _levelModifier = set.getInteger("levelModifier", 1);
         _isCancelable = set.getBool("cancelable", true);
+        _isCancelSkill = set.getBool("cancel_skill", false);
         _isReflectable = set.getBool("reflectable", true);
         _isShieldignore = set.getBool("shieldignore", false);
         _criticalRate = set.getInteger("criticalRate", 0);
@@ -1543,7 +1544,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
      * множителя
      * @param timeFix скорректировать "в прошлое" время старта эффекта для
      * корректной сортировки
-     * @param skillReflected означает что скилл был отражен и эффекты тоже нужно
+     *
      * отразить
      */
     public final void getEffects(final Creature effector, final Creature effected, final boolean calcChance, final boolean applyOnCaster, final long timeConst, final double timeMult, final int timeFix) {
@@ -1551,7 +1552,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
             return;
         }
 
-        if ((effected.isEffectImmune() || effected.isInvul() && isOffensive()) && effector != effected) {
+        if ((effected.isEffectImmune() || isInvulOrCancelSkill(effected) && isOffensive()) && effector != effected) {
             if (effector.isPlayer()) {
                 effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
             }
@@ -2175,6 +2176,23 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     public final boolean isCastOverStun()
     {
         return _castOverStun;
+    }
+
+    /**
+     * Method IsInvulOrCancelSkill.
+     * @return boolean
+     */
+    public final boolean isInvulOrCancelSkill(Creature effected)
+    {
+        boolean invul = effected.isInvul();
+        boolean result = false;
+        if(invul) {
+            if(_isCancelSkill) {
+                result = false;
+            }
+            result = true;
+        }
+        return result;
     }
 
     public final boolean isMagic() {
