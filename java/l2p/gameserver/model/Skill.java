@@ -652,7 +652,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
 
         _referenceItemId = set.getInteger("referenceItemId", 0);
         _referenceItemMpConsume = set.getInteger("referenceItemMpConsume", 0);
-
         _isItemHandler = set.getBool("isHandler", false);
         _isCommon = set.getBool("isCommon", false);
         _isSaveable = set.getBool("isSaveable", true);
@@ -687,19 +686,16 @@ public abstract class Skill extends StatTemplate implements Cloneable {
         _isNotAffectedByMute = set.getBool("isNotAffectedByMute", false);
         _flyingTransformUsage = set.getBool("flyingTransformUsage", false);
         _canUseTeleport = set.getBool("canUseTeleport", true);
-
         if (NumberUtils.isNumber(set.getString("element", "NONE"))) {
             _element = Element.getElementById(set.getInteger("element", -1));
         } else {
             _element = Element.getElementByName(set.getString("element", "none").toUpperCase());
         }
-
         _elementPower = set.getInteger("elementPower", 0);
-
         _activateRate = set.getInteger("activateRate", -1);
         _levelModifier = set.getInteger("levelModifier", 1);
         _isCancelable = set.getBool("cancelable", true);
-        _isCancelSkill = set.getBool("cancel_skill", false);
+        _isCancelSkill = set.getBool("cancelSkill", false);
         _isReflectable = set.getBool("reflectable", true);
         _isShieldignore = set.getBool("shieldignore", false);
         _criticalRate = set.getInteger("criticalRate", 0);
@@ -731,7 +727,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
         _lethal2 = set.getDouble("lethal2", 0.);
         _absorbPart = set.getDouble("absorbPart", 0.);
         _icon = set.getString("icon", "");
-
         StringTokenizer st = new StringTokenizer(set.getString("addSkills", ""), ";");
         while (st.hasMoreTokens()) {
             int id = Integer.parseInt(st.nextToken());
@@ -741,7 +736,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
             }
             _addedSkills = ArrayUtils.add(_addedSkills, new AddedSkill(id, level));
         }
-
         if (_nextAction == NextAction.DEFAULT) {
             switch (_skillType) {
                 case PDAM:
@@ -757,7 +751,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                     _nextAction = NextAction.NONE;
             }
         }
-
         String canLearn = set.getString("canLearn", null);
         if (canLearn == null) {
             _canLearn = null;
@@ -769,7 +762,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                 _canLearn.add(ClassId.valueOf(cls));
             }
         }
-
         String teachers = set.getString("teachers", null);
         if (teachers == null) {
             _teachers = null;
@@ -781,9 +773,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                 _teachers.add(Integer.parseInt(npcid));
             }
         }
-
         hashCode = _id * 1023 + _level;
-
         _stopActor = set.getBool("stopActor", true);
         _numberOfCounterAttacks = set.getInteger("numberOfCounterAttacks", -1);
         _isAbnormalInstant = set.getBool("abnormal_instant", false);
@@ -793,21 +783,17 @@ public abstract class Skill extends StatTemplate implements Cloneable {
         if (_weaponsAllowed == 0) {
             return true;
         }
-
         if (activeChar.getActiveWeaponInstance() != null && activeChar.getActiveWeaponItem() != null) {
             if ((activeChar.getActiveWeaponItem().getItemType().mask() & _weaponsAllowed) != 0) {
                 return true;
             }
         }
-
         if (activeChar.getSecondaryWeaponInstance() != null && activeChar.getSecondaryWeaponItem() != null) {
             if ((activeChar.getSecondaryWeaponItem().getItemType().mask() & _weaponsAllowed) != 0) {
                 return true;
             }
         }
-
         activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(_displayId, _displayLevel));
-
         return false;
     }
 
