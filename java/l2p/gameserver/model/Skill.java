@@ -1,5 +1,6 @@
 package l2p.gameserver.model;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.List;
@@ -492,7 +493,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     protected boolean _isOffensive;
     protected boolean _isBuff;
     protected boolean _castOverStun;
-    protected boolean _cancelSkill;
     protected boolean _isPvpSkill;
     protected boolean _isNotUsedByAI;
     protected boolean _isFishingSkill;
@@ -598,10 +598,10 @@ public abstract class Skill extends StatTemplate implements Cloneable {
      * @param set парамерты скилла
      */
     protected Skill(StatsSet set) {
-       //_set = set;        _id = set.getInteger("skill_id");
+        //_set = set;
+        _id = set.getInteger("skill_id");
         _level = set.getInteger("level");
         _castOverStun = set.getBool("castOverStun", false);
-        _cancelSkill = set.getBool("cancelSkill", false);
         _displayId = set.getInteger("displayId", _id);
         _displayLevel = set.getInteger("displayLevel", _level);
         _baseLevel = set.getInteger("base_level");
@@ -653,6 +653,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
 
         _referenceItemId = set.getInteger("referenceItemId", 0);
         _referenceItemMpConsume = set.getInteger("referenceItemMpConsume", 0);
+
         _isItemHandler = set.getBool("isHandler", false);
         _isCommon = set.getBool("isCommon", false);
         _isSaveable = set.getBool("isSaveable", true);
@@ -687,12 +688,15 @@ public abstract class Skill extends StatTemplate implements Cloneable {
         _isNotAffectedByMute = set.getBool("isNotAffectedByMute", false);
         _flyingTransformUsage = set.getBool("flyingTransformUsage", false);
         _canUseTeleport = set.getBool("canUseTeleport", true);
+
         if (NumberUtils.isNumber(set.getString("element", "NONE"))) {
             _element = Element.getElementById(set.getInteger("element", -1));
         } else {
             _element = Element.getElementByName(set.getString("element", "none").toUpperCase());
         }
+
         _elementPower = set.getInteger("elementPower", 0);
+
         _activateRate = set.getInteger("activateRate", -1);
         _levelModifier = set.getInteger("levelModifier", 1);
         _isCancelable = set.getBool("cancelable", true);
@@ -727,6 +731,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
         _lethal2 = set.getDouble("lethal2", 0.);
         _absorbPart = set.getDouble("absorbPart", 0.);
         _icon = set.getString("icon", "");
+
         StringTokenizer st = new StringTokenizer(set.getString("addSkills", ""), ";");
         while (st.hasMoreTokens()) {
             int id = Integer.parseInt(st.nextToken());
@@ -736,6 +741,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
             }
             _addedSkills = ArrayUtils.add(_addedSkills, new AddedSkill(id, level));
         }
+
         if (_nextAction == NextAction.DEFAULT) {
             switch (_skillType) {
                 case PDAM:
@@ -751,6 +757,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                     _nextAction = NextAction.NONE;
             }
         }
+
         String canLearn = set.getString("canLearn", null);
         if (canLearn == null) {
             _canLearn = null;
@@ -762,6 +769,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                 _canLearn.add(ClassId.valueOf(cls));
             }
         }
+
         String teachers = set.getString("teachers", null);
         if (teachers == null) {
             _teachers = null;
@@ -773,7 +781,9 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                 _teachers.add(Integer.parseInt(npcid));
             }
         }
+
         hashCode = _id * 1023 + _level;
+
         _stopActor = set.getBool("stopActor", true);
         _numberOfCounterAttacks = set.getInteger("numberOfCounterAttacks", -1);
         _isAbnormalInstant = set.getBool("abnormal_instant", false);
@@ -783,17 +793,21 @@ public abstract class Skill extends StatTemplate implements Cloneable {
         if (_weaponsAllowed == 0) {
             return true;
         }
+
         if (activeChar.getActiveWeaponInstance() != null && activeChar.getActiveWeaponItem() != null) {
             if ((activeChar.getActiveWeaponItem().getItemType().mask() & _weaponsAllowed) != 0) {
                 return true;
             }
         }
+
         if (activeChar.getSecondaryWeaponInstance() != null && activeChar.getSecondaryWeaponItem() != null) {
             if ((activeChar.getSecondaryWeaponItem().getItemType().mask() & _weaponsAllowed) != 0) {
                 return true;
             }
         }
+
         activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(_displayId, _displayLevel));
+
         return false;
     }
 
@@ -822,7 +836,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
             return false;
         }
 
-        // DS: Clarity не влияет на mpConsume1 
+        // DS: Clarity не влияет на mpConsume1
         if (first && activeChar.getCurrentMp() < (isMagic() ? _mpConsume1 + activeChar.calcStat(Stats.MP_MAGIC_SKILL_CONSUME, _mpConsume2, target, this) : _mpConsume1 + activeChar.calcStat(Stats.MP_PHYSICAL_SKILL_CONSUME, _mpConsume2, target, this))) {
             activeChar.sendPacket(SystemMsg.NOT_ENOUGH_MP);
             return false;
@@ -1043,7 +1057,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                         if (target.isSummon() && (target == activeChar.getPet()) && (!forceUse) && (!isForceUse())) {
                             return SystemMsg.INVALID_TARGET;
                         }
-						
+
                         return null; // Остальные условия на аренах и на олимпиаде проверять не требуется
                     }
 
@@ -1530,7 +1544,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
      * множителя
      * @param timeFix скорректировать "в прошлое" время старта эффекта для
      * корректной сортировки
-     *
+     * @param skillReflected означает что скилл был отражен и эффекты тоже нужно
      * отразить
      */
     public final void getEffects(final Creature effector, final Creature effected, final boolean calcChance, final boolean applyOnCaster, final long timeConst, final double timeMult, final int timeFix) {
@@ -1538,7 +1552,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
             return;
         }
 
-        if ((effected.isEffectImmune() || isInvulOrCancelSkill(effected) && isOffensive()) && effector != effected) {
+        if ((effected.isEffectImmune() || isInvulOrCancel(effected) && isOffensive()) && effector != effected) {
             if (effector.isPlayer()) {
                 effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
             }
@@ -2165,18 +2179,22 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     }
 
     /**
-     * Method IsInvulOrCancelSkill.
+     * Method isInvulOrCancel.
      * @return boolean
      */
-    public final boolean isInvulOrCancelSkill(Creature effected)
+    public final boolean isInvulOrCancel(Creature effected)
     {
         boolean invul = effected.isInvul();
+        int id = _id;
+        int[] ids = {342, 762, 6094, 1056, 1344, 1345, 1350, 1351, 1360, 1361, 1358, 1359, 455, 342, 1440, 3651, 5682, 8331};
         boolean result = false;
         if(invul) {
-            if(_cancelSkill) {
-                result = false;
+            result = invul;
+            for (int i = 0; i < (ids.length); i++) {
+                if (ids[i] == id) {
+                    result = false;
+                }
             }
-            result = true;
         }
         return result;
     }
