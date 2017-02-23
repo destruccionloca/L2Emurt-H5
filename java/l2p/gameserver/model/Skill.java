@@ -1681,6 +1681,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                         final Effect e = et.getEffect(env);
                         if (e != null) {
                             if (e.isOneTime()) {
+                                effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                                 // Эффекты однократного действия не шедулятся, а применяются немедленно
                                 // Как правило это побочные эффекты для скиллов моментального действия
                                 if (e.checkCondition()) {
