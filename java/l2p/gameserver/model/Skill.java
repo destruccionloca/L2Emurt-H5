@@ -1643,6 +1643,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                                 }
                                 reflected = true;
                                 if (effector.isDebuffImmune()) {
+                                    effector.sendPacket(new SystemMessage(SystemMessage.C1_WEAKLY_RESISTED_C2S_MAGIC).addName(effected).addName(effector));
                                     continue;
                                 }
                                 target = effector;
