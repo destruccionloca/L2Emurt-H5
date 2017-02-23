@@ -1653,14 +1653,12 @@ public abstract class Skill extends StatTemplate implements Cloneable {
 
                         int chance = et.chance();
                         if (calcChance && !et._applyOnCaster) {
-                            effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
                             if (calcBase && !success) // не прошло раньше, пропускаем все остальное
                             {
                                 continue;
                             }
                             if (chance > 0) // эффект с индивидуальным шансом
                             {
-                                effector.sendPacket(new SystemMessage(SystemMessage.C1_WEAKLY_RESISTED_C2S_MAGIC).addName(effected).addName(effector));
                                 env.value = chance;
                                 if (!Formulas.calcSkillSuccess(env, et, sps)) {
                                     continue;
@@ -1670,7 +1668,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                                 calcBase = true;
                                 chance = getActivateRate(); // считается один раз для всех базовых эффектов без индивидуальных шансов
                                 if (chance > 0) {
-                                    effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                                     env.value = chance;
                                     if (!Formulas.calcSkillSuccess(env, et, sps)) // не прошел базовый эффект
                                     {
@@ -1680,9 +1677,11 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                             }
                             success = true;
                         }
+                        effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
                         final Effect e = et.getEffect(env);
                         if (e != null) {
                             if (e.isOneTime()) {
+                                effector.sendPacket(new SystemMessage(SystemMessage.C1_WEAKLY_RESISTED_C2S_MAGIC).addName(effected).addName(effector));
                                 // Эффекты однократного действия не шедулятся, а применяются немедленно
                                 // Как правило это побочные эффекты для скиллов моментального действия
                                 if (e.checkCondition()) {
@@ -1691,6 +1690,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                                     e.onExit();
                                 }
                             } else {
+                                effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                                 int count = et.getCount();
                                 long period = et.getPeriod();
 
