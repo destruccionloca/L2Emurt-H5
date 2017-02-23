@@ -1509,7 +1509,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     }
 
     public final void getEffects(Creature effector, Creature effected, boolean calcChance, boolean applyOnCaster) {
-        effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
         double timeMult = 1.0;
         long timeConst = 0;
 
@@ -1549,7 +1548,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
      * отразить
      */
     public final void getEffects(final Creature effector, final Creature effected, final boolean calcChance, final boolean applyOnCaster, final long timeConst, final double timeMult, final int timeFix) {
-        effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
         if (isPassive() || !hasEffects() || effector == null || effected == null) {
             return;
         }
@@ -1572,7 +1570,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                 boolean calcBase = false;
                 boolean success = false;
                 boolean reflected = false;
-
+                effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
                 // Check for skill mastery duration time increase
                 boolean skillMastery = false;
                 if (effector.getSkillMastery(getId()) == 2) {
@@ -1652,6 +1650,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                                 env.target = target;
                             }
                         }
+                        effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
 
                         int chance = et.chance();
                         if (calcChance && !et._applyOnCaster) {
