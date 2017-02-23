@@ -1509,6 +1509,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     }
 
     public final void getEffects(Creature effector, Creature effected, boolean calcChance, boolean applyOnCaster) {
+        effector.getPlayer().sendMessage("Ты в методе getEffects(0)");
         double timeMult = 1.0;
         long timeConst = 0;
 
@@ -1548,6 +1549,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
      * отразить
      */
     public final void getEffects(final Creature effector, final Creature effected, final boolean calcChance, final boolean applyOnCaster, final long timeConst, final double timeMult, final int timeFix) {
+        effector.getPlayer().sendMessage("Ты в методе getEffects");
         if (isPassive() || !hasEffects() || effector == null || effected == null) {
             return;
         }
@@ -1681,7 +1683,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                         final Effect e = et.getEffect(env);
                         if (e != null) {
                             if (e.isOneTime()) {
-                                effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                                 // Эффекты однократного действия не шедулятся, а применяются немедленно
                                 // Как правило это побочные эффекты для скиллов моментального действия
                                 if (e.checkCondition()) {
