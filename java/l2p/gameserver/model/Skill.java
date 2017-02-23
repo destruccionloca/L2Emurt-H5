@@ -1509,7 +1509,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     }
 
     public final void getEffects(Creature effector, Creature effected, boolean calcChance, boolean applyOnCaster) {
-        effector.getPlayer().sendMessage("Ты в методе getEffects(0)");
+        effector.getPlayer().sendMessage("Ты в методе getEffects ё0");
         double timeMult = 1.0;
         long timeConst = 0;
 
