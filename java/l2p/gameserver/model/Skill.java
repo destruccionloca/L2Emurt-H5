@@ -1608,12 +1608,12 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                         }
 
                         if (target.isRaid() && et.getEffectType().isRaidImmune()) {
-                            //effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
+                            effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                             continue;
                         }
 
                         if (!et._applyOnCaster && et.getPeriod() > 0 && (isOffensive() ? target.isDebuffImmune() : target.isBuffImmune())) {
-                            //effector.sendPacket(new SystemMessage(SystemMessage.C1_WEAKLY_RESISTED_C2S_MAGIC).addName(effected).addName(effector));
+                            effector.sendPacket(new SystemMessage(SystemMessage.C1_WEAKLY_RESISTED_C2S_MAGIC).addName(effected).addName(effector));
                             continue;
                         }
 
