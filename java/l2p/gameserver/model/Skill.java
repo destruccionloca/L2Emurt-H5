@@ -1570,7 +1570,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                 boolean calcBase = false;
                 boolean success = false;
                 boolean reflected = false;
-                effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
+
                 // Check for skill mastery duration time increase
                 boolean skillMastery = false;
                 if (effector.getSkillMastery(getId()) == 2) {
@@ -1650,7 +1650,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                                 env.target = target;
                             }
                         }
-                        effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
 
                         int chance = et.chance();
                         if (calcChance && !et._applyOnCaster) {
@@ -1678,7 +1677,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                             }
                             success = true;
                         }
-
+                        effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                         final Effect e = et.getEffect(env);
                         if (e != null) {
                             if (e.isOneTime()) {
@@ -1690,6 +1689,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                                     e.onExit();
                                 }
                             } else {
+                                effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
                                 int count = et.getCount();
                                 long period = et.getPeriod();
 
