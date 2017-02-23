@@ -1620,7 +1620,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                         if (isBlockedByChar(target, et)) {
                             continue;
                         }
-
+                        effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                         if (et._stackOrder == -1) {
                             if (!et._stackType.equals(EffectTemplate.NO_STACK)) {
                                 for (Effect e : target.getEffectList().getAllEffects()) {
@@ -1634,7 +1634,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                         }
 
                         Env env = new Env(effector, target, Skill.this);
-
+                        effector.sendPacket(new SystemMessage(SystemMessage.C1_WEAKLY_RESISTED_C2S_MAGIC).addName(effected).addName(effector));
                         if (_isReflectable && et._isReflectable && isOffensive() && target != effector && !effector.isTrap()) {
                             if (reflected || Rnd.chance(target.calcStat(isMagic() ? Stats.REFLECT_MAGIC_DEBUFF : Stats.REFLECT_PHYSIC_DEBUFF, 0, effector, Skill.this))) {
                                 if (!reflected) {
@@ -1653,7 +1653,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                         effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
                         int chance = et.chance();
                         if (calcChance && !et._applyOnCaster) {
-                            effector.sendPacket(new SystemMessage(SystemMessage.C1_WEAKLY_RESISTED_C2S_MAGIC).addName(effected).addName(effector));
                             if (calcBase && !success) // не прошло раньше, пропускаем все остальное
                             {
                                 continue;
@@ -1678,7 +1677,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                             }
                             success = true;
                         }
-                        effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                         final Effect e = et.getEffect(env);
                         if (e != null) {
                             if (e.isOneTime()) {
