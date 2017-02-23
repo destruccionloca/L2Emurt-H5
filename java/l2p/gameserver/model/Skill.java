@@ -1650,9 +1650,10 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                                 env.target = target;
                             }
                         }
-
+                        effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
                         int chance = et.chance();
                         if (calcChance && !et._applyOnCaster) {
+                            effector.sendPacket(new SystemMessage(SystemMessage.C1_WEAKLY_RESISTED_C2S_MAGIC).addName(effected).addName(effector));
                             if (calcBase && !success) // не прошло раньше, пропускаем все остальное
                             {
                                 continue;
@@ -1677,11 +1678,10 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                             }
                             success = true;
                         }
-                        effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
+                        effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                         final Effect e = et.getEffect(env);
                         if (e != null) {
                             if (e.isOneTime()) {
-                                effector.sendPacket(new SystemMessage(SystemMessage.C1_WEAKLY_RESISTED_C2S_MAGIC).addName(effected).addName(effector));
                                 // Эффекты однократного действия не шедулятся, а применяются немедленно
                                 // Как правило это побочные эффекты для скиллов моментального действия
                                 if (e.checkCondition()) {
@@ -1690,7 +1690,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                                     e.onExit();
                                 }
                             } else {
-                                effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                                 int count = et.getCount();
                                 long period = et.getPeriod();
 
