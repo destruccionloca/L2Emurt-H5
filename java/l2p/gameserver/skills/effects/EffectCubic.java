@@ -18,6 +18,7 @@ import l2p.gameserver.model.Skill;
 import l2p.gameserver.serverpackets.MagicSkillLaunched;
 import l2p.gameserver.serverpackets.MagicSkillUse;
 import l2p.gameserver.stats.Env;
+import l2p.gameserver.stats.Formulas;
 import l2p.gameserver.templates.CubicTemplate;
 
 public class EffectCubic extends Effect {
@@ -221,7 +222,21 @@ public class EffectCubic extends Effect {
                 List<Creature> targets = new ArrayList<Creature>(1);
                 targets.add(aimTarget);
                 player.broadcastPacket(new MagicSkillLaunched(player, skill.getDisplayId(), skill.getDisplayLevel(), targets));
-                player.callSkill(skill, targets, false);
+                final boolean succ = Formulas.calcSkillSuccess(player, aimTarget, skill, info.getChance());
+                if(succ)
+                    player.callSkill(skill, targets, false);
+
+                if(aimTarget.isNpc())
+                    if(aimTarget.paralizeOnAttack(player))
+                    {
+                        if(Config.PARALIZE_ON_RAID_DIFF)
+                            player.paralizeMe(aimTarget);
+                    }
+                    else
+                    {
+                        int damage = skill.getEffectPoint() != 0 ? skill.getEffectPoint() : (int) skill.getPower();
+                        aimTarget.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, player, damage);
+                    }
             }
         }, skill.getHitTime());
         
