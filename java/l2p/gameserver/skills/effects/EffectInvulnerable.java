@@ -51,16 +51,20 @@ public final class EffectInvulnerable extends Effect {
      */
     private boolean isInvulOrCancel(boolean invul, Skill skill)
     {
-        int id = skill.getId();
-        int[] ids = {342, 762, 6094, 1056, 1344, 1345, 1350, 1351, 1360, 1361, 1358, 1359, 455, 342, 1440, 3651, 5682, 8331};
         boolean result = false;
-        if(invul) {
-            result = invul;
-            for (int i = 0; i < (ids.length); i++) {
-                if (ids[i] == id) {
-                    result = false;
+        if (skill != null) {
+            int id = skill.getId();
+            int[] ids = {342, 762, 6094, 1056, 1344, 1345, 1350, 1351, 1360, 1361, 1358, 1359, 455, 342, 1440, 3651, 5682, 8331};
+            if(invul) {
+                result = invul;
+                for (int i = 0; i < (ids.length); i++) {
+                    if (ids[i] == id) {
+                        result = false;
+                    }
                 }
             }
+        } else {
+            result = invul;
         }
         return result;
     }
