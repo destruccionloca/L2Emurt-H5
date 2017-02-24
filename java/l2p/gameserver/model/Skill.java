@@ -1579,11 +1579,9 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                 }
 
                 for (EffectTemplate et : getEffectTemplates()) {
-                    effector.sendPacket(new SystemMessage(SystemMsg.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
                     if (applyOnCaster != et._applyOnCaster || et._count == 0) {
                         continue;
                     }
-                    effector.sendPacket(new SystemMessage(SystemMessage.C1_WEAKLY_RESISTED_C2S_MAGIC).addName(effected).addName(effector));
                     // Кастер в качестве цели также если скилл был отражен и эффект отражабелен
                     Creature character = et._applyOnCaster ? effector : effected;
                     Creature[] targets = null;
@@ -1603,7 +1601,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                     }
                     loop:
                     for (Creature target1 : targets) {
-                        effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(effected.getName()).addSkillName(_displayId, _displayLevel));
                         Creature target = target1;
                         if (target.isDead() && !isPreservedOnDeath()) {
                             continue;
