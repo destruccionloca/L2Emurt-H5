@@ -954,7 +954,7 @@ public abstract class Creature extends GameObject {
                 target = itr.next();
 
                 //Фильтруем неуязвимые цели
-                if (skill.isOffensive() && target.isInvul()) {
+                if (skill.isOffensive() && isInvulOrCancel(target.isInvul(), skill)) {
                     Player pcTarget = target.getPlayer();
                     if ((!skill.isIgnoreInvul() || pcTarget != null && pcTarget.isGM()) && !target.isArtefact()) {
                         itr.remove();
@@ -1019,6 +1019,30 @@ public abstract class Creature extends GameObject {
         } catch (Exception e) {
             _log.error("", e);
         }
+    }
+
+    /**
+     * Method isInvulOrCancel.
+     * @return boolean
+     */
+    private boolean isInvulOrCancel(boolean invul, Skill skill)
+    {
+        boolean result = false;
+        if (skill != null) {
+            int id = skill.getId();
+            int[] ids = {342, 762, 6094, 1056, 1344, 1345, 1350, 1351, 1360, 1361, 1358, 1359, 455, 342, 1440, 3651, 5682, 8331};
+            if(invul) {
+                result = invul;
+                for (int i = 0; i < (ids.length); i++) {
+                    if (ids[i] == id) {
+                        result = false;
+                    }
+                }
+            }
+        } else {
+            result = invul;
+        }
+        return result;
     }
 
     public void useTriggers(GameObject target, TriggerType type, Skill ex, Skill owner, double damage)

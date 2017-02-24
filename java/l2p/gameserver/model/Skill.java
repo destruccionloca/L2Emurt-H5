@@ -1578,7 +1578,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                 }
 
                 for (EffectTemplate et : getEffectTemplates()) {
-                    _log.info(et.toString());
                     if (applyOnCaster != et._applyOnCaster || et._count == 0) {
                         continue;
                     }

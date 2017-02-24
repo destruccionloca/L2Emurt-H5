@@ -106,6 +106,13 @@ public final class EffectTemplate extends StatTemplate {
     }
 
     @Override
+    public String toString()
+    {
+        return _effectType+" "+_value+", "+_count+" "+_period + " " + _applyOnCaster;
+    }
+
+
+    @Override
     public void attachFunc(FuncTemplate f) {
         super.attachFunc(f);
         if (f._stat == Stats.MAX_HP) {
