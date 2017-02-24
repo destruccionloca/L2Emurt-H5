@@ -3,6 +3,7 @@ package l2p.gameserver.model;
 import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
@@ -1544,8 +1545,6 @@ public abstract class Skill extends StatTemplate implements Cloneable {
      * множителя
      * @param timeFix скорректировать "в прошлое" время старта эффекта для
      * корректной сортировки
-     * @param skillReflected означает что скилл был отражен и эффекты тоже нужно
-     * отразить
      */
     public final void getEffects(final Creature effector, final Creature effected, final boolean calcChance, final boolean applyOnCaster, final long timeConst, final double timeMult, final int timeFix) {
         if (isPassive() || !hasEffects() || effector == null || effected == null) {
@@ -1579,6 +1578,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                 }
 
                 for (EffectTemplate et : getEffectTemplates()) {
+                    _log.info(et.toString());
                     if (applyOnCaster != et._applyOnCaster || et._count == 0) {
                         continue;
                     }
