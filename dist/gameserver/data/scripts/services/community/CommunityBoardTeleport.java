@@ -66,6 +66,7 @@ public class CommunityBoardTeleport extends Functions implements ScriptFile, ICo
         String html = "";
 
         if (!CheckCondition(player)) {
+            getBypass(player, "_bbshome");
             return;
         }
 
@@ -411,7 +412,7 @@ public class CommunityBoardTeleport extends Functions implements ScriptFile, ICo
             return false;
         }
 
-        if (!Config.ALLOW_TELEPORT_IN_COMBAT && (player.getPvpFlag() != 0 || player.isInDuel() || player.isInCombat() || player.isAttackingNow())) {
+        if (!Config.ALLOW_TELEPORT_IN_COMBAT && (player.isInDuel() || player.isInCombat() || player.isAttackingNow())) {
             if (player.isLangRus()) {
                 player.sendMessage("Во время боя нельзя использовать данную функцию.");
 				player.sendPacket(new ShowBoard());
@@ -459,5 +460,15 @@ public class CommunityBoardTeleport extends Functions implements ScriptFile, ICo
             return false;
         }
         return true;
+    }
+
+    private void getBypass(Player player, String bypass)
+    {
+        String cmd[] = bypass.split(":");
+
+        if(cmd.length < 1)
+            cmd = new String[] { "_bbshome" };
+
+        CommunityBoardManager.getInstance().getCommunityHandler(cmd[0]).onBypassCommand(player, bypass);
     }
 }
