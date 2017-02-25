@@ -374,14 +374,18 @@ public class Olympiad {
         _classBasedRegisters.removeValue(player.getObjectId());
         _nonClassBasedRegisters.remove(new Integer(player.getObjectId()));
         _teamBasedRegisters.removeValue(player.getObjectId());
-		if(player != null) {
 			if (Config.OLYMPIAD_PLAYER_IP) {
 				_playersIp.remove(player.getIP());
 			}
-			if (Config.OLYMPIAD_PLAYER_HWID && _playersHWID.containsKey(player)) {
-				_playersHWID.remove(player);
-			}
-		}
+            if (Config.OLYMPIAD_PLAYER_HWID && player != null) {
+                try {
+                    _playersHWID.remove(player);
+                } catch (Exception e) {
+                    _log.info("HwidChecker DEBUG: -----------------------------------------------");
+                    _log.warn("Olympiad unregister Error: " + e);
+                    _log.error("", e);
+                }
+            }
 
         OlympiadGame game = player.getOlympiadGame();
         if (game != null) {
