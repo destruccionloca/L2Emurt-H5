@@ -1698,14 +1698,12 @@ public abstract class Skill extends StatTemplate implements Cloneable {
                                 // Считаем влияние резистов
                                 if (!et._applyOnCaster && isOffensive() && !isIgnoreResists() && !effector.isRaid()) {
                                     double res = 0;
-                                    if (et.getEffectType().getResistType() != null) {
-                                        res += target.calcStat(et.getEffectType().getResistType(), 100., effector, Skill.this) - 100.;
-                                    }
-                                    if (et.getEffectType().getAttributeType() != null) {
-                                        res -= effector.calcStat(et.getEffectType().getAttributeType(), 100., target, Skill.this) - 100.;
-                                    }
+                                    if(et.getEffectType().getResistType() != null)
+                                        res += effected.calcStat(et.getEffectType().getResistType(), effector, Skill.this);
+                                    if(et.getEffectType().getAttributeType() != null)
+                                        res -= effector.calcStat(et.getEffectType().getAttributeType(), effected, Skill.this);
 
-                                    res += effected.calcStat(Stats.DEBUFF_RESIST, 100., effector, Skill.this) - 100.;
+                                    res += effected.calcStat(Stats.DEBUFF_RESIST, effector, Skill.this);
 
                                     if (res != 0) {
                                         double mod = 1 + Math.abs(0.01 * res);
