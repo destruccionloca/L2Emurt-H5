@@ -2,7 +2,7 @@ package l2p.gameserver.model.entity.olympiad;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -69,7 +69,7 @@ public class Olympiad {
     public static ScheduledFuture<?> _scheduledWeeklyTask;
     public static ScheduledFuture<?> _scheduledValdationTask;
     public static List<String> _playersIp = new ArrayList<String>();
-    public static Map<Player, String> _playersHWID = new LinkedHashMap<Player, String>();
+    public static Map<Player, String> _playersHWID = new HashMap<Player, String>();
     public static final Stadia[] STADIUMS = new Stadia[Config.OLYMPIAD_STADIAS_COUNT];
     public static OlympiadManager _manager;
     private static List<NpcInstance> _npcs = new ArrayList<NpcInstance>();
@@ -248,7 +248,7 @@ public class Olympiad {
             }
         }
 
-        if (Config.OLYMPIAD_PLAYER_HWID && _playersHWID.containsValue(noble.getNetConnection().getHWID())) {
+        if(!HwidChecker.canRegister(noble)) {
 			noble.sendMessage(new CustomMessage("l2p.gameserver.model.entity.Olympiad.BlockHWID", noble));
 			return false;
         }
@@ -261,8 +261,8 @@ public class Olympiad {
                 if (Config.OLYMPIAD_PLAYER_IP) {
                     _playersIp.add(noble.getIP());
                 }
-                if (Config.OLYMPIAD_PLAYER_HWID && !_playersHWID.containsKey(noble)) {
-                    _playersHWID.put(noble, noble.getNetConnection().getHWID());
+                if (Config.OLYMPIAD_PLAYER_HWID) {
+                        HwidChecker.registerPlayer(noble);
                 }
                 noble.sendPacket(SystemMsg.YOU_HAVE_BEEN_REGISTERED_FOR_THE_GRAND_OLYMPIAD_WAITING_LIST_FOR_A_CLASS_SPECIFIC_MATCH);
                 break;
@@ -272,8 +272,8 @@ public class Olympiad {
                 if (Config.OLYMPIAD_PLAYER_IP) {
                     _playersIp.add(noble.getIP());
                 }
-                if (Config.OLYMPIAD_PLAYER_HWID && !_playersHWID.containsKey(noble)) {
-                    _playersHWID.put(noble, noble.getNetConnection().getHWID());
+                if (Config.OLYMPIAD_PLAYER_HWID) {
+                    HwidChecker.registerPlayer(noble);
                 }
                 noble.sendPacket(SystemMsg.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_1V1_CLASS_IRRELEVANT_MATCH);
                 break;
@@ -298,8 +298,8 @@ public class Olympiad {
                 if (Config.OLYMPIAD_PLAYER_IP) {
                     _playersIp.add(noble.getIP());
                 }
-                if (Config.OLYMPIAD_PLAYER_HWID && !_playersHWID.containsKey(noble)) {
-                    _playersHWID.put(noble, noble.getNetConnection().getHWID());
+                if (Config.OLYMPIAD_PLAYER_HWID) {
+                    HwidChecker.registerPlayer(noble);
                 }
                 _teamBasedRegisters.putAll(noble.getObjectId(), party.getPartyMembersObjIds());
                 noble.sendPacket(SystemMsg.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_3_VS_3_CLASS_IRRELEVANT_TEAM_MATCH);
@@ -377,14 +377,8 @@ public class Olympiad {
 			if (Config.OLYMPIAD_PLAYER_IP) {
 				_playersIp.remove(player.getIP());
 			}
-            if (Config.OLYMPIAD_PLAYER_HWID && player != null) {
-                try {
-                    _playersHWID.remove(player);
-                } catch (Exception e) {
-                    _log.info("HwidChecker DEBUG: -----------------------------------------------");
-                    _log.warn("Olympiad unregister Error: " + e);
-                    _log.error("", e);
-                }
+            if (Config.OLYMPIAD_PLAYER_HWID) {
+                    HwidChecker.unregisterPlayer(player);
             }
 
         OlympiadGame game = player.getOlympiadGame();
@@ -435,14 +429,14 @@ public class Olympiad {
         _classBasedRegisters.removeValue(noble.getObjectId());
         _nonClassBasedRegisters.remove(new Integer(noble.getObjectId()));
         _teamBasedRegisters.removeValue(noble.getObjectId());
-		if(noble != null) {
+
 			if (Config.OLYMPIAD_PLAYER_IP) {
-				_playersIp.remove(noble);
+				_playersIp.remove(noble.getIP());
 			}
-			if (Config.OLYMPIAD_PLAYER_HWID && _playersHWID.containsKey(noble)) {
-				_playersHWID.remove(noble);
-			}
-		}
+            if (Config.OLYMPIAD_PLAYER_HWID) {
+                HwidChecker.unregisterPlayer(noble);
+            }
+
 
         noble.sendPacket(SystemMsg.YOU_HAVE_BEEN_REMOVED_FROM_THE_GRAND_OLYMPIAD_WAITING_LIST);
 

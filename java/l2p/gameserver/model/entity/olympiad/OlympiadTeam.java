@@ -183,12 +183,8 @@ public class OlympiadTeam {
                     member.logout();
                 }
             }
-			if (Config.OLYMPIAD_PLAYER_IP) {
-				Olympiad._playersIp.remove(player.getIP());
-			}
-			if (Config.OLYMPIAD_PLAYER_HWID && Olympiad._playersHWID.containsKey(player)) {
-				Olympiad._playersHWID.remove(player);
-			}
+            Olympiad._playersIp.remove(player.getIP());
+            HwidChecker.unregisterPlayer(player);
         }
         return checkPlayers();
     }

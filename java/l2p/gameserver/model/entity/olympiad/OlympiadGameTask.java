@@ -68,7 +68,7 @@ public class OlympiadGameTask extends RunnableImpl {
 
             // Прерываем игру, если один из игроков не онлайн, и игра еще не прервана
             if (!_game.checkPlayersOnline() && _status != BattleStatus.ValidateWinner && _status != BattleStatus.Ending) {
-                //Log.add("Player is offline for game " + gameId + ", status: " + _status, "olympiad");
+                Log.add("Player is offline for game " + gameId + ", status: " + _status, "olympiad");
                 _game.endGame(1, true);
                 return;
             }
