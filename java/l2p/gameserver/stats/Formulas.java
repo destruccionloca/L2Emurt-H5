@@ -422,7 +422,7 @@ public class Formulas {
             crit = calcMCrit(attacker.getMagicCriticalRate(target, skill));
         }
         if (crit) {
-            damage *= attacker.calcStat(Stats.MCRITICAL_DAMAGE, attacker.isPlayable() && target.isPlayable() ? 3. : 3.5, target, skill);
+            damage *= attacker.calcStat(Stats.MCRITICAL_DAMAGE, attacker.isPlayable() && target.isPlayable() ? 2.5 : 3., target, skill);
         }
 
         damage = attacker.calcStat(Stats.MAGIC_DAMAGE, damage, target, skill);
