@@ -6,8 +6,8 @@ import java.util.Map;
 
 import l2p.gameserver.Config;
 import l2p.gameserver.model.Player;
-import l2p.gameserver.utils.hwid.HardwareID;
-import l2p.gameserver.utils.hwid.HwidComparator;
+import l2p.gameserver.utils.HWID.HardwareID;
+import l2p.gameserver.utils.HWID.HWIDComparator;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +16,7 @@ final class HwidChecker
 {
 	private static final Logger _log = LoggerFactory.getLogger(HwidChecker.class);
 	private static Map<Long, HardwareID> hwids = new HashMap<Long, HardwareID>();
-	private static HwidComparator comparator = new HwidComparator();
+	private static HWIDComparator comparator = new HWIDComparator();
 
 	public static boolean canRegister(Player player)
 	{
