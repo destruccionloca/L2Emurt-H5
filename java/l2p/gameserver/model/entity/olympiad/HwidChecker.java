@@ -26,7 +26,6 @@ final class HwidChecker
 		if(!Config.OLYMPIAD_PLAYER_HWID)
 			return true;
 
-		_log.info("Hwid = " + player.getNetConnection().getHWID()+ ", Player = " + player.getName() );
 
 		if(comparator.contains(new HardwareID(player.getNetConnection().getHWID()), new ArrayList<HardwareID>(hwids.values())))
 			return false;

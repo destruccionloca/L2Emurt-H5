@@ -188,18 +188,16 @@ public class TeamMember {
 
     public void portPlayerBack() {
         Player player = _player;
-        Log.add("Player is teleported "+ _player.getName(), "olympiad");
         if (player == null) {
             return;
         }
-        Log.add("Player = "+ player.getName(), "olympiad");
+        
         if(Config.OLYMPIAD_PLAYER_IP) {
             Olympiad._playersIp.remove(player.getIP());
         }
 
         if(Config.OLYMPIAD_PLAYER_HWID){
             HwidChecker.unregisterPlayer(player);
-            Log.add("In method "+ player.getName(), "olympiad");
         }
 
         if (_returnLoc == null) // игрока не портнуло на стадион
