@@ -535,6 +535,7 @@ public class LastHero extends Functions
             playerRestoreCoord.put(player.getStoredId(), new Location(player.getX(), player.getY(), player.getZ()));
             player.teleToLocation(Location.findPointToStay(_enter, 150, 500, ReflectionManager.DEFAULT.getGeoIndex()), reflection);
             player.setIsInLastHero(true);
+            player.getEffectList().stopEffect(664);
         }
     }
 

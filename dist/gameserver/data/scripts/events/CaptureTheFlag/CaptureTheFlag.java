@@ -817,6 +817,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
                     player.getPet().getEffectList().stopAllEffects();
                 }
             }
+            player.getEffectList().stopEffect(664);
         }
 
         for (Player player : getPlayers(players_list2)) {
@@ -837,6 +838,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
                     player.getPet().getEffectList().stopAllEffects();
                 }
             }
+            player.getEffectList().stopEffect(664);
         }
     }
 

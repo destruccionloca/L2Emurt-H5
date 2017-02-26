@@ -718,6 +718,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
                     player.getPet().getEffectList().stopAllEffects();
                 }
             }
+            player.getEffectList().stopEffect(664);
         }
 
         for (Player player : getPlayers(_blueTeamPoints)) {
@@ -739,6 +740,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
                     player.getPet().getEffectList().stopAllEffects();
                 }
             }
+            player.getEffectList().stopEffect(664);
         }
     }
 

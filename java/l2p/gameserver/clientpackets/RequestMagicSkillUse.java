@@ -54,6 +54,11 @@ public class RequestMagicSkillUse extends L2GameClientPacket {
                 return;
             }
 
+            // Запрет на ивенте юзать трансформ анакима
+            if(activeChar.isInPvPEvent() && skill.getId() == 664) {
+                return;
+            }
+
             if (skill.isToggle()) {
                 if (activeChar.getEffectList().getEffectsBySkill(skill) != null) {
                     activeChar.getEffectList().stopEffect(skill.getId());
