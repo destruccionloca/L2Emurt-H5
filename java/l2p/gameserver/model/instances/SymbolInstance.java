@@ -45,23 +45,23 @@ public class SymbolInstance extends NpcInstance {
 
         _targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new RunnableImpl() {
             @Override
-            public void runImpl() throws Exception
-                {
-                    for(Creature target : getAroundCharacters(200, 200))
-                        if(_skill.checkTarget(_owner, target, null, false, false) == null)
-                        {
-                            List<Creature> targets = new ArrayList<Creature>();
+            public void runImpl() throws Exception {
+                getAroundCharacters(200, 200).stream().filter(target -> _skill.checkTarget(_owner, target, null, false, false) == null).forEach(target -> {
+                    List<Creature> targets = new ArrayList<>();
 
-                            if(!_skill.isAoE())
+                    if (!_skill.isAoE()) {
+                        targets.add(target);
+                    } else {
+                        for (Creature t : getAroundCharacters(_skill.getSkillRadius(), 128)) {
+                            if (_skill.checkTarget(_owner, t, null, false, false) == null) {
                                 targets.add(target);
-                            else
-                                for(Creature t : getAroundCharacters(_skill.getSkillRadius(), 128))
-                                    if(_skill.checkTarget(_owner, t, null, false, false) == null)
-                                        targets.add(target);
-
-                            _skill.useSkill(SymbolInstance.this, targets);
+                            }
                         }
-                }
+                    }
+
+                    _skill.useSkill(SymbolInstance.this, targets);
+                });
+            }
         }, 1000L, Rnd.get(4000L, 7000L));
     }
 
