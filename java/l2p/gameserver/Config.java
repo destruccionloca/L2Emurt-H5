@@ -1215,6 +1215,11 @@ public class Config {
      */
     public static boolean ALLOW_LEARN_TRANS_SKILLS_WO_QUEST;
     /**
+     * Скилы которые игнорят инвул (Invul)
+     */
+    public static int[] ALLOW_LIST_SKILLS_IGNORE_INVUL;
+    /**
+    /**
      * Allow Manor system
      */
     public static boolean ALLOW_MANOR;
@@ -3480,6 +3485,7 @@ public class Config {
         RIFT_ENTER_COST_HERO = altSettings.getProperty("HeroFC", 33);
         ALLOW_CLANSKILLS = altSettings.getProperty("AllowClanSkills", true);
         ALLOW_LEARN_TRANS_SKILLS_WO_QUEST = altSettings.getProperty("AllowLearnTransSkillsWOQuest", false);
+        ALLOW_LIST_SKILLS_IGNORE_INVUL = altSettings.getProperty("AllowSkillsIgnoreInvul", new int[]{342, 762, 6094, 1056, 1344, 1345, 1350, 1351, 1360, 1361, 1358, 1359, 455, 342, 1440, 3651, 5682, 8331});
         PARTY_LEADER_ONLY_CAN_INVITE = altSettings.getProperty("PartyLeaderOnlyCanInvite", true);
         ALLOW_TALK_WHILE_SITTING = altSettings.getProperty("AllowTalkWhileSitting", true);
         ALLOW_NOBLE_TP_TO_ALL = altSettings.getProperty("AllowNobleTPToAll", false);

@@ -2179,12 +2179,12 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     {
         boolean invul = effected.isInvul();
         int id = _id;
-        int[] ids = {342, 762, 6094, 1056, 1344, 1345, 1350, 1351, 1360, 1361, 1358, 1359, 455, 342, 1440, 3651, 5682, 8331};
+        int[] ids = Config.ALLOW_LIST_SKILLS_IGNORE_INVUL;
         boolean result = false;
         if(invul) {
             result = invul;
-            for (int i = 0; i < (ids.length); i++) {
-                if (ids[i] == id) {
+            for (int i : ids) {
+                if (i == id) {
                     result = false;
                 }
             }
