@@ -551,8 +551,9 @@ public abstract class Creature extends GameObject {
                 getEffectList().stopEffects(EffectType.AbsorbDamageToSummon);
             } else if (summon.isSummon() && summon.isInRangeZ(this, 1200) && !summon.isDead() && getEffectList().getEffectByType(EffectType.Petrification) == null) {
                 damage -= transferDamage;
-
-                summon.reduceCurrentHp(transferDamage, summon, null, false, false, false, false, true, false, true);
+                if(!summon.isInvul()) {
+                    summon.reduceCurrentHp(transferDamage, summon, null, false, false, false, false, true, false, true);
+                }
             }
         }
         return damage;
