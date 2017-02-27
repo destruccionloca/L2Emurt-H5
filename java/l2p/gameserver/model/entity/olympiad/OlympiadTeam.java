@@ -9,6 +9,7 @@ import l2p.gameserver.Config;
 import l2p.gameserver.model.GameObjectsStorage;
 import l2p.gameserver.model.Party;
 import l2p.gameserver.model.Player;
+import l2p.gameserver.model.Summon;
 import l2p.gameserver.serverpackets.components.IStaticPacket;
 import l2p.gameserver.serverpackets.ExOlympiadUserInfo;
 import l2p.gameserver.serverpackets.L2GameServerPacket;
@@ -205,6 +206,12 @@ public class OlympiadTeam {
         for (TeamMember member : _members.values()) {
             Player player = member.getPlayer();
             if (player != null) {
+                if (player.getPet() != null) {
+                    Summon summon = player.getPet();
+                    if (!summon.isPet()) {
+                        summon.setCurrentHpMp(summon.getMaxHp(), summon.getMaxMp());
+                    }
+                }
                 player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
                 player.setCurrentCp(player.getMaxCp());
                 player.broadcastUserInfo(true);

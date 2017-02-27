@@ -191,7 +191,7 @@ public class TeamMember {
         if (player == null) {
             return;
         }
-        
+
         if(Config.OLYMPIAD_PLAYER_IP) {
             Olympiad._playersIp.remove(player.getIP());
         }
@@ -297,6 +297,7 @@ public class TeamMember {
                 summon.unSummon();
             } else {
                 summon.getEffectList().stopAllEffects();
+                summon.setCurrentHpMp(summon.getMaxHp(), summon.getMaxMp());
             }
         }
 
