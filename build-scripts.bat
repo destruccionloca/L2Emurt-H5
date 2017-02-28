@@ -1,1 +1,0 @@
-ant -f build-scripts.xml -l build-scripts.log

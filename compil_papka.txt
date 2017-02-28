@@ -1,2 +1,0 @@
-build-full.xml 18 строка, меняем на <property name="build.classes" location="${build}/dist/gameserver/data/scripts/classes" />
-В том же файле удаляем 146 строку: <exclude name="/data/scripts/**/*" /> и на 272 удаляем в конце "scripts"
