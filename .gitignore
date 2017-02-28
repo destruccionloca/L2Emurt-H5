@@ -1,5 +1,5 @@
 /.idea/
 /build/
 /Guard/
-build-core.xml
-compile-core.log
+build*
+compile*
