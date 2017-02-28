@@ -422,7 +422,7 @@ public class CommunityBoardTeleport extends Functions implements ScriptFile, ICo
             return false;
         }
 
-        if (!Config.ALLOW_TELEPORT_IS_IN_EVENT && player.getTeam() != TeamType.NONE) {
+        if (!Config.ALLOW_TELEPORT_IS_IN_EVENT && player.isInPvPEvent()) {
             if (player.isLangRus()) {
                 player.sendMessage("Нельзя использовать телепорт во время эвентов.");
             } else {
@@ -433,6 +433,15 @@ public class CommunityBoardTeleport extends Functions implements ScriptFile, ICo
 
         if (!Config.ALLOW_TELEPORT_IS_IN_CURSED_WEPON && player.isCursedWeaponEquipped()) {
             player.sendMessage(player.isLangRus() ? "Вам запрещено пользоваться этой функцией." : "You are not allowed to use this feature.");
+            return false;
+        }
+
+        if(player.isTerritoryFlagEquipped()) {
+            if (player.isLangRus()) {
+                player.sendMessage("В данных условия телепортироваться нельзя!");
+            } else {
+                player.sendMessage("You can not use this feature.");
+            }
             return false;
         }
 
