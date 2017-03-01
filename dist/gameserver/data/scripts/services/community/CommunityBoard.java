@@ -273,7 +273,7 @@ public class CommunityBoard implements ScriptFile, ICommunityBoardHandler {
             return false;
         }
 
-        if (!Config.ALLOW_COMMUNITYBOARD_IS_IN_EVENT && (player.getTeam() != TeamType.NONE || player.getEffectList().getEffectsBySkillId(Skill.SKILL_RAID_CURSE) != null)) {
+        if (!Config.ALLOW_COMMUNITYBOARD_IS_IN_EVENT && (player.getTeam() != TeamType.NONE || player.getEffectList().getEffectsBySkillId(Skill.SKILL_RAID_CURSE) != null) || player.isInLastHero()) {
             player.sendMessage("Нельзя использовать данную функцию во время эвентов.");
             return false;
         }
