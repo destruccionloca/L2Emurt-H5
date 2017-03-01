@@ -54,6 +54,10 @@ public class RequestMagicSkillUse extends L2GameClientPacket {
                 return;
             }
 
+            if(activeChar.isTerritoryFlagEquipped() && activeChar.isInCtF()) {
+                return;
+            }
+
             // Запрет на ивенте юзать трансформ анакима
             if(activeChar.isInPvPEvent() && skill.getId() == 664) {
                 return;
