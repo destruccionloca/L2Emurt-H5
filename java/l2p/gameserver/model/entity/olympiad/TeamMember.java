@@ -296,7 +296,7 @@ public class TeamMember {
             if (summon.isPet()) {
                 summon.unSummon();
             } else {
-                summon.getEffectList().stopAllEffects();
+                summon.getEffectList().getAllEffects().stream().filter(e -> e.getEffectType() != EffectType.Cubic || player.getSkillLevel(e.getSkill().getId()) <= 0).forEach(Effect::exit);
                 summon.setCurrentHpMp(summon.getMaxHp(), summon.getMaxMp());
             }
         }
