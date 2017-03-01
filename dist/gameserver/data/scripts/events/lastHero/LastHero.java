@@ -27,6 +27,7 @@ import l2p.gameserver.model.Player;
 import l2p.gameserver.model.Skill;
 import l2p.gameserver.model.Zone;
 import l2p.gameserver.model.actor.listener.CharListenerList;
+import l2p.gameserver.model.actor.listener.PlayerListenerList;
 import l2p.gameserver.model.base.TeamType;
 import l2p.gameserver.model.entity.Hero;
 import l2p.gameserver.model.entity.Reflection;
@@ -44,6 +45,7 @@ import l2p.gameserver.scripts.Functions;
 import l2p.gameserver.scripts.ScriptFile;
 import l2p.gameserver.serverpackets.SkillList;
 import l2p.gameserver.serverpackets.SocialAction;
+import l2p.gameserver.skills.AbnormalEffect;
 import l2p.gameserver.tables.SkillTable;
 import l2p.gameserver.templates.DoorTemplate;
 import l2p.gameserver.templates.ZoneTemplate;
@@ -86,7 +88,8 @@ public class LastHero extends Functions
 
     @Override
     public void onLoad() {
-        CharListenerList.addGlobal(this);
+        PlayerListenerList.addGlobal(this);
+//        CharListenerList.addGlobal(this);
 
         _zones.put("[colosseum_battle]", ReflectionUtils.getZone("[colosseum_battle]").getTemplate());
         for (int doorId : doors) {
@@ -173,7 +176,7 @@ public class LastHero extends Functions
             if ((player == null) || (!playerRestoreCoord.containsKey(player.getStoredId()))) {
                 continue;
             }
-            player.setIsInLastHero(false);
+            player.getLastHeroState().compareAndSet(true, false);
             player.teleToLocation((Location) playerRestoreCoord.get(player.getStoredId()), ReflectionManager.DEFAULT);
         }
         playerRestoreCoord.clear();
@@ -534,7 +537,7 @@ public class LastHero extends Functions
             }
             playerRestoreCoord.put(player.getStoredId(), new Location(player.getX(), player.getY(), player.getZ()));
             player.teleToLocation(Location.findPointToStay(_enter, 150, 500, ReflectionManager.DEFAULT.getGeoIndex()), reflection);
-            player.setIsInLastHero(true);
+            player.getLastHeroState().compareAndSet(false, true);
             player.getEffectList().stopEffect(664);
         }
     }
@@ -547,8 +550,10 @@ public class LastHero extends Functions
             player.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
             if (!player.isParalyzed()) {
                 player.startParalyzed();
+                player.startAbnormalEffect(AbnormalEffect.HOLD_2);
                 if (player.getPet() != null) {
                     player.getPet().startParalyzed();
+                    player.getPet().startAbnormalEffect(AbnormalEffect.HOLD_2);
                 }
             }
         }
@@ -561,8 +566,10 @@ public class LastHero extends Functions
             }
             if (player.isParalyzed()) {
                 player.stopParalyzed();
+                player.stopAbnormalEffect(AbnormalEffect.HOLD_2);
                 if (player.getPet() != null) {
                     player.getPet().stopParalyzed();
+                    player.getPet().stopAbnormalEffect(AbnormalEffect.HOLD_2);
                 }
             }
         }
@@ -639,7 +646,7 @@ public class LastHero extends Functions
     public static void removeAura() {
         for (Player player : getPlayers(live_list)) {
             player.setTeam(TeamType.NONE);
-            player.setIsInLastHero(false);
+            player.getLastHeroState().compareAndSet(true, false);
         }
     }
 
@@ -718,7 +725,7 @@ public class LastHero extends Functions
             live_list.remove(player.getStoredId());
             players_list.remove(player.getStoredId());
             playerRestoreCoord.remove(player.getStoredId());
-            player.setIsInLastHero(false);
+            player.getLastHeroState().compareAndSet(true, false);
 
             if (!Config.EVENT_LastHeroAllowMultiReg) {
                 boxes.remove(player.getStoredId());
@@ -869,8 +876,7 @@ public class LastHero extends Functions
         }
     }
 
-    private static class ZoneListener
-            implements OnZoneEnterLeaveListener {
+    private static class ZoneListener implements OnZoneEnterLeaveListener {
 
         @Override
         public void onZoneEnter(Zone zone, Creature cha) {
@@ -884,20 +890,7 @@ public class LastHero extends Functions
         }
 
         @Override
-        public void onZoneLeave(Zone zone, Creature cha) {
-            if (cha == null) {
-                return;
-            }
-            Player player = cha.getPlayer();
-            if ((LastHero._status > 1) && (player != null) && (LastHero.live_list.contains(player.getStoredId()))) {
-                double angle = PositionUtils.convertHeadingToDegree(cha.getHeading());
-                double radian = Math.toRadians(angle - 90.0D);
-                int x = (int) (cha.getX() + 250.0D * Math.sin(radian));
-                int y = (int) (cha.getY() - 250.0D * Math.cos(radian));
-                int z = cha.getZ();
-                player.teleToLocation(x, y, z, LastHero.reflection);
-            }
-        }
+        public void onZoneLeave(Zone zone, Creature cha) {}
     }
     
     private static class EndHero implements Runnable {
