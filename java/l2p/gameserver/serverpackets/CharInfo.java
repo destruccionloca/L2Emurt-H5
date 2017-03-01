@@ -92,7 +92,7 @@ public class CharInfo extends L2GameServerPacket {
                 cw_level = CursedWeaponsManager.getInstance().getLevel(player.getCursedWeaponEquippedId());
             }
         } else {
-            _name = player.getName();
+            _name = player.getVisualName();
             if (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE) {
                 _title = "";
             } else if (!player.isConnected() && !player.isPhantom()) {

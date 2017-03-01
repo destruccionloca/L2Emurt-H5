@@ -58,6 +58,11 @@ public class RequestJoinParty extends L2GameClientPacket {
             return;
         }
 
+        if (activeChar.isInLastHero() || target.isInLastHero()) {
+            activeChar.sendMessage("You can not invite to party during Last Hero!");
+            return;
+        }
+
         if (Config.ALT_ENABLE_BOTREPORT) {
             // Check for bot punishment on target
             if (target.isBeingPunished()) {

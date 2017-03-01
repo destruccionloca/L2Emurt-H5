@@ -56,7 +56,7 @@ public class UserInfo extends L2GameServerPacket {
             large_clan_crest_id = 0;
             cw_level = CursedWeaponsManager.getInstance().getLevel(player.getCursedWeaponEquippedId());
         } else {
-            _name = player.getName();
+            _name = player.getVisualName();
 
             Clan clan = player.getClan();
             Alliance alliance = clan == null ? null : clan.getAlliance();

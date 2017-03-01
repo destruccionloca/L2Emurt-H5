@@ -542,6 +542,7 @@ public final class Player extends Playable implements PlayerGroup {
     private SmallAcp acp;
 
     private final VisualParams visualParams = new VisualParams();
+    private final AtomicBoolean lastHeroState = new AtomicBoolean();
 
     /**
      * Конструктор для L2Player. Напрямую не вызывается, для создания игрока
@@ -10482,7 +10483,8 @@ public final class Player extends Playable implements PlayerGroup {
         return _inCtF;
     }
 
-    public boolean isInLastHero() {
+    @Deprecated
+    public boolean isInLastHero0() {
         return _inLastHero;
     }
 
@@ -10506,7 +10508,8 @@ public final class Player extends Playable implements PlayerGroup {
         _inCtF = param;
     }
 
-    public void setIsInLastHero(boolean param) {
+    @Deprecated
+    public void setIsInLastHero0(boolean param) {
         _inLastHero = param;
     }
 
@@ -10660,5 +10663,17 @@ public final class Player extends Playable implements PlayerGroup {
 
     public VisualParams getVisualParams() {
         return visualParams;
+    }
+
+    public AtomicBoolean getLastHeroState() {
+        return lastHeroState;
+    }
+
+    public boolean isInLastHero() {
+        return lastHeroState.get();
+    }
+
+    public String getVisualName() {
+        return isInLastHero() ? Config.LH_NAME : getName();
     }
 }

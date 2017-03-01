@@ -266,7 +266,11 @@ public abstract class Inventory extends ItemContainer {
             }
         }
 
+
+
         if (getActor() != null && getActor().getPlayer() != null && !getActor().getPlayer().isInOlympiadMode()) {
+            if (getActor().getPlayer().isInLastHero() && Config.LH_VISUAL_ITEMS.containsKey(slot))
+                return Config.LH_VISUAL_ITEMS.get(slot);
             ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
             if (chest != null && chest.isVisualItem() && VisualUtils.isCostume(chest)) {
                 switch (slot) {

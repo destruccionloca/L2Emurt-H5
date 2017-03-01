@@ -1845,6 +1845,9 @@ public class Config {
     public static int VISUAL_COSTUME_PRICE_ID;
     public static int VISUAL_COSTUME_PRICE_COUNT;
 
+    public static String LH_NAME;
+    public static Map<Integer, Integer> LH_VISUAL_ITEMS;
+
 
     public static void loadBBSBufferConfig() {
 
@@ -2490,6 +2493,19 @@ public class Config {
         EVENT_LastHeroMageBuffs = eventLastHeroSettings.getProperty("LastHero_MageBuffs", "").trim().replaceAll(" ", "").split(";");
         EVENT_LastHeroBuffPlayers = eventLastHeroSettings.getProperty("LastHero_BuffPlayers", false);
         EVENT_LAST_HERO_AURA_ENABLE = eventLastHeroSettings.getProperty("LastHero_GiveHero", false);
+
+        LH_NAME = eventLastHeroSettings.getProperty("LhName", "LastHero");
+        LH_VISUAL_ITEMS = new HashMap<>();
+        try {
+            StringTokenizer st = new StringTokenizer(eventLastHeroSettings.getProperty("LhVisualItems").trim(), ";");
+            while (st.hasMoreTokens()) {
+                String[] vals = st.nextToken().split(",");
+                LH_VISUAL_ITEMS.put(Integer.parseInt(vals[0]), Integer.parseInt(vals[1]));
+            }
+        } catch (Exception e) {
+            _log.warn("Error while parsing Last Hero visual items config!");
+            e.printStackTrace();
+        }
     }
 
     public static void loadLuckNpcSettings() {
