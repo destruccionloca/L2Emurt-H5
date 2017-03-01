@@ -39,6 +39,7 @@ public class EnchantByScrollTask implements Runnable {
             return;
         boolean isNeedEquip = false;
         boolean isNeedUpdate = false;
+        boolean isFail = false;
 
         // stat
         int isCrystallized = 0;
@@ -430,7 +431,10 @@ public class EnchantByScrollTask implements Runnable {
                     player.sendPacket(EnchantResult.ANCIENT_FAILED); //TODO
                 } else // фейл, разбиваем вещь
                 {
+                    isFail = true;
+                    isNeedEquip = false;
                     if (item.isEquipped()) {
+                        inventory.unEquipItem(item);
                         player.sendDisarmMessage(item);
                     }
 
@@ -465,7 +469,8 @@ public class EnchantByScrollTask implements Runnable {
                 int ench = item.getEnchantLevel();
                 if (ench > maxEnchant)
                     maxEnchant = ench;
-                isNeedUpdate = true;
+                if (!isFail)
+                    isNeedUpdate = true;
                 if (ench >= Config.SAFE_ENCHANT_COMMON)
                     count++;
             }
