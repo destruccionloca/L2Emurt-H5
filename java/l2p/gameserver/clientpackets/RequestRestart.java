@@ -77,7 +77,7 @@ public class RequestRestart extends L2GameClientPacket {
 
         if (activeChar.isInLastHero()) {
             activeChar.sendMessage(activeChar.isLangRus() ? "Вы не можете выйти во время Last Hero!" : "You can't logout until participating in Last Hero!");
-            activeChar.sendActionFailed();
+            activeChar.sendPacket(RestartResponse.FAIL, ActionFail.STATIC);
             return;
         }
 
