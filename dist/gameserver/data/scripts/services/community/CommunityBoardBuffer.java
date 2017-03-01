@@ -410,9 +410,9 @@ public class CommunityBoardBuffer extends Functions implements ScriptFile, IComm
             StringTokenizer st2 = new StringTokenizer(bypass, ";");
             String[] mBypass = st2.nextToken().split(":");
             if (!player.getVarB("isPlayerBuff") && player.getPet() != null && player.getEffectList().getEffectsBySkillId(Skill.SKILL_RAID_CURSE) == null) {
-                player.getPet().getEffectList().getAllEffects().stream().filter(e -> e.getSkill().isBuff()).forEach(Effect::exit);
+                player.getPet().getEffectList().getAllEffects().stream().filter(e -> e.getSkill().isBuff() || e.getSkill().isMusic()).forEach(Effect::exit);
             } else if (player.getEffectList().getEffectsBySkillId(Skill.SKILL_RAID_CURSE) == null) {
-                player.getEffectList().getAllEffects().stream().filter(e -> e.getSkill().isBuff()).forEach(Effect::exit);
+                player.getEffectList().getAllEffects().stream().filter(e -> e.getSkill().isBuff() || e.getSkill().isMusic()).forEach(Effect::exit);
             }
             ShowHtml(mBypass[1], player);					
         } else if (bypass.startsWith("_bbsbsave")) {
