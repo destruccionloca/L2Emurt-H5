@@ -192,7 +192,7 @@ public class Formulas {
             if (info.crit) {
                 //Заряжаемые скилы игнорируют снижающие силу крита статы
                 //    if (skill.isChargeBoost() || skill.getSkillType() == SkillType.CHARGE) {
-                info.damage *= 2.;
+                info.damage *= 1.8;
                 //    } else {
                 //        info.damage = 2 * target.calcStat(Stats.CRIT_DAMAGE_RECEPTIVE, info.damage, attacker, skill);
                 //    }
