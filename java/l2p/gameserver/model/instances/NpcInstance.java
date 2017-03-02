@@ -817,6 +817,10 @@ public class NpcInstance extends Creature {
             return;
         }
 
+        if(((player.isInDuel() || player.InIsDuel()) && !Config.ALLOW_HTML_IN_DUEL)) {
+            return;
+        }
+
         // С NPC нельзя разговаривать мертвым и сидя
         if (!Config.ALLOW_TALK_WHILE_SITTING && player.isSitting() || player.isAlikeDead()) {
             return;
