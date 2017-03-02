@@ -33,6 +33,7 @@ import l2p.gameserver.model.Territory;
 import l2p.gameserver.model.Zone;
 import l2p.gameserver.model.Zone.ZoneType;
 import l2p.gameserver.model.actor.listener.CharListenerList;
+import l2p.gameserver.model.actor.listener.PlayerListenerList;
 import l2p.gameserver.model.base.TeamType;
 import l2p.gameserver.model.entity.Reflection;
 import l2p.gameserver.model.entity.events.impl.DuelEvent;
@@ -124,7 +125,8 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 
     @Override
     public void onLoad() {
-        CharListenerList.addGlobal(this);
+        PlayerListenerList.addGlobal(this);
+//        CharListenerList.addGlobal(this);
 
         _zones.put("[colosseum_battle]", ReflectionUtils.getZone("[colosseum_battle]").getTemplate());
         _zones.put("[colosseum_ctf_blue_base]", ReflectionUtils.getZone("[colosseum_ctf_blue_base]").getTemplate());

@@ -33,6 +33,7 @@ import l2p.gameserver.model.Territory;
 import l2p.gameserver.model.Zone;
 import l2p.gameserver.model.Zone.ZoneType;
 import l2p.gameserver.model.actor.listener.CharListenerList;
+import l2p.gameserver.model.actor.listener.PlayerListenerList;
 import l2p.gameserver.model.base.TeamType;
 import l2p.gameserver.model.entity.Reflection;
 import l2p.gameserver.model.entity.events.impl.DuelEvent;
@@ -121,7 +122,8 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 
     @Override
     public void onLoad() {
-        CharListenerList.addGlobal(this);
+        PlayerListenerList.addGlobal(this);
+//        CharListenerList.addGlobal(this);
 		String zone = "[tvt_tiat]";
         _zones.put(zone, ReflectionUtils.getZone(zone).getTemplate());
         for (final int doorId : doors) {
