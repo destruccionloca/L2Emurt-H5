@@ -495,7 +495,7 @@ public class EnchantByScrollTask implements Runnable {
                 result.put("commonscrolls", commonScrolls);
                 if (count == 0) count++; // unreachable in normal situation
                 result.put("chance", (int)(((double)success / ((double)count / 100.)) * 100));
-                result.put("success", item == null ? 0 : item.getEnchantLevel() == player.getEnchantParams().maxEnchant ? 1 : 0);
+                result.put("success", item == null || isFail ? 0 : item.getEnchantLevel() == player.getEnchantParams().maxEnchant ? 1 : 0);
                 EnchantParser.getInstance().showResultPage(player, EnchantType.Scroll, result);
             }
             player.setEnchantScroll(null);
