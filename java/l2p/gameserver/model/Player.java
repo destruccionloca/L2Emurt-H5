@@ -8491,7 +8491,6 @@ public final class Player extends Playable implements PlayerGroup {
                     }
                     effect.exit();
                     preparateToTransform(effect.getSkill());
-                    break;
                 }
             }
 
