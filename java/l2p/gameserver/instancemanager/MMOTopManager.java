@@ -121,7 +121,7 @@ public class MMOTopManager {
 
                 ItemInstance item = ItemFunctions.createItem(Config.MMOTOP_REWARD[i]);
                 item.setLocation(ItemInstance.ItemLocation.MAIL);
-                item.setCount(Config.MMOTOP_REWARD[i + 1] * mult);
+                item.setCount(Config.MMOTOP_REWARD[i + 1]);
                 item.save();
                 mail.addAttachment(item);
             }
