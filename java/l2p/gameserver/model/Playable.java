@@ -400,6 +400,9 @@ public abstract class Playable extends Creature {
             return false;
         }
 
+        if (player.isInLastHero() && pcAttacker.isInLastHero())
+            return true;
+
         if (pcAttacker != null && pcAttacker != player) {
             boat = pcAttacker.getBoat();
             if ((boat != null) && (!boat.isAirShip())) {

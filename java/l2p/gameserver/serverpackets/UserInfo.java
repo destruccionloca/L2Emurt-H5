@@ -58,7 +58,7 @@ public class UserInfo extends L2GameServerPacket {
         } else {
             _name = player.getVisualName();
 
-            Clan clan = player.getClan();
+            Clan clan = player.isInLastHero() ? null : player.getClan();
             Alliance alliance = clan == null ? null : clan.getAlliance();
             //
             clan_id = clan == null ? 0 : clan.getClanId();

@@ -103,7 +103,7 @@ public class CharInfo extends L2GameServerPacket {
                 _title_color = player.getTitleColor();
             }
 
-            Clan clan = player.getClan();
+            Clan clan = player.isInLastHero() ? null : player.getClan();
             Alliance alliance = clan == null ? null : clan.getAlliance();
             //
             clan_id = clan == null ? 0 : clan.getClanId();

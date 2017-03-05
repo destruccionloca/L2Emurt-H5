@@ -225,7 +225,7 @@ public class Say2C extends L2GameClientPacket {
 
         Log.LogChat(_type.name(), activeChar.getName(), _target, _text);
 
-        Say2 cs = new Say2(activeChar.getObjectId(), _type, activeChar.getName(), _text);
+        Say2 cs = new Say2(activeChar.getObjectId(), _type, activeChar.getVisualName(), _text);
 
         switch (_type) {
             case TELL:
@@ -239,7 +239,7 @@ public class Say2C extends L2GameClientPacket {
                             receiver.sendPacket(cs);
                         }
 
-                        cs = new Say2(activeChar.getObjectId(), _type, "->" + receiver.getName(), _text);
+                        cs = new Say2(activeChar.getObjectId(), _type, "->" + receiver.getVisualName(), _text);
                         activeChar.sendPacket(cs);
                     } else {
                         activeChar.sendPacket(SystemMsg.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
